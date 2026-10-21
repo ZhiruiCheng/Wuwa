@@ -58,6 +58,21 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
 	bool SetSkillInterruptLevel(int32 FightStateHandle, int32 NewLevel);
 
+	/**
+	 * 非技能动作（跳跃等）申请打断当前主技能：按原作 DoCheckInterrupt，等级高于当前技能、或等级相同且当前技能接受输入、或当前技能已 ReadyEnd，
+	 * 才结束当前主技能。没有主技能返回 true；返回 false 时什么都不改。
+	 */
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
+	bool TryInterruptForAction(int32 InterruptLevel);
+
+	/** 当前主技能是否在接招窗口里（原作 GetSkillAcceptInput）；没有主技能返回 false。 */
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
+	bool IsSkillAcceptingInput() const;
+
+	/** 原作 GetCommonSkillCanBeInterrupt = IsMainSkillReadyEnd：当前主技能已 ReadyEnd，或没有主技能（原作初值为真）。 */
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
+	bool IsMainSkillReadyEnd() const;
+
 	/** 显式检查一次预输入，不自行开放打断权限。EndAbility 清理中不要调用。 */
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Input")
 	bool CallAnimBreakPoint(int32 FightStateHandle);
@@ -72,12 +87,26 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Wuwa|Combat|Input")
 	FWuwaInputCacheClearRequest OnInputCacheClearRequested;
 
+	/**
+	 * 技能目标（≈ 原作 BaseSkillComponent.SkillTarget / SkillTargetSocket）：每次技能开始时先清空，技能配置了锁定就由锁定组件挑一个存下来，
+	 * 直到下一个技能开始都用它（技能开始时转向、子弹"技能目标"出生基准）。
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat|Skill")
+	void SetSkillTarget(AActor* Target, FName Socket);
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	AActor* GetSkillTarget() const { return SkillTarget.Get(); }
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	FName GetSkillTargetSocket() const { return SkillTargetSocket; }
+
 	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat|Input", meta = (BlueprintProtected))
 	void BroadcastAnimBreakPoint(int32 SkillHandle);
 	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat|Input", meta = (BlueprintProtected))
 	void BroadcastInputCacheClear(int32 SkillHandle, FGameplayTag InputTag);
 
 private:
+	TWeakObjectPtr<AActor> SkillTarget;
+	FName SkillTargetSocket;
+
 	/** 脚本读取：申请/释放战斗状态。 */
 	UPROPERTY(Transient, BlueprintReadOnly, Category = "Wuwa|Combat|Skill", meta = (AllowPrivateAccess = "true"))
 	TObjectPtr<UWuwaFightStateBridgeComponent> FightState;

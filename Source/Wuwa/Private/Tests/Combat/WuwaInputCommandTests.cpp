@@ -31,10 +31,13 @@ namespace WuwaInputCommandTests
 		TGuardValue<EWuwaMoveState> MovementGuard{Defaults->StartMoveState, EWuwaMoveState::Other};
 		int32 Activations = 0;
 		const FGameplayTag InputTag = FGameplayTag::RequestGameplayTag(TEXT("GAS.GA.Role.Attack1"));
-		const FGameplayTag Skill1 = FGameplayTag::RequestGameplayTag(TEXT("Abilities.Skill.Attack01"));
-		const FGameplayTag Skill2 = FGameplayTag::RequestGameplayTag(TEXT("Abilities.Skill.Attack02"));
-		const FGameplayTag Skill3 = FGameplayTag::RequestGameplayTag(TEXT("Abilities.Skill.Attack03"));
-		const FGameplayTag MissingSkill = FGameplayTag::RequestGameplayTag(TEXT("Abilities.Skill.Attack05"));
+		// 测试用技能 ID（身份）；DirectSkill 是一个与规则无关的已授予技能，验证规则之外不会被激活
+		const int32 Skill1 = 101;
+		const int32 Skill2 = 102;
+		const int32 Skill3 = 103;
+		const int32 MissingSkill = 105;
+		const int32 DirectSkill = 199;
+		const FGameplayTag NormalAttack = FGameplayTag::RequestGameplayTag(TEXT("Skill.Type.NormalAttack"));
 		const FGameplayTag OwnerTag = FGameplayTag::RequestGameplayTag(TEXT("WuwaASC.GE.SpeedUp"));
 		const FGameplayTag UnknownInput = FGameplayTag::RequestGameplayTag(TEXT("Animation.Montage.Event"));
 
@@ -75,11 +78,14 @@ namespace WuwaInputCommandTests
 					Runtime->GetClass()->GetClass()->GetFName(), FName(TEXT("CSClass")));
 		}
 
-		FGameplayAbilitySpecHandle Grant(FGameplayTag Tag = {}) const
+		/** SkillId > 0：按技能表的方式授予（带身份与分类 Tag）；0：普通能力，没有技能身份。 */
+		FGameplayAbilitySpecHandle Grant(int32 SkillId = 0, FGameplayTagContainer Tags = {}) const
 		{
-			FGameplayAbilitySpec Spec(UWuwaSkillTestAbility::StaticClass(), 1);
-			if (Tag.IsValid()) Spec.GetDynamicSpecSourceTags().AddTag(Tag);
-			return ASC->GiveAbility(Spec);
+			if (SkillId <= 0) return ASC->GiveAbility(FGameplayAbilitySpec(UWuwaSkillTestAbility::StaticClass(), 1));
+			FWuwaSkillInfo Info;
+			Info.Ability = UWuwaSkillTestAbility::StaticClass();
+			Info.SkillTags = Tags;
+			return ASC->GiveSkill(SkillId, Info, nullptr);
 		}
 
 		UWuwaGameplayAbilityBase* Active(FGameplayAbilitySpecHandle Handle) const
@@ -105,12 +111,12 @@ namespace WuwaInputCommandTests
 					Current.ActiveAbility->TryEndSkillExecution(Current.FightStateHandle));
 		}
 
-		FWuwaInputCommandRule Rule(FName Name, FGameplayTag Target) const
+		FWuwaInputCommandRule Rule(FName Name, int32 Target) const
 		{
 			FWuwaInputCommandRule Result;
 			Result.RuleName = Name;
 			Result.InputTag = InputTag;
-			Result.TargetAbilityTag = Target;
+			Result.TargetSkillId = Target;
 			return Result;
 		}
 
@@ -176,7 +182,7 @@ bool FWuwaInputCommandOrderedConditionsTest::RunTest(const FString& Parameters)
 }
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandCurrentSkillTest,
-	"Wuwa.Combat.InputCommand.ComboUsesCurrentSpecIdentityAndResetsAfterEnd",
+	"Wuwa.Combat.InputCommand.ComboUsesCurrentSkillIdAndResetsAfterEnd",
 	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
 bool FWuwaInputCommandCurrentSkillTest::RunTest(const FString& Parameters)
@@ -189,20 +195,16 @@ bool FWuwaInputCommandCurrentSkillTest::RunTest(const FString& Parameters)
 	const auto Second = F.Grant(F.Skill2);
 	const auto Third = F.Grant(F.Skill3);
 	FWuwaInputCommandRule OneToTwo = F.Rule(TEXT("Attack01To02"), F.Skill2);
-	OneToTwo.RequiredCurrentSkillTag = F.Skill1;
+	OneToTwo.RequiredCurrentSkillId = F.Skill1;
 	FWuwaInputCommandRule TwoToThree = F.Rule(TEXT("Attack02To03"), F.Skill3);
-	TwoToThree.RequiredCurrentSkillTag = F.Skill2;
+	TwoToThree.RequiredCurrentSkillId = F.Skill2;
 	F.Config->Rules = {OneToTwo, TwoToThree, F.Rule(TEXT("StartAttack01"), F.Skill1)};
 	TestTrue(TEXT("Initial attack input selects the first stage"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
 	UWuwaGameplayAbilityBase* Old = F.Active(First);
 	if (!TestNotNull(TEXT("First stage is active"), Old)) return false;
-	// All three grants deliberately share one native class. The current execution's
-	// configuration field also lies: only its actual granted Spec identity is valid.
-	Old->OriginalTag = F.Skill3;
-	TestTrue(TEXT("Current skill identity comes from its granted Spec"), F.ASC->HasActiveSkillAbilityTag(Old, F.Skill1));
-	TestFalse(TEXT("Current skill identity is not the edited instance OriginalTag"), F.ASC->HasActiveSkillAbilityTag(Old, F.Skill3));
-	TestFalse(TEXT("Current skill matching does not widen to a parent tag"),
-		F.ASC->HasActiveSkillAbilityTag(Old, FGameplayTag::RequestGameplayTag(TEXT("Abilities.Skill"))));
+	// 三次授予故意共用同一个 GA 类：身份只来自授予时的技能 ID，不来自 GA 类
+	TestEqual(TEXT("The executing ability reports the skill ID it was granted with"), Old->GetSkillId(), F.Skill1);
+	TestEqual(TEXT("The current-skill record carries the skill ID"), F.Skills->GetCurrentSkillData().SkillId, F.Skill1);
 	TestTrue(TEXT("Attack before the first stage's window is buffered"), F.Press() == EWuwaCombatInputResult::Buffered);
 	F.Skills->SetSkillAcceptInput(Old->GetSkillHandle(), true);
 	TestTrue(TEXT("The first stage's breakpoint selects the second stage"),
@@ -210,7 +212,7 @@ bool FWuwaInputCommandCurrentSkillTest::RunTest(const FString& Parameters)
 	UWuwaGameplayAbilityBase* Next = F.Active(Second);
 	if (!TestNotNull(TEXT("Second stage is active"), Next)) return false;
 	TestFalse(TEXT("The first stage ended through normal skill handoff"), Old->IsSkillExecutionActive());
-	TestFalse(TEXT("An ended execution is no longer an active skill identity"), F.ASC->HasActiveSkillAbilityTag(Old, F.Skill1));
+	TestEqual(TEXT("After handoff the current-skill record is the second stage"), F.Skills->GetCurrentSkillData().SkillId, F.Skill2);
 	TestTrue(TEXT("A new raw attack waits behind the second stage"), F.Press() == EWuwaCombatInputResult::Buffered);
 	if (!F.EndCurrent(*this)) return false;
 	TestTrue(TEXT("At normal skill end the same raw input is resolved again"),
@@ -264,7 +266,7 @@ bool FWuwaInputCommandNoMatchBufferTest::RunTest(const FString& Parameters)
 	if (!F.Initialize(*this)) return false;
 	UWuwaGameplayAbilityBase* Old = F.Start(*this, F.Grant());
 	if (!Old) return false;
-	const auto Direct = F.Grant(F.InputTag);
+	const auto Direct = F.Grant(F.DirectSkill);
 	const auto Derived = F.Grant(F.Skill2);
 	FWuwaInputCommandRule Conditional = F.Rule(TEXT("OnlyWhenOwnerTagPresent"), F.Skill2);
 	Conditional.OwnerTagQuery = FGameplayTagQuery::MakeQuery_MatchTag(F.OwnerTag);
@@ -294,7 +296,7 @@ bool FWuwaInputCommandNoMatchBufferTest::RunTest(const FString& Parameters)
 }
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandFirstMatchFailureTest,
-	"Wuwa.Combat.InputCommand.FirstMatchedTargetMissingOrAmbiguousDoesNotFallback",
+	"Wuwa.Combat.InputCommand.FirstMatchedTargetMissingDoesNotFallbackAndIdsAreUnique",
 	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
 bool FWuwaInputCommandFirstMatchFailureTest::RunTest(const FString& Parameters)
@@ -304,51 +306,75 @@ bool FWuwaInputCommandFirstMatchFailureTest::RunTest(const FString& Parameters)
 	FFixture F;
 	if (!F.Initialize(*this)) return false;
 	const auto Fallback = F.Grant(F.Skill1);
-	const auto Direct = F.Grant(F.InputTag);
+	const auto Direct = F.Grant(F.DirectSkill);
 	F.Config->Rules = {F.Rule(TEXT("FirstMatchedTarget"), F.MissingSkill), F.Rule(TEXT("LaterFallback"), F.Skill1)};
 	TestTrue(TEXT("First matched rule with an ungranted target reports NoCandidate"), F.Press() == EWuwaCombatInputResult::NoCandidate);
 	TestEqual(TEXT("Missing selected target does not execute another rule or the old direct route"), F.Activations, 0);
 	TestEqual(TEXT("Missing target is not misreported as condition-no-match input"), F.Runtime->GetBufferedInputCount(), 0);
 	const auto Chosen = F.Grant(F.MissingSkill);
-	const auto Duplicate = F.Grant(F.MissingSkill);
-	TestTrue(TEXT("Duplicate exact target identities are explicitly ambiguous"), F.Press() == EWuwaCombatInputResult::Ambiguous);
-	TestEqual(TEXT("Ambiguous selected target never falls through to another rule"), F.Activations, 0);
-	TestEqual(TEXT("Ambiguous target does not silently enter the buffer"), F.Runtime->GetBufferedInputCount(), 0);
-	F.ASC->ClearAbility(Duplicate);
-	TestTrue(TEXT("Once exactly one selected target exists, it can activate"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
+	TestFalse(TEXT("A skill ID can be granted only once per ASC (identity is unique)"), F.Grant(F.MissingSkill).IsValid());
+	TestTrue(TEXT("Once the selected target is granted, it can activate"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
 	TestNotNull(TEXT("The first matching target is the executed Spec"), F.Active(Chosen));
 	TestNull(TEXT("Later fallback remains inactive"), F.Active(Fallback));
 	TestNull(TEXT("Same-input-tag direct grant remains inactive"), F.Active(Direct));
 	return true;
 }
 
-IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandLegacyCompatibilityTest,
-	"Wuwa.Combat.InputCommand.UnconfiguredInputKeepsLegacyDirectRoute",
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandNoDirectRouteTest,
+	"Wuwa.Combat.InputCommand.UnconfiguredInputHasNoDirectRoute",
 	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
-bool FWuwaInputCommandLegacyCompatibilityTest::RunTest(const FString& Parameters)
+bool FWuwaInputCommandNoDirectRouteTest::RunTest(const FString& Parameters)
 {
 	using namespace WuwaInputCommandTests;
 	FEditorScriptExecutionGuard Guard;
 	FFixture F;
 	if (!F.Initialize(*this)) return false;
-	const FGameplayTag DashTag = FWuwaGameTags::Get().Abilities_Movement_Dash;
-	const auto Dash = F.Grant(DashTag);
-	const auto DirectAttack = F.Grant(F.InputTag);
-	FWuwaInputCommandRule Conditional = F.Rule(TEXT("ConfiguredAttack"), F.Skill2);
-	Conditional.OwnerTagQuery = FGameplayTagQuery::MakeQuery_MatchTag(F.OwnerTag);
-	F.Config->Rules = {Conditional};
-	TestTrue(TEXT("A character with attack rules still resolves an unconfigured Dash tag directly"),
-		F.Runtime->ProcessInput(F.ASC, F.Input(DashTag), 1.f) == EWuwaCombatInputResult::ActivationRequested);
-	TestNotNull(TEXT("Existing Dash semantics select the directly tagged grant"), F.Active(Dash));
-	TestTrue(TEXT("The configured attack tag cannot use the same compatibility fallback"),
-		F.Press(0.f) == EWuwaCombatInputResult::NoMatchingRule);
-	TestNull(TEXT("Configured no-match does not execute its direct-tag grant"), F.Active(DirectAttack));
-	if (!F.EndCurrent(*this)) return false;
+	// 技能身份是 ID：输入 Tag 不再兜底当作技能身份，每个输入都要在规则表里有一行
+	const FGameplayTag DashTag = FWuwaGameTags::Get().Input_Combat_Dash;
+	const auto Dash = F.Grant(F.DirectSkill);
+	F.Config->Rules = {F.Rule(TEXT("ConfiguredAttack"), F.Skill2)};
+	TestTrue(TEXT("An input without any rule reports NoCandidate"),
+		F.Runtime->ProcessInput(F.ASC, F.Input(DashTag), 1.f) == EWuwaCombatInputResult::NoCandidate);
+	TestNull(TEXT("No skill is activated by input tag alone"), F.Active(Dash));
+	TestEqual(TEXT("An unconfigured input is not buffered"), F.Runtime->GetBufferedInputCount(), 0);
 	F.Character->InputCommandConfig = nullptr;
-	TestTrue(TEXT("A character without a command config keeps the original direct mapping"),
-		F.Press() == EWuwaCombatInputResult::ActivationRequested);
-	TestNotNull(TEXT("The original directly tagged attack still executes without config"), F.Active(DirectAttack));
+	TestTrue(TEXT("A character without a command config cannot select any skill"),
+		F.Press(1.f) == EWuwaCombatInputResult::NoCandidate);
+	TestEqual(TEXT("Nothing was activated"), F.Activations, 0);
+	return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandCurrentSkillTagQueryTest,
+	"Wuwa.Combat.InputCommand.CurrentSkillTagQueryMatchesSkillClassification",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FWuwaInputCommandCurrentSkillTagQueryTest::RunTest(const FString& Parameters)
+{
+	using namespace WuwaInputCommandTests;
+	FEditorScriptExecutionGuard Guard;
+	FFixture F;
+	if (!F.Initialize(*this)) return false;
+	// Skill1 属于"普攻"类，Skill3 不属于；"当前是普攻 -> Skill2"这一行只在当前技能是普攻类时命中
+	const auto First = F.Grant(F.Skill1, FGameplayTagContainer(F.NormalAttack));
+	const auto Second = F.Grant(F.Skill2);
+	const auto Third = F.Grant(F.Skill3);
+	TestTrue(TEXT("Skill tags are recorded at grant time"), F.ASC->GetSkillTags(F.Skill1).HasTagExact(F.NormalAttack));
+	FWuwaInputCommandRule AfterNormal = F.Rule(TEXT("AfterAnyNormalAttack"), F.Skill2);
+	AfterNormal.CurrentSkillTagQuery = FGameplayTagQuery::MakeQuery_MatchTag(F.NormalAttack);
+	F.Config->Rules = {AfterNormal, F.Rule(TEXT("Default"), F.Skill1)};
+	TestTrue(TEXT("Without a current skill the class query does not match"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
+	UWuwaGameplayAbilityBase* Old = F.Active(First);
+	if (!TestNotNull(TEXT("Default rule started the normal attack"), Old)) return false;
+	F.Skills->SetSkillAcceptInput(Old->GetSkillHandle(), true);
+	TestTrue(TEXT("During a normal attack the class rule matches"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
+	TestNotNull(TEXT("The class rule selected its target"), F.Active(Second));
+	if (!F.EndCurrent(*this)) return false;
+	UWuwaGameplayAbilityBase* Other = F.Start(*this, Third);
+	if (!Other) return false;
+	F.Skills->SetSkillAcceptInput(Other->GetSkillHandle(), true);
+	TestTrue(TEXT("A current skill outside the class falls to the next rule"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
+	TestNotNull(TEXT("The default rule applies when the current skill is not a normal attack"), F.Active(First));
 	return true;
 }
 
@@ -363,7 +389,7 @@ bool FWuwaInputCommandInvalidRuleTest::RunTest(const FString& Parameters)
 	FFixture F;
 	if (!F.Initialize(*this)) return false;
 	F.Grant(F.Skill1);
-	F.Config->Rules = {F.Rule(TEXT("MissingTargetIdentity"), {}), F.Rule(TEXT("Fallback"), F.Skill1)};
+	F.Config->Rules = {F.Rule(TEXT("MissingTargetIdentity"), 0), F.Rule(TEXT("Fallback"), F.Skill1)};
 	TestTrue(TEXT("An empty selected target identity is a configuration error"), F.Press() == EWuwaCombatInputResult::InvalidRule);
 	TestEqual(TEXT("Empty selected target cannot run the later fallback"), F.Activations, 0);
 	FWuwaInputCommandRule MissingCondition = F.Rule(TEXT("NullConditionObject"), F.Skill1);
@@ -487,3 +513,41 @@ bool FWuwaInputCommandManagedAttributeConditionTest::RunTest(const FString& Para
 }
 
 #endif
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaInputCommandPhaseTest,
+	"Wuwa.Combat.InputCommand.PhaseSelectsPressedHeldReleasedRows",
+	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
+
+bool FWuwaInputCommandPhaseTest::RunTest(const FString& Parameters)
+{
+	using namespace WuwaInputCommandTests;
+	FEditorScriptExecutionGuard Guard;
+	FFixture F;
+	if (!F.Initialize(*this)) return false;
+	const auto Tap = F.Grant(F.Skill1);
+	const auto Heavy = F.Grant(F.Skill2);
+	const auto Release = F.Grant(F.Skill3);
+	// 同一个键：按下 = 普攻、长按 = 重击；先只配这两行
+	FWuwaInputCommandRule Pressed = F.Rule(TEXT("Tap"), F.Skill1);
+	FWuwaInputCommandRule Held = F.Rule(TEXT("Hold"), F.Skill2);
+	Held.Phase = EWuwaInputPhase::Held;
+	F.Config->Rules = {Held, Pressed};
+	TestTrue(TEXT("A press skips the Held row even though it comes first"), F.Press() == EWuwaCombatInputResult::ActivationRequested);
+	TestNotNull(TEXT("The press starts the Pressed row's skill"), F.Active(Tap));
+	TestNull(TEXT("The Held row's skill does not start on a press"), F.Active(Heavy));
+	if (!F.EndCurrent(*this)) return false;
+	TestTrue(TEXT("Reaching the hold threshold selects the Held row"),
+		F.Runtime->ProcessInput(F.ASC, F.Input(F.InputTag, EWuwaInputPhase::Held), 1.f) == EWuwaCombatInputResult::ActivationRequested);
+	TestNotNull(TEXT("The hold starts the Held row's skill"), F.Active(Heavy));
+	if (!F.EndCurrent(*this)) return false;
+	TestTrue(TEXT("A release with no Released row is ignored, as before"),
+		F.Runtime->ProcessInput(F.ASC, F.Input(F.InputTag, EWuwaInputPhase::Released), 1.f) == EWuwaCombatInputResult::Ignored);
+	FWuwaInputCommandRule Released = F.Rule(TEXT("Release"), F.Skill3);
+	Released.Phase = EWuwaInputPhase::Released;
+	F.Config->Rules = {Held, Pressed, Released};
+	TestTrue(TEXT("A release selects the Released row"),
+		F.Runtime->ProcessInput(F.ASC, F.Input(F.InputTag, EWuwaInputPhase::Released), 1.f) == EWuwaCombatInputResult::ActivationRequested);
+	TestNotNull(TEXT("The release starts the Released row's skill"), F.Active(Release));
+	TestEqual(TEXT("Nothing is left in the pre-input buffer"), F.Runtime->GetBufferedInputCount(), 0);
+	return true;
+}

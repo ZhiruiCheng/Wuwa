@@ -26,6 +26,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effect|Placement")
 	FRotator RotationOffset = FRotator::ZeroRotator;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effect|Placement")
+	FVector Scale = FVector::OneVector;
+
 	/** 脚步默认留在触发位置；勾选后持续跟随 Mesh 的指定插槽。 */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effect|Placement")
 	bool bFollow = false;

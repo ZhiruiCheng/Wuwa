@@ -13,8 +13,6 @@ DEFINE_LOG_CATEGORY_STATIC(LogWuwaMoveInput, Log, All);
 UWuwaMoveInputHandler::UWuwaMoveInputHandler()
 {
 	PrimaryComponentTick.bCanEverTick = false;
-	// 与角色上托管组件类的默认值一样用软路径：不在构造时加载资产，蓝图里仍可替换。
-	Config = TSoftObjectPtr<UWuwaMoveInputConfig>(FSoftObjectPath(TEXT("/Game/CoreInput/DataAsset/DA_WuwaMoveInputConfig.DA_WuwaMoveInputConfig")));
 }
 
 bool UWuwaMoveInputHandler::HandleWuwaInput_Implementation(const FWuwaInputEvent& InputEvent)

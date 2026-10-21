@@ -12,8 +12,7 @@ void UWuwaAnimNotify_SkillReadyEndBridge::BranchingPointNotify(FBranchingPointNo
 	DispatchReadyEnd(Payload.SkelMeshComponent, Payload.SequenceAsset, Payload.NotifyEvent, Payload.MontageInstanceID);
 }
 
-void UWuwaAnimNotify_SkillReadyEndBridge::DispatchReadyEnd(USkeletalMeshComponent* MeshComp,
-	UAnimSequenceBase* Animation, const FAnimNotifyEvent* NotifyEvent, int32 MontageInstanceId) const
+void UWuwaAnimNotify_SkillReadyEndBridge::DispatchReadyEnd(USkeletalMeshComponent* MeshComp,UAnimSequenceBase* Animation, const FAnimNotifyEvent* NotifyEvent, int32 MontageInstanceId) const
 {
 	AWuwaCharacter* Character = WuwaSkillNotifyContext::ResolveCharacter(MeshComp);
 	UAnimMontage* Montage = Cast<UAnimMontage>(Animation);

@@ -4,7 +4,7 @@ using UnrealSharp.Engine;
 using UnrealSharp.GameplayAbilities;
 using UnrealSharp.Wuwa;
 
-namespace ManagedWuwa.Animation.Notifies;
+namespace ManagedWuwa.Game.AnimNotifyState;
 
 /// <summary>
 /// 放在 GA 播放的 Montage 通知轨道上，窗口内有移动输入时尝试结束该 GA。

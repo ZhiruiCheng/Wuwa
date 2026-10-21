@@ -13,5 +13,7 @@ UCLASS()
 class WUWA_API AWuwaGameMode : public AGameModeBase
 {
 	GENERATED_BODY()
+public:
+	virtual  void RestartPlayer(AController* NewPlayer) override;
 	
 };

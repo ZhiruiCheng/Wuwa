@@ -3,10 +3,19 @@
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Core/Utilities/DebugHelper.h"
+#include "Game/Common/Debug/WuwaDebug.h"
 #include "Engine/World.h"
+#include "Components/CapsuleComponent.h"
+#include "DrawDebugHelpers.h"
+#include "GameFramework/Character.h"
 #include "Game/NewWorld/Character/Role/Component/WuwaRoleGaitBridgeComponent.h"
+#include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaUnifiedStateBridgeComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaInputIntentComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Anim/WuwaAnimInstance.h"
+#include "Animation/AnimInstance.h"
+#include "Animation/AnimMontage.h"
+#include "Components/SkeletalMeshComponent.h"
 
 #pragma region Common
 
@@ -48,6 +57,18 @@ EWuwaGait UWuwaMovementComponent::GetAllowedGait() const
 void UWuwaMovementComponent::BindInputIntent(UWuwaInputIntentComponent* InInputIntent)
 {
     InputIntent = InInputIntent;
+}
+
+void UWuwaMovementComponent::RestoreSwitchMotion(const FVector& InVelocity, const FVector& InLastInput, const FVector& InAcceleration)
+{
+    check(IsInGameThread());
+    if (!IsMovingOnGround()) return;
+    Velocity = InVelocity.ContainsNaN() ? FVector::ZeroVector : FVector(InVelocity.X, InVelocity.Y, 0.0);
+    Acceleration = InAcceleration.ContainsNaN() ? FVector::ZeroVector : InAcceleration.GetClampedToMaxSize(GetMaxAcceleration());
+    ConsumeInputVector();
+    AddInputVector(InLastInput.ContainsNaN() ? FVector::ZeroVector : InLastInput.GetClampedToMaxSize(1.0), true);
+    ConsumeInputVector(); // Seeds LastInputVector for the animation's first sample; no duplicate input next tick.
+    UpdateComponentVelocity();
 }
 
 void UWuwaMovementComponent::ApplyMoveIntent()
@@ -122,10 +143,52 @@ void UWuwaMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     if (auto* Gait = ResolveGaitComponent()) Gait->RefreshPolicy();
     // 输入在本帧物理前写入，Super 中立刻消费，不依赖输入事件和角色 Tick 的先后。
     ApplyMoveIntent();
+    UpdateMontageRootMotionMode();
+    bSkillMotionAppliedThisTick = false;
+    bJumpRootMotionUsedThisTick = false;
+    // 原作 BaseMoveComponent 每帧：边缘保护计数归零 1 帧后再恢复允许走出边缘。
+    if (bWalkOffRestorePending && WalkOffRestoreFrame + 1 <= GFrameCounter)
+    {
+        WalkOffRestoreFrame = GFrameCounter;
+        SetWalkOffLedge(WalkOffCount <= 0);
+        bWalkOffRestorePending = false;
+    }
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+    // 滞空最大水平速度（落地接着跑用，见 CarryLandingSpeed）
+    if (IsFalling())
+    {
+        const float Horizontal = static_cast<float>(ProjectToGravityFloor(Velocity).Size());
+        AirPeakHorizontalSpeed = bAirPeakReset ? Horizontal : FMath::Max(AirPeakHorizontalSpeed, Horizontal);
+        bAirPeakReset = false;
+    }
+    else
+    {
+        bAirPeakReset = true;
+    }
+    // 原作 ApplyForceSpeedAndRecordSpeed：移动更新之后再设一次强制速度，然后作废
+    if (bForceSpeedPending)
+    {
+        bForceSpeedPending = false;
+        Velocity = ForceSpeed;
+        UpdateComponentVelocity();
+    }
+    // 起跳根运动在本帧物理里用完后再判断：起跳动画已经进入空中循环（或已落地）就交回重力。
+    if (bJumpRootMotion && (!IsFalling() || !IsJumpTakeoffPlaying())) EndRootMotionJump();
+    // 这一帧没有动画根运动（修正没执行）但窗口开着：按零根运动补一次（往目标推 / 转向；没有根运动可抵消）
+    if (!bSkillMotionAppliedThisTick && (IsMovingToTarget() || SkillRotate.bCanRotate) && UpdatedComponent && DeltaTime > 0.f)
+    {
+        FVector Displacement;
+        FRotator Facing;
+        const bool bFace = ComputeSkillMotion(FVector::ZeroVector, DeltaTime, Displacement, Facing);
+        if (bFace || !Displacement.IsNearlyZero())
+        {
+            FHitResult Hit;
+            SafeMoveUpdatedComponent(Displacement, bFace ? Facing.Quaternion() : UpdatedComponent->GetComponentQuat(), true, Hit);
+        }
+    }
     if (CanEnterClimbState())
     {
-        Debug::Print(FString("Player Enter Climbing State"));
+        if (UWuwaDebugLibrary::IsDebugChannelEnabled(EWuwaDebugChannel::Climb)) Debug::Print(FString("Player Enter Climbing State"));
         SetMovementMode(MOVE_Custom, (uint8)ECustomMoveMode::MOVE_Climb);
     }
 }
@@ -133,6 +196,338 @@ void UWuwaMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 bool UWuwaMovementComponent::PlayerisInputing()
 {
     return !Acceleration.IsNearlyZero();
+}
+
+bool UWuwaMovementComponent::GetMoveInputDirection(FVector& OutDirection) const
+{
+    if (!IsValid(InputIntent)) return false;
+    const FWuwaMoveIntent Move = InputIntent->GetMoveIntent();
+    OutDirection = FVector(Move.WorldDirection.X, Move.WorldDirection.Y, 0.0).GetSafeNormal();
+    return Move.bHasInput && !OutDirection.IsNearlyZero();
+}
+
+#pragma endregion
+
+
+#pragma region WalkOffLedge
+
+void UWuwaMovementComponent::SetWalkOffLedgeRecord(bool bAllow)
+{
+    if (bAllow)
+    {
+        if (--WalkOffCount == 0)
+        {
+            bWalkOffRestorePending = true;
+            WalkOffRestoreFrame = GFrameCounter;
+        }
+    }
+    else if (++WalkOffCount == 1)
+    {
+        bWalkOffRestorePending = false;
+        SetWalkOffLedge(false);
+    }
+}
+
+void UWuwaMovementComponent::SetWalkOffLedge(bool bAllow)
+{
+    bCanWalkOffLedges = bAllow;
+    const float Radius = CharacterOwner && CharacterOwner->GetCapsuleComponent() ? CharacterOwner->GetCapsuleComponent()->GetScaledCapsuleRadius() : 0.f;
+    PerchRadiusThreshold = bAllow ? 0.f : Radius;
+    PerchAdditionalHeight = bAllow ? 40.f : 2.f * Radius;
+}
+
+#pragma endregion
+
+
+#pragma region Jump
+
+bool UWuwaMovementComponent::BeginRootMotionJump(bool bLimitSpeed)
+{
+    if (bJumpRootMotion || !CharacterOwner || !UpdatedComponent || !IsMovingOnGround() || IsCrouching()) return false;
+    // 原作 CanJumpPress：GroundedFrame > Frame - 2 时不能跳。
+    if (GroundedFrame + 2 > GFrameCounter) return false;
+    UAnimInstance* Anim = CharacterOwner->GetMesh() ? CharacterOwner->GetMesh()->GetAnimInstance() : nullptr;
+    if (!Anim) return false;
+    if (bLimitSpeed)
+    {
+        // 原作 LimitMaxSpeed：速度超过冲刺速度就按比例缩到冲刺速度。
+        const float Sprint = MovementSettings ? MovementSettings->ForGait(EWuwaGait::Sprint).MaxSpeed : SprintSpeed;
+        if (Velocity.Size() > Sprint) Velocity = Velocity.GetSafeNormal() * Sprint;
+    }
+    // 原作 OnJump：Montage_Stop(0)。
+    Anim->Montage_Stop(0.f);
+    // 状态机里的起跳动画只有 FromEverything 才提取根运动。角色动画本来就是 FromEverything（停步动画的根运动也靠它），不是的话临时切过去；
+    // 起跳动画开着 ForceRootLock，结束时切回也不会露出根骨位移。
+    SavedRootMotionMode = Anim->RootMotionMode;
+    Anim->SetRootMotionMode(ERootMotionMode::RootMotionFromEverything);
+    bJumpRootMotion = true;
+    ++JumpSerial;
+    // 原作不给初速度：竖直速度清零，水平速度在第一帧根运动时被起跳动画的速度替换。
+    Velocity = ProjectToGravityFloor(Velocity);
+    SetMovementMode(MOVE_Falling);
+    return true;
+}
+
+void UWuwaMovementComponent::EndRootMotionJump()
+{
+    if (!bJumpRootMotion) return;
+    bJumpRootMotion = false;
+    UAnimInstance* Anim = CharacterOwner && CharacterOwner->GetMesh() ? CharacterOwner->GetMesh()->GetAnimInstance() : nullptr;
+    if (Anim) Anim->SetRootMotionMode(SavedRootMotionMode);
+}
+
+bool UWuwaMovementComponent::IsJumpTakeoffPlaying() const
+{
+    USkeletalMeshComponent* Mesh = CharacterOwner ? CharacterOwner->GetMesh() : nullptr;
+    UWuwaAnimInstance* Anim = Mesh ? Cast<UWuwaAnimInstance>(Mesh->GetAnimInstance()) : nullptr;
+    // 起跳中放了技能：蒙太奇盖住状态机（Slot 满权重时状态机不更新，会一直停在 JumpTakeoff），根运动也换成了蒙太奇的。
+    // 这时起跳就算结束（不再拒绝落地），之后空中的位移按蒙太奇根运动走（含 Z，见 ConstrainAnimRootMotionVelocity）。
+    if (Anim && Anim->IsAnyMontagePlaying()) return false;
+    return Anim && Anim->HasJumpLandGraph() ? Anim->IsJumpTakeoffPlaying() : bJumpRootMotionUsedThisTick;
+}
+
+void UWuwaMovementComponent::SuppressAnimRootMotion(float Seconds)
+{
+    if (const UWorld* World = GetWorld()) RootMotionSuppressedUntil = World->GetTimeSeconds() + FMath::Max(Seconds, 0.f);
+}
+
+void UWuwaMovementComponent::UpdateMontageRootMotionMode()
+{
+    USkeletalMeshComponent* Mesh = CharacterOwner ? CharacterOwner->GetMesh() : nullptr;
+    UAnimInstance* Anim = Mesh ? Mesh->GetAnimInstance() : nullptr;
+    if (!Anim) return;
+    if (!bCapturedDefaultRootMotionMode)
+    {
+        DefaultRootMotionMode = Anim->RootMotionMode;
+        bCapturedDefaultRootMotionMode = true;
+    }
+    // 只处理"从整个姿势取根运动"的 ABP
+    if (DefaultRootMotionMode != ERootMotionMode::RootMotionFromEverything) return;
+    const FAnimMontageInstance* Instance = Anim->GetRootMotionMontageInstance();
+    const bool bMontagePlaying = Instance && Instance->IsActive() && !Instance->IsStopped();
+    if (bJumpRootMotion)
+    {
+        // 起跳根运动窗口里放了带根运动的技能（空中闪避等）：起跳窗口现在就结束（本来要等这一帧移动完才收），技能根运动从第一帧全额
+        if (!bMontagePlaying) return;
+        EndRootMotionJump();
+    }
+    const ERootMotionMode::Type Wanted = bMontagePlaying ? ERootMotionMode::RootMotionFromMontagesOnly : ERootMotionMode::RootMotionFromEverything;
+    if (Anim->RootMotionMode != Wanted) Anim->SetRootMotionMode(Wanted);
+}
+
+FVector UWuwaMovementComponent::ConstrainAnimRootMotionVelocity(const FVector& RootMotionVelocity, const FVector& CurrentVelocity) const
+{
+    // SuppressAnimRootMotion 窗口内：速度保持（地面上本帧也不做 CalcVelocity，窗口过后照常加速 / 刹到当前步态上限）
+    if (const UWorld* World = GetWorld(); World && World->GetTimeSeconds() < RootMotionSuppressedUntil) return CurrentVelocity;
+    // 原作（Kuro 根运动）：空中有动画根运动时，速度完全由根运动决定，包括 Z。
+    // 起跳的抛物线、空中普攻的滞空 / 上挑 / 下落（AirAttack04 根骨 Z：-69 → +20 → -97）都在动画里；
+    // UE 默认会在下落时把 Z 换成重力的结果，这里不这么做。没有根运动的帧（下落循环、蒙太奇淡出完）照常走重力。
+    if (IsFalling())
+    {
+        // 下落攻击的下落循环：速度归 SetForceSpeed + 重力管（见 SetIgnoreAirRootMotion）
+        if (bIgnoreAirRootMotion) return CurrentVelocity;
+        if (bJumpRootMotion) bJumpRootMotionUsedThisTick = true;
+        return RootMotionVelocity;
+    }
+    return Super::ConstrainAnimRootMotionVelocity(RootMotionVelocity, CurrentVelocity);
+}
+
+bool UWuwaMovementComponent::IsValidLandingSpot(const FVector& CapsuleLocation, const FHitResult& Hit) const
+{
+    if (bJumpRootMotion && GetGravitySpaceZ(Velocity) >= 0.f) return false;
+    return Super::IsValidLandingSpot(CapsuleLocation, Hit);
+}
+
+void UWuwaMovementComponent::ProcessLanded(const FHitResult& Hit, float remainingTime, int32 Iterations)
+{
+    // 进入行走模式时竖直速度会被清掉，先记下落地瞬间的速度。
+    LastLandingVelocity = Velocity;
+    ++LandSerial;
+    Super::ProcessLanded(Hit, remainingTime, Iterations);
+    // 原作落地运动：有输入、没在放技能（蒙太奇）就带着空中的速度接着跑（上限是当前步态的最大速度）
+    const UAnimInstance* Anim = CharacterOwner && CharacterOwner->GetMesh() ? CharacterOwner->GetMesh()->GetAnimInstance() : nullptr;
+    if (IsMovingOnGround() && !(Anim && Anim->IsAnyMontagePlaying())) CarryLandingSpeed(GetMaxSpeed());
+}
+
+float UWuwaMovementComponent::GetSprintMaxSpeed() const
+{
+    return MovementSettings ? MovementSettings->ForGait(EWuwaGait::Sprint).MaxSpeed : SprintSpeed;
+}
+
+bool UWuwaMovementComponent::CarryLandingSpeed(float MaxCarrySpeed)
+{
+    const AWuwaCharacter* Character = Cast<AWuwaCharacter>(CharacterOwner);
+    if (!Character || MaxCarrySpeed <= 0.f) return false;
+    const FWuwaPlayerInputState Input = Character->GetPlayerInputState();
+    if (!Input.bHasMoveInput || Input.MoveWorldDirection.IsNearlyZero()) return false;
+    const FVector Horizontal = ProjectToGravityFloor(Velocity);
+    const float Speed = FMath::Min(FMath::Max(AirPeakHorizontalSpeed, static_cast<float>(Horizontal.Size())), MaxCarrySpeed);
+    if (Speed <= Horizontal.Size() + 1.f && Horizontal.GetSafeNormal().Dot(Input.MoveWorldDirection.GetSafeNormal()) > 0.99f) return false;
+    if (Speed < 1.f) return false;
+    Velocity = (Velocity - Horizontal) + Input.MoveWorldDirection.GetSafeNormal2D() * Speed;
+    UpdateComponentVelocity();
+    return true;
+}
+
+#pragma endregion
+
+
+#pragma region SkillMotion
+
+void UWuwaMovementComponent::InitializeComponent()
+{
+    Super::InitializeComponent();
+    ProcessRootMotionPostConvertToWorld.BindUObject(this, &UWuwaMovementComponent::ProcessSkillRootMotion);
+}
+
+void UWuwaMovementComponent::BeginMoveToTarget(const void* Owner, const FWuwaMoveToTargetConfig& Config, AActor* Target, FName Socket, float TotalTime)
+{
+    MoveToTargetOwner = Owner;
+    MoveToTargetConfig = Config;
+    MoveToTargetActor = Target;
+    MoveToTargetSocket = Socket;
+    MoveToTargetTime = 0.f;
+    MoveToTargetDuration = TotalTime;
+    LastMoveToTargetBranch = FWuwaMoveToTargetResult::EBranch::None;
+}
+
+void UWuwaMovementComponent::EndMoveToTarget(const void* Owner)
+{
+    if (Owner != MoveToTargetOwner) return;
+    MoveToTargetOwner = nullptr;
+    MoveToTargetActor.Reset();
+    MoveToTargetConfig.MoveCurve = nullptr;
+}
+
+void UWuwaMovementComponent::SetSkillCanRotate(bool bCanRotate)
+{
+    // 原作：关掉时重置转向参数（SZr.Reset）；转向目标由通知结束时另外清
+    SkillRotate.bCanRotate = bCanRotate;
+    if (!bCanRotate)
+    {
+        SkillRotate.bUseOffset = false;
+        SkillRotate.Offset = 0.f;
+        SkillRotate.PauseThreshold = SkillRotate.ResumeThreshold = 0.f;
+        SkillRotate.bPaused = false;
+    }
+}
+
+void UWuwaMovementComponent::SetSkillRotateToTarget(bool bToTarget, bool bUseOffset, float Offset, float PauseThreshold, float ResumeThreshold)
+{
+    SkillRotate.bRotateToTarget = bToTarget;
+    SkillRotate.bUseOffset = bUseOffset;
+    SkillRotate.Offset = -FMath::Clamp(Offset, -180.f, 180.f);
+    SkillRotate.PauseThreshold = PauseThreshold;
+    SkillRotate.ResumeThreshold = ResumeThreshold;
+}
+
+void UWuwaMovementComponent::SetSkillRotateTarget(AActor* Target, FName Socket)
+{
+    SkillRotateActor = Target;
+    SkillRotateSocket = Socket;
+}
+
+FVector UWuwaMovementComponent::GetSkillRotateDirection()
+{
+    if (!UpdatedComponent) return FVector::ZeroVector;
+    FVector TargetLocation;
+    float Radius = 0.f;
+    const bool bTarget = ResolveTargetPoint(SkillRotateActor.Get(), SkillRotateSocket, TargetLocation, Radius);
+    return WuwaSkillMotion::GetSkillRotateDirection(SkillRotate, UpdatedComponent->GetComponentLocation(), UpdatedComponent->GetForwardVector(),
+        bTarget ? &TargetLocation : nullptr);
+}
+
+bool UWuwaMovementComponent::ResolveTargetPoint(const AActor* Target, FName Socket, FVector& OutLocation, float& OutRadius)
+{
+    if (!IsValid(Target)) return false;
+    const ACharacter* Character = Cast<ACharacter>(Target);
+    if (!Socket.IsNone() && Character && Character->GetMesh() && Character->GetMesh()->DoesSocketExist(Socket))
+    {
+        OutLocation = Character->GetMesh()->GetSocketLocation(Socket);
+        OutRadius = 0.f;
+        return true;
+    }
+    OutLocation = Target->GetActorLocation();
+    OutRadius = Character && Character->GetCapsuleComponent() ? Character->GetCapsuleComponent()->GetScaledCapsuleRadius() : 0.f;
+    return true;
+}
+
+FTransform UWuwaMovementComponent::ProcessSkillRootMotion(const FTransform& WorldRootMotion, UCharacterMovementComponent* Movement, float DeltaSeconds)
+{
+    bSkillMotionAppliedThisTick = true;
+    if ((!IsMovingToTarget() && !SkillRotate.bCanRotate) || !UpdatedComponent || DeltaSeconds <= 0.f) return WorldRootMotion;
+    FVector Displacement;
+    FRotator Facing;
+    FTransform Result = WorldRootMotion;
+    if (ComputeSkillMotion(WorldRootMotion.GetTranslation(), DeltaSeconds, Displacement, Facing))
+    {
+        // CMC 在移动之后按 根运动旋转 x 当前朝向 转身：换成"转到 Facing"的增量
+        Result.SetRotation(Facing.Quaternion() * UpdatedComponent->GetComponentQuat().Inverse());
+    }
+    Result.SetTranslation(Displacement);
+    return Result;
+}
+
+bool UWuwaMovementComponent::ComputeSkillMotion(const FVector& RootMotion, float DeltaSeconds, FVector& OutDisplacement, FRotator& OutFacing)
+{
+    OutDisplacement = RootMotion;
+    const FVector Location = UpdatedComponent->GetComponentLocation();
+    const FRotator Current = UpdatedComponent->GetComponentRotation();
+    bool bFace = false;
+    OutFacing = Current;
+
+    // 技能转向（原作 UpdateAllSkillRotator）：转向技能目标或输入方向，每帧最多转 速度 x 帧时间
+    if (SkillRotate.bCanRotate)
+    {
+        FVector Direction = FVector::ZeroVector;
+        if (SkillRotate.bRotateToTarget) Direction = GetSkillRotateDirection();
+        else GetMoveInputDirection(Direction);
+        Direction.Z = 0.0;
+        if (!Direction.IsNearlyZero())
+        {
+            OutFacing.Yaw = WuwaSkillMotion::InterpYawConstantTo(Current.Yaw, Direction.Rotation().Yaw, DeltaSeconds, FMath::Abs(SkillRotate.Speed));
+            bFace = true;
+        }
+    }
+
+    // 位移吸附到目标；目标没了这一帧不动，进度照走（原作 RefreshTarget 失败时跳过 MoveToTarget）
+    if (IsMovingToTarget())
+    {
+        FWuwaMoveToTargetFrame Frame;
+        float TargetRadius = 0.f;
+        if (ResolveTargetPoint(MoveToTargetActor.Get(), MoveToTargetSocket, Frame.TargetLocation, TargetRadius))
+        {
+            Frame.TargetLocation += MoveToTargetConfig.TargetOffset;
+            Frame.Location = Location;
+            Frame.RootMotion = RootMotion;
+            Frame.TargetRadius = TargetRadius;
+            const ACharacter* Character = CharacterOwner.Get();
+            Frame.SelfRadius = Character && Character->GetCapsuleComponent() ? Character->GetCapsuleComponent()->GetScaledCapsuleRadius() : 0.f;
+            Frame.NowTime = MoveToTargetTime;
+            Frame.TotalTime = MoveToTargetDuration;
+            Frame.DeltaTime = DeltaSeconds;
+            const FWuwaMoveToTargetResult Result = WuwaSkillMotion::ComputeMoveToTarget(MoveToTargetConfig, Frame);
+            OutDisplacement = Result.Displacement;
+            LastMoveToTargetBranch = Result.Branch;
+            if (Result.bFaceTarget)
+            {
+                OutFacing.Yaw = Result.Facing.Yaw;
+                bFace = true;
+            }
+#if ENABLE_DRAW_DEBUG
+            if (UWuwaDebugLibrary::IsDebugChannelEnabled(EWuwaDebugChannel::SkillMotion) && GetWorld())
+            {
+                const float Stop = MoveToTargetConfig.Distance + (MoveToTargetConfig.bIgnoreRadius ? 0.f : Frame.SelfRadius + TargetRadius);
+                const FColor Color = Result.Branch == FWuwaMoveToTargetResult::EBranch::Pull ? FColor::Green
+                    : Result.Branch == FWuwaMoveToTargetResult::EBranch::Hold ? FColor::Yellow : FColor::Silver;
+                DrawDebugLine(GetWorld(), Location, Frame.TargetLocation, Color, false, 0.f, 0, 1.5f);
+                DrawDebugCircle(GetWorld(), Frame.TargetLocation, Stop, 32, Color, false, 0.f, 0, 1.5f, FVector::ForwardVector, FVector::RightVector, false);
+            }
+#endif
+        }
+        MoveToTargetTime += DeltaSeconds;
+    }
+    return bFace;
 }
 
 #pragma endregion
@@ -153,6 +548,8 @@ void UWuwaMovementComponent::OnMovementModeChanged(EMovementMode PrevMode, uint8
 		bOrientRotationToMovement = true;
 	}
 	Super::OnMovementModeChanged(PrevMode, PrevCustomMode);
+    if (bJumpRootMotion && !IsFalling()) EndRootMotionJump();
+    if (IsMovingOnGround() && PrevMode != MOVE_Walking && PrevMode != MOVE_NavWalking) GroundedFrame = GFrameCounter;
     // 原作运动状态组件监听 CharMovementModeChanged 同步位置；随后本帧重算一次步态，不等下一次 Tick。
     if (auto* Gait = ResolveGaitComponent())
     {
@@ -314,6 +711,19 @@ void UWuwaMovementComponent::StopClimbing()
 }
 
 
+void UWuwaMovementComponent::PhysWalking(float deltaTime, int32 Iterations)
+{
+    // PerformMovement 已经把根运动速度写进 Velocity（行走时保留 Z）；这里先看要不要离地
+    // 下落攻击（SetIgnoreAirRootMotion）落地后不再按根运动离地：快速落地时起手段还在淡出，它的上升根运动会把落地段又抬回空中
+    if (!bIgnoreAirRootMotion && HasAnimRootMotion() && CharacterOwner && Velocity.Z > FMath::Max(-GetGravityZ() * deltaTime, UE_SMALL_NUMBER))
+    {
+        SetMovementMode(MOVE_Falling);
+        StartNewPhysics(deltaTime, Iterations);
+        return;
+    }
+    Super::PhysWalking(deltaTime, Iterations);
+}
+
 void UWuwaMovementComponent::PhysCustom(float deltaTime, int32 Iterations)
 {
 	if (IsClimbing())
@@ -396,7 +806,8 @@ bool UWuwaMovementComponent::ClimbableEyeSiteTrace()
 	FVector CharacterForward = UpdatedComponent->GetForwardVector();
 	FVector StartPostion = UpdatedComponent->GetComponentLocation()+ UpdatedComponent->GetUpVector()*50.0f;
 	FVector EndPosition = StartPostion + ClimbTraceDistance* CharacterForward;
-	ClimbableEyesiteResult = DoEyeSideTrace(StartPostion, EndPosition, true);
+	// 调试线只在 wuwa.Debug.Climb 打开时画（以前固定画，每帧一条）
+	ClimbableEyesiteResult = DoEyeSideTrace(StartPostion, EndPosition, UWuwaDebugLibrary::IsDebugChannelEnabled(EWuwaDebugChannel::Climb));
 	AActor* HitActor = ClimbableEyesiteResult.GetActor();
 	return HitActor ? true : false;
 }
@@ -441,3 +852,24 @@ FHitResult UWuwaMovementComponent::DoEyeSideTrace(const FVector& StartPos, const
 #pragma endregion
 
 
+
+void UWuwaMovementComponent::SetForceSpeed(const FVector& Speed)
+{
+    if (Speed.ContainsNaN()) return;
+    ForceSpeed = Speed;
+    bForceSpeedPending = true;
+    Velocity = Speed;
+    UpdateComponentVelocity();
+}
+
+void UWuwaMovementComponent::HandleImpact(const FHitResult& Hit, float TimeSlice, const FVector& MoveDelta)
+{
+    Super::HandleImpact(Hit, TimeSlice, MoveDelta);
+    BlockActorWhenMove = Hit.GetActor();
+    BlockActorFrame = GFrameCounter;
+}
+
+AActor* UWuwaMovementComponent::GetBlockActorWhenMove() const
+{
+    return BlockActorFrame + 1 >= GFrameCounter ? BlockActorWhenMove.Get() : nullptr;
+}

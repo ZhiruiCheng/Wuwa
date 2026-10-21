@@ -4,7 +4,7 @@ using UnrealSharp.CoreUObject;
 using UnrealSharp.Engine;
 using UnrealSharp.GameplayTags;
 using UnrealSharp.Wuwa;
-using ManagedWuwa.Game.NewWorld.Input;
+using ManagedWuwa.Game.NewWorld.Character.Common.Component.Input;
 
 namespace ManagedWuwa.Game.NewWorld.Character.Common.Component.Skill;
 
@@ -106,7 +106,7 @@ public partial class UWuwaSkillComponent : UWuwaSkillBridgeComponent
                 return 0;
             }
 
-            _currentSkill = new WuwaSkill(ability, ability.InterruptLevel, handle);
+            _currentSkill = new WuwaSkill(ability, ability.SkillId, ability.InterruptLevel, handle);
             ++_skillStartSerial;
             _skillAcceptInput = false;
             _mainSkillReadyEnd = false;
@@ -142,6 +142,7 @@ public partial class UWuwaSkillComponent : UWuwaSkillBridgeComponent
         {
             // 反射 UObject 字段允许空指针，生成绑定未标注可空；不延长已结束 GA 的生命。
             ActiveAbility = current.ActiveAbility.Object!,
+            SkillId = current.SkillId,
             FightStateHandle = current.FightStateHandle,
             InterruptLevel = current.InterruptLevel,
             SkillAcceptInput = AcceptsSkillInput,
@@ -186,6 +187,34 @@ public partial class UWuwaSkillComponent : UWuwaSkillBridgeComponent
         if (_endingPlay || !OwnsSkill(fightStateHandle) || newLevel is < 0 or > 255) return false;
         _currentSkill!.InterruptLevel = newLevel;
         return true;
+    }
+
+    // 原作 GetSkillAcceptInput / GetCommonSkillCanBeInterrupt（IsMainSkillReadyEnd 初值为真：没有主技能也算）
+    protected override bool IsSkillAcceptingInput_Implementation() => _currentSkill is not null && AcceptsSkillInput;
+    protected override bool IsMainSkillReadyEnd_Implementation() => _currentSkill is null || _mainSkillReadyEnd;
+
+    //原作 DoCheckInterrupt 用在非技能动作上（跳跃的等级是 CommonParam jump_priority = 8）：规则和 CanBeginSkill 的让位条件相同，能打断就结束当前主技能
+    protected override bool TryInterruptForAction_Implementation(int interruptLevel)
+    {
+        if (_endingPlay || _switching) return false;
+        if (_currentSkill is not { } current) return true;
+        var active = current.ActiveAbility.Object;
+        if (active is null || !active.IsValid() || !active.CanEndSkillExecutionNow()
+            || !(interruptLevel > current.InterruptLevel || interruptLevel == current.InterruptLevel && AcceptsSkillInput || _mainSkillReadyEnd))
+        {
+            return false;
+        }
+
+        _switching = true;
+        try
+        {
+            // GA 结束时回报 EndSkill 清掉记录、释放 FightState；ScopeLock 里结束不了就算失败。
+            return active.TryEndSkillExecution(current.FightStateHandle) && _currentSkill is null;
+        }
+        finally
+        {
+            _switching = false;
+        }
     }
 
     protected override bool CallAnimBreakPoint_Implementation(int fightStateHandle)

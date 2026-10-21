@@ -1,0 +1,256 @@
+{
+  "description": "人工调整：Attack04。不是原作数据。放大倍数沿用前几段的 3；Sprite 先用配方里的重建默认值（emission），之后对照截图调整。",
+  "modelScale": {
+    "N_Dg": 3.0,
+    "N_Dg1": 3.0,
+    "Xuli": 3.0,
+    "Flying": 3.0,
+    "SanEnd": 1.0
+  },
+  "note": "SanEnd（收伞）挂在武器插槽上，伞网格本身就是实际尺寸，不再放大；火花类（MI_Trans_Chunse，无贴图 = 纯色方块）原作是很小的点，改成 3~8 厘米、不跟随缩放、向外迸射。",
+  "materials": {
+    "M_Reference_Attack04_SanEnd_NE_Fx_Base001": {
+      "tint": [
+        1.0,
+        0.25,
+        0.1
+      ],
+      "intensity": 1.5
+    },
+    "M_Reference_Attack04_SanEnd_Lizi": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack04_SanEnd_Lizi001": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack04_Xuli_1": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack04_Flying_Wings_Mesh": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack04_Flying_FlowingParticles": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack04_Flying_Circle001": {
+      "tint": [
+        1.0,
+        0.45,
+        0.15
+      ],
+      "intensity": 2.0
+    },
+    "M_Reference_Attack04_Xuli_Luoxuan003": {
+      "tint": [
+        1.0,
+        0.12,
+        0.12
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack04_Xuli_Empty002": {
+      "tint": [
+        1.0,
+        0.2,
+        0.15
+      ],
+      "intensity": 1.0
+    },
+    "M_Reference_Attack04_Xuli_NE_Fx_BaseMesh": {
+      "tint": [
+        1.0,
+        0.45,
+        0.15
+      ],
+      "intensity": 2.0
+    }
+  },
+  "spriteLayers": {
+    "NS_Reference_Attack04_SanEnd": {
+      "Lizi": {
+        "count": 20,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          120,
+          300
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Lizi001": {
+        "count": 12,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          120,
+          300
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      }
+    },
+    "NS_Reference_Attack04_Xuli": {
+      "1": {
+        "count": 16,
+        "lifetime": [
+          0.3,
+          0.7
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          60,
+          160
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      }
+    },
+    "NS_Reference_Attack04_Flying": {
+      "Wings_Mesh": {
+        "count": 4,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          30,
+          30
+        ],
+        "sizeMax": [
+          60,
+          60
+        ],
+        "radius": [
+          0,
+          10
+        ],
+        "speed": [
+          20,
+          60
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 10
+      },
+      "FlowingParticles": {
+        "count": 16,
+        "lifetime": [
+          0.4,
+          0.8
+        ],
+        "sizeMin": [
+          4,
+          4
+        ],
+        "sizeMax": [
+          10,
+          10
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          40,
+          120
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      }
+    }
+  }
+}

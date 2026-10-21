@@ -2,7 +2,7 @@ using UnrealSharp.Attributes;
 using UnrealSharp.CoreUObject;
 using UnrealSharp.Wuwa;
 
-namespace ManagedWuwa.Animation.Notifies;
+namespace ManagedWuwa.Game.AnimNotifyState;
 
 /// <summary>开放同级技能接招；窗口身份来自原生蒙太奇播放实例。</summary>
 [UClass]

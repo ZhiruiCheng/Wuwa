@@ -15,5 +15,5 @@ public:
 	UFUNCTION(BlueprintNativeEvent, Category="Camera") FWuwaCameraSettings ResolveSettings(FWuwaCameraSettings BaseSettings);
 	UFUNCTION(BlueprintNativeEvent, Category="Camera") int32 PushCameraMode(UObject* Source, FWuwaCameraSettings Settings, int32 Priority);
 	UFUNCTION(BlueprintNativeEvent, Category="Camera") bool PopCameraMode(int32 Handle);
-	UFUNCTION(BlueprintNativeEvent, Category="Camera") void ResetCamera();
+	UFUNCTION(BlueprintNativeEvent, Category="Camera") void ResetCamera(bool bResetUserZoom = true);
 };

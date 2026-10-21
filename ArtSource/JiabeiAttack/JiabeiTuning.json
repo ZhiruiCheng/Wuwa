@@ -1,0 +1,18 @@
+{
+  "description": "人工调整（不是原作数据）。2026-10-13 起各层参数改为从原作字节码 / 编译着色器还原，旧的手调全部清空；需要时再按 4K 视频逐项加。",
+  "systems": {
+    "R1a_Shanbi_01": {
+      "layers": {
+        "Mesh01": {"lifetime": 0.466, "note": "2026-10-15 用户要求：Charge 地面特效从开始到滑行结束（ReadyEnd 0.466s）慢慢消失；网格寿命原作导出里没有，原值是按长离类比猜的"},
+        "Smoke002": {"lifetime": 0.466, "note": "同上"},
+        "Mesh01002": {"lifetime": 0.466, "note": "同上"},
+        "NE_Fx_Base014": {"lifetime": 0.466, "note": "同上"},
+        "NE_Fx_BaseMesh003": {"lifetime": 0.466, "note": "同上"},
+        "NE_Fx_BaseMesh004": {"lifetime": 0.466, "note": "同上"}
+      }
+    }
+  },
+  "decals": {
+    "Decal_11_02": {"fadeOut": 0.466, "note": "2026-10-15 用户要求：地面裂纹从开始到滑行结束线性淡出（原作 Base_Alpha_Multiply 保持到 0.7s 才淡出，发光过曝，看起来一直留在地上）"}
+  }
+}

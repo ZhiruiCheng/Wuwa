@@ -24,6 +24,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category="Wuwa|Camera") int32 PushCameraMode(UObject* Source, UWuwaCameraMode* Mode);
 	UFUNCTION(BlueprintCallable, Category="Wuwa|Camera") bool PopCameraMode(int32 Handle);
+	/**
+	 * 原作镜头修改（技能镜头）：以当前生效的镜头为起点，按 Modify 改出一组设置，压成优先级 100 + Modify.Priority 的相机模式。
+	 * BlendInTime / BlendOutTime = 原作 淡入时间 / 淡出时间。返回句柄，结束时 PopCameraMode。只对本地玩家正在看的角色生效。
+	 */
+	UFUNCTION(BlueprintCallable, Category="Wuwa|Camera") int32 PushCameraModify(UObject* Source, const FWuwaCameraModify& Modify, float BlendInTime, float BlendOutTime);
+	/** Pawn 当前是不是这个相机在看的本地玩家角色（镜头修改只给它）。 */
+	static AWuwaPlayerCameraManager* GetForPawn(const APawn* Pawn);
 	UFUNCTION(BlueprintPure, Category="Wuwa|Camera") UWuwaCameraRuntimeBridge* GetCameraRuntime() const { return Runtime; }
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Wuwa|Camera") FWuwaCameraSettings DefaultSettings;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Wuwa|Camera") TObjectPtr<UWuwaCameraMode> DefaultMode;

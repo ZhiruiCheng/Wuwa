@@ -2,13 +2,18 @@
 
 
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
+#include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
+#include "Game/NewWorld/Combat/WuwaLockOnComponent.h"
+#include "Engine/DataTable.h"
 #include "AbilitySystemComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "Animation/AnimInstance.h"
 #include "Animation/AnimMontage.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaUnifiedStateBridgeComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillBridgeComponent.h"
 #include "Game/NewWorld/Character/Role/Component/WuwaRoleGaitBridgeComponent.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
+#include "Game/NewWorld/Buff/WuwaBuffLibrary.h"
 
 bool UWuwaGameplayAbilityBase::IsSkillExecutionActive() const
 {
@@ -64,6 +69,12 @@ bool UWuwaGameplayAbilityBase::StopMontageForMovement(float BlendOutTime)
 	return true;
 }
 
+
+int32 UWuwaGameplayAbilityBase::GetSkillId() const
+{
+	const UWuwaAbilitySystemComponent* ASC = Cast<UWuwaAbilitySystemComponent>(GetAbilitySystemComponentFromActorInfo());
+	return ASC ? ASC->GetSkillIdForHandle(GetCurrentAbilitySpecHandle()) : 0;
+}
 
 //检查是否能够激活
 bool UWuwaGameplayAbilityBase::CanActivateAbility(const FGameplayAbilitySpecHandle Handle,const FGameplayAbilityActorInfo* ActorInfo, const FGameplayTagContainer* SourceTags,const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
@@ -150,13 +161,127 @@ void UWuwaGameplayAbilityBase::ActivateAbility(const FGameplayAbilitySpecHandle 
 		return;
 	}
 
+	// 原作 BaseSkillComponent.BeginSkill：先选技能目标（QZr），再开始技能、按 SkillDirection 转向（DoSkillBeginMoveAction）；
+	// 放在蓝图 ActivateAbility 播蒙太奇之前
+	BeginSkillTarget();
+	BeginSkillActionTags();
+	ApplySkillStartBuffs();
+	BeginSkillWalkOffLedge();
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+}
+
+void UWuwaGameplayAbilityBase::BeginSkillWalkOffLedge()
+{
+	AWuwaCharacter* Character = CurrentActorInfo ? Cast<AWuwaCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+	const int32 SkillId = GetSkillId();
+	const FWuwaSkillInfo* Info = IsValid(Character) && Character->SkillTable && SkillId != 0
+		? Character->SkillTable->FindRow<FWuwaSkillInfo>(FName(*FString::FromInt(SkillId)), TEXT("WalkOffLedge"), false) : nullptr;
+	UWuwaMovementComponent* Movement = IsValid(Character) ? Character->GetWuwaMovementComponent() : nullptr;
+	if (!Info || !Info->bWalkOffLedge || !Movement || WalkOffLedgeMovement.IsValid()) return;
+	Movement->SetWalkOffLedgeRecord(false);
+	WalkOffLedgeMovement = Movement;
+}
+
+void UWuwaGameplayAbilityBase::EndSkillWalkOffLedge()
+{
+	if (UWuwaMovementComponent* Movement = WalkOffLedgeMovement.Get()) Movement->SetWalkOffLedgeRecord(true);
+	WalkOffLedgeMovement.Reset();
+}
+
+void UWuwaGameplayAbilityBase::BeginSkillActionTags()
+{
+	// 原作 Skill.BeginSkillBuffAndTag：技能开始把技能表 SkillTag 加到自己身上（项目只加 ActionTags）
+	AWuwaCharacter* Character = CurrentActorInfo ? Cast<AWuwaCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+	UAbilitySystemComponent* ASC = CurrentActorInfo ? CurrentActorInfo->AbilitySystemComponent.Get() : nullptr;
+	const int32 SkillId = GetSkillId();
+	const FWuwaSkillInfo* Info = IsValid(Character) && ASC && Character->SkillTable && SkillId != 0
+		? Character->SkillTable->FindRow<FWuwaSkillInfo>(FName(*FString::FromInt(SkillId)), TEXT("ActionTags"), false) : nullptr;
+	if (!Info || Info->ActionTags.IsEmpty() || ActionTagsASC.IsValid()) return;
+	ASC->AddLooseGameplayTags(Info->ActionTags);
+	ActionTagsASC = ASC;
+	AppliedActionTags = Info->ActionTags;
+}
+
+void UWuwaGameplayAbilityBase::EndSkillActionTags()
+{
+	if (UAbilitySystemComponent* ASC = ActionTagsASC.Get()) ASC->RemoveLooseGameplayTags(AppliedActionTags);
+	ActionTagsASC.Reset();
+	AppliedActionTags.Reset();
+}
+
+void UWuwaGameplayAbilityBase::ApplySkillStartBuffs()
+{
+	// 原作 BaseSkillComponent.BeginSkill 里的 SkillStartBuff：技能开始时给自己加 buff（只在有权威的一端加）
+	AWuwaCharacter* Character = CurrentActorInfo ? Cast<AWuwaCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+	UAbilitySystemComponent* ASC = CurrentActorInfo ? CurrentActorInfo->AbilitySystemComponent.Get() : nullptr;
+	const int32 SkillId = GetSkillId();
+	const FWuwaSkillInfo* Info = IsValid(Character) && ASC && Character->SkillTable && SkillId != 0
+		? Character->SkillTable->FindRow<FWuwaSkillInfo>(FName(*FString::FromInt(SkillId)), TEXT("SkillStartBuffs"), false) : nullptr;
+	if (!Info) return;
+	for (const int64 BuffId : Info->SkillStartBuffs) UWuwaBuffLibrary::AddBuff(ASC, BuffId);
+}
+
+void UWuwaGameplayAbilityBase::ApplySkillEndBuffs()
+{
+	// 原作 Skill.EndSkill：移除技能 Tag 之后加 SkillEndBuff（不区分正常结束 / 被打断；只在有权威的一端加）
+	AWuwaCharacter* Character = CurrentActorInfo ? Cast<AWuwaCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+	UAbilitySystemComponent* ASC = CurrentActorInfo ? CurrentActorInfo->AbilitySystemComponent.Get() : nullptr;
+	const int32 SkillId = GetSkillId();
+	const FWuwaSkillInfo* Info = IsValid(Character) && ASC && Character->SkillTable && SkillId != 0
+		? Character->SkillTable->FindRow<FWuwaSkillInfo>(FName(*FString::FromInt(SkillId)), TEXT("SkillEndBuffs"), false) : nullptr;
+	if (!Info) return;
+	for (const int64 BuffId : Info->SkillEndBuffs) UWuwaBuffLibrary::AddBuff(ASC, BuffId);
+}
+
+void UWuwaGameplayAbilityBase::BeginSkillTarget()
+{
+	AWuwaCharacter* Character = CurrentActorInfo ? Cast<AWuwaCharacter>(CurrentActorInfo->AvatarActor.Get()) : nullptr;
+	const int32 SkillId = GetSkillId();
+	const FWuwaSkillInfo* Info = IsValid(Character) && Character->SkillTable && SkillId != 0
+		? Character->SkillTable->FindRow<FWuwaSkillInfo>(FName(*FString::FromInt(SkillId)), TEXT("BeginSkillTarget"), false) : nullptr;
+	UWuwaLockOnComponent* LockOn = IsValid(Character) ? Character->LockOnComponent.Get() : nullptr;
+	if (!Info || !LockOn) return;
+
+	// 选目标：每次技能开始先清空；配置了锁定才挑
+	AActor* Target = nullptr;
+	FName Socket;
+	if (Info->bIsLockOn && LockOn->DetectSoftLockTarget(Info->LockOnConfigId, Info->SkillTargetPriority))
+	{
+		Target = LockOn->GetCurrentTarget().Actor.Get();
+		Socket = LockOn->GetCurrentTarget().Socket;
+	}
+	if (UWuwaSkillBridgeComponent* Skills = Character->SkillComponent.Get()) Skills->SetSkillTarget(Target, Socket);
+
+	// 转向（原作 CharacterSkillComponent.SetSkillTargetDirection）：瞬间转到目标 / 输入 / 镜头方向，只转水平朝向
+	const FWuwaPlayerInputState Input = Character->GetPlayerInputState();
+	const FVector InputDirection = Input.bHasMoveInput ? Input.MoveWorldDirection : FVector::ZeroVector;
+	const AController* Controller = Character->GetController();
+	const FVector CameraDirection = Controller ? Controller->GetControlRotation().Vector() : FVector::ZeroVector;
+	FVector Facing = FVector::ZeroVector;
+	switch (Info->SkillDirection)
+	{
+	case EWuwaSkillDirection::SkillTarget:
+	case EWuwaSkillDirection::VehicleSkillTarget:
+		Facing = Target ? Target->GetActorLocation() - Character->GetActorLocation()
+			: (Info->SkillTargetPriority == EWuwaSkillTargetPriority::CameraDirectionPrecise ? CameraDirection : InputDirection);
+		break;
+	case EWuwaSkillDirection::InputDirection: Facing = InputDirection; break;
+	case EWuwaSkillDirection::CameraDirection: Facing = CameraDirection; break;
+	default: break;   // 角色方向：不转
+	}
+	Facing.Z = 0.0;
+	if (!Facing.IsNearlyZero()) Character->SetActorRotation(FRotator(0.0, Facing.Rotation().Yaw, 0.0));
 }
 
 void UWuwaGameplayAbilityBase::EndAbility(const FGameplayAbilitySpecHandle Handle,const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,bool bReplicateEndAbility, bool bWasCancelled)
 {
 	if (!IsInstantiated() || (FightStateHandle == 0 && !WritesStartMoveState()))
 	{
+		if (IsInstantiated())
+		{
+			EndSkillWalkOffLedge();
+			EndSkillActionTags();
+		}
 		Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
 		return;
 	}
@@ -171,6 +296,10 @@ void UWuwaGameplayAbilityBase::EndAbility(const FGameplayAbilitySpecHandle Handl
 		return;
 	}
 
+	// 原作 DoSkillEndMoveAction：归还边缘保护；原作 EndSkill 移除技能 Tag，再加 SkillEndBuff。
+	EndSkillWalkOffLedge();
+	EndSkillActionTags();
+	ApplySkillEndBuffs();
 	const TWeakObjectPtr<UWuwaSkillBridgeComponent> EndingSkills = SkillOwner;
 	const int32 EndingSkillHandle = FightStateHandle;
 	SkillOwner.Reset();

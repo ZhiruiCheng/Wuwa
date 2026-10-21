@@ -2,7 +2,7 @@ using UnrealSharp.Attributes;
 using UnrealSharp.CoreUObject;
 using UnrealSharp.Wuwa;
 
-namespace ManagedWuwa.Animation.Notifies;
+namespace ManagedWuwa.Game.AnimNotify;
 
 /// <summary>进入让位阶段；当前 GA 和蒙太奇继续播放，直到被替换或自行结束。</summary>
 [UClass]

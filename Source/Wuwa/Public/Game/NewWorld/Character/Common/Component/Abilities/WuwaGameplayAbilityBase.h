@@ -20,9 +20,9 @@ class WUWA_API UWuwaGameplayAbilityBase : public UGameplayAbility
 	GENERATED_BODY()
 	
 public:
-	//初始标签
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Wuwa|DynamicTag")
-	FGameplayTag OriginalTag;
+	/** 这次执行对应的技能 ID（技能表行名）；不是按技能表授予的能力返回 0。 */
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	int32 GetSkillId() const;
 
 	/** 本项目主动动作默认属于主动技能；被动/辅助 GA 应关闭。与移动占用独立。 */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Wuwa|Combat|Skill")
@@ -94,6 +94,19 @@ protected:
 		const FGameplayEventData* TriggerEventData = nullptr) override;
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
+	/** 技能开始：技能表配置了锁定就挑技能目标（存到技能组件），再按 SkillDirection 瞬间转向。ActivateAbility 里、播蒙太奇之前调用。 */
+	void BeginSkillTarget();
+	/** 技能表 SkillStartBuffs：技能开始时给自己加的 buff。 */
+	void ApplySkillStartBuffs();
+	/** 技能表 SkillEndBuffs：技能结束时（正常结束、被打断都算）给自己加的 buff。 */
+	void ApplySkillEndBuffs();
+	/** 技能表 bWalkOffLedge：技能期间开边缘保护（原作 CharacterSkillComponent 技能开始 / DoSkillEndMoveAction）。 */
+	void BeginSkillWalkOffLedge();
+	void EndSkillWalkOffLedge();
+	/** 技能表 ActionTags：技能期间加到自己身上（松散 Tag 计数 +1，结束 -1）。 */
+	void BeginSkillActionTags();
+	void EndSkillActionTags();
+
 	virtual void EndAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, bool bReplicateEndAbility, bool bWasCancelled) override;
 
@@ -106,4 +119,10 @@ private:
 	
 	//防止重入导致的重复激活
 	uint64 ActivationSerial = 0;
+
+	/** 本次执行申请过边缘保护（结束时归还给同一个移动组件）。 */
+	TWeakObjectPtr<class UWuwaMovementComponent> WalkOffLedgeMovement;
+	/** 本次执行加过的动作标识（结束时从同一个 ASC 上减掉）。 */
+	TWeakObjectPtr<UAbilitySystemComponent> ActionTagsASC;
+	FGameplayTagContainer AppliedActionTags;
 };

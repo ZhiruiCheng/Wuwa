@@ -1,4 +1,5 @@
 #include "Game/NewWorld/Character/Common/Component/Anim/WuwaAnimDataLibrary.h"
+#include "Animation/AnimSequence.h"
 
 #include "Game/NewWorld/Character/Common/Component/Anim/WuwaAnimLogicParams.h"
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
@@ -77,4 +78,29 @@ float UWuwaAnimDataLibrary::GetStartTimeFromSyncPosition(const UAnimSequence* Se
         return 0.f; // 没拿到有效同步位置时从头播
     }
     return Sequence->GetFirstMatchingPosFromMarkerSyncPos(SyncPosition);
+}
+
+float UWuwaAnimDataLibrary::GetStopEntryTime(const UAnimSequence* Sequence,
+	const FMarkerSyncAnimPosition& SyncPosition, bool& bMatched)
+{
+	bMatched = false;
+	if (!Sequence || !FMath::IsFinite(SyncPosition.PositionBetweenMarkers)) return 0.f;
+	const FName Left(TEXT("Left")), Right(TEXT("Right"));
+	if (!((SyncPosition.PreviousMarkerName == Left && SyncPosition.NextMarkerName == Right)
+		|| (SyncPosition.PreviousMarkerName == Right && SyncPosition.NextMarkerName == Left))) return 0.f;
+	const FAnimSyncMarker* First = nullptr;
+	for (const FAnimSyncMarker& Marker : Sequence->AuthoredSyncMarkers)
+	{
+		if ((Marker.MarkerName != Left && Marker.MarkerName != Right) || !FMath::IsFinite(Marker.Time)
+			|| Marker.Time < 0.f || Marker.Time >= Sequence->GetPlayLength()) continue;
+		if (!First) { First = &Marker; continue; }
+		// 首对不同脚的接触标记定义入场区间；不向后寻找其他匹配区间，也不跨尾帧循环。
+		if (Marker.Time <= First->Time) return 0.f;
+		if (Marker.MarkerName == First->MarkerName) continue;
+		if (First->MarkerName != SyncPosition.PreviousMarkerName || Marker.MarkerName != SyncPosition.NextMarkerName) return 0.f;
+		bMatched = true;
+		return FMath::Clamp(FMath::Lerp(First->Time, Marker.Time,
+			FMath::Clamp(SyncPosition.PositionBetweenMarkers, 0.f, 1.f)), 0.f, FMath::Max(0.f, Sequence->GetPlayLength() - 0.05f));
+	}
+	return 0.f;
 }

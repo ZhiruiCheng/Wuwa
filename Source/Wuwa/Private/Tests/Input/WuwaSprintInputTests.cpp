@@ -106,8 +106,8 @@ bool FWuwaSprintInputSourcesTest::RunTest(const FString& Parameters)
 	Character->Controller = Fixture.Controller;
 	UWuwaInputIntentComponent* Intent = Character->InputIntent;
 	const FWuwaGameTags Tags = FWuwaGameTags::Get();
-	const FInputDataAsset First = MakeSprintBinding(Fixture.Controller, Tags.Abilities_Movement_Dash, Tags.Input_Route_Ability);
-	const FInputDataAsset Second = MakeSprintBinding(Fixture.Controller, Tags.Abilities_Movement_Dash, Tags.Input_Route_Ability);
+	const FInputDataAsset First = MakeSprintBinding(Fixture.Controller, Tags.Input_Combat_Dash, Tags.Input_Route_Ability);
+	const FInputDataAsset Second = MakeSprintBinding(Fixture.Controller, Tags.Input_Combat_Dash, Tags.Input_Route_Ability);
 	if (!TestTrue(TEXT("The semantic input binding is configured"), First.IsConfigured()))
 	{
 		return false;
@@ -173,7 +173,7 @@ bool FWuwaSprintInputLifecycleTest::RunTest(const FString& Parameters)
 		return false;
 	}
 	const FWuwaGameTags Tags = FWuwaGameTags::Get();
-	const FInputDataAsset Dash = MakeSprintBinding(Fixture.Controller, Tags.Abilities_Movement_Dash, Tags.Input_Route_Ability);
+	const FInputDataAsset Dash = MakeSprintBinding(Fixture.Controller, Tags.Input_Combat_Dash, Tags.Input_Route_Ability);
 	Fixture.Controller->RegisterInputRouteHandlers();
 
 	// Without a controlled Pawn there is nowhere to record semantic input; routing must still be safe.
@@ -293,7 +293,7 @@ bool FWuwaSprintRetainedInputLifecycleTest::RunTest(const FString& Parameters)
 	Fixture.Controller->SetPawn(FirstCharacter);
 	FirstCharacter->Controller = Fixture.Controller;
 	const FWuwaGameTags Tags = FWuwaGameTags::Get();
-	const FInputDataAsset Dash = MakeSprintBinding(Fixture.Controller, Tags.Abilities_Movement_Dash, Tags.Input_Route_Ability);
+	const FInputDataAsset Dash = MakeSprintBinding(Fixture.Controller, Tags.Input_Combat_Dash, Tags.Input_Route_Ability);
 	UObject* CompletedWindow = NewObject<UInputAction>(FirstCharacter);
 	UObject* OpenWindow = NewObject<UInputAction>(FirstCharacter);
 	const FInputActionValue MovingInput(FVector2D(0.f, 1.f));
@@ -386,7 +386,7 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaSprintInputAssetsTest, "Wuwa.Input.Sprint.
 bool FWuwaSprintInputAssetsTest::RunTest(const FString& Parameters)
 {
 	const UInputAction* DodgeAction = LoadObject<UInputAction>(nullptr, TEXT("/Game/CoreInput/Actions/IA_Dodge.IA_Dodge"));
-	const UWuwaInputDataAsset* InputTagMap = LoadObject<UWuwaInputDataAsset>(nullptr, TEXT("/Game/CoreInput/DataAsset/DA_InputActionTagAsset.DA_InputActionTagAsset"));
+	const UWuwaInputDataAsset* InputTagMap = LoadObject<UWuwaInputDataAsset>(nullptr, TEXT("/Game/CoreInput/DataAsset/DA_IARouterMap.DA_IARouterMap"));
 	const UInputMappingContext* MappingContext = LoadObject<UInputMappingContext>(nullptr, TEXT("/Game/CoreInput/Contexts/IMC_Character.IMC_Character"));
 	if (!TestNotNull(TEXT("The existing Dodge action loads"), DodgeAction)
 		|| !TestNotNull(TEXT("The current input tag asset loads"), InputTagMap)
@@ -401,7 +401,7 @@ bool FWuwaSprintInputAssetsTest::RunTest(const FString& Parameters)
 		if (Binding.InputAction == DodgeAction)
 		{
 			++DodgeBindings;
-			TestTrue(TEXT("Dodge maps to the existing Dash semantic input"), Binding.InputTag == Tags.Abilities_Movement_Dash);
+			TestTrue(TEXT("Dodge maps to the existing Dash semantic input"), Binding.InputTag == Tags.Input_Combat_Dash);
 			TestTrue(TEXT("Dodge remains on the ability input route"), Binding.RouteTag == Tags.Input_Route_Ability);
 		}
 	}

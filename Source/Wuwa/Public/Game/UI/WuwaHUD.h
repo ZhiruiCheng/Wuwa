@@ -23,7 +23,7 @@ class WUWA_API AWuwaHUD : public AHUD
 	GENERATED_BODY()
 public:
 	
-	void InitCtrAndWidget(UWuwaAbilitySystemComponent* asc,UWuwaAttributeSet* as,AWuwaPlayerController* playerController,AWuwaPlayerState* playerState);
+	void InitCtrAndWidget(UWuwaAbilitySystemComponent* asc,UWuwaAttributeSet* as,AWuwaPlayerController* playerController);
 	
 	UPROPERTY()
 	TObjectPtr<UWuwaWidgetController> WuwaWidgetController;

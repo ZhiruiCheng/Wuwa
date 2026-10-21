@@ -25,6 +25,12 @@ struct WUWA_API FWuwaEffectFloatCurve
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (EditCondition = "bUseCurve", EditConditionHides))
 	FRuntimeFloatCurve Curve;
+
+	/** 按播放开始后的秒数取值；常量模式忽略时间。 */
+	float Evaluate(float Seconds) const
+	{
+		return bUseCurve ? FWuwaEffectVectorCurve::EvaluateAxis(Curve, Constant, Seconds) : Constant;
+	}
 };
 
 /** 对应 KuroCurveLinearColor。四通道显式声明，使 UnrealSharp 能完整读写。 */
@@ -56,4 +62,14 @@ struct WUWA_API FWuwaEffectColorCurve
 	FRuntimeFloatCurve CurveB;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (EditCondition = "bUseCurve", EditConditionHides))
 	FRuntimeFloatCurve CurveA;
+
+	/** 按播放开始后的秒数取值；常量模式忽略时间。 */
+	FLinearColor Evaluate(float Seconds) const
+	{
+		if (!bUseCurve) return Constant;
+		return FLinearColor(FWuwaEffectVectorCurve::EvaluateAxis(CurveR, Constant.R, Seconds),
+			FWuwaEffectVectorCurve::EvaluateAxis(CurveG, Constant.G, Seconds),
+			FWuwaEffectVectorCurve::EvaluateAxis(CurveB, Constant.B, Seconds),
+			FWuwaEffectVectorCurve::EvaluateAxis(CurveA, Constant.A, Seconds));
+	}
 };

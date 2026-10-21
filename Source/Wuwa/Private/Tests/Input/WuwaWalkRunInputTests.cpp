@@ -18,6 +18,7 @@
 #include "Game/Controller/WuwaPlayerController.h"
 #include "UObject/UnrealType.h"
 #include "Game/Common/WuwaGameTags.h"
+#include "Game/Framework/WuwaGameMode.h"
 
 namespace
 {
@@ -241,7 +242,7 @@ bool FWuwaWalkRunAssetsTest::RunTest(const FString& Parameters)
 	// 只读加载项目真实配置，覆盖“代码正确但 IA/IMC/路由未接线”的问题。
 	const UInputAction* WalkRunAction = LoadObject<UInputAction>(nullptr, TEXT("/Game/CoreInput/Actions/IA_WalkRun.IA_WalkRun"));
 	const UInputMappingContext* MappingContext = LoadObject<UInputMappingContext>(nullptr, TEXT("/Game/CoreInput/Contexts/IMC_Character.IMC_Character"));
-	const UWuwaInputDataAsset* InputTagMap = LoadObject<UWuwaInputDataAsset>(nullptr, TEXT("/Game/CoreInput/DataAsset/DA_InputActionTagAsset.DA_InputActionTagAsset"));
+	const UWuwaInputDataAsset* InputTagMap = LoadObject<UWuwaInputDataAsset>(nullptr, TEXT("/Game/CoreInput/DataAsset/DA_IARouterMap.DA_IARouterMap"));
 	const bool bHasAction = TestNotNull(TEXT("Walk/run input action exists"), WalkRunAction);
 	const bool bHasContext = TestNotNull(TEXT("Character mapping context exists"), MappingContext);
 	const bool bHasTagMap = TestNotNull(TEXT("Input tag map exists"), InputTagMap);
@@ -251,15 +252,20 @@ bool FWuwaWalkRunAssetsTest::RunTest(const FString& Parameters)
 	}
 
 	TestTrue(TEXT("Walk/run is a Boolean action"), WalkRunAction->ValueType == EInputActionValueType::Boolean);
-	int32 AltMappingCount = 0;
+	// 走跑切换只绑一个键；LeftAlt 留给"按住显示鼠标"（IA_ShowMouse），不能再绑走跑。
+	int32 WalkRunMappingCount = 0;
+	bool bWalkRunOnAlt = false;
 	for (const FEnhancedActionKeyMapping& Mapping : MappingContext->GetMappings())
 	{
-		if (Mapping.Action == WalkRunAction && Mapping.Key == EKeys::LeftAlt)
+		if (Mapping.Action == WalkRunAction)
 		{
-			++AltMappingCount;
+			++WalkRunMappingCount;
+			bWalkRunOnAlt |= Mapping.Key == EKeys::LeftAlt;
+			AddInfo(FString::Printf(TEXT("WalkRun key: %s"), *Mapping.Key.ToString()));
 		}
 	}
-	TestEqual(TEXT("Left Alt maps to WalkRun exactly once"), AltMappingCount, 1);
+	TestEqual(TEXT("WalkRun is bound to exactly one key"), WalkRunMappingCount, 1);
+	TestFalse(TEXT("WalkRun is not on Left Alt (reserved for showing the mouse)"), bWalkRunOnAlt);
 
 	const FWuwaGameTags Tags = FWuwaGameTags::Get();
 	int32 WalkRunRowCount = 0;
@@ -284,7 +290,7 @@ bool FWuwaWalkRunAssetsTest::RunTest(const FString& Parameters)
 	// 沿真实蓝图 CDO 确认这套配置被角色/控制器引用，而不仅是资产单独存在。
 	UClass* GameModeClass = LoadClass<AGameModeBase>(nullptr, TEXT("/Game/Core/BP_WuwaGameMode.BP_WuwaGameMode_C"));
 	UClass* ControllerClass = LoadClass<AWuwaPlayerController>(nullptr, TEXT("/Game/Core/BP_WuwaPlayerController.BP_WuwaPlayerController_C"));
-	UClass* CharacterClass = LoadClass<AWuwaCharacter>(nullptr, TEXT("/Game/Characters/Role/changli/BP_WuwaCharacterBase.BP_WuwaCharacterBase_C"));
+	UClass* CharacterClass = LoadClass<AWuwaCharacter>(nullptr, TEXT("/Game/Characters/Role/changli/BP_Role_Changli.BP_Role_Changli_C"));
 	const bool bHasGameModeClass = TestNotNull(TEXT("The project GameMode blueprint loads"), GameModeClass);
 	const bool bHasControllerClass = TestNotNull(TEXT("The project controller blueprint loads"), ControllerClass);
 	const bool bHasCharacterClass = TestNotNull(TEXT("The project character blueprint loads"), CharacterClass);
@@ -295,7 +301,9 @@ bool FWuwaWalkRunAssetsTest::RunTest(const FString& Parameters)
 	const AGameModeBase* GameModeDefaults = GameModeClass->GetDefaultObject<AGameModeBase>();
 	const AWuwaPlayerController* ControllerDefaults = ControllerClass->GetDefaultObject<AWuwaPlayerController>();
 	TestTrue(TEXT("GameMode uses the expected player controller"), GameModeDefaults->PlayerControllerClass.Get() == ControllerClass);
-	TestTrue(TEXT("GameMode uses the expected character"), GameModeDefaults->DefaultPawnClass.Get() == CharacterClass);
+	// 角色由队伍组件生成（AWuwaGameMode::RestartPlayer），GameMode 不再生成默认 Pawn。
+	TestTrue(TEXT("GameMode is the formation-aware Wuwa GameMode"), GameModeClass->IsChildOf(AWuwaGameMode::StaticClass()));
+	TestNull(TEXT("GameMode does not spawn a default pawn besides the formation"), GameModeDefaults->DefaultPawnClass.Get());
 	TestTrue(TEXT("The player controller uses the configured input tag map"), ControllerDefaults->InputTagMap == InputTagMap);
 	// 走跑键 -> 指令的配置表：控制器默认指向它，且其中配置了切换走跑偏好。
 	const UWuwaMoveInputConfig* MoveConfig = ControllerDefaults->MoveInputHandler

@@ -56,6 +56,8 @@ public:
 
 	/** C# 写快照的唯一出口；有变化时 Revision + 1。只写数据不广播，由调用方按原作顺序广播。 */
 	UFUNCTION(BlueprintCallable, Category="Wuwa|State", meta=(BlueprintProtected)) void CommitStateData(FWuwaUnifiedStateData NewState);
+	/** 已提交的位置 → 角色身上的 State.Position.* loose tag（原作 行为状态.位置状态.*）。 */
+	void SyncPositionTags();
 	UFUNCTION(BlueprintCallable, Category="Wuwa|State", meta=(BlueprintProtected)) void BroadcastPositionStateChanged(EWuwaPositionState OldState, EWuwaPositionState NewState);
 	UFUNCTION(BlueprintCallable, Category="Wuwa|State", meta=(BlueprintProtected)) void BroadcastMoveStateChanged(EWuwaMoveState OldState, EWuwaMoveState NewState);
 	UFUNCTION(BlueprintCallable, Category="Wuwa|State", meta=(BlueprintProtected)) void BroadcastGaitChanged(EWuwaGait OldGait, EWuwaGait NewGait);
@@ -70,4 +72,6 @@ public:
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Transient, Category="Wuwa|State", meta=(AllowPrivateAccess="true"))
 	FWuwaUnifiedStateData StateData;
+private:
+	bool bPositionTagsSynced = false;
 };

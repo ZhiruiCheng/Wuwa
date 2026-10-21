@@ -3,7 +3,7 @@ using UnrealSharp.CoreUObject;
 using UnrealSharp.Engine;
 using UnrealSharp.Wuwa;
 
-namespace Notifies;
+namespace ManagedWuwa.Game.AnimNotifyState;
 
 [UClass]
 public partial class UAnimNotifyState_DesireToKeepSprint : UAnimNotifyState

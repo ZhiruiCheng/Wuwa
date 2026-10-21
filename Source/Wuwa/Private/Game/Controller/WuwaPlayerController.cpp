@@ -15,6 +15,9 @@
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaInputIntentComponent.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 #include "Game/Camera/WuwaPlayerCameraManager.h"
+#include "Game/Formation/WuwaFormationComponent.h"
+#include "Game/Formation/WuwaFormationInputHandler.h"
+#include "Game/LGUI/Input/WuwaUIInputHandler.h"
 
 
 class UEnhancedInputLocalPlayerSubsystem;
@@ -26,6 +29,9 @@ AWuwaPlayerController::AWuwaPlayerController()
 	//ASC_Input_Handler
 	AbilityInputHandler =CreateDefaultSubobject<UWuwaAbilityInputHandlerComponent>(TEXT("AbilityInputHandler"));
 	MoveInputHandler =CreateDefaultSubobject<UWuwaMoveInputHandler>(TEXT("MoveInputHandler"));
+	UIInputHandler = CreateDefaultSubobject<UWuwaUIInputHandler>(TEXT("UIInputHandler"));
+	FormationComponent =CreateDefaultSubobject<UWuwaFormationComponent>(TEXT("FormationComponent"));
+	FormationInputHandler = CreateDefaultSubobject<UWuwaFormationInputHandler>(TEXT("FormationInputHandler"));
 }
 
 void AWuwaPlayerController::BeginPlay()
@@ -56,6 +62,16 @@ void AWuwaPlayerController::RegisterInputRouteHandlers()
 	InputRouter->RegisterHandler(
 		GameTags.Input_Route_Movement,
 		MoveInputHandler);
+	
+	InputRouter->RegisterHandler(
+		GameTags.Input_Route_UI,
+		UIInputHandler
+		);
+	
+	InputRouter->RegisterHandler(
+		GameTags.Input_Route_Formation,
+		FormationInputHandler);
+	
 	if (IsValid(PlayerCameraManager))
 	{
 		InputRouter->RegisterHandler(GameTags.Input_Route_Camera, PlayerCameraManager);
@@ -115,6 +131,7 @@ void AWuwaPlayerController::FlushPressedKeys()
 		AbilityInputHandler->ResetRuntime();
 	}
 	HeldDispatchedActions.Empty();
+	ActiveInputs.Empty();
 }
 
 
@@ -130,7 +147,8 @@ void AWuwaPlayerController::HandleRoutedInput(const FInputActionInstance& Instan
 	}
 
 	// Held 每次按下只发一次：Hold 触发器到点后每帧都会 Triggered，只取第一帧。
-	if (Phase == EWuwaInputPhase::Held)
+	// 连续触发的按键（bContinuousHold）每帧都发。
+	if (Phase == EWuwaInputPhase::Held && !ContinuousHoldActions.Contains(SourceAction))
 	{
 		if (HeldDispatchedActions.Contains(SourceAction))
 		{
@@ -162,6 +180,29 @@ void AWuwaPlayerController::HandleRoutedInput(const FInputActionInstance& Instan
 
 bool AWuwaPlayerController::RouteInputEvent(const FWuwaInputEvent& InputEvent)
 {
+	const bool bEnds = InputEvent.Phase == EWuwaInputPhase::Released || InputEvent.Phase == EWuwaInputPhase::Canceled;
+	// 被屏蔽的路由只拦"开始/持续"，连输入意图都不记录（移动轴写进意图后 CMC 每帧会读）。
+	// 松开/取消照常放行：屏蔽前就按着的键，松开时要能结束，否则角色会一直保持按着的状态。
+	if (!bEnds && IsRouteBlocked(InputEvent.RouteTag))
+	{
+		return false;
+	}
+
+	// 记下已经分发出去、还没松开的输入：开始屏蔽时要给它们补一个取消。
+	if (InputEvent.SourceAction)
+	{
+		if (bEnds)
+		{
+			ActiveInputs.Remove(InputEvent.SourceAction.Get());
+		}
+		else
+		{
+			ActiveInputs.Add(InputEvent.SourceAction.Get(), InputEvent);
+		}
+	}
+
+	OnInputRouted.Broadcast(InputEvent);
+
 	// 先记录再分发：GA 拒绝激活或没有系统处理时，按住/松开也不能丢。
 	// 只写给当前控制的 Pawn；没有 Pawn 时输入不记录在任何地方。
 	if (const APawn* ControlledPawn = GetPawn())
@@ -226,10 +267,11 @@ void AWuwaPlayerController::SetupInputComponent()
 			Binding.RouteTag,
 			EWuwaInputPhase::Pressed);
 
-		// 按键配了 Hold 触发器：到达阈值时 Triggered，转成 Held（每次按下一次）。
+		// 按键配了 Hold 触发器：到达阈值时 Triggered，转成 Held（每次按下一次；bContinuousHold 的每帧一次）。
 		// 没配 Hold 的按键不绑 Triggered，否则按住期间每帧都会触发。
 		if (Binding.InputAction->ValueType == EInputActionValueType::Boolean && HasHoldTrigger(Binding.InputAction))
 		{
+			if (Binding.bContinuousHold) ContinuousHoldActions.Add(Binding.InputAction);
 			WuwaInputComponent->BindAction(
 				Binding.InputAction,
 				ETriggerEvent::Triggered,
@@ -276,6 +318,61 @@ void AWuwaPlayerController::SetupInputComponent()
 	}
 	
 	
+}
+
+void AWuwaPlayerController::AddInputBlock(UObject* BlockOwner, const FGameplayTagContainer& BlockedRoutes)
+{
+	if (!BlockOwner)
+	{
+		return;
+	}
+
+	// 这次新被屏蔽的路由（之前没被别的 Owner 屏蔽过）。
+	FGameplayTagContainer NewlyBlocked;
+	for (const FGameplayTag& Route : BlockedRoutes)
+	{
+		if (!IsRouteBlocked(Route))
+		{
+			NewlyBlocked.AddTag(Route);
+		}
+	}
+	InputBlocks.Add(BlockOwner, BlockedRoutes);
+
+	// 这些路由上正按着的输入（比如按住 W 时按下 Alt）补发一次取消：移动轴归零、技能输入结束。
+	// 只发给真正按着的，没按着的键不会收到多余的事件。屏蔽解除后如果键还按着，下一帧的 Triggered 会让它继续。
+	TArray<FWuwaInputEvent> ToCancel;
+	for (const TPair<TWeakObjectPtr<const UInputAction>, FWuwaInputEvent>& Active : ActiveInputs)
+	{
+		if (Active.Key.IsValid() && NewlyBlocked.HasTagExact(Active.Value.RouteTag))
+		{
+			ToCancel.Add(Active.Value);
+		}
+	}
+	for (FWuwaInputEvent& Event : ToCancel)
+	{
+		Event.Phase = EWuwaInputPhase::Canceled;
+		Event.Value.Reset();
+		Event.Timestamp = GetWorld() ? GetWorld()->GetTimeSeconds() : 0.0;
+		HeldDispatchedActions.Remove(Event.SourceAction.Get());
+		RouteInputEvent(Event);
+	}
+}
+
+void AWuwaPlayerController::RemoveInputBlock(UObject* BlockOwner)
+{
+	InputBlocks.Remove(BlockOwner);
+}
+
+bool AWuwaPlayerController::IsRouteBlocked(const FGameplayTag& RouteTag) const
+{
+	for (const TPair<TWeakObjectPtr<UObject>, FGameplayTagContainer>& Block : InputBlocks)
+	{
+		if (Block.Key.IsValid() && Block.Value.HasTagExact(RouteTag))
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 bool AWuwaPlayerController::HasHoldTrigger(const UInputAction* Action) const

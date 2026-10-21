@@ -31,6 +31,10 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Wuwa|Gait|Sprint") void CloseSprintWindow(UObject* Source);
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Wuwa|Gait|Sprint") void ResetSprintRequest();
 	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category="Wuwa|Gait|Sprint") EWuwaSprintDesire ReadSprintDesire() const;
+	/** Snapshot remaining temporary sprint time; an open window is treated as ending at the switch. */
+	UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category="Wuwa|Gait|Switch") float ReadSprintRemainingSeconds() const;
+	/** Restore values only, preserving this role's own gait restrictions. */
+	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Wuwa|Gait|Switch") void RestoreSwitchGait(EWuwaSprintDesire Desire, float RemainingSeconds, EWuwaGait LastMovingGait);
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category="Wuwa|Gait") void ResetRuntime();
 
 	UFUNCTION(BlueprintPure, Category="Wuwa|Gait") FWuwaMovementStateContext ReadMovementContext() const;

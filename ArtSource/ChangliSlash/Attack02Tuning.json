@@ -1,0 +1,74 @@
+{
+  "description": "人工调整：第二段攻击，沿用第一段的放大倍数与 Sprite 规则，按刀光半径比例换算；材质与第一段共用，调色在 Attack01Tuning.json。不是原作数据。",
+  "modelScale": {
+    "N_Dg": 3.0,
+    "N_Dg1": 3.0
+  },
+  "spriteLayersNote": "把刀光网格换算到对应 N_Dg1 的局部空间：亮刀光 Daoguang_Liang 半径约 82（第二组约 89）、角度约 216°→52°（跨约 195°）、Z 偏移约 0，所以 arc 从 220° 起。原作第二段 N_Dg1 与刀光同旋转、没有 yaw 曲线；刀光网格绕局部 +Z 正向转动，两层沿切线角度增大方向随刀光移动。数值按第一段的规则（尖端不超出亮刀光、菱形比刀光晚一点消失、关闭 ScaleSpriteSize）乘以半径比例 82/69≈1.19。yumao006 用细线材质（G 通道），yumao001 用菱形材质（R 通道）。",
+  "spriteLayers": {
+    "NS_Reference_Attack02_N_Dg1": {
+      "yumao001": {
+        "count": 8,
+        "lifetime": [
+          0.62,
+          0.78
+        ],
+        "sizeMin": [
+          -17,
+          36
+        ],
+        "sizeMax": [
+          -20,
+          43
+        ],
+        "radius": [
+          67,
+          71
+        ],
+        "speed": [
+          18,
+          36
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          222,
+          150
+        ],
+        "height": 2
+      },
+      "yumao006": {
+        "count": 36,
+        "lifetime": [
+          0.35,
+          0.6
+        ],
+        "sizeMin": [
+          -17,
+          54
+        ],
+        "sizeMax": [
+          -24,
+          71
+        ],
+        "radius": [
+          36,
+          65
+        ],
+        "speed": [
+          18,
+          36
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          220,
+          150
+        ],
+        "height": 8
+      }
+    }
+  }
+}

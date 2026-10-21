@@ -17,8 +17,8 @@ enum class EWuwaEffectAudioBackend : uint8
 
 /**
  * 对应 EffectModelAudio 的声音内容配置。
- * 原作 AudioEvent / TrailingAudioEvent 是 AkAudioEvent 对象；本项目没有 Wwise 插件，
- * 仅保留其资产路径供未来适配，UE 音频必须使用独立的 Sound 字段。
+ * 原作 AudioEvent / TrailingAudioEvent 是 AkAudioEvent 对象。WwiseEvent 后端播放项目 Wwise 工程里同名重建的事件
+ * （ArtSource/Audio），UnrealSound 后端用独立的 Sound 字段（DefaultGame.ini 当前是 EnableWwiseOnly，UE 音频不出声）。
  * 只保存数据，不创建 AudioComponent，也不保存声音播放句柄。
  * 原作原生字段的默认值未导出，本类默认值由本项目选择。
  */
@@ -31,12 +31,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio")
 	EWuwaEffectAudioBackend AudioBackend = EWuwaEffectAudioBackend::UnrealSound;
 
-	/** 原作事件资产的路径标识；无 Wwise 时不保证此路径在本项目可加载或可播放。 */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio|Wwise Event", meta = (EditCondition = "AudioBackend == EWuwaEffectAudioBackend::WwiseEvent", EditConditionHides))
+	/** 项目 Wwise 事件资产（/Game/WwiseAudio/Events/...，由 Wwise Reconcile 生成）。 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio|Wwise Event", meta = (EditCondition = "AudioBackend == EWuwaEffectAudioBackend::WwiseEvent", EditConditionHides, AllowedClasses = "/Script/AkAudio.AkAudioEvent"))
 	FSoftObjectPath AudioEvent;
 
 	/** 停止时触发的拖尾事件；原作要求拖尾不能是无限循环音频。 */
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio|Wwise Event", meta = (EditCondition = "AudioBackend == EWuwaEffectAudioBackend::WwiseEvent", EditConditionHides))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Audio|Wwise Event", meta = (EditCondition = "AudioBackend == EWuwaEffectAudioBackend::WwiseEvent", EditConditionHides, AllowedClasses = "/Script/AkAudio.AkAudioEvent"))
 	FSoftObjectPath TrailingAudioEvent;
 
 	/** 原作将此值传给音频系统的 TransitionFadeCurve；保留原始数值，不冒充 UE 的曲线枚举。 */

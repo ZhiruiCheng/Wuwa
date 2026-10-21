@@ -40,9 +40,9 @@ namespace WuwaCameraSetup
 	constexpr const TCHAR* ZoomPackage = TEXT("/Game/CoreInput/Actions/IA_CameraZoom");
 	constexpr const TCHAR* ZoomPath = TEXT("/Game/CoreInput/Actions/IA_CameraZoom.IA_CameraZoom");
 	constexpr const TCHAR* ContextPath = TEXT("/Game/CoreInput/Contexts/IMC_Character.IMC_Character");
-	constexpr const TCHAR* BindingsPath = TEXT("/Game/CoreInput/DataAsset/DA_InputActionTagAsset.DA_InputActionTagAsset");
+	constexpr const TCHAR* BindingsPath = TEXT("/Game/CoreInput/DataAsset/DA_IARouterMap.DA_IARouterMap");
 	constexpr const TCHAR* ControllerPath = TEXT("/Game/Core/BP_WuwaPlayerController.BP_WuwaPlayerController");
-	constexpr const TCHAR* CharacterPath = TEXT("/Game/Characters/Role/changli/BP_WuwaCharacterBase.BP_WuwaCharacterBase");
+	constexpr const TCHAR* CharacterPath = TEXT("/Game/Characters/Role/changli/BP_Role_Changli.BP_Role_Changli");
 	constexpr const TCHAR* TestCharacterPath = TEXT("/Game/Characters/Test/Test.Test");
 	constexpr const TCHAR* GameplayModePackage = TEXT("/Game/Game/Camera/DA_Camera_Gameplay");
 	constexpr const TCHAR* GameplayModePath = TEXT("/Game/Game/Camera/DA_Camera_Gameplay.DA_Camera_Gameplay");

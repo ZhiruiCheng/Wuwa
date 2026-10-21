@@ -112,3 +112,35 @@ Jump/Fall/Flying、NormalClimb、NormalSwim。它们是逻辑入口，本项目�
 运行编辑器时禁用 Live Coding 与此编译开关不同。
 原生接口发生修改后先构建 C++，再发布 `Script/ManagedWuwa/ManagedWuwa.csproj` 到
 `Binaries/Managed/net10.0`，让脚本使用最新生成的绑定。
+
+## 地面脚部 IK（2026-10-15）
+
+两个角色的 Control Rig 现在执行 `Wuwa Terrain Foot IK` 原生单元，位置仍在原来的
+Slot / Control Rig / KawaiiPhysics 动画链中。原 Idle 专用射线函数已从更新执行链旁路；
+原来的 `EnableFootIK`、脚高和骨盆偏移输入不再参与求解。Start / Move / Stop 状态及同步组不改动。
+
+开关和参数在角色 AnimBP 的 Class Defaults → Wuwa → Animation → Foot IK：
+
+- `FootIKSettings.Enabled` 默认开启；`Force Disable Foot IK` 可由特殊动作临时关闭。
+- 地面站立、起步、走跑、冲刺和停步均可参与。空中、动作覆盖和播放蒙太奇时关闭，回到地面移动后恢复。
+  这是本项目的动作保护策略；原作原生 `IKMode` 的完整实现不可见，不能把它当作完全还原。
+- `Max Step Height=30`、`Max Step Depth=35`、`Max Pelvis Drop=20` 单位是世界厘米；
+  脚踝倾角限制 35°，默认检测 Visibility 通道。地面必须对该通道有碰撞响应。
+- 游戏线程采集状态、胶囊脚底的地面基准、平台速度和坡度；Rig 根据本帧输入动画的双脚位置检测地面。
+  检测方式沿用 UE Control Rig 碰撞节点的世界查询路径，求解阶段不修改角色或移动组件。
+- 修正量叠加到本帧动画脚高，保留摆腿和抬脚。骨盆向较低的支撑脚下沉，双骨 IK 不拉长腿；
+  脚踝倾斜叠加到动画旋转。世界坐标与 Rig 坐标显式换算，兼容两个角色的 100 倍导入根骨骼。
+- `Foot_IK_l/r` 存在时直接使用，包括权重零；当前导入动画缺少这些曲线时按输入姿势的脚/脚趾抬升量回退，
+  Walk 保持 1、Run 在 0.55～1、Sprint 在 0～1 平滑调节。这些数值和几何回退是项目校准，未伪造原作曲线。
+- 平地无需修正时完全保留输入姿势。检测未命中时回到中性偏移，不把射线末端当作地面。
+  瞬移超过 100cm、离地或关闭时清空历史修正。移动平台采用原导出中的 25/5cm/s 滞回和插值速度 3；
+  移动时的陡坡减弱采用 40～50° 区间。原作坡度符号特殊分支、落地时间预测和锁脚求解器未复刻。
+
+实现：`WuwaAnimFootIK.cpp` 负责状态，`Game/Animation/IK/WuwaFootIK.cpp` 负责贴地。
+迁移前六个资产备份在 `Saved/Diagnostics/FootIK/Backup/20261015T210002Z`。
+`Saved/Diagnostics/FootIK/Applied.json` 记录保存范围和保留的参考骨骼数量。
+
+验证：`Wuwa.Animation.FootIK.TerrainAndGating` 对两个实际角色检查平地、20° 斜坡、左右高低台阶、
+脚踝实际目标、腿长/缩放、曲线零权重、无支撑、离地/强制关闭、运行中的 RigVM 链路和移动平台恢复。
+连同连续点按、StopPhases、双向角色切换共 11 项自动化测试通过，报告在
+`Saved/Diagnostics/FootIK/Regression/index.json`。这些是无界面碰撞与骨骼数值验证，未代替实际画面验收。

@@ -1,0 +1,154 @@
+{
+  "description": "人工调整：为贴近游戏截图（第一段攻击，背后/正面）对重建效果做的放大与调色，不是原作数据。原始配方见 Attack01.json。",
+  "modelScale": {
+    "N_Dg": 3.0,
+    "N_Dg1": 3.0,
+    "N1_Dg": 3.0
+  },
+  "materials": {
+    "M_Reference_Attack01_N_Dg_Fether_B": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack01_N_Dg_Fether_R": {
+      "tint": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack01_N1_Dg_Fether_B": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack01_N1_Dg_Fether_R": {
+      "tint": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack01_N_Dg_Daoguang_Liang": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack01_N_Dg_Daoguang_BG": {
+      "tint": [
+        1.0,
+        0.18,
+        0.45
+      ],
+      "intensity": 2.4
+    },
+    "M_Reference_Attack01_N_Dg1_yumao001": {
+      "tint": [
+        1.0,
+        0.14,
+        0.1
+      ],
+      "intensity": 4.0,
+      "silhouetteWeights": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "M_Reference_Attack01_N_Dg1_yumao002": {
+      "tint": [
+        1.0,
+        0.45,
+        0.15
+      ],
+      "intensity": 9.0,
+      "silhouetteWeights": [
+        0,
+        3,
+        0,
+        0
+      ]
+    }
+  },
+  "spriteLayersNote": "N_Dg1 两层速度对齐 Sprite（贴图 R 通道是菱形碎片、G 通道是细长线）按下面参数整个重建，均在 N_Dg1 局部 XY 平面、局部单位（会随 placement 与 modelScale 放大）。把两道刀光的网格换算到对应 N_Dg1 的局部空间后，两组结果一致：亮刀光 Daoguang_Liang 半径约 69、角度约 160°→355°、Z 轴与 N_Dg1 一致，arc 以此为准。运动方向：刀光网格绕局部 +Z 正向转动约 25°，N_Dg1 自身 yaw 也从 16.8° 增到 46.9°，所以两层都沿切线、角度增大方向随刀光移动（原作 VortexVelocity 同为切向运动，速度 50~135）。Sprite 以底边为锚点沿速度方向展开，切向时尖端半径 = √(半径² + (尖端位置×长度)²)，细线尖端在 0.72×长度、菱形在 0.91×长度，取值让尖端不超过约 70。细线寿命与刀光网格（0.38~0.58 秒）对齐；菱形 0.62~0.78 秒，比刀光晚一点消失。模板自带的 ScaleSpriteSize（随寿命缩小）已关闭：Sprite 锚点在尾端，缩小会让前端往回缩，看起来像倒退；现在只靠颜色/透明度淡出，边沿刀光方向移动边消失。yumao002（细线）36 根、半径 30~55、长度 45~60；yumao001（菱形）8 个、半径 56~60、长度 30~36；速度 15~30。以上数量、半径、长度、速度、寿命都是对照游戏截图的人工值（原作数量 14 = SpawnRate 曲线 0~0.15 秒积分、尺寸 X -30~-50 / Y 80~220、寿命 0.3~1.2）。原作是 0.15 秒内连续发射，这里改为一次性发射，属于重建。",
+  "spriteLayers": {
+    "NS_Reference_Attack01_N_Dg1": {
+      "yumao001": {
+        "count": 8,
+        "lifetime": [
+          0.62,
+          0.78
+        ],
+        "sizeMin": [
+          -14,
+          30
+        ],
+        "sizeMax": [
+          -17,
+          36
+        ],
+        "radius": [
+          56,
+          60
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          165,
+          150
+        ],
+        "height": 2
+      },
+      "yumao002": {
+        "count": 36,
+        "lifetime": [
+          0.35,
+          0.6
+        ],
+        "sizeMin": [
+          -14,
+          45
+        ],
+        "sizeMax": [
+          -20,
+          60
+        ],
+        "radius": [
+          30,
+          55
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          165,
+          150
+        ],
+        "height": 8
+      }
+    }
+  },
+  "materialsNote": "yumao001 只取 R 通道（菱形碎片）、yumao002 只取 G 通道（细长线）：原重建按 Base_AlphaSwitch=(2,3,1,0) 把 B 通道的大片渐变也算进形状，画面上是一大片糊的色带，和游戏截图里清晰的碎片/细线不符。silhouetteWeights 是人工选择，不是原作数据。"
+}

@@ -19,7 +19,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill", meta = (BlueprintProtected))
 	void ReachSkillReadyEnd(UWuwaSkillBridgeComponent* Skills, int32 SkillHandle) const;
-
+		
 private:
 	void DispatchReadyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation,
 		const FAnimNotifyEvent* NotifyEvent, int32 MontageInstanceId) const;

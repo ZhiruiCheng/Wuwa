@@ -1,0 +1,208 @@
+{
+  "description": "人工调整：第三段攻击。不是原作数据。放大倍数沿用前两段的 3；Sprite 先用整圈（刀光在寿命内转一圈以上），之后对照截图调整。",
+  "modelScale": {
+    "Daoguang01": 3.0,
+    "Daoguang02": 3.0,
+    "N_Dg": 3.0,
+    "N_Dg1": 3.0
+  },
+  "spriteLayersNote": "第一版估值：原作 Fire001 的 Large Radius 120~180、N_Dg1 的 100~148 是系统单位，原作刀光网格半径约 50 × 原作网格缩放（未解出，重建用 modelScale 3 补）≈ 150，所以这里的半径按 1/3 换算到局部单位。都沿切线随刀光方向移动、关闭随寿命缩小。",
+  "spriteLayers": {
+    "NS_Reference_Attack03_N_Dg1": {
+      "yumao001": {
+        "count": 8,
+        "lifetime": [
+          0.62,
+          0.78
+        ],
+        "sizeMin": [
+          -14,
+          30
+        ],
+        "sizeMax": [
+          -17,
+          36
+        ],
+        "radius": [
+          40,
+          46
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 2
+      },
+      "yumao006": {
+        "count": 36,
+        "lifetime": [
+          0.35,
+          0.6
+        ],
+        "sizeMin": [
+          -14,
+          45
+        ],
+        "sizeMax": [
+          -20,
+          60
+        ],
+        "radius": [
+          22,
+          40
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 8
+      }
+    },
+    "NS_Reference_Attack03_N_Dg": {
+      "Fire001": {
+        "count": 10,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          -18,
+          36
+        ],
+        "sizeMax": [
+          -27,
+          54
+        ],
+        "radius": [
+          35,
+          50
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 4
+      }
+    }
+  },
+  "materialsNote": "按材质类型沿用第一段的人工调色：Fether_B 类（140062 / 140061）偏品红、Fether_R 类（140055）偏红、亮刀光（140100 / 008）橙金、背景（140060）暗红；Fire 为红色。",
+  "materials": {
+    "M_Reference_Attack03_Daoguang01_Daoguang_Liang001": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack03_Daoguang01_Daoguang_Wenli_WG": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack03_Daoguang01_Fether_R": {
+      "tint": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack03_Daoguang02_Daoguang_Liang001": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack03_Daoguang02_Daoguang_BG": {
+      "tint": [
+        1.0,
+        0.18,
+        0.45
+      ],
+      "intensity": 2.4
+    },
+    "M_Reference_Attack03_N_Dg_Daoguang_liang01": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack03_N_Dg_Fether_B": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack03_N_Dg_Daoguang_Liang001": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack03_N_Dg_Fether_R001": {
+      "tint": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack03_N_Dg_Fire001": {
+      "tint": [
+        1.0,
+        0.15,
+        0.08
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack03_Daoguang01_Daoguang_BG": {
+      "tint": [
+        1.0,
+        0.18,
+        0.45
+      ],
+      "intensity": 2.4
+    },
+    "M_Reference_Attack03_N_Dg_Daoguang_BG": {
+      "tint": [
+        1.0,
+        0.18,
+        0.45
+      ],
+      "intensity": 2.4
+    }
+  }
+}

@@ -39,4 +39,18 @@ struct WUWA_API FWuwaEffectVectorCurve
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Value", meta = (EditCondition = "bUseCurve", EditConditionHides))
 	FRuntimeFloatCurve CurveZ;
+
+	/** 按播放开始后的秒数取值；常量模式忽略时间。 */
+	FVector Evaluate(float Seconds) const
+	{
+		if (!bUseCurve) return Constant;
+		return FVector(EvaluateAxis(CurveX, Constant.X, Seconds), EvaluateAxis(CurveY, Constant.Y, Seconds),
+			EvaluateAxis(CurveZ, Constant.Z, Seconds));
+	}
+
+	static float EvaluateAxis(const FRuntimeFloatCurve& Curve, double Fallback, float Seconds)
+	{
+		const FRichCurve* Rich = Curve.GetRichCurveConst();
+		return Rich ? Rich->Eval(Seconds, static_cast<float>(Fallback)) : static_cast<float>(Fallback);
+	}
 };

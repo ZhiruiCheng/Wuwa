@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Engine/Scene.h"
 #include "Game/EffectModel/Types/WuwaEffectCurveTypes.h"
 #include "Game/EffectModel/Base/WuwaEffectModelBase.h"
 #include "Game/EffectModel/Types/WuwaEffectVectorCurve.h"
@@ -39,4 +40,11 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light|Unreal Adapter")
 	bool CastShadows = false;
+
+	/**
+	 * Intensity 的单位。原作数据只有数值（嘉贝莉娜的特效灯 10~20），库洛把它交给原生 UpdateEffectModelLightSpec，
+	 * 换算不在导出里；UE 点光默认的 Unitless 下这个数值几乎不可见。默认 Candelas 是本项目选择。
+	 */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Light|Unreal Adapter")
+	ELightUnits IntensityUnits = ELightUnits::Candelas;
 };

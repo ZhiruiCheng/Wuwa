@@ -14,6 +14,7 @@
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
 #include "Game/NewWorld/Character/Common/Component/Input/UWuwaCombatInputRuntimeBridge.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaAbilityInputHandlerComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Input/WuwaInputCommandConfig.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaInputIntentComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillBridgeComponent.h"
@@ -33,6 +34,9 @@ namespace WuwaCombatInputBufferTests
 		UWuwaAbilitySystemComponent* ASC = nullptr;
 		UWuwaSkillBridgeComponent* Skills = nullptr;
 		UWuwaCombatInputRuntimeBridge* Runtime = nullptr;
+		/** 按键规则表：Grant(InputTag) 为每个技能追加一行"这个输入 -> 这个技能 ID"。 */
+		UWuwaInputCommandConfig* Config = nullptr;
+		mutable int32 NextSkillId = 1;
 		UWuwaSkillTestAbility* Defaults = GetMutableDefault<UWuwaSkillTestAbility>();
 		const bool OriginalMainSkill = Defaults->bIsMainSkill;
 		const int32 OriginalInterruptLevel = Defaults->InterruptLevel;
@@ -88,6 +92,8 @@ namespace WuwaCombatInputBufferTests
 			if (!Test.TestNotNull(TEXT("Managed input runtime exists"), Runtime)
 				|| !Test.TestEqual(TEXT("Runtime uses the real generated managed class"),
 					Runtime->GetClass()->GetClass()->GetFName(), FName(TEXT("CSClass")))) return false;
+			Config = NewObject<UWuwaInputCommandConfig>(Character);
+			Character->InputCommandConfig = Config;
 			Configure(100);
 			return true;
 		}
@@ -120,12 +126,20 @@ namespace WuwaCombatInputBufferTests
 			return Test.TestTrue(TEXT("The fixture controller is local"), Controller->IsLocalController());
 		}
 
+		/** 有输入 Tag：按技能 ID 授予，并在规则表末尾加一行"输入 -> 该 ID"；没有：普通能力（只能直接启动）。 */
 		FGameplayAbilitySpecHandle Grant(FGameplayTag InputTag = {}, bool bProductionBase = false) const
 		{
-			FGameplayAbilitySpec Spec(bProductionBase
-				? UWuwaGameplayAbilityBase::StaticClass() : UWuwaSkillTestAbility::StaticClass(), 1);
-			if (InputTag.IsValid()) Spec.GetDynamicSpecSourceTags().AddTag(InputTag);
-			return ASC->GiveAbility(Spec);
+			UClass* Class = bProductionBase ? UWuwaGameplayAbilityBase::StaticClass() : UWuwaSkillTestAbility::StaticClass();
+			if (!InputTag.IsValid()) return ASC->GiveAbility(FGameplayAbilitySpec(Class, 1));
+			FWuwaSkillInfo Info;
+			Info.Ability = Class;
+			const int32 SkillId = NextSkillId++;
+			FWuwaInputCommandRule Rule;
+			Rule.RuleName = *FString::Printf(TEXT("Skill%d"), SkillId);
+			Rule.InputTag = InputTag;
+			Rule.TargetSkillId = SkillId;
+			Config->Rules.Add(Rule);
+			return ASC->GiveSkill(SkillId, Info, nullptr);
 		}
 
 		UWuwaGameplayAbilityBase* Active(FGameplayAbilitySpecHandle Handle) const
@@ -280,11 +294,8 @@ bool FWuwaCombatInputInvalidAndResetTest::RunTest(const FString& Parameters)
 	TestTrue(TEXT("Unknown input has no candidate"),
 		F.Runtime->ProcessInput(F.ASC, F.Input(F.AttackTag), 1.0f) == EWuwaCombatInputResult::NoCandidate);
 	TestEqual(TEXT("Unknown input is not cached"), F.Runtime->GetBufferedInputCount(), 0);
+	// 同一技能 ID 不能重复授予（身份唯一），旧的"同 Tag 多个 Spec = Ambiguous"已不存在，见 InputCommand 测试
 	const FGameplayAbilitySpecHandle First = F.Grant(F.AttackTag);
-	F.Grant(F.AttackTag);
-	TestTrue(TEXT("Multiple specs with the same tag are rejected as ambiguous"),
-		F.Runtime->ProcessInput(F.ASC, F.Input(F.AttackTag), 1.0f) == EWuwaCombatInputResult::Ambiguous);
-	TestEqual(TEXT("Ambiguous input is not silently assigned to a skill or cached"), F.Runtime->GetBufferedInputCount(), 0);
 	TestTrue(TEXT("Released input remains outside this pressed-only stage"),
 		F.Runtime->ProcessInput(F.ASC, F.Input(F.AttackTag, EWuwaInputPhase::Released), 1.0f) == EWuwaCombatInputResult::Ignored);
 	UWuwaGameplayAbilityBase* Old = F.Start(*this, First);
@@ -323,6 +334,7 @@ bool FWuwaCombatInputAvatarIsolationTest::RunTest(const FString& Parameters)
 	if (!TestTrue(TEXT("Replacement movement policy assembles"), Other->EnsureMovementStateSystem())
 		|| !TestTrue(TEXT("Replacement skill policy assembles"), Other->EnsureSkillSystem())) return false;
 	Other->RoleGaitComponent->RefreshPolicy();
+	Other->InputCommandConfig = F.Config;
 	F.ASC->CancelAllAbilities();
 	F.ASC->InitAbilityActorInfo(Other, Other);
 	F.Runtime->ProcessPendingInput(F.ASC);

@@ -24,43 +24,60 @@ void UWuwaAbilitySystemComponent::EffectApplied(UAbilitySystemComponent* ASC, co
 	AttributeEffectAppliedDelegate.Broadcast(EffectSpec);
 }
 
-#pragma region GA
+#pragma region Skill
 
-//根据这个InputTag返回ASC身上的可用来调用的GA句柄
-TArray<FGameplayAbilitySpecHandle>UWuwaAbilitySystemComponent::FindAbilityHandlesByInputTag(FGameplayTag InputTag)
+FGameplayAbilitySpecHandle UWuwaAbilitySystemComponent::GiveSkill(int32 SkillId, const FWuwaSkillInfo& Info, UObject* SourceObject)
 {
-	return FindAbilityHandlesByAbilityTag(InputTag);
+	if (SkillId <= 0 || !Info.Ability || GrantedSkills.Contains(SkillId)) return FGameplayAbilitySpecHandle();
+	const FGameplayAbilitySpecHandle Handle = GiveAbility(FGameplayAbilitySpec(Info.Ability, 1, INDEX_NONE, SourceObject));
+	if (Handle.IsValid()) GrantedSkills.Add(SkillId, { Handle, Info.SkillTags });
+	return Handle;
 }
 
-TArray<FGameplayAbilitySpecHandle> UWuwaAbilitySystemComponent::FindAbilityHandlesByAbilityTag(FGameplayTag InputTag)
+TArray<FGameplayAbilitySpecHandle> UWuwaAbilitySystemComponent::FindSkillHandles(int32 SkillId) const
 {
-	//每当基于了ASC能力的时候都会创建这样的一个编号,表示在当前的ASC里面的这个GA,可以通过这个Handle调用这个GA
 	TArray<FGameplayAbilitySpecHandle> Handles;
-
-	if (!InputTag.IsValid()){return Handles;}
-
-	//锁定防止出现异常,因为在此期间可能有的能力已经发生变动了
-	FScopedAbilityListLock AbilityListLock(*this);
-
-	for (const FGameplayAbilitySpec& Spec : GetActivatableAbilities())
-	{
-		if (Spec.Ability&& !Spec.PendingRemove&& !Spec.RemoveAfterActivation&& Spec.GetDynamicSpecSourceTags().HasTagExact(InputTag))
-		{
-			Handles.Add(Spec.Handle);
-		}
-	}
-
+	const FGrantedSkill* Skill = GrantedSkills.Find(SkillId);
+	const FGameplayAbilitySpec* Spec = Skill ? FindAbilitySpecFromHandle(Skill->Handle) : nullptr;
+	if (Spec && Spec->Ability && !Spec->PendingRemove && !Spec->RemoveAfterActivation) Handles.Add(Skill->Handle);
 	return Handles;
 }
 
-//一个ASC里面是否有这样一个GA并且判断是否这个GA有有对应传入的Tag
-bool UWuwaAbilitySystemComponent::HasActiveSkillAbilityTag(UWuwaGameplayAbilityBase* Ability, FGameplayTag AbilityTag) const
+int32 UWuwaAbilitySystemComponent::GetSkillIdForHandle(FGameplayAbilitySpecHandle AbilityHandle) const
 {
-	if (!IsValid(Ability) || !AbilityTag.IsValid() || !Ability->IsSkillExecutionFor(GetAvatarActor()) || Ability->GetAbilitySystemComponentFromActorInfo() != this) return false;
-	const FGameplayAbilitySpec* Spec = FindAbilitySpecFromHandle(Ability->GetCurrentAbilitySpecHandle());
-	return Spec && !Spec->PendingRemove && !Spec->RemoveAfterActivation && Spec->IsActive()
-		&& Spec->GetDynamicSpecSourceTags().HasTagExact(AbilityTag);
+	if (!AbilityHandle.IsValid()) return 0;
+	for (const TPair<int32, FGrantedSkill>& Pair : GrantedSkills)
+	{
+		if (Pair.Value.Handle == AbilityHandle) return Pair.Key;
+	}
+	return 0;
 }
+
+FGameplayTagContainer UWuwaAbilitySystemComponent::GetSkillTags(int32 SkillId) const
+{
+	const FGrantedSkill* Skill = GrantedSkills.Find(SkillId);
+	return Skill ? Skill->Tags : FGameplayTagContainer();
+}
+
+bool UWuwaAbilitySystemComponent::SkillMatchesTagQuery(int32 SkillId, const FGameplayTagQuery& Query) const
+{
+	if (Query.IsEmpty()) return true;
+	const FGrantedSkill* Skill = GrantedSkills.Find(SkillId);
+	return Skill && Query.Matches(Skill->Tags);
+}
+
+void UWuwaAbilitySystemComponent::OnRemoveAbility(FGameplayAbilitySpec& AbilitySpec)
+{
+	for (auto It = GrantedSkills.CreateIterator(); It; ++It)
+	{
+		if (It.Value().Handle == AbilitySpec.Handle) It.RemoveCurrent();
+	}
+	Super::OnRemoveAbility(AbilitySpec);
+}
+
+#pragma endregion
+
+#pragma region GA
 
 //判断这个 ASC 当前身上拥有的 GameplayTag，是否满足给定的 Tag 查询条件
 bool UWuwaAbilitySystemComponent::MatchesOwnedTagQuery(const FGameplayTagQuery& Query) const

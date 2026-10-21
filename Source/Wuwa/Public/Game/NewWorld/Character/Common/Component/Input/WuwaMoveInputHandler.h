@@ -23,11 +23,11 @@ public:
 
 	virtual bool HandleWuwaInput_Implementation(const FWuwaInputEvent& InputEvent) override;
 
-	/** 移动类输入 -> 指令的配置表；默认指向项目里的 DA_WuwaMoveInputConfig，可在蓝图里替换。 */
+	/** 移动类输入 -> 指令的配置表；在 PC 蓝图的 MoveInputHandler 组件中指定。 */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Wuwa|Input")
 	TSoftObjectPtr<UWuwaMoveInputConfig> Config;
-
+	
 private:
-	// 移动轴每帧都会经过这里，配置缺失只提示一次。
+	// 配置缺失只提示一次，避免连续输入重复刷日志。
 	bool bReportedMissingConfig = false;
 };

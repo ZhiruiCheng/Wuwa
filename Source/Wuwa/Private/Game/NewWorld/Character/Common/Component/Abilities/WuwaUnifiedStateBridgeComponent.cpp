@@ -1,4 +1,7 @@
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaUnifiedStateBridgeComponent.h"
+#include "Game/Common/WuwaGameTags.h"
+#include "AbilitySystemGlobals.h"
+#include "AbilitySystemComponent.h"
 #include "GameFramework/Actor.h"
 
 // C++ 基类不复制脚本规则。未装配托管子类时请求失败，而不是偷偷运行另一套状态机。
@@ -31,10 +34,26 @@ void UWuwaUnifiedStateBridgeComponent::CommitStateData(FWuwaUnifiedStateData New
 		&& StateData.DirectionState == NewState.DirectionState && StateData.Gait == NewState.Gait
 		&& StateData.bHasActionOverride == NewState.bHasActionOverride)
 	{
+		if (!bPositionTagsSynced) SyncPositionTags();
 		return;
 	}
 	NewState.Revision = StateData.Revision + 1;
+	const bool bPositionChanged = StateData.PositionState != NewState.PositionState || !bPositionTagsSynced;
 	StateData = NewState;
+	if (bPositionChanged) SyncPositionTags();
+}
+
+void UWuwaUnifiedStateBridgeComponent::SyncPositionTags()
+{
+	// 原作 行为状态.位置状态.* 是角色身上的 Tag（GE 的移除条件、输入蓝图都在查它）；这里按已提交的位置维护一个 loose tag。
+	UAbilitySystemComponent* ASC = UAbilitySystemGlobals::GetAbilitySystemComponentFromActor(GetOwner());
+	if (!ASC) return;
+	const FWuwaGameTags& Tags = FWuwaGameTags::Get();
+	const TPair<EWuwaPositionState, FGameplayTag> Map[] = { {EWuwaPositionState::Ground, Tags.State_Position_Ground}, {EWuwaPositionState::Air, Tags.State_Position_Air},
+		{EWuwaPositionState::Climb, Tags.State_Position_Climb}, {EWuwaPositionState::Water, Tags.State_Position_Water} };
+	for (const auto& [Position, Tag] : Map)
+		ASC->SetLooseGameplayTagCount(Tag, StateData.PositionState == Position ? 1 : 0);
+	bPositionTagsSynced = true;
 }
 
 void UWuwaUnifiedStateBridgeComponent::BroadcastPositionStateChanged(EWuwaPositionState OldState, EWuwaPositionState NewState)

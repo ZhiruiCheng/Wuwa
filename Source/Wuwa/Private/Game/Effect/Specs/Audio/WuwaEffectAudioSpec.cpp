@@ -15,10 +15,9 @@ bool UWuwaEffectAudioSpec::Play_Implementation(const FWuwaEffectSpawnRequest& Re
 	{
 		return false;
 	}
-	if (Model->AudioBackend != EWuwaEffectAudioBackend::UnrealSound)
+	if (Model->AudioBackend == EWuwaEffectAudioBackend::WwiseEvent)
 	{
-		UE_LOG(LogWuwaEffectAudio, Warning, TEXT("%s: Wwise playback is not implemented yet."), *Model->GetName());
-		return false;
+		return PlayWwise(*Model, Request);
 	}
 	if (!Model->Sound)
 	{
@@ -78,9 +77,77 @@ bool UWuwaEffectAudioSpec::Play_Implementation(const FWuwaEffectSpawnRequest& Re
 	return true;
 }
 
+bool UWuwaEffectAudioSpec::PlayWwise(const UWuwaEffectModelAudio& Model, const FWuwaEffectSpawnRequest& Request)
+{
+	if (Model.AudioEvent.IsNull())
+	{
+		UE_LOG(LogWuwaEffectAudio, Warning, TEXT("%s: no Wwise AudioEvent is configured."), *Model.GetName());
+		return false;
+	}
+	// 原作 EffectModelAudio 在特效挂点的 AkComponent 上播放；没有挂点时在请求位置一次性播放。
+	WwiseAttachTo = Request.AttachTo.Get();
+	WwiseSocket = Request.SocketName;
+	WwiseTransform = Request.Transform;
+	WwisePlaying = WuwaWwiseAudio::Post(Model.AudioEvent, WwiseAttachTo.Get(), WwiseSocket, WwiseAttachTo.IsValid(), WwiseTransform);
+	if (!WwisePlaying.IsValid())
+	{
+		return false;
+	}
+	FadeOutSeconds = FMath::Max(0.f, Model.FadeOutTime);
+	WwiseFadeCurve = Model.FadeOutCurve;
+	bWwiseKeepAlive = Model.KeepAlive;
+	WwiseTrailingEvent = Model.TrailingAudioEvent;
+	return true;
+}
+
+void UWuwaEffectAudioSpec::StopWwise(bool bImmediately)
+{
+	// KeepAlive：特效停止后主音频继续播完（不再跟踪，Spec 立即结束）；否则淡出停止。之后播放拖尾事件。
+	if (!bWwiseKeepAlive || bImmediately)
+	{
+		WuwaWwiseAudio::Stop(WwisePlaying, bImmediately ? 0.f : FadeOutSeconds, WwiseFadeCurve);
+	}
+	if (!bImmediately && !WwiseTrailingEvent.IsNull())
+	{
+		WuwaWwiseAudio::Post(WwiseTrailingEvent, WwiseAttachTo.Get(), WwiseSocket, WwiseAttachTo.IsValid(), WwiseTransform);
+	}
+	WwisePlaying = FWuwaWwisePlaying();
+	Finish();
+}
+
+void UWuwaEffectAudioSpec::Tick(float DeltaTime)
+{
+	// 事件自然播完：Wwise 集成层在结束回调里移除播放 ID
+	if (WwisePlaying.IsValid() && !WuwaWwiseAudio::IsPlaying(WwisePlaying))
+	{
+		WwisePlaying = FWuwaWwisePlaying();
+		Finish();
+	}
+}
+
+bool UWuwaEffectAudioSpec::IsTickable() const
+{
+	return WwisePlaying.IsValid() && !IsFinished();
+}
+
+ETickableTickType UWuwaEffectAudioSpec::GetTickableTickType() const
+{
+	return HasAnyFlags(RF_ClassDefaultObject) ? ETickableTickType::Never : ETickableTickType::Conditional;
+}
+
+TStatId UWuwaEffectAudioSpec::GetStatId() const
+{
+	RETURN_QUICK_DECLARE_CYCLE_STAT(UWuwaEffectAudioSpec, STATGROUP_Tickables);
+}
+
 void UWuwaEffectAudioSpec::Stop_Implementation(bool bImmediately)
 {
 	if (IsFinished()) return;
+	if (WwisePlaying.IsValid())
+	{
+		StopWwise(bImmediately);
+		return;
+	}
 	UAudioComponent* Component = AudioComponent;
 	if (!IsValid(Component))
 	{
@@ -120,6 +187,13 @@ void UWuwaEffectAudioSpec::ResetForPool()
 	FadeOutSeconds = 0.f;
 	FadeOutCurve = EAudioFaderCurve::Linear;
 	bStopping = false;
+	WwisePlaying = FWuwaWwisePlaying();
+	WwiseFadeCurve = 4;
+	bWwiseKeepAlive = false;
+	WwiseTrailingEvent.Reset();
+	WwiseAttachTo.Reset();
+	WwiseSocket = NAME_None;
+	WwiseTransform = FTransform::Identity;
 	// 不写引擎的 ActiveCount。Stop 的旧音频线程回执尚未到达也能重播：
 	// UE 每次 Play 递增计数，PlaybackCompleted 只有在计数归零时才广播 Stopped。
 }

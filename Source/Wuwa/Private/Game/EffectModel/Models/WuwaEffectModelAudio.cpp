@@ -27,7 +27,6 @@ EDataValidationResult UWuwaEffectModelAudio::IsDataValid(FDataValidationContext&
 			Context.AddError(NSLOCTEXT("WuwaEffectModel", "InvalidWwiseEvent", "WwiseEvent requires a valid AudioEvent asset path, an optional valid trailing event path, and a non-negative fade curve identifier."));
 			Result = EDataValidationResult::Invalid;
 		}
-		Context.AddWarning(NSLOCTEXT("WuwaEffectModel", "WwiseAdapterUnavailable", "Wwise event paths are preserved as configuration only. This project has no Wwise playback adapter."));
 	}
 	else
 	{

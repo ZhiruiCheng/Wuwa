@@ -322,6 +322,35 @@ public partial class UWuwaRoleGaitComponent : UWuwaRoleGaitBridgeComponent
 
     protected override EWuwaSprintDesire ReadSprintDesire_Implementation() => EvaluateSprintDesire(ReadMovementContext());
 
+    protected override float ReadSprintRemainingSeconds_Implementation()
+    {
+        var context = ReadMovementContext();
+        if (EvaluateSprintDesire(context) != EWuwaSprintDesire.Temporary) return 0f;
+        // Cutting out ends the old animation window. Do not carry its UObject/source into the new role.
+        if (_windows.Any(pair => pair.Key.IsValid))
+            return float.IsFinite(context.TemporarySprintDuration) ? Math.Max(0f, context.TemporarySprintDuration) : 0f;
+        return (float)Math.Max(0.0, _temporaryExpiresAt - context.GameTimeSeconds);
+    }
+
+    protected override void RestoreSwitchGait_Implementation(EWuwaSprintDesire desire, float remainingSeconds, EWuwaGait lastMovingGait)
+    {
+        if (_endingPlay) return;
+        ClearSprintRuntime();
+        var context = ReadMovementContext();
+        _lastPosition = context.PositionState;
+        _lastMovingGait = lastMovingGait;
+        if (CanSampleSprint(context) && context.HasMoveInput && IsAllowed(EWuwaGait.Sprint, context))
+        {
+            if (desire == EWuwaSprintDesire.Sustained) _retained = desire;
+            else if (desire == EWuwaSprintDesire.Temporary && float.IsFinite(remainingSeconds) && remainingSeconds > 0f)
+            {
+                _retained = desire;
+                _temporaryExpiresAt = context.GameTimeSeconds + remainingSeconds;
+            }
+        }
+        RefreshPolicy();
+    }
+
     #endregion
 
     protected override void ResetRuntime_Implementation()

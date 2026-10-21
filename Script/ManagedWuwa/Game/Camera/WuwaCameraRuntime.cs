@@ -1,3 +1,4 @@
+using ManagedWuwa.Game.Camera.FightCameraController;
 using UnrealSharp;
 using UnrealSharp.Attributes;
 using UnrealSharp.CoreUObject;
@@ -15,12 +16,16 @@ public partial class UWuwaCameraRuntime : UWuwaCameraRuntimeBridge
     private readonly WuwaOwnedRequests<TWeakObjectPtr<UObject>, FWuwaCameraSettings> _modes = new(static owner => owner.IsValid);
     private readonly WuwaCameraInputController _input = new();
     private readonly WuwaFightCameraLogic _logic = new();
+    // 正在生效的模式被移除时，混回下一个模式用它自己的 BlendOutTime（原作镜头修改的淡出时间）；< 0 = 用下一个模式的 BlendTime
+    private float _pendingBlendOut = -1f;
 
     public override FWuwaCameraView EvaluateCamera(FWuwaCameraFrame frame, FWuwaCameraSettings baseSettings)
     {
         var settings = SelectSettings(baseSettings, out int modeHandle);
         float desiredArmLength = _input.ResolveArmLength(settings, frame.ZoomDelta);
-        return _logic.Evaluate(frame, settings, desiredArmLength, modeHandle);
+        var view = _logic.Evaluate(frame, settings, desiredArmLength, modeHandle, _pendingBlendOut);
+        _pendingBlendOut = -1f;
+        return view;
     }
 
     public override FWuwaCameraSettings ResolveSettings(FWuwaCameraSettings baseSettings) =>
@@ -34,12 +39,18 @@ public partial class UWuwaCameraRuntime : UWuwaCameraRuntimeBridge
         return _modes.Add(new TWeakObjectPtr<UObject>(source), WuwaCameraSettingsUtility.Normalize(settings), priority);
     }
 
-    public override bool PopCameraMode(int handle) => _modes.Remove(handle);
+    public override bool PopCameraMode(int handle)
+    {
+        if (_modes.TryGetHighest(out int active, out var activeSettings) && active == handle)
+            _pendingBlendOut = activeSettings.BlendOutTime;
+        return _modes.Remove(handle);
+    }
 
-    public override void ResetCamera()
+    public override void ResetCamera(bool resetUserZoom)
     {
         _modes.Clear();
-        _input.Reset();
+        if (resetUserZoom)
+            _input.Reset();
         _logic.Reset();
     }
 

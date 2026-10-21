@@ -23,7 +23,7 @@ struct FWuwaActiveEffect
 	TObjectPtr<UWuwaEffectSpecPool> Pool;
 };
 
-/** 世界级统一播放入口。第一阶段只注册 Audio；不负责解释各 Model 的具体参数。 */
+/** 世界级统一播放入口。已注册 Audio、Niagara、Group；不负责解释各 Model 的具体参数。 */
 UCLASS()
 class WUWA_API UWuwaEffectSystem : public UWorldSubsystem
 {

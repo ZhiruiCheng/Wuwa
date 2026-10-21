@@ -5,6 +5,7 @@ public enum ETraceChannel
 {
 	Visibility = 0,
 	Camera = 1,
+	LGUI = 2,
 }
 
 public enum EObjectChannel

@@ -19,6 +19,7 @@
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Combat/WuwaFightStateBridgeComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaAbilityInputHandlerComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Input/WuwaInputCommandConfig.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillBridgeComponent.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 #include "WuwaSkillNotifyTestTypes.h"
@@ -39,6 +40,7 @@ namespace WuwaSkillNotifyTests
 		UWuwaAnimNotifyState_SkillAcceptInputBridge* WindowB = nullptr;
 		UWuwaAnimNotify_SkillReadyEndBridge* Ready = nullptr;
 		FGameplayAbilitySpecHandle SpecHandle;
+		static constexpr int32 TestSkillId = 1;
 		UWuwaGameplayAbilityBase* Ability = nullptr;
 		int32 MontageInstanceId = INDEX_NONE;
 		UWuwaSkillTestAbility* Defaults;
@@ -116,7 +118,10 @@ namespace WuwaSkillNotifyTests
 			ASC = NewObject<UWuwaAbilitySystemComponent>(Character);
 			ASC->RegisterComponent();
 			ASC->InitAbilityActorInfo(Character, Character);
-			SpecHandle = ASC->GiveAbility(FGameplayAbilitySpec(AbilityClass, 1));
+			// 按技能表的方式授予（技能 ID = TestSkillId），按键规则表才能选中它
+			FWuwaSkillInfo Info;
+			Info.Ability = AbilityClass;
+			SpecHandle = ASC->GiveSkill(TestSkillId, Info, nullptr);
 			return Test.TestTrue(TEXT("Test skill is granted"), SpecHandle.IsValid());
 		}
 
@@ -186,7 +191,13 @@ namespace WuwaSkillNotifyTests
 			// imported Dash's playback tuning. Keep all test windows before blend-out.
 			Montage->RateScale = 1.f;
 			Montage->BlendOutTriggerTime = 0.f;
-			ASC->FindAbilitySpecFromHandle(SpecHandle)->GetDynamicSpecSourceTags().AddTag(AttackTag);
+			UWuwaInputCommandConfig* Config = NewObject<UWuwaInputCommandConfig>(Character);
+			FWuwaInputCommandRule Rule;
+			Rule.RuleName = TEXT("Attack");
+			Rule.InputTag = AttackTag;
+			Rule.TargetSkillId = TestSkillId;
+			Config->Rules.Add(Rule);
+			Character->InputCommandConfig = Config;
 			ActivationDelegate = ASC->AbilityActivatedCallbacks.AddLambda([this](UGameplayAbility*)
 			{
 				++Activations;

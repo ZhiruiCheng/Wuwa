@@ -60,7 +60,7 @@ namespace WuwaUnifiedMovementStateTests
 			const FWuwaGameTags Tags = FWuwaGameTags::Get();
 			MoveBinding = MakeBinding(Tags.Player_Common_Movement_Move, Tags.Input_Route_Movement, EInputActionValueType::Axis2D);
 			WalkRunBinding = MakeBinding(Tags.Player_Common_Movement_WalkRun, Tags.Input_Route_Movement);
-			SprintBinding = MakeBinding(Tags.Abilities_Movement_Dash, Tags.Input_Route_Ability);
+			SprintBinding = MakeBinding(Tags.Input_Combat_Dash, Tags.Input_Route_Ability);
 		}
 
 		~FFixture()
@@ -311,7 +311,7 @@ bool FWuwaManagedSprintPipelineTest::RunTest(const FString& Parameters)
 	TestEqual(TEXT("Expiry does not reset velocity"), F.Movement->Velocity, FVector(350.f, 0.f, 0.f));
 
 	// The same semantic Dash action drives the hold snapshot even when no ASC accepts a GA.
-	TestNull(TEXT("This input path does not require a working ASC"), F.Controller->GetASC());
+	// ASC 现在是每个角色自带的，但这里没有授予任何 Dash GA：冲刺按住状态仍要只靠语义输入驱动。
 	F.Dispatch(F.SprintBinding, EWuwaInputPhase::Pressed, 4.0);
 	WuwaTestGait::Of(F.Movement)->OpenSprintWindow(Window);
 	F.Sample(Window, 4.2);

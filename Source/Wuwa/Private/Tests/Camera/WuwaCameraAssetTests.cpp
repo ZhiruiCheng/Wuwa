@@ -23,7 +23,7 @@ bool FWuwaCameraInputAssetTest::RunTest(const FString& Parameters)
 	const UInputMappingContext* Context = LoadObject<UInputMappingContext>(nullptr,
 		TEXT("/Game/CoreInput/Contexts/IMC_Character.IMC_Character"));
 	const UWuwaInputDataAsset* Bindings = LoadObject<UWuwaInputDataAsset>(nullptr,
-		TEXT("/Game/CoreInput/DataAsset/DA_InputActionTagAsset.DA_InputActionTagAsset"));
+		TEXT("/Game/CoreInput/DataAsset/DA_IARouterMap.DA_IARouterMap"));
 	const bool bHasZoom = TestNotNull(TEXT("Wheel zoom input action exists"), Zoom);
 	const bool bHasContext = TestNotNull(TEXT("Existing character input context loads"), Context);
 	const bool bHasBindings = TestNotNull(TEXT("Existing semantic input bindings load"), Bindings);
@@ -93,7 +93,7 @@ bool FWuwaCameraOwnershipAssetTest::RunTest(const FString& Parameters)
 	TestTrue(TEXT("Existing game mode still selects the project player controller"),
 		GameModeClass->GetDefaultObject<AGameModeBase>()->PlayerControllerClass == ControllerClass);
 	for (const TCHAR* BlueprintPath : {
-		TEXT("/Game/Characters/Role/changli/BP_WuwaCharacterBase.BP_WuwaCharacterBase"),
+		TEXT("/Game/Characters/Role/changli/BP_Role_Changli.BP_Role_Changli"),
 		TEXT("/Game/Characters/Test/Test.Test") })
 	{
 		const UBlueprint* Blueprint = LoadObject<UBlueprint>(nullptr, BlueprintPath);

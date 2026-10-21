@@ -25,9 +25,8 @@ struct FWuwaUIControllerParams
 	TObjectPtr<UWuwaAbilitySystemComponent> ASC;
 	TObjectPtr<UWuwaAttributeSet> AS;
 	TObjectPtr<AWuwaPlayerController> PlayerController;
-	TObjectPtr<AWuwaPlayerState> PlayerState;
-	FWuwaUIControllerParams(UWuwaAbilitySystemComponent* asc,UWuwaAttributeSet* as,AWuwaPlayerController* playerController,AWuwaPlayerState* playerState):
-	ASC(asc),AS(as),PlayerController(playerController),PlayerState(playerState)
+	FWuwaUIControllerParams(UWuwaAbilitySystemComponent* asc,UWuwaAttributeSet* as,AWuwaPlayerController* playerController):
+	ASC(asc),AS(as),PlayerController(playerController)
 	{
 		
 	}
@@ -61,7 +60,6 @@ public:
 	TObjectPtr<UWuwaAbilitySystemComponent> ASC;
 	TObjectPtr<UWuwaAttributeSet> AS;
 	TObjectPtr<AWuwaPlayerController> PlayerController;
-	TObjectPtr<AWuwaPlayerState> PlayerState;
 	
 	
 	virtual void InitWuwaUIController(FWuwaUIControllerParams params);

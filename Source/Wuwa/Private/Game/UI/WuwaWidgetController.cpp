@@ -12,7 +12,6 @@ void UWuwaWidgetController::InitWuwaUIController(FWuwaUIControllerParams params)
 	ASC = params.ASC;
 	AS = params.AS;
 	PlayerController = params.PlayerController;
-	PlayerState = params.PlayerState;	
 }
 
 void UWuwaWidgetController::BroadInitialValues()

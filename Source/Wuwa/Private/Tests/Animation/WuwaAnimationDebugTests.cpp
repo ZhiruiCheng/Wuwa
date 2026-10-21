@@ -32,7 +32,7 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaAnimationDebugUninitializedTest, "Wuwa.Ani
 bool FWuwaAnimationDebugUninitializedTest::RunTest(const FString& Parameters)
 {
 	UClass* AnimClass = LoadClass<UWuwaAnimInstance>(nullptr,
-		TEXT("/Game/Characters/Role/changli/AnimationBluePrint/ABP_Changli.ABP_Changli_C"));
+		TEXT("/Game/Characters/Role/changli/ABP_Changli.ABP_Changli_C"));
 	if (!TestNotNull(TEXT("Existing Changli AnimBP class loads"), AnimClass))
 	{
 		return false;

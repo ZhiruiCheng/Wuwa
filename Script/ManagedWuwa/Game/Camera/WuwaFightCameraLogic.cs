@@ -23,7 +23,8 @@ internal sealed class WuwaFightCameraLogic
         FWuwaCameraFrame frame,
         FWuwaCameraSettings settings,
         float desiredArmLength,
-        int modeHandle)
+        int modeHandle,
+        float blendOutTime = -1f)
     {
         if (!WuwaCameraSettingsUtility.IsFinite(frame.TargetLocation))
             return default;
@@ -45,7 +46,8 @@ internal sealed class WuwaFightCameraLogic
                 _modeHandle = modeHandle;
                 _blendStart = _current;
                 _blendElapsed = 0f;
-                _blendDuration = settings.BlendTime;
+                // 被移除的模式自带淡出时间就用它，否则用新模式的 BlendTime
+                _blendDuration = blendOutTime >= 0f ? blendOutTime : settings.BlendTime;
                 if (_blendDuration <= 0f)
                     _current = desired;
             }

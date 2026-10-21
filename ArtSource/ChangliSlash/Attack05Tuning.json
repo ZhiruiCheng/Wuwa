@@ -1,0 +1,565 @@
+{
+  "description": "人工调整：Attack05。不是原作数据。放大倍数沿用前几段的 3；Sprite 先用配方里的重建默认值（emission），之后对照截图调整。",
+  "modelScale": {
+    "Blink": 1.0,
+    "Blink2": 1.0,
+    "N_Dg": 3.0,
+    "N1_Dg": 3.0,
+    "DgW": 1.0,
+    "DgWDilie": 1.0,
+    "Dilie": 1.0
+  },
+  "note": "DgW 地面刀光网格本身约 2.5 米高、2 米宽（和截图里的大小一致），不再放大：放大后三道刀光（原作 yaw -30/0/35、前方 150）互相重叠成一团；火花类改成小点；烟雾和光晕用少量大而软的粒子；Fire001 沿用第三段调好的参数。",
+  "materials": {
+    "M_Reference_Attack05_DgW_Daoguang_An02": {
+      "tint": [
+        0.9,
+        0.05,
+        0.06
+      ],
+      "intensity": 2.0
+    },
+    "M_Reference_Attack05_DgW_Daoguang_An002": {
+      "tint": [
+        0.9,
+        0.05,
+        0.06
+      ],
+      "intensity": 2.0
+    },
+    "M_Reference_Attack05_DgW_Daoguang_An02001": {
+      "tint": [
+        0.9,
+        0.05,
+        0.06
+      ],
+      "intensity": 2.0
+    },
+    "M_Reference_Attack05_DgW_Daoguang_Glow002": {
+      "tint": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "intensity": 1.3
+    },
+    "M_Reference_Attack05_DgW_Daoguang_Wing": {
+      "tint": [
+        1.0,
+        0.06,
+        0.2
+      ],
+      "intensity": 1.8
+    },
+    "M_Reference_Attack05_DgW_Daoguang_Red": {
+      "tint": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "intensity": 1.6
+    },
+    "M_Reference_Attack05_DgWDilie_Fire001": {
+      "tint": [
+        1.0,
+        0.15,
+        0.08
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_DgWDilie_Fx_Glow001": {
+      "tint": [
+        1.0,
+        0.25,
+        0.18
+      ],
+      "intensity": 1.2
+    },
+    "M_Reference_Attack05_DgWDilie_NE_Fx_Flare": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Dilie_Gpu_Lizi_01001": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Dilie_Empty": {
+      "tint": [
+        1.0,
+        0.25,
+        0.18
+      ],
+      "intensity": 1.2
+    },
+    "M_Reference_Attack05_Blink_Lizi1": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Blink_Lizi2": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Blink_Lizi1Low": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Blink_LiziMid": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Blink2_lizi001": {
+      "tint": [
+        1.0,
+        0.45,
+        0.18
+      ],
+      "intensity": 3.0
+    },
+    "M_Reference_Attack05_Blink_Smoke": {
+      "tint": [
+        0.6,
+        0.3,
+        0.3
+      ],
+      "intensity": 0.6
+    },
+    "M_Reference_Attack05_Blink2_Smoke_": {
+      "tint": [
+        0.6,
+        0.3,
+        0.3
+      ],
+      "intensity": 0.6
+    },
+    "M_Reference_Attack05_Blink_Circle": {
+      "tint": [
+        1.0,
+        0.45,
+        0.15
+      ],
+      "intensity": 2.0
+    },
+    "M_Reference_Attack05_DgWDilie_Stone": {
+      "tint": [
+        0.5,
+        0.1,
+        0.08
+      ],
+      "intensity": 1.0
+    },
+    "M_Reference_Attack05_Dilie_NE_Fx_BaseMesh": {
+      "tint": [
+        1.0,
+        0.15,
+        0.1
+      ],
+      "intensity": 1.5
+    }
+  },
+  "spriteLayers": {
+    "NS_Reference_Attack05_Blink": {
+      "Lizi1": {
+        "count": 20,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          120,
+          300
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Lizi2": {
+        "count": 16,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          120,
+          300
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Lizi1Low": {
+        "count": 12,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          60,
+          150
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "LiziMid": {
+        "count": 12,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          80,
+          200
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Smoke": {
+        "count": 3,
+        "lifetime": [
+          0.4,
+          0.8
+        ],
+        "sizeMin": [
+          60,
+          60
+        ],
+        "sizeMax": [
+          100,
+          100
+        ],
+        "radius": [
+          0,
+          10
+        ],
+        "speed": [
+          10,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 10
+      }
+    },
+    "NS_Reference_Attack05_Blink2": {
+      "lizi001": {
+        "count": 20,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          120,
+          300
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Smoke_": {
+        "count": 3,
+        "lifetime": [
+          0.4,
+          0.8
+        ],
+        "sizeMin": [
+          60,
+          60
+        ],
+        "sizeMax": [
+          100,
+          100
+        ],
+        "radius": [
+          0,
+          10
+        ],
+        "speed": [
+          10,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 10
+      }
+    },
+    "NS_Reference_Attack05_DgWDilie": {
+      "Fx_Glow001": {
+        "count": 2,
+        "lifetime": [
+          0.2,
+          0.4
+        ],
+        "sizeMin": [
+          80,
+          80
+        ],
+        "sizeMax": [
+          140,
+          140
+        ],
+        "radius": [
+          0,
+          10
+        ],
+        "speed": [
+          0,
+          5
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 10
+      },
+      "NE_Fx_Flare": {
+        "count": 8,
+        "lifetime": [
+          0.2,
+          0.4
+        ],
+        "sizeMin": [
+          10,
+          10
+        ],
+        "sizeMax": [
+          25,
+          25
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          40,
+          120
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Fire001": {
+        "count": 10,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          -18,
+          36
+        ],
+        "sizeMax": [
+          -27,
+          54
+        ],
+        "radius": [
+          35,
+          50
+        ],
+        "speed": [
+          15,
+          30
+        ],
+        "drag": 0,
+        "sizeFollowsScale": true,
+        "radialVelocity": false,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 4
+      }
+    },
+    "NS_Reference_Attack05_Dilie": {
+      "Gpu_Lizi_01001": {
+        "count": 24,
+        "lifetime": [
+          0.3,
+          0.6
+        ],
+        "sizeMin": [
+          3,
+          3
+        ],
+        "sizeMax": [
+          8,
+          8
+        ],
+        "radius": [
+          0,
+          8
+        ],
+        "speed": [
+          80,
+          220
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 20
+      },
+      "Empty": {
+        "count": 3,
+        "lifetime": [
+          0.4,
+          0.8
+        ],
+        "sizeMin": [
+          50,
+          50
+        ],
+        "sizeMax": [
+          90,
+          90
+        ],
+        "radius": [
+          0,
+          20
+        ],
+        "speed": [
+          5,
+          20
+        ],
+        "drag": 0,
+        "sizeFollowsScale": false,
+        "radialVelocity": true,
+        "arc": [
+          0,
+          360
+        ],
+        "height": 10
+      }
+    }
+  }
+}

@@ -20,6 +20,8 @@ void UWuwaRoleGaitBridgeComponent::SampleSprintWindow_Implementation(UObject*, f
 void UWuwaRoleGaitBridgeComponent::CloseSprintWindow_Implementation(UObject*) {}
 void UWuwaRoleGaitBridgeComponent::ResetSprintRequest_Implementation() {}
 EWuwaSprintDesire UWuwaRoleGaitBridgeComponent::ReadSprintDesire_Implementation() const { return EWuwaSprintDesire::None; }
+float UWuwaRoleGaitBridgeComponent::ReadSprintRemainingSeconds_Implementation() const { return 0.f; }
+void UWuwaRoleGaitBridgeComponent::RestoreSwitchGait_Implementation(EWuwaSprintDesire, float, EWuwaGait) {}
 
 void UWuwaRoleGaitBridgeComponent::BindDependencies(UWuwaUnifiedStateBridgeComponent* InUnifiedState,
 	UCharacterMovementComponent* InMovement, UWuwaInputIntentComponent* InInputIntent)

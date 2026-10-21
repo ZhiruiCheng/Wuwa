@@ -134,7 +134,7 @@ FWuwaPlayerInputState UWuwaInputIntentComponent::GetPlayerInputState() const
 	State.MoveAxis = Move.Axis;
 	State.bHasMoveInput = Move.bHasInput;
 	State.MoveWorldDirection = Move.WorldDirection;
-	const FWuwaInputActionState SprintInput = GetActionState(FWuwaGameTags::Get().Abilities_Movement_Dash);
+	const FWuwaInputActionState SprintInput = GetActionState(FWuwaGameTags::Get().Input_Combat_Dash);
 	State.bSprintHeld = SprintInput.bHeld;
 	State.SprintHeldSeconds = SprintInput.HeldSeconds;
 	return State;

@@ -25,6 +25,20 @@ Saved/
 Exports/
 Tools/
 
+# ---- Extracted / derived game assets (public repo: never commit) ----
+# 嘉贝莉娜攻击特效：原件（贴图、网格）、从导出数据提取的证据和配方、UE 里重建出的资产，都可以用 ArtSource/JiabeiAttack 的脚本重新生成。
+/ArtSource/JiabeiAttack/Textures/
+/ArtSource/JiabeiAttack/Geometry/
+/ArtSource/JiabeiAttack/Evidence/
+/ArtSource/JiabeiAttack/*.json
+!/ArtSource/JiabeiAttack/*Tuning.json
+# 角色仿鸣潮材质的配方（原作材质参数），由 ArtSource/CharacterToon/prepare_toon.py 生成。
+/ArtSource/CharacterToon/*.json
+# 角色卡通材质实例与导入的原作贴图（WuwaCharacterToonSetup 生成，含原作数据）。
+/Content/Characters/Role/jiabei/Mesh/Toon/
+/Content/Effects/Jiabei/
+/Content/Effects/Models/Jiabei/
+
 # ---- Unrelated local work (not part of Wuwa) ----
 /Art/CargoClash/
 /tmp/

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AbilitySystemComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillTypes.h"
 #include "WuwaAbilitySystemComponent.generated.h"
 
 /**
@@ -45,17 +46,31 @@ public:
 	#pragma endregion
 	
 	//C++层面基本不作逻辑判断,具体业务逻辑都交给热更脚本书写
-	#pragma region GA
-	/** 只查找候选，不激活，也不决定连段。 */
-	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat")
-	TArray<FGameplayAbilitySpecHandle> FindAbilityHandlesByInputTag(FGameplayTag InputTag);//其实查询出来应该只有一个因为当前一个GA对应一个标签
+	#pragma region Skill
+	/**
+	 * 按技能表的一行授予技能（只在服务器调用）。技能 ID 是身份：同一个 ASC 上一个 ID 只对应一个 Spec，重复授予被拒绝。
+	 * 返回新 Spec 的句柄；失败返回无效句柄。
+	 */
+	FGameplayAbilitySpecHandle GiveSkill(int32 SkillId, const FWuwaSkillInfo& Info, UObject* SourceObject);
 
-	/** 按技能身份精确查找；输入语义到技能身份的转换由脚本完成。 */
-	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat|Input")
-	TArray<FGameplayAbilitySpecHandle> FindAbilityHandlesByAbilityTag(FGameplayTag AbilityTag);
-	/*一个ASC里面是否有这样一个GA并且判断是否这个GA有有对应传入的Tag*/
-	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Input")
-	bool HasActiveSkillAbilityTag(UWuwaGameplayAbilityBase* Ability, FGameplayTag AbilityTag) const;
+	/** 按技能 ID 找已授予、可用的 Spec（0 或 1 个；数组方便脚本判空）。 */
+	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat|Skill")
+	TArray<FGameplayAbilitySpecHandle> FindSkillHandles(int32 SkillId) const;
+
+	/** Spec → 技能 ID；不是按技能表授予的能力返回 0。 */
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	int32 GetSkillIdForHandle(FGameplayAbilitySpecHandle AbilityHandle) const;
+
+	/** 技能的分类 Tag（技能表的 SkillTags）；未授予的 ID 返回空容器。 */
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	FGameplayTagContainer GetSkillTags(int32 SkillId) const;
+
+	/** 技能的分类 Tag 是否满足查询：空查询恒为 true；ID 为 0 或未授予时（非空查询）为 false。 */
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Skill")
+	bool SkillMatchesTagQuery(int32 SkillId, const FGameplayTagQuery& Query) const;
+	#pragma endregion
+
+	#pragma region GA
 	//判断这个 ASC 当前身上拥有的 GameplayTag，是否满足给定的 Tag 查询条件
 	UFUNCTION(BlueprintPure, Category = "Wuwa|Combat|Input")
 	bool MatchesOwnedTagQuery(const FGameplayTagQuery& Query) const;
@@ -76,4 +91,16 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Wuwa|Combat")
 	EWuwaAbilityRequestResult RequestAbilityActivation(FGameplayAbilitySpecHandle AbilityHandle);
 	#pragma endregion
+
+protected:
+	virtual void OnRemoveAbility(FGameplayAbilitySpec& AbilitySpec) override;
+
+private:
+	struct FGrantedSkill
+	{
+		FGameplayAbilitySpecHandle Handle;
+		FGameplayTagContainer Tags;
+	};
+	/** 技能 ID → 授予记录（运行时数据，只在授予它的机器上有）。 */
+	TMap<int32, FGrantedSkill> GrantedSkills;
 };

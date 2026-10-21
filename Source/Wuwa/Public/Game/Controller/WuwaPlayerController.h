@@ -10,11 +10,13 @@
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "WuwaPlayerController.generated.h"
 
+class UWuwaUIInputHandler;
 class UInputMappingContext;
 class UWuwaMoveInputHandler;
 struct FInputActionInstance;
 class UWuwaAbilityInputHandlerComponent;
-
+class UWuwaFormationComponent;
+class UWuwaFormationInputHandler;
 class UWuwaInputRouterComponent;
 /**
  * 
@@ -74,12 +76,48 @@ public:
 
 	/** 先把语义输入记录到当前控制 Pawn 的输入意图，再交给 InputRouter 分发；返回是否有系统处理了它。 */
 	bool RouteInputEvent(const FWuwaInputEvent& InputEvent);
+
+	/**
+	 * 每个真正要分发的输入（没被屏蔽的）在交给 Handler 之前广播一次。只给界面做按键反馈用（≈ 鸣潮 InputDistributeController.BindActions：
+	 * 技能按钮自己监听按键动作，按下时播点击特效），不参与处理、不影响分发结果。
+	 */
+	DECLARE_MULTICAST_DELEGATE_OneParam(FWuwaOnInputRouted, const FWuwaInputEvent&);
+	FWuwaOnInputRouted OnInputRouted;
 	UPROPERTY(VisibleAnywhere, Category = "Wuwa|Input")
 	TObjectPtr<UWuwaAbilityInputHandlerComponent>AbilityInputHandler;
 	UPROPERTY(VisibleAnywhere, Category = "Wuwa|Input")
 	TObjectPtr<UWuwaMoveInputHandler> MoveInputHandler;
+	UPROPERTY(VisibleAnywhere, Category = "Wuwa|UI")
+	TObjectPtr<UWuwaUIInputHandler> UIInputHandler;
 
 #pragma endregion
+
+#pragma region 输入屏蔽
+	/**
+	 * BlockOwner（通常是某个 Handler，传 this）加一条屏蔽：BlockedRoutes 里这些路由的按下/持续输入不再分发
+	 * （松开/取消照常放行），并且给这些路由上正按着的输入补发一次取消。
+	 * 同一个 BlockOwner 再加会覆盖它原来那条；只有它自己能移除；它被销毁后这条自动失效。
+	 * 多个 BlockOwner 同时屏蔽时取并集。
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Wuwa|Input")
+	void AddInputBlock(UObject* BlockOwner, const FGameplayTagContainer& BlockedRoutes);
+	
+	UFUNCTION(BlueprintCallable, Category = "Wuwa|Input")
+	void RemoveInputBlock(UObject* BlockOwner);
+
+	/** 这条路由现在有没有被任何 Owner 屏蔽（按路由 Tag 精确匹配）。 */
+	UFUNCTION(BlueprintPure, Category = "Wuwa|Input")
+	bool IsRouteBlocked(const FGameplayTag& RouteTag) const;
+
+#pragma endregion
+	
+#pragma region 切人组件
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Wuwa|Formation")
+	TObjectPtr<UWuwaFormationComponent> FormationComponent;
+	/** 按键 1/2/3 → 要切到第几个队员，交给 FormationComponent。 */
+	UPROPERTY(VisibleAnywhere, Category = "Wuwa|Formation")
+	TObjectPtr<UWuwaFormationInputHandler> FormationInputHandler;
+#pragma  endregion
 	
 protected:
 	//注册所有的Action事件,按下对应按键后会将
@@ -93,5 +131,13 @@ private:
 
 	// Hold 触发器到点后每帧都会 Triggered；记录本次按下已经发过 Held 的动作，按下/松开时清除。
 	TSet<TWeakObjectPtr<const UInputAction>> HeldDispatchedActions;
+	/** 长按连续触发的按键（输入映射表 bContinuousHold）：Held 每帧都发，不去重。 */
+	TSet<TWeakObjectPtr<const UInputAction>> ContinuousHoldActions;
+
+	/** Owner → 它屏蔽的路由。弱引用：Owner 没了这条就不算数。 */
+	TMap<TWeakObjectPtr<UObject>, FGameplayTagContainer> InputBlocks;
+
+	/** 已经分发出去、还没松开/取消的输入（按 Action 记最后一次事件）：开始屏蔽某条路由时给它们补发取消。 */
+	TMap<TWeakObjectPtr<const UInputAction>, FWuwaInputEvent> ActiveInputs;
 	
 };

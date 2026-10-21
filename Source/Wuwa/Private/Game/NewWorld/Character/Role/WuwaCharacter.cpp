@@ -1,13 +1,22 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
+#include "Game/NewWorld/Combat/WuwaLockOnComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Abilities/WuwaRoleAttributeInit.h"
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaInputIntentComponent.h"
-#include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
+#include "Net/UnrealNetwork.h"
+#include "Animation/AnimInstance.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaUnifiedStateBridgeComponent.h"
 #include "Game/NewWorld/Character/Role/Component/WuwaRoleGaitBridgeComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Combat/WuwaFightStateBridgeComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillBridgeComponent.h"
+#include "AbilitySystemComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Engine/World.h"
+#include "GameplayTagContainer.h"
+#include "Game/Common/WuwaGameTags.h"
 
 
 #pragma region LifeCycle
@@ -23,6 +32,7 @@ AWuwaCharacter::AWuwaCharacter(const FObjectInitializer& ObjectInitializer) :
     FightStateClass = TSoftClassPtr<UWuwaFightStateBridgeComponent>(FSoftObjectPath(TEXT("/Script/UnrealSharp.WuwaFightStateComponent_C")));
     SkillClass = TSoftClassPtr<UWuwaSkillBridgeComponent>(FSoftObjectPath(TEXT("/Script/UnrealSharp.WuwaSkillComponent_C")));
     InputIntent = CreateDefaultSubobject<UWuwaInputIntentComponent>(TEXT("InputIntent"));
+    LockOnComponent = CreateDefaultSubobject<UWuwaLockOnComponent>(TEXT("LockOn"));
 
     // Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
     PrimaryActorTick.bCanEverTick = true;
@@ -50,8 +60,16 @@ void AWuwaCharacter::PostInitializeComponents()
 void AWuwaCharacter::BeginPlay()
 {
     Super::BeginPlay();
+    // 属性由服务端初始化（基础属性 × 等级成长），客户端靠属性复制
+    if (HasAuthority())
+    {
+        UWuwaRoleAttributeInit::Apply(GetAbilitySystemComponent(), RoleData);
+    }
     EnsureMovementStateSystem();
     EnsureSkillSystem();
+    
+    //可能feid属性在begin之前就到了所以要在这里调用确保一下
+    ApplyOnFieldState();
 }
 
 
@@ -59,7 +77,8 @@ void AWuwaCharacter::BeginPlay()
 void AWuwaCharacter::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-
+    // 暂留计时按世界时间（自己的顿帧不该拖慢下场）
+    if (bLingering) UpdateGoDown(GetWorld() ? GetWorld()->GetDeltaSeconds() : DeltaTime);
 }
 
 void AWuwaCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
@@ -84,6 +103,91 @@ void AWuwaCharacter::EndPlay(const EEndPlayReason::Type EndPlayReason)
 }
 
 
+
+#pragma endregion
+
+#pragma region 切人暂留
+
+namespace WuwaGoDown
+{
+    const FGameplayTag& SwitchNoHideTag() { static const FGameplayTag Tag = FGameplayTag::RequestGameplayTag(TEXT("State.Formation.SwitchNoHide")); return Tag; }
+    const FGameplayTag& StiffTag() { static const FGameplayTag Tag = FGameplayTag::RequestGameplayTag(TEXT("State.Combat.Stiff")); return Tag; }
+}
+
+bool AWuwaCharacter::TryApplyGoDown()
+{
+    UAbilitySystemComponent* Abilities = GetAbilitySystemComponent();
+    if (!HasAuthority() || !Abilities || !IsValid(SkillComponent) || bGoDownBuff) return false;
+    // 原作 OnChangeRole：有当前技能、还没到 ReadyEnd、有技能目标（原作没有技能目标时战斗中会再找一次软锁定，项目还没有战斗状态，先不做）
+    const FWuwaSkillData Skill = SkillComponent->GetCurrentSkillData();
+    if (!IsValid(Skill.ActiveAbility) || Skill.bMainSkillReadyEnd || !SkillComponent->GetSkillTarget()) return false;
+    Abilities->AddLooseGameplayTag(WuwaGoDown::SwitchNoHideTag());
+    bGoDownBuff = true;
+    GoDownSkillSerial = Skill.SkillStartSerial;
+    return true;
+}
+
+bool AWuwaCharacter::ShouldStayOnGoDown() const
+{
+    const UAbilitySystemComponent* Abilities = GetAbilitySystemComponent();
+    return Abilities && (Abilities->HasMatchingGameplayTag(WuwaGoDown::SwitchNoHideTag()) || Abilities->HasMatchingGameplayTag(WuwaGoDown::StiffTag()));
+}
+
+void AWuwaCharacter::GoDown(bool bStay)
+{
+    if (!HasAuthority()) return;
+    if (!bStay)
+    {
+        RemoveGoDownBuff();
+        SetOnField(false);
+        return;
+    }
+    // 原作 SetTeamTag(1) + RestoreDefaultController：不再受玩家控制，碰撞、显示、蒙太奇（根运动）都照常
+    bLingering = true;
+    GoDownQuitRemaining = -1.f;
+}
+
+void AWuwaCharacter::CancelGoDown()
+{
+    RemoveGoDownBuff();
+    bLingering = false;
+    GoDownQuitRemaining = -1.f;
+}
+
+void AWuwaCharacter::RemoveGoDownBuff()
+{
+    if (!bGoDownBuff) return;
+    bGoDownBuff = false;
+    if (UAbilitySystemComponent* Abilities = GetAbilitySystemComponent()) Abilities->RemoveLooseGameplayTag(WuwaGoDown::SwitchNoHideTag());
+}
+
+void AWuwaCharacter::UpdateGoDown(float WorldDeltaSeconds)
+{
+    // GoDown buff 的移除条件（原作：技能 Tag 都没了，或 TsAnimNotifyEndSkill 主动移除）
+    if (bGoDownBuff)
+    {
+        const FWuwaSkillData Skill = IsValid(SkillComponent) ? SkillComponent->GetCurrentSkillData() : FWuwaSkillData();
+        if (!IsValid(Skill.ActiveAbility) || Skill.SkillStartSerial != GoDownSkillSerial || Skill.bMainSkillReadyEnd) RemoveGoDownBuff();
+    }
+    if (GoDownQuitRemaining < 0.f)
+    {
+        // 原作 Arn 监听两个 Tag 的移除，都没了才走（qrn → DisableRoleWithEffect）
+        if (!ShouldStayOnGoDown()) GoDownQuitRemaining = GoDownQuitDelay;
+        return;
+    }
+    GoDownQuitRemaining -= WorldDeltaSeconds;
+    if (GoDownQuitRemaining <= 0.f) FinishGoDown();
+}
+
+void AWuwaCharacter::FinishGoDown()
+{
+    // 原作 BCl：停掉所有技能、隐藏
+    bLingering = false;
+    GoDownQuitRemaining = -1.f;
+    if (UAbilitySystemComponent* Abilities = GetAbilitySystemComponent()) Abilities->CancelAllAbilities();
+    if (UAnimInstance* Anim = GetMesh() ? GetMesh()->GetAnimInstance() : nullptr) Anim->StopAllMontages(0.f);
+    SetOnField(false);
+}
 
 #pragma endregion
 
@@ -230,4 +334,84 @@ void AWuwaCharacter::ResetPlayerInputState()
 
 #pragma endregion
 
+#pragma region 切人属性
+
+void AWuwaCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+    // 注册 bOnField
+    DOREPLIFETIME(AWuwaCharacter, bOnField);
+}
+
+void AWuwaCharacter::OnRep_OnField()
+{
+    ApplyOnFieldState();
+}
+
+void AWuwaCharacter::SetOnField(bool bNewOnField)
+{
+    if (!HasAuthority() || bOnField == bNewOnField)
+    {
+        return;
+    }
+
+    bOnField = bNewOnField;
+
+    // C++ 修改复制属性不会自动在服务器调用 OnRep。
+    ApplyOnFieldState();
+    ForceNetUpdate();
+}
+
+
+void AWuwaCharacter::ApplyOnFieldState()
+{
+    const bool bEnteringField = bOnField && !bOnFieldApplied;
+    bOnFieldApplied = bOnField;
+
+    // 原作 行为状态.逻辑状态.前台（buff 移除条件等要查）
+    if (UAbilitySystemComponent* ASC = GetAbilitySystemComponent())
+    {
+        ASC->SetLooseGameplayTagCount(FWuwaGameTags::Get().State_Formation_OnField, bOnField ? 1 : 0);
+    }
+    SetActorHiddenInGame(!bOnField);
+    SetActorEnableCollision(bOnField);
+    SetActorTickEnabled(bOnField);
+
+    if (UCharacterMovementComponent* Movement = GetCharacterMovement())
+    {
+        if (bOnField)
+        {
+            Movement->SetComponentTickEnabled(true);
+            // 不用 SetDefaultMovementMode：刚瞬移过来还没有站立的地面（MovementBase），它会立刻改成 Falling，
+            // 角色掉几帧再落地，看起来就是"抖一下"。直接进 Walking 时引擎会当场找地面、修正高度、设置 Base；
+            // 脚下真的没有地面（空中切人）时，下一帧会自己转成 Falling。
+            Movement->SetMovementMode(MOVE_Walking);
+        }
+        else
+        {
+            Movement->StopMovementImmediately();
+            Movement->DisableMovement();
+            Movement->SetComponentTickEnabled(false);
+        }
+    }
+
+    if (USkeletalMeshComponent* CharacterMesh = GetMesh())
+    {
+        CharacterMesh->SetComponentTickEnabled(bOnField);
+
+        // 离场时 Mesh 停止 Tick，动画被冻结在离场那一刻（比如攻击蒙太奇正在淡出、状态机停在急停里），
+        // 再上场会接着播完这些残留。上场时重新初始化动画：立刻清掉所有蒙太奇、状态机回到入口，
+        // 并马上算一次姿势，第一帧就不显示冻结的旧姿势。动画实例对象不变，ASC ActorInfo 里缓存的指针仍然有效。
+        UAnimInstance* AnimInstance = CharacterMesh->GetAnimInstance();
+        if (bEnteringField && AnimInstance)
+        {
+            AnimInstance->InitializeAnimation();
+            CharacterMesh->TickAnimation(0.f, false);
+            CharacterMesh->RefreshBoneTransforms();
+        }
+    }
+}
+
+
+#pragma endregion
 

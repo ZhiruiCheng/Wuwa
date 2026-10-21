@@ -25,6 +25,9 @@ bool UWuwaSkillBridgeComponent::SetMainSkillReadyEnd_Implementation(int32, bool)
 bool UWuwaSkillBridgeComponent::BeginSkillAcceptInputWindow_Implementation(int32, int32, int32) { return false; }
 bool UWuwaSkillBridgeComponent::EndSkillAcceptInputWindow_Implementation(int32, int32) { return false; }
 bool UWuwaSkillBridgeComponent::SetSkillInterruptLevel_Implementation(int32, int32) { return false; }
+bool UWuwaSkillBridgeComponent::TryInterruptForAction_Implementation(int32) { return false; }
+bool UWuwaSkillBridgeComponent::IsSkillAcceptingInput_Implementation() const { return false; }
+bool UWuwaSkillBridgeComponent::IsMainSkillReadyEnd_Implementation() const { return true; }
 bool UWuwaSkillBridgeComponent::CallAnimBreakPoint_Implementation(int32) { return false; }
 bool UWuwaSkillBridgeComponent::RequestInputCacheClear_Implementation(int32, FGameplayTag) { return false; }
 
@@ -38,4 +41,10 @@ void UWuwaSkillBridgeComponent::BroadcastInputCacheClear(int32 SkillHandle, FGam
 {
 	if (SkillHandle > 0 && GetCurrentSkillData().FightStateHandle == SkillHandle)
 		OnInputCacheClearRequested.Broadcast(this, SkillHandle, InputTag);
+}
+
+void UWuwaSkillBridgeComponent::SetSkillTarget(AActor* Target, FName Socket)
+{
+	SkillTarget = Target;
+	SkillTargetSocket = Target ? Socket : NAME_None;
 }

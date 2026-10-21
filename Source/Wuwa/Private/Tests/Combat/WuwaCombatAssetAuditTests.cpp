@@ -27,6 +27,9 @@
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
+#include "Game/NewWorld/Character/Common/Component/Input/WuwaInputCommandConfig.h"
+#include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillTypes.h"
+#include "Engine/DataTable.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 
 namespace WuwaCombatAssetAuditTests
@@ -108,7 +111,6 @@ namespace WuwaCombatAssetAuditTests
 		TSharedRef<FJsonObject> Result = MakeShared<FJsonObject>();
 		Result->SetStringField(TEXT("class"), GetPathNameSafe(AbilityClass));
 		const UWuwaGameplayAbilityBase* Ability = AbilityClass ? Cast<UWuwaGameplayAbilityBase>(AbilityClass->GetDefaultObject()) : nullptr;
-		Result->SetStringField(TEXT("originalTag"), Ability ? Ability->OriginalTag.ToString() : TEXT(""));
 		Result->SetBoolField(TEXT("isMainSkill"), Ability && Ability->bIsMainSkill);
 		Result->SetNumberField(TEXT("interruptLevel"), Ability ? Ability->InterruptLevel : -1);
 		Result->SetNumberField(TEXT("instancingPolicy"), Ability ? static_cast<int32>(Ability->GetInstancingPolicy()) : -1);
@@ -232,17 +234,31 @@ namespace WuwaCombatAssetAuditTests
 		Result->SetStringField(TEXT("class"), GetPathNameSafe(AbilityClass));
 		Result->SetStringField(TEXT("parentClass"), AbilityClass ? GetPathNameSafe(AbilityClass->GetSuperClass()) : TEXT(""));
 		Result->SetBoolField(TEXT("inheritsWuwaGameplayAbilityBase"), WuwaAbility != nullptr);
-		Result->SetStringField(TEXT("originalInputTag"), WuwaAbility ? WuwaAbility->OriginalTag.ToString() : TEXT(""));
+		// 技能身份：角色技能表里 Ability 为该类的行（行名 = 技能 ID）
+		int32 SkillId = 0;
+		int32 SkillRows = 0;
+		if (Character && Character->SkillTable && AbilityClass)
+			Character->SkillTable->ForeachRow<FWuwaSkillInfo>(TEXT("CombatAssetAudit"), [&](const FName& RowName, const FWuwaSkillInfo& Info)
+			{
+				if (Info.Ability.Get() != AbilityClass) return;
+				++SkillRows;
+				SkillId = WuwaSkill::ParseSkillId(RowName);
+			});
+		Result->SetNumberField(TEXT("skillId"), SkillId);
+		Result->SetNumberField(TEXT("skillTableRows"), SkillRows);
 		Result->SetStringField(TEXT("expectedInputTag"), ExpectedTag.ToString());
 		Result->SetBoolField(TEXT("isMainSkill"), WuwaAbility && WuwaAbility->bIsMainSkill);
 		Result->SetNumberField(TEXT("interruptLevel"), WuwaAbility ? WuwaAbility->InterruptLevel : -1);
 		Result->SetNumberField(TEXT("instancingPolicy"), Ability ? static_cast<int32>(Ability->GetInstancingPolicy()) : -1);
 		Result->SetBoolField(TEXT("supportsSameSpecReplacement"), WuwaAbility
 			&& WuwaAbility->GetInstancingPolicy() == EGameplayAbilityInstancingPolicy::InstancedPerExecution);
-		bool bListed = false;
-		if (Character && AbilityClass) for (const auto& ConfiguredClass : Character->CharacterAbilities)
-			bListed |= ConfiguredClass.Get() == AbilityClass;
-		Result->SetBoolField(TEXT("listedInCharacterAbilities"), bListed);
+		Result->SetBoolField(TEXT("listedInSkillTable"), SkillRows == 1 && SkillId > 0);
+		// 按键规则表里有没有一行"这个输入 -> 这个技能 ID"
+		int32 CommandRules = 0;
+		if (Character && Character->InputCommandConfig && SkillId > 0)
+			for (const FWuwaInputCommandRule& Rule : Character->InputCommandConfig->Rules)
+				CommandRules += Rule.InputTag == ExpectedTag && Rule.TargetSkillId == SkillId;
+		Result->SetNumberField(TEXT("commandRulesTargetingSkill"), CommandRules);
 		int32 GrantedCount = 0;
 		if (GrantedASC && AbilityClass) for (const FGameplayAbilitySpec& Spec : GrantedASC->GetActivatableAbilities())
 			GrantedCount += Spec.Ability && Spec.Ability->GetClass() == AbilityClass;
@@ -267,9 +283,9 @@ namespace WuwaCombatAssetAuditTests
 			if (Mapping.Action == Action) Keys.Add(MakeShared<FJsonValueString>(Mapping.Key.ToString()));
 		Result->SetArrayField(TEXT("mappedKeys"), Keys);
 		Result->SetBoolField(TEXT("inputActionLoaded"), IsValid(Action));
-		Result->SetBoolField(TEXT("inputAndGrantReady"), WuwaAbility && ExpectedTag.IsValid() && WuwaAbility->OriginalTag == ExpectedTag
-			&& GrantedCount == 1 && MatchingBindingCount == 1 && Keys.Num() > 0);
-		Result->SetStringField(TEXT("inputReadinessScope"), TEXT("Legacy direct input-to-ability mapping only; conditional InputCommandConfig rules are not inspected by this audit."));
+		Result->SetBoolField(TEXT("inputAndGrantReady"), WuwaAbility && ExpectedTag.IsValid() && SkillRows == 1 && SkillId > 0
+			&& CommandRules > 0 && GrantedCount == 1 && MatchingBindingCount == 1 && Keys.Num() > 0);
+		Result->SetStringField(TEXT("inputReadinessScope"), TEXT("Key -> semantic input -> at least one InputCommandConfig rule targeting the skill ID -> granted once from the skill table. Rule conditions are not evaluated."));
 		// This audit never activates a skill or advances its animation. Avoid reporting
 		// static configuration as proof that graph wiring, montage references or combat work.
 		Result->SetBoolField(TEXT("abilityExecutionVerified"), false);
@@ -289,13 +305,13 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 	UClass* AttackClass = LoadClass<UGameplayAbility>(nullptr,
 		TEXT("/Game/Characters/Role/changli/GA/GA_Attack1.GA_Attack1_C"));
 	UClass* CharacterClass = LoadClass<AWuwaCharacter>(nullptr,
-		TEXT("/Game/Characters/Role/changli/BP_WuwaCharacterBase.BP_WuwaCharacterBase_C"));
+		TEXT("/Game/Characters/Role/changli/BP_Role_Changli.BP_Role_Changli_C"));
 	UClass* ControllerClass = LoadClass<AWuwaPlayerController>(nullptr,
 		TEXT("/Game/Core/BP_WuwaPlayerController.BP_WuwaPlayerController_C"));
 	const AWuwaCharacter* CharacterDefaults = CharacterClass ? CharacterClass->GetDefaultObject<AWuwaCharacter>() : nullptr;
 	const AWuwaPlayerController* ControllerDefaults = ControllerClass ? ControllerClass->GetDefaultObject<AWuwaPlayerController>() : nullptr;
 	const UWuwaInputDataAsset* Bindings = LoadObject<UWuwaInputDataAsset>(nullptr,
-		TEXT("/Game/CoreInput/DataAsset/DA_InputActionTagAsset.DA_InputActionTagAsset"));
+		TEXT("/Game/CoreInput/DataAsset/DA_IARouterMap.DA_IARouterMap"));
 	const UInputMappingContext* MappingContext = LoadObject<UInputMappingContext>(nullptr,
 		TEXT("/Game/CoreInput/Contexts/IMC_Character.IMC_Character"));
 	const UInputAction* DodgeAction = LoadObject<UInputAction>(nullptr, TEXT("/Game/CoreInput/Actions/IA_Dodge.IA_Dodge"));
@@ -315,6 +331,7 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 		bNullAbilityEntry |= !AbilityClass;
 	}
 	Report->SetArrayField(TEXT("characterAbilityClasses"), ConfiguredClasses);
+	Report->SetStringField(TEXT("skillTable"), CharacterDefaults ? GetPathNameSafe(CharacterDefaults->SkillTable.Get()) : TEXT(""));
 	Report->SetBoolField(TEXT("hasNullAbilityEntry"), bNullAbilityEntry);
 
 	// Reproduce the production grant function in a transient native actor using the
@@ -337,6 +354,7 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 			if (Property)
 			{
 				Property->SetObjectPropertyValue_InContainer(Character, ASC);
+				Character->SkillTable = CharacterDefaults->SkillTable;
 				Character->CharacterAbilities = CharacterDefaults->CharacterAbilities;
 				Character->InitInitialAbilities();
 				bCalledProductionGrant = true;
@@ -344,8 +362,8 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 		}
 	}
 	Report->SetBoolField(TEXT("productionGrantFixtureAvailable"), bCalledProductionGrant);
-	const FGameplayTag DashTag = FWuwaGameTags::Get().Abilities_Movement_Dash;
-	const FGameplayTag AttackTag = FGameplayTag::RequestGameplayTag(TEXT("GAS.GA.Role.Attack1"), false);
+	const FGameplayTag DashTag = FWuwaGameTags::Get().Input_Combat_Dash;
+	const FGameplayTag AttackTag = FWuwaGameTags::Get().Input_Combat_Attack;
 	TSharedRef<FJsonObject> Dash = AuditAbility(DashClass, CharacterDefaults, Bindings, MappingContext, DodgeAction, DashTag, ASC);
 	TSharedRef<FJsonObject> Attack = AuditAbility(AttackClass, CharacterDefaults, Bindings, MappingContext, AttackAction, AttackTag, ASC);
 	Report->SetObjectField(TEXT("dash"), Dash);
@@ -357,11 +375,12 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 	Report->SetObjectField(TEXT("availableAttackMontage"), AuditMontage(
 		TEXT("/Game/Characters/Role/changli/AnimMontage/AM_Attack01.AM_Attack01")));
 	Report->SetBoolField(TEXT("attackMontageReferenceInAbilityVerified"), false);
-	Report->SetStringField(TEXT("attackScopeNote"), TEXT("Attack readiness only diagnoses legacy direct mapping, not conditional command rules or gameplay. Montage availability does not prove the GA references or plays it."));
+	Report->SetStringField(TEXT("attackScopeNote"), TEXT("Attack readiness is static configuration only, not gameplay. Montage availability does not prove the GA references or plays it."));
 
 	TestTrue(TEXT("Existing Dash uses the production gameplay ability base"), Dash->GetBoolField(TEXT("inheritsWuwaGameplayAbilityBase")));
 	TestTrue(TEXT("Existing Dash supports per-execution replacement"), Dash->GetBoolField(TEXT("supportsSameSpecReplacement")));
-	TestTrue(TEXT("Existing Dash is configured in the role's starting ability list"), Dash->GetBoolField(TEXT("listedInCharacterAbilities")));
+	TestTrue(TEXT("Existing Dash has exactly one skill ID in the role skill table"), Dash->GetBoolField(TEXT("listedInSkillTable")));
+	TestTrue(TEXT("The role command table routes the dodge input to the Dash skill ID"), Dash->GetNumberField(TEXT("commandRulesTargetingSkill")) > 0);
 	TestEqual(TEXT("Production initial grant grants Dash exactly once"), static_cast<int32>(Dash->GetNumberField(TEXT("grantedByInitInitialAbilities"))), 1);
 	TestTrue(TEXT("Existing Dash keeps a valid mapped and routed semantic input"), Dash->GetBoolField(TEXT("inputAndGrantReady")));
 	TestTrue(TEXT("The real controller uses the inspected semantic binding asset"), Report->GetBoolField(TEXT("controllerUsesInspectedBindings")));
@@ -373,7 +392,7 @@ bool FWuwaCombatAssetAuditTest::RunTest(const FString& Parameters)
 	const TSharedRef<TJsonWriter<>> Writer = TJsonWriterFactory<>::Create(&Json);
 	const bool bWritten = FJsonSerializer::Serialize(Report, Writer) && FFileHelper::SaveStringToFile(Json, *ReportPath);
 	TestTrue(TEXT("Read-only asset audit writes its factual JSON report"), bWritten);
-	AddInfo(FString::Printf(TEXT("Asset audit: %s; Attack legacy-direct input/grant ready=%s (command rules and gameplay not exercised)."),
+	AddInfo(FString::Printf(TEXT("Asset audit: %s; Attack input/rule/grant ready=%s (rule conditions and gameplay not exercised)."),
 		*ReportPath, Attack->GetBoolField(TEXT("inputAndGrantReady")) ? TEXT("true") : TEXT("false")));
 
 	TSharedRef<FJsonObject> GraphReport = MakeShared<FJsonObject>();

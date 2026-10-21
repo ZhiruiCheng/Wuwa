@@ -10,6 +10,7 @@
 #include "Engine/World.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaGameplayAbilityBase.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillBridgeComponent.h"
+#include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 
 namespace WuwaSkillNotifyContext
@@ -26,6 +27,14 @@ namespace WuwaSkillNotifyContext
 		AWuwaCharacter* Character = Cast<AWuwaCharacter>(Mesh->GetOwner());
 		return IsValid(Character) && Character->GetMesh() == Mesh && IsValid(Character->SkillComponent)
 			? Character : nullptr;
+	}
+
+	/** 角色的移动组件（技能位移 / 转向通知用）；不是游戏世界里的角色时为空。 */
+	inline UWuwaMovementComponent* ResolveMovement(USkeletalMeshComponent* Mesh, AWuwaCharacter** OutCharacter = nullptr)
+	{
+		AWuwaCharacter* Character = ResolveCharacter(Mesh);
+		if (OutCharacter) *OutCharacter = Character;
+		return Character ? Cast<UWuwaMovementComponent>(Character->GetCharacterMovement()) : nullptr;
 	}
 
 	inline bool BelongsToNotify(const FAnimNotifyEvent& Event, const UObject* Notify)
