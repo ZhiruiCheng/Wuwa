@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2531084628",
+    "Type": "Event",
+    "GUID": "{50D365C9-6BE0-4B6A-A2DD-A4E770777F36}",
+    "Language": "SFX",
+    "Hash": "{813C0366-A7A6-D9B6-E517-3FFBAF4FF157}",
+    "ObjectPath": "play_jiabeilina_am_charge",
+    "ShortName": "play_jiabeilina_am_charge",
+    "Path": "Event/play_jiabeilina_am_charge.bnk",
+    "Media": [
+     {
+      "Id": "218178705",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Charge_01.wav",
+      "Path": "Media/218178705.wem",
+      "CachePath": "1C/{1C25D458-570F-BE84-383F-01CCDABF4A22}.wem"
+     },
+     {
+      "Id": "378427334",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Charge_02.wav",
+      "Path": "Media/378427334.wem",
+      "CachePath": "FF/{FFFFCC07-2FB7-5BA9-A1FA-3CF1350ACED6}.wem"
+     },
+     {
+      "Id": "777304931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Charge_03.wav",
+      "Path": "Media/777304931.wem",
+      "CachePath": "66/{66F26662-1FD3-8BB9-A8EE-03B9941BE3FA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2531084628",
+      "Name": "play_jiabeilina_am_charge",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_charge",
+      "GUID": "{50D365C9-6BE0-4B6A-A2DD-A4E770777F36}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.68175",
+      "DurationMax": "1.7113125",
+      "MediaRefs": [
+       {
+        "Id": "218178705"
+       },
+       {
+        "Id": "378427334"
+       },
+       {
+        "Id": "777304931"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{561BD55E-1FAB-68A5-A1E3-D013825A88C7}"
+ }
+}

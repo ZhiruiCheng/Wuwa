@@ -1,0 +1,1088 @@
+<root filename="play_jiabeilina_am_attack02_n.bnk" path="C:\GamePakExtractor\Output\Exports\Client\Content\Aki\WwiseAudio_Generated\Event" version="172">
+	<object name="BankHeader">
+		<field type="4cc" name="dwTag" value="b&apos;BKHD&apos;" valuefmt="b&apos;BKHD&apos; [Bank Header]"/>
+		<field offset="4" type="u32" name="dwChunkSize" value="40" valuefmt="0x28"/>
+		<object name="AkBankHeader">
+			<field offset="8" type="u32" name="dwBankGeneratorVersion" value="172"/>
+			<field offset="12" type="sid" name="dwSoundBankID" value="3455987961" hashname="play_jiabeilina_am_attack02_n"/>
+			<field offset="16" type="sid" name="dwLanguageID" value="393239870"/>
+			<field offset="20" type="u32" name="uAltValues" value="16" valuefmt="0x10">
+				<field type="bit0" name="uAlignment" value="16" valuefmt="16"/>
+				<field type="bit16" name="bDeviceAllocated" value="0" valuefmt="0"/>
+			</field>
+			<field offset="24" type="u32" name="dwProjectID" value="11784"/>
+			<field offset="28" type="u32" name="dwSoundBankType" value="30" valuefmt="0x1E [Event]"/>
+			<field offset="32" type="gap" name="abyBankHash" value="16" valuefmt="0x10"/>
+		</object>
+	</object>
+	<object name="HircChunk">
+		<field offset="48" type="4cc" name="dwTag" value="b&apos;HIRC&apos;" valuefmt="b&apos;HIRC&apos; [Hierarchy]"/>
+		<field offset="52" type="u32" name="dwChunkSize" value="1179" valuefmt="0x49B"/>
+		<field offset="56" type="u32" name="NumReleasableHircItem" value="10"/>
+		<list name="listLoadedItem" count="10">
+			<object name="CAkAttenuation" index="0">
+				<field offset="60" type="u8" name="eHircType" value="14" valuefmt="0x0E [Attenuation]"/>
+				<field offset="61" type="u32" name="dwSectionSize" value="126" valuefmt="0x7E"/>
+				<field offset="65" type="sid" name="ulID" value="902716573"/>
+				<object name="AttenuationInitialValues">
+					<field offset="69" type="u8" name="bIsHeightSpreadEnabled" value="1" valuefmt="0x01"/>
+					<field offset="70" type="u8" name="bIsConeEnabled" value="0" valuefmt="0x00"/>
+					<field offset="71" type="s8" name="curveToUse[0]" value="0"/>
+					<field offset="72" type="s8" name="curveToUse[1]" value="0"/>
+					<field offset="73" type="s8" name="curveToUse[2]" value="0"/>
+					<field offset="74" type="s8" name="curveToUse[3]" value="1"/>
+					<field offset="75" type="s8" name="curveToUse[4]" value="-1"/>
+					<field offset="76" type="s8" name="curveToUse[5]" value="-1"/>
+					<field offset="77" type="s8" name="curveToUse[6]" value="2"/>
+					<field offset="78" type="s8" name="curveToUse[7]" value="-1"/>
+					<field offset="79" type="s8" name="curveToUse[8]" value="-2"/>
+					<field offset="80" type="s8" name="curveToUse[9]" value="-2"/>
+					<field offset="81" type="s8" name="curveToUse[10]" value="-2"/>
+					<field offset="82" type="s8" name="curveToUse[11]" value="-2"/>
+					<field offset="83" type="s8" name="curveToUse[12]" value="-2"/>
+					<field offset="84" type="s8" name="curveToUse[13]" value="-2"/>
+					<field offset="85" type="s8" name="curveToUse[14]" value="-2"/>
+					<field offset="86" type="s8" name="curveToUse[15]" value="-2"/>
+					<field offset="87" type="s8" name="curveToUse[16]" value="-2"/>
+					<field offset="88" type="s8" name="curveToUse[17]" value="-2"/>
+					<field offset="89" type="s8" name="curveToUse[18]" value="-2"/>
+					<field offset="90" type="s8" name="curveToUse[19]" value="-2"/>
+					<field offset="91" type="s8" name="curveToUse[20]" value="-2"/>
+					<field offset="92" type="s8" name="curveToUse[21]" value="-2"/>
+					<field offset="93" type="s8" name="curveToUse[22]" value="-2"/>
+					<field offset="94" type="s8" name="curveToUse[23]" value="-2"/>
+					<field offset="95" type="u8" name="NumCurves" value="3" valuefmt="0x03"/>
+					<list name="curves" count="3">
+						<object name="CAkConversionTable" index="0">
+							<field offset="96" type="u8" name="eScaling" value="2" valuefmt="0x02 [dB]"/>
+							<field offset="97" type="u16" name="ulSize" value="3"/>
+							<list name="pRTPCMgr" count="3">
+								<object name="AkRTPCGraphPoint" index="0">
+									<field offset="99" type="f32" name="From" value="0.0"/>
+									<field offset="103" type="f32" name="To" value="0.0"/>
+									<field offset="107" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+								</object>
+								<object name="AkRTPCGraphPoint" index="1">
+									<field offset="111" type="f32" name="From" value="500.0"/>
+									<field offset="115" type="f32" name="To" value="0.0"/>
+									<field offset="119" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+								<object name="AkRTPCGraphPoint" index="2">
+									<field offset="123" type="f32" name="From" value="5000.0"/>
+									<field offset="127" type="f32" name="To" value="-1.0"/>
+									<field offset="131" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+							</list>
+						</object>
+						<object name="CAkConversionTable" index="1">
+							<field offset="135" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+							<field offset="136" type="u16" name="ulSize" value="2"/>
+							<list name="pRTPCMgr" count="2">
+								<object name="AkRTPCGraphPoint" index="0">
+									<field offset="138" type="f32" name="From" value="0.0"/>
+									<field offset="142" type="f32" name="To" value="0.0"/>
+									<field offset="146" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+								<object name="AkRTPCGraphPoint" index="1">
+									<field offset="150" type="f32" name="From" value="5000.0"/>
+									<field offset="154" type="f32" name="To" value="40.0"/>
+									<field offset="158" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+							</list>
+						</object>
+						<object name="CAkConversionTable" index="2">
+							<field offset="162" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+							<field offset="163" type="u16" name="ulSize" value="2"/>
+							<list name="pRTPCMgr" count="2">
+								<object name="AkRTPCGraphPoint" index="0">
+									<field offset="165" type="f32" name="From" value="0.0"/>
+									<field offset="169" type="f32" name="To" value="80.0"/>
+									<field offset="173" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+								<object name="AkRTPCGraphPoint" index="1">
+									<field offset="177" type="f32" name="From" value="5000.0"/>
+									<field offset="181" type="f32" name="To" value="20.0"/>
+									<field offset="185" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+								</object>
+							</list>
+						</object>
+					</list>
+					<object name="InitialRTPC">
+						<field offset="189" type="u16" name="uNumCurves" value="0"/>
+						<list name="pRTPCMgr" count="0"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="1">
+				<field offset="191" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="192" type="u32" name="dwSectionSize" value="73" valuefmt="0x49"/>
+				<field offset="196" type="sid" name="ulID" value="49522097"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="200" type="u32" name="ulPluginID" value="1310721" valuefmt="0x00140001 [OPUS_WEM]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="204" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="205" type="tid" name="sourceID" value="982367461"/>
+							<field offset="209" type="u32" name="cacheID" value="3932626661" valuefmt="0xEA671EE5"/>
+							<field offset="213" type="u32" name="uInMemoryMediaSize" value="13796" valuefmt="0x35E4"/>
+							<field offset="217" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="218" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="219" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="220" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="221" type="u8" name="uNumFx" value="0"/>
+						<field offset="222" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="226" type="tid" name="DirectParentID" value="295365279"/>
+						<field offset="230" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="231" type="u8" name="cProps" value="4"/>
+								<list name="pProps" count="4">
+									<object name="AkPropBundle" index="0">
+										<field offset="232" type="u8" name="pID" value="0" valuefmt="0x00 [Volume]"/>
+										<field offset="236" type="uni" name="pValue" value="26.0"/>
+									</object>
+									<object name="AkPropBundle" index="1">
+										<field offset="233" type="u8" name="pID" value="3" valuefmt="0x03 [HPF]"/>
+										<field offset="240" type="uni" name="pValue" value="10.0"/>
+									</object>
+									<object name="AkPropBundle" index="2">
+										<field offset="234" type="u8" name="pID" value="5" valuefmt="0x05 [MakeUpGain]"/>
+										<field offset="244" type="uni" name="pValue" value="-3.0"/>
+									</object>
+									<object name="AkPropBundle" index="3">
+										<field offset="235" type="u8" name="pID" value="32" valuefmt="0x20 [HDRActiveRange]"/>
+										<field offset="248" type="uni" name="pValue" value="24.0"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="252" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="253" type="u8" name="uBitsPositioning" value="0" valuefmt="0x00">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="0"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="254" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="255" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="259" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="260" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="261" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="263" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="264" type="u8" name="byBitVector" value="8" valuefmt="0x08">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="1"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="265" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="266" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="267" type="u16" name="uNumCurves" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="2">
+				<field offset="269" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="270" type="u32" name="dwSectionSize" value="73" valuefmt="0x49"/>
+				<field offset="274" type="sid" name="ulID" value="560668790"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="278" type="u32" name="ulPluginID" value="1310721" valuefmt="0x00140001 [OPUS_WEM]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="282" type="u8" name="StreamType" value="2" valuefmt="0x02 [Streaming]"/>
+						<object name="AkMediaInformation">
+							<field offset="283" type="tid" name="sourceID" value="448349083"/>
+							<field offset="287" type="u32" name="cacheID" value="3104035572" valuefmt="0xB903D2F4"/>
+							<field offset="291" type="u32" name="uInMemoryMediaSize" value="1747" valuefmt="0x6D3"/>
+							<field offset="295" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="296" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="297" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="298" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="299" type="u8" name="uNumFx" value="0"/>
+						<field offset="300" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="304" type="tid" name="DirectParentID" value="295365279"/>
+						<field offset="308" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="309" type="u8" name="cProps" value="4"/>
+								<list name="pProps" count="4">
+									<object name="AkPropBundle" index="0">
+										<field offset="310" type="u8" name="pID" value="0" valuefmt="0x00 [Volume]"/>
+										<field offset="314" type="uni" name="pValue" value="26.0"/>
+									</object>
+									<object name="AkPropBundle" index="1">
+										<field offset="311" type="u8" name="pID" value="3" valuefmt="0x03 [HPF]"/>
+										<field offset="318" type="uni" name="pValue" value="10.0"/>
+									</object>
+									<object name="AkPropBundle" index="2">
+										<field offset="312" type="u8" name="pID" value="5" valuefmt="0x05 [MakeUpGain]"/>
+										<field offset="322" type="uni" name="pValue" value="-3.0"/>
+									</object>
+									<object name="AkPropBundle" index="3">
+										<field offset="313" type="u8" name="pID" value="32" valuefmt="0x20 [HDRActiveRange]"/>
+										<field offset="326" type="uni" name="pValue" value="24.0"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="330" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="331" type="u8" name="uBitsPositioning" value="0" valuefmt="0x00">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="0"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="332" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="333" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="337" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="338" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="339" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="341" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="342" type="u8" name="byBitVector" value="8" valuefmt="0x08">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="1"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="343" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="344" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="345" type="u16" name="uNumCurves" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkSound" index="3">
+				<field offset="347" type="u8" name="eHircType" value="2" valuefmt="0x02 [Sound]"/>
+				<field offset="348" type="u32" name="dwSectionSize" value="73" valuefmt="0x49"/>
+				<field offset="352" type="sid" name="ulID" value="958698346"/>
+				<object name="SoundInitialValues">
+					<object name="AkBankSourceData">
+						<field offset="356" type="u32" name="ulPluginID" value="1310721" valuefmt="0x00140001 [OPUS_WEM]">
+							<field type="u16" name="type" value="1" valuefmt="0x01 [Codec]"/>
+							<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+						</field>
+						<field offset="360" type="u8" name="StreamType" value="0" valuefmt="0x00 [Data/bnk]"/>
+						<object name="AkMediaInformation">
+							<field offset="361" type="tid" name="sourceID" value="1018394130"/>
+							<field offset="365" type="u32" name="cacheID" value="1701462485" valuefmt="0x656A41D5"/>
+							<field offset="369" type="u32" name="uInMemoryMediaSize" value="13837" valuefmt="0x360D"/>
+							<field offset="373" type="u8" name="uSourceBits" value="0" valuefmt="0x00">
+								<field type="bit0" name="bIsLanguageSpecific" value="0"/>
+								<field type="bit1" name="bPrefetch" value="0"/>
+								<field type="bit3" name="bNonCachable" value="0"/>
+								<field type="bit7" name="bHasSource" value="0"/>
+							</field>
+						</object>
+					</object>
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="374" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="375" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="376" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="377" type="u8" name="uNumFx" value="0"/>
+						<field offset="378" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="382" type="tid" name="DirectParentID" value="295365279"/>
+						<field offset="386" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="387" type="u8" name="cProps" value="4"/>
+								<list name="pProps" count="4">
+									<object name="AkPropBundle" index="0">
+										<field offset="388" type="u8" name="pID" value="0" valuefmt="0x00 [Volume]"/>
+										<field offset="392" type="uni" name="pValue" value="26.0"/>
+									</object>
+									<object name="AkPropBundle" index="1">
+										<field offset="389" type="u8" name="pID" value="3" valuefmt="0x03 [HPF]"/>
+										<field offset="396" type="uni" name="pValue" value="10.0"/>
+									</object>
+									<object name="AkPropBundle" index="2">
+										<field offset="390" type="u8" name="pID" value="5" valuefmt="0x05 [MakeUpGain]"/>
+										<field offset="400" type="uni" name="pValue" value="-3.0"/>
+									</object>
+									<object name="AkPropBundle" index="3">
+										<field offset="391" type="u8" name="pID" value="32" valuefmt="0x20 [HDRActiveRange]"/>
+										<field offset="404" type="uni" name="pValue" value="24.0"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="408" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="409" type="u8" name="uBitsPositioning" value="0" valuefmt="0x00">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="0"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="410" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="411" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="415" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="416" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="417" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="419" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="420" type="u8" name="byBitVector" value="8" valuefmt="0x08">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="1"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="421" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="422" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="423" type="u16" name="uNumCurves" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object name="CAkRanSeqCntr" index="4">
+				<field offset="425" type="u8" name="eHircType" value="5" valuefmt="0x05 [Random/Sequence Container]"/>
+				<field offset="426" type="u32" name="dwSectionSize" value="106" valuefmt="0x6A"/>
+				<field offset="430" type="sid" name="ulID" value="295365279"/>
+				<object name="RanSeqCntrInitialValues">
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="434" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="435" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="436" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="437" type="u8" name="uNumFx" value="0"/>
+						<field offset="438" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="442" type="tid" name="DirectParentID" value="118200432"/>
+						<field offset="446" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="447" type="u8" name="cProps" value="1"/>
+								<list name="pProps" count="1">
+									<object name="AkPropBundle" index="0">
+										<field offset="448" type="u8" name="pID" value="5" valuefmt="0x05 [MakeUpGain]"/>
+										<field offset="449" type="uni" name="pValue" value="-1.0"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="453" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="454" type="u8" name="uBitsPositioning" value="0" valuefmt="0x00">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="0"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="455" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="456" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="460" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="461" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="462" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="464" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="465" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="466" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="467" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="468" type="u16" name="uNumCurves" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+					<field offset="470" type="u16" name="sLoopCount" value="1"/>
+					<field offset="472" type="u16" name="sLoopModMin" value="0"/>
+					<field offset="474" type="u16" name="sLoopModMax" value="0"/>
+					<field offset="476" type="f32" name="fTransitionTime" value="1000.0"/>
+					<field offset="480" type="f32" name="fTransitionTimeModMin" value="0.0"/>
+					<field offset="484" type="f32" name="fTransitionTimeModMax" value="0.0"/>
+					<field offset="488" type="u16" name="wAvoidRepeatCount" value="1"/>
+					<field offset="490" type="u8" name="eTransitionMode" value="0" valuefmt="0x00 [Disabled]"/>
+					<field offset="491" type="u8" name="eRandomMode" value="1" valuefmt="0x01 [Shuffle]"/>
+					<field offset="492" type="u8" name="eMode" value="0" valuefmt="0x00 [Random]"/>
+					<field offset="493" type="u8" name="byBitVector" value="18" valuefmt="0x12">
+						<field type="bit0" name="_bIsUsingWeight" value="0"/>
+						<field type="bit1" name="bResetPlayListAtEachPlay" value="1"/>
+						<field type="bit2" name="bIsRestartBackward" value="0"/>
+						<field type="bit3" name="bIsContinuous" value="0"/>
+						<field type="bit4" name="bIsGlobal" value="1"/>
+					</field>
+					<object name="Children">
+						<field offset="494" type="u32" name="ulNumChilds" value="3"/>
+						<field offset="498" type="tid" name="ulChildID" value="49522097"/>
+						<field offset="502" type="tid" name="ulChildID" value="560668790"/>
+						<field offset="506" type="tid" name="ulChildID" value="958698346"/>
+					</object>
+					<object name="CAkPlayList">
+						<field offset="510" type="u16" name="ulPlayListItem" value="3"/>
+						<list name="pItems" count="3">
+							<object name="AkPlaylistItem" index="0">
+								<field offset="512" type="tid" name="ulPlayID" value="49522097"/>
+								<field offset="516" type="s32" name="weight" value="50000"/>
+							</object>
+							<object name="AkPlaylistItem" index="1">
+								<field offset="520" type="tid" name="ulPlayID" value="560668790"/>
+								<field offset="524" type="s32" name="weight" value="50000"/>
+							</object>
+							<object name="AkPlaylistItem" index="2">
+								<field offset="528" type="tid" name="ulPlayID" value="958698346"/>
+								<field offset="532" type="s32" name="weight" value="50000"/>
+							</object>
+						</list>
+					</object>
+				</object>
+			</object>
+			<object name="CAkActorMixer" index="5">
+				<field offset="536" type="u8" name="eHircType" value="7" valuefmt="0x07 [Actor-Mixer]"/>
+				<field offset="537" type="u32" name="dwSectionSize" value="43" valuefmt="0x2B"/>
+				<field offset="541" type="sid" name="ulID" value="118200432"/>
+				<object name="ActorMixerInitialValues">
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="545" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="546" type="u8" name="uNumFx" value="0"/>
+						</object>
+						<field offset="547" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="548" type="u8" name="uNumFx" value="0"/>
+						<field offset="549" type="tid" name="OverrideBusId" value="0"/>
+						<field offset="553" type="tid" name="DirectParentID" value="929704714"/>
+						<field offset="557" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="558" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="559" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="560" type="u8" name="uBitsPositioning" value="0" valuefmt="0x00">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="0"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="0"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="561" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="562" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="566" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="567" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="568" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="570" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="571" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="0"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="572" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="573" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="574" type="u16" name="uNumCurves" value="0"/>
+							<list name="pRTPCMgr" count="0"/>
+						</object>
+					</object>
+					<object name="Children">
+						<field offset="576" type="u32" name="ulNumChilds" value="1"/>
+						<field offset="580" type="tid" name="ulChildID" value="295365279"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkActorMixer" index="6">
+				<field offset="584" type="u8" name="eHircType" value="7" valuefmt="0x07 [Actor-Mixer]"/>
+				<field offset="585" type="u32" name="dwSectionSize" value="242" valuefmt="0xF2"/>
+				<field offset="589" type="sid" name="ulID" value="929704714"/>
+				<object name="ActorMixerInitialValues">
+					<object name="NodeBaseParams">
+						<object name="NodeInitialFxParams">
+							<field offset="593" type="u8" name="bIsOverrideParentFX" value="0" valuefmt="0x00"/>
+							<field offset="594" type="u8" name="uNumFx" value="1"/>
+							<field offset="595" type="u8" name="bBypassAll" value="0" valuefmt="0x00"/>
+							<list name="pFXChunk" count="1">
+								<object name="FXChunk" index="0">
+									<field offset="596" type="u8" name="uFXIndex" value="0"/>
+									<field offset="597" type="tid" name="fxID" value="2947988921"/>
+									<field offset="601" type="u8" name="bitVector" value="2" valuefmt="0x02">
+										<field type="bit0" name="bBypass" value="0"/>
+										<field type="bit1" name="bShareSet" value="0"/>
+										<field type="bit2" name="bRendered" value="0"/>
+									</field>
+								</object>
+							</list>
+						</object>
+						<field offset="602" type="u8" name="bIsOverrideParentMetadata" value="0" valuefmt="0x00"/>
+						<field offset="603" type="u8" name="uNumFx" value="0"/>
+						<field offset="604" type="tid" name="OverrideBusId" value="1888367913"/>
+						<field offset="608" type="tid" name="DirectParentID" value="0"/>
+						<field offset="612" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+							<field type="bit0" name="bPriorityOverrideParent" value="0"/>
+							<field type="bit1" name="bPriorityApplyDistFactor" value="0"/>
+							<field type="bit2" name="bOverrideMidiEventsBehavior" value="0"/>
+							<field type="bit3" name="bOverrideMidiNoteTracking" value="0"/>
+							<field type="bit4" name="bEnableMidiNoteTracking" value="0"/>
+							<field type="bit5" name="bIsMidiBreakLoopOnNoteOff" value="0"/>
+						</field>
+						<object name="NodeInitialParams">
+							<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+								<field offset="613" type="u8" name="cProps" value="3"/>
+								<list name="pProps" count="3">
+									<object name="AkPropBundle" index="0">
+										<field offset="614" type="u8" name="pID" value="32" valuefmt="0x20 [HDRActiveRange]"/>
+										<field offset="617" type="uni" name="pValue" value="24.0"/>
+									</object>
+									<object name="AkPropBundle" index="1">
+										<field offset="615" type="u8" name="pID" value="43" valuefmt="0x2B [Positioning_CenterPercent]"/>
+										<field offset="621" type="uni" name="pValue" value="100.0"/>
+									</object>
+									<object name="AkPropBundle" index="2">
+										<field offset="616" type="u8" name="pID" value="75" valuefmt="0x4B [AttenuationID]"/>
+										<field offset="625" type="tid" name="pValue" value="902716573"/>
+									</object>
+								</list>
+							</object>
+							<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+								<field offset="629" type="u8" name="cProps" value="0"/>
+								<list name="pProps" count="0"/>
+							</object>
+						</object>
+						<object name="PositioningParams">
+							<field offset="630" type="u8" name="uBitsPositioning" value="3" valuefmt="0x03">
+								<field type="bit0" name="bPositioningInfoOverrideParent" value="1"/>
+								<field type="bit1" name="bHasListenerRelativeRouting" value="1"/>
+								<field type="bit2" name="ePannerType" value="0" valuefmt="0 [DirectSpeakerAssignment]"/>
+								<field type="bit5" name="e3DPositionType" value="0" valuefmt="0 [Emitter]"/>
+							</field>
+							<field offset="631" type="u8" name="uBits3d" value="9" valuefmt="0x09">
+								<field type="bit0" name="eSpatializationMode" value="1" valuefmt="1 [PositionOnly]"/>
+								<field type="bit3" name="bEnableAttenuation" value="1"/>
+								<field type="bit4" name="bHoldEmitterPosAndOrient" value="0"/>
+								<field type="bit5" name="bHoldListenerOrient" value="0"/>
+								<field type="bit6" name="bEnableDiffraction" value="0"/>
+							</field>
+						</object>
+						<object name="AuxParams">
+							<field offset="632" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit2" name="bOverrideUserAuxSends" value="0"/>
+								<field type="bit3" name="bHasAux" value="0"/>
+								<field type="bit4" name="bOverrideReflectionsAuxBus" value="0"/>
+							</field>
+							<field offset="633" type="tid" name="reflectionsAuxBus" value="0"/>
+						</object>
+						<object name="AdvSettingsParams">
+							<field offset="637" type="u8" name="byBitVector" value="0" valuefmt="0x00">
+								<field type="bit0" name="bKillNewest" value="0"/>
+								<field type="bit1" name="bUseVirtualBehavior" value="0"/>
+								<field type="bit3" name="bIgnoreParentMaxNumInst" value="0"/>
+								<field type="bit4" name="bIsVVoicesOptOverrideParent" value="0"/>
+							</field>
+							<field offset="638" type="u8" name="eVirtualQueueBehavior" value="1" valuefmt="0x01 [FromElapsedTime]"/>
+							<field offset="639" type="u16" name="u16MaxNumInstance" value="0"/>
+							<field offset="641" type="u8" name="eBelowThresholdBehavior" value="0" valuefmt="0x00 [ContinueToPlay]"/>
+							<field offset="642" type="u8" name="byBitVector" value="8" valuefmt="0x08">
+								<field type="bit0" name="bOverrideHdrEnvelope" value="0"/>
+								<field type="bit1" name="bOverrideAnalysis" value="0"/>
+								<field type="bit2" name="bNormalizeLoudness" value="0"/>
+								<field type="bit3" name="bEnableEnvelope" value="1"/>
+							</field>
+						</object>
+						<object name="StateChunk">
+							<field offset="643" type="var" name="ulNumStateProps" value="0"/>
+							<list name="stateProps" count="0"/>
+							<field offset="644" type="var" name="ulNumStateGroups" value="0"/>
+							<list name="pStateChunks" count="0"/>
+						</object>
+						<object name="InitialRTPC">
+							<field offset="645" type="u16" name="uNumCurves" value="4"/>
+							<list name="pRTPCMgr" count="4">
+								<object name="RTPC" index="0">
+									<field offset="647" type="tid" name="RTPCID" value="590867884"/>
+									<field offset="651" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+									<field offset="652" type="u8" name="rtpcAccum" value="1" valuefmt="0x01 [Exclusive]"/>
+									<field offset="653" type="var" name="ParamID" value="44" valuefmt="0x2C [OutputBusHPF]"/>
+									<field offset="654" type="sid" name="rtpcCurveID" value="918691683"/>
+									<field offset="658" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+									<field offset="659" type="u16" name="ulSize" value="3"/>
+									<list name="pRTPCMgr" count="3">
+										<object name="AkRTPCGraphPoint" index="0">
+											<field offset="661" type="f32" name="From" value="0.0"/>
+											<field offset="665" type="f32" name="To" value="100.0"/>
+											<field offset="669" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="1">
+											<field offset="673" type="f32" name="From" value="0.9990000128746033"/>
+											<field offset="677" type="f32" name="To" value="100.0"/>
+											<field offset="681" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="2">
+											<field offset="685" type="f32" name="From" value="1.0"/>
+											<field offset="689" type="f32" name="To" value="0.0"/>
+											<field offset="693" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+									</list>
+								</object>
+								<object name="RTPC" index="1">
+									<field offset="697" type="tid" name="RTPCID" value="590867884"/>
+									<field offset="701" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+									<field offset="702" type="u8" name="rtpcAccum" value="4" valuefmt="0x04 [Boolean]"/>
+									<field offset="703" type="var" name="ParamID" value="45" valuefmt="0x2D [OutputBusLPF]"/>
+									<field offset="704" type="sid" name="rtpcCurveID" value="529629986"/>
+									<field offset="708" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+									<field offset="709" type="u16" name="ulSize" value="3"/>
+									<list name="pRTPCMgr" count="3">
+										<object name="AkRTPCGraphPoint" index="0">
+											<field offset="711" type="f32" name="From" value="0.0"/>
+											<field offset="715" type="f32" name="To" value="1.0"/>
+											<field offset="719" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="1">
+											<field offset="723" type="f32" name="From" value="0.9990000128746033"/>
+											<field offset="727" type="f32" name="To" value="1.0"/>
+											<field offset="731" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="2">
+											<field offset="735" type="f32" name="From" value="1.0"/>
+											<field offset="739" type="f32" name="To" value="0.0"/>
+											<field offset="743" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+										</object>
+									</list>
+								</object>
+								<object name="RTPC" index="2">
+									<field offset="747" type="tid" name="RTPCID" value="590867884"/>
+									<field offset="751" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+									<field offset="752" type="u8" name="rtpcAccum" value="2" valuefmt="0x02 [Additive]"/>
+									<field offset="753" type="var" name="ParamID" value="6" valuefmt="0x06 [InitialDelay]"/>
+									<field offset="754" type="sid" name="rtpcCurveID" value="500892050"/>
+									<field offset="758" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+									<field offset="759" type="u16" name="ulSize" value="2"/>
+									<list name="pRTPCMgr" count="2">
+										<object name="AkRTPCGraphPoint" index="0">
+											<field offset="761" type="f32" name="From" value="0.0"/>
+											<field offset="765" type="f32" name="To" value="-20.0"/>
+											<field offset="769" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="1">
+											<field offset="773" type="f32" name="From" value="1.0"/>
+											<field offset="777" type="f32" name="To" value="0.0"/>
+											<field offset="781" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+									</list>
+								</object>
+								<object name="RTPC" index="3">
+									<field offset="785" type="tid" name="RTPCID" value="590867884"/>
+									<field offset="789" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+									<field offset="790" type="u8" name="rtpcAccum" value="2" valuefmt="0x02 [Additive]"/>
+									<field offset="791" type="var" name="ParamID" value="0" valuefmt="0x00 [Volume]"/>
+									<field offset="792" type="sid" name="rtpcCurveID" value="758039691"/>
+									<field offset="796" type="u8" name="eScaling" value="2" valuefmt="0x02 [dB]"/>
+									<field offset="797" type="u16" name="ulSize" value="2"/>
+									<list name="pRTPCMgr" count="2">
+										<object name="AkRTPCGraphPoint" index="0">
+											<field offset="799" type="f32" name="From" value="0.0"/>
+											<field offset="803" type="f32" name="To" value="-0.6018928289413452"/>
+											<field offset="807" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+										<object name="AkRTPCGraphPoint" index="1">
+											<field offset="811" type="f32" name="From" value="1.0"/>
+											<field offset="815" type="f32" name="To" value="0.0"/>
+											<field offset="819" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+										</object>
+									</list>
+								</object>
+							</list>
+						</object>
+					</object>
+					<object name="Children">
+						<field offset="823" type="u32" name="ulNumChilds" value="1"/>
+						<field offset="827" type="tid" name="ulChildID" value="118200432"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkFxShareSet" index="7">
+				<field offset="831" type="u8" name="eHircType" value="16" valuefmt="0x10 [Fx Share Set]"/>
+				<field offset="832" type="u32" name="dwSectionSize" value="351" valuefmt="0x15F"/>
+				<field offset="836" type="sid" name="ulID" value="2947988921"/>
+				<object name="FxBaseInitialValues">
+					<field offset="840" type="u32" name="fxID" value="8519683" valuefmt="0x00820003 [Wwise Time Stretch]">
+						<field type="u16" name="type" value="3" valuefmt="0x03 [Effect]"/>
+						<field type="u16" name="company" value="0" valuefmt="0x00 [Audiokinetic]"/>
+					</field>
+					<field offset="844" type="u32" name="uSize" value="32" valuefmt="0x20"/>
+					<object name="AkPluginParam">
+						<field offset="848" type="gap" name="pParamBlock" value="32" valuefmt="0x20"/>
+					</object>
+					<field offset="880" type="u8" name="uNumBankData" value="0"/>
+					<list name="media" count="0"/>
+					<object name="InitialRTPC">
+						<field offset="881" type="u16" name="uNumCurves" value="3"/>
+						<list name="pRTPCMgr" count="3">
+							<object name="RTPC" index="0">
+								<field offset="883" type="tid" name="RTPCID" value="3234250598"/>
+								<field offset="887" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+								<field offset="888" type="u8" name="rtpcAccum" value="2" valuefmt="0x02 [Additive]"/>
+								<field offset="889" type="var" name="ParamID" value="2" valuefmt="0x02 [Pitch]"/>
+								<field offset="890" type="sid" name="rtpcCurveID" value="536980758"/>
+								<field offset="894" type="u8" name="eScaling" value="2" valuefmt="0x02 [dB]"/>
+								<field offset="895" type="u16" name="ulSize" value="3"/>
+								<list name="pRTPCMgr" count="3">
+									<object name="AkRTPCGraphPoint" index="0">
+										<field offset="897" type="f32" name="From" value="0.0"/>
+										<field offset="901" type="f32" name="To" value="-0.9960189461708069"/>
+										<field offset="905" type="u32" name="Interp" value="0" valuefmt="0x00 [Log3]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="1">
+										<field offset="909" type="f32" name="From" value="1.0"/>
+										<field offset="913" type="f32" name="To" value="0.0"/>
+										<field offset="917" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="2">
+										<field offset="921" type="f32" name="From" value="4.0"/>
+										<field offset="925" type="f32" name="To" value="0.0"/>
+										<field offset="929" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+								</list>
+							</object>
+							<object name="RTPC" index="1">
+								<field offset="933" type="tid" name="RTPCID" value="3234250598"/>
+								<field offset="937" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+								<field offset="938" type="u8" name="rtpcAccum" value="1" valuefmt="0x01 [Exclusive]"/>
+								<field offset="939" type="var" name="ParamID" value="1" valuefmt="0x01 [LFE]"/>
+								<field offset="940" type="sid" name="rtpcCurveID" value="333834849"/>
+								<field offset="944" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+								<field offset="945" type="u16" name="ulSize" value="15"/>
+								<list name="pRTPCMgr" count="15">
+									<object name="AkRTPCGraphPoint" index="0">
+										<field offset="947" type="f32" name="From" value="0.0"/>
+										<field offset="951" type="f32" name="To" value="1600.0"/>
+										<field offset="955" type="u32" name="Interp" value="9" valuefmt="0x09 [Constant]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="1">
+										<field offset="959" type="f32" name="From" value="0.06300000101327896"/>
+										<field offset="963" type="f32" name="To" value="1600.0"/>
+										<field offset="967" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="2">
+										<field offset="971" type="f32" name="From" value="0.10000000149011612"/>
+										<field offset="975" type="f32" name="To" value="1000.0"/>
+										<field offset="979" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="3">
+										<field offset="983" type="f32" name="From" value="0.125"/>
+										<field offset="987" type="f32" name="To" value="800.0"/>
+										<field offset="991" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="4">
+										<field offset="995" type="f32" name="From" value="0.20000000298023224"/>
+										<field offset="999" type="f32" name="To" value="500.0"/>
+										<field offset="1003" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="5">
+										<field offset="1007" type="f32" name="From" value="0.25"/>
+										<field offset="1011" type="f32" name="To" value="400.0"/>
+										<field offset="1015" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="6">
+										<field offset="1019" type="f32" name="From" value="0.4000000059604645"/>
+										<field offset="1023" type="f32" name="To" value="250.0"/>
+										<field offset="1027" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="7">
+										<field offset="1031" type="f32" name="From" value="0.5"/>
+										<field offset="1035" type="f32" name="To" value="200.0"/>
+										<field offset="1039" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="8">
+										<field offset="1043" type="f32" name="From" value="0.75"/>
+										<field offset="1047" type="f32" name="To" value="133.33299255371094"/>
+										<field offset="1051" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="9">
+										<field offset="1055" type="f32" name="From" value="1.0"/>
+										<field offset="1059" type="f32" name="To" value="100.0"/>
+										<field offset="1063" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="10">
+										<field offset="1067" type="f32" name="From" value="1.5"/>
+										<field offset="1071" type="f32" name="To" value="66.66699981689453"/>
+										<field offset="1075" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="11">
+										<field offset="1079" type="f32" name="From" value="2.0"/>
+										<field offset="1083" type="f32" name="To" value="50.0"/>
+										<field offset="1087" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="12">
+										<field offset="1091" type="f32" name="From" value="2.5"/>
+										<field offset="1095" type="f32" name="To" value="40.0"/>
+										<field offset="1099" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="13">
+										<field offset="1103" type="f32" name="From" value="3.0"/>
+										<field offset="1107" type="f32" name="To" value="33.33300018310547"/>
+										<field offset="1111" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="14">
+										<field offset="1115" type="f32" name="From" value="4.0"/>
+										<field offset="1119" type="f32" name="To" value="25.0"/>
+										<field offset="1123" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+								</list>
+							</object>
+							<object name="RTPC" index="2">
+								<field offset="1127" type="tid" name="RTPCID" value="3234250598"/>
+								<field offset="1131" type="u8" name="rtpcType" value="0" valuefmt="0x00 [GameParameter]"/>
+								<field offset="1132" type="u8" name="rtpcAccum" value="1" valuefmt="0x01 [Exclusive]"/>
+								<field offset="1133" type="var" name="ParamID" value="4" valuefmt="0x04 [HPF]"/>
+								<field offset="1134" type="sid" name="rtpcCurveID" value="121536072"/>
+								<field offset="1138" type="u8" name="eScaling" value="0" valuefmt="0x00 [None]"/>
+								<field offset="1139" type="u16" name="ulSize" value="3"/>
+								<list name="pRTPCMgr" count="3">
+									<object name="AkRTPCGraphPoint" index="0">
+										<field offset="1141" type="f32" name="From" value="0.0"/>
+										<field offset="1145" type="f32" name="To" value="-800.0"/>
+										<field offset="1149" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="1">
+										<field offset="1153" type="f32" name="From" value="1.0"/>
+										<field offset="1157" type="f32" name="To" value="0.0"/>
+										<field offset="1161" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+									<object name="AkRTPCGraphPoint" index="2">
+										<field offset="1165" type="f32" name="From" value="4.0"/>
+										<field offset="1169" type="f32" name="To" value="2400.0"/>
+										<field offset="1173" type="u32" name="Interp" value="4" valuefmt="0x04 [Linear]"/>
+									</object>
+								</list>
+							</object>
+						</list>
+					</object>
+					<object name="StateChunk">
+						<field offset="1177" type="var" name="ulNumStateProps" value="0"/>
+						<list name="stateProps" count="0"/>
+						<field offset="1178" type="var" name="ulNumStateGroups" value="0"/>
+						<list name="pStateChunks" count="0"/>
+					</object>
+					<field offset="1179" type="u16" name="numValues" value="1"/>
+					<list name="propertyValues" count="1">
+						<object name="PluginPropertyValue" index="0">
+							<field offset="1181" type="var" name="propertyId" value="2" valuefmt="0x02 [Pitch]"/>
+							<field offset="1182" type="u8" name="rtpcAccum" value="2" valuefmt="0x02 [Additive]"/>
+							<field offset="1183" type="f32" name="fValue" value="0.0"/>
+						</object>
+					</list>
+				</object>
+			</object>
+			<object name="CAkActionPlay" index="8">
+				<field offset="1187" type="u8" name="eHircType" value="3" valuefmt="0x03 [Action]"/>
+				<field offset="1188" type="u32" name="dwSectionSize" value="22" valuefmt="0x16"/>
+				<field offset="1192" type="sid" name="ulID" value="1035289309"/>
+				<field offset="1196" type="u16" name="ulActionType" value="1027" valuefmt="0x0403 [Play]"/>
+				<object name="ActionInitialValues">
+					<field offset="1198" type="tid" name="idExt" value="295365279"/>
+					<field offset="1202" type="u8" name="idExt_4" value="0" valuefmt="0x00">
+						<field type="bit0" name="bIsBus" value="0"/>
+					</field>
+					<object name="AkPropBundle&lt;AkPropValue,unsigned char&gt;">
+						<field offset="1203" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="AkPropBundle&lt;RANGED_MODIFIERS&lt;AkPropValue&gt;&gt;">
+						<field offset="1204" type="u8" name="cProps" value="0"/>
+						<list name="pProps" count="0"/>
+					</object>
+					<object name="PlayActionParams">
+						<field offset="1205" type="u8" name="byBitVector" value="4" valuefmt="0x04">
+							<field type="bit0" name="eFadeCurve" value="4" valuefmt="4 [Linear]"/>
+						</field>
+						<field offset="1206" type="tid" name="bankID" value="3455987961" hashname="play_jiabeilina_am_attack02_n"/>
+						<field offset="1210" type="u32" name="bankType" value="30" valuefmt="0x1E [Event]"/>
+					</object>
+				</object>
+			</object>
+			<object name="CAkEvent" index="9">
+				<field offset="1214" type="u8" name="eHircType" value="4" valuefmt="0x04 [Event]"/>
+				<field offset="1215" type="u32" name="dwSectionSize" value="16" valuefmt="0x10"/>
+				<field offset="1219" type="sid" name="ulID" value="3455987961" hashname="play_jiabeilina_am_attack02_n"/>
+				<object name="EventInitialValues">
+					<field offset="1223" type="u8" name="gap20_0" value="0" valuefmt="0x00"/>
+					<field offset="1224" type="u16" name="instanceLimit" value="0"/>
+					<field offset="1226" type="f32" name="cooldownTime" value="0.0"/>
+					<field offset="1230" type="var" name="ulActionListSize" value="1"/>
+					<list name="actions" count="1">
+						<object name="Action" index="0">
+							<field offset="1231" type="tid" name="ulActionID" value="1035289309"/>
+						</object>
+					</list>
+				</object>
+			</object>
+		</list>
+	</object>
+</root>

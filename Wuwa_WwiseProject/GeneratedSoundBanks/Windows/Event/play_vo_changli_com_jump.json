@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2435038473",
+    "Type": "Event",
+    "GUID": "{673D8085-0A2F-4524-B701-B7B9F52F0E03}",
+    "Language": "SFX",
+    "Hash": "{BB299A0D-B20B-4CC5-8EDE-0F6490091890}",
+    "ObjectPath": "play_vo_changli_com_jump",
+    "ShortName": "play_vo_changli_com_jump",
+    "Path": "Event/play_vo_changli_com_jump.bnk",
+    "Media": [
+     {
+      "Id": "290215813",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_com_jump_01.wav",
+      "Path": "Media/290215813.wem",
+      "CachePath": "C5/{C5AF74EB-DFA2-F028-2DAF-08E1D2155ADF}.wem"
+     },
+     {
+      "Id": "405291861",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_com_jump_02.wav",
+      "Path": "Media/405291861.wem",
+      "CachePath": "08/{08FBC2CC-BEC2-1115-D00C-BDB69F8A6906}.wem"
+     },
+     {
+      "Id": "580537082",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_com_jump_03.wav",
+      "Path": "Media/580537082.wem",
+      "CachePath": "8A/{8AC12F73-ACBA-CA1C-3BD5-893E254DB73E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2435038473",
+      "Name": "play_vo_changli_com_jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_com_jump",
+      "GUID": "{673D8085-0A2F-4524-B701-B7B9F52F0E03}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.14039584",
+      "DurationMax": "0.7911875",
+      "MediaRefs": [
+       {
+        "Id": "290215813"
+       },
+       {
+        "Id": "405291861"
+       },
+       {
+        "Id": "580537082"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{478A030F-7116-8325-E714-AA3FBEB0B8CE}"
+ }
+}

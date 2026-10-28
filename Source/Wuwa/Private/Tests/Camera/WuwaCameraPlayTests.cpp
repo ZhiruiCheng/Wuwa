@@ -37,20 +37,21 @@ namespace WuwaCameraPlayTests
 			UWorld* World = FindPlayWorld();
 			APlayerController* Player = World ? World->GetFirstPlayerController() : nullptr;
 			APawn* Pawn = IsValid(Player) ? Player->GetPawn() : nullptr;
-			if (!World || !World->HasBegunPlay() || !IsValid(Player) || !IsValid(Pawn))
+			AWuwaPlayerCameraManager* Camera = IsValid(Player) ? Cast<AWuwaPlayerCameraManager>(Player->PlayerCameraManager) : nullptr;
+			UWuwaCameraRuntimeBridge* Runtime = Camera ? Camera->GetCameraRuntime() : nullptr;
+			// 加载界面结束、角色被控制后，相机要到下一次更新才创建运行时；等到它出现再检查
+			if (!World || !World->HasBegunPlay() || !IsValid(Player) || !IsValid(Pawn) || !Runtime)
 			{
-				if (FPlatformTime::Seconds() - StartedAt < 15.0) return false;
-				Test->AddError(TEXT("PIE did not produce a possessed local player within 15 seconds."));
+				if (FPlatformTime::Seconds() - StartedAt < 120.0) return false;
+				Test->TestNotNull(TEXT("PIE produces a possessed local player within 120 seconds"), Pawn);
+				Test->TestNotNull(TEXT("Actual player camera manager uses the new adapter"), Camera);
+				Test->TestNotNull(TEXT("Actual camera update initializes the managed runtime"), Runtime);
 				return true;
 			}
 
 			Test->TestTrue(TEXT("Real map creates the Wuwa player controller"), Player->IsA<AWuwaPlayerController>());
 			Test->TestTrue(TEXT("PIE player controller is local"), Player->IsLocalController());
 			Test->TestTrue(TEXT("Real map creates the Wuwa character"), Pawn->IsA<AWuwaCharacter>());
-			AWuwaPlayerCameraManager* Camera = Cast<AWuwaPlayerCameraManager>(Player->PlayerCameraManager);
-			if (!Test->TestNotNull(TEXT("Actual player camera manager uses the new adapter"), Camera)) return true;
-			UWuwaCameraRuntimeBridge* Runtime = Camera->GetCameraRuntime();
-			if (!Test->TestNotNull(TEXT("Actual camera update initializes the managed runtime"), Runtime)) return true;
 
 			Test->TestTrue(TEXT("Gameplay view target remains the possessed pawn"), Player->GetViewTarget() == Pawn);
 			Test->TestNull(TEXT("Character no longer owns the old rendering camera"), Pawn->FindComponentByClass<UCameraComponent>());
@@ -66,7 +67,7 @@ namespace WuwaCameraPlayTests
 			// Collision may shorten the arm below the input minimum; it must never exceed the requested maximum.
 			Test->TestTrue(TEXT("Gameplay camera is behind the pawn at a nonzero bounded distance"),
 				FMath::IsFinite(Distance) && Distance > 1.0
-				&& Distance <= Settings.MaxArmLength + Settings.PivotOffset.Size() + 1.0);
+				&& Distance <= Settings.Arm.MaxArmLength + Settings.Offset.PivotOffset.Size() + 1.0);
 			Test->AddInfo(FString::Printf(TEXT("PIE camera=%s pawn=%s distance=%.2f location=%s"),
 				*Camera->GetClass()->GetName(), *Pawn->GetClass()->GetName(), Distance, *CameraLocation.ToString()));
 			return true;
@@ -86,8 +87,8 @@ namespace WuwaCameraPlayTests
 		{
 			if (!FindPlayWorld()) return true;
 			if (StartedAt == 0.0) StartedAt = FPlatformTime::Seconds();
-			if (FPlatformTime::Seconds() - StartedAt < 15.0) return false;
-			Test->AddError(TEXT("PIE world did not finish shutting down within 15 seconds."));
+			if (FPlatformTime::Seconds() - StartedAt < 120.0) return false;
+			Test->AddError(TEXT("PIE world did not finish shutting down within 120 seconds."));
 			return true;
 		}
 

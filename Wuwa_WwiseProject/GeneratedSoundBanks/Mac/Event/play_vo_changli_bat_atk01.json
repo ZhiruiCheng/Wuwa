@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500502",
+    "Type": "Event",
+    "GUID": "{9D49CE3C-ED40-4C32-928E-2B71B520FBD8}",
+    "Language": "SFX",
+    "Hash": "{3B3A9F84-4EB2-739D-634D-6BF99C4F39D2}",
+    "ObjectPath": "play_vo_changli_bat_atk01",
+    "ShortName": "play_vo_changli_bat_atk01",
+    "Path": "Event/play_vo_changli_bat_atk01.bnk",
+    "Media": [
+     {
+      "Id": "323524357",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_01.wav",
+      "Path": "Media/323524357.wem",
+      "CachePath": "7E/{7E81C694-77CE-7F49-9CA8-7A6EC1CF4501}.wem"
+     },
+     {
+      "Id": "754527237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_02.wav",
+      "Path": "Media/754527237.wem",
+      "CachePath": "BE/{BE9F16C5-1675-09C1-E9F2-99DF31486B11}.wem"
+     },
+     {
+      "Id": "793492234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_03.wav",
+      "Path": "Media/793492234.wem",
+      "CachePath": "5E/{5EFE61DB-B8F5-3F0B-7388-8015487A1452}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1421500502",
+      "Name": "play_vo_changli_bat_atk01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atk01",
+      "GUID": "{9D49CE3C-ED40-4C32-928E-2B71B520FBD8}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.3865",
+      "MediaRefs": [
+       {
+        "Id": "323524357"
+       },
+       {
+        "Id": "754527237"
+       },
+       {
+        "Id": "793492234"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{544D0CF0-9940-81D1-7FEE-1DC96C5C267D}"
+ }
+}

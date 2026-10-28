@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3441232208",
+    "Type": "Event",
+    "GUID": "{EB8382B2-0CE1-4EEF-83F2-BC0F62516C23}",
+    "Language": "SFX",
+    "Hash": "{53236DB7-A4EC-07CB-5E0A-2920FF0F84CC}",
+    "ObjectPath": "play_jiabeilina_am_heavyattack_human03",
+    "ShortName": "play_jiabeilina_am_heavyattack_human03",
+    "Path": "Event/play_jiabeilina_am_heavyattack_human03.bnk",
+    "Media": [
+     {
+      "Id": "633889434",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_HeavyAttack_Human03.wav",
+      "Path": "Media/633889434.wem",
+      "CachePath": "27/{275B3746-2C2D-EE4C-174B-C8BB4B126BFB}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3441232208",
+      "Name": "play_jiabeilina_am_heavyattack_human03",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_heavyattack_human03",
+      "GUID": "{EB8382B2-0CE1-4EEF-83F2-BC0F62516C23}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9785626",
+      "DurationMax": "2.9785626",
+      "MediaRefs": [
+       {
+        "Id": "633889434"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8B99AE78-67C3-9EE5-29C4-195D02BA4C44}"
+ }
+}

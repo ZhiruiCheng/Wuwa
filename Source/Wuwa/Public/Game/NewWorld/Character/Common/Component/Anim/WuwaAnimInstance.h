@@ -93,7 +93,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Transient, Category="Wuwa|Animation|Foot IK")
 	FWuwaFootIKFrame FootIKFrame;
 	virtual void NativeInitializeAnimation() override;
-	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+	virtual void NativeUpdateAnimation(float DeltaSeconds) override; 
 	virtual void NativeUninitializeAnimation() override;
 
 	/** Game thread; waits for this mesh's animation work before reading the completed frame. */

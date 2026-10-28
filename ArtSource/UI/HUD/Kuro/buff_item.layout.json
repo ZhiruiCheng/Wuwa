@@ -1,0 +1,1222 @@
+{
+ "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_BuffItem",
+ "nodes": [
+  {
+   "name": "UiItem_BuffItem",
+   "path": "/UiItem_BuffItem",
+   "hidden": false,
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -1.7881393432617188e-07
+    ],
+    "size": [
+     39.0,
+     39.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    1,
+    9,
+    6,
+    11,
+    12,
+    15,
+    16,
+    17,
+    13,
+    2,
+    10,
+    7,
+    8,
+    18,
+    3
+   ]
+  },
+  {
+   "name": "BuffItemCtrl",
+   "path": "/UiItem_BuffItem/BuffItemCtrl",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprBuffBg",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/SprBuffBg",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     38.25,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    0,
+    0,
+    0,
+    102
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffBg.png",
+   "slice": null
+  },
+  {
+   "name": "PnlFrameColour",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/PnlFrameColour",
+   "hidden": false,
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Frame",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/PnlFrameColour/Frame",
+   "hidden": false,
+   "parent": 3,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -0.375,
+     -0.375
+    ],
+    "size": [
+     63.0,
+     63.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_BuffBgFrame.png",
+   "slice": null
+  },
+  {
+   "name": "Chromatic",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/PnlFrameColour/Chromatic",
+   "hidden": false,
+   "parent": 3,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -0.75,
+     -2.5033949100361497e-06
+    ],
+    "size": [
+     63.0,
+     63.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_BuffBgFlow.png",
+   "slice": null
+  },
+  {
+   "name": "BarBuff",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/BarBuff",
+   "hidden": false,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     38.25,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffBg.png",
+   "slice": null,
+   "fill": {
+    "method": "Vertical",
+    "origin": 0,
+    "flip": true,
+    "amount": 0.5
+   }
+  },
+  {
+   "name": "SprBuffBgRound",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/SprBuffBgRound",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     38.25,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    0,
+    0,
+    0,
+    102
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffBgRound.png",
+   "slice": null
+  },
+  {
+   "name": "BarBuffRound",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/BarBuffRound",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     38.25,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffBgRound.png",
+   "slice": null,
+   "fill": {
+    "method": "Vertical",
+    "origin": 0,
+    "flip": true,
+    "amount": 0.5
+   }
+  },
+  {
+   "name": "TexBuffIcon",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/TexBuffIcon",
+   "hidden": false,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     9.634379694034578e-08,
+     0.0
+    ],
+    "size": [
+     27.0,
+     27.0
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_Iconpropertygreenlife_UI.png",
+   "slice": null
+  },
+  {
+   "name": "TexBuffAttribute",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/TexBuffAttribute",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.5762786865234375e-07
+    ],
+    "size": [
+     42.0,
+     42.0
+    ]
+   },
+   "scale": [
+    0.8999999761581421,
+    0.8999999761581421
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconBossAttribute_001_a.png",
+   "slice": null
+  },
+  {
+   "name": "TxtBuffNum",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/TxtBuffNum",
+   "hidden": false,
+   "parent": 1,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     15.75,
+     -12.75
+    ],
+    "size": [
+     10.007499933242798,
+     15.0
+    ]
+   },
+   "scale": [
+    0.9999980330467224,
+    0.9999980330467224
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "",
+    "size": 15.0,
+    "hAlign": "Right",
+    "vAlign": "Middle",
+    "outline": 2,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     51
+    ]
+   }
+  },
+  {
+   "name": "SprBuffStateDown",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/SprBuffStateDown",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -15.0,
+     9.750030755996704
+    ],
+    "size": [
+     14.25,
+     13.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffDown.png",
+   "slice": null
+  },
+  {
+   "name": "SprBuffStateUp",
+   "path": "/UiItem_BuffItem/BuffItemCtrl/SprBuffStateUp",
+   "hidden": true,
+   "parent": 1,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -15.0,
+     9.750030755996704
+    ],
+    "size": [
+     14.25,
+     13.5
+    ]
+   },
+   "scale": [
+    1.0000004768371582,
+    1.0000004768371582
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_BuffUp.png",
+   "slice": null
+  },
+  {
+   "name": "Animation",
+   "path": "/UiItem_BuffItem/Animation",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "AnimStart",
+   "path": "/UiItem_BuffItem/Animation/AnimStart",
+   "hidden": true,
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutCubic",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Active",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 1,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onComplete": [],
+     "name": "Main_Alpha"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.5,
+      1.5,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "Main_Scale",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/UiItem_BuffItem/Curve_UiItem_BuffItem_StartScale"
+    }
+   ]
+  },
+  {
+   "name": "AnimClose",
+   "path": "/UiItem_BuffItem/Animation/AnimClose",
+   "hidden": true,
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutSine",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "Main_Alpha"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      0.800000011920929,
+      0.800000011920929,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutCubic",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "Main_Scale"
+    }
+   ]
+  },
+  {
+   "name": "AnimFade",
+   "path": "/UiItem_BuffItem/Animation/AnimFade",
+   "hidden": true,
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.25,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Restart",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 1,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "Ctrl_Alpha",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/UiItem_BuffItem/Curve_UiItem_BuffItem_Fade"
+    }
+   ]
+  },
+  {
+   "name": "AnimCombine",
+   "path": "/UiItem_BuffItem/Animation/AnimCombine",
+   "hidden": true,
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Vector3",
+     "from": [
+      0.6000000238418579,
+      0.6000000238418579,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutSine",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": false,
+       "fixed": [
+        0.5,
+        0.5,
+        1.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onComplete": [],
+     "name": "ScaleA"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [
+      {
+       "target": 0,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onComplete": [],
+     "name": "Alpha"
+    }
+   ]
+  }
+ ],
+ "curves": [
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/UiItem_BuffItem/Curve_UiItem_BuffItem_StartScale",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": -5.9604645e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.2,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Break",
+     "arrive": -0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.8,
+     "value": -7.117138e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 1.7342968e-07
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/UiItem_BuffItem/Curve_UiItem_BuffItem_Fade",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 3.214788e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.6,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 1.0,
+     "value": 3.214788e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

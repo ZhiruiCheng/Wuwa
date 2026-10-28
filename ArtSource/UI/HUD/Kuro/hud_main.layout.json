@@ -1,0 +1,10169 @@
+{
+ "prefab": "UI/UIResources/UiFight/Prefabs/PC/PC_UiView_Fight_Prefab",
+ "nodes": [
+  {
+   "name": "PC_UiView_Fight_Prefab",
+   "path": "/PC_UiView_Fight_Prefab",
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    176,
+    193,
+    210,
+    100,
+    3
+   ]
+  },
+  {
+   "name": "PnlPivot",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot",
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlFullScreen",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlFullScreen",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "FightRoleHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.0
+    ],
+    "max": [
+     0.5,
+     0.0
+    ],
+    "pos": [
+     -30.0,
+     60.00714111328125
+    ],
+    "size": [
+     405.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    7,
+    8,
+    20,
+    24,
+    26,
+    28,
+    6,
+    14,
+    17
+   ]
+  },
+  {
+   "name": "FightConcertoState",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/FightConcertoState",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -182.25,
+     17.25
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprStateBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/FightConcertoState/SprStateBg",
+   "parent": 4,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    230
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ConcertoStateBg.png",
+   "slice": null,
+   "fill": {
+    "method": "Radial360",
+    "origin": 2,
+    "flip": true,
+    "amount": 1.0
+   }
+  },
+  {
+   "name": "BarState",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/FightConcertoState/BarState",
+   "parent": 4,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ConcertoStateBar.png",
+   "slice": null,
+   "fill": {
+    "method": "Radial360",
+    "origin": 1,
+    "flip": false,
+    "amount": 1.0
+   }
+  },
+  {
+   "name": "TexStateIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/FightConcertoState/TexStateIcon",
+   "parent": 4,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementLight1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlEnergyBar",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlEnergyBar",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     21.0,
+     17.25
+    ],
+    "size": [
+     300.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlEnergyBarBig",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlEnergyBarBig",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     21.0,
+     7.5
+    ],
+    "size": [
+     315.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlGuideBarBig",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlEnergyBarBig/PnlGuideBarBig",
+   "parent": 9,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    0.9999996423721313,
+    0.9999996423721313
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.5,
+     0.0
+    ],
+    "max": [
+     0.5,
+     0.0
+    ],
+    "pos": [
+     21.0,
+     36.0
+    ],
+    "size": [
+     315.0,
+     123.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout",
+   "parent": 11,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     157.5,
+     -85.5
+    ],
+    "size": [
+     315.0,
+     85.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlActiveState",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout/PnlActiveState",
+   "parent": 12,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     136.5,
+     48.748191833496094
+    ],
+    "size": [
+     8.816207631167156e-39,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBuffTop",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout/PnlBuffTop",
+   "parent": 12,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     157.5,
+     -46.5
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBuffList",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout/PnlBuffList",
+   "parent": 12,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     157.5,
+     -85.5
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlEnvironment",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout/PnlBuffList/PnlEnvironment",
+   "parent": 15,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -4.408103815583578e-39
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBuff",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlLayout/PnlBuffList/PnlBuff",
+   "parent": 15,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -4.408103815583578e-39
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBarSize",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlLayout/PnlBarSize",
+   "parent": 11,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     157.5,
+     -104.25
+    ],
+    "size": [
+     75.0,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     21.0,
+     -15.0
+    ],
+    "size": [
+     327.0,
+     27.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtLv",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/TxtLv",
+   "parent": 19,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     1.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     12.75,
+     18.0
+    ],
+    "size": [
+     47.00749969482422,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "<size=12>Lv.</size>90",
+    "size": 24.0,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 2,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     153
+    ]
+   }
+  },
+  {
+   "name": "PnlHpBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpBg",
+   "parent": 19,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     327.0,
+     21.75
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpPlayerBg.png",
+   "slice": [
+    31,
+    31,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlHpAdjust",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust",
+   "parent": 19,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -148.5,
+     0.0
+    ],
+    "size": [
+     297.0,
+     27.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/PnlHp",
+   "parent": 22,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     27.0
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BarHpNor",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/PnlHp/BarHpNor",
+   "parent": 23,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     -12.75
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    240,
+    240,
+    240,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpPlayerBar.png",
+   "slice": [
+    10,
+    10,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlHpAddtion",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/PnlHp/PnlHpAddtion",
+   "parent": 23,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtHpNum",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/TxtHpNum",
+   "parent": 22,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -0.7499999105930328
+    ],
+    "size": [
+     297.0,
+     27.0
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "16276/16276",
+    "size": 18.0,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   }
+  },
+  {
+   "name": "PnlMask",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/TxtHpNum/PnlMask",
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtNumMask",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/FightRoleHp/PnlHp/PnlHpAdjust/TxtHpNum/PnlMask/TxtNumMask",
+   "parent": 27,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    61,
+    61,
+    61,
+    255
+   ],
+   "text": {
+    "text": "16276/16276",
+    "size": 18.0,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   }
+  },
+  {
+   "name": "UiItem_Mission",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     8.25,
+     -271.77079010009766
+    ],
+    "size": [
+     495.0,
+     93.75
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset",
+   "parent": 29,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     -19.5,
+     -46.875
+    ],
+    "size": [
+     495.0,
+     93.75
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout",
+   "parent": 30,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     569.25,
+     129.0224962234497
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_MissionNormal",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal",
+   "parent": 31,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     0.0
+    ],
+    "size": [
+     531.75,
+     129.0224962234497
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlProcess",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess",
+   "parent": 32,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     531.75,
+     129.0224962234497
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlIcon",
+   "parent": 33,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     22.5,
+     -22.5
+    ],
+    "size": [
+     45.0,
+     45.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlIcon/SprIcon",
+   "parent": 34,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.5,
+     1.0
+    ],
+    "max": [
+     0.5,
+     1.0
+    ],
+    "pos": [
+     -4.425000133778667e-05,
+     14.25
+    ],
+    "size": [
+     60.0,
+     60.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_IconMap_Task_01_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlInfo",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo",
+   "parent": 33,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     291.75,
+     -64.51124811172485
+    ],
+    "size": [
+     480.0,
+     129.0224962234497
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlTitle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlTitle",
+   "parent": 36,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     480.0,
+     43.5074987411499
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.000000238418579
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtTitle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlTitle/TxtTitle",
+   "parent": 37,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     -2.7711166694643907e-13,
+     0.0
+    ],
+    "size": [
+     480.0,
+     33.0074987411499
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "苦昼夜短（三）",
+    "size": 33.0,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     51
+    ]
+   }
+  },
+  {
+   "name": "PnlParent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent",
+   "parent": 36,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -60.0074987411499
+    ],
+    "size": [
+     480.0,
+     69.0149974822998
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.000000238418579
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlSubTitle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle",
+   "parent": 39,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     240.0,
+     -34.5074987411499
+    ],
+    "size": [
+     480.0,
+     69.0149974822998
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtParent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/TxtParent",
+   "parent": 40,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     480.0,
+     28.507498741149902
+    ]
+   },
+   "scale": [
+    1.0000005960464478,
+    1.0000005960464478
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "和景燃聊聊",
+    "size": 28.5,
+    "hAlign": "Left",
+    "vAlign": "Top",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     51
+    ]
+   }
+  },
+  {
+   "name": "PnlChild",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild",
+   "parent": 40,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     190.5,
+     -45.0074987411499
+    ],
+    "size": [
+     381.0,
+     24.007498741149902
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.000000238418579
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChild",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild",
+   "parent": 42,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     190.5,
+     0.0
+    ],
+    "size": [
+     381.0,
+     24.007498741149902
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.000000238418579
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChildAdjust",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust",
+   "parent": 43,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     -42.0,
+     0.0
+    ],
+    "size": [
+     486.0,
+     28.507498741149902
+    ]
+   },
+   "scale": [
+    0.9999997615814209,
+    0.9999997615814209
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChild",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust/PnlChild",
+   "parent": 44,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -14.253749370574951
+    ],
+    "size": [
+     486.0,
+     28.507498741149902
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust/PnlChild/PnlLayout",
+   "parent": 45,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     154.5,
+     -14.253749370574951
+    ],
+    "size": [
+     309.0,
+     28.507498741149902
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtChild",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust/PnlChild/PnlLayout/TxtChild",
+   "parent": 46,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     309.0,
+     24.007498741149902
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    240,
+    200,
+    90,
+    255
+   ],
+   "text": {
+    "text": "请前往玄幽东岳",
+    "size": 24.0,
+    "hAlign": "Left",
+    "vAlign": "Top",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     51
+    ]
+   }
+  },
+  {
+   "name": "PnlBar",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust/PnlChild/PnlLayout/PnlBar",
+   "parent": 46,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -28.507498741149902
+    ],
+    "size": [
+     309.0,
+     0.0
+    ]
+   },
+   "scale": [
+    0.9999995231628418,
+    0.9999995231628418
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtChildDistance",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UiItem_Mission/PnlOffset/PnlLayout/UiItem_MissionNormal/PnlProcess/PnlInfo/PnlParent/PnlSubTitle/PnlChild/PnlChild/PnlChildAdjust/PnlChild/TxtChildDistance",
+   "parent": 45,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     336.0,
+     -24.007498741149902
+    ],
+    "size": [
+     150.0,
+     24.007498741149902
+    ]
+   },
+   "scale": [
+    1.0000003576278687,
+    1.0000003576278687
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    209,
+    47,
+    255
+   ],
+   "text": {
+    "text": "",
+    "size": 24.0,
+    "hAlign": "Left",
+    "vAlign": "Top",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     51
+    ]
+   }
+  },
+  {
+   "name": "PnlTop",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -0.0421142578125
+    ],
+    "size": [
+     0.0,
+     431.5301055908203
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_MiniMap",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     21.0,
+     -12.749998569488525
+    ],
+    "size": [
+     273.0,
+     273.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "SprBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/SprBg",
+   "parent": 51,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.00018310546875
+    ],
+    "size": [
+     273.0,
+     273.0
+    ]
+   },
+   "scale": [
+    1.100000023841858,
+    1.100000023841858
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_Fight_Map_Bg.png",
+   "slice": null
+  },
+  {
+   "name": "SprBg_1",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/SprBg#1",
+   "parent": 51,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.00018310546875
+    ],
+    "size": [
+     240.0,
+     240.0
+    ]
+   },
+   "scale": [
+    1.100000023841858,
+    1.100000023841858
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_Fight_Map_Cricle.png",
+   "slice": null
+  },
+  {
+   "name": "PnlMap",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/PnlMap",
+   "parent": 51,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0013275146484375
+    ],
+    "size": [
+     345.0,
+     345.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlMiniMap",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/PnlMap/PnlMiniMap",
+   "parent": 54,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprPlayerSign",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/PnlMap/SprPlayerSign",
+   "parent": 54,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.75,
+     -0.7494272589683533
+    ],
+    "size": [
+     144.0,
+     115.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightMapMiniView.png",
+   "slice": null
+  },
+  {
+   "name": "PnlPlayer",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/PnlMap/PnlPlayer",
+   "parent": 54,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprPlayerIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/UiItem_MiniMap/PnlMap/PnlPlayer/SprPlayerIcon",
+   "parent": 57,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.75,
+     0.0
+    ],
+    "size": [
+     78.75,
+     84.75
+    ]
+   },
+   "scale": [
+    0.8500003218650818,
+    0.8500003218650818
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightMapPlayer1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlTopRight",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.003204345703125
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "ButtonR",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR",
+   "parent": 59,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     1.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -150.0,
+     163.49953079223633
+    ],
+    "size": [
+     525.0,
+     75.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlLevelSeqBtnRoot",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/PnlLevelSeqBtnRoot",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -39.0
+    ],
+    "size": [
+     0.0,
+     78.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "BtnFightEnter3_1",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#1",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     67.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#1/PnlOffset",
+   "parent": 62,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#1/PnlOffset/SprEnterIcon",
+   "parent": 63,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconActivity1.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3_3",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#3",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     172.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#3/PnlOffset",
+   "parent": 65,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#3/PnlOffset/SprEnterIcon",
+   "parent": 66,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconGuide.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3_4",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#4",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     277.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#4/PnlOffset",
+   "parent": 68,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#4/PnlOffset/SprEnterIcon",
+   "parent": 69,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconDrawcard.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3_5",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#5",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     382.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#5/PnlOffset",
+   "parent": 71,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/BtnFightEnter3#5/PnlOffset/SprEnterIcon",
+   "parent": 72,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconBP.png",
+   "slice": null
+  },
+  {
+   "name": "GongmingButton",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/GongmingButton",
+   "parent": 60,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     487.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/GongmingButton/PnlOffset",
+   "parent": 74,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/ButtonR/GongmingButton/PnlOffset/SprEnterIcon",
+   "parent": 75,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconResonance.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/BtnFightEnter3",
+   "parent": 59,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     1.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -87.0,
+     163.49953079223633
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/BtnFightEnter3/PnlOffset",
+   "parent": 77,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/BtnFightEnter3/PnlOffset/SprEnterIcon",
+   "parent": 78,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconHome.png",
+   "slice": null
+  },
+  {
+   "name": "SprHomeBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlTopRight/BtnFightEnter3/SprHomeBg",
+   "parent": 77,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -4.3655745685100555e-10
+    ],
+    "size": [
+     121.5,
+     121.5
+    ]
+   },
+   "scale": [
+    1.25,
+    1.25
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnterBg.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOnline",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlOnline",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     33.34332275390625,
+     164.1379165649414
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BtnFightEnter3",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlOnline/BtnFightEnter3",
+   "parent": 81,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     45.0,
+     -45.0
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlOnline/BtnFightEnter3/PnlOffset",
+   "parent": 82,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlOnline/BtnFightEnter3/PnlOffset/SprEnterIcon",
+   "parent": 83,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconOnline.png",
+   "slice": null
+  },
+  {
+   "name": "ButtonL",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     202.5,
+     -14.999998569488525
+    ],
+    "size": [
+     247.5,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BtnFightEnter3",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3",
+   "parent": 85,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3/PnlOffset",
+   "parent": 86,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3/PnlOffset/SprEnterIcon",
+   "parent": 87,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconTeam.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3_1",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3#1",
+   "parent": 85,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     123.75,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3#1/PnlOffset",
+   "parent": 89,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnter3#1/PnlOffset/SprEnterIcon",
+   "parent": 90,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconBag.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnterPhone",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnterPhone",
+   "parent": 85,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     210.0,
+     -37.5
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnterPhone/PnlOffset",
+   "parent": 92,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/ButtonL/BtnFightEnterPhone/PnlOffset/SprEnterIcon",
+   "parent": 93,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconPhoneSystem.png",
+   "slice": null
+  },
+  {
+   "name": "BtnFightEnter3_1",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/BtnFightEnter3#1",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     33.34332275390625,
+     -14.249404907226562
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/BtnFightEnter3#1/PnlOffset",
+   "parent": 95,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.2351741790771484e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprEnterIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/BtnFightEnter3#1/PnlOffset/SprEnterIcon",
+   "parent": 96,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     66.0,
+     66.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightIconQuest.png",
+   "slice": null
+  },
+  {
+   "name": "PnlAph",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlTop/PnlAph",
+   "parent": 50,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     1.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     -87.0,
+     -51.75041198730469
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.0
+    ],
+    "min": [
+     1.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     0.0
+    ],
+    "pos": [
+     -64.5,
+     25.502975463867188
+    ],
+    "size": [
+     802.5,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlSkillFirst",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst",
+   "parent": 99,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.0
+    ],
+    "min": [
+     1.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     0.0
+    ],
+    "pos": [
+     0.0,
+     5.7220458984375e-06
+    ],
+    "size": [
+     583.5,
+     153.75
+    ]
+   },
+   "scale": [
+    0.8999999761581421,
+    0.8999999761581421
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    132,
+    162,
+    245,
+    246,
+    247,
+    248
+   ]
+  },
+  {
+   "name": "PnlControl",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl",
+   "parent": 100,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     78.75,
+     -56.25
+    ],
+    "size": [
+     157.5,
+     112.5
+    ]
+   },
+   "scale": [
+    0.7200000286102295,
+    0.7200000286102295
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_BtnControl",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl",
+   "parent": 101,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     153.0,
+     -56.25
+    ],
+    "size": [
+     90.0,
+     112.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "BtnControl",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl",
+   "parent": 102,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -10.5
+    ],
+    "size": [
+     112.5,
+     112.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/SprBg",
+   "parent": 103,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightDitu.png",
+   "slice": null
+  },
+  {
+   "name": "SprIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/SprIcon",
+   "parent": 103,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     60.0,
+     60.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    230
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_IconLock.png",
+   "slice": null
+  },
+  {
+   "name": "UiItem_HotKeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine",
+   "parent": 103,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -49.5
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey",
+   "parent": 106,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHotkey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey",
+   "parent": 107,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Icon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon",
+   "parent": 108,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_MouseMiddle_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOperate",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate",
+   "parent": 109,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate/TexArrow",
+   "parent": 110,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     17.9999041557312
+    ],
+    "size": [
+     15.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_PcArrow.png",
+   "slice": null
+  },
+  {
+   "name": "PnlArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PnlControl/PC_BtnControl/BtnControl/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlArrow",
+   "parent": 109,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightSkill_2",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2",
+   "parent": 100,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     219.0,
+     -56.25
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "FightSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill",
+   "parent": 113,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -8.940696716308594e-08
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlAdapt",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt",
+   "parent": 114,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.5780240636995586e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprSkillBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/SprSkillBg",
+   "parent": 115,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     25.5,
+     25.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_SkillBg.png",
+   "slice": null
+  },
+  {
+   "name": "SprSkillIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/SprSkillIcon",
+   "parent": 115,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_00.png",
+   "slice": null
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlEffect",
+   "parent": 115,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlContent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlContent",
+   "parent": 115,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlVLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout",
+   "parent": 115,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -42.75
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine",
+   "parent": 120,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey",
+   "parent": 121,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHotkey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey",
+   "parent": 122,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Icon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon",
+   "parent": 123,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_KeyT_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOperate",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate",
+   "parent": 124,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate/TexArrow",
+   "parent": 125,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     17.9999041557312
+    ],
+    "size": [
+     15.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_PcArrow.png",
+   "slice": null
+  },
+  {
+   "name": "PnlArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlArrow",
+   "parent": 124,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightSkill_3",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3",
+   "parent": 100,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     325.5,
+     -56.25
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "FightSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill",
+   "parent": 128,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -8.940696716308594e-08
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlAdapt",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt",
+   "parent": 129,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.5780240636995586e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprSkillBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/SprSkillBg",
+   "parent": 130,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     25.5,
+     25.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_SkillBg.png",
+   "slice": null
+  },
+  {
+   "name": "SprSkillIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/SprSkillIcon",
+   "parent": 130,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_01.png",
+   "slice": null
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlEffect",
+   "parent": 130,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlContent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlContent",
+   "parent": 130,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlVLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout",
+   "parent": 130,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -42.75
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine",
+   "parent": 135,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey",
+   "parent": 136,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHotkey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey",
+   "parent": 137,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Icon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon",
+   "parent": 138,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_KeyE_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOperate",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate",
+   "parent": 139,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate/TexArrow",
+   "parent": 140,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     17.9999041557312
+    ],
+    "size": [
+     15.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_PcArrow.png",
+   "slice": null
+  },
+  {
+   "name": "PnlArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlArrow",
+   "parent": 139,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightSkill_4",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4",
+   "parent": 100,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     432.0,
+     -56.25
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "FightSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill",
+   "parent": 143,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -8.940696716308594e-08
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlAdapt",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt",
+   "parent": 144,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.5780240636995586e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprSkillBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/SprSkillBg",
+   "parent": 145,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     25.5,
+     25.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_SkillBg.png",
+   "slice": null
+  },
+  {
+   "name": "SprSkillIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/SprSkillIcon",
+   "parent": 145,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_02.png",
+   "slice": null
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlEffect",
+   "parent": 145,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlContent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlContent",
+   "parent": 145,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlVLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout",
+   "parent": 145,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -42.75
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine",
+   "parent": 150,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey",
+   "parent": 151,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHotkey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey",
+   "parent": 152,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Icon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon",
+   "parent": 153,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_KeyQ_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOperate",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate",
+   "parent": 154,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate/TexArrow",
+   "parent": 155,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     17.9999041557312
+    ],
+    "size": [
+     15.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_PcArrow.png",
+   "slice": null
+  },
+  {
+   "name": "PnlArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlArrow",
+   "parent": 154,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightSkill_5",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5",
+   "parent": 100,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     538.5,
+     -56.25
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "FightSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill",
+   "parent": 158,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -8.940696716308594e-08
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlAdapt",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt",
+   "parent": 159,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.5780240636995586e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprSkillBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/SprSkillBg",
+   "parent": 160,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     25.5,
+     25.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_SkillBg.png",
+   "slice": null
+  },
+  {
+   "name": "SprSkillIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/SprSkillIcon",
+   "parent": 160,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_05.png",
+   "slice": null
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlEffect",
+   "parent": 160,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlContent",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlContent",
+   "parent": 160,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlVLayout",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout",
+   "parent": 160,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -42.75
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine",
+   "parent": 165,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     37.5,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_HotKey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey",
+   "parent": 166,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHotkey",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey",
+   "parent": 167,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Icon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon",
+   "parent": 168,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_KeyR_UI.png",
+   "slice": null
+  },
+  {
+   "name": "PnlOperate",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate",
+   "parent": 169,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlOperate/TexArrow",
+   "parent": 170,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     17.9999041557312
+    ],
+    "size": [
+     15.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_PcArrow.png",
+   "slice": null
+  },
+  {
+   "name": "PnlArrow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlVLayout/UiItem_HotKeyCombine/UiItem_HotKey/PnlHotkey/Icon/PnlArrow",
+   "parent": 169,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.576278260197796e-07
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlSkillSecond",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillSecond",
+   "parent": 99,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.0
+    ],
+    "min": [
+     1.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     0.0
+    ],
+    "pos": [
+     0.0,
+     132.0
+    ],
+    "size": [
+     90.0,
+     132.0
+    ]
+   },
+   "scale": [
+    0.8999999761581421,
+    0.8999999761581421
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightSkill",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillSecond/PC_FightSkill",
+   "parent": 173,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     45.0,
+     -45.0
+    ],
+    "size": [
+     90.0,
+     90.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     1.0
+    ],
+    "min": [
+     1.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     -42.74993133544922,
+     -201.78817749023438
+    ],
+    "size": [
+     304.74080657958984,
+     246.06861877441406
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PC_FightRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead",
+   "parent": 175,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     214.74080657958984,
+     -63.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true,
+   "registry": [
+    176,
+    183,
+    187,
+    239,
+    180
+   ]
+  },
+  {
+   "name": "FightRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead",
+   "parent": 176,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     127.5,
+     -63.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect",
+   "parent": 177,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -20.248088836669922,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChoose",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect/PnlChoose",
+   "parent": 178,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     3.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprCircle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect/PnlChoose/SprCircle",
+   "parent": 179,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseC.png",
+   "slice": null
+  },
+  {
+   "name": "SprRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect/PnlChoose/SprRing",
+   "parent": 179,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     114.0,
+     114.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseD.png",
+   "slice": null
+  },
+  {
+   "name": "SprGlow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect/PnlChoose/SprGlow",
+   "parent": 179,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     129.0,
+     129.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseE.png",
+   "slice": null
+  },
+  {
+   "name": "TexRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/TexRoleHead",
+   "parent": 177,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     96.0,
+     96.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconRoleHead150_1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlCanvas",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas",
+   "parent": 177,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas/PnlHp",
+   "parent": 184,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -13.5,
+     -45.75
+    ],
+    "size": [
+     97.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprHpBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas/PnlHp/SprHpBg",
+   "parent": 185,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     108.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    0.9999997615814209
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBgA.png",
+   "slice": [
+    12,
+    12,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarHpNor",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas/PnlHp/BarHpNor",
+   "parent": 185,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.6000000089406967
+    ],
+    "size": [
+     100.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBar.png",
+   "slice": [
+    15,
+    15,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlAddtion",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas/PnlAddtion",
+   "parent": 184,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlGuide",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlGuide",
+   "parent": 177,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     150.0,
+     120.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/UiItem_KeyCombine",
+   "parent": 177,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     28.217193603515625,
+     38.99918746948242
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyItem",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem",
+   "parent": 190,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexKeyIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon",
+   "parent": 191,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_Empty.png",
+   "slice": null
+  },
+  {
+   "name": "PC_FightRoleHead_1",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1",
+   "parent": 175,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     214.74080657958984,
+     -228.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true,
+   "registry": [
+    193,
+    200,
+    204,
+    240,
+    197
+   ]
+  },
+  {
+   "name": "FightRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead",
+   "parent": 193,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     127.5,
+     -63.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect",
+   "parent": 194,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -20.248088836669922,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChoose",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect/PnlChoose",
+   "parent": 195,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     3.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprCircle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect/PnlChoose/SprCircle",
+   "parent": 196,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseC.png",
+   "slice": null
+  },
+  {
+   "name": "SprRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect/PnlChoose/SprRing",
+   "parent": 196,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     114.0,
+     114.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseD.png",
+   "slice": null
+  },
+  {
+   "name": "SprGlow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect/PnlChoose/SprGlow",
+   "parent": 196,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     129.0,
+     129.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseE.png",
+   "slice": null
+  },
+  {
+   "name": "TexRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/TexRoleHead",
+   "parent": 194,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     96.0,
+     96.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconRoleHead150_1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlCanvas",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas",
+   "parent": 194,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas/PnlHp",
+   "parent": 201,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -13.5,
+     -45.75
+    ],
+    "size": [
+     97.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprHpBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas/PnlHp/SprHpBg",
+   "parent": 202,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     108.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    0.9999997615814209
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBgA.png",
+   "slice": [
+    12,
+    12,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarHpNor",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas/PnlHp/BarHpNor",
+   "parent": 202,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.6000000089406967
+    ],
+    "size": [
+     100.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBar.png",
+   "slice": [
+    15,
+    15,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlAddtion",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas/PnlAddtion",
+   "parent": 201,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlGuide",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlGuide",
+   "parent": 194,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     150.0,
+     120.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/UiItem_KeyCombine",
+   "parent": 194,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     28.217193603515625,
+     38.99918746948242
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyItem",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem",
+   "parent": 207,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexKeyIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon",
+   "parent": 208,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_Empty.png",
+   "slice": null
+  },
+  {
+   "name": "PC_FightRoleHead_2",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2",
+   "parent": 175,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     214.74080657958984,
+     -393.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true,
+   "registry": [
+    210,
+    217,
+    221,
+    241,
+    214
+   ]
+  },
+  {
+   "name": "FightRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead",
+   "parent": 210,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     127.5,
+     -63.75
+    ],
+    "size": [
+     255.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlEffect",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect",
+   "parent": 211,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -20.248088836669922,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChoose",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect/PnlChoose",
+   "parent": 212,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     3.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprCircle",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect/PnlChoose/SprCircle",
+   "parent": 213,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     105.0,
+     105.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseC.png",
+   "slice": null
+  },
+  {
+   "name": "SprRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect/PnlChoose/SprRing",
+   "parent": 213,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     114.0,
+     114.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseD.png",
+   "slice": null
+  },
+  {
+   "name": "SprGlow",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect/PnlChoose/SprGlow",
+   "parent": 213,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     6.75,
+     0.0
+    ],
+    "size": [
+     129.0,
+     129.0
+    ]
+   },
+   "scale": [
+    0.9999998807907104,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_FightHeadChooseE.png",
+   "slice": null
+  },
+  {
+   "name": "TexRoleHead",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/TexRoleHead",
+   "parent": 211,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     96.0,
+     96.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconRoleHead150_1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlCanvas",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas",
+   "parent": 211,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHp",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas/PnlHp",
+   "parent": 218,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -13.5,
+     -45.75
+    ],
+    "size": [
+     97.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprHpBg",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas/PnlHp/SprHpBg",
+   "parent": 219,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     108.0,
+     12.0
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    0.9999997615814209
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBgA.png",
+   "slice": [
+    12,
+    12,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarHpNor",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas/PnlHp/BarHpNor",
+   "parent": 219,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.6000000089406967
+    ],
+    "size": [
+     100.5,
+     6.75
+    ]
+   },
+   "scale": [
+    1.000000238418579,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpHeadBar.png",
+   "slice": [
+    15,
+    15,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlAddtion",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas/PnlAddtion",
+   "parent": 218,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlGuide",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlGuide",
+   "parent": 211,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -14.25,
+     4.5
+    ],
+    "size": [
+     150.0,
+     120.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyCombine",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/UiItem_KeyCombine",
+   "parent": 211,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     28.217193603515625,
+     38.99918746948242
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiItem_KeyItem",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem",
+   "parent": 224,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexKeyIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon",
+   "parent": 225,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     24.0,
+     -24.0
+    ],
+    "size": [
+     48.0,
+     48.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_IconPcBtn_Empty.png",
+   "slice": null
+  },
+  {
+   "name": "PnlPosition",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Top",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/Top",
+   "parent": 227,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     1.0
+    ],
+    "max": [
+     0.5,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -0.0016937255859375
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UITextActor479",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/Top/UITextActor479",
+   "parent": 228,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -225.0
+    ],
+    "size": [
+     1125.0,
+     0.007499999832361937
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    229,
+    56,
+    255
+   ],
+   "text": {
+    "text": "",
+    "size": 13.5,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   }
+  },
+  {
+   "name": "PnlPos",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/PnlPos",
+   "parent": 227,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.0
+    ],
+    "pos": [
+     0.0,
+     0.0016937255859375
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtPosition",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/PnlPos/TxtPosition",
+   "parent": 230,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.0
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.0
+    ],
+    "pos": [
+     187.5,
+     67.5
+    ],
+    "size": [
+     900.0,
+     22.507500171661377
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "text": {
+    "text": "",
+    "size": 22.5,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   }
+  },
+  {
+   "name": "PnlInfo",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/PnlPos/PnlInfo",
+   "parent": 230,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.0
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.0
+    ],
+    "pos": [
+     78.0,
+     42.0
+    ],
+    "size": [
+     570.0150146484375,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtPos",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/PnlPos/PnlInfo/TxtPos",
+   "parent": 232,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -10.5
+    ],
+    "size": [
+     277.50750732421875,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    51
+   ],
+   "text": {
+    "text": "",
+    "size": 21.0,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     127
+    ]
+   }
+  },
+  {
+   "name": "TxtTime",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlPosition/PnlPos/PnlInfo/TxtTime",
+   "parent": 232,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     292.50750732421875,
+     -10.5
+    ],
+    "size": [
+     277.50750732421875,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    51
+   ],
+   "text": {
+    "text": "",
+    "size": 21.0,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     127
+    ]
+   }
+  },
+  {
+   "name": "UIContainerActor549",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/UIContainerActor549",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     0.0
+    ],
+    "pos": [
+     0.0,
+     540.0
+    ],
+    "size": [
+     0.0,
+     1080.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChat",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlChat",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.0
+    ],
+    "pos": [
+     55.5,
+     55.51194763183594
+    ],
+    "size": [
+     60.0,
+     60.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BtnFightChat",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlChat/BtnFightChat",
+   "parent": 236,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -8.731149137020111e-11
+    ],
+    "size": [
+     81.0,
+     81.0
+    ]
+   },
+   "scale": [
+    0.699999988079071,
+    0.699999988079071
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "button": true
+  },
+  {
+   "name": "SprChatIcon",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlChat/BtnFightChat/SprChatIcon",
+   "parent": 237,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     52.5,
+     45.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ChatIcon.png",
+   "slice": null
+  },
+  {
+   "name": "Number",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number",
+   "parent": 192,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0,
+     0
+    ],
+    "max": [
+     1,
+     1
+    ],
+    "pos": [
+     0,
+     0
+    ],
+    "size": [
+     0,
+     0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "1",
+    "size": 22.5,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "Number",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number",
+   "parent": 209,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0,
+     0
+    ],
+    "max": [
+     1,
+     1
+    ],
+    "pos": [
+     0,
+     0
+    ],
+    "size": [
+     0,
+     0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "1",
+    "size": 22.5,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "Number",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number",
+   "parent": 226,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0,
+     0
+    ],
+    "max": [
+     1,
+     1
+    ],
+    "pos": [
+     0,
+     0
+    ],
+    "size": [
+     0,
+     0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "1",
+    "size": 22.5,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "HUD_NetworkPing",
+   "path": "/PC_UiView_Fight_Prefab/HUD_NetworkPing",
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1,
+     0.5
+    ],
+    "min": [
+     1,
+     1
+    ],
+    "max": [
+     1,
+     1
+    ],
+    "pos": [
+     -45.0,
+     -93.75
+    ],
+    "size": [
+     127.5,
+     30.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Signal",
+   "path": "/PC_UiView_Fight_Prefab/HUD_NetworkPing/Signal",
+   "parent": 242,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0,
+     0.5
+    ],
+    "min": [
+     0,
+     0.5
+    ],
+    "max": [
+     0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     22.5,
+     22.5
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Textures/T_HUD_Signal_2.png",
+   "slice": null
+  },
+  {
+   "name": "Ping",
+   "path": "/PC_UiView_Fight_Prefab/HUD_NetworkPing/Ping",
+   "parent": 242,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0,
+     0.5
+    ],
+    "min": [
+     0,
+     0.5
+    ],
+    "max": [
+     0,
+     0.5
+    ],
+    "pos": [
+     30.0,
+     0.0
+    ],
+    "size": [
+     97.5,
+     30.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    250,
+    205,
+    80,
+    255
+   ],
+   "text": {
+    "text": "152ms",
+    "size": 22.5,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "name": "ClickRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlEffect/ClickRing",
+   "parent": 118,
+   "type": "Niagara",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "niagara": {
+    "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+    "scale": 1.5
+   }
+  },
+  {
+   "name": "ClickRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlEffect/ClickRing",
+   "parent": 133,
+   "type": "Niagara",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "niagara": {
+    "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+    "scale": 1.5
+   }
+  },
+  {
+   "name": "ClickRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlEffect/ClickRing",
+   "parent": 148,
+   "type": "Niagara",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "niagara": {
+    "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+    "scale": 1.5
+   }
+  },
+  {
+   "name": "ClickRing",
+   "path": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlEffect/ClickRing",
+   "parent": 163,
+   "type": "Niagara",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1,
+    1
+   ],
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "niagara": {
+    "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+    "scale": 1.5
+   }
+  }
+ ]
+}

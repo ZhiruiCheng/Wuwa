@@ -1,0 +1,1533 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鸣潮复刻系统地图</title>
+<style>
+:root{
+  --bg:#f6f5f1; --card:#ffffff; --ink:#1d1f23; --muted:#5d636d; --line:#dcd9d1; --soft:#ecebe6;
+  --accent:#d24b2a; --accent-ink:#ffffff; --wire:#9aa0a8; --wire-on:#d24b2a; --panel:#ffffff; --shadow:0 1px 2px rgba(0,0,0,.06),0 4px 14px rgba(0,0,0,.05);
+  --k-cpp:#2f6fde; --k-cs:#8a4fd8; --k-asset:#b8730c; --k-tool:#1f8f5a; --k-ue:#5b6573; --k-orig:#c2410c; --k-step:#0e7490; --k-concept:#b0306a; --k-learn:#8b5e34; --code:#f3f1ea;
+  --devbg:#fff4e6; --devline:#f2c48d;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a; --card:#1e2125; --ink:#e9eaec; --muted:#a2a8b1; --line:#33373d; --soft:#25292e;
+    --accent:#ff7a52; --accent-ink:#1a0d08; --wire:#5f666f; --wire-on:#ff7a52; --panel:#1b1e22; --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+    --k-cpp:#6ea0ff; --k-cs:#b590ff; --k-asset:#f0b04a; --k-tool:#5fd19a; --k-ue:#a3adba; --k-orig:#ff8a5c; --k-step:#4cc9e0; --k-concept:#f472b6; --k-learn:#d6a77a; --code:#111316;
+    --devbg:#2b2117; --devline:#6b4a25;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a; --card:#1e2125; --ink:#e9eaec; --muted:#a2a8b1; --line:#33373d; --soft:#25292e;
+  --accent:#ff7a52; --accent-ink:#1a0d08; --wire:#5f666f; --wire-on:#ff7a52; --panel:#1b1e22; --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
+  --k-cpp:#6ea0ff; --k-cs:#b590ff; --k-asset:#f0b04a; --k-tool:#5fd19a; --k-ue:#a3adba; --k-orig:#ff8a5c; --k-step:#4cc9e0; --k-concept:#f472b6; --k-learn:#d6a77a; --code:#111316;
+  --devbg:#2b2117; --devline:#6b4a25;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:14px/1.6 "PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px;}
+code,.mono,pre{font-family:"Cascadia Code",Consolas,"SF Mono",monospace;font-size:12px;font-variant-ligatures:none;font-feature-settings:"calt" 0,"liga" 0}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+  padding:10px max(16px,env(safe-area-inset-left));display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.brand{font-weight:700;font-size:15px;white-space:nowrap}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:2px;flex:1;min-width:0}
+.crumbs button{border:0;background:none;color:var(--muted);font:inherit;padding:2px 6px;border-radius:6px;cursor:pointer}
+.crumbs button:hover{background:var(--soft);color:var(--ink)}
+.crumbs button.cur{color:var(--ink);font-weight:600;cursor:default;background:none}
+.crumbs .sep{color:var(--line)}
+.hbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:13px;padding:4px 10px;border-radius:8px;cursor:pointer}
+.hbtn:hover{border-color:var(--accent)}
+main{padding:18px max(16px,env(safe-area-inset-left)) 60px;max-width:1280px;margin:0 auto}
+.head{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);margin-bottom:18px}
+.head h1{margin:0 0 4px;font-size:20px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.head .intro{margin:0;color:var(--ink)}
+.head .how{margin:8px 0 0;color:var(--muted);font-size:13px}
+.head details{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+.head summary{cursor:pointer;color:var(--accent);font-size:13px}
+.backbtn{border:1px solid var(--line);background:var(--soft);color:var(--ink);border-radius:8px;font:inherit;font-size:12px;padding:2px 8px;cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin:0 0 14px;font-size:12px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.board{position:relative;padding:4px 0 10px}
+.row{position:relative;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;margin-bottom:58px}
+.row:last-child{margin-bottom:8px}
+.rlabel{font-size:12px;color:var(--muted);text-align:right;line-height:1.3;border-right:2px solid var(--line);padding-right:10px;align-self:stretch;display:flex;align-items:center;justify-content:flex-end}
+.nodes{display:flex;flex-wrap:wrap;gap:22px 26px;justify-content:center;position:relative;z-index:2}
+.card{position:relative;width:212px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--kc);border-radius:10px;padding:9px 12px 10px;
+  box-shadow:var(--shadow);cursor:pointer;transition:transform .12s,border-color .12s;text-align:left;font:inherit;color:inherit}
+.card:hover,.card.sel{transform:translateY(-2px);border-color:var(--kc)}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.card .kind{font-size:11px;color:var(--kc);font-weight:600;letter-spacing:.02em}
+.card .name{font-weight:700;font-size:14px;line-height:1.35;margin:1px 0 3px;word-break:break-word}
+.card .what{font-size:12.5px;color:var(--muted);line-height:1.45}
+.card .drill{margin-top:7px;display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;color:var(--accent-ink);background:var(--accent);border-radius:999px;padding:1px 9px}
+.card .info{margin-top:7px;font-size:12px;color:var(--muted)}
+.card.wide{width:300px}
+svg.wires{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;overflow:visible}
+.wires path{fill:none;stroke:var(--wire);stroke-width:1.4}
+.wires path.on{stroke:var(--wire-on);stroke-width:2.2}
+.wires path.dim,.wires text.dim{opacity:.18}
+.wires text{font-size:11px;fill:var(--muted);paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.wires text.on{fill:var(--wire-on);font-weight:600}
+.wires .mk{fill:var(--wire)} .wires .mkon{fill:var(--wire-on)}
+.wires path.back{stroke-dasharray:5 4}
+.wires text.hid{opacity:0} .wires text.hid.on{opacity:1}
+aside{position:fixed;top:0;right:0;height:100%;width:min(600px,100%);background:var(--panel);border-left:1px solid var(--line);z-index:40;
+  transform:translateX(105%);transition:transform .2s;display:flex;flex-direction:column;box-shadow:-8px 0 30px rgba(0,0,0,.12)}
+aside.open{transform:none}
+.ptop{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 10px;border-bottom:1px solid var(--line)}
+.ptop h2{margin:0;font-size:17px;flex:1;line-height:1.4}
+.ptop .x{border:0;background:var(--soft);color:var(--ink);width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:16px;flex:none}
+.pbody{overflow:auto;padding:12px 16px 30px}
+.pbody h3{font-size:13px;margin:16px 0 6px;color:var(--muted);font-weight:600}
+.pbody p{margin:0 0 8px}
+.pbody ul{margin:0 0 8px;padding-left:18px}
+.pbody li{margin:3px 0}
+.kchip{display:inline-block;font-size:11px;font-weight:600;color:var(--kc);border:1px solid var(--kc);border-radius:999px;padding:0 8px;margin-bottom:6px}
+.files code{display:block;background:var(--soft);border-radius:6px;padding:4px 8px;margin:4px 0;word-break:break-all}
+.dev{background:var(--devbg);border:1px solid var(--devline);border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px}
+.dev b{color:var(--accent)}
+.deps li button{border:0;background:none;color:var(--accent);font:inherit;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.goin{display:block;width:100%;margin-top:12px;border:0;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;padding:9px;border-radius:10px;cursor:pointer}
+.pbody ol{margin:0 0 8px;padding-left:22px}
+.pbody ol li{margin:4px 0}
+.api{margin:0 0 8px}
+.api div{padding:5px 0;border-bottom:1px dashed var(--line)}
+.api code{display:inline-block;background:var(--soft);border-radius:5px;padding:1px 6px;margin-bottom:2px;word-break:break-all}
+.cb{margin:8px 0 12px;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.cb .ct{font-size:12px;color:var(--muted);background:var(--soft);padding:4px 10px;border-bottom:1px solid var(--line)}
+.cb pre{margin:0;padding:10px 12px;background:var(--code);overflow:auto;font:12px/1.55 "Cascadia Code",Consolas,"SF Mono",monospace;white-space:pre;tab-size:4}
+.cb ul{margin:6px 10px 8px;padding-left:16px;font-size:13px}
+.qa{border-left:3px solid var(--k-learn);background:var(--soft);border-radius:0 8px 8px 0;padding:7px 10px;margin:8px 0;font-size:13.5px}
+.qa .q{font-weight:700;margin-bottom:3px}
+.gl dt{font-weight:700;margin-top:10px}
+.gl dd{margin:2px 0 0;color:var(--ink)}
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.25);z-index:39;display:none}
+.scrim.open{display:block}
+@media (max-width:720px){
+  .row{grid-template-columns:1fr;gap:6px;margin-bottom:50px}
+  .rlabel{justify-content:flex-start;text-align:left;border-right:0;border-left:2px solid var(--line);padding:0 0 0 8px}
+  .card,.card.wide{width:100%}
+  .nodes{gap:30px}
+  aside{top:auto;bottom:0;height:78vh;width:100%;border-left:0;border-top:1px solid var(--line);border-radius:16px 16px 0 0;transform:translateY(105%)}
+  aside.open{transform:none}
+  .brand{width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">鸣潮复刻 · 系统地图</div>
+  <nav class="crumbs" id="crumbs" aria-label="层级"></nav>
+  <button class="hbtn" id="glossBtn">术语小词典</button>
+</header>
+<main>
+  <section class="head" id="head"></section>
+  <div class="legend" id="legend"></div>
+  <div class="board" id="board"></div>
+</main>
+<div class="scrim" id="scrim"></div>
+<aside id="panel" aria-live="polite">
+  <div class="ptop"><h2 id="ptitle"></h2><button class="x" id="pclose" aria-label="关闭">✕</button></div>
+  <div class="pbody" id="pbody"></div>
+</aside>
+
+<script>
+/* ---------- 种类 ---------- */
+const KINDS = {
+  group:  {t:'分层（可展开）', v:'--accent'},
+  cpp:    {t:'C++ 代码', v:'--k-cpp'},
+  cs:     {t:'C# 代码', v:'--k-cs'},
+  asset:  {t:'UE 资产 / 数据表', v:'--k-asset'},
+  tool:   {t:'工具 / 脚本 / Commandlet', v:'--k-tool'},
+  ue:     {t:'UE 引擎 / 插件', v:'--k-ue'},
+  orig:   {t:'原作资源', v:'--k-orig'},
+  step:   {t:'制作步骤', v:'--k-step'},
+  concept:{t:'概念讲解', v:'--k-concept'},
+  learn:  {t:'先学的技术', v:'--k-learn'}
+};
+
+/* ---------- 节点 ----------
+ k 种类  n 名字  w 一句话（是什么）  d 详细说明  f 代码/资产位置  dev 原作/改成  c 点进去的下一层 */
+const N = {};
+function node(id,k,n,w,o){ N[id]=Object.assign({id,k,n,w},o||{}); }
+
+/* ===== 第 0 层：整个项目 ===== */
+node('orig','orig','原作游戏文件','《鸣潮》客户端里打包好的资源和配置表，是一切数据的来源。',{
+  d:['原作也是 UE 做的（UE4），资源都封在 pak 包里：模型、动画、蒙太奇、Niagara 特效、UI 预制体、LevelSequence、音频事件，还有策划配置表（ConfigDB，flatbuffer 格式）。',
+     '项目原则：不凭猜测。技能时间点、伤害倍率、镜头关键帧这些数值都从原作数据里读出来，不靠肉眼估。'],
+  f:['Tools/PakExport（命令行版 FModel）','Tools/.../kuro_fb.py（解 ConfigDB 配置表）']});
+node('plugins','ue','引擎与第三方插件','UE 5.7 本体，加上 GAS、LGUI、UnrealSharp、Wwise 这几个大插件。',{
+  d:['GAS（Gameplay Ability System）：UE 自带的技能框架，项目的技能、buff、属性都建在它上面。',
+     'LGUI3：原作同款 UI 框架（用 Prefab 拼界面）。项目在 Plugins/LGUI 里打了本地补丁。',
+     'UnrealSharp：让 C# 能写 UE 游戏逻辑。项目里「裁决类」逻辑（选招、步态、运动状态、相机）写在 C#。',
+     'Wwise：原作同款音频中间件。'],
+  dev:'<b>原作</b> 游戏逻辑用 TypeScript（Puerts 插件）写 → <b>改成</b> C#（UnrealSharp），C++ 只做反射桥和性能敏感部分。'});
+node('pipeline','group','制作流程（在 UE 里怎么做）','拿到分析好的数据之后：特效、大招镜头、UI、技能在 UE 里分别怎么做、要先懂哪些技术。',{c:'pipeline'});
+node('codeg','group','代码精读：为什么这样写','反射、UPROPERTY 与垃圾回收、弱引用、软引用、委托、sealed、GAS 任务、编辑器 API……初学者看不懂的写法逐个讲。',{c:'code'});
+node('runtime','group','运行时系统','游戏跑起来时的所有系统：输入、角色、技能、战斗、相机、特效、UI……',{c:'runtime'});
+node('tests','group','测试与调试','自动化测试、屏幕调试开关、截图对照工具、Unreal MCP。',{c:'tests'});
+node('walk','group','导览：一次攻击的全过程','从「按下攻击键」到「屏幕上跳伤害数字」，按时间顺序走一遍各层。新手建议先看这个。',{c:'walk'});
+
+/* ===== 运行时总览 ===== */
+node('input','group','输入层','把键盘 / 手柄的按键翻译成「玩家想做什么」，再分发给对应系统。',{c:'input'});
+node('framework','group','控制器与游戏框架','GameMode、PlayerController、相机管理器、进入世界的加载流程。',{c:'framework'});
+node('formation','group','编队（切人）','3 人小队：管理谁在场、按 1/2/3 切换操控的角色。',{c:'formation'});
+node('character','group','角色层','角色本体：属性、能力系统组件、移动、运动状态、动画。',{c:'character'});
+node('skill','group','技能层','「出什么招、能不能出、出招时播什么动画、动画哪一帧做什么」。',{c:'skill'});
+node('combat','group','战斗层','子弹、伤害结算、受击、buff、阵营、锁定、时停。',{c:'combat'});
+node('camera','group','相机层','战斗跟随相机 + 大招特写镜头（Sequence）。',{c:'camera'});
+node('effect','group','特效层','统一的特效播放入口：Niagara、贴花、灯光、后处理、残影、材质变化……',{c:'effect'});
+node('audio','cpp','音频层（Wwise）','对 Wwise 的最小封装：按事件名播声音。',{
+  d:['UWuwaWwiseAudio 对应原作 AudioSystem.PostEvent / ExecuteAction 的用法：给一个事件路径，在某个 Actor 上播。',
+     '谁来调用：动画通知 AudioEvent（一次性）/ AudioEvent State（持续段）/ Footstep（脚步），以及特效层里的 Audio 类型特效。',
+     '没有音频设备时（命令行、NullRHI 自动化测试）什么也不做，所以测试不会因为声音报错。'],
+  f:['Source/Wuwa/Public/Game/Audio/WuwaWwiseAudio.h','Game/Animation/Notifies/WuwaAnimNotify_AudioEvent.h','Game/Animation/Notifies/WuwaAnimNotify_Footstep.h'],
+  c:null});
+node('ui','group','UI 层（LGUI）','界面框架（层、容器、生命周期、MVC）+ 各个业务界面（HUD、加载、Boss 血条……）。',{c:'ui'});
+node('render','cpp','渲染（卡通着色）','让角色看起来像原作的卡通风格：材质自己算明暗，脸部用 SDF 阴影。',{
+  d:['角色材质是 Unlit（不吃引擎光照），明暗在材质里自己算，所以需要运行时把「太阳方向、光颜色」喂给材质。',
+     'UWuwaToonLightingSubsystem 每帧：找场景里的太阳光，写进材质参数集 MPC_WuwaToon；给脸部材质（UseSDF=1）写入头骨的前/右方向，用来算脸上的阴影形状。',
+     '材质本身由 Commandlet 批量设置：WuwaCharacterToonSetup（卡通材质）、WuwaCharacterRimSetup（边缘光）。'],
+  f:['Game/Render/WuwaToonLightingSubsystem.h','Editor/Commandlets/WuwaCharacterToonSetupCommandlet.h','ArtSource/CharacterToon']});
+node('core','group','核心底座','所有层都会用到的基础服务：资源加载、对象池、Tag、调试开关、C++/C# 桥模式。',{c:'core'});
+
+/* ===== 输入层 ===== */
+node('ia','ue','Enhanced Input（IA / IMC）','UE 自带的新输入系统：InputAction（一个动作，如「攻击」）+ MappingContext（按键 → 动作）。',{
+  d:['IA（InputAction）= 一个抽象动作，比如「普攻」「闪避」「跳」。IMC（InputMappingContext）= 哪个键对应哪个 IA。','长按用 Hold 触发器配置，阈值来自原作 SInputHoldConfig（触发时间、是否连续触发）。'],
+  f:['Content/Characters/Input/...','Editor/Commandlets/WuwaInputHoldSetupCommandlet.h']});
+node('eic','cpp','输入组件 + 输入配置','把 IA 绑定成「语义输入 Tag」，比如 Input.Combat.Attack，并带上阶段（按下 / 长按 / 松开）。',{
+  d:['UWuwaEnhancedInputComponent 按 UWuwaInputDataAsset 的配置，把每个 IA 绑定好，触发时生成一条 FWuwaInputEvent：输入 Tag + 阶段 Pressed / Triggered / Released / Held。',
+     '每个 Tag 还带一个 RouteTag（路由标签），决定它该交给哪个系统。'],
+  f:['Game/Input/WuwaEnhancedInputComponent.h','Game/Input/DataAsset/WuwaInputDataAsset.h','Game/Input/WuwaInputTypes.h']});
+node('router','cpp','输入路由 InputRouter','挂在 PlayerController 上的「分拣员」：只按 RouteTag 把输入事件交给对应处理者。',{
+  d:['它本身不懂任何玩法，只看 RouteTag：Input.Route.Formation → 编队输入；技能类 → 技能输入处理；移动指令 → 移动处理；相机 → 相机；UI → UI。',
+     '处理者都实现 IWuwaInputRouteHandler 接口，所以加新系统不用改路由。',
+     '按键的「按住状态」不存在这里，而是写进角色的输入意图组件。'],
+  f:['Game/Input/WuwaInputRouterComponent.h','Game/Input/IWuwaInputRouteHandler.h','Game/Controller/WuwaPlayerController.h']});
+node('intent','cpp','输入意图 InputIntent','角色身上的「输入缓存」：记录移动方向、哪些键按着。别人写，玩法系统读。',{
+  d:['对应原作每个角色身上的 CharacterInputComponent。','写入时就把原始输入「消化」好：移动轴 → FWuwaMoveIntent（方向、大小），按键 → FWuwaInputActionState（按着没、按了多久）。',
+     '它不引用控制器，也不回调别人：输入来源可以是玩家、将来的 AI 或者测试代码。移动组件每帧来读。'],
+  f:['Game/NewWorld/Character/Common/Component/Input/WuwaInputIntentComponent.h','.../Input/WuwaPlayerInputState.h']});
+node('movecmd','cpp','移动指令处理 MoveInputHandler','处理一次性的移动指令（跳、走跑切换）：查配置表 → 执行对应的指令对象。',{
+  d:['本身没有 if 按键分支：配置表 WuwaMoveInputConfig 写着「哪个 Tag → 哪个指令对象」。','指令对象：WuwaMoveInputAction_Jump（C#，跳跃，先问技能输入规则有没有跳跃类技能，例如长离空中的心眼·跃）、ToggleWalkPreference（走跑偏好）。',
+     '注意：移动轴（WASD）不走这里，而是直接写进输入意图，移动组件每帧读取。'],
+  f:['.../Input/WuwaMoveInputHandler.h','.../Input/WuwaMoveInputConfig.h','Script/.../Input/MoveActions/WuwaMoveInputAction_Jump.cs']});
+node('abilityin','group','技能输入 → 出招','普攻、闪避、E、R 这类按键怎么变成「放哪个技能」。有预输入和规则表。',{c:'combatinput'});
+node('camin','cpp','相机输入','鼠标 / 右摇杆转视角、滚轮拉远拉近，交给相机管理器。',{
+  d:['由 AWuwaPlayerCameraManager 接住，再转给 C# 相机运行时（WuwaCameraInputController）。详见相机层。'],
+  f:['Game/Camera/WuwaPlayerCameraManager.h','Script/.../Camera/FightCameraController/WuwaCameraInputController.cs']});
+node('formin','cpp','编队输入 FormationInputHandler','只把「按下 1/2/3」翻译成队员序号，交给编队组件。',{
+  d:['只响应 Pressed，长按和松开都忽略。能不能切、怎么切全由编队组件决定。'],f:['Game/Formation/WuwaFormationInputHandler.h']});
+node('uiin','cpp','UI 输入 UIInputHandler','界面打开时的按键（关闭、确认等）交给 UI 框架。',{f:['Game/LGUI/Input/WuwaUIInputHandler.h']});
+node('cmcread','cpp','移动组件（读取方）','每帧读输入意图，算出角色该往哪走、多快。',{d:['详见 角色层 → 移动组件。'],f:['.../Move/WuwaMovementComponent.h']});
+node('gaexec','cpp','技能 GA（执行方）','被选中的技能真正开始执行。',{d:['详见 技能层 → GA 家族。']});
+
+/* ===== 技能输入 → 出招 ===== */
+node('ci_evt','concept','一条输入事件','「哪个键（输入 Tag）」+「怎么按的（按下 / 长按 / 松开）」。',{
+  d:['例：Input.Combat.Attack + Pressed = 按下普攻；Input.Combat.Attack + Held = 普攻键按住到阈值（重击）。']});
+node('ci_rt','cs','CombatInputRuntime','技能输入的总调度：每来一条输入、每出现一次「接招机会」，都处理一次。',{
+  d:['收到输入 → 立刻交给选招器试一次；出不了招（比如正在放技能、还没到接招时间）就存进预输入缓存。',
+     '换了操控角色、角色重生、开始了新的主技能 → 之前存的预输入全部作废（避免上一个技能里按的键串到下一个技能）。'],
+  f:['Script/.../Input/WuwaCombatInputRuntime.cs','.../Input/UWuwaCombatInputRuntimeBridge.h（C++ 桥）']});
+node('ci_buf','cs','预输入缓存 Buffer','技能播放中提前按的键先存着，等到能接招的时刻再拿出来。',{
+  d:['只存「按下」：松开、长按不存（原作长按缓存 0 秒）。','存的是原始指令，不是「已经决定的招」：到了接招时机再重新解释一遍（因为那时角色状态可能变了）。',
+     '选中一条执行后清空整批，而不是排队一条条执行。'],
+  f:['Script/.../Input/CombatInputBuffer.cs']});
+node('ci_opp','concept','接招机会','什么时候可以「接下一招」：接招窗口打开、技能进入 ReadyEnd、动画断点、技能结束。',{
+  d:['SkillComponent 每遇到一次这样的时刻就把「接招机会编号」+1，Runtime 发现编号变了就把预输入拿出来重新选招。',
+     '接招窗口来自动画通知 SkillAcceptInput；ReadyEnd 来自通知 SkillReadyEnd（技能后摇可以被打断的点）。']});
+node('ci_res','cs','选招器 Resolver','按「输入规则表」从上往下找第一条匹配的规则，得到要放的技能 ID。',{
+  d:['对应原作 InputCommandTransform：先按行顺序选招，再交给技能组件 / GAS 判断能不能执行。',
+     '一行规则匹配要同时满足：① 输入 Tag 和阶段对上；② OwnerTagQuery（角色身上的 Tag，比如「在空中」）；③ 当前主技能的 SkillTags 满足分类条件；④ 额外条件全部通过。',
+     '它不缓存结果，每次都重新解释原始输入。'],
+  dev:'<b>原作</b> 规则按原作表的行顺序 → <b>改成</b> 少数角色调整了顺序（例：嘉贝连段 / 重击），原因记在该角色的说明里。',
+  f:['Script/.../Input/WuwaInputCommandResolver.cs']});
+node('ci_rules','asset','输入规则表','每个角色一份规则：FWuwaInputCommandRule（Position、Phase、OwnerTagQuery、Conditions、bBlockInput）。',{
+  d:['Position = 优先级（从上往下）；Phase = 按下/长按/松开；bBlockInput = 匹配上就吞掉这个输入，即使技能放不出来也不往下找。',
+     '由 WuwaSkillInputSetup / WuwaRoleSkillSetup 按原作输入命令表生成。'],
+  f:['.../Input/WuwaInputCommandConfig.h','Editor/Commandlets/WuwaSkillInputSetupCommandlet.h']});
+node('ci_cond','cs','条件 Conditions','可插拔的判断：Tag 层数、是否在接招窗口、有没有移动输入、某属性满没满。',{
+  d:['InputCondition_OwnerTagCount：某 Tag 的层数够不够（例：心眼层数）。','InputCondition_SkillInputWindow：当前技能是否开着接招窗口。','InputCondition_MoveInput：有没有按方向。','InputCondition_AttributeFull / AttributeMinimum：能量满了才能放大招之类。'],
+  f:['Script/.../Input/Conditions/*.cs']});
+node('ci_skill','cs','技能组件 SkillComponent','拿到技能 ID 后判断：当前技能能不能让位？能就结束旧 GA、激活新 GA。',{
+  d:['详见 技能层 → 技能管理。'],f:['Script/.../Skill/WuwaSkillComponent.cs']});
+
+/* ===== 控制器与框架 ===== */
+node('gm','cpp','GameMode / PlayerState','游戏规则的入口：决定用哪个 PlayerController、玩家进来时生成什么。',{f:['Game/Framework/WuwaGameMode.h','Game/Framework/WuwaPlayerState.h']});
+node('pc','cpp','PlayerController','代表「玩家本人」：身上挂输入路由、编队组件、编队输入。',{
+  d:['角色（Pawn）是玩家「操控」的身体，PlayerController 是「操控者」。切人 = 让同一个 PlayerController 去 Possess（附身）另一个角色。',
+     '挂载：WuwaInputRouterComponent、WuwaFormationComponent、WuwaFormationInputHandler、UI 输入处理。'],
+  f:['Game/Controller/WuwaPlayerController.h']});
+node('pcm','cpp','PlayerCameraManager','每个玩家一个的相机管理器（UE 标准类），项目在里面接 C# 相机逻辑。',{d:['详见 相机层。'],f:['Game/Camera/WuwaPlayerCameraManager.h']});
+node('loadflow','cpp','加载流程 LoadingController','进入世界时显示加载界面，分阶段加载：编队资源 70%、生成角色 10%、主 HUD 20%。',{
+  d:['进度条数字来自资源子系统返回的加载句柄（按已加载的包数算）。','编队资源异步预加载，加载完才生成角色，最后打开主 HUD，然后关掉加载界面。',
+     '加载界面本身也是按原作 Prefab 还原的（Loading_Prefab + DT_LoadingShow 背景/提示表）。'],
+  f:['Game/Module/Loading/WuwaLoadingController.h','Game/Module/Loading/WuwaLoadingModel.h','Editor/Commandlets/WuwaLoadingAssetSetupCommandlet.h']});
+node('warmup','cpp','战斗预热 Warmup','加载阶段提前把技能要用的特效、资源热一遍，避免第一次放技能卡顿。',{
+  d:['首次放技能卡顿的原因：Niagara 特效第一次用时要编译 / 初始化。处理：WuwaNiagaraCompileSetup 预编译 + 关 Niagara 光追 + 加载阶段 Warmup。','剩余约 30ms 来自 C# JIT（第一次执行 C# 代码的即时编译）。'],
+  f:['Game/Common/Resource/WuwaCombatWarmupSubsystem.h']});
+node('rolespawn','cpp','预生成的 3 个角色','加载时一次性生成 3 个队员，不在场的隐藏 + 关碰撞。',{d:['详见 编队层。']});
+
+/* ===== 编队 ===== */
+node('f_in','cpp','编队输入','按 1/2/3 → 队员序号 0/1/2。',{f:['Game/Formation/WuwaFormationInputHandler.h']});
+node('f_comp','cpp','编队组件 FormationComponent','队伍核心：持有 3 个角色、决定谁在场、执行切换。按「服务器说了算」的网络结构写。',{
+  d:['服务器权威：客户端发 Server RPC 请求切人，服务器判断后改 bOnField（是否在场，会复制给客户端），客户端据此显示 / 隐藏。','切人 = PlayerController Possess 新角色 + 新角色上场定位 + 旧角色下场。',
+     '异步预加载 InitialRoles 的角色资源，进度给加载界面用。'],
+  f:['Game/Formation/WuwaFormationComponent.h','Game/Formation/WuwaRoleSwitchSnapshot.h']});
+node('f_rule','concept','能不能切 / 怎么切','切人条件 + 切人暂留 + 上场位置，都按原作规则。',{
+  d:['禁止切人：角色身上有 State.Formation.SwitchForbid（例：放大招期间）。',
+     '切人暂留（原作 GoDown）：旧角色不会立刻消失，把当前动作做完再下场。',
+     '上场位置：原作 RoleQteComponent.SetQtePosition 的地面分支（SPECIAL_CHANGE_ANGLE_LAND / DIS_LAND 两个常量）。']});
+node('f_roles','cpp','3 个 AWuwaCharacter','队员角色本体。',{d:['详见 角色层。']});
+node('f_model','cpp','编队 UI 数据（MVC）','FormationModel + FormationUiController：把队伍变化变成 UI 事件。',{
+  d:['编队变化 → Controller 更新 Model → 通过事件子系统广播 → HUD 的队伍栏、技能栏刷新。'],
+  f:['Game/Module/Formation/WuwaFormationModel.h','Game/Module/Formation/WuwaFormationUiController.h','Game/Module/Formation/WuwaFormationEvents.h']});
+node('f_hud','cpp','HUD 队伍栏 / 技能栏','屏幕上的队员头像、技能图标。',{d:['详见 UI 层 → 业务界面。']});
+
+/* ===== 角色层 ===== */
+node('c_base','cpp','AWuwaCharactorBase','所有战斗单位（玩家角色、怪物、Boss）的基类。',{
+  d:['BeginPlay 时自动登记到 CreatureSubsystem（战斗单位登记表），EndPlay 时注销。','挂受击组件、ASC 等所有战斗单位共有的部分。'],
+  f:['Game/NewWorld/Character/Common/WuwaCharactorBase.h']});
+node('c_role','cpp','AWuwaCharacter（玩家角色）','长离、嘉贝莉娜这类可操控角色：多了技能组件、步态、输入意图。',{f:['Game/NewWorld/Character/Role/WuwaCharacter.h']});
+node('c_mon','cpp','怪物 / Boss','例：芙露德莉丝（Md00401）。有自己的动画实例和技能表。',{
+  d:['导入流程：ueformat → FBX → 导入 → 卡通材质 → WuwaBossSetup（蒙太奇 / 技能表）→ 子弹表。'],
+  f:['Game/NewWorld/Character/Monster/WuwaMonsterAnimInstance.h','WuwaAnimationEditor/.../WuwaBossSetupCommandlet.h']});
+node('c_rda','asset','角色配置 RoleDataAsset','每个角色一份：模型、动画蓝图、技能、UI 图标、能量条类型等。',{
+  dev:'<b>原作</b> 没有 UI 专用的 DataAsset（数据散在表里） → <b>改成</b> 放进 RoleDataAsset + DT_ElementInfo / DT_SpecialEnergyBarInfo。',
+  f:['Game/NewWorld/Character/Role/DataAsset/WuwaRoleDataAsset.h']});
+node('c_asc','cpp','能力系统组件 ASC','GAS 的核心组件：角色身上的「技能、buff、Tag、属性」都挂在它上面。',{
+  d:['GA（技能）由它激活；GE（效果 / buff）由它施加；GameplayTag（状态标签，如「在空中」「无敌」）由它统计。'],
+  f:['.../Abilities/WuwaAbilitySystemComponent.h']});
+node('c_attr','cpp','属性 AttributeSet','角色数值：血量、等级、元素、协奏、能量（AttributeSet）+ 攻击、防御、暴击（CombatAttributeSet）。',{
+  d:['≈ 原作 EAttributeType。初始化用 GE：基础属性 × 等级成长。','大卡场景里用占位 90 级属性（InitialAttributes）。'],
+  f:['.../Abilities/WuwaAttributeSet.h','.../Abilities/WuwaCombatAttributeSet.h','.../Abilities/WuwaRoleAttributeInit.h']});
+node('c_cmc','group','移动组件 MovementComponent','角色怎么走、跑、跳、落地、被技能推着走（根运动）。',{c:'movement'});
+node('c_state','cs','运动状态 UnifiedState','三个维度：位置（地面 / 空中 / 攀爬）、移动（站 / 走 / 跑 / 冲刺）、朝向。',{
+  d:['对应原作 CharacterUnifiedStateComponent。三个维度分别设置、分别广播；有合法组合表，拒绝当前位置下不合法的移动状态（比如空中不能「冲刺」）。',
+     '与原作一样没有「占用」：后写入的状态直接覆盖之前的。','C++ 桥只保存已提交状态和事件，规则在 C#。'],
+  f:['Script/.../Abilities/WuwaUnifiedStateComponent.cs','.../Abilities/WuwaUnifiedStateBridgeComponent.h']});
+node('c_gait','cs','步态 RoleGait','每帧决定走 / 跑 / 冲刺：看输入、计时和「禁止冲刺」来源。',{
+  d:['对应原作 RoleGaitComponent。不订阅事件，由移动组件每次物理更新前调用 RefreshPolicy（相当于原作 OnTick）。','例：空中闪避落地时如果按着方向，直接 RequestSprint 进冲刺。'],
+  f:['Script/.../Role/Component/WuwaRoleGaitComponent.cs','.../Role/Component/WuwaRoleGaitBridgeComponent.h']});
+node('c_fight','cs','战斗占用 FightState','判断「新动作能不能顶掉当前动作」：先比类别，再比类别内优先级。',{
+  d:['对应原作 FightState 的本地裁决。它只回答能不能，不负责取消技能或改运动状态。'],
+  f:['Script/.../Component/WuwaFightStateComponent.cs','.../Combat/WuwaFightStateBridgeComponent.h']});
+node('c_anim','cpp','动画 AnimInstance + ABP','采集角色数据（速度、状态），动画蓝图据此播走、跑、起停、跳跃、落地。',{
+  d:['UWuwaAnimInstance 是 C++ 父类，负责采集；动画蓝图（ABP，基于模板 ABP_RoleBase）负责组织状态机和动画层。','跳跃 / 落地状态机由编辑器工具 UWuwaRoleJumpEditorLibrary 生成；脚部 IK 在 WuwaFootIK。','技能动作不在状态机里，而是用蒙太奇（Montage）覆盖播放。'],
+  f:['.../Anim/WuwaAnimInstance.h','Game/Animation/IK/WuwaFootIK.h','Editor/WuwaRoleJumpEditorLibrary.h']});
+
+/* ===== 移动组件 ===== */
+node('m_intent','cpp','读输入意图','每帧拿到移动方向和大小。',{f:['.../Input/WuwaInputIntentComponent.h']});
+node('m_gait','cs','步态刷新','物理更新前先问步态：现在该走、跑还是冲刺 → 决定最大速度。',{f:['Script/.../WuwaRoleGaitComponent.cs']});
+node('m_walk','cpp','地面 PhysWalking','地面移动 + 「离地规则」：根运动带向上的速度时，角色会被抬离地面进入空中。',{
+  d:['离地规则是一条通用规则：只要动画根运动给了向上的速度，就从走路模式切到下落模式。这样「心眼·跃」这类技能不用单独写离地代码。',
+     '技能表的 bWalkOffLedge 决定放技能时能不能走下台阶边缘。'],
+  f:['.../Move/WuwaMovementComponent.h']});
+node('m_fall','cpp','空中 PhysFalling','下落时也完整使用根运动；落地时可以保留水平速度（CarryLandingSpeed）。',{
+  d:['例：空中闪避落地时按着方向 → 带着速度（上限冲刺速度）直接进冲刺，而不是刹到 0 再起步。'],
+  f:['.../Move/WuwaMovementComponent.h']});
+node('m_rm','concept','根运动 Root Motion','动画自己带位移：角色怎么移动由动画决定，而不是由代码推。',{
+  d:['技能动作基本都用根运动，所以「冲多远、跳多高」和原作动画完全一致。','UpdateMontageRootMotionMode：放蒙太奇时切换根运动模式。',
+     '技能位移修正（吸附到目标、转向）在根运动生效前做：ProcessRootMotionPostConvertToWorld。'],
+  f:['.../Move/WuwaSkillMotion.h']});
+node('m_force','cpp','技能接口','SetForceSpeed（技能指定速度）、KeepAwayFromGround（技能期间别贴地）、跳跃。',{
+  d:['跳跃：根运动起跳 + JumpStart / Fall / Land 三段（jump_priority=8，脚底位置 Feet_Position）。','这些都是给 GA 和动画通知调用的接口。'],
+  f:['Game/Animation/Notifies/WuwaAnimNotifyState_KeepAwayFromGround.h']});
+node('m_state','cs','提交位置状态','地面 / 空中变了 → 写进运动状态（UnifiedState），广播给别人。',{d:['GA 里可以「等待 State.Position.Ground Tag 出现」= 等落地。']});
+
+/* ===== 技能层 ===== */
+node('s_table','asset','技能表 FWuwaSkillInfo','每个技能一行：技能 Tag、动作 Tag、蒙太奇列表、能否走下边缘、开始/结束 buff、锁定参数。',{
+  d:['行名 = 原作技能 ID。SkillTags 用于分类（输入规则判断「当前在放哪类技能」）；ActionTags 是技能期间给角色挂的状态 Tag。',
+     'SkillStartBuffs / SkillEndBuffs：技能开始 / 结束时加的 buff（嘉贝的连段窗口就是靠结束 buff 实现）。','锁定字段：技能开始时用哪套锁定参数选目标。'],
+  f:['.../Skill/WuwaSkillTypes.h']});
+node('s_in','concept','来自输入层的技能 ID','选招器选中的那一行规则 → 技能 ID。',{d:['详见 输入层 → 技能输入 → 出招。']});
+node('s_comp','cs','技能管理 SkillComponent + SkillBridge','管理「当前主技能」：能不能让位、打断等级、接招窗口、ReadyEnd。',{
+  d:['C# WuwaSkillComponent：判断能否让位 → 结束旧 GA → 向 FightState 申请占用 → 记录当前技能（WuwaSkill 运行记录）。',
+     'C++ WuwaSkillBridgeComponent：给 GA 和动画通知用的 UE 接口（登记、结束回报、接招窗口开关）。窗口必须带技能句柄，防止上一个技能迟到的通知改写新技能。'],
+  f:['Script/.../Skill/WuwaSkillComponent.cs','Script/.../Skill/WuwaSkill.cs','.../Skill/WuwaSkillBridgeComponent.h']});
+node('s_fs','cs','FightState','占用裁决（见角色层）。',{f:['Script/.../WuwaFightStateComponent.cs']});
+node('s_ga','group','GA 家族','GA = 一个技能的执行逻辑。项目有一个通用 GA + 几个特殊 GA。',{c:'ga'});
+node('s_mon','asset','蒙太奇 Montage','技能动画资产。一段技能 = 一个或多个蒙太奇。',{
+  d:['蒙太奇 = 可以在动画蓝图之上「插播」的动画片段，带分段和通知轨道。','一个 GA 可以按顺序播多段蒙太奇（例：长离 E 的起手、空中、落地）。']});
+node('s_ntf','group','动画通知 Notifies','蒙太奇时间轴上的「事件点」：到了某一帧就执行代码（发子弹、播特效、开接招窗口……）。',{c:'notifies'});
+
+/* ===== GA 家族 ===== */
+node('g_base','cpp','UWuwaGameplayAbilityBase','所有技能的基类：技能 ID、开始/结束时挂上/摘下 ActionTags、向技能管理登记。',{f:['.../Abilities/WuwaGameplayAbilityBase.h']});
+node('g_mon','cpp','UWuwaSkillMontageAbility','通用技能：按技能表顺序播蒙太奇，处理播完 / 被打断 / 淡出。绝大多数技能用它。',{f:['.../Abilities/WuwaSkillMontageAbility.h']});
+node('g_air','cpp','AirAttack 空中攻击','空中普攻 / 下落攻击：处理空中连段和落地收招。',{f:['.../Abilities/WuwaAirAttackAbility.h']});
+node('g_dodge','cpp','AirDodge 空中闪避','先加 buff 再播；最短滞空时间后等落地；落地按着方向就接冲刺。',{
+  d:['还在空中时蒙太奇淡出不会结束技能，而是关掉它的根运动、按惯性下落，等落地。','落地：玩家操控 → 0.1 秒后结束（有移动输入则带速度进冲刺）；非玩家 → 0.1 秒淡出。'],
+  f:['.../Abilities/WuwaAirDodgeAbility.h']});
+node('g_burst','cpp','Burst 大招','先贴地（向下检测 1000 再放到地面），配合时停、禁止切人、无敌、特写镜头。',{
+  d:['在不同高度放大招，角色最后都回到地面：开头 TraceGround 把角色放到地面上。','时停 = 动画通知 AbsoluteTimeStop；禁止切人 / 无敌 = 通知 Burst 挂上 State.Formation.SwitchForbid 和 State.Combat.Invincible。'],
+  f:['.../Abilities/WuwaBurstAbility.h']});
+node('g_hit','cpp','HitBranch 命中分支','子弹打中了才切到另一段动作（嘉贝的技能用）。',{f:['.../Abilities/WuwaHitBranchAbility.h']});
+node('g_ge','asset','GE / Buff','GE = 「对角色施加的效果」：改属性、挂 Tag、持续一段时间。项目的 buff 都是 GE。',{
+  d:['DT_Buff（原作 buff 表）→ WuwaBuffSetup 生成 GE 资产：属性修改、Tag 窗口、移除条件（身上出现某 Tag 就移除）。','技能开始/结束 buff、动画通知 AddBuff 都会施加它。'],
+  f:['Game/NewWorld/Buff/WuwaBuffLibrary.h','Editor/Commandlets/WuwaBuffSetupCommandlet.h']});
+
+/* ===== 动画通知 ===== */
+node('n_acc','cpp','SkillAcceptInput 接招窗口','这段时间里按键可以接下一招。',{f:['Notifies/WuwaAnimNotifyState_SkillAcceptInputBridge.h']});
+node('n_ready','cpp','SkillReadyEnd 可提前结束','后摇开始的点：之后移动、闪避可以打断。',{f:['Notifies/WuwaAnimNotify_SkillReadyEndBridge.h']});
+node('n_prio','cpp','ChangeSkillPriority','中途改技能的打断优先级。',{f:['Notifies/WuwaAnimNotify_ChangeSkillPriority.h']});
+node('n_move','cpp','MoveToTarget / 转向','技能吸附到目标、技能转向、角色转向。',{
+  d:['由 prepare_motion_notifies.py + WuwaMotionNotifySetup 按原作通知批量装上；调试开关 wuwa.Debug.SkillMotion。'],
+  f:['Notifies/WuwaAnimNotifyState_MoveToTarget.h','Notifies/WuwaAnimNotifyState_SkillRotate.h','Notifies/WuwaAnimNotifyState_RoleRotate.h']});
+node('n_keep','cpp','KeepAwayFromGround','这段时间别贴地（空中技能用）。',{f:['Notifies/WuwaAnimNotifyState_KeepAwayFromGround.h']});
+node('n_bullet','cpp','SpawnBullet 发子弹','在这一帧生成子弹（攻击判定）。',{d:['可带条件：技能目标条件、角色必须有 / 不能有某些 Tag。'],f:['Notifies/WuwaAnimNotify_SpawnBullet.h']});
+node('n_buff','cpp','AddBuff / AddLooseTag','加 buff；或在一段时间内挂一个临时 Tag。',{f:['Notifies/WuwaAnimNotify_AddBuff.h','Notifies/WuwaAnimNotifyState_AddLooseTag.h']});
+node('n_burst','cpp','Burst / AbsoluteTimeStop','大招状态（禁切人、无敌）、时停（除施法者外全部冻结）。',{f:['Notifies/WuwaAnimNotifyState_Burst.h','Notifies/WuwaAnimNotifyState_AbsoluteTimeStop.h']});
+node('n_fx','cpp','PlayEffect / Ghost','播特效；残影。',{f:['Notifies/WuwaAnimNotify_PlayEffect.h','Notifies/WuwaAnimNotifyState_Ghost.h']});
+node('n_audio','cpp','AudioEvent / Footstep','播声音；脚步声。',{f:['Notifies/WuwaAnimNotify_AudioEvent.h','Notifies/WuwaAnimNotify_Footstep.h']});
+node('n_cam','cpp','CameraModify / SequenceCamera','临时改镜头参数；切到大招特写镜头。',{f:['Notifies/WuwaAnimNotify_CameraModify.h','Notifies/WuwaAnimNotify_SequenceCamera.h']});
+node('n_tip','concept','注意：第 0 帧的通知','用 Commandlet 加通知后必须刷新触发偏移，否则放在第 0 帧的通知永远不触发。',{
+  d:['做法：所有加通知的 Commandlet 都调用 WuwaAnimNotifyEditor::RefreshTriggerOffsets；老资产用 WuwaNotifyTriggerOffsetFix 一次性修复。','曾经因此失效过：大招镜头、子弹、脚步声。'],
+  f:['Editor/WuwaAnimNotifyEditorUtils.h','Editor/Commandlets/WuwaNotifyTriggerOffsetFixCommandlet.h']});
+node('r_skill','concept','→ 技能管理','接招、ReadyEnd、优先级都交给技能管理。',{});
+node('r_move','concept','→ 移动组件','位移修正、离地都交给移动组件。',{});
+node('r_combat','concept','→ 战斗层','子弹、buff、时停交给战斗层。',{});
+node('r_show','concept','→ 特效 / 音频 / 相机','表现类通知交给对应系统。',{});
+
+/* ===== 战斗层 ===== */
+node('b_creature','cpp','战斗单位登记表 CreatureSubsystem','世界里所有战斗单位的名单：只回答「有谁、在哪」。',{d:['≈ 原作 CreatureModel。服务器和客户端各一份，不复制。'],f:['Game/NewWorld/Combat/WuwaCreatureSubsystem.h']});
+node('b_camp','asset','阵营 DT_Camp','谁打谁：敌我关系表 + CampLibrary 查询。',{f:['Game/NewWorld/Combat/WuwaCamp.h','Editor/Commandlets/WuwaCampTableSetupCommandlet.h']});
+node('b_lock','cpp','锁定 LockOnComponent','技能开始时自动挑一个目标（软锁定）：技能转向、吸附、子弹朝向都用它。',{
+  d:['≈ 原作 CharacterLockOnComponent 的软锁定部分。参数表对应原作 db_lockon，字段默认值就是原作默认值。','挑法：先筛候选（距离、角度、阵营），再挑最好的（原作 DetectAlternativeTargets + FindTheBest）。'],
+  f:['Game/NewWorld/Combat/WuwaLockOnComponent.h']});
+node('b_bullet','group','子弹系统','攻击判定的载体：子弹表 + 生成 + 移动 + 碰撞 + 命中。',{c:'bullet'});
+node('b_dmg','cpp','伤害结算 Damage','命中后算伤害：倍率 × 攻击者属性 × 一串乘区（原作公式）。',{
+  d:['伤害表 DT_Damage（原作 db_damage，策划表「j.结算」），行名 = 子弹表里的 DamageId。','按技能等级取值用原作 GetLevelValue 规则。元素 0~6：物理、冷凝、热熔、导电、气动、衍射、湮灭。',
+     '算完 → 扣血、削韧、通知伤害数字。目标有 State.Combat.Invincible（无敌）则跳过。'],
+  f:['Game/NewWorld/Combat/WuwaDamage.h','ArtSource/Combat/prepare_damage.py']});
+node('b_hit','cpp','受击 HitComponent','韧性 / 虚弱、顿帧（打击感的短暂停顿）、受击动作。',{
+  d:['韧性：命中扣韧性，扣到 0 进入虚弱（State.Combat.Weak）。','顿帧：按优先级取最高的一条，写到 CustomTimeDilation；与时停相乘，不会互相覆盖。','受击蒙太奇：DT_HitEffect_* 表决定播哪个。'],
+  f:['Game/NewWorld/Combat/WuwaHitComponent.h','Game/NewWorld/Combat/WuwaHitTypes.h']});
+node('b_buff','cpp','Buff + 属性事件','buff 是 GE；属性跨过某个区间时触发事件（嘉贝能量满 → 变身）。',{
+  d:['DT_Buff / DT_BuffCue（buff 的表现） → WuwaBuffSetup。HUD 上的限时 buff 图标也读它。','UWuwaAttributeEventComponent：监听属性区间变化。'],
+  f:['Game/NewWorld/Buff/WuwaBuffTypes.h','Game/NewWorld/Buff/WuwaAttributeEventComponent.h']});
+node('b_ts','cpp','时停 TimeStopSubsystem','大招时除了施法者，所有人和子弹都冻结。',{f:['Game/NewWorld/Combat/WuwaTimeStopSubsystem.h']});
+node('b_ui','concept','→ UI 反馈','伤害数字、Boss 血条（详见 UI 层）。',{});
+
+/* ===== 子弹 ===== */
+node('bl_tab','asset','子弹表 FWuwaBulletInfo','每颗子弹的形状、大小、存活时间、命中间隔、伤害 ID、子子弹……',{
+  d:['由 prepare_bullets.py 从原作配置表生成 → WuwaBulletTableSetup 写进 DataTable。','有专门的子弹编辑器（WuwaCombatEditor 模块）方便查看。'],
+  f:['Game/NewWorld/Bullet/WuwaBulletTypes.h','ArtSource/Bullet/prepare_bullets.py']});
+node('bl_ntf','cpp','SpawnBullet 通知','动画到了那一帧 → 发一个「生成子弹」请求。',{d:['请求内容：发射者、子弹 ID（表行名）、所属技能 ID（原作 GetCurrentMontageCorrespondingSkillId）。'],f:['Notifies/WuwaAnimNotify_SpawnBullet.h']});
+node('bl_sys','cpp','子弹子系统 BulletSubsystem','管理所有活着的子弹：移动、碰撞检测、命中次数、生成子子弹、贴地、子弹特效。',{f:['Game/NewWorld/Bullet/WuwaBulletSubsystem.h']});
+node('bl_hit','concept','命中','打中敌人 → 伤害结算；同时发「子弹命中事件」（HitBranch 切招、回能用）。',{});
+
+/* ===== 相机层 ===== */
+node('cam_pcm','cpp','PlayerCameraManager（引擎适配）','C++ 只做引擎相关的事：接输入、管生命周期、碰撞、输出最终画面位置。',{f:['Game/Camera/WuwaPlayerCameraManager.h']});
+node('cam_bridge','cpp','CameraRuntimeBridge','C++ 和 C# 之间的反射边界，策略都在 C#。',{f:['Game/Camera/WuwaCameraRuntimeBridge.h']});
+node('cam_rt','cs','C# 相机运行时（现行）','选择相机模式、处理输入、计算镜头、模式之间混合。',{
+  f:['Script/.../Camera/WuwaCameraRuntime.cs','Script/.../Camera/WuwaFightCameraLogic.cs','Script/.../Camera/WuwaOwnedRequests.cs']});
+node('cam_zr','cs','ZRCamera（重构中，按原作结构）','新架构：FightCamera 拆成 Logic（算）和 Display（生成相机 Actor）两个组件 + CameraModel 数据。',{
+  d:['ZRCFightCamera 构造时创建 Logic / Display 两个组件（原作 OnCreate 里 AddComponent）。','Display：生成 CameraActor，关闭 ConstrainAspectRatio（不留黑边，原作也关了），战斗模式下设为 ViewTarget。','ZRCCameraCollision：镜头碰撞，防止穿墙。'],
+  dev:'<b>原作</b> 相机是一个 TS 相机系统，特写镜头也在里面 → <b>现在</b> 旧 C# 运行时 + 独立的 Sequence 子系统；<b>改成</b> 按 7 步计划迁到 ZRCamera（对象池那一步已完成，用户自己写、我审）。',
+  f:['Script/.../ZRCamera/FightCamera/*.cs','Script/.../ZRCamera/ZRCameraModel.cs']});
+node('cam_set','asset','相机设置 / CameraModify','臂长、视角、偏移等参数；技能可以用通知临时修改。',{f:['Game/Camera/CameraData/WuwaCameraSettings.h','Game/Camera/CameraData/WuwaCameraModify.h','Editor/Commandlets/WuwaCameraSetupCommandlet.h']});
+node('cam_seq','cpp','特写镜头 SequenceCameraSubsystem','大招时播放 LevelSequence 镜头，混入、隐藏 HUD、结束混回战斗镜头。',{
+  d:['参数对应原作 TsAnimNotifySwitchSequenceCamera 的「特写镜头配置」：BlendInTime、BlendOutTime、IsHideHud/HideHudTime、SpecificSequenceTime。','做法见 制作流程 → 大招镜头（Sequence）。'],
+  f:['Game/Camera/WuwaSequenceCameraSubsystem.h']});
+node('cam_ntf','cpp','SequenceCamera 通知','蒙太奇到这一帧 → 请求播特写镜头。',{f:['Notifies/WuwaAnimNotify_SequenceCamera.h']});
+
+/* ===== 特效层 ===== */
+node('e_model','asset','EffectModel（特效配置资产）','只描述「要播什么」：Niagara、贴花、灯光、后处理、残影、材质变化、骨骼网格、音频、组合……',{
+  d:['对应原作 EffectModelBase 及其子类。资产只存配置，不存运行状态。','Group 类型可以把多个特效组合成一组一起播。'],
+  f:['Game/EffectModel/Base/WuwaEffectModelBase.h','Game/EffectModel/Models/*.h']});
+node('e_ntf','cpp','PlayEffect 通知','动画到这一帧 → 请求播放某个 EffectModel，挂在某根骨骼上。',{
+  d:['注意：PlayEffect 会去掉挂点的缩放（原作角色 Root 骨有 100 倍缩放，不去掉特效会大 100 倍）。'],f:['Notifies/WuwaAnimNotify_PlayEffect.h']});
+node('e_sys','cpp','特效系统 EffectSystem','世界级统一播放入口：收请求 → 找对应的工厂和池 → 返回句柄。',{
+  d:['不解释各 Model 的具体参数，只负责调度。返回 FWuwaEffectHandle，调用方可以用它提前停止。'],f:['Game/Effect/System/WuwaEffectSystem.h','Game/Effect/Types/*.h']});
+node('e_fac','cpp','工厂 SpecFactory','按 Model 类型创建对应的 Spec（运行时实例）。',{f:['Game/Effect/Factory/WuwaEffectSpecFactory.h']});
+node('e_spec','cpp','Spec（运行时实例）','每种特效一个 Spec 类：真正去生成组件、计时、更新参数、结束。',{
+  d:['Niagara / Decal / Light / PostProcess / Ghost / MaterialController / SkeletalMesh / Audio / Group。'],f:['Game/Effect/Specs/*']});
+node('e_pool','cpp','对象池 Pools','播完的特效对象不销毁，放回池里下次复用（避免频繁创建卡顿）。',{d:['借出时记录所属池，运行中替换注册也不会还错池。'],f:['Game/Effect/Pools/*']});
+node('e_actor','ue','屏幕上的特效','最终是 Niagara 组件 / 贴花 / 灯光等 UE 对象。',{f:['Game/Effect/WuwaEffectActor.h']});
+
+/* ===== UI 层 ===== */
+node('u_mgr','cpp','UiManager（UI 入口）','「打开某个界面」：查配置表、创建界面对象、分配 ViewId，交给所在层。',{
+  d:['≈ 原作 UiManager。是 LocalPlayerSubsystem（每个本地玩家一份）。','OpenView / CloseView（按名字关所有实例）/ CloseViewById（只关一个）。'],
+  f:['Game/LGUI/Core/WuwaUiManager.h','Game/LGUI/Core/WuwaUISettings.h']});
+node('u_cfg','asset','界面配置表 DT_UiViews','每个界面一行：名字 → Prefab、所在层、View 类。',{f:['FWuwaUiViewConfig']});
+node('u_layer','cpp','层 Layer','界面分层：HUD 层、普通界面层、弹窗层……每层用一种容器管理进出。',{f:['Game/LGUI/Layer/WuwaUiLayer.h','Game/LGUI/Layer/WuwaUiLayerRoot.h']});
+node('u_cont','cpp','容器 Container','层的进出规则：Set（不重复）、List（并列）、Stack（后开先关）、Queue（排队弹出）。',{f:['Game/LGUI/Container/*.h']});
+node('u_view','cpp','View / Panel（界面本身）','一个界面 = 一个 View（有生命周期状态机）+ 若干子面板 Panel。',{
+  d:['生命周期：创建 → 打开中 → 显示 → 关闭中 → 销毁，打开/关闭可以带动画（ViewAnimation）。'],f:['Game/LGUI/View/WuwaUiView.h','Game/LGUI/View/WuwaUiPanel.h','Game/LGUI/View/WuwaUiState.h']});
+node('u_reg','cpp','组件注册表','Prefab 上登记好控件，代码按序号拿（不用按名字到处找）。',{f:['Game/LGUI/Component/WuwaUiComponentsRegistry.h']});
+node('u_model','cpp','Model（数据）','界面要显示的数据，独立于界面存在。',{f:['Game/LGUI/Mvc/WuwaModelBase.h']});
+node('u_ctrl','cpp','Controller（逻辑）','监听游戏事件、改 Model、决定开关界面。',{f:['Game/LGUI/Mvc/WuwaControllerBase.h']});
+node('u_evt','cpp','事件子系统 EventSubsystem','全局事件广播：GameplayTag 当事件名 + InstancedStruct 当参数。',{d:['好处：游戏系统和 UI 互相不引用，只约定事件 Tag。'],f:['Game/LGUI/Mvc/WuwaEventSubsystem.h']});
+node('u_mod','group','业务界面','HUD（队伍、技能、能量条、buff）、Boss 血条、伤害数字、加载、邮箱示例。',{c:'uimodules'});
+node('u_fx','cpp','UI 表现组件','UI 里的 Niagara 特效、补间动画组、九宫格填充、界面动画、UI 相机效果。',{
+  d:['UWuwaUINiagara（方案 C）：在 UI 里播 Niagara，例如技能光圈。','UiCameraHandler：打开界面时的模糊、时间减速等。'],
+  f:['Game/LGUI/Component/WuwaUINiagara.h','Game/LGUI/Component/WuwaUiTweenGroup.h','Game/LGUI/Component/WuwaUiSlicedFill.h','Game/LGUI/Core/WuwaUiCameraHandler.h']});
+
+/* ===== 业务界面 ===== */
+node('um_hud','cpp','主 HUD','战斗主界面：队伍栏、技能栏、角色状态（血量 / 协奏）。',{
+  f:['Game/Module/Hud/WuwaMainHudView.h','Game/Module/Hud/WuwaMainHudController.h','Game/Module/Hud/WuwaHudTeamSlotPanel.h','Game/Module/Hud/WuwaHudSkillBarPanel.h','Game/Module/Hud/WuwaHudRoleStatePanel.h']});
+node('um_skill','cpp','技能按钮','技能图标、冷却、可用状态。',{f:['Game/Module/Hud/WuwaSkillButtonUiController.h']});
+node('um_energy','cpp','角色专属能量条','每个角色不同（EB_<id>）：基类 + 槽位型 + 变形型 + 嘉贝专用。',{d:['类层级照原作能量条类层级。'],f:['Game/Module/Hud/EnergyBar/*.h']});
+node('um_buff','cpp','Buff 图标','HUD 上的限时 buff 图标（PnlBuffTop / PnlBuff）。',{f:['Game/Module/Hud/Buff/*.h']});
+node('um_boss','cpp','Boss 血条','补间组动画、九宫格填充，模板来自真实芙露德莉丝数据。',{f:['Game/Module/BattleUi/WuwaBossStatePanel.h']});
+node('um_dmg','cpp','伤害数字','DT_DamageText 决定样式；命中时弹出。',{f:['Game/Module/DamageUi/WuwaDamageNumberSubsystem.h']});
+node('um_load','cpp','加载界面','Loading View / Model / Controller。',{f:['Game/Module/Loading/*.h']});
+node('um_form','cpp','编队 UI 数据','切人 → 刷新队伍栏和技能栏。',{f:['Game/Module/Formation/*.h']});
+node('um_mail','cpp','邮箱（教学示例）','完整走一遍 MVC 的小例子。',{f:['Game/Module/Mail/*.h']});
+node('um_src','concept','游戏事件来源','编队、技能、属性变化、伤害结算。',{});
+
+/* ===== 核心底座 ===== */
+node('k_res','cpp','资源子系统 ResourceSubsystem','全项目统一的资源加载入口：异步加载、进度、日志、同步加载警告。',{
+  d:['≈ 原作 ResourceSystem（LoadAsync / Load / CancelAsyncLoad）。','为什么统一：一处能看到在加载什么、加载多久；同步加载会卡住游戏，这里统一打警告。'],f:['Game/Common/Resource/WuwaResourceSubsystem.h']});
+node('k_am','cpp','AssetManager','UE 资产管理器的项目子类（主资产类型等）。',{f:['Core/Asset/WuwaAssetManager.h']});
+node('k_pool','cpp','Actor 对象池','反复生成销毁的 Actor（相机、特效等）放池里复用。',{f:['Core/ActorPool/WuwaActorPoolSubsystem.h','Core/ActorPool/WuwaPoolableActor.h']});
+node('k_tag','cpp','GameplayTags','全项目的状态 / 输入 / 事件标签，C++ 原生定义，C# 有同名一份。',{d:['例：State.Position.Ground（在地面）、State.Combat.Invincible（无敌）、Input.Route.Formation（编队输入路由）。'],f:['Core/Tag/WuwaGameTags.h','Script/.../Core/Tag/WuwaGameTags.cs']});
+node('k_dbg','cpp','调试开关','屏幕调试打印都走 wuwa.Debug.* 控制台开关（默认关）。',{d:['wuwa.Debug.List 列出所有频道；蓝图用 Wuwa Debug Print 节点，不用裸 Print String。'],f:['Game/Common/Debug/WuwaDebug.h']});
+node('k_bridge','concept','C++ 桥 + C# 实现 模式','很多组件分两半：C++「Bridge」提供反射、快照、事件；C# 子类做具体裁决。',{
+  d:['例：SkillBridge ↔ SkillComponent、UnifiedStateBridge ↔ UnifiedState、RoleGaitBridge ↔ RoleGait、FightStateBridge ↔ FightState、CameraRuntimeBridge ↔ CameraRuntime。','好处：规则对应原作 TS 逻辑、改起来快；UE 底层（GAS、移动、动画）仍在 C++。']});
+
+/* ===== 测试 ===== */
+node('t_auto','tool','自动化测试','UE Automation 测试，约 176 条，覆盖长离空中阶段、加载、UI、子弹、伤害……',{
+  d:['跑法：从 PowerShell 跑（Git Bash 的 PATH 会让 UnrealSharp 找不到 .NET），先把 C# 发布到 Binaries/Managed。','已知失败 3 条：ChangliRowsMatchOriginal、Audio.Lifetime、UI.Effects。'],f:['Source/Wuwa/Private/Tests/...']});
+node('t_dbg','tool','屏幕调试开关','wuwa.Debug.* 频道：技能位移、输入、相机……',{f:['Game/Common/Debug/WuwaDebug.h']});
+node('t_mcp','tool','Unreal MCP','编辑器开着时，通过 Python 远程执行直接改资产 / 查场景，代替关编辑器跑 Commandlet。',{f:['.mcp.json（服务名 unreal）','.claude/settings.local.json']});
+node('t_shot','tool','截图对照','shoot.ps1 / gallery.ps1 批量截图，和原作视频逐帧对比特效与镜头。',{f:['ArtSource/JiabeiAttack/...']});
+
+/* ===== 一次攻击的全过程 ===== */
+node('w1','step','1. 按下攻击键','Enhanced Input 触发「普攻」IA。',{});
+node('w2','step','2. 路由','InputRouter 看 RouteTag → 交给技能输入。',{});
+node('w3','step','3. 选招','选招器按规则表从上往下匹配 → 技能 ID（比如普攻第 2 段）。',{});
+node('w4','step','4. 能不能出招','技能管理 + FightState：当前技能能让位吗？不能 → 存进预输入。',{});
+node('w5','step','5. 激活 GA','技能 GA 开始，播技能表里的蒙太奇；锁定组件挑目标。',{});
+node('w6','step','6. 动画通知依次触发','到某帧：转向吸附 → 发子弹 → 播特效 → 播声音 → 开接招窗口。',{});
+node('w7a','step','7a. 子弹碰撞','子弹子系统检测碰到了谁。',{});
+node('w7b','step','7b. 特效','特效系统从池里借出 Niagara 播放。',{});
+node('w7c','step','7c. 声音','Wwise 播攻击音效。',{});
+node('w8','step','8. 伤害结算','原作公式算伤害，扣血、削韧。',{});
+node('w9','step','9. 受击反应','顿帧、受击动作、韧性归零进入虚弱。',{});
+node('w10','step','10. UI 反馈','伤害数字弹出，Boss 血条减少。',{});
+node('w11','step','11. 接下一招','接招窗口里再按攻击（或之前存的预输入）→ 回到第 3 步。',{});
+
+/* ===== 制作流程（拿到数据之后在 UE 里怎么做） ===== */
+node('p_premise','concept','前提：数据已经分析好','下面每条流程都从「已经分析得到的数据」开始，只讲在 UE 里用什么技术、按什么顺序做出来。',{
+  d:['数据是什么样：例如嘉贝普攻第 2 段的特效 = 有几层、每层是网格还是面片、用哪张贴图、颜色怎么随时间变、活多久、多大、几时出现、挂在哪根骨骼。',
+     '项目里这些数据存成 JSON「配方」（例：ArtSource/JiabeiAttack/Attack02.json）。你手工做时，就把它当成一张参数表。']});
+node('p_how','concept','手工做 vs 代码做','每一步都可以在编辑器里手点，也可以写程序调用编辑器 API 批量做。项目用代码，但每行代码都对应一个手工操作。',{
+  d:['流程里每一步同时给出：① 在编辑器里怎么点；② 项目代码调用的是哪个 API；③ 代码节选和「为什么这样写」。',
+     '用代码做的好处：几十层特效、几十个通知一次生成，改了规则重跑一遍全部更新；也方便对照原作数据检查。',
+     '用代码改资产要懂的编辑器 API（建包、撤销、保存、编辑器专用代码）见 代码精读 → 编辑器 API。'],
+  qa:[['Commandlet 和在编辑器里跑有什么区别？','Commandlet 是不开编辑器界面的命令行进程，编辑器开着时它存不了盘（文件被占用），也用不到 Live Coding 刚改的代码。所以项目给特效工具同时注册了控制台命令 Wuwa.Fx.Setup，在编辑器里（或通过 Unreal MCP）跑同一份代码。']]});
+node('p_fx','group','特效制作（嘉贝普攻为例）','材质 → Niagara 系统 → 特效配置 → 挂到动画 → 对照调整，再加贴花、残影、后处理这些特殊类型。',{c:'fxpipe'});
+node('p_seq','group','大招镜头（Sequence）','做 LevelSequence（角色绑定 + 相机 + 关键帧）→ 挂到大招蒙太奇 → 运行时播放、切视角、混回。',{c:'seqpipe'});
+node('p_ui','group','UI 界面','拼 Prefab → 组件注册表 → 登记配置表 → 写 View → Model/Controller/事件 → 打开。',{c:'uipipe'});
+node('p_skill','group','一个技能（GA + 蒙太奇 + 通知）','技能表行 → GA → 授予给角色 → 输入规则 → 动画通知 → 必要时写 C++ GA。',{c:'skillpipe'});
+
+/* ----- 特效制作 ----- */
+node('fl_niagara','learn','先学：Niagara','UE 的粒子系统。一个 System（整个特效）里有多个 Emitter（层），每层 = 一群粒子 + 一种画法。',{
+  d:['System（系统）：一个完整的特效资产，比如「普攻第 2 段的刀光」。场景里用 NiagaraComponent 播放它。',
+     'Emitter（发射器）= 一层：这层生成多少粒子、什么时候生成、粒子怎么动。一个刀光通常 5~15 层（主刀光、碎片、光点、烟……）。',
+     '模块栈（Stack）：Emitter 里从上到下排着的模块，分阶段执行：Emitter Spawn / Emitter Update（发射器自身）、Particle Spawn（每个粒子出生时一次）、Particle Update（每帧）。模块 = 改参数的小程序，例如 InitializeParticle 设寿命，SpawnBurst_Instantaneous 一次爆发 N 个。',
+     '参数命名空间：Particles.*（每个粒子自己的，如 Particles.Position / Color / Lifetime）、Emitter.*、System.*、User.*（外部代码能设置的，如 SetVariableFloat）、Engine.*（引擎给的，如 Engine.Owner.Scale）。',
+     'Renderer（渲染器）：粒子画成什么。Sprite = 面片（光点、火花）；Mesh = 网格（刀光弧面）；Ribbon = 丝带（武器拖尾）。',
+     'CPU / GPU 模拟：粒子少用 CPU（结果确定、好调试），很多才用 GPU。嘉贝的层都用 CPU。',
+     'Local Space：勾上后粒子跟着组件走（刀光跟角色）；不勾则粒子出生后留在世界里（烟留在原地）。'],
+  qa:[['为什么从引擎模板复制 Emitter，而不是从空白开始？','空白 Emitter 一个模块都没有。引擎模板（OmnidirectionalBurst、SimpleSpriteBurst、Fountain）已经带好「一次爆发、初始化粒子、速度、阻力」这些常用模块，改参数比自己拼快，也不容易漏。项目代码也是从这三个模板复制的。'],
+      ['模块输入框里填的数字存在哪？','存在脚本的 RapidIterationParameters（快速迭代参数）里，名字形如 Constants.发射器名.SpawnBurst_Instantaneous.Spawn Count。改它不用重新生成整张图，所以叫「快速迭代」。代码批量改参数就是改这里。']]});
+node('fl_mat','learn','先学：特效材质','特效材质几乎都是 Unlit（不受光照）：颜色写进 Emissive（自发光），透明度写进 Opacity。',{
+  d:['Shading Model = Unlit：特效自己发光，不需要灯照。',
+     'Blend Mode：Additive（叠加，越叠越亮，适合光和火花）；Translucent（半透明，能把画面变暗，适合烟和暗色圆盘）；Masked（要么画要么不画，按 Opacity Mask 和阈值裁掉，便宜）。',
+     '粒子专用输入节点：Particle Relative Time（粒子年龄 0→1）、Vertex Color（Niagara 传来的 Particles.Color，含透明度）、Particle Random（每个粒子一个随机数）、Dynamic Parameter（Niagara 传来的 4 个自定义数）。',
+     'Custom 节点：直接写一段 HLSL（着色器代码），复杂公式写成代码比连几十个节点清楚。',
+     'World Position Offset（WPO）：在顶点着色器里挪顶点，可以做「面片随寿命缩放」这种效果。',
+     'Usage 开关：材质要勾 Used with Niagara Sprites / Mesh Particles / Ribbons，否则用在对应渲染器上显示默认格子材质。',
+     '软粒子（Depth Fade）：用场景深度减像素深度，让面片插进地面处边缘变柔。Masked / 不透明材质读不到场景深度。'],
+  qa:[['刚建好的特效是灰色或格子？','着色器还在后台编译，编完前用默认材质。项目的截图测试会先等 FinishAllCompilation。'],
+      ['Additive 和 Translucent 怎么选？','看原作材质实例：MI_Add_* 就是叠加。叠加不能把画面变暗，所以暗色圆盘这类层必须用半透明。']]});
+node('fl_model','learn','先学：项目的特效配置','Niagara 系统只是素材；什么时候开始、播多久、怎么动由项目的 EffectModel 资产描述（照原作 EffectModelBase）。',{
+  d:['DA_Fx_* = UWuwaEffectModelNiagara：引用 Niagara 系统 + StartTime + Location / Rotation / Scale 曲线 + User 参数曲线。',
+     'Group（UWuwaEffectModelGroup）：把多个 Model 打包，各自带延迟一起播。动画通知引用的是 Group。',
+     '为什么多这一层：同一个 Niagara 系统可以被不同技能用不同大小 / 时长复用；原作就这么组织，数据可以一一对上。'],
+  qa:[['两个角色同时放同一招，共享的 Model 会不会互相影响？','不会。Model 只读；播放状态（组件、已播时间）在运行时的 Spec 对象里，每次播放一个 Spec。这就是 Model / Spec 分开的原因。']]});
+node('fl_notify','learn','先学：动画通知','蒙太奇时间轴上的标记：动画播到那一帧，引擎调用通知对象的 Notify()。PlayEffect 就是一个通知类。',{
+  d:['Notify（一次）和 NotifyState（NotifyBegin / Tick / End 持续一段）。',
+     '通知对象是蒙太奇的子对象（Outer 是蒙太奇），它的属性（Model、骨骼、偏移）跟着蒙太奇一起保存。']});
+node('fd_data','concept','已分析的数据（一段攻击）','每层：网格或面片、贴图、颜色曲线、混合方式、寿命、数量、大小、出生位置 / 速度、出现时间；整体：挂点骨骼、偏移、是否跟随。',{
+  d:['例：Dg_02_2 刀光层 = 网格粒子，缩放 (3.5, 3.5, 2)，寿命 0.2 秒，透明度 ×0.1，绕 Z 轴转 16π。']});
+node('fs_mat','step','1. 每层做一个材质','新建 Unlit 材质 → 设混合方式 → Custom 节点写颜色 / 透明度公式 → 接到 Emissive 和 Opacity。',{
+  steps:['内容浏览器右键 → Material，命名 M_<层名>。',
+     'Details：Shading Model = Unlit；Blend Mode 按数据；勾 Two Sided（刀光两面都要看得到）。',
+     'Usage：勾 Used with Niagara Sprites 或 Used with Niagara Mesh Particles（看这层用哪种渲染器）。',
+     '放输入节点：TextureCoordinate（UV）、Particle Relative Time（年龄）、Vertex Color、Particle Random；贴图用 Texture Object Parameter。',
+     '放一个 Custom 节点，Output Type = Float4，把上面的节点接成它的输入（UV、Age、VertexColor、VertexAlpha…），代码里算出 RGBA。',
+     '用 Component Mask 把输出拆成 RGB → Emissive Color，A → Opacity（Masked 则接 Opacity Mask 并设 Clip Value）。',
+     '加一个 Scalar Parameter「Intensity」控制亮度，之后好调。'],
+  api:[['UMaterial::BlendMode、SetShadingModel(MSM_Unlit)','就是 Details 面板那两个下拉框。'],
+       ['UMaterialExpressionCustom','Custom 节点：Code 字段是 HLSL，Inputs 是输入引脚。'],
+       ['UMaterialExpressionParticleRelativeTime 等','各个粒子输入节点对应的类。'],
+       ['GetEditorOnlyData()->EmissiveColor.Connect(0, Node)','把节点连到材质主节点的 Emissive 引脚。'],
+       ['PreEditChange / PostEditChange','改材质前后调用；PostEditChange 触发着色器重新编译。']],
+  code:[{t:'Editor/Effects/WuwaReferenceAssetImport.cpp · BuildMaterial（节选）',c:String.raw`M->PreEditChange(nullptr);
+M->GetExpressionCollection().Empty();          // 重建：先清空旧节点
+M->BlendMode = Blend == TEXT("additive") ? BLEND_Additive
+             : Blend == TEXT("masked")   ? BLEND_Masked : BLEND_Translucent;
+M->SetShadingModel(MSM_Unlit);
+M->TwoSided = true;
+M->bUsedWithNiagaraSprites = bSprite;
+M->bUsedWithNiagaraMeshParticles = !bSprite && !bRibbon;
+auto* Art = Expression<UMaterialExpressionCustom>(M);
+Art->OutputType = CMOT_Float4;
+Input(Art, TEXT("UV"), UV);
+Input(Art, TEXT("Age"), Age);
+Input(Art, TEXT("VertexAlpha"), Color, 4);    // 4 = VertexColor 节点的 A 输出
+// ……
+M->GetEditorOnlyData()->EmissiveColor.Connect(0, RGB);
+M->GetEditorOnlyData()->Opacity.Connect(0, Alpha);
+M->PostEditChange();                           // 触发重新编译`,
+     n:['GetEditorOnlyData()：材质的节点图只在编辑器里存在，打包后的游戏里只有编译好的着色器，所以连线数据放在 EditorOnlyData 里。',
+        'Connect(0, Node) 的 0 是源节点的第几个输出引脚。VertexColor 节点有 RGB/R/G/B/A 五个输出，A 是第 4 个（从 0 数）。']}],
+  qa:[['为什么用 Custom 节点写 HLSL，而不是连节点？','原作材质逻辑是从编译后的着色器反推的，本身就是一段公式（UV 旋转 → 平铺 → 平移 → 采样 → 颜色 ramp → 溶解）。写成代码能一行行对照；连节点要几十个，看不清。代价是 Custom 节点不能逐节点预览，引擎也不帮你优化。'],
+      ['DX12 下 Custom 代码报错？','SM6 不接受「向量三元运算」（cond ? float3 : float3），用 step() / lerp() 代替。项目踩过这个坑。'],
+      ['为什么要 Two Sided？','刀光是一片弧面，镜头转到背面时单面材质会消失。']]});
+node('fs_sys','step','2. 搭 Niagara 系统','新建 System → 每层加一个 Emitter（从模板复制）→ 改模块参数 → 换渲染器和材质 → 编译。',{
+  steps:['内容浏览器右键 → FX → Niagara System，选空系统。',
+     '加 Emitter：网格层从 SimpleSpriteBurst 模板加（之后换成 Mesh 渲染器），面片层从 OmnidirectionalBurst，拖尾层从 Fountain（换成 Ribbon 渲染器）。',
+     'Emitter Properties：Sim Target = CPU；Local Space 按数据；勾 Determinism 并填 Random Seed（每次播放一样，方便对照）；Bounds 改 Fixed。',
+     'Emitter State：只播一次，Loop Duration = 出生时间 + 最大寿命。',
+     'Spawn Burst Instantaneous：Spawn Count = 数量（网格层 1 个），Spawn Time = 延迟。',
+     'Initialize Particle：Lifetime、颜色、大小；Shape Location / Add Velocity 按数据，不需要就设 0。',
+     'Particle Update：Drag、Gravity；模板自带但数据里没有的模块（如 ScaleSpriteSize）取消勾选。',
+     'Render：删掉模板渲染器，加 Sprite / Mesh / Ribbon Renderer，设材质（Mesh 用 Override Materials）、网格、Sort Order（层的前后）。',
+     '数据里的特殊值（如出生朝向）：在 Particle Spawn 最后加 Set Parameters 模块，用 HLSL 表达式赋值。',
+     '点 Compile，没有报错再保存。'],
+  api:[['FNiagaraEditorUtilities::AddEmitterToSystem','= 系统里点「+ Emitter」选模板。'],
+       ['FVersionedNiagaraEmitterData','Emitter 某个版本的全部设置（Local Space、Sim Target、各阶段脚本、渲染器）。Niagara 的 Emitter 有版本，要先取这份数据再改。'],
+       ['Script->RapidIterationParameters.SetParameterValue','改模块输入框里的常量。'],
+       ['FNiagaraStackGraphUtilities::SetModuleIsEnabled','模块左边那个勾。'],
+       ['FNiagaraStackGraphUtilities::AddParameterModuleToStack','加 Set Parameters 模块。'],
+       ['UNiagaraSprite / Mesh / RibbonRendererProperties','三种渲染器，字段就是渲染器面板上的那些。'],
+       ['System->RequestCompile(true) + WaitForCompilationComplete','点 Compile 并等它编完。']],
+  code:[{t:'Editor/Effects/WuwaReferenceNiagaraBuilder.cpp · ConfigureEmitter（节选）',c:String.raw`FVersionedNiagaraEmitterData* Data = Handle.GetEmitterData();
+Data->RemoveParent();              // 断开与模板的继承：之后改模板不影响这里
+Data->bLocalSpace = Spec.bLocalSpace;
+Data->bDeterminism = true;         // 固定随机：每次播放一样
+Data->RandomSeed = Spec.RandomSeed;
+Data->SimTarget = ENiagaraSimTarget::CPUSim;
+Data->CalculateBoundsMode = ENiagaraEmitterCalculateBoundMode::Fixed;
+Data->FixedBounds = FBox(FVector(-600), FVector(600));
+SetRapid(*Data, TEXT(".SpawnBurst_Instantaneous.Spawn Count"), bSprite ? Spec.Count : 1);
+SetRapid(*Data, TEXT(".EmitterState.Loop Duration"),
+         Spec.SpawnTime + FMath::Max(Spec.Lifetime, Spec.LifetimeMax) + .025f);`,
+     n:['SetRapid 按名字「结尾」匹配参数，因为完整名字里带着发射器名，每层不一样。',
+        'Loop Duration 多加 0.025 秒：给最后出生的粒子留一帧，避免发射器先结束把它截掉。']},
+     {t:'同文件 · Mesh 渲染器',c:String.raw`auto* Renderer = NewObject<UNiagaraMeshRendererProperties>(Instance.Emitter, NAME_None, RF_Transactional);
+Renderer->Meshes.SetNum(1);
+Renderer->Meshes[0].Mesh = Spec.Mesh;
+Renderer->SortOrderHint = Spec.SortOrder;   // 半透明层之间的前后顺序
+Renderer->bOverrideMaterials = true;        // 不用网格自带材质，用第 1 步做的
+Renderer->OverrideMaterials.SetNum(1);
+Renderer->OverrideMaterials[0].ExplicitMat = Spec.Material;
+Instance.Emitter->AddRenderer(Renderer, Instance.Version);`,
+     n:['NewObject 第一个参数是 Outer（所属对象）：渲染器属于这个 Emitter，跟着它保存。','RF_Transactional：参与撤销（Ctrl+Z）。']}],
+  qa:[['为什么每层都是一次爆发，不用持续发射？','原作攻击特效几乎都是一次性的（0.2 秒的刀光、50 毫秒的火花）。原作按时间持续出生的层，项目按「同一时刻出生的粒子」拆成多个 Emitter，各自在自己的 Spawn Time 爆发，效果一样，还能逐个粒子对上原作数据。'],
+      ['Bounds 为什么要固定？','包围盒决定特效什么时候被视锥剔除（看不见就不画）。动态计算要每帧扫一遍粒子，一次性小特效没必要；但太小会让镜头一偏特效就消失，所以给了 ±6 米。'],
+      ['网格层为什么把轴心折进 WPO？','Niagara 会把网格的轴心偏移乘上粒子缩放，而项目的缩放曲线在材质 WPO 里做，两边对不上就出现 9 米长的「针」。所以轴心放进 WPO、渲染器轴心设 0。嘉贝开枪那两条长线就是这个原因。']]});
+node('fs_model','step','3. 做特效配置资产','每个 Niagara 系统配一个 DA_Fx_*（Niagara Model）和一个 Group；整体缩放、位移、播放中的旋转写在这里。',{
+  steps:['内容浏览器右键 → Miscellaneous → Data Asset → 选 WuwaEffectModelNiagara，命名 DA_Fx_<角色>_<阶段>_<名字>。',
+     '填 NiagaraRef（第 2 步的系统）、StartTime、Location / Rotation / Scale（常量；要随时间变就勾 bUseCurve 编辑曲线）。',
+     '再建一个 WuwaEffectModelGroup，EffectData 里加上这个 Model（值 = 延迟秒数）。'],
+  api:[['FWuwaEffectVectorCurve','一个常量 + 三条 FRichCurve（X/Y/Z）。bUseCurve = false 时只用常量。'],
+       ['FRichCurve::AddKey、RCIM_Cubic、RCTM_User','加关键帧，三次插值，切线手动给（用原作曲线的切线值）。'],
+       ['UObject::Modify()','改资产前调用：记录撤销，并把包标记为已修改。']],
+  code:[{t:'Commandlets/WuwaChangliAttackEffectSetupCommandlet.cpp（节选）',c:String.raw`Niagara->Modify();
+Niagara->NiagaraRef = System;
+Niagara->StartTime = StartTime;
+Niagara->Scale = FWuwaEffectVectorCurve(FVector(ModelScale ? *ModelScale : 1.f));
+if (!P.YawKeys.IsEmpty())
+{
+    Niagara->Rotation.bUseCurve = true;     // 播放中绕 Z 轴转（原作子 DA 的 Rotation 曲线）
+    FRichCurve& Curve = Niagara->Rotation.CurveZ.EditorCurveData;
+    for (const FYawKey& Key : P.YawKeys)
+    {
+        FRichCurveKey& Added = Curve.GetKey(Curve.AddKey(Key.Time, Key.Value));
+        Added.InterpMode = RCIM_Cubic;
+        Added.TangentMode = RCTM_User;
+        Added.ArriveTangent = Key.ArriveTangent;
+        Added.LeaveTangent = Key.LeaveTangent;
+    }
+}
+Group->EffectData.Add(Niagara, 0.f);`,n:[]}]});
+node('fs_notify','step','4. 挂到技能蒙太奇','打开蒙太奇 → 在数据时间点加 PlayEffect 通知 → 选 Group、骨骼、偏移、是否跟随。',{
+  steps:['双击打开蒙太奇（例：AM_Jiabei_Attack02）。',
+     'Notifies 轨道右键 → Add Notify → Wuwa Anim Notify Play Effect。',
+     '拖到数据里的时间；Details 填 Model（Group 资产）、Socket Name、Location / Rotation Offset、Scale、Follow。',
+     '特效通知单独放一条轨道（项目叫 Effect，橙色），和技能节奏的通知分开，好找。'],
+  api:[['FAnimNotifyEvent::Link(Montage, Time)','把通知放到蒙太奇某个时间（会算出它属于哪个片段）。'],
+       ['Montage->SortNotifies() / RefreshCacheData()','加完后排序、刷新缓存。'],
+       ['FAnimNotifyEvent::RefreshTriggerOffset','重算触发偏移，不做的话第 0 帧的通知不会触发（见 代码精读）。']],
+  code:[{t:'运行时 · Notifies/WuwaAnimNotify_PlayEffect.cpp',c:String.raw`void UWuwaAnimNotify_PlayEffect::Notify(USkeletalMeshComponent* MeshComp, ...)
+{
+    UWuwaEffectSystem* Effects = UWuwaEffectSystem::GetEffectSystem(MeshComp);
+    if (!Effects) return;              // 动画编辑器的预览世界没有特效系统
+    FWuwaEffectSpawnRequest Request;
+    Request.Model = Model;
+    const FTransform Offset(RotationOffset, LocationOffset, Scale);
+    const FTransform Socket = MeshComp->GetSocketTransform(SocketName);
+    if (bFollow)
+    {   // 挂上去后父级缩放还会作用在相对变换上：先除掉插槽缩放
+        Request.AttachTo = MeshComp;
+        Request.SocketName = SocketName;
+        Request.Transform = Offset * FTransform(FQuat::Identity, FVector::ZeroVector, Undo);
+    }
+    else
+        Request.Transform = Offset * FTransform(Socket.GetRotation(), Socket.GetLocation());
+    Effects->SpawnEffect(Request);     // 短表现：播完系统自己回收，不持有句柄
+}`,
+     n:['FTransform 相乘：A * B = 先做 A，再做 B（A 在 B 的空间里）。Offset * Socket 就是「在骨骼的空间里偏移」。',
+        '故意丢掉骨骼的缩放：模型导入时根骨骼带了 100 倍缩放，直接用会让特效大 100 倍、偏移远 100 倍。']}],
+  qa:[['为什么在动画编辑器里预览蒙太奇看不到特效？','特效系统 UWuwaEffectSystem 的 DoesSupportWorldType 只在 Game / PIE 世界创建，动画编辑器的预览世界没有它，通知直接 return。要看效果得 PIE 或跑截图测试。'],
+      ['Follow 选哪个？','刀光、身上的光：跟随；地上的裂纹、留在原地的烟：不跟随。对应原作数据的 Attached（默认 true）。']]});
+node('fs_tune','step','5. 看效果、对照、调','PIE 放技能看整体；用截图工具在同一时刻截图和原作视频比；不对就回去改材质或模块参数。',{
+  steps:['PIE（编辑器里点 Play）放技能看整体节奏。',
+     '逐帧对照：shoot.ps1 在技能第 N 秒截图（-Shots），-DarkFloor 黑地板看清颜色，-EffectViews=Left,Right 侧视。',
+     '单独看一个系统：gallery.ps1 把系统并排生成，-Pitch -65 俯视。',
+     '调：亮度改材质 Intensity，大小改 Model 的 Scale，时间改通知位置或 StartTime。'],
+  qa:[['第一次截图什么都没有？','刚改完第一次运行，着色器还在编译，再跑一次。'],
+      ['颜色看起来特别艳？','可能是自动曝光把很暗的画面提亮了。对照前用 ShowFlag.EyeAdaptation 0 关掉。项目踩过：以为是材质问题，其实是曝光。']]});
+node('fs_decal','step','贴花 Decal（地裂）','投到地面上的贴图。材质 Domain = Deferred Decal；运行时每次播放新建 DecalComponent。',{
+  d:['材质：MaterialDomain = MD_DeferredDecal、Unlit；贴花空间的 UV 用 TexCoord0。','UWuwaEffectDecalSpec：组件每次新建、结束销毁，只复用 Spec 对象。'],
+  f:['Game/Effect/Specs/Decal/WuwaEffectDecalSpec.h']});
+node('fs_ghost','step','残影 Ghost（冲刺）','复制角色当前姿势生成影子，按频率生成、逐渐淡出。',{
+  d:['通知 AnimNotifyState_Ghost 给出生成频率（嘉贝冲刺 10 次/秒）和单个残影寿命（0.6 秒）。','残影材质：Masked + Unlit + 抖动透明；淡出值通过 Custom Primitive Data 传给材质。'],
+  qa:[['Custom Primitive Data 是什么？','组件自带的一小组 float。材质里的 Scalar Parameter 勾 Use Custom Primitive Data 后读它。改它比给每个残影建动态材质实例（MID）便宜，同一材质的多个组件可以各有各的值。']],
+  f:['Game/Effect/Specs/Ghost/WuwaEffectGhostSpec.h','Game/Animation/Notifies/WuwaAnimNotifyState_Ghost.h']});
+node('fs_post','step','后处理 / 灯光','全屏径向模糊用后处理材质（MD_PostProcess）；一闪的光用点光源组件。',{
+  d:['径向模糊：后处理材质读 SceneTexture（当前画面），朝中心采样 16 次叠加。强度随时间由 PostProcess Spec 每帧写。','灯光：EffectModelLight → 每次播放生成 PointLightComponent。'],
+  f:['Game/Effect/Specs/PostProcess/WuwaEffectPostProcessSpec.h','Game/Effect/Specs/Light/WuwaEffectLightSpec.h']});
+node('fs_matctl','step','角色材质控制（边缘光）','技能期间让角色身上发光：改角色材质参数，结束还原。',{
+  d:['原作 AnimNotifyAddMaterialControllerData：分 Start / Loop / End 三段，按段内进度算系数。','角色材质里先加好边缘光计算（WuwaCharacterRimSetup），Spec 运行时只写参数（UseRim、RimColor、Intensity…），结束时还原。'],
+  f:['Game/Effect/Specs/MaterialController/WuwaEffectMaterialControllerSpec.h']});
+
+/* ----- Sequence 镜头 ----- */
+node('sl_seq','learn','先学：Sequencer','LevelSequence 是时间轴资产：Binding（绑定的对象）下挂 Track（轨道），轨道里是 Section（片段），片段里是 Channel（通道）上的关键帧。',{
+  d:['例：相机绑定 → Transform 轨道 → 一个 Section → 9 个 Channel（位置 XYZ、旋转 XYZ、缩放 XYZ），每个 Channel 上一串关键帧。',
+     '帧率有两个：Tick Resolution（内部精度，关键帧时间按它存）和 Display Rate（界面显示，比如 30fps）。',
+     'Camera Cut 轨道：这段时间用哪个相机看。Playback Range：从第几帧播到第几帧。'],
+  qa:[['为什么代码打关键帧用 FFrameNumber 而不是秒？','Sequencer 内部用整数帧（按 Tick Resolution）存时间，避免浮点误差累积。秒要先乘 Tick Resolution 换成帧。']]});
+node('sl_bind','learn','先学：借用 / 自带 / 绑定 Tag','Possessable = 借用场景里已有的对象；Spawnable = 序列播放时自己生成的对象；Binding Tag 让代码运行时换掉绑定的对象。',{
+  d:['大招镜头里：角色是 Possessable（借用正在放大招的角色），相机是 Spawnable（序列自己生成一台 CineCamera）。',
+     '问题：做序列时不知道运行时是哪个角色实例。办法：给角色绑定打 Tag「Role」，运行时 SetBindingByTag 换成当前角色。',
+     '相机绑定打 Tag「SequenceCamera」，运行时按 Tag 找到生成出来的相机。']});
+node('sl_cam','learn','先学：视角切换','屏幕看的是 PlayerController 的 ViewTarget。切镜头 = SetViewTargetWithBlend(新相机, 混合时间)。',{
+  d:['CineCameraActor：电影相机，用焦距（mm）+ 传感器尺寸决定视角，和 FOV 可以互相换算。原作给 FOV，项目换算成焦距写进序列。',
+     'PlayerCameraManager 负责两个 ViewTarget 之间的平滑过渡。',
+     'Transform Origin：运行时给序列指定一个「原点 Actor」，序列里的绝对坐标都变成相对它。']});
+node('sd_data','concept','已分析的镜头数据','相机每帧的位置 / 旋转、焦距、挂在哪根骨骼、序列时长、混入 / 混出时间、隐藏 HUD 多久。',{});
+node('ss1','step','1. 新建 LevelSequence','内容浏览器右键 → Cinematics → Level Sequence；设 Display Rate 和 Playback Range。',{});
+node('ss2','step','2. 绑定角色 + 打 Tag','把一个角色加进序列（Possessable），绑定右键 → Tags 加「Role」。',{
+  steps:['关卡里放一个角色（只是制作用），Sequencer 里 + Track → Actor To Sequencer 把它加进来。','绑定右键 → Tags → 加 Role。运行时会换成真正放大招的角色，所以制作用的是哪个实例不重要。']});
+node('ss3','step','3. 加相机 + 关键帧','加 CineCamera 并转成 Spawnable、打 Tag「SequenceCamera」，按数据打 Transform 和焦距关键帧，需要时加 Attach 轨道挂到角色骨骼。',{
+  steps:['+ Track → Cine Camera Actor；绑定右键 → Convert to Spawnable。','绑定打 Tag：SequenceCamera。','Transform 轨道按数据逐帧打位置 / 旋转；CineCameraComponent → Current Focal Length 轨道打焦距。','相机要跟着角色某根骨骼：加 Attach 轨道，选角色绑定和 Socket。','Spawn 轨道：控制相机什么时候存在。','（嘉贝大招）序列里还可以放 Niagara 的 Spawnable 播特效。'],
+  api:[['UMovieScene::AddSpawnable / AddPossessable','加自带 / 借用的绑定。'],
+       ['MovieScene->AddTrack<UMovieScene3DTransformTrack>(Guid)','给绑定加 Transform 轨道。'],
+       ['Track->CreateNewSection() + Section->SetRange(TRange<FFrameNumber>::All())','新建片段，范围无限（整段都生效）。'],
+       ['Section->GetChannelProxy().GetChannels<FMovieSceneDoubleChannel>()','取出片段里的通道（Transform 用 double）。'],
+       ['Channel.GetData().AddKey(FFrameNumber, Value)','打一个关键帧。'],
+       ['UMovieScene3DAttachTrack::AddConstraint','Attach：一段时间挂到某个绑定的骨骼上。']],
+  code:[{t:'WuwaAnimationEditor/.../WuwaSequenceCameraSetupCommandlet.cpp（节选）',c:String.raw`UMovieScene3DTransformTrack* Track = MovieScene->AddTrack<UMovieScene3DTransformTrack>(Guid);
+UMovieScene3DTransformSection* Section =
+    Cast<UMovieScene3DTransformSection>(Track->CreateNewSection());
+Section->SetRange(TRange<FFrameNumber>::All());
+TArrayView<FMovieSceneDoubleChannel*> Channels =
+    Section->GetChannelProxy().GetChannels<FMovieSceneDoubleChannel>();
+for (int32 Index = 0; Index < Channels.Num(); ++Index)
+    FillChannel<FMovieSceneDoubleChannel, FMovieSceneDoubleValue>(*Channels[Index], Defs[Index]->AsObject());
+Track->AddSection(*Section);`,n:['Channel 顺序固定：位置 X/Y/Z、旋转 X/Y/Z、缩放 X/Y/Z。','CreateNewSection 只是创建，必须 AddSection 才真正放进轨道。']}]});
+node('ss4','step','4. 挂到大招蒙太奇','切镜头那一帧加 SequenceCamera 通知，填序列、混入 / 混出时间、隐藏 HUD、只播多久、挂点骨骼。',{
+  qa:[['配置里的序列为什么是软引用（TSoftObjectPtr）？','通知是蒙太奇的一部分。硬引用会让加载蒙太奇时把序列以及序列引用的相机、特效、网格全部加载进内存；软引用只存路径，用的时候再加载。']]});
+node('ss5','cpp','5. 运行时播放','通知 → SequenceCameraSubsystem：生成原点 Actor 挂到角色骨骼 → 创建序列播放器 → 绑定角色 → 播放 → 找到相机 → 切视角。',{
+  api:[['ULevelSequencePlayer::CreateLevelSequencePlayer','在世界里生成 ALevelSequenceActor 和播放器。'],
+       ['FMovieSceneSequencePlaybackSettings::bDisableCameraCuts','不让序列自己的 Camera Cut 切视角。'],
+       ['UDefaultLevelSequenceInstanceData::TransformOriginActor','序列原点 = 这个 Actor（先设 bOverrideInstanceData = true）。'],
+       ['ALevelSequenceActor::SetBindingByTag','把带 Tag 的绑定换成指定对象。'],
+       ['FindNamedBindings + GetBoundObjects','按 Tag 找绑定，再取运行时它实际对应的对象（生成出来的相机）。'],
+       ['APlayerController::SetViewTargetWithBlend','画面切到这个相机，带混合时间。']],
+  code:[{t:'Game/Camera/WuwaSequenceCameraSubsystem.cpp · PlayCameraSequence（节选）',c:String.raw`APlayerController* PC = Cast<APlayerController>(InCharacter->GetController());
+if (!PC || !PC->IsLocalController()) return false;   // 只给本机玩家切镜头
+AActor* OriginActor = World->SpawnActor<AActor>(AActor::StaticClass(), InCharacter->GetActorTransform(), Params);
+USceneComponent* Root = NewObject<USceneComponent>(OriginActor, TEXT("Root"));
+OriginActor->SetRootComponent(Root);
+Root->RegisterComponent();
+Root->AttachToComponent(Mesh, FAttachmentTransformRules::SnapToTargetNotIncludingScale, AttachSocket);
+
+FMovieSceneSequencePlaybackSettings Settings;
+Settings.bDisableCameraCuts = true;      // 视角由这里切（混合时间同原作）
+ALevelSequenceActor* SequenceActor = nullptr;
+ULevelSequencePlayer::CreateLevelSequencePlayer(World, Asset, Settings, SequenceActor);
+SequenceActor->bOverrideInstanceData = true;
+if (auto* Data = Cast<UDefaultLevelSequenceInstanceData>(SequenceActor->DefaultInstanceData))
+    Data->TransformOriginActor = OriginActor;
+SequenceActor->SetBindingByTag(WuwaSequenceCamera::RoleTag, { InCharacter }, false);
+SequenceActor->GetSequencePlayer()->Play();
+for (const FMovieSceneObjectBindingID& Binding : SequenceActor->FindNamedBindings(WuwaSequenceCamera::CameraTag))
+    for (UObject* Bound : SequenceActor->GetSequencePlayer()->GetBoundObjects(Binding))
+        if (AActor* Camera = Cast<AActor>(Bound)) CameraActor = Camera;
+if (AActor* Camera = CameraActor.Get()) PC->SetViewTargetWithBlend(Camera, Current.BlendInTime);`,
+     n:['NewObject 出来的组件要 RegisterComponent() 才会进入世界（参与变换更新、渲染）。在构造函数外动态加组件都要这一步。',
+        'SnapToTargetNotIncludingScale：位置旋转对齐到骨骼，但不继承缩放（根骨骼有 100 倍缩放）。']}],
+  qa:[['为什么另外生成一个「原点 Actor」，不直接用角色？','原点要对齐到指定骨骼，而且不能带缩放，所以单独生成一个空 Actor 挂上去当原点。'],
+      ['为什么关掉序列自己的 Camera Cut？','序列的 Camera Cut 是硬切。原作有混入 / 混出时间，所以由代码用 SetViewTargetWithBlend 控制。'],
+      ['为什么 Tick 里还要再找一次相机？','Spawnable 在序列第一次求值时才生成，Play() 之后不一定马上有。找不到就每帧补找一次。'],
+      ['成员为什么用 TWeakObjectPtr 存序列 Actor、相机、角色？','这些 Actor 属于世界，随时可能被销毁（切地图、角色死亡）。子系统只是「看着」它们，不该让它们活着。弱指针在对象销毁后自动变无效，Get() 返回空，不会访问野指针。'],
+      ['为什么只给本地控制的角色播？','镜头是本机表现，别人的角色放大招不该切你的镜头。原作 CheckCameraSequenceCondition 也是这样。']]});
+node('ss6','cpp','6. 结束、混回、清理','到时长后先暂停，SetViewTargetWithBlend 混回角色；混合结束再 Stop、销毁序列 Actor 和原点，恢复 HUD。',{
+  code:[{t:'同文件 · StopSequence（节选）',c:String.raw`if (ULevelSequencePlayer* Player = Sequence->GetSequencePlayer()) Player->Pause();
+if (PC && PC->GetViewTarget() == CameraActor.Get())
+    PC->SetViewTargetWithBlend(Owner, bImmediate ? 0.f : Current.BlendOutTime);
+if (bImmediate || Current.BlendOutTime <= 0.f) Cleanup();
+else BlendOutUntil = PlayTime + Current.BlendOutTime;   // Tick 里到时间再 Cleanup`,n:[]}],
+  qa:[['为什么混出时先 Pause，不直接 Stop？','Stop 会让序列收回它生成的相机。混合还没结束相机就没了，画面会跳。所以先暂停停在最后一帧，等混合时间过去再在 Cleanup 里 Stop 和销毁。'],
+      ['隐藏 HUD 是怎么做的？','拿到主 HUD 界面的根 UIItem，SetIsUIActive(false)，时间到再设回 true。不是关闭界面，所以 HUD 的状态不会丢。']]});
+
+/* ----- UI ----- */
+node('ul_lgui','learn','先学：LGUI','LGUI 的 UI 是场景里的一堆 Actor + 组件；UIItem 是所有 UI 节点的基础组件，Prefab 是一棵节点树的模板。',{
+  d:['UIItem：节点（位置、尺寸、锚点、父子关系）。UISprite / UITexture / UIText：图片、贴图、文字。',
+     'LGUICanvas：一棵 UI 树的根，决定渲染方式（屏幕空间 / 世界空间）和排序。',
+     'Prefab（ULGUIPrefab）：一棵 Actor 树的模板，LoadPrefab 一次实例化出整棵树。',
+     '锚点（Anchor）：节点相对父节点哪个点对齐、是否拉伸。适配不同分辨率靠它。'],
+  qa:[['LGUI 和 UE 自带的 UMG 有什么区别？','UMG 是 Slate 控件树；LGUI 是场景里的 Actor + 组件，能做 3D UI、直接放 Niagara、和场景物体一起排序。原作用的就是 LGUI，要按原作 Prefab 1:1 还原只能用它。']]});
+node('ul_load','learn','先学：软引用与异步加载','TSoftObjectPtr 只存资源路径，不会自动加载；要用时异步加载，加载完的回调里再用。',{
+  d:['硬引用（UPROPERTY 直接指向资产）：加载引用方时，被引用的资产也一起加载。',
+     '软引用（TSoftObjectPtr / FSoftObjectPath）：只是一个路径。配置表里存几十个界面的 Prefab，用硬引用会让游戏一开始就把所有界面都读进内存。',
+     '同步加载 LoadSynchronous：卡住游戏线程直到读完磁盘。异步加载：后台读，完成后回调。',
+     '项目统一用 UWuwaResourceSubsystem::LoadAsync（内部是 FStreamableManager），返回 FStreamableHandle，可以查进度、取消。']});
+node('ul_mvc','learn','先学：MVC 与事件','View 只管显示，Model 只存数据，Controller 写逻辑；三者通过事件联系，不直接互相调用。',{
+  d:['事件子系统 UWuwaEventSubsystem：Emit(事件 Tag, 参数) 发出，按 Tag 监听。参数是任意 USTRUCT，用 FInstancedStruct 装着。',
+     '好处：战斗系统不用 include 任何 UI 头文件；HUD 没打开时事件发了也没人收，不会出错。'],
+  code:[{t:'Game/LGUI/Mvc/WuwaEventSubsystem.h',c:String.raw`using FWuwaEventHandler = TFunction<void(const FInstancedStruct& Payload)>;
+
+void Emit(FGameplayTag Event, const FInstancedStruct& Payload = FInstancedStruct());
+template <typename T>
+void Emit(FGameplayTag Event, const T& Payload) { Emit(Event, FInstancedStruct::Make(Payload)); }`,
+     n:['模板重载：调用方直接传自己的结构体，模板帮它包成 FInstancedStruct。']}],
+  qa:[['FInstancedStruct 是什么？','一个能装任意 USTRUCT 的盒子：里面记着结构体类型和数据。接收方用 Payload.GetPtr<FMyEvent>() 取出来，类型不对返回空。一个事件系统就能传各种参数，不用为每种事件写一个委托。'],
+      ['事件名为什么用 GameplayTag 而不是字符串？','Tag 要先登记，拼错会找不到（有校验）；比较是整数比较，比字符串快；编辑器里能下拉选。']]});
+node('ul_sub','learn','先学：Subsystem（子系统）','UE 自动创建、自动销毁的单例服务，按「跟着谁活」分几种。',{
+  d:['UWorldSubsystem：每个世界一份，切地图销毁重建。例：特效系统、伤害、战斗单位登记表。',
+     'UTickableWorldSubsystem：同上，还每帧 Tick。例：序列镜头、子弹、对象池、卡通光照。',
+     'UGameInstanceSubsystem：整个游戏进程一份，切地图不销毁。例：资源加载、事件。',
+     'ULocalPlayerSubsystem：每个本地玩家一份。例：UI 管理器。',
+     '获取：World->GetSubsystem<T>()、GameInstance->GetSubsystem<T>()、LocalPlayer->GetSubsystem<T>()。'],
+  code:[{t:'Game/Effect/System/WuwaEffectSystem.cpp',c:String.raw`bool UWuwaEffectSystem::DoesSupportWorldType(EWorldType::Type WorldType) const
+{
+    return WorldType == EWorldType::Game || WorldType == EWorldType::PIE;
+}`,n:['编辑器里有很多「世界」：关卡编辑器、动画编辑器预览、材质预览……这个重写让特效系统只在游戏和 PIE 里创建。']}],
+  qa:[['UiManager 为什么是 LocalPlayerSubsystem？','UI 属于某个玩家（分屏时每人一套），而且切地图不应该销毁 UI 框架本身。但界面 Actor 属于旧世界会被销毁，所以它监听 OnWorldCleanup 先关界面，PostLoadMapWithWorld 之后重开常驻界面。'],
+      ['为什么特效系统不用 Actor 而用子系统？','它不需要在场景里有位置，也不需要手动放进关卡；每个世界自动有一份、世界结束自动清理，正好符合「世界级服务」。']]});
+node('ud_data','concept','已分析的界面数据','节点树（父子关系）、每个节点的锚点 / 位置 / 尺寸、图片、文字和字体、哪些节点代码要用。',{});
+node('us1','step','1. 拼 Prefab','按数据搭 UI 节点树，存成 LGUI Prefab。',{
+  steps:['关卡里建 UI 根（LGUI 的 Canvas），右键加 UIItem、UISprite、UIText，按数据设锚点、位置、尺寸。','图片用 Sprite，文字设字体（项目用原作字体）。','选中整棵树 → 存成 Prefab（例：HUD_Main）。','项目里大界面由 WuwaKuroHudBuild 按布局数据自动生成，结果等同于手拼。']});
+node('us2','step','2. 组件注册表','Prefab 根节点挂 UWuwaUiComponentsRegistry，把代码要用的控件按顺序拖进 Components 数组。',{
+  code:[{t:'Game/LGUI/Component/WuwaUiComponentsRegistry.h（注释原文）',c:String.raw`// 预制体这边按顺序填 Actor，代码那边用下标当编号取组件：GetButton(0)、GetText(1)……
+UPROPERTY(EditAnywhere, Category = "Wuwa UI")
+TArray<TObjectPtr<AActor>> Components;`,n:[]}],
+  qa:[['为什么按下标取，不按名字找？','原作就是这么做的（ComponentRegistry）。按名字找要遍历整棵树，名字一改就失效还不报错；按下标是数组访问，Prefab 和代码一一对应。']]});
+node('us3','step','3. 登记 DT_UiViews','配置表加一行：行名 = 界面名，填 Prefab（软引用）、Layer、ViewClass、是否允许多开。',{
+  d:['层决定进出规则：HUD 层用 Set（不重复）、Normal 用 Stack（后开先关，像页面栈）、Pop 用 List、Float 用 Queue（排队一个个弹）。'],
+  code:[{t:'Game/LGUI/Core/WuwaUiManager.cpp · Initialize',c:String.raw`// 每层一个容器（≈ 鸣潮 bCr）：进出规则由容器决定。
+Containers.Add(EWuwaUiLayer::HUD,    NewObject<UWuwaUiSetContainer>(this));
+Containers.Add(EWuwaUiLayer::Normal, NewObject<UWuwaUiStackContainer>(this));
+Containers.Add(EWuwaUiLayer::Pop,    NewObject<UWuwaUiListContainer>(this));
+Containers.Add(EWuwaUiLayer::Float,  NewObject<UWuwaUiQueueContainer>(this));
+ViewConfigTable = GetDefault<UWuwaUISettings>()->ViewConfigTable.LoadSynchronous();`,
+     n:['GetDefault<UWuwaUISettings>()：读项目设置（Project Settings 里那一页）的默认对象。配置表路径就填在那里。']}]});
+node('us4','step','4. 写 View 类','继承 UWuwaUiView，在生命周期函数里写逻辑：OnCreate 取控件、OnAddEventListener 订阅事件、OnBeforeShow / OnAfterHide……',{
+  d:['状态：None → Creating → Created → Starting → Started → Showing → Shown → Hiding → Hidden → Destroying → Destroyed。框架推进状态，View 只在对应虚函数里写自己的逻辑。',
+     '别在构造函数里碰控件：那时 Prefab 还没加载。','OnStartAsync(Done)：需要异步准备数据时用，准备好了调用 Done。'],
+  code:[{t:'Game/LGUI/View/WuwaUiPanel.cpp · 加载 Prefab（节选）',c:String.raw`// LGUI 没有异步实例化：先异步加载预制体资源，回来再同步 LoadPrefab。
+TWeakObjectPtr<UWuwaUiPanel> WeakThis(this);
+LoadHandle = Resources->LoadAsync({Prefab.ToSoftObjectPath()}, FString::Printf(TEXT("UI:%s"), *GetClass()->GetName()),
+    [WeakThis, Prefab, Parent, OnDone]()
+    {
+        UWuwaUiPanel* Self = WeakThis.Get();
+        if (!Self) return;                 // 加载回来时界面已经没了
+        Self->HandlePrefabLoaded(Prefab, Parent, OnDone);
+    }, UWuwaResourceSubsystem::HighPriority);
+
+// HandlePrefabLoaded 里：
+LoadHandle.Reset();                        // 加载完就不需要句柄了
+AActor* NewRootActor = LoadedPrefab->LoadPrefab(ParentItem->GetWorld(), ParentItem, true);`,n:[]}],
+  qa:[['为什么先异步加载资源，再同步 LoadPrefab？','LGUI 只有同步实例化。慢的是读磁盘，放后台；实例化必须在游戏线程做，资源已经在内存里，同步也很快。'],
+      ['回调为什么捕获 WeakThis，不捕获 this？','加载要好几帧，期间界面可能已被关闭、对象被回收。捕获裸 this 的话回调执行时访问已释放内存会崩溃；弱指针 Get() 返回空就直接 return。'],
+      ['LoadHandle 为什么加载完就 Reset？','句柄持有资源引用，防止资源被回收。加载完之后资源由 Prefab 实例引用，句柄就没用了，留着会一直占内存。']]});
+node('us5','step','5. Model / Controller / 事件','Controller 订阅游戏系统变化 → 更新 Model → Emit 事件 → View 在监听里刷新控件。',{
+  d:['例：切人 → FormationUiController 更新 FormationModel → 发编队事件 → HUD 队伍栏刷新头像。',
+     'Controller 和 Model 是 LocalPlayerSubsystem，界面没开也一直在，所以打开界面时可以直接读 Model 的当前值。']});
+node('us6','step','6. 打开界面','UWuwaUiManager::Get(this)->OpenView(界面名)：查配置 → 检查规则 → 创建 View → 交给所在层的容器。',{
+  code:[{t:'Game/LGUI/Core/WuwaUiManager.cpp · OpenView（节选）',c:String.raw`UWuwaUiView* View = NewObject<UWuwaUiView>(this, ViewClass);
+const int32 ViewId = NextViewId++;
+View->Init(ViewName, ViewId, *Config, ParentItem);
+Views.Add(ViewId, View);
+
+TWeakObjectPtr<UWuwaUiManager> WeakThis(this);
+Container->OpenView(View, [WeakThis, ViewId, ViewName](bool bSuccess)
+{
+    // 失败时容器已经把界面移走并销毁完了，这里只需要忘掉它。
+    if (!bSuccess && WeakThis.IsValid()) WeakThis->ForgetView(ViewId);
+});
+return View;`,
+     n:['NewObject<UWuwaUiView>(this, ViewClass)：第二个参数传 UClass，可以创建配置表里指定的子类（多态创建）。','[WeakThis, ViewId, ViewName]：捕获列表，按值拷贝进 lambda。普通值拷贝没问题，对象只拷弱指针。']}],
+  qa:[['UWuwaUiManager::Get(this) 为什么从任何对象都能拿到？','它依次判断：传进来的是不是 LocalPlayer → 是不是 PlayerController → 都不是就取 0 号玩家的 PlayerController，再拿它 LocalPlayer 上的子系统。'],
+      ['返回的 View 马上能用吗？','对象有了，但 Prefab 可能还在异步加载，控件还不存在。要操作控件在 View 的 OnCreate / OnBeforeShow 里做。']]});
+node('us7','step','7. 动画与 UI 特效','打开 / 关闭动画、补间、UI 里的 Niagara、九宫格填充。',{
+  d:['UWuwaUiViewAnimation / TweenGroup：补间 = 一段时间内把位置、透明度从 A 变到 B。','UWuwaUINiagara：把粒子画在 UI 层；Substrate 下材质要接 SMF_UE4Unlit 才显示。','UWuwaUiSlicedFill：血条那种拉伸不变形的填充。']});
+
+/* ----- 技能 ----- */
+node('kl_gas','learn','先学：GAS','UE 的技能框架：ASC（挂在角色上的总管）、GA（技能逻辑）、GE（效果 / buff）、GameplayTag（状态标签）、AttributeSet（数值）。',{
+  d:['GA 的一生：先被「授予」给 ASC（GiveAbility，得到一个 Spec 句柄）→ 尝试激活（CanActivate 检查）→ ActivateAbility → 用任务等待各种事件 → EndAbility。',
+     'Instancing Policy（实例策略）：InstancedPerExecution = 每次激活新建一个 GA 对象；InstancedPerActor = 每个角色一个。项目的主技能用前者，同一技能正在放时还能被自己再次触发（连段）。',
+     'GE 可以改属性、给角色挂 Tag、持续一段时间；buff 都是 GE。'],
+  qa:[['Spec 是什么？','FGameplayAbilitySpec = 一条「授予记录」：哪个 GA 类、等级、来源对象、是否在激活中。ASC 用 Spec 句柄来激活 / 查找技能。']]});
+node('kl_montage','learn','先学：蒙太奇与根运动','技能动作都是蒙太奇；根运动让动画自己决定角色移动多远。',{
+  d:['蒙太奇（Montage）：在动画蓝图之上插播的动画，带分段（Section）和通知轨道。',
+     '根运动（Root Motion）：动画根骨骼的位移交给移动组件执行，所以冲多远、跳多高和原作动画一致。',
+     'FAnimMontageInstance：蒙太奇播放中的实例（位置、权重、是否淡出）。']});
+node('kl_task','learn','先学：AbilityTask','GA 里「等一件事」的工具：等几秒、等某个 Tag 出现、等蒙太奇播完。GA 结束时任务自动清理。',{
+  code:[{t:'Abilities/WuwaAirDodgeAbility.cpp（节选）',c:String.raw`if (UAbilityTask_WaitDelay* Delay = UAbilityTask_WaitDelay::WaitDelay(this, MinAirTime))
+{
+    Delay->OnFinish.AddDynamic(this, &UWuwaAirDodgeAbility::HandleMinAirTimeElapsed);
+    Delay->ReadyForActivation();
+}
+// 等落地：State.Position.Ground 出现时回调，只触发一次
+if (UAbilityTask_WaitGameplayTagAdded* Ground =
+        UAbilityTask_WaitGameplayTagAdded::WaitGameplayTagAdd(this, Tags.State_Position_Ground, nullptr, true))
+{
+    Ground->Added.AddDynamic(this, &UWuwaAirDodgeAbility::HandleGroundAdded);
+    Ground->ReadyForActivation();
+}`,n:['头文件里 HandleMinAirTimeElapsed 等回调都标了 UFUNCTION()，因为 AddDynamic 绑定动态委托需要反射。']}],
+  qa:[['ReadyForActivation 是做什么的？','创建任务只是准备好，调用它才真正开始。这样可以先绑好回调再启动，避免任务立刻完成时回调还没绑上。'],
+      ['为什么不用 SetTimer 计时？','定时器不跟 GA 绑定，GA 被打断后还得手动清掉，否则回调到已结束的技能。任务属于 GA，GA 结束就一起结束。'],
+      ['WaitGameplayTagAdd 最后的 true 是什么？','OnlyTriggerOnce：触发一次后任务自己结束。']]});
+node('kd_data','concept','已分析的技能数据','技能 ID、播哪几段蒙太奇、每个通知的时间（接招窗口、可提前结束、发子弹、特效、声音）、开始 / 结束 buff、输入规则。',{});
+node('ks1','step','1. 技能表加一行','角色的技能 DataTable 加一行：行名 = 技能 ID，填 GA 类、蒙太奇列表、SkillTags / ActionTags、能否走下边缘、开始 / 结束 buff、锁定参数。',{
+  f:['Game/NewWorld/Character/Common/Component/Skill/WuwaSkillTypes.h（FWuwaSkillInfo）']});
+node('ks2','step','2. GA 蓝图','新建 GA 蓝图（父类用项目的技能 GA 基类），在 Class Defaults 里设实例策略、Tag 等。大部分技能只需要这一步，不写代码。',{});
+node('ks3','cpp','3. 授予给角色','角色初始化时遍历技能表，每一行 GiveSkill：把 GA 授予给 ASC，并记下技能 ID → Spec 句柄。',{
+  code:[{t:'Abilities/WuwaAbilitySystemComponent.cpp · GiveSkill',c:String.raw`FGameplayAbilitySpecHandle UWuwaAbilitySystemComponent::GiveSkill(int32 SkillId, const FWuwaSkillInfo& Info, UObject* SourceObject)
+{
+    if (SkillId <= 0 || !Info.Ability || GrantedSkills.Contains(SkillId)) return FGameplayAbilitySpecHandle();
+    const FGameplayAbilitySpecHandle Handle = GiveAbility(FGameplayAbilitySpec(Info.Ability, 1, INDEX_NONE, SourceObject));
+    if (Handle.IsValid()) GrantedSkills.Add(SkillId, { Handle, Info.SkillTags });
+    return Handle;
+}`,n:['FGameplayAbilitySpec(类, 等级 1, 输入 ID INDEX_NONE, 来源对象)：项目不用 GAS 自带的输入绑定（输入 ID 填 INDEX_NONE），由自己的选招器决定激活谁。']}]});
+node('ks4','step','4. 输入规则','角色的输入配置加一行规则：哪个键、什么阶段、角色要有什么 Tag、额外条件 → 放这个技能。',{
+  d:['条件是可编辑的 UObject（C# 写的 InputCondition_*），在规则里直接新建并填参数。见 运行时 → 输入层 → 技能输入。']});
+node('ks5','step','5. 蒙太奇上加通知','接招窗口、ReadyEnd、转向吸附、发子弹、特效、声音，按数据时间放好。',{
+  d:['技能节奏类（AcceptInput / ReadyEnd）放一条轨道，特效、子弹、声音各放一条，方便对照。','加完记得刷新触发偏移（代码精读 → 编辑器 API）。']});
+node('ks6','cpp','6. 需要时写 C++ GA','通用 GA 表达不了的才写：例如空中闪避要「先加 buff 再播、落地时按着方向就接冲刺」。',{
+  code:[{t:'Abilities/WuwaAirDodgeAbility.cpp · ActivateAbility（节选）',c:String.raw`void UWuwaAirDodgeAbility::ActivateAbility(...)
+{
+    // 跳过 UWuwaSkillMontageAbility 的"直接播第 0 段"：原作先加 buff 再播
+    UWuwaGameplayAbilityBase::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
+    if (!IsActive()) return;
+    if (StartBuffId != 0)
+        if (UAbilitySystemComponent* ASC = GetAbilitySystemComponentFromActorInfo())
+            UWuwaBuffLibrary::AddBuff(ASC, StartBuffId);
+    if (!PlaySkillMontage(0)) { EndSkill(true); return; }
+    // ……开任务：最短滞空时间、等落地
+}`,n:[]}],
+  qa:[['为什么调用的是 UWuwaGameplayAbilityBase::ActivateAbility，不是 Super::？','Super 是直接父类 UWuwaSkillMontageAbility，它会马上播第 0 段蒙太奇。C++ 可以写明调用祖父类的版本，跳过中间一层。注释写了原因。'],
+      ['为什么调完马上检查 IsActive()？','基类激活时可能被技能系统拒绝（打断不了当前技能）而直接 EndAbility。不检查就会在一个已结束的 GA 上继续加 buff、播蒙太奇。'],
+      ['为什么用 EndSkill 而不是 EndAbility？','EndSkill 是项目封装：结束前向技能管理回报、摘掉 ActionTags，再调用 GAS 的 EndAbility。直接 EndAbility 会漏掉这些。']]});
+
+/* ===== 代码精读 ===== */
+node('cr_uclass','cpp','UCLASS / GENERATED_BODY：反射','UE 编译前用 UHT 扫描头文件，给带 UCLASS / USTRUCT / UPROPERTY / UFUNCTION 的东西生成「反射信息」。蓝图、存盘、垃圾回收、C# 都靠它。',{
+  d:['UHT（Unreal Header Tool）生成 xxx.generated.h，所以 #include "xxx.generated.h" 必须是头文件里最后一个 include。',
+     'GENERATED_BODY() 展开成构造函数声明、StaticClass() 等样板代码。',
+     '没有反射的东西：蓝图看不见、不能存进资产、GC 不认识、C#（UnrealSharp）也看不见。',
+     'UnrealSharp 的 C# 绑定（Glue）也是从反射信息生成的，所以要给 C# 调用的 C++ 函数必须是 UFUNCTION。'],
+  code:[{t:'Game/Effect/System/WuwaEffectSystem.h（节选）',c:String.raw`#include "WuwaEffectSystem.generated.h"      // 必须最后
+
+USTRUCT()
+struct FWuwaActiveEffect
+{
+    GENERATED_BODY()
+    UPROPERTY(Transient) TObjectPtr<UWuwaEffectSpec> Spec;
+    UPROPERTY(Transient) TObjectPtr<UWuwaEffectSpecPool> Pool;
+};
+
+UCLASS()
+class WUWA_API UWuwaEffectSystem : public UWorldSubsystem
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintPure, Category = "Effect", meta = (WorldContext = "WorldContextObject"))
+    static UWuwaEffectSystem* GetEffectSystem(const UObject* WorldContextObject);
+    UFUNCTION(BlueprintCallable, Category = "Effect")
+    FWuwaEffectHandle SpawnEffect(const FWuwaEffectSpawnRequest& Request);
+    // ……
+};`,n:['meta = (WorldContext = "WorldContextObject")：蓝图里调用时自动把当前对象填进这个参数，用户看不到这个引脚。','BlueprintPure：没有副作用的查询，蓝图里没有执行引脚；BlueprintCallable：有执行引脚。']}],
+  qa:[['WUWA_API 是什么？','模块导出宏：让别的模块（比如编辑器模块 WuwaAnimationEditor）能链接这个类。不写的话别的模块用它会链接失败。'],
+      ['类名为什么要加 U / A / F 前缀？','UE 约定，UHT 也会检查：U = UObject 派生，A = Actor，F = 普通结构体 / 类，T = 模板，E = 枚举，I = 接口。']]});
+node('cr_uprop','cpp','UPROPERTY 与垃圾回收','UObject 由 UE 的垃圾回收（GC）管理：没人引用就被回收。GC 只认 UPROPERTY 标记的引用。',{
+  d:['GC 定期从根对象出发，沿所有 UPROPERTY 指针走一遍，走不到的 UObject 被回收。',
+     '所以 UObject 成员要写 UPROPERTY() TObjectPtr<T>：GC 知道你在用它（不会回收），对象被销毁时这个指针也会被清空。',
+     '裸指针 T* 不加 UPROPERTY：GC 不知道，对象可能被回收，指针变野指针。',
+     'Transient：不存盘（运行时才有的对象，比如正在播放的特效）。',
+     'TObjectPtr<T> 是 UE5 推荐写法：编辑器里能做访问追踪和延迟加载，打包后和裸指针一样快。'],
+  code:[{t:'Game/Effect/System/WuwaEffectSystem.h · private',c:String.raw`UPROPERTY(Transient)
+TObjectPtr<UWuwaEffectSpecFactory> Factory;
+
+UPROPERTY(Transient)
+TMap<FGuid, FWuwaActiveEffect> ActiveEffects;   // 正在播放的特效：Spec + 借出它的池`,n:[]}],
+  qa:[['FWuwaActiveEffect 为什么要是 USTRUCT、字段也加 UPROPERTY？','它放在 TMap 里，Map 是 UPROPERTY，GC 会顺着 Map 走进结构体，但只认结构体里标了 UPROPERTY 的字段。不标的话，正在播放的 Spec 可能被回收。'],
+      ['普通 C++ 类（不是 UObject）要持有 UObject 怎么办？','用 TStrongObjectPtr，或者实现 FGCObject::AddReferencedObjects 手动报告给 GC。项目里一般直接放进某个 UObject 的 UPROPERTY。']]});
+node('cr_weak','cpp','TWeakObjectPtr：只看不拥有','弱引用：能访问对象，但不阻止它被回收或销毁；对象没了之后 Get() 返回空、IsValid() 为 false。',{
+  d:['原理：存的是对象在全局对象表里的编号 + 序列号。对象回收后编号可能被新对象复用，但序列号对不上，所以不会认错。',
+     '什么时候用：只是「关心」某个对象，它的生死不归你管。比如 Actor 属于世界、组件属于 Actor、回调时对象可能已经没了。',
+     '什么时候不用：你负责它的生命周期（自己 NewObject 的子对象），用 UPROPERTY 强引用。'],
+  code:[{t:'三个例子',c:String.raw`// 1. 特效请求：Game/Effect/Types/WuwaEffectSpawnRequest.h
+/** 留空则在世界中播放。弱引用避免播放请求延长场景组件的生命周期。 */
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Effect")
+TWeakObjectPtr<USceneComponent> AttachTo;
+
+// 2. 子系统看着世界里的 Actor：Game/Camera/WuwaSequenceCameraSubsystem.h
+TWeakObjectPtr<ALevelSequenceActor> Sequence;
+TWeakObjectPtr<AActor> CameraActor;
+TWeakObjectPtr<ACharacter> Character;
+
+// 3. 异步回调：Game/LGUI/Core/WuwaUiManager.cpp
+TWeakObjectPtr<UWuwaUiManager> WeakThis(this);
+Container->OpenView(View, [WeakThis, ViewId, ViewName](bool bSuccess)
+{
+    if (!bSuccess && WeakThis.IsValid()) WeakThis->ForgetView(ViewId);
+});`,n:[]}],
+  qa:[['特效请求里的 AttachTo 为什么用弱引用？','请求会被存起来（Group 里的子项、延迟播放）。强引用的话，角色已经销毁了，它的网格组件还因为被请求引用而不能回收。'],
+      ['弱指针每次用都要判断吗？','要。习惯写法：if (AActor* A = Weak.Get()) { …在这里用 A… }。拿到的强指针只在这个作用域里用，不存下来。'],
+      ['弱指针能放进 UPROPERTY 吗？','可以（上面例 1）。这样蓝图、序列化能看到它，GC 也不会因为它而保留对象。']]});
+node('cr_soft','cpp','TSoftObjectPtr：只存路径','软引用只存资源路径，不加载；用到时同步或异步加载。用来切断「加载 A 连带加载 B、C、D」。',{
+  d:['硬引用链：蒙太奇硬引用序列 → 序列硬引用特效 → 特效硬引用贴图……加载一个技能就把一大串读进内存。',
+     '软引用切断这条链：DT_UiViews 里的 Prefab、序列镜头配置的 CameraSequence 都是软引用。',
+     'LoadSynchronous()：立刻加载，会卡游戏线程。序列镜头目前直接用它（资源已在内存时几乎不花时间；第一次会卡一下，是可以改成预加载的点）。',
+     '异步：UWuwaResourceSubsystem::LoadAsync（见 UI 制作 → 4. 写 View 类）。']});
+node('cr_isvalid','cpp','IsValid() 而不是判空','UObject 指针不为空不代表能用：对象可能已经被标记销毁、等待回收。IsValid(Obj) 同时检查非空和未销毁。',{
+  d:['Actor->Destroy() 后对象不会立刻消失，要等 GC；这段时间指针还非空。','所以项目里对 UObject 普遍写 IsValid(X)；C# 里同样用 obj.IsValid()（UnrealSharp 提供）。'],
+  code:[{t:'Specs/Niagara/WuwaEffectNiagaraSpec.cpp',c:String.raw`if (!IsValid(NiagaraComponent))
+{
+    NiagaraComponent = NewObject<UNiagaraComponent>(this);
+    NiagaraComponent->SetAutoActivate(false);
+    NiagaraComponent->SetAutoDestroy(false);   // 播完不自己销毁：要还给池子复用
+    NiagaraComponent->RegisterComponentWithWorld(World);
+}`,n:['SetAutoDestroy(false)：默认的「播完自毁」会让池子里的组件消失，所以关掉。','RegisterComponentWithWorld：这个组件不属于任何 Actor，直接登记到世界里才能渲染。']}]});
+node('cr_tick','cpp','FTickableGameObject：非 Actor 每帧更新','Spec 不是 Actor，没有 Tick。继承 FTickableGameObject 就能每帧被调用；用 IsTickable 决定什么时候需要。',{
+  code:[{t:'Specs/Niagara/WuwaEffectNiagaraSpec.cpp',c:String.raw`bool UWuwaEffectNiagaraSpec::IsTickable() const
+{
+    return bPlaying && !IsFinished() && IsValid(NiagaraComponent) && (bAnimated || ShouldAutoStop());
+}
+ETickableTickType UWuwaEffectNiagaraSpec::GetTickableTickType() const
+{
+    // 类默认对象不参与 Tick；实例按 IsTickable 决定。
+    return HasAnyFlags(RF_ClassDefaultObject) ? ETickableTickType::Never : ETickableTickType::Conditional;
+}
+TStatId UWuwaEffectNiagaraSpec::GetStatId() const
+{
+    RETURN_QUICK_DECLARE_CYCLE_STAT(UWuwaEffectNiagaraSpec, STATGROUP_Tickables);
+}`,n:[]}],
+  qa:[['CDO 是什么，为什么要排除？','每个 UClass 都有一个「类默认对象」（Class Default Object，存默认值的模板对象），引擎启动就构造。它也继承了 FTickableGameObject，会被登记成可 Tick，返回 Never 让它不参与。'],
+      ['为什么不一直 Tick？','只有 Model 用了曲线（每帧要改变换或参数）或需要自动停止时才 Tick；全是常量的特效不 Tick，省性能。Conditional = 每帧先问 IsTickable。'],
+      ['GetStatId 是什么？','性能统计标签，stat 命令和 Unreal Insights 里能看到这个类的 Tick 花了多少时间。']]});
+node('cr_dyn','cpp','动态委托 AddDynamic（要 UFUNCTION）','Dynamic 委托按「函数名」绑定，靠反射找函数，所以回调必须标 UFUNCTION()。蓝图能绑的委托都是 Dynamic 的。',{
+  code:[{t:'Specs/Niagara/WuwaEffectNiagaraSpec.cpp',c:String.raw`// 先绑定再激活：系统可能在激活过程中同步结束。
+Component->OnSystemFinished.AddUniqueDynamic(this, &ThisClass::HandleSystemFinished);
+bPlaying = true;
+Component->Activate(true);
+
+// 头文件
+UFUNCTION()
+void HandleSystemFinished(UNiagaraComponent* Component);
+
+// 归还池子前
+Component->OnSystemFinished.RemoveAll(this);`,n:[]}],
+  qa:[['AddUniqueDynamic 和 AddDynamic 区别？','Unique 会先检查是否已经绑过。Spec 会被池子反复复用，不检查就可能重复绑定，回调触发两次。'],
+      ['为什么先绑定再 Activate？','Activate 过程中系统可能当场结束（比如没有粒子）并立即广播 OnSystemFinished。先激活后绑定就会漏掉，Spec 永远不结束、不回池。'],
+      ['RemoveAll(this) 是什么？','移除这个对象在该委托上的所有绑定。组件回池前必须解绑，否则下次别人用这个组件时会回调到旧的 Spec。']]});
+node('cr_bind','cpp','普通委托 BindUObject（带参数）','非 Dynamic 委托直接存函数指针，更快，不需要 UFUNCTION。BindUObject 会弱引用目标对象，对象没了就不调用。',{
+  code:[{t:'Game/Effect/System/WuwaEffectSystem.cpp · SpawnEffect',c:String.raw`Spec->OnFinished.BindUObject(this, &ThisClass::HandleFinished, Handle.Id);`,n:['ThisClass：UE 宏，等于当前类名（这里是 UWuwaEffectSystem），改类名时不用跟着改。']},
+     {t:'Game/LGUI/Core/WuwaUiManager.cpp · 全局委托',c:String.raw`// Initialize
+WorldCleanupHandle = FWorldDelegates::OnWorldCleanup.AddUObject(this, &UWuwaUiManager::HandleWorldCleanup);
+// Deinitialize
+FWorldDelegates::OnWorldCleanup.Remove(WorldCleanupHandle);`,n:[]}],
+  qa:[['BindUObject 后面那个 Handle.Id 是什么？','Payload（附加参数）：绑定时存下来，回调时自动传进去。HandleFinished 就知道是哪个特效结束了，Spec 自己不需要记 ID。'],
+      ['全局委托为什么要存 Handle、在 Deinitialize 里 Remove？','FWorldDelegates 是全局的，比子系统活得久。不移除的话列表里会留着失效的绑定，越积越多；显式移除是规范写法。']]});
+node('cr_reentry','cpp','重入：回调里改了你正在用的数据','你调用的函数可能「同步」回调回来，改掉你正在用的容器或对象。特效系统有两处专门处理。',{
+  code:[{t:'Game/Effect/System/WuwaEffectSystem.cpp',c:String.raw`// SpawnEffect：先登记再播放，使同步播放失败/结束也能通过同一回调正确释放。
+ActiveEffects.Add(Handle.Id, {Spec, Pool});
+Spec->OnFinished.BindUObject(this, &ThisClass::HandleFinished, Handle.Id);
+if (!Spec->Play(Request))
+{
+    // Play 可能已同步 Finish 并归还，不能再操作这个已被回收的 Spec。
+    if (ActiveEffects.Contains(Handle.Id)) { Spec->Stop(true); HandleFinished(Handle.Id); }
+    return {};
+}
+
+// StopAllEffects：Stop 可同步回调 HandleFinished；先移出表，避免在遍历中修改同一容器。
+auto StoppingEffects = MoveTemp(ActiveEffects);
+for (const auto& Entry : StoppingEffects)
+{
+    Entry.Value.Spec->OnFinished.Unbind();
+    Entry.Value.Spec->Stop(true);
+    Entry.Value.Pool->Release(Entry.Value.Spec);
+}`,n:[]}],
+  qa:[['为什么要 MoveTemp(ActiveEffects)？','遍历 TMap 时如果回调里删了元素，迭代器失效（崩溃或漏处理）。先把整个 Map「搬」到局部变量，原来的变空，回调里再删也删不到正在遍历的这份。MoveTemp 是移动不是拷贝，没有开销。'],
+      ['Play 失败时为什么还要检查 Contains？','Play 失败过程中可能已经同步 Finish → HandleFinished → 归还池子。这时再 Stop 一个已归还（甚至已被别人借走）的 Spec 就错了。']]});
+node('cs_uclass','cs','UnrealSharp：[UClass] 与 partial','C# 类继承 C++ 反射类就成为真正的 UE 类（编辑器里能选、能存进资产）。写 partial 是因为另一半由 UnrealSharp 生成器生成。',{
+  d:['[UClass]：登记成 UE 类。[UProperty(PropertyFlags.EditAnywhere)]：登记成 UE 属性，编辑器能改、能存盘。',
+     '属性写成 partial { get; set; }：真正的存取代码由生成器生成，它直接读写这个对象在 C++ 内存里的那块数据，所以 C# 和 C++ 看到的是同一个值。',
+     'Evaluate_Implementation：C++ 里 Evaluate 是 BlueprintNativeEvent，C# 重写它的 _Implementation，C++ 调 Evaluate() 时就会走到 C# 代码。'],
+  code:[{t:'Script/.../Input/Conditions/InputCondition_OwnerTagCount.cs',c:String.raw`[UClass]
+public partial class UInputCondition_OwnerTagCount : UWuwaInputCondition
+{
+    [UProperty(PropertyFlags.EditAnywhere)]
+    public partial FGameplayTag Tag { get; set; }
+
+    [UProperty(PropertyFlags.EditAnywhere)]
+    public partial int Minimum { get; set; }
+
+    [UProperty(PropertyFlags.EditAnywhere)]
+    public partial int Maximum { get; set; }
+
+    protected override bool Evaluate_Implementation(FWuwaInputCommandContext context)
+    {
+        if (!context.ASC.IsValid() || !Tag.IsValid) return false;
+        int count = context.ASC.GetGameplayTagCount(Tag);
+        return count >= Minimum && (Maximum < 0 || count <= Maximum);
+    }
+}`,n:[]},
+     {t:'对应的 C++：Input/WuwaInputCommandConfig.h',c:String.raw`UCLASS(...)
+class WUWA_API UWuwaInputCondition : public UObject
+{
+    GENERATED_BODY()
+public:
+    UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "Wuwa|Combat|Input")
+    bool Evaluate(const FWuwaInputCommandContext& Context) const;
+};`,n:['BlueprintNativeEvent：C++ 声明一个函数，UHT 生成 Evaluate() 的调度代码；默认实现写在 Evaluate_Implementation，子类（蓝图或 C#）可以重写。']}],
+  qa:[['C# 改完怎么生效？','重新编译并发布到 Binaries/Managed（跑测试前也要做）。C++ 新增了 UFUNCTION / UPROPERTY 还要重新生成 Glue，C# 才看得到。'],
+      ['条件类为什么做成 UE 类，不用普通 C# 类？','它要作为规则表的一部分存进资产、在编辑器里配置（选 Tag、填数字），只有 UE 类能做到。纯计算的（预输入缓存、选招器）就用普通 C# 类。']]});
+node('cs_sealed','cs','sealed / internal / readonly record struct','纯 C# 工具类（不是 UE 类）一般写成 internal sealed class；小数据写成 readonly record struct。',{
+  d:['sealed：这个类不能被继承。表达「不是为扩展设计的」，读代码的人不用担心子类改了行为；JIT 也能把虚调用直接内联（小幅提速）。',
+     'internal：只在本程序集（ManagedWuwa）里可见，不暴露给其他程序集。',
+     'readonly record struct：值类型（放进 List 不额外分配对象）、字段不可变、自动生成按值比较和 ToString。一条预输入存进去就不会再改，正合适。',
+     'static lambda（new(static owner => owner.IsValid)）：禁止捕获任何变量，编译器保证不会意外捕获 this，也不会每次分配闭包。',
+     '主构造函数 class WuwaOwnedRequests<TOwner, TValue>(Func<TOwner, bool> isOwnerValid)：C# 12 写法，参数在整个类里直接可用。'],
+  code:[{t:'Script/.../Input/CombatInputBuffer.cs',c:String.raw`internal readonly record struct WuwaBufferedCombatInput(
+    FGameplayTag InputTag, EWuwaInputPhase Phase, double InputTimeSeconds, double ExpiresAtSeconds);
+
+// 缓存原始指令。断点时重新解释，选一条提交后清整批，不是按队列依次执行。
+internal sealed class CombatInputBuffer
+{
+    private readonly List<WuwaBufferedCombatInput> _items = new();
+    public bool Store(FWuwaInputEvent input, double nowSeconds, double lifetimeSeconds)
+    {
+        if (input.Phase != EWuwaInputPhase.Pressed || !input.InputTag.IsValid
+            || !double.IsFinite(input.Timestamp) /* …… */) return false;
+        Prune(nowSeconds);
+        _items.Add(new(input.InputTag, input.Phase, input.Timestamp, nowSeconds + lifetimeSeconds));
+        return true;
+    }
+}`,n:['private readonly List：readonly 只是「这个字段不能再指向别的 List」，List 里的内容照样能增删。']},
+     {t:'Script/.../Camera/WuwaOwnedRequests.cs + WuwaCameraRuntime.cs',c:String.raw`internal sealed class WuwaOwnedRequests<TOwner, TValue>(Func<TOwner, bool> isOwnerValid)
+{
+    private readonly record struct Request(int Handle, TOwner Owner, TValue Value, int Priority);
+    public int Add(TOwner owner, TValue value, int priority)
+    {
+        // 不循环使用句柄：迟到的退出请求不能误删后来创建的模式。
+        if (!isOwnerValid(owner) || _lastIssuedHandle == int.MaxValue) return 0;
+        int handle = ++_lastIssuedHandle;
+        _requests.Add(new Request(handle, owner, value, priority));
+        return handle;
+    }
+}
+
+// 使用方：来源是 UE 对象的弱指针，有效性交给 IsValid
+private readonly WuwaOwnedRequests<TWeakObjectPtr<UObject>, FWuwaCameraSettings> _modes
+    = new(static owner => owner.IsValid);`,n:[]}],
+  qa:[['UE 类（[UClass]）为什么不写 sealed？','UE 类要允许蓝图或别的类继承（编辑器里可能基于它建蓝图），生成器生成的另一半也需要正常的类结构。'],
+      ['句柄为什么一直递增不复用？','如果复用：旧请求的「移除」迟到了，可能误删后来分配到同一个号的新请求。一直递增就撞不上。'],
+      ['为什么泛型容器不直接依赖 UE 类型？','有效性判断由使用方传进来（isOwnerValid），容器本身是纯 C#，可以单独测试，也能用于非 UE 对象。']]});
+node('cs_bridge','cs','C++ Bridge + C# 实现','C++ 组件声明 BlueprintNativeEvent 接口和数据，C# 子类重写实现。C++ 其他代码只调 C++ 接口，不知道背后是 C#。',{
+  code:[{t:'Skill/WuwaSkillBridgeComponent.h（节选）',c:String.raw`/** 主技能管理的 UE 接口。当前技能、打断规则及 FightState 句柄由 C# 管理。 */
+UFUNCTION(BlueprintPure, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
+bool CanBeginSkill(UWuwaGameplayAbilityBase* Ability) const;
+
+UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill", meta = (BlueprintProtected))
+int32 TryBeginSkill(UWuwaGameplayAbilityBase* Ability);
+
+UFUNCTION(BlueprintCallable, BlueprintNativeEvent, Category = "Wuwa|Combat|Skill")
+bool SetSkillAcceptInput(int32 FightStateHandle, bool bAcceptInput);`,n:[]}],
+  qa:[['为什么不全写 C#？','GAS、移动组件、动画这些每帧大量调用，C++ 更快，很多 API 也只有 C++ 能用。规则类逻辑（选招、步态、运动状态合法性）改得多，写 C# 迭代快，也更好对应原作的 TS 逻辑。'],
+      ['meta = (BlueprintProtected) 是什么？','只能在子类（蓝图 / C#）内部调用，外部蓝图不能调。TryBeginSkill 只应由技能系统自己调用。'],
+      ['为什么接接招窗口要带 FightStateHandle？','防止上一个技能「迟到」的通知改写新技能的窗口：句柄对不上就忽略。']]});
+node('cg_tag','cpp','GAS：Tag 查询与等待','角色状态用 Tag 表示（在地面、在空中、无敌…），任何系统都能查、能等，不需要互相引用。',{
+  code:[{t:'Abilities/WuwaAirDodgeAbility.cpp',c:String.raw`bool UWuwaAirDodgeAbility::IsAirborne() const
+{
+    const UAbilitySystemComponent* ASC = GetAbilitySystemComponentFromActorInfo();
+    const FWuwaGameTags& Tags = FWuwaGameTags::Get();
+    return ASC && !ASC->HasMatchingGameplayTag(Tags.State_Position_Ground)
+               && !ASC->HasMatchingGameplayTag(Tags.State_Position_Climb);
+}`,n:['FWuwaGameTags::Get()：C++ 原生 Tag 的单例，启动时登记好，避免每次 RequestGameplayTag(字符串) 查表。']}],
+  qa:[['HasMatchingGameplayTag 的「Matching」是什么意思？','Tag 是层级的：角色有 State.Position.Ground 时，查 State.Position 也算匹配。要求完全相同用 HasTagExact 一类的精确匹配。'],
+      ['Tag 计数是什么？','同一个 Tag 可以被多个来源挂多次（多个 buff 都给了「无敌」），ASC 记次数，全部移除才算没有。C# 条件 OwnerTagCount 就是读这个次数（例：长离空中普攻次数）。']]});
+node('cg_life','cpp','GAS：GA 生命周期与蒙太奇实例','Activate → 任务 → EndAbility。多处结束入口要防重复；蒙太奇淡出时可以单独关掉它的根运动。',{
+  code:[{t:'Abilities/WuwaAirDodgeAbility.cpp',c:String.raw`void UWuwaAirDodgeAbility::OnSkillMontageBlendOut(int32 Index)
+{
+    if (!IsAirborne()) { Super::OnSkillMontageBlendOut(Index); return; }
+    // 还在空中：技能不结束，等落地。淡出中的蒙太奇不再给根运动
+    UAnimInstance* Anim = CurrentActorInfo ? CurrentActorInfo->GetAnimInstance() : nullptr;
+    if (FAnimMontageInstance* Instance = Anim && GetCurrentMontage() ? Anim->GetInstanceForMontage(GetCurrentMontage()) : nullptr)
+        Instance->PushDisableRootMotion();
+}
+
+void UWuwaAirDodgeAbility::EndAbility(...)
+{
+    // 原作 OnEndAbility：有移动输入就 SprintPress
+    if (IsActive())
+        if (const AWuwaCharacter* Character = Cast<AWuwaCharacter>(GetAvatarActorFromActorInfo());
+            Character && Character->GetPlayerInputState().bHasMoveInput)
+            if (UWuwaRoleGaitBridgeComponent* Gait = Character->RoleGaitComponent.Get()) Gait->RequestSprint();
+    Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
+}`,n:['if (初始化; 条件)：C++17 写法，变量只在这个 if 里有效，不污染外面。','GetAvatarActorFromActorInfo：GA 执行在谁身上（Avatar）。Owner 和 Avatar 可以不同（例如 ASC 挂在 PlayerState 上），项目里都是角色本身。']}],
+  qa:[['EndAbility 里为什么还要判断 IsActive？','EndAbility 可能被调多次（任务回调、被打断、外部取消）。只在第一次真正结束时做「落地接冲刺」这种一次性逻辑。'],
+      ['PushDisableRootMotion 为什么叫 Push？','它是计数式的：Push 一次加一层禁用，Pop 一次减一层，多个系统各自禁用不会互相覆盖。']]});
+node('ce_create','tool','编辑器 API：代码里建资产','Package = 磁盘上一个 .uasset 文件。CreatePackage 建包，NewObject 在包里建资产对象，注册到资产注册表。',{
+  d:['RF_Public：可以被别的包引用；RF_Standalone：没人引用也不被 GC（资产需要）；RF_Transactional：支持撤销。',
+     'FAssetRegistryModule::AssetCreated：告诉资产注册表有新资产，内容浏览器才会显示。',
+     '已存在就用 LoadObject 取出来复用（LOAD_NoWarn：找不到也不报警告），所以重跑工具不会产生重复资产。'],
+  code:[{t:'Commandlets/WuwaChangliAttackEffectSetupCommandlet.cpp',c:String.raw`if (UObject* Existing = LoadObject<UObject>(nullptr, *ObjectPath, nullptr, LOAD_NoWarn))
+{
+    if (T* Typed = Cast<T>(Existing)) return Typed;
+    UE_LOG(LogWuwaAttackEffectSetup, Error, TEXT("%s exists but is a %s."), *ObjectPath, *Existing->GetClass()->GetName());
+    return nullptr;
+}
+return NewObject<T>(CreatePackage(*PackageName), *AssetName, RF_Public | RF_Standalone | RF_Transactional);`,n:[]}]});
+node('ce_save','tool','编辑器 API：修改与保存','改之前 Modify()，改材质这类需要重新编译的用 PreEditChange / PostEditChange，最后 MarkPackageDirty + SavePackage 写盘。',{
+  d:['Modify()：记录撤销快照，标记包已修改（编辑器标题出现 *）。','PostEditChange()：通知对象「属性改了」，材质会重新编译、Niagara 会刷新。手动在 Details 面板改值时编辑器自动调它，代码改就要自己调。','SavePackage：把包写成 .uasset。'],
+  code:[{t:'同文件 · Save',c:String.raw`UPackage* Package = Asset->GetOutermost();
+const FString Filename = FPackageName::LongPackageNameToFilename(Package->GetName(), FPackageName::GetAssetPackageExtension());
+FSavePackageArgs Args;
+Args.TopLevelFlags = RF_Public | RF_Standalone;
+Args.SaveFlags = SAVE_NoError;
+Asset->MarkPackageDirty();
+if (!UPackage::SavePackage(Package, Asset, *Filename, Args)) { /* 报错 */ }`,n:['LongPackageNameToFilename：把 /Game/Effects/xxx 换成磁盘路径 Content/Effects/xxx.uasset。']}]});
+node('ce_notify','tool','编辑器 API：通知的触发偏移','代码加通知后要调用 RefreshTriggerOffset，否则放在第 0 帧（片段开头）的通知不会触发。',{
+  d:['动画每帧检查「上一帧位置 → 这一帧位置」之间的通知。时间正好落在片段起点的通知，在这个区间的边界上，可能被跳过。',
+     '编辑器手动拖通知时会自动算一个很小的「触发偏移」（TriggerTimeOffset），把这类通知往区间里推一点；代码 Link 时不会自动算，所以要自己刷新。',
+     '项目里所有加通知的工具都调用 WuwaAnimNotifyEditor::RefreshTriggerOffsets；老资产用 WuwaNotifyTriggerOffsetFix 一次性修好。大招镜头、子弹、脚步声都因此失效过。'],
+  code:[{t:'Editor/WuwaAnimNotifyEditorUtils.cpp',c:String.raw`void WuwaAnimNotifyEditor::RefreshTriggerOffsets(UAnimSequenceBase* Animation)
+{
+    if (!Animation) return;
+    for (FAnimNotifyEvent& Notify : Animation->Notifies)
+    {
+        Notify.RefreshTriggerOffset(Animation->CalculateOffsetForNotify(Notify.GetTime()));
+        if (Notify.GetDuration() > 0.f)
+            Notify.RefreshEndTriggerOffset(Animation->CalculateOffsetForNotify(Notify.GetTime() + Notify.GetDuration()));
+    }
+}`,n:['NotifyState 有开始和结束两个时间点，两个都要刷新。']}]});
+node('ce_cmd','tool','Commandlet、控制台命令与 WITH_EDITOR','编辑器专用代码要和游戏代码隔开：放进编辑器模块，或者包在 #if WITH_EDITOR 里，打包的游戏里不存在。',{
+  d:['Commandlet：继承 UCommandlet，实现 Main(Params)，用 UnrealEditor-Cmd.exe 项目.uproject -run=名字 参数 运行。',
+     '编辑器模块（如 WuwaAnimationEditor，模块类型 Editor）：只在编辑器里编译加载。',
+     '#if WITH_EDITOR：游戏模块里的编辑器专用代码（材质节点、Niagara 图这些只在编辑器存在的数据）。',
+     'FAutoConsoleCommand：注册一个控制台命令。特效工具注册了 Wuwa.Fx.Setup，编辑器开着时在编辑器里跑同一份代码。'],
+  code:[{t:'Commandlets/WuwaChangliAttackEffectSetupCommandlet.cpp（末尾）',c:String.raw`static FAutoConsoleCommand GWuwaFxSetupCommand(
+    TEXT("Wuwa.Fx.Setup"),
+    TEXT("Runs WuwaChangliAttackEffectSetup inside the editor, e.g. Wuwa.Fx.Setup -Character=changli -Attack=AirAttack03 -Apply"),
+    FConsoleCommandWithArgsDelegate::CreateLambda([](const TArray<FString>& Args)
+    {
+        UWuwaChangliAttackEffectSetupCommandlet* Commandlet = NewObject<UWuwaChangliAttackEffectSetupCommandlet>();
+        const int32 Result = Commandlet->Main(FString::Join(Args, TEXT(" ")));
+    }));`,n:['static 全局变量：模块加载时构造，命令就自动登记了。']}]});
+
+/* ---------- 每一层画布 ---------- */
+const B = {
+ root:{t:'整个项目',intro:'这个项目在 UE 5.7 里重做《鸣潮》的战斗玩法。<b>运行时系统</b>讲游戏跑起来时有哪些系统、谁依赖谁；<b>制作流程</b>讲特效、镜头、UI、技能在 UE 里怎么一步步做；<b>代码精读</b>讲代码为什么这样写。',
+   rows:[['数据来源',['orig','plugins']],['离线制作',['pipeline']],['游戏运行',['runtime']],['看懂 / 检查',['walk','codeg','tests']]],
+   e:[['orig','pipeline','分析得到的数据'],['codeg','runtime','解释代码写法'],['pipeline','runtime','产出资产：表、蒙太奇、特效、UI、镜头'],['plugins','runtime','提供底层能力'],['walk','runtime','按时间顺序串起各层'],['tests','runtime','验证 / 调试']]},
+ runtime:{t:'运行时系统',intro:'游戏运行时的分层。<b>上面的层调用下面的层</b>：玩家按键 → 调度 → 角色和技能 → 战斗结果 → 表现（相机、特效、声音、UI）。',
+   rows:[['玩家操作',['input']],['调度 / 决策',['framework','formation','skill']],['执行',['character','combat']],['表现',['camera','effect','audio','ui','render']],['底座',['core']]],
+   e:[['input','framework','按键事件'],['framework','formation','切人键'],['framework','character','移动意图'],['input','skill','技能按键 → 技能 ID'],['formation','character','Possess 换角色'],
+      ['skill','character','播蒙太奇 / 推动移动'],['skill','combat','通知：发子弹、加 buff'],['combat','ui','伤害数字、血条'],['skill','effect','PlayEffect 通知'],['skill','audio','音频通知'],['skill','camera','大招特写镜头'],
+      ['character','camera','相机跟随'],['character','render','卡通材质'],['formation','ui','队伍栏刷新'],['core','effect','对象池'],['core','ui','资源加载']]},
+ input:{t:'输入层',intro:'输入层只做<b>翻译和分发</b>：键盘/手柄 → 带标签的输入事件 → 按标签交给对应系统。它自己不让角色动。',
+   rows:[['UE 引擎',['ia']],['接收',['eic']],['分发',['router']],['处理者',['intent','movecmd','abilityin','camin','formin','uiin']],['使用者',['cmcread','gaexec']]],
+   e:[['ia','eic','IA 触发'],['eic','router','输入 Tag + 阶段'],['router','intent','记录按住 / 移动轴'],['router','movecmd','移动指令'],['router','abilityin','技能键'],['router','camin','视角'],['router','formin','1/2/3'],['router','uiin','界面按键'],
+      ['intent','cmcread','每帧读取'],['movecmd','cmcread','跳跃等'],['abilityin','gaexec','激活技能']]},
+ combatinput:{t:'技能输入 → 出招',intro:'按下普攻后，项目要决定<b>放哪个技能</b>、<b>现在能不能放</b>。放不了的键先存起来（预输入），到「接招机会」再重新判断。',
+   rows:[['输入',['ci_evt']],['调度',['ci_rt','ci_opp']],['缓存',['ci_buf']],['选招',['ci_rules','ci_res','ci_cond']],['执行',['ci_skill']]],
+   e:[['ci_evt','ci_rt','每条输入'],['ci_opp','ci_rt','重新解释预输入'],['ci_rt','ci_buf','出不了招就存'],['ci_rt','ci_res','立即尝试'],['ci_buf','ci_res','到时机取出'],['ci_rules','ci_res','从上往下匹配'],['ci_cond','ci_res','额外条件'],['ci_res','ci_skill','技能 ID']]},
+ framework:{t:'控制器与游戏框架',intro:'UE 的标准骨架：GameMode 定规则 → 生成 PlayerController（代表玩家）→ 它挂着各种输入/编队组件，并拥有一个相机管理器。进世界时走加载流程。',
+   rows:[['游戏规则',['gm']],['玩家',['pc','pcm']],['进入世界',['loadflow','warmup']],['结果',['rolespawn']]],
+   e:[['gm','pc','生成'],['pc','pcm','拥有'],['pc','loadflow','进世界 → 加载界面'],['loadflow','warmup','加载阶段预热'],['loadflow','rolespawn','生成队员']]},
+ formation:{t:'编队（切人）',intro:'3 个角色在加载时就全部生成好，切人只是让 PlayerController <b>换一个角色附身（Possess）</b>，不在场的隐藏。按网络游戏「服务器说了算」的方式写。',
+   rows:[['输入',['f_in']],['核心',['f_comp','f_rule']],['角色',['f_roles']],['UI',['f_model','f_hud']]],
+   e:[['f_in','f_comp','队员序号'],['f_rule','f_comp','判断能否切'],['f_comp','f_roles','Possess / 显隐'],['f_comp','f_model','队伍变化'],['f_model','f_hud','事件 → 刷新']]},
+ character:{t:'角色层',intro:'一个角色 = Actor 本体 + 一堆组件。<b>能力系统组件（ASC）</b>装技能和属性；<b>移动组件</b>管位移；<b>运动状态 / 步态 / 战斗占用</b>三个 C# 组件做判断；<b>动画</b>负责表现。',
+   rows:[['本体',['c_base','c_role','c_mon']],['数据',['c_rda','c_attr']],['能力系统',['c_asc']],['运动判断',['c_gait','c_cmc','c_state','c_fight']],['动画',['c_anim']]],
+   e:[['c_role','c_base','继承'],['c_mon','c_base','继承'],['c_rda','c_role','初始化'],['c_role','c_asc','拥有'],['c_attr','c_asc','挂在 ASC 上'],['c_gait','c_cmc','最大速度 / 冲刺'],['c_cmc','c_state','地面 / 空中'],['c_cmc','c_anim','速度、加速度'],['c_state','c_anim','状态驱动动画']]},
+ movement:{t:'移动组件',intro:'每次物理更新：读输入 → 问步态要多快 → 按「在地面」还是「在空中」走不同的物理 → 技能动画的根运动叠加进来 → 位置变了就提交运动状态。',
+   rows:[['输入',['m_intent','m_gait']],['物理',['m_walk','m_fall']],['技能影响',['m_rm','m_force']],['输出',['m_state']]],
+   e:[['m_intent','m_walk','方向'],['m_gait','m_walk','最大速度'],['m_walk','m_fall','离地规则'],['m_fall','m_walk','落地（可带速度）'],['m_rm','m_walk','动画位移'],['m_rm','m_fall','动画位移'],['m_force','m_fall','技能接口'],['m_walk','m_state','提交'],['m_fall','m_state','提交']]},
+ skill:{t:'技能层',intro:'技能 = <b>技能表一行数据</b> + <b>一个 GA（执行逻辑）</b> + <b>蒙太奇（动画）</b> + <b>动画通知（每个时间点做什么）</b>。技能管理决定谁能顶掉谁。',
+   rows:[['来源',['s_in','s_table']],['管理',['s_comp','s_fs']],['执行',['s_ga']],['动画',['s_mon']],['时间点',['s_ntf']]],
+   e:[['s_in','s_comp','要放这个技能'],['s_comp','s_fs','申请占用'],['s_comp','s_ga','激活'],['s_table','s_ga','读配置'],['s_ga','s_mon','按段播放'],['s_mon','s_ntf','到帧触发'],['s_ntf','s_comp','接招窗口 / ReadyEnd','back']]},
+ ga:{t:'GA 家族',intro:'GA（GameplayAbility）= GAS 里「一个技能的执行逻辑」。项目用<b>继承</b>：基类 → 通用蒙太奇技能 → 少数特殊技能。大部分技能只改数据，不写代码。',
+   rows:[['基类',['g_base']],['通用',['g_mon']],['特殊',['g_air','g_dodge','g_burst','g_hit']],['配套',['g_ge']]],
+   e:[['g_mon','g_base','继承'],['g_air','g_mon','继承'],['g_dodge','g_mon','继承'],['g_burst','g_mon','继承'],['g_hit','g_mon','继承'],['g_mon','g_ge','开始 / 结束 buff']]},
+ notifies:{t:'动画通知',intro:'动画通知 = 蒙太奇时间轴上的标记。分两种：<b>Notify</b>（某一帧触发一次）和 <b>NotifyState</b>（一段时间内持续生效）。几乎所有技能的「什么时候做什么」都在这里。',
+   rows:[['技能节奏',['n_acc','n_ready','n_prio']],['位移转向',['n_move','n_keep']],['战斗',['n_bullet','n_buff','n_burst']],['表现',['n_fx','n_audio','n_cam']],['交给谁',['r_skill','r_move','r_combat','r_show']],['坑',['n_tip']]],
+   e:[['n_acc','r_skill',''],['n_ready','r_skill',''],['n_move','r_move',''],['n_keep','r_move',''],['n_bullet','r_combat',''],['n_burst','r_combat',''],['n_fx','r_show',''],['n_cam','r_show','']]},
+ combat:{t:'战斗层',intro:'一次攻击的结果怎么来：<b>找目标</b>（谁在场、谁是敌人、锁谁）→ <b>子弹命中</b> → <b>伤害结算</b> → <b>受击反应</b>。buff 和时停在旁边影响数值和时间。',
+   rows:[['谁在场',['b_creature','b_camp']],['选目标',['b_lock']],['攻击',['b_bullet']],['结算',['b_dmg','b_buff']],['反应',['b_hit','b_ts']],['反馈',['b_ui']]],
+   e:[['b_creature','b_lock','候选'],['b_camp','b_lock','只锁敌人'],['b_lock','b_bullet','朝向目标'],['b_creature','b_bullet','碰撞对象'],['b_bullet','b_dmg','命中'],['b_buff','b_dmg','属性加成'],['b_dmg','b_hit','削韧 / 受击'],['b_ts','b_hit','时间缩放相乘'],['b_dmg','b_ui','伤害数字']]},
+ bullet:{t:'子弹系统',intro:'在鸣潮里，所有攻击判定都是「子弹」——哪怕是近战挥刀，也是在刀前方生成一颗看不见的短命子弹。',
+   rows:[['数据',['bl_tab']],['生成',['bl_ntf']],['运行',['bl_sys']],['结果',['bl_hit']]],
+   e:[['bl_tab','bl_sys','查子弹参数'],['bl_ntf','bl_sys','生成请求'],['bl_sys','bl_hit','碰到目标']]},
+ camera:{t:'相机层',intro:'C++ 只做引擎适配，<b>镜头怎么动的规则都在 C#</b>。平时是战斗跟随相机；大招时切到 LevelSequence 特写镜头，结束再混回来。',
+   rows:[['引擎适配',['cam_pcm','cam_bridge']],['C# 逻辑',['cam_rt','cam_zr']],['参数',['cam_set']],['特写镜头',['cam_ntf','cam_seq']]],
+   e:[['cam_pcm','cam_bridge','驱动'],['cam_bridge','cam_rt','调用'],['cam_rt','cam_zr','迁移中','back'],['cam_set','cam_rt','读取'],['cam_ntf','cam_seq','请求特写'],['cam_seq','cam_pcm','切换 ViewTarget']]},
+ effect:{t:'特效层',intro:'<b>资产（EffectModel）只描述要播什么</b>，<b>运行时实例（Spec）负责真的播</b>。所有特效都从同一个入口 EffectSystem 进来，播完的对象回池复用。',
+   rows:[['请求',['e_ntf','e_model']],['入口',['e_sys']],['执行',['e_fac','e_spec','e_pool']],['结果',['e_actor']]],
+   e:[['e_ntf','e_sys','播这个 Model'],['e_model','e_sys','描述'],['e_sys','e_fac','按类型'],['e_fac','e_spec','创建'],['e_pool','e_spec','借出 / 归还'],['e_spec','e_actor','生成组件']]},
+ ui:{t:'UI 层（LGUI）',intro:'UI 框架照原作：<b>UiManager</b> 打开界面 → 放进<b>层</b> → 层里的<b>容器</b>管进出 → <b>View</b> 显示。数据走 <b>MVC</b>：Controller 改 Model，Model 通过事件通知 View。',
+   rows:[['入口',['u_cfg','u_mgr']],['分层',['u_layer','u_cont']],['界面',['u_view','u_reg','u_fx']],['数据流',['u_ctrl','u_model','u_evt']],['业务',['u_mod']]],
+   e:[['u_cfg','u_mgr','查配置'],['u_mgr','u_layer','放进所在层'],['u_layer','u_cont','按规则'],['u_cont','u_view','打开 / 关闭'],['u_view','u_reg','取控件'],['u_ctrl','u_model','写数据'],['u_model','u_evt','广播'],['u_evt','u_view','刷新'],['u_mod','u_ctrl','每个业务一套']]},
+ uimodules:{t:'业务界面',intro:'具体的界面。每个都按 View + Controller (+ Model) 拆开；数据来自游戏事件。',
+   rows:[['事件来源',['um_src']],['战斗 HUD',['um_hud','um_skill','um_energy','um_buff']],['战斗反馈',['um_boss','um_dmg']],['流程',['um_form','um_load','um_mail']]],
+   e:[['um_src','um_form','切人'],['um_form','um_hud','刷新队伍栏'],['um_src','um_energy','属性变化'],['um_src','um_buff','buff 增减'],['um_src','um_dmg','伤害结算'],['um_src','um_boss','Boss 掉血']]},
+ core:{t:'核心底座',intro:'所有层都会用到的基础服务。它们不依赖上面任何玩法系统。',
+   rows:[['加载',['k_res','k_am']],['复用',['k_pool']],['标识',['k_tag']],['调试',['k_dbg']],['架构模式',['k_bridge']]],e:[['k_am','k_res','资产路径']]},
+ tests:{t:'测试与调试',intro:'改完东西怎么确认没坏：自动化测试 + 屏幕调试 + 截图对照。',
+   rows:[['自动',['t_auto']],['手动',['t_dbg','t_shot']],['编辑器',['t_mcp']]],e:[]},
+ walk:{t:'导览：一次攻击的全过程',intro:'以「按普攻打 Boss」为例，按时间顺序串起各层。每一步对应的系统可以回到 运行时系统 里点开看细节。',
+   rows:[['输入层',['w1','w2','w3']],['技能层',['w4','w5','w6']],['同时发生',['w7a','w7b','w7c']],['战斗层',['w8','w9']],['UI / 循环',['w10','w11']]],
+   e:[['w1','w2',''],['w2','w3',''],['w3','w4',''],['w4','w5',''],['w5','w6',''],['w6','w7a','发子弹'],['w6','w7b','播特效'],['w6','w7c','播声音'],['w7a','w8','命中'],['w8','w9',''],['w9','w10',''],['w10','w11',''],['w11','w3','连招','back']]},
+ pipeline:{t:'制作流程（在 UE 里怎么做）',intro:'这里不讲数据怎么从原作里解出来，只讲<b>拿到分析好的数据之后</b>，在 UE 里用哪些技术、按什么顺序把它做出来。每条流程第一行是<b>开始前要懂的技术</b>，下面是<b>一步一步的做法</b>；每一步点开有：编辑器里怎么点、代码用了哪些 API、代码节选、初学者常问的问题。',
+   rows:[['先读',['p_premise','p_how']],['制作流程',['p_fx','p_seq','p_ui','p_skill']]],e:[]},
+ fxpipe:{t:'特效制作（嘉贝普攻为例）',intro:'一个攻击特效 = 若干层（Emitter），每层一个材质。做法：<b>先给每层做材质</b> → <b>搭 Niagara 系统</b> → <b>做项目的特效配置资产</b> → <b>挂到蒙太奇的时间点上</b> → <b>和原作视频对照调整</b>。第一行四块是开始前必须懂的。',
+   rows:[['先学',['fl_niagara','fl_mat','fl_model','fl_notify']],['数据',['fd_data']],['第 1 步',['fs_mat']],['第 2 步',['fs_sys']],['第 3 步',['fs_model']],['第 4 步',['fs_notify']],['第 5 步',['fs_tune']],['特殊类型',['fs_decal','fs_ghost','fs_post','fs_matctl']]],
+   e:[['fd_data','fs_mat','贴图 / 颜色 / 混合方式'],['fs_mat','fs_sys','每层的材质'],['fs_sys','fs_model','Niagara 系统'],['fs_model','fs_notify','Group 资产'],['fs_notify','fs_tune',''],['fs_tune','fs_mat','不像就回去调','back']]},
+ seqpipe:{t:'大招镜头（Sequence）',intro:'大招特写 = 一个 LevelSequence（角色绑定 + 一台自带的相机 + 相机关键帧）+ 蒙太奇上的一个通知 + 运行时子系统负责播放、切视角、混回。',
+   rows:[['先学',['sl_seq','sl_bind','sl_cam']],['数据',['sd_data']],['第 1 步',['ss1']],['第 2 步',['ss2']],['第 3 步',['ss3']],['第 4 步',['ss4']],['运行时',['ss5']],['收尾',['ss6']]],
+   e:[['sd_data','ss1','时长 / 帧率'],['ss1','ss2',''],['ss2','ss3',''],['ss3','ss4','序列资产'],['ss4','ss5','通知触发'],['ss5','ss6','到时长']]},
+ uipipe:{t:'UI 界面',intro:'一个界面 = <b>Prefab</b>（长相）+ <b>配置表一行</b>（叫什么、放哪层）+ <b>View 类</b>（显示逻辑）+ <b>Model / Controller</b>（数据和逻辑）。',
+   rows:[['先学',['ul_lgui','ul_load','ul_mvc','ul_sub']],['数据',['ud_data']],['第 1 步',['us1']],['第 2 步',['us2']],['第 3 步',['us3']],['第 4 步',['us4']],['第 5 步',['us5']],['第 6 步',['us6']],['第 7 步',['us7']]],
+   e:[['ud_data','us1','布局'],['us1','us2',''],['us2','us3','Prefab 资产'],['us3','us4','ViewClass'],['us4','us5',''],['us5','us6',''],['us6','us7','']]},
+ skillpipe:{t:'一个技能（GA + 蒙太奇 + 通知）',intro:'大多数技能只是数据：技能表一行 + GA 蓝图 + 输入规则 + 蒙太奇上的通知。只有通用 GA 表达不了的逻辑才写 C++。',
+   rows:[['先学',['kl_gas','kl_montage','kl_task']],['数据',['kd_data']],['第 1 步',['ks1']],['第 2 步',['ks2']],['第 3 步',['ks3']],['第 4 步',['ks4']],['第 5 步',['ks5']],['第 6 步',['ks6']]],
+   e:[['kd_data','ks1',''],['ks1','ks2','Ability 字段'],['ks2','ks3','角色初始化时'],['ks3','ks4',''],['ks4','ks5',''],['ks5','ks6','需要时']]},
+ code:{t:'代码精读：为什么这样写',intro:'项目代码里反复出现、初学者最容易看不懂的写法。每块讲：<b>它是什么</b> → <b>UE 底层为什么需要它</b> → <b>项目里的真实代码</b> → <b>常见疑问</b>。建议从左上往右下看。',
+   rows:[['UE 对象系统',['cr_uclass','cr_uprop','cr_weak','cr_soft','cr_isvalid']],['生命周期',['ul_sub','cr_tick']],['回调',['cr_dyn','cr_bind','cr_reentry']],['C++ 与 C#',['cs_uclass','cs_sealed','cs_bridge']],['GAS',['kl_task','cg_tag','cg_life']],['编辑器 API',['ce_create','ce_save','ce_notify','ce_cmd']]],
+   e:[['cr_uclass','cr_uprop','GC 靠反射'],['cr_uprop','cr_weak','不想拥有时'],['cs_uclass','cs_bridge','C# 重写 C++ 接口']]}
+};
+
+const GLOSS = [
+ ['GAS','UE 自带的技能框架（Gameplay Ability System），包含 ASC、GA、GE、AttributeSet、GameplayTag。'],
+ ['ASC','能力系统组件，挂在角色身上，GAS 的一切都通过它。'],
+ ['GA','GameplayAbility，一个技能的执行逻辑。'],
+ ['GE','GameplayEffect，对角色施加的效果：改属性、挂 Tag、持续时间。项目的 buff 都是 GE。'],
+ ['AttributeSet','角色的数值集合：血量、攻击、能量……'],
+ ['GameplayTag','层级式的状态标签，如 State.Position.Ground。用来表示「现在处于什么状态」。'],
+ ['蒙太奇 Montage','可以在动画蓝图之上插播的动画片段，带分段和通知轨道。技能动作都是蒙太奇。'],
+ ['动画通知 Notify','蒙太奇时间轴上的事件点：到了某帧执行代码。NotifyState 是持续一段时间的版本。'],
+ ['根运动 Root Motion','动画自己带位移，角色的移动由动画决定。'],
+ ['ABP 动画蓝图','决定角色平时播什么动画（走、跑、跳）的状态机资产。'],
+ ['CMC 移动组件','CharacterMovementComponent，负责角色的物理移动。'],
+ ['Possess 附身','PlayerController 控制某个角色。切人就是换一个角色附身。'],
+ ['Subsystem 子系统','UE 里自动创建的单例服务，按生命周期分 World / LocalPlayer / Engine 等。'],
+ ['DataTable 数据表','UE 里的表格资产，每行一个结构体。技能表、子弹表、伤害表都是。'],
+ ['Commandlet','不打开编辑器界面、在命令行运行的 UE 程序，用来批量改资产。'],
+ ['Niagara','UE 的粒子特效系统。'],
+ ['LevelSequence','UE 的时间轴动画资产（Sequencer），做过场 / 镜头。'],
+ ['Possessable / Spawnable','序列里「借用场景已有对象」/「序列自己生成对象」。'],
+ ['LGUI / Prefab','原作同款 UI 插件；Prefab 是一棵界面节点树模板。'],
+ ['MVC','Model（数据）/ View（显示）/ Controller（逻辑）分开，互相通过事件联系。'],
+ ['UnrealSharp','让 C# 写 UE 逻辑的插件。项目里 C# 负责规则判断。'],
+ ['Bridge 桥','项目的模式：C++ 组件提供反射和快照，C# 子类实现规则。'],
+ ['PakExport','项目自带的命令行版 FModel，用来导出原作资源。'],
+ ['配方 recipe','Python 脚本输出的 JSON，描述要在 UE 里建什么，Commandlet 照着做。'],
+ ['原作 → 改成','标记项目和原作结构不同的地方以及理由。']
+];
+
+/* ---------- 渲染 ---------- */
+const $ = s=>document.querySelector(s);
+const boardEl=$('#board'), headEl=$('#head'), crumbsEl=$('#crumbs'), panel=$('#panel'), pbody=$('#pbody'), ptitle=$('#ptitle'), scrim=$('#scrim');
+const PARENT = {};      // board -> {board, node}
+for(const [bid,b] of Object.entries(B)) for(const [,ids] of b.rows) for(const id of ids){ const c=N[id]&&N[id].c; if(c && !PARENT[c]) PARENT[c]={board:bid,node:id}; }
+let cur='root';
+
+function kv(k){ return 'var('+(KINDS[k]||KINDS.concept).v+')'; }
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function path(bid){ const p=[]; let x=bid; while(x){ p.unshift(x); x=PARENT[x]&&PARENT[x].board; } return p; }
+
+function renderLegend(){
+  $('#legend').innerHTML = Object.entries(KINDS).map(([k,o])=>'<span><i style="background:'+kv(k)+'"></i>'+o.t+'</span>').join('')
+    + '<span>— 箭头 = 「A 用到 / 交给 B」；虚线 = 回头 / 循环</span>';
+}
+
+function go(bid, push=true){
+  if(!B[bid]) bid='root';
+  cur=bid; closePanel();
+  if(push){ try{ history.replaceState(null,'','#'+bid); }catch(e){} }
+  const b=B[bid], p=path(bid);
+  crumbsEl.innerHTML = p.map((id,i)=> (i?'<span class="sep">›</span>':'') + '<button class="'+(i===p.length-1?'cur':'')+'" data-b="'+id+'">'+esc(B[id].t)+'</button>').join('');
+  crumbsEl.querySelectorAll('button').forEach(x=>x.onclick=()=>{ if(x.dataset.b!==cur) go(x.dataset.b); });
+  const par=PARENT[bid], pn=par&&N[par.node];
+  let h='<h1>'+(par?'<button class="backbtn" data-b="'+par.board+'">‹ 上一层</button>':'')+esc(b.t)+'</h1><p class="intro">'+b.intro+'</p>'
+      +'<p class="how">怎么看：带红色「进入下一层」的块点进去还有细节；其他块点一下右侧会弹出说明。鼠标停在块上会高亮它的连线。</p>';
+  if(pn && (pn.d||pn.f||pn.dev||pn.qa||pn.code)) h+='<details><summary>这一层的补充说明</summary>'+detailHtml(pn)+'</details>';
+  headEl.innerHTML=h;
+  const bb=headEl.querySelector('.backbtn'); if(bb) bb.onclick=()=>go(bb.dataset.b);
+
+  boardEl.innerHTML='<svg class="wires" id="wires"></svg>';
+  b.rows.forEach(([label,ids])=>{
+    const row=document.createElement('div'); row.className='row';
+    row.innerHTML='<div class="rlabel">'+esc(label)+'</div><div class="nodes"></div>';
+    const wrap=row.querySelector('.nodes');
+    ids.forEach(id=>{
+      const n=N[id]; if(!n) return;
+      const el=document.createElement('button'); el.className='card'+(n.k==='concept'&&n.d&&n.d.length>2?' wide':''); el.dataset.id=id;
+      el.style.setProperty('--kc', kv(n.c?'group':n.k));
+      el.innerHTML='<div class="kind">'+(KINDS[n.k]||KINDS.concept).t+'</div><div class="name">'+esc(n.n)+'</div><div class="what">'+esc(n.w)+'</div>'
+        +(n.c?'<span class="drill">进入下一层 ›</span>':((n.code||n.steps||n.qa)?'<div class="info">点开看步骤 / 代码 / 问答 ⓘ</div>':(n.d||n.f||n.dev)?'<div class="info">点开看细节 ⓘ</div>':''));
+      el.onclick=()=>{ if(n.c) go(n.c); else openNode(id); };
+      el.onmouseenter=()=>hl(id); el.onmouseleave=()=>hl(null);
+      el.onfocus=()=>hl(id); el.onblur=()=>hl(null);
+      wrap.appendChild(el);
+    });
+    boardEl.appendChild(row);
+  });
+  window.scrollTo({top:0});
+  requestAnimationFrame(drawWires);
+}
+
+function drawWires(){
+  const svg=$('#wires'); if(!svg) return;
+  const b=B[cur], br=boardEl.getBoundingClientRect();
+  const R={}; boardEl.querySelectorAll('.card').forEach(el=>{ const r=el.getBoundingClientRect(); R[el.dataset.id]={x:r.left-br.left,y:r.top-br.top,w:r.width,h:r.height}; });
+  const E=b.e.filter(e=>R[e[0]]&&R[e[1]]).map(([a,c,l,st],i)=>{
+    const A=R[a],C=R[c]; let dir;
+    if(A.y+A.h < C.y-4) dir='down'; else if(C.y+C.h < A.y-4) dir='up'; else dir='side';
+    return {i,a,c,l,st,A,C,dir};
+  });
+  // 分配端口：同一个块同一侧的多条线按另一端的 x 排开
+  const ports={};
+  const addPort=(id,side,e,other)=>{ (ports[id+side]=ports[id+side]||[]).push({e,other}); };
+  E.forEach(e=>{
+    if(e.dir==='down'){ addPort(e.a,'b',e,e.C.x+e.C.w/2); addPort(e.c,'t',e,e.A.x+e.A.w/2); }
+    else if(e.dir==='up'){ addPort(e.a,'t',e,e.C.x+e.C.w/2); addPort(e.c,'b',e,e.A.x+e.A.w/2); }
+    else { addPort(e.a,'t',e,e.C.x); addPort(e.c,'t',e,e.A.x); }
+  });
+  const px={};
+  for(const [key,list] of Object.entries(ports)){
+    const id=key.slice(0,-1); const r=R[id]; list.sort((p,q)=>p.other-q.other);
+    list.forEach((p,i)=>{ const f=list.length===1?.5:.25+.5*i/(list.length-1); px[p.e.i+'|'+id]=r.x+r.w*f; });
+  }
+  let s='<defs><marker id="mk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk" d="M0,0 L10,5 L0,10 z"/></marker>'
+       +'<marker id="mkon" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mkon" d="M0,0 L10,5 L0,10 z"/></marker></defs>';
+  const laneN={l:0,r:0}, labels=[];
+  E.forEach(e=>{
+    const A=e.A,C=e.C; let x1,y1,x2,y2,c1x,c1y,c2x,c2y;
+    const sx=px[e.i+'|'+e.a], tx=px[e.i+'|'+e.c];
+    // 跨行的线如果会穿过中间的块，就绕到两侧的通道里走
+    if(e.dir!=='side' && e.st!=='back'){
+      const top=e.dir==='down'?A.y+A.h:C.y+C.h, bot=e.dir==='down'?C.y:A.y;
+      const mid=Object.entries(R).filter(([id,r])=>id!==e.a&&id!==e.c&&r.y>top&&r.y+r.h<bot);
+      const lo=Math.min(sx,tx)-14, hi=Math.max(sx,tx)+14;
+      if(mid.some(([,r])=>r.x<hi&&r.x+r.w>lo)){
+        const L=Math.min(...mid.map(([,r])=>r.x)), Rr=Math.max(...mid.map(([,r])=>r.x+r.w)), cx=(sx+tx)/2;
+        const left=(cx-L)<(Rr-cx), lane=left?L-26-14*laneN.l++:Rr+26+14*laneN.r++;
+        const ya=e.dir==='down'?A.y+A.h:A.y, yb=e.dir==='down'?C.y:C.y+C.h, sg=e.dir==='down'?1:-1, k=22;
+        const d='M'+sx+','+ya+' C'+sx+','+(ya+sg*k)+' '+lane+','+(ya+sg*k)+' '+lane+','+(ya+sg*2*k)
+               +' L'+lane+','+(yb-sg*2*k)+' C'+lane+','+(yb-sg*k)+' '+tx+','+(yb-sg*k)+' '+tx+','+yb;
+        s+='<path data-a="'+e.a+'" data-c="'+e.c+'" d="'+d+'" marker-end="url(#mk)"/>';
+        if(e.l) labels.push({e,x:left?lane-6:lane+6,y:(ya+yb)/2,anchor:left?'end':'start'});
+        return;
+      }
+    }
+    if(e.dir==='down'){ x1=sx;y1=A.y+A.h;x2=tx;y2=C.y; const d=Math.max(26,(y2-y1)/2); c1x=x1;c1y=y1+d;c2x=x2;c2y=y2-d; }
+    else if(e.dir==='up'){ x1=sx;y1=A.y;x2=tx;y2=C.y+C.h; const d=Math.max(40,(y1-y2)/2); c1x=x1;c1y=y1-d;c2x=x2;c2y=y2+d;
+      if(e.st==='back'){ // 绕到右侧
+        const side=Math.max(A.x+A.w,C.x+C.w)+46; x1=A.x+A.w;y1=A.y+A.h/2;x2=C.x+C.w;y2=C.y+C.h/2; c1x=side;c1y=y1;c2x=side;c2y=y2; }
+    }
+    else { x1=sx;y1=A.y;x2=tx;y2=C.y; const lift=Math.min(52,30+Math.abs(x2-x1)/14); c1x=x1;c1y=y1-lift;c2x=x2;c2y=y2-lift; }
+    const d='M'+x1+','+y1+' C'+c1x+','+c1y+' '+c2x+','+c2y+' '+x2+','+y2;
+    s+='<path data-a="'+e.a+'" data-c="'+e.c+'" class="'+(e.st==='back'?'back':'')+'" d="'+d+'" marker-end="url(#mk)"/>';
+    if(e.l) labels.push({e,x:(x1+3*c1x+3*c2x+x2)/8,y:(y1+3*c1y+3*c2y+y2)/8+4,anchor:'middle'});
+  });
+  // 标签避让：和已放的标签、卡片重叠就上下挪，挪不开就只在高亮时显示
+  const boxes=Object.values(R).map(r=>({x:r.x-2,y:r.y-2,w:r.w+4,h:r.h+4}));
+  const hit=(a,b)=>a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;
+  labels.forEach(L=>{
+    const w=[...L.e.l].reduce((t,ch)=>t+(ch.charCodeAt(0)>255?11:6.2),0)+6, h=14;
+    const bx=L.anchor==='middle'?L.x-w/2:L.anchor==='end'?L.x-w:L.x;
+    let ok=null;
+    for(const dy of [0,-13,13,-26,26]){ const b={x:bx,y:L.y+dy-11,w,h}; if(!boxes.some(o=>hit(o,b))){ ok=dy; boxes.push(b); break; } }
+    s+='<text data-a="'+L.e.a+'" data-c="'+L.e.c+'" class="'+(ok===null?'hid':'')+'" x="'+L.x+'" y="'+(L.y+(ok||0))+'" text-anchor="'+L.anchor+'">'+esc(L.e.l)+'</text>';
+  });
+  svg.innerHTML=s;
+}
+
+function hl(id){
+  const svg=$('#wires'); if(!svg) return;
+  svg.querySelectorAll('path[data-a],text').forEach(el=>{
+    const on = id && (el.dataset.a===id||el.dataset.c===id);
+    el.classList.toggle('on',!!on); el.classList.toggle('dim',!!id&&!on);
+    if(el.tagName==='path') el.setAttribute('marker-end', on?'url(#mkon)':'url(#mk)');
+  });
+}
+
+function detailHtml(n){
+  let h='';
+  if(n.d&&n.d.length) h+='<h3>它是怎么工作的</h3>'+(n.d.length===1?'<p>'+esc(n.d[0])+'</p>':'<ul>'+n.d.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>');
+  if(n.steps&&n.steps.length) h+='<h3>在 UE 里怎么做</h3><ol>'+n.steps.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol>';
+  if(n.api&&n.api.length) h+='<h3>用到的 API（代码里调的是什么）</h3><div class="api">'+n.api.map(([a,b])=>'<div><code>'+esc(a)+'</code><br>'+esc(b)+'</div>').join('')+'</div>';
+  if(n.code&&n.code.length) h+='<h3>项目里的代码</h3>'+n.code.map(c=>'<div class="cb"><div class="ct">'+esc(c.t)+'</div><pre>'+esc(c.c)+'</pre>'+(c.n&&c.n.length?'<ul>'+c.n.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>':'')+'</div>').join('');
+  if(n.qa&&n.qa.length) h+='<h3>初学者常问</h3>'+n.qa.map(([q,a])=>'<div class="qa"><div class="q">问：'+esc(q)+'</div><div>答：'+esc(a)+'</div></div>').join('');
+  if(n.dev) h+='<div class="dev">'+n.dev+'</div>';
+  if(n.f&&n.f.length) h+='<h3>代码 / 资产在哪</h3><div class="files">'+n.f.map(x=>'<code>'+esc(x)+'</code>').join('')+'</div>';
+  return h;
+}
+
+function openNode(id){
+  const n=N[id], b=B[cur];
+  boardEl.querySelectorAll('.card').forEach(c=>c.classList.toggle('sel',c.dataset.id===id));
+  ptitle.textContent=n.n;
+  let h='<span class="kchip" style="--kc:'+kv(n.k)+'">'+(KINDS[n.k]||KINDS.concept).t+'</span><p><b>一句话：</b>'+esc(n.w)+'</p>'+detailHtml(n);
+  const ins=b.e.filter(e=>e[1]===id), outs=b.e.filter(e=>e[0]===id);
+  if(ins.length||outs.length){
+    h+='<h3>在这一层的依赖关系</h3><ul class="deps">';
+    ins.forEach(e=>h+='<li>来自 <button data-n="'+e[0]+'">'+esc(N[e[0]].n)+'</button>'+(e[2]?'：'+esc(e[2]):'')+'</li>');
+    outs.forEach(e=>h+='<li>交给 <button data-n="'+e[1]+'">'+esc(N[e[1]].n)+'</button>'+(e[2]?'：'+esc(e[2]):'')+'</li>');
+    h+='</ul>';
+  }
+  pbody.innerHTML=h;
+  pbody.querySelectorAll('[data-n]').forEach(x=>x.onclick=()=>{ const t=N[x.dataset.n]; if(t.c) go(t.c); else openNode(t.id); });
+  panel.classList.add('open'); scrim.classList.add('open'); hl(id);
+}
+function openGloss(){
+  ptitle.textContent='术语小词典';
+  pbody.innerHTML='<p>第一次看遇到不认识的词，先查这里。</p><dl class="gl">'+GLOSS.map(([a,b])=>'<dt>'+esc(a)+'</dt><dd>'+esc(b)+'</dd>').join('')+'</dl>';
+  panel.classList.add('open'); scrim.classList.add('open');
+}
+function closePanel(){ panel.classList.remove('open'); scrim.classList.remove('open'); boardEl.querySelectorAll('.card.sel').forEach(c=>c.classList.remove('sel')); hl(null); }
+$('#pclose').onclick=closePanel; scrim.onclick=closePanel; $('#glossBtn').onclick=openGloss;
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePanel(); });
+new ResizeObserver(()=>requestAnimationFrame(drawWires)).observe(boardEl);
+window.addEventListener('hashchange',()=>{ const h=location.hash.slice(1); if(h&&h!==cur&&B[h]) go(h,false); });
+renderLegend();
+let start='root'; try{ const h=location.hash.slice(1); if(B[h]) start=h; }catch(e){}
+go(start,false);
+</script>
+</body>
+</html>

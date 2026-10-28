@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4274380502",
+    "Type": "Event",
+    "GUID": "{AB21A261-4F53-476E-BF55-7CBF2AEF472E}",
+    "Language": "SFX",
+    "Hash": "{674CEFA8-6074-5124-1F18-DB3284BD540E}",
+    "ObjectPath": "play_jiabeilina_am_skill01",
+    "ShortName": "play_jiabeilina_am_skill01",
+    "Path": "Event/play_jiabeilina_am_skill01.bnk",
+    "Media": [
+     {
+      "Id": "814776846",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Skill01_Full_01.wav",
+      "Path": "Media/814776846.wem",
+      "CachePath": "49/{491E722D-EDB3-A6C7-64A1-5B79E6403FEA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4274380502",
+      "Name": "play_jiabeilina_am_skill01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_skill01",
+      "GUID": "{AB21A261-4F53-476E-BF55-7CBF2AEF472E}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.4607708",
+      "DurationMax": "3.4607708",
+      "MediaRefs": [
+       {
+        "Id": "814776846"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{71300297-F2BE-1613-0493-83D4B2520F40}"
+ }
+}

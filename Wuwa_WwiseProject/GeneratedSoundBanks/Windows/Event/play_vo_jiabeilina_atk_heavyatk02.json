@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1552347489",
+    "Type": "Event",
+    "GUID": "{98C6CD73-F131-483C-B58B-3D930D06DE4E}",
+    "Language": "SFX",
+    "Hash": "{B1401310-0286-8D53-CA8B-759932E505B3}",
+    "ObjectPath": "play_vo_jiabeilina_atk_heavyatk02",
+    "ShortName": "play_vo_jiabeilina_atk_heavyatk02",
+    "Path": "Event/play_vo_jiabeilina_atk_heavyatk02.bnk",
+    "Media": [
+     {
+      "Id": "109685139",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_heavyatk02_03_tone.wav",
+      "Path": "Media/109685139.wem",
+      "CachePath": "53/{53D5D80B-8F8F-2D7D-1C17-AFD81D59D194}.wem"
+     },
+     {
+      "Id": "297624968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_heavyatk02_02_tone.wav",
+      "Path": "Media/297624968.wem",
+      "CachePath": "C1/{C1158437-37E3-B49F-CDAE-6BCD3C720759}.wem"
+     },
+     {
+      "Id": "925515737",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_heavyatk02_01_tone.wav",
+      "Path": "Media/925515737.wem",
+      "CachePath": "72/{72A5C976-E6C9-BC9B-E75B-CC271C0F91E2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1552347489",
+      "Name": "play_vo_jiabeilina_atk_heavyatk02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_atk_heavyatk02",
+      "GUID": "{98C6CD73-F131-483C-B58B-3D930D06DE4E}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.2201875",
+      "DurationMax": "0.3199375",
+      "MediaRefs": [
+       {
+        "Id": "109685139"
+       },
+       {
+        "Id": "297624968"
+       },
+       {
+        "Id": "925515737"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DBABB1D6-96D1-6294-23DA-FADB6B16D128}"
+ }
+}

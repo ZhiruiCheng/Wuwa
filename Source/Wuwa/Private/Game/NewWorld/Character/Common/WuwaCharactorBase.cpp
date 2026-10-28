@@ -17,10 +17,7 @@
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Game/NewWorld/Combat/WuwaCamp.h"
 #include "Game/NewWorld/Combat/WuwaCreatureSubsystem.h"
-#include "Game/UI/WuwaHUD.h"
-#include "Game/UI/WuwaWidgetController.h"
 
-class AWuwaPlayerController;
 class AWuwaPlayerState;
 class UWuwaGameplayAbilityBase;
 // Sets default values
@@ -83,7 +80,6 @@ void AWuwaCharactorBase::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 	RefreshAbilityActorInfo();
-	// 旧 UMG 血条每次调用都会新建一层 Widget，切人会叠加；由 LGUI 的 HUD 替代后不再在这里初始化。
 }
 
 void AWuwaCharactorBase::UnPossessed()
@@ -97,20 +93,6 @@ void AWuwaCharactorBase::OnRep_Controller()
 {
 	Super::OnRep_Controller();
 	RefreshAbilityActorInfo();
-	// 同上：不再初始化旧 UMG 血条。
-}
-
-void AWuwaCharactorBase::InitHUD()
-{
-	if (AWuwaPlayerController* PC = Cast<AWuwaPlayerController>(GetController()))
-	{
-		if (AWuwaHUD* HUD = Cast<AWuwaHUD>(PC->GetHUD()))
-		{
-			HUD->InitCtrAndWidget(AbilitySystemComponent, AttributeSet, PC);
-			HUD->WuwaWidgetController->BroadInitialValues();
-			HUD->WuwaWidgetController->BindCallBackDependencies();
-		}
-	}
 }
 
 #pragma endregion

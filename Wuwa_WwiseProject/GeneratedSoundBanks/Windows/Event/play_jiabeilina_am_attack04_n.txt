@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2381234467	play_jiabeilina_am_attack04_n			\Default Work Unit\Wuwa_Jiabei\play_jiabeilina_am_attack04_n	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	738983562	Jiabeilina_AM_Attack04_N	.cache\94\{94AC60CB-55C7-F116-F3EF-2484ED147706}.wem	738983562.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_118200432\Jiabeilina_AM_Attack04_N	
+

@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataAsset.h"
-#include "Game/Camera/WuwaCameraTypes.h"
+#include "Game/Camera/CameraData/WuwaCameraSettings.h"
 #include "WuwaCameraMode.generated.h"
 
 /** Immutable shared configuration; runtime requests and zoom never live in this asset. */

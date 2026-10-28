@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3538349588	play_vo_changli_bat_airatk01			\Default Work Unit\Wuwa_Changli\play_vo_changli_bat_airatk01	
+

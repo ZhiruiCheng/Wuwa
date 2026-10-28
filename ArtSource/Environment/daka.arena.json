@@ -1,0 +1,112 @@
+{
+ "_comment": "大卡（芙露德莉丝）战斗场地：场景由 WuwaSceneImport 从 C:/GamePakExtractor/大卡/大卡2.blend 导入；本配方给 -run=WuwaArenaSetup 用（Boss 预览摆放、PlayerStart、光照）。",
+ "level": "/Game/Environment/DaKa/Maps/L_DaKa",
+ "center": [
+  0,
+  0
+ ],
+ "floor": "lowest",
+ "_floor_note": "场地在宫殿大厅里面（最下面一层，Z≈0），不是屋顶（最上面一层，Z≈170 米）",
+ "playerYaw": 180,
+ "playerDistance": 1200,
+ "boss": {
+  "label": "大卡_芙露德莉丝",
+  "class": "/Game/Characters/Monster/Boss/Fuludelisi/BP_Monster_Fuludelisi.BP_Monster_Fuludelisi_C",
+  "_class_note": "怪物蓝图由 WuwaMonsterSetup -Recipe=ArtSource/Boss/fuludelisi.monster.json 生成（阵营 Monster、子弹表、大剑、待机）；去掉 class 则退回只放预览网格（下面 mesh / idle / weapons）",
+  "mesh": "/Game/Characters/Monster/Boss/Fuludelisi/Mesh/MB1FuludelisiMd00401.MB1FuludelisiMd00401",
+  "idle": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Stand2.MB1FuludelisiMd00401_Stand2",
+  "meshYaw": -90,
+  "weapons": [
+   {
+    "mesh": "/Game/Characters/Monster/Boss/Fuludelisi/Weapon/EFuludelisiDajianMd10011.EFuludelisiDajianMd10011",
+    "socket": "WeaponProp02"
+   }
+  ],
+  "_weapons_note": "三把召唤剑（Gongmingzhejian/Suizhujian/Mingshijian，插槽 WeaponProp05/06/07）的特效材质（_EF）还没做，画出来是黑的，先不挂"
+ },
+ "lighting": {
+  "sun": {
+   "rotation": [
+    -38,
+    20,
+    0
+   ],
+   "intensity": 10,
+   "temperature": 5800,
+   "sourceAngle": 1.0
+  },
+  "sky": {
+   "intensity": 1.0
+  },
+  "fog": {
+   "heightOffset": 0,
+   "density": 0.006,
+   "heightFalloff": 0.05,
+   "startDistance": 2000,
+   "inscatterColor": [
+    0.42,
+    0.55,
+    0.78
+   ]
+  },
+  "post": {
+   "exposureMinEV": -2,
+   "exposureMaxEV": 8,
+   "exposureBias": 0.3,
+   "bloom": 0.45,
+   "saturation": 1.08,
+   "contrast": 1.04,
+   "vignette": 0.25,
+   "whiteTemp": 6500
+  }
+ },
+ "starFloor": {
+  "_comment": "原作场地地面 MI_Kan_Flo_01A_01（母材质 M_BottomFlowing：镜面 + 星云视差 + 闪烁星点）的近似重建；贴图用 PakExport 从原作导出（T_Sea_Gro_07B_D 星云、T_CellsBall_05 噪声、T4_Com_Gra_08A_N 法线）",
+  "name": "M_DaKa_StarFloor",
+  "folder": "/Game/Environment/DaKa/Materials",
+  "sourceRoot": "ArtSource/Environment/DaKa",
+  "replace": "MI_Kan_Flo_01A_01",
+  "textures": [
+   {
+    "name": "T_Sea_Gro_07B_D",
+    "file": "Textures/T_Sea_Gro_07B_D.png",
+    "srgb": true,
+    "role": "color"
+   },
+   {
+    "name": "T_CellsBall_05",
+    "file": "Textures/T_CellsBall_05.png",
+    "srgb": false,
+    "role": "mask"
+   },
+   {
+    "name": "T4_Com_Gra_08A_N",
+    "file": "Textures/T4_Com_Gra_08A_N.png",
+    "srgb": false,
+    "role": "normal"
+   }
+  ],
+  "params": {
+   "baseColor": [
+    0.146,
+    0.404,
+    0.5
+   ],
+   "baseColorScale": 0.12,
+   "nebulaTint": [
+    0.6,
+    0.85,
+    1.0
+   ],
+   "nebulaTile": 3000,
+   "depth": 400,
+   "nebulaIntensity": 0.8,
+   "starTile": 250,
+   "starIntensity": 6,
+   "flickerSpeed": 0.1,
+   "roughness": 0.06,
+   "normalTile": 400,
+   "normalIntensity": 0.2
+  }
+ }
+}

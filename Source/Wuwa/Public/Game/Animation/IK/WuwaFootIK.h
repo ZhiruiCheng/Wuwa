@@ -71,3 +71,4 @@ struct WUWA_API FRigUnit_WuwaFootIK : public FRigUnitMutable
 	UPROPERTY(meta=(Output)) FWuwaFootIKResult Result;
 	UPROPERTY() FWuwaFootIKWork Work;
 };
+	

@@ -3,7 +3,7 @@
 #include "CoreMinimal.h"
 #include "Animation/AnimNotifies/AnimNotify.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
-#include "Game/Camera/WuwaCameraTypes.h"
+#include "Game/Camera/CameraData/WuwaCameraModify.h"
 #include "WuwaAnimNotify_CameraModify.generated.h"
 
 /**

@@ -1,0 +1,145 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1337386186",
+    "Type": "Event",
+    "GUID": "{6E72468B-9419-46A9-8532-91FA9D3EBAD0}",
+    "Language": "SFX",
+    "Hash": "{3578E36B-6473-93D5-B30E-8C041427E21D}",
+    "ObjectPath": "play_role_changli_bat__am_airattack02",
+    "ShortName": "play_role_changli_bat__am_airattack02",
+    "Path": "Event/play_role_changli_bat__am_airattack02.bnk",
+    "Media": [
+     {
+      "Id": "174046253",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_03.wav",
+      "Path": "Media/174046253.wem",
+      "CachePath": "58/{583A0174-001B-23D8-74E7-83F1160CE8BC}.wem"
+     },
+     {
+      "Id": "273445969",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_05.wav",
+      "Path": "Media/273445969.wem",
+      "CachePath": "71/{71487888-9F5D-6025-D613-0602760F96D6}.wem"
+     },
+     {
+      "Id": "315826569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_04.wav",
+      "Path": "Media/315826569.wem",
+      "CachePath": "EB/{EBD3EF23-5ED9-8664-4C64-0C136FB165B8}.wem"
+     },
+     {
+      "Id": "331733114",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_airattack02_01_v2.wav",
+      "Path": "Media/331733114.wem",
+      "CachePath": "7F/{7FD41B79-D580-BF48-7F7B-CFCD70F6E21F}.wem"
+     },
+     {
+      "Id": "431584537",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_06.wav",
+      "Path": "Media/431584537.wem",
+      "CachePath": "6D/{6DC33E97-19FA-AB1B-63C0-7DA9CC9DF99E}.wem"
+     },
+     {
+      "Id": "500611325",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_01.wav",
+      "Path": "Media/500611325.wem",
+      "CachePath": "E1/{E136606B-362F-C737-B4CF-FD2DD4A4124D}.wem"
+     },
+     {
+      "Id": "694444525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack_firelayer_02.wav",
+      "Path": "Media/694444525.wem",
+      "CachePath": "6F/{6F0CB2C0-9CB7-2807-3C90-53EB4E5A1E99}.wem"
+     },
+     {
+      "Id": "769377416",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_airattack02_03_v2.wav",
+      "Path": "Media/769377416.wem",
+      "CachePath": "8B/{8B6C42BD-9F28-15DB-BDA9-13E6FA1B8EB1}.wem"
+     },
+     {
+      "Id": "939774335",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_airattack02_02_v2.wav",
+      "Path": "Media/939774335.wem",
+      "CachePath": "10/{108F1DC9-2E62-CABB-D07F-1270CE196322}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1337386186",
+      "Name": "play_role_changli_bat__am_airattack02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_airattack02",
+      "GUID": "{6E72468B-9419-46A9-8532-91FA9D3EBAD0}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7559167",
+      "DurationMax": "2.350396",
+      "MediaRefs": [
+       {
+        "Id": "174046253"
+       },
+       {
+        "Id": "273445969"
+       },
+       {
+        "Id": "315826569"
+       },
+       {
+        "Id": "331733114"
+       },
+       {
+        "Id": "431584537"
+       },
+       {
+        "Id": "500611325"
+       },
+       {
+        "Id": "694444525"
+       },
+       {
+        "Id": "769377416"
+       },
+       {
+        "Id": "939774335"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CC4A1F6B-BB77-4F24-4BF1-A4D2F3B8F3C7}"
+ }
+}

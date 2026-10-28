@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2381234467",
+    "Type": "User",
+    "GUID": "{3411E008-A7EA-4C4E-83AE-115BD0F14E78}",
+    "Language": "SFX",
+    "Hash": "{E7A296D3-EA5F-2919-8223-F10BD890C1C9}",
+    "ObjectPath": "play_jiabeilina_am_attack04_n",
+    "ShortName": "play_jiabeilina_am_attack04_n",
+    "Path": "play_jiabeilina_am_attack04_n.bnk"
+   }
+  ],
+  "FileHash": "{D746C0F4-F628-948A-4140-4732F775CE96}"
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1991456336",
+    "Type": "Event",
+    "GUID": "{4A901F88-6A53-4E43-9E19-51426D94060D}",
+    "Language": "SFX",
+    "Hash": "{8E83531F-D88B-F0C7-F8BB-24FC9386BAE9}",
+    "ObjectPath": "play_role_changli_bat__am_damagehit_stone",
+    "ShortName": "play_role_changli_bat__am_damagehit_stone",
+    "Path": "Event/play_role_changli_bat__am_damagehit_stone.bnk",
+    "Media": [
+     {
+      "Id": "7035658",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_stone_03_v2.wav",
+      "Path": "Media/7035658.wem",
+      "CachePath": "CF/{CF71E5C8-CCBA-FBFB-9971-782537F7B05D}.wem"
+     },
+     {
+      "Id": "214283112",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_stone_01_v2.wav",
+      "Path": "Media/214283112.wem",
+      "CachePath": "73/{73289A6F-0D18-82DB-76BD-9CC45770BAA6}.wem"
+     },
+     {
+      "Id": "410396709",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_stone_04_v2.wav",
+      "Path": "Media/410396709.wem",
+      "CachePath": "B8/{B8248598-474A-3853-ADDF-78C82ADB4757}.wem"
+     },
+     {
+      "Id": "775160966",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_stone_02_v2.wav",
+      "Path": "Media/775160966.wem",
+      "CachePath": "1F/{1F006B9D-E764-07DE-B6F8-D533BF563E7F}.wem"
+     },
+     {
+      "Id": "836148517",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_stone_05_v2.wav",
+      "Path": "Media/836148517.wem",
+      "CachePath": "26/{26D94EF5-F0BF-87A8-926C-D2E702DC616D}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1991456336",
+      "Name": "play_role_changli_bat__am_damagehit_stone",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_damagehit_stone",
+      "GUID": "{4A901F88-6A53-4E43-9E19-51426D94060D}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2209792",
+      "DurationMax": "1.572875",
+      "MediaRefs": [
+       {
+        "Id": "7035658"
+       },
+       {
+        "Id": "214283112"
+       },
+       {
+        "Id": "410396709"
+       },
+       {
+        "Id": "775160966"
+       },
+       {
+        "Id": "836148517"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CB62F143-D2F0-5A07-4D58-A27D7BB28F00}"
+ }
+}

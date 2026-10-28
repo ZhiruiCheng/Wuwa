@@ -1,0 +1,109 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3467848469",
+    "Type": "Event",
+    "GUID": "{14CE97B9-43CF-46B4-8402-C6529E0DAC77}",
+    "Language": "SFX",
+    "Hash": "{A2453FA2-092D-4DF3-4BEB-ADF10D3BDAE8}",
+    "ObjectPath": "play_role_changli_bat__am_damagehit_fire",
+    "ShortName": "play_role_changli_bat__am_damagehit_fire",
+    "Path": "Event/play_role_changli_bat__am_damagehit_fire.bnk",
+    "Media": [
+     {
+      "Id": "21311969",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_01_v2.wav",
+      "Path": "Media/21311969.wem",
+      "CachePath": "97/{9721746A-144B-F716-4A78-1A6C2859FFB0}.wem"
+     },
+     {
+      "Id": "347951352",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_03_v2.wav",
+      "Path": "Media/347951352.wem",
+      "CachePath": "0F/{0F551B6F-A00D-73D2-A337-7402F70A972D}.wem"
+     },
+     {
+      "Id": "357558082",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_06_v2.wav",
+      "Path": "Media/357558082.wem",
+      "CachePath": "B1/{B1B3DEB5-F5D5-8696-AAFA-3CBED3F67C33}.wem"
+     },
+     {
+      "Id": "384680201",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_04_v2.wav",
+      "Path": "Media/384680201.wem",
+      "CachePath": "3D/{3D2EB227-E9CC-03E0-2409-70DDC567FFDC}.wem"
+     },
+     {
+      "Id": "848469098",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_02_v2.wav",
+      "Path": "Media/848469098.wem",
+      "CachePath": "7C/{7C1BA484-AA66-2AB9-3EB2-E619BF81B39B}.wem"
+     },
+     {
+      "Id": "1045089789",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\am_damagehit_fire_05_v2.wav",
+      "Path": "Media/1045089789.wem",
+      "CachePath": "6D/{6D9A0CA3-AEF8-1E69-691F-EBB0EC87B7A2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3467848469",
+      "Name": "play_role_changli_bat__am_damagehit_fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_damagehit_fire",
+      "GUID": "{14CE97B9-43CF-46B4-8402-C6529E0DAC77}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.0665",
+      "DurationMax": "3.3447292",
+      "MediaRefs": [
+       {
+        "Id": "21311969"
+       },
+       {
+        "Id": "347951352"
+       },
+       {
+        "Id": "357558082"
+       },
+       {
+        "Id": "384680201"
+       },
+       {
+        "Id": "848469098"
+       },
+       {
+        "Id": "1045089789"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{354505B9-5EA5-C6E9-1576-62DA4FF32B4A}"
+ }
+}

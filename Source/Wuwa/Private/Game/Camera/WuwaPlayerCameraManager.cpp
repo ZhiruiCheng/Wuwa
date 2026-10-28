@@ -5,7 +5,7 @@
 #include "GameFramework/PlayerController.h"
 #include "Game/Camera/WuwaCameraMode.h"
 #include "Game/Camera/WuwaCameraRuntimeBridge.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Input/WuwaInputTypes.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogWuwaCamera, Log, All);
@@ -62,7 +62,7 @@ void AWuwaPlayerCameraManager::NotifyPawnChanged()
 	if (IsValid(Runtime))
 	{
 		// 在清除临时模式前读取当前配置；缩放偏好默认随玩家保留。
-		const bool bResetUserZoom = Runtime->ResolveSettings(GetBaseSettings()).bResetZoomOnPawnChange;
+		const bool bResetUserZoom = Runtime->ResolveSettings(GetBaseSettings()).Zoom.bResetZoomOnPawnChange;
 		Runtime->ResetCamera(bResetUserZoom);
 	}
 }
@@ -110,9 +110,9 @@ void AWuwaPlayerCameraManager::ProcessViewRotation(float DeltaTime, FRotator& Ou
 	if (TryGetGameplayContext(Player, Pawn))
 	{
 		const auto Settings = Runtime->ResolveSettings(GetBaseSettings());
-		ViewPitchMin = Settings.PitchMin;
-		ViewPitchMax = Settings.PitchMax;
-		if (!Settings.bAllowRotationInput || Player->GetViewTarget() != Pawn) OutDeltaRot = FRotator::ZeroRotator;
+		ViewPitchMin = Settings.Rotation.PitchMin;
+		ViewPitchMax = Settings.Rotation.PitchMax;
+		if (!Settings.Rotation.bAllowRotationInput || Player->GetViewTarget() != Pawn) OutDeltaRot = FRotator::ZeroRotator;
 	}
 	Super::ProcessViewRotation(DeltaTime, OutViewRotation, OutDeltaRot);
 }
@@ -121,6 +121,7 @@ void AWuwaPlayerCameraManager::UpdateCamera(float DeltaTime)
 {
 	Super::UpdateCamera(DeltaTime);
 	// An external view must never accumulate wheel events to replay on returning to gameplay.
+	//UpdateViewTargetInternal
 	PendingZoom = 0.f;
 }
 
@@ -154,6 +155,7 @@ void AWuwaPlayerCameraManager::UpdateViewTargetInternal(FTViewTarget& OutVT, flo
 	OutVT.POV.FOV = CachedView.FieldOfView;
 }
 
+//用小球推过去,有遮挡就将其放在遮挡物的前面
 FVector AWuwaPlayerCameraManager::ResolveCollision(const FWuwaCameraView& View, const APawn* Pawn) const
 {
 	if (!View.bCollisionTest || !GetWorld()) return View.Location;
@@ -182,36 +184,36 @@ int32 AWuwaPlayerCameraManager::PushCameraModify(UObject* Source, const FWuwaCam
 	FWuwaCameraSettings Settings = Runtime->ResolveSettings(GetBaseSettings());
 	if (Modify.bModifyArmLength)
 	{
-		Settings.ArmLength = Modify.ArmLength;
-		Settings.bUseUserZoom = false;
+		Settings.Arm.ArmLength = Modify.ArmLength;
+		Settings.Zoom.bUseUserZoom = false;
 	}
-	Settings.ArmLength = FMath::Max(0.f, Settings.ArmLength + Modify.ArmLengthAdditional);
-	Settings.MinArmLength = FMath::Min(Settings.MinArmLength, Settings.ArmLength);
-	Settings.MaxArmLength = FMath::Max(Settings.MaxArmLength, Settings.ArmLength);
+	Settings.Arm.ArmLength = FMath::Max(0.f, Settings.Arm.ArmLength + Modify.ArmLengthAdditional);
+	Settings.Arm.MinArmLength = FMath::Min(Settings.Arm.MinArmLength, Settings.Arm.ArmLength);
+	Settings.Arm.MaxArmLength = FMath::Max(Settings.Arm.MaxArmLength, Settings.Arm.ArmLength);
 	// 角度：原作目标 = 角色旋转 + ArmRotation（只改勾选的轴），再叠 Additional；项目镜头 = 控制旋转 + RotationOffset，换算成偏移
 	const FRotator Control = Player->GetControlRotation();
-	FRotator Target = (Control + Settings.RotationOffset).GetNormalized();
+	FRotator Target = (Control + Settings.Offset.RotationOffset).GetNormalized();
 	const FRotator Facing = Pawn->GetActorRotation();
 	if (Modify.bModifyPitch) Target.Pitch = Facing.Pitch + Modify.ArmRotation.Pitch;
 	if (Modify.bModifyYaw) Target.Yaw = Facing.Yaw + Modify.ArmRotation.Yaw;
 	Target.Pitch += Modify.ArmRotationAdditional.Pitch;
 	Target.Yaw += Modify.ArmRotationAdditional.Yaw;
 	const FRotator Delta = (Target - Control).GetNormalized();
-	Settings.RotationOffset = FRotator(Delta.Pitch, Delta.Yaw, Settings.RotationOffset.Roll);
+	Settings.Offset.RotationOffset = FRotator(Delta.Pitch, Delta.Yaw, Settings.Offset.RotationOffset.Roll);
 	const bool bRotated = Modify.bModifyPitch || Modify.bModifyYaw || !Modify.ArmRotationAdditional.IsNearlyZero();
 	// 原作改了角度就锁住对应轴的玩家输入；IsLockInput 全锁
-	if (bRotated || Modify.bLockInput) Settings.bAllowRotationInput = false;
-	if (Modify.bLockInput || Modify.bModifyArmLength) Settings.bAllowZoomInput = false;
+	if (bRotated || Modify.bLockInput) Settings.Rotation.bAllowRotationInput = false;
+	if (Modify.bLockInput || Modify.bModifyArmLength) Settings.Zoom.bAllowZoomInput = false;
 	// 镜头中心偏移按镜头水平朝向的局部空间（X 前 Y 右 Z 上）
 	const FRotator Heading(0.f, Target.Yaw, 0.f);
-	FVector Local = Heading.UnrotateVector(Settings.PivotOffset);
+	FVector Local = Heading.UnrotateVector(Settings.Offset.PivotOffset);
 	if (Modify.bModifyOffsetX) Local.X = Modify.CameraOffset.X;
 	if (Modify.bModifyOffsetY) Local.Y = Modify.CameraOffset.Y;
 	if (Modify.bModifyOffsetZ) Local.Z = Modify.CameraOffset.Z;
-	Settings.PivotOffset = Heading.RotateVector(Local + Modify.CameraOffsetAdditional);
-	if (Modify.bModifyFov) Settings.FieldOfView = Modify.Fov;
-	Settings.BlendTime = FMath::Max(0.f, BlendInTime);
-	Settings.BlendOutTime = BlendOutTime;
+	Settings.Offset.PivotOffset = Heading.RotateVector(Local + Modify.CameraOffsetAdditional);
+	if (Modify.bModifyFov) Settings.Offset.FieldOfView = Modify.Fov;
+	Settings.Blend.BlendTime = FMath::Max(0.f, BlendInTime);
+	Settings.Blend.BlendOutTime = BlendOutTime;
 	return Runtime->PushCameraMode(Source, Settings, 100 + Modify.Priority);
 }
 

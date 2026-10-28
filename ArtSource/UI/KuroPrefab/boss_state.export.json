@@ -1,0 +1,58 @@
+{
+  "_comment": "Boss 血条（原作 UiItem_BossState_Prefab，挂在战斗界面 PnlBossHp 下）→ /Game/LGUI/HUD/BossState/UiItem_BossState。动画节点上的补间 → UWuwaUiTweenGroup。UINiagara 先不做。",
+  "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_BossState_Prefab",
+  "state": "boss_state.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": [
+    "UINiagara"
+  ],
+  "include": [
+    "/PnlCanvs$",
+    "/PnlCanvs/BarReduceHp$",
+    "/BarShield$",
+    "/UiItem_BossState_Prefab/Ani/Anim[A-Za-z]+$"
+  ],
+  "motion": true,
+  "registries": [
+    {
+      "owner": "^/UiItem_BossState_Prefab$",
+      "entries": [
+        "/TxtLevel$",
+        "/TxtName$",
+        "/PnlHpBar/BarHp$",
+        "/PnlHpBar/PnlCanvs$",
+        "/PnlCanvs/BarReduceHp$",
+        "/PnlHpBar/BarShield$",
+        "/PnlOffset/PnlTough$",
+        "/PnlBossRage/BarRage$",
+        "/Ani/AnimSmallHit$",
+        "/Ani/AnimBigHit$"
+      ]
+    }
+  ],
+  "_comment_registries": "UWuwaCommonBossStateView：0 等级、1 名字、2 血条（填充）、3 受击残影节点、4 残影条、5 护盾条、6 韧性区、7 韧性条、8 小受击动画、9 大受击动画（原作 CommonBossStateView 的 0/1/7/8/9/10/11/4/25/26）",
+  "rootAnchor": {
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "min": [
+      0.5,
+      1.0
+    ],
+    "max": [
+      0.5,
+      1.0
+    ],
+    "pos": [
+      3.75,
+      -81.0
+    ],
+    "size": [
+      675.0,
+      127.5
+    ]
+  },
+  "_comment_rootAnchor": "原作挂在 PC_UiView_Fight 的 PnlBossHp 下：PnlBossHp 顶部居中，中心离顶 110（设计分辨率），血条根节点相对它偏 (5, 2) → 项目画布顶部居中 (3.75, -81)"
+}

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1552347489	play_vo_jiabeilina_atk_heavyatk02			\Default Work Unit\Wuwa_Jiabei\play_vo_jiabeilina_atk_heavyatk02	
+

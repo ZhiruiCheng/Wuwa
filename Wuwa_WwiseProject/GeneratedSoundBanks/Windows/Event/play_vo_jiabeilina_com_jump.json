@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3960381673",
+    "Type": "Event",
+    "GUID": "{6FF38C83-2475-4C9C-90E7-3D9C5E51FA06}",
+    "Language": "SFX",
+    "Hash": "{8CDA4DFD-306F-8DC4-36BC-A26312DD6941}",
+    "ObjectPath": "play_vo_jiabeilina_com_jump",
+    "ShortName": "play_vo_jiabeilina_com_jump",
+    "Path": "Event/play_vo_jiabeilina_com_jump.bnk",
+    "Media": [
+     {
+      "Id": "341646568",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_jump_02_tone.wav",
+      "Path": "Media/341646568.wem",
+      "CachePath": "30/{30924C98-DFE7-4F49-4A2E-BE07929AAFEE}.wem"
+     },
+     {
+      "Id": "740201569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_jump_01_tone.wav",
+      "Path": "Media/740201569.wem",
+      "CachePath": "59/{594C2758-6C1D-40AC-7438-614AC32CED7D}.wem"
+     },
+     {
+      "Id": "766557280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_jump_03_tone.wav",
+      "Path": "Media/766557280.wem",
+      "CachePath": "F2/{F295DA4E-D35B-ACFB-1AB8-63F28211F56A}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3960381673",
+      "Name": "play_vo_jiabeilina_com_jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_com_jump",
+      "GUID": "{6FF38C83-2475-4C9C-90E7-3D9C5E51FA06}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.15010417",
+      "DurationMax": "0.32716668",
+      "MediaRefs": [
+       {
+        "Id": "341646568"
+       },
+       {
+        "Id": "740201569"
+       },
+       {
+        "Id": "766557280"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7EF231D6-B851-FDA7-76C8-A4A898BB4067}"
+ }
+}

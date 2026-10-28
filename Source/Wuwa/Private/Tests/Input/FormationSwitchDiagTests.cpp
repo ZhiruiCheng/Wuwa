@@ -9,7 +9,7 @@
 #include "Engine/World.h"
 #include "Camera/PlayerCameraManager.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputTypes.h"

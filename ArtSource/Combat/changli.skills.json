@@ -1,0 +1,89 @@
+{
+ "schemaVersion": 1,
+ "character": "changli",
+ "table": "/Game/Characters/Role/changli/Data/DT_SkillInfo_Changli",
+ "montageFolder": "/Game/Characters/Role/changli/AnimMontage",
+ "anims": [
+  {
+   "asset": "/Game/Characters/Role/changli/NewModel/changli2_0R2T1ChangLiMd10011_LOD0_Skeleton_Attack10",
+   "source": "Attack10",
+   "rootMotion": true,
+   "forceRootLock": true
+  }
+ ],
+ "montages": [
+  {
+   "name": "AM_AttackL",
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AttackL",
+   "sourceLength": 2.2,
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Role/changli/NewModel/changli2_0R2T1ChangLiMd10011_LOD0_Skeleton_Attack10",
+       "start": 0.0,
+       "end": 2.2,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.15,
+   "blendOut": 0.3,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0,
+   "flowNotifies": [
+    {
+     "kind": "AcceptInput",
+     "time": 0.7350688,
+     "duration": 1.4087853
+    },
+    {
+     "kind": "Priority",
+     "time": 0.7403485,
+     "value": 2
+    },
+    {
+     "kind": "ReadyEnd",
+     "time": 2.0974703
+    },
+    {
+     "kind": "MovementCancel",
+     "time": 2.0974703,
+     "duration": 0.10252970000000028
+    }
+   ]
+  }
+ ],
+ "skills": [
+  {
+   "id": 1205006,
+   "name": "长按普攻",
+   "montages": [
+    "/Game/Characters/Role/changli/AnimMontage/AM_AttackL"
+   ],
+   "ga": {
+    "path": "/Game/Characters/Role/changli/GA/GA_AttackHeavy",
+    "parent": "/Script/Wuwa.WuwaSkillMontageAbility",
+    "properties": {},
+    "originalGA": null,
+    "interruptLevel": 3
+   },
+   "tags": [
+    "Skill.Type.NormalAttack",
+    "Skill.Role.Changli"
+   ],
+   "actionTags": [],
+   "walkOffLedge": true
+  }
+ ]
+}

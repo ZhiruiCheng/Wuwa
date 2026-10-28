@@ -1,0 +1,8 @@
+{
+  "_comment": "变身外框：动画用的节点不要；ExtraCtrl/TexDeco 默认是占位白图（T_CommonDefault_UI），推断是运行时按表 FrontTexturePath 之类换的，长离那行是 None → 隐藏。",
+  "active": {
+    "/Ani_[^/]*$": false,
+    "/ExtraCtrl$": false
+  },
+  "texts": {}
+}

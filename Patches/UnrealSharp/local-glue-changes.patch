@@ -1,0 +1,85 @@
+diff --git a/Source/UnrealSharpManagedGlue/Exporters/PackageExporter.cs b/Source/UnrealSharpManagedGlue/Exporters/PackageExporter.cs
+index e3c62eb..98f1dea 100644
+--- a/Source/UnrealSharpManagedGlue/Exporters/PackageExporter.cs
++++ b/Source/UnrealSharpManagedGlue/Exporters/PackageExporter.cs
+@@ -63,6 +63,12 @@ public static class PackageExporter
+ 
+         if (type is UhtClass classObj)
+         {
++            // Wuwa 本地改动：继承自 SkipGlueGeneration 模块里的类（如 LGUI 的 UUIItem）时不生成，见 PropertyUtilities.DerivesFromSkippedPackage。
++            if (classObj.DerivesFromSkippedPackage())
++            {
++                return;
++            }
++
+             if (classObj.HasAllFlags(EClassFlags.Interface))
+             {
+                 if (classObj.ClassType is UhtClassType.Interface || type == GeneratorStatics.Factory.Session.IInterface)
+diff --git a/Source/UnrealSharpManagedGlue/Utilities/FunctionUtilities.cs b/Source/UnrealSharpManagedGlue/Utilities/FunctionUtilities.cs
+index 7b9f8f3..6bb919b 100644
+--- a/Source/UnrealSharpManagedGlue/Utilities/FunctionUtilities.cs
++++ b/Source/UnrealSharpManagedGlue/Utilities/FunctionUtilities.cs
+@@ -36,7 +36,8 @@ public static class FunctionUtilities
+         static bool CanExportParameter(UhtProperty property, Func<PropertyTranslator, bool> isSupported)
+         {
+             PropertyTranslator? translator = property.GetTranslator();
+-            return translator != null && isSupported(translator) && translator.CanExport(property);
++            // Wuwa 本地改动：见 PropertyUtilities.ReferencesSkippedPackage。
++            return translator != null && isSupported(translator) && translator.CanExport(property) && !property.ReferencesSkippedPackage();
+         }
+ 
+         if (function.ReturnProperty != null && !CanExportParameter(function.ReturnProperty, translator => translator.IsSupportedAsReturnValue))
+diff --git a/Source/UnrealSharpManagedGlue/Utilities/PropertyUtilities.cs b/Source/UnrealSharpManagedGlue/Utilities/PropertyUtilities.cs
+index ff1a91f..bd2c386 100644
+--- a/Source/UnrealSharpManagedGlue/Utilities/PropertyUtilities.cs
++++ b/Source/UnrealSharpManagedGlue/Utilities/PropertyUtilities.cs
+@@ -23,12 +23,49 @@ public static class PropertyUtilities
+             return false;
+         }
+ 
++        if (property.ReferencesSkippedPackage())
++        {
++            return false;
++        }
++
+         bool isClassProperty = property.Outer!.EngineType == UhtEngineType.Class;
+         bool canBeClassProperty = isClassProperty && translator.IsSupportedAsProperty;
+         bool canBeStructProperty = !isClassProperty && translator.IsSupportedAsStructProperty;
+         return canBeClassProperty || canBeStructProperty;
+     }
+     
++    // Wuwa 本地改动：属性/参数引用的类型所在模块定义了 SkipGlueGeneration（如 LGUI）时，那个模块没有 C# 绑定，
++    // 生成的 C# 会找不到类型、整个构建失败。原版不检查这一点，这里把这类属性/参数跳过。
++    public static bool ReferencesSkippedPackage(this UhtProperty property)
++    {
++        static bool IsSkipped(UhtType? type) => type != null
++            && (!type.Package.ShouldExportPackage() || (type is UhtClass classType && classType.DerivesFromSkippedPackage()));
++
++        return property switch
++        {
++            UhtObjectPropertyBase objectProperty => IsSkipped(objectProperty.Class) || IsSkipped(objectProperty.MetaClass),
++            UhtStructProperty structProperty => IsSkipped(structProperty.ScriptStruct),
++            UhtEnumProperty enumProperty => IsSkipped(enumProperty.Enum),
++            UhtByteProperty byteProperty => IsSkipped(byteProperty.Enum),
++            UhtMapProperty mapProperty => mapProperty.KeyProperty.ReferencesSkippedPackage() || mapProperty.ValueProperty.ReferencesSkippedPackage(),
++            UhtContainerBaseProperty containerProperty => containerProperty.ValueProperty.ReferencesSkippedPackage(),
++            _ => false,
++        };
++    }
++
++    // Wuwa 本地改动：父类链上有类在 SkipGlueGeneration 模块里（比如继承 LGUI 的 UUIItem），这个类也不能生成 C#（父类没有绑定）。
++    public static bool DerivesFromSkippedPackage(this UhtClass classObj)
++    {
++        for (UhtClass? current = classObj.SuperClass; current != null; current = current.SuperClass)
++        {
++            if (!current.Package.ShouldExportPackage())
++            {
++                return true;
++            }
++        }
++        return false;
++    }
++
+     public static bool IsOuter<T>(this UhtProperty property)
+     {
+         return property.Outer is T;

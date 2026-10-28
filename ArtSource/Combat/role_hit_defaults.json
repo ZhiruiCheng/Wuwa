@@ -1,0 +1,20 @@
+{
+ "_doc": "角色蓝图默认值（-run=WuwaBlueprintDefaultsSetup -Recipe=ArtSource/Combat/role_hit_defaults.json -Apply）。HitEffectTable：攻击者的受击效果表（prepare_hit_effects.py 导入的原作 DT_HitEffect）。SkillLevel：测试值，原作技能等级由玩家养成决定（1~10），这里给满级 10 让伤害接近满养成。",
+ "source": "受击效果表 + 测试技能等级",
+ "blueprints": [
+  {
+   "blueprint": "/Game/Characters/Role/changli/BP_Role_Changli",
+   "properties": {
+    "HitEffectTable": "/Game/Characters/Role/changli/Data/DT_HitEffect_Changli.DT_HitEffect_Changli",
+    "SkillLevel": "10"
+   }
+  },
+  {
+   "blueprint": "/Game/Characters/Role/jiabei/BP_Role_jiabei",
+   "properties": {
+    "HitEffectTable": "/Game/Characters/Role/jiabei/Data/DT_HitEffect_Jiabei.DT_HitEffect_Jiabei",
+    "SkillLevel": "10"
+   }
+  }
+ ]
+}

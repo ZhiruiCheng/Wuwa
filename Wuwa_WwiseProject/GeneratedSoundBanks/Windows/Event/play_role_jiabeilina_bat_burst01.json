@@ -1,0 +1,87 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "933786457",
+    "Type": "Event",
+    "GUID": "{0420841F-0006-415A-B446-72A471E9C59C}",
+    "Language": "SFX",
+    "Hash": "{8F194354-D0BE-9690-6C4D-E165CDE89D5D}",
+    "ObjectPath": "play_role_jiabeilina_bat_burst01",
+    "ShortName": "play_role_jiabeilina_bat_burst01",
+    "Path": "Event/play_role_jiabeilina_bat_burst01.bnk",
+    "Media": [
+     {
+      "Id": "310234146",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\role_common_brust_ex.wav",
+      "Path": "Media/310234146.wem",
+      "CachePath": "E5/{E59FB2BE-DC1B-69F0-015F-AD6CDED972CB}.wem"
+     },
+     {
+      "Id": "870792647",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Burst.wav",
+      "Path": "Media/870792647.wem",
+      "CachePath": "DC/{DC0589E6-2B95-9179-2BC4-B84661BAD253}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "933786457",
+      "Name": "play_role_jiabeilina_bat_burst01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_role_jiabeilina_bat_burst01",
+      "GUID": "{0420841F-0006-415A-B446-72A471E9C59C}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5333333",
+      "DurationMax": "7.7098956",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2293673011",
+         "Id": "1655615535",
+         "GUID": "{36B5172F-C886-4CFA-ABDE-DD6DE389EF81}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "310234146"
+         },
+         {
+          "Id": "870792647"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2293673011",
+      "Name": "Switch_3592615741",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Switch_3592615741",
+      "GUID": "{A80D59D3-1D37-4637-9F9B-9F6D90516117}",
+      "Switches": [
+       {
+        "Id": "1655615535",
+        "Name": "Value_1635194252",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Switch_3592615741\\Value_1635194252",
+        "GUID": "{36B5172F-C886-4CFA-ABDE-DD6DE389EF81}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2E70FA10-D129-2926-7390-7A7A33E18A7E}"
+ }
+}

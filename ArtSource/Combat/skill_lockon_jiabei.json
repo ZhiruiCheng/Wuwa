@@ -1,0 +1,2064 @@
+{
+ "table": "/Game/Characters/Role/jiabei/Data/DT_SkillInfo_Jiabei",
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_SkillInfo",
+ "rows": [
+  {
+   "Name": "100001",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100003",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100006",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100007",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100010",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100011",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "10001104",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "100012",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100013",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100014",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100016",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100017",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100018",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100020",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100021",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100022",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100023",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "100024",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100026",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100027",
+   "bIsLockOn": true,
+   "LockOnConfigId": 113,
+   "SkillTargetPriority": "InputDirectionPrecise",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "100028",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100029",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100030",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100031",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100032",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100033",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100034",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100035",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "100036",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "100037",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100038",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100039",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100040",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "100041",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "200002",
+   "bIsLockOn": true,
+   "LockOnConfigId": 200002,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "200003",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "200004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200006",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200007",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200010",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200051",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "200052",
+   "bIsLockOn": true,
+   "LockOnConfigId": 200002,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "200053",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "200061",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210001",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "210002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210003",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "2100031",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "2100032",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "2100033",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "2100034",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "210005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "CameraDirection"
+  },
+  {
+   "Name": "210006",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210007",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210008",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "2100081",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210009",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210010",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210011",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210012",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210013",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210014",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "CameraDirection"
+  },
+  {
+   "Name": "210015",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210016",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210017",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210018",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210020",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210023",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210024",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210025",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210026",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210027",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210028",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210030",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "210031",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "210032",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210033",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210034",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210040",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210041",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210042",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210043",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210044",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210045",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210046",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210047",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "CameraDirection"
+  },
+  {
+   "Name": "210048",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210051",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210060",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210061",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210062",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210063",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "210064",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210074",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210075",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210076",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "210130",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "210330",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "219997",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "219998",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220003",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "220004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220006",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "220007",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "230001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230002",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "23000201",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230003",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "230004",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230005",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230006",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230007",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230008",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230009",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230010",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "230011",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "240001",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "280001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "280001110",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "280001111",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "280001116",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312002",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312003",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312004",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312005",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312006",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312007",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312008",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "289312009",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300001",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300003",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300110",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300210",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300410",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300510",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300520",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300570",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300580",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300601",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300602",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300603",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300604",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300605",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300701",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300702",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300703",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300704",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300705",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "300706",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300707",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "300796",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "312281001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "InputDirection",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "400002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400102",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400104",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400105",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400107",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400108",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400202",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400204",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "400205",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "400206",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "401101",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "401102",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "401103",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "500101",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "500102",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "500103",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "5045008",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "600101",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600102",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600103",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600104",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600105",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600106",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600107",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600108",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600109",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600110",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600111",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600112",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600113",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600114",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600115",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600116",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600117",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600118",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600119",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600120",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600121",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600122",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600123",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600124",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600125",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600126",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600127",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "600128",
+   "bIsLockOn": true,
+   "LockOnConfigId": 130,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "700100",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "700101",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "700102",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "700103",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "700104",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "700105",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "700106",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "800001",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800002",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800003",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800004",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800005",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800006",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800007",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800008",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800009",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800010",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "8000101",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "8000102",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800011",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800012",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "CameraDirection"
+  },
+  {
+   "Name": "800013",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800014",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800015",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800016",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800017",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800018",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800019",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800020",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800021",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800022",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800023",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800024",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800025",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800026",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800027",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800028",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800029",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800030",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800031",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800032",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "KeepLockTarget",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800039",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800040",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800041",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800042",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800043",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800044",
+   "bIsLockOn": false,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "800045",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800046",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800047",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800049",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800051",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800052",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800062",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "800063",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208001",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208002",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208003",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208004",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208005",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208008",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208028",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208011",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208012",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208013",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208014",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208009",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208006",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208019",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208016",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208017",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208018",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208020",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208021",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208022",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208301",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208401",
+   "bIsLockOn": true,
+   "LockOnConfigId": 2,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208501",
+   "bIsLockOn": true,
+   "LockOnConfigId": 4,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208999",
+   "bIsLockOn": true,
+   "LockOnConfigId": 0,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "ActorDirection"
+  },
+  {
+   "Name": "1208601",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "InputDirection"
+  },
+  {
+   "Name": "1208101",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208007",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208027",
+   "bIsLockOn": true,
+   "LockOnConfigId": 114,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  },
+  {
+   "Name": "1208901",
+   "bIsLockOn": true,
+   "LockOnConfigId": 3000301,
+   "SkillTargetPriority": "GameSetting",
+   "SkillDirection": "SkillTarget"
+  }
+ ]
+}

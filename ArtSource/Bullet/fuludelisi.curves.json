@@ -1,0 +1,149 @@
+{
+ "source": "Character/Monster/Boss/MB1FuludelisiMd00401/Data/DT_ReBulletDataMain 时间膨胀变化曲线",
+ "curves": [
+  {
+   "path": "/Game/Characters/Monster/Boss/Fuludelisi/Data/TimeScale/feijiandunzhen",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/Abilities/feijiandunzhen",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.00016969004,
+     "leave": 0.00016969004
+    },
+    {
+     "time": 0.5,
+     "value": 1.0005001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.0013086355,
+     "leave": 0.0013086355
+    },
+    {
+     "time": 2.1,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.00089998246,
+     "leave": 0.00089998246
+    },
+    {
+     "time": 5.5,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.000999999,
+     "leave": -0.000999999
+    },
+    {
+     "time": 7.1,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Monster/Boss/Fuludelisi/Data/TimeScale/dunzhen",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/Abilities/dunzhen",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 3.346245e-05,
+     "leave": 0.0
+    },
+    {
+     "time": 2.1,
+     "value": 1.001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.0016087842,
+     "leave": 0.0016087842
+    },
+    {
+     "time": 3.4,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.00035411498,
+     "leave": 0.00035411498
+    },
+    {
+     "time": 5.5,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0004330068,
+     "leave": -0.0004330068
+    },
+    {
+     "time": 7.1,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Monster/Boss/Fuludelisi/Data/TimeScale/dazhaodunzhen",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/Abilities/dazhaodunzhen",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 3.346245e-05,
+     "leave": 0.0
+    },
+    {
+     "time": 0.2,
+     "value": 1.001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.00999999,
+     "leave": 0.00999999
+    },
+    {
+     "time": 0.5,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.00035411498,
+     "leave": 0.00035411498
+    },
+    {
+     "time": 5.5,
+     "value": 1.005,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0004330068,
+     "leave": -0.0004330068
+    },
+    {
+     "time": 7.1,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1385290750",
+    "Type": "Event",
+    "GUID": "{2EF7E6CC-4D15-4D0C-A297-900A76564897}",
+    "Language": "SFX",
+    "Hash": "{288B1FA9-DA07-DF5F-2DED-7F8B237694C4}",
+    "ObjectPath": "play_vo_changli_bat_atksp04",
+    "ShortName": "play_vo_changli_bat_atksp04",
+    "Path": "Event/play_vo_changli_bat_atksp04.bnk",
+    "Media": [
+     {
+      "Id": "248322411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atksp04_01.wav",
+      "Path": "Media/248322411.wem",
+      "CachePath": "D9/{D9BFA010-D02E-1188-6BB1-897DF50BDCA4}.wem"
+     },
+     {
+      "Id": "542564244",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atksp04_03.wav",
+      "Path": "Media/542564244.wem",
+      "CachePath": "97/{977602EF-B72C-1D93-2526-FB9AE5EBB1C8}.wem"
+     },
+     {
+      "Id": "902529010",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atksp04_02.wav",
+      "Path": "Media/902529010.wem",
+      "CachePath": "AB/{AB5445BD-D3D7-B1DC-B337-DA0C42B02F27}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1385290750",
+      "Name": "play_vo_changli_bat_atksp04",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atksp04",
+      "GUID": "{2EF7E6CC-4D15-4D0C-A297-900A76564897}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "1.1090208",
+      "MediaRefs": [
+       {
+        "Id": "248322411"
+       },
+       {
+        "Id": "542564244"
+       },
+       {
+        "Id": "902529010"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{27D68AFD-6F45-C913-E4D2-2A3306E8FFE2}"
+ }
+}

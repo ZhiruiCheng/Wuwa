@@ -1,0 +1,79 @@
+{
+ "folder": "/Game/LGUI/HUD/Kuro/Effects",
+ "sourceRoot": "ArtSource/UI/HUD/Kuro/Effects",
+ "textures": [
+  {
+   "name": "T_UI_Mask_012",
+   "file": "Textures/T_UI_Mask_012.png",
+   "srgb": false
+  }
+ ],
+ "materials": [
+  {
+   "id": "UI_Liudong_011",
+   "texture": "T_UI_Mask_012",
+   "blend": "additive",
+   "channel": [
+    1,
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "systems": [
+  {
+   "name": "NS_UI_FightSkill",
+   "source": "NS_Fx_LGUI_FightSkill",
+   "emitters": [
+    {
+     "name": "Empty",
+     "mesh": "Mod_Circle_010",
+     "material": "UI_Liudong_011",
+     "spawnCount": 1,
+     "spawnTime": 0.0,
+     "loopDuration": 0.375,
+     "sortOrder": 0,
+     "randomSeed": 1,
+     "spawn": [
+      {
+       "name": "Particles.Lifetime",
+       "type": "float",
+       "hlsl": "0.35"
+      },
+      {
+       "name": "Particles.Position",
+       "type": "position",
+       "hlsl": "float3(0, 0, 0)"
+      },
+      {
+       "name": "Particles.Scale",
+       "type": "vec3",
+       "hlsl": "float3(1.55, 1.55, 1.55) * 0.98"
+      },
+      {
+       "name": "Particles.Color",
+       "type": "color",
+       "hlsl": "float4(1, 1, 1, 0)"
+      }
+     ],
+     "update": [
+      {
+       "name": "Particles.Scale",
+       "type": "vec3",
+       "hlsl": "float3(1.55, 1.55, 1.55) * lerp(0.98, 1.2, Particles.NormalizedAge)"
+      },
+      {
+       "name": "Particles.Color",
+       "type": "color",
+       "hlsl": "float4(1, 1, 1, saturate((Particles.NormalizedAge < 0.22754 ? lerp(0.00000, 0.69484, saturate((Particles.NormalizedAge - -0.00375) / 0.23129)) : (Particles.NormalizedAge < 0.24681 ? lerp(0.69484, 0.70374, saturate((Particles.NormalizedAge - 0.22754) / 0.01927)) : (Particles.NormalizedAge < 0.26609 ? lerp(0.70374, 0.69429, saturate((Particles.NormalizedAge - 0.24681) / 0.01927)) : (Particles.NormalizedAge < 0.30464 ? lerp(0.69429, 0.64161, saturate((Particles.NormalizedAge - 0.26609) / 0.03855)) : (Particles.NormalizedAge < 0.42028 ? lerp(0.64161, 0.37611, saturate((Particles.NormalizedAge - 0.30464) / 0.11564)) : (Particles.NormalizedAge < 0.47810 ? lerp(0.37611, 0.29471, saturate((Particles.NormalizedAge - 0.42028) / 0.05782)) : (Particles.NormalizedAge < 1.03705 ? lerp(0.29471, 0.00000, saturate((Particles.NormalizedAge - 0.47810) / 0.55895)) : 0.00000))))))) * 1.2))"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "meshes": [
+  "Mod_Circle_010"
+ ]
+}

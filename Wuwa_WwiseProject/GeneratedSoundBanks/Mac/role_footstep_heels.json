@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1560095794",
+    "Type": "User",
+    "GUID": "{0A765300-DFE7-4CF3-A1FB-F85D63488062}",
+    "Language": "SFX",
+    "Hash": "{617D440B-5EC2-0D24-9249-582A46F5E20D}",
+    "ObjectPath": "role_footstep_heels",
+    "ShortName": "role_footstep_heels",
+    "Path": "role_footstep_heels.bnk"
+   }
+  ],
+  "FileHash": "{98E37155-2FC4-7ADF-C9E5-B03DF2C97A41}"
+ }
+}

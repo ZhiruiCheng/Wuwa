@@ -3,7 +3,7 @@
 #include "InputAction.h"
 #include "Engine/World.h"
 #include "GameFramework/Pawn.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 
 UWuwaInputIntentComponent::UWuwaInputIntentComponent()
 {

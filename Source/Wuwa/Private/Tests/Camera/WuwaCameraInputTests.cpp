@@ -9,7 +9,7 @@
 #include "Game/Camera/WuwaCameraMode.h"
 #include "Game/Camera/WuwaCameraRuntimeBridge.h"
 #include "Game/Camera/WuwaPlayerCameraManager.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/WuwaInputRouterComponent.h"
 #include "Game/Input/WuwaInputTypes.h"
@@ -57,9 +57,9 @@ namespace WuwaCameraInputTests
 			}
 			Camera = Cast<AWuwaPlayerCameraManager>(Controller->PlayerCameraManager);
 			if (!Camera) return;
-			Camera->DefaultSettings.bCollisionTest = false;
-			Camera->DefaultSettings.ZoomInterpSpeed = 0.f;
-			Camera->DefaultSettings.BlendTime = 0.f;
+			Camera->DefaultSettings.Arm.bCollisionTest = false;
+			Camera->DefaultSettings.Zoom.ZoomInterpSpeed = 0.f;
+			Camera->DefaultSettings.Blend.BlendTime = 0.f;
 			Controller->SetPawn(Pawn);
 			Pawn->SetController(Controller);
 			Controller->SetControlRotation(FRotator::ZeroRotator);
@@ -156,8 +156,8 @@ bool FWuwaCameraRoutedLookTest::RunTest(const FString& Parameters)
 	F.Dispatch(true, EWuwaInputPhase::Released, FInputActionValue(FVector2D::ZeroVector));
 	TestTrue(TEXT("Release does not add another rotation"), F.Controller->RotationInput.Equals(Expected, 0.001));
 
-	F.Camera->DefaultSettings.PitchMin = -40.f;
-	F.Camera->DefaultSettings.PitchMax = 30.f;
+	F.Camera->DefaultSettings.Rotation.PitchMin = -40.f;
+	F.Camera->DefaultSettings.Rotation.PitchMax = 30.f;
 	FRotator View(25.f, 10.f, 0.f);
 	FRotator Delta(20.f, 5.f, 0.f);
 	F.Camera->ProcessViewRotation(1.f / 60.f, View, Delta);
@@ -182,7 +182,7 @@ bool FWuwaCameraLifecycleInputTest::RunTest(const FString& Parameters)
 		if (!F.IsReady(*this)) return false;
 		UWuwaCameraMode* Skill = NewObject<UWuwaCameraMode>(F.Camera);
 		Skill->Settings = F.Camera->DefaultSettings;
-		Skill->Settings.ArmLength = 200.f;
+		Skill->Settings.Arm.ArmLength = 200.f;
 		Skill->Priority = 100;
 		const int32 OldHandle = F.Camera->PushCameraMode(F.Pawn, Skill);
 		TestTrue(TEXT("Skill mode is accepted"), OldHandle > 0);

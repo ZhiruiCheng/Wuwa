@@ -22,7 +22,7 @@
 #include "Game/Animation/Notifies/WuwaAnimNotify_SpawnBullet.h"
 #include "Game/NewWorld/Bullet/WuwaBulletSubsystem.h"
 #include "Game/NewWorld/Combat/WuwaLockOnComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/WuwaInputRouterComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"

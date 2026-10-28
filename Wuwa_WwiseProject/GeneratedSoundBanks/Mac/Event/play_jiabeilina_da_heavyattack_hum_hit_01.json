@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2484760463",
+    "Type": "Event",
+    "GUID": "{F3DFFBEE-D8D1-44E0-BF1D-4D6EFF9F871E}",
+    "Language": "SFX",
+    "Hash": "{67A436F2-EA12-603B-6DBC-B15BFB47A251}",
+    "ObjectPath": "play_jiabeilina_da_heavyattack_hum_hit_01",
+    "ShortName": "play_jiabeilina_da_heavyattack_hum_hit_01",
+    "Path": "Event/play_jiabeilina_da_heavyattack_hum_hit_01.bnk",
+    "Media": [
+     {
+      "Id": "999079348",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_Da_Heavyattack_Hum_Hit_01.wav",
+      "Path": "Media/999079348.wem",
+      "CachePath": "C2/{C2995949-B4D2-3242-E8AB-21D3F21D4883}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2484760463",
+      "Name": "play_jiabeilina_da_heavyattack_hum_hit_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_da_heavyattack_hum_hit_01",
+      "GUID": "{F3DFFBEE-D8D1-44E0-BF1D-4D6EFF9F871E}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.718875",
+      "DurationMax": "2.718875",
+      "MediaRefs": [
+       {
+        "Id": "999079348"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{782003D8-3298-2028-73B1-B6981A1910D6}"
+ }
+}

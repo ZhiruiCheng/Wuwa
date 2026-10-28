@@ -18,8 +18,8 @@ namespace WuwaCameraRuntimeTests
 	FWuwaCameraSettings SnapSettings()
 	{
 		FWuwaCameraSettings Settings;
-		Settings.ZoomInterpSpeed = 0.f;
-		Settings.BlendTime = 0.f;
+		Settings.Zoom.ZoomInterpSpeed = 0.f;
+		Settings.Blend.BlendTime = 0.f;
 		return Settings;
 	}
 }
@@ -39,7 +39,7 @@ bool FWuwaCameraFollowMathTest::RunTest(const FString& Parameters)
 	FWuwaCameraFrame Frame;
 	Frame.TargetLocation = FVector(1000., 2000., 300.);
 	Frame.ControlRotation = FRotator(0., 90., 0.);
-	Settings.PivotOffset = FVector(0., 0., 70.);
+	Settings.Offset.PivotOffset = FVector(0., 0., 70.);
 	const FWuwaCameraView View = Runtime->EvaluateCamera(Frame, Settings);
 	TestTrue(TEXT("Follow policy emits a valid view"), View.bValid);
 	TestTrue(TEXT("World pivot offset is independent of target yaw"), View.Pivot.Equals(FVector(1000., 2000., 370.), 0.001));
@@ -50,7 +50,7 @@ bool FWuwaCameraFollowMathTest::RunTest(const FString& Parameters)
 	Frame.ControlRotation = FRotator(-30., 0., 0.);
 	const FWuwaCameraView PitchedView = Runtime->EvaluateCamera(Frame, Settings);
 	TestTrue(TEXT("Looking down positions the camera above the pivot"),
-		PitchedView.Location.Equals(View.Pivot - Frame.ControlRotation.Vector() * Settings.ArmLength, 0.001));
+		PitchedView.Location.Equals(View.Pivot - Frame.ControlRotation.Vector() * Settings.Arm.ArmLength, 0.001));
 	return true;
 }
 
@@ -77,12 +77,12 @@ bool FWuwaCameraZoomInputTest::RunTest(const FString& Parameters)
 	Frame.ZoomDelta = 1.f;
 	TestEqual(TEXT("Raw wheel displacement does not scale with frame time"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, 350.f);
 	Frame.ZoomDelta = 100.f;
-	TestEqual(TEXT("Large positive input clamps at minimum distance"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.MinArmLength);
+	TestEqual(TEXT("Large positive input clamps at minimum distance"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.Arm.MinArmLength);
 	Frame.ZoomDelta = -100.f;
-	TestEqual(TEXT("Large negative input clamps at maximum distance"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.MaxArmLength);
+	TestEqual(TEXT("Large negative input clamps at maximum distance"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.Arm.MaxArmLength);
 	Runtime->ResetCamera();
 	Frame.ZoomDelta = 0.f;
-	TestEqual(TEXT("Reset restores user zoom preference"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.ArmLength);
+	TestEqual(TEXT("Reset restores user zoom preference"), Runtime->EvaluateCamera(Frame, Settings).ArmLength, Settings.Arm.ArmLength);
 	return true;
 }
 
@@ -99,11 +99,11 @@ bool FWuwaCameraModeOwnershipTest::RunTest(const FString& Parameters)
 	}
 	const FWuwaCameraSettings Base = WuwaCameraRuntimeTests::SnapSettings();
 	FWuwaCameraSettings Low = Base;
-	Low.ArmLength = 300.f;
+	Low.Arm.ArmLength = 300.f;
 	FWuwaCameraSettings High = Base;
-	High.ArmLength = 200.f;
+	High.Arm.ArmLength = 200.f;
 	FWuwaCameraSettings Latest = Base;
-	Latest.ArmLength = 600.f;
+	Latest.Arm.ArmLength = 600.f;
 	TStrongObjectPtr<UObject> LowOwner(NewObject<UWuwaCameraMode>());
 	TStrongObjectPtr<UObject> HighOwner(NewObject<UWuwaCameraMode>());
 	TStrongObjectPtr<UObject> LatestOwner(NewObject<UWuwaCameraMode>());
@@ -112,23 +112,23 @@ bool FWuwaCameraModeOwnershipTest::RunTest(const FString& Parameters)
 	const int32 HighHandle = Runtime->PushCameraMode(HighOwner.Get(), High, 5);
 	const int32 LatestHandle = Runtime->PushCameraMode(LatestOwner.Get(), Latest, 5);
 	TestTrue(TEXT("Each accepted request receives a distinct nonzero handle"), LowHandle > 0 && HighHandle > LowHandle && LatestHandle > HighHandle);
-	TestEqual(TEXT("Latest request wins equal priorities"), Runtime->ResolveSettings(Base).ArmLength, Latest.ArmLength);
+	TestEqual(TEXT("Latest request wins equal priorities"), Runtime->ResolveSettings(Base).Arm.ArmLength, Latest.Arm.ArmLength);
 	TestTrue(TEXT("A lower priority request can be released independently"), Runtime->PopCameraMode(LowHandle));
-	TestEqual(TEXT("Releasing another owner does not release current mode"), Runtime->ResolveSettings(Base).ArmLength, Latest.ArmLength);
+	TestEqual(TEXT("Releasing another owner does not release current mode"), Runtime->ResolveSettings(Base).Arm.ArmLength, Latest.Arm.ArmLength);
 	TestFalse(TEXT("Duplicate release is harmless"), Runtime->PopCameraMode(LowHandle));
 	TestTrue(TEXT("Latest mode can be released"), Runtime->PopCameraMode(LatestHandle));
-	TestEqual(TEXT("Previous live high-priority request resumes"), Runtime->ResolveSettings(Base).ArmLength, High.ArmLength);
+	TestEqual(TEXT("Previous live high-priority request resumes"), Runtime->ResolveSettings(Base).Arm.ArmLength, High.Arm.ArmLength);
 	HighOwner->MarkAsGarbage();
-	TestEqual(TEXT("Destroyed source is pruned without an explicit release"), Runtime->ResolveSettings(Base).ArmLength, Base.ArmLength);
+	TestEqual(TEXT("Destroyed source is pruned without an explicit release"), Runtime->ResolveSettings(Base).Arm.ArmLength, Base.Arm.ArmLength);
 	TestFalse(TEXT("Expired mode handle no longer removes anything"), Runtime->PopCameraMode(HighHandle));
 
 	const int32 BeforeReset = Runtime->PushCameraMode(LatestOwner.Get(), High, 5);
 	Runtime->ResetCamera();
-	TestEqual(TEXT("Reset removes active modes"), Runtime->ResolveSettings(Base).ArmLength, Base.ArmLength);
+	TestEqual(TEXT("Reset removes active modes"), Runtime->ResolveSettings(Base).Arm.ArmLength, Base.Arm.ArmLength);
 	const int32 AfterReset = Runtime->PushCameraMode(LatestOwner.Get(), Latest, 5);
 	TestTrue(TEXT("Reset never recycles old ownership handles"), AfterReset > BeforeReset);
 	TestFalse(TEXT("Late release from before reset cannot remove a new mode"), Runtime->PopCameraMode(BeforeReset));
-	TestEqual(TEXT("New mode survives stale release"), Runtime->ResolveSettings(Base).ArmLength, Latest.ArmLength);
+	TestEqual(TEXT("New mode survives stale release"), Runtime->ResolveSettings(Base).Arm.ArmLength, Latest.Arm.ArmLength);
 	return true;
 }
 
@@ -148,19 +148,19 @@ bool FWuwaCameraSkillZoomRestoreTest::RunTest(const FString& Parameters)
 	Frame.ZoomDelta = 1.f;
 	TestEqual(TEXT("Exploration camera records player zoom"), Runtime->EvaluateCamera(Frame, Base).ArmLength, 350.f);
 	FWuwaCameraSettings Skill = Base;
-	Skill.ArmLength = 200.f;
-	Skill.bUseUserZoom = false;
-	Skill.bAllowZoomInput = false;
-	Skill.bAllowRotationInput = false;
+	Skill.Arm.ArmLength = 200.f;
+	Skill.Zoom.bUseUserZoom = false;
+	Skill.Zoom.bAllowZoomInput = false;
+	Skill.Rotation.bAllowRotationInput = false;
 	TStrongObjectPtr<UObject> Ability(NewObject<UWuwaCameraMode>());
 	const int32 Handle = Runtime->PushCameraMode(Ability.Get(), Skill, 100);
 	Frame.ZoomDelta = -100.f;
 	TestEqual(TEXT("Skill distance is independent of player zoom and wheel input"), Runtime->EvaluateCamera(Frame, Base).ArmLength, 200.f);
-	TestFalse(TEXT("Skill advertises its rotation input lock"), Runtime->ResolveSettings(Base).bAllowRotationInput);
+	TestFalse(TEXT("Skill advertises its rotation input lock"), Runtime->ResolveSettings(Base).Rotation.bAllowRotationInput);
 	TestTrue(TEXT("Ability releases its own request"), Runtime->PopCameraMode(Handle));
 	Frame.ZoomDelta = 0.f;
 	TestEqual(TEXT("Exploration resumes the player's exact previous zoom"), Runtime->EvaluateCamera(Frame, Base).ArmLength, 350.f);
-	TestTrue(TEXT("Exploration rotation input is restored"), Runtime->ResolveSettings(Base).bAllowRotationInput);
+	TestTrue(TEXT("Exploration rotation input is restored"), Runtime->ResolveSettings(Base).Rotation.bAllowRotationInput);
 	return true;
 }
 
@@ -178,7 +178,7 @@ bool FWuwaCameraFramePartitionTest::RunTest(const FString& Parameters)
 		return false;
 	}
 	FWuwaCameraSettings Settings = WuwaCameraRuntimeTests::SnapSettings();
-	Settings.ZoomInterpSpeed = 12.f;
+	Settings.Zoom.ZoomInterpSpeed = 12.f;
 	FWuwaCameraFrame Frame;
 	OneStep->EvaluateCamera(Frame, Settings);
 	FiveSteps->EvaluateCamera(Frame, Settings);
@@ -213,8 +213,8 @@ bool FWuwaCameraBlendFollowsTargetTest::RunTest(const FString& Parameters)
 	FWuwaCameraFrame Frame;
 	Runtime->EvaluateCamera(Frame, Base);
 	FWuwaCameraSettings Skill = Base;
-	Skill.ArmLength = 200.f;
-	Skill.BlendTime = .2f;
+	Skill.Arm.ArmLength = 200.f;
+	Skill.Blend.BlendTime = .2f;
 	TStrongObjectPtr<UObject> Owner(NewObject<UWuwaCameraMode>());
 	Runtime->PushCameraMode(Owner.Get(), Skill, 10);
 	Frame.DeltaSeconds = .1f;

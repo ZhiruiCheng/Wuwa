@@ -5,7 +5,7 @@
 #include "Tests/AutomationEditorCommon.h"
 #include "Engine/Engine.h"
 #include "Engine/World.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputRouterComponent.h"

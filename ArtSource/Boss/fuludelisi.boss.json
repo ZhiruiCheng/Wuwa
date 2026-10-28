@@ -1,0 +1,991 @@
+{
+ "schemaVersion": 1,
+ "boss": "fuludelisi",
+ "table": "/Game/Characters/Monster/Boss/Fuludelisi/Data/DT_SkillInfo_Fuludelisi",
+ "montageFolder": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage",
+ "anims": [
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack01",
+   "source": "Attack01",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack02",
+   "source": "Attack02",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack03",
+   "source": "Attack03",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack04_2",
+   "source": "Attack04_2",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_B_L",
+   "source": "Behit_B_L",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_B_R",
+   "source": "Behit_B_R",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_Block_L",
+   "source": "Behit_Block_L",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_Block_R",
+   "source": "Behit_Block_R",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_S_L",
+   "source": "Behit_S_L",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_S_R",
+   "source": "Behit_S_R",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Born",
+   "source": "Born",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Death",
+   "source": "Death",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_B",
+   "source": "Move_Limit_B",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_F",
+   "source": "Move_Limit_F",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_L",
+   "source": "Move_Limit_L",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_End",
+   "source": "Paralysis_End",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_Loop",
+   "source": "Paralysis_Loop",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_Start",
+   "source": "Paralysis_Start",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_PatrolToFight",
+   "source": "PatrolToFight",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B2",
+   "source": "Walk_B2",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B_End",
+   "source": "Walk_B_End",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B_Start",
+   "source": "Walk_B_Start",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2",
+   "source": "Walk_F2",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2_End",
+   "source": "Walk_F2_End",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2_Start",
+   "source": "Walk_F2_Start",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2",
+   "source": "Walk_L2",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2_End",
+   "source": "Walk_L2_End",
+   "rootMotion": true
+  },
+  {
+   "asset": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2_Start",
+   "source": "Walk_L2_Start",
+   "rootMotion": true
+  }
+ ],
+ "montages": [
+  {
+   "name": "AM_Attack01_st1",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Attack01_st1",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack01",
+       "start": 0.0,
+       "end": 10.23,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.2,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Attack02",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Attack02_Montage",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack02",
+       "start": 0.0,
+       "end": 6.4,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Attack03_st1",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Attack03_st1",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack03",
+       "start": 0.0,
+       "end": 6.0666666,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Attack04_st1",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Attack04_st1",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack01",
+       "start": 0.0,
+       "end": 1.59,
+       "rate": 1.0,
+       "startPos": 0.0
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack04_2",
+       "start": 0.0,
+       "end": 0.16666667,
+       "rate": 1.5,
+       "startPos": 1.59
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Attack03",
+       "start": 3.46,
+       "end": 6.0666666,
+       "rate": 1.0,
+       "startPos": 1.7011112
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_PatrolToFight",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_PatrolToFight",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_PatrolToFight",
+       "start": 0.0,
+       "end": 6.8333335,
+       "rate": 1.6,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Born",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Born",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Born",
+       "start": 0.0,
+       "end": 7.633333,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Walk_F",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Walk_F",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2_Start",
+       "start": 0.0,
+       "end": 2.8,
+       "rate": 1.0,
+       "startPos": 0.0
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2",
+       "start": 0.0,
+       "end": 1.7333333,
+       "rate": 1.0,
+       "startPos": 2.8
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_F2_End",
+       "start": 0.0,
+       "end": 1.9666667,
+       "rate": 1.0,
+       "startPos": 4.5333333
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.2,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Walk_B",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Walk_B",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B_Start",
+       "start": 0.0,
+       "end": 2.6,
+       "rate": 1.0,
+       "startPos": 0.0
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B2",
+       "start": 0.0,
+       "end": 1.8666667,
+       "rate": 1.0,
+       "startPos": 2.6
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_B_End",
+       "start": 0.0,
+       "end": 4.0,
+       "rate": 1.0,
+       "startPos": 4.4666667
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Walk_L",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Walk_L",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_B",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2_Start",
+       "start": 0.0,
+       "end": 2.3666666,
+       "rate": 1.0,
+       "startPos": 2.0
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2",
+       "start": 0.0,
+       "end": 1.6333333,
+       "rate": 1.0,
+       "startPos": 4.366667
+      },
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Walk_L2_End",
+       "start": 0.0,
+       "end": 2.4,
+       "rate": 1.0,
+       "startPos": 6.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Move_Limit_F",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Move_Limit_F_Montage",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_F",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Move_Limit_B",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Move_Limit_B_Montage",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_B",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Move_Limit_L",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Move_Limit_L_Montage",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_L",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Move_Limit_B_fantan",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/Move_Limit_B_fantan",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Move_Limit_B",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.0,
+   "blendOut": 0.0,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Death",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Death",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Death",
+       "start": 0.0,
+       "end": 5.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_S_L",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_S_L",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_S_L",
+       "start": 0.05,
+       "end": 1.7,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_S_R",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_S_R",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_S_R",
+       "start": 0.05,
+       "end": 1.8333334,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_B_L",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_B_L",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_B_L",
+       "start": 0.05,
+       "end": 1.9333333,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_B_R",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_B_R",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_B_R",
+       "start": 0.05,
+       "end": 2.0333333,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_Block_L",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_Block_L",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_Block_L",
+       "start": 0.05,
+       "end": 2.5,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_Behit_Block_R",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_Behit_Block_R",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Behit_Block_R",
+       "start": 0.05,
+       "end": 2.5,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_SM_Paralysis_Start",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_SM_Paralysis_Start",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_Start",
+       "start": 0.05,
+       "end": 4.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_SM_Paralysis_Loop",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_SM_Paralysis_Loop",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_Loop",
+       "start": 0.0,
+       "end": 2.0,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "Default"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  },
+  {
+   "name": "AM_SM_Paralysis_End",
+   "source": "Character/Monster/Boss/MB1FuludelisiMd00401/CommonAnim/AM_SM_Paralysis_End",
+   "tracks": [
+    {
+     "slot": "DefaultSlot",
+     "segments": [
+      {
+       "anim": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Paralysis_End",
+       "start": 0.0,
+       "end": 4.4,
+       "rate": 1.0,
+       "startPos": 0.0
+      }
+     ]
+    }
+   ],
+   "sections": [
+    {
+     "name": "Default",
+     "time": 0.0,
+     "next": "None"
+    }
+   ],
+   "blendIn": 0.25,
+   "blendOut": 0.25,
+   "blendOutTriggerTime": -1.0,
+   "rate": 1.0
+  }
+ ],
+ "skills": [
+  {
+   "id": 80025001,
+   "name": "潮汐",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Attack01_st1"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025002,
+   "name": "流云",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Attack02"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025003,
+   "name": "急涌",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Attack03_st1"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025004,
+   "name": "冲霄",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Attack04_st1"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025025,
+   "name": "入战",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_PatrolToFight"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025026,
+   "name": "出生",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Born"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025022,
+   "name": "前走",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Walk_F"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025023,
+   "name": "后走",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Walk_B"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025024,
+   "name": "左走",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Walk_L"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025029,
+   "name": "前闪",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Move_Limit_F",
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Attack03_st1"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025030,
+   "name": "后闪",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Move_Limit_B"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025031,
+   "name": "左闪",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Move_Limit_L"
+   ],
+   "originalGA": null
+  },
+  {
+   "id": 80025032,
+   "name": "弹刀·后闪",
+   "montages": [
+    "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Move_Limit_B_fantan"
+   ],
+   "originalGA": null
+  }
+ ],
+ "notes": [
+  "Montage notifies (Ts* audio/rotate/position/effect/bullet) are not ported yet; bullets come with the bullet-notify step.",
+  "Skills have no GA yet; the original GA (if any) is kept in originalGA for the monster-AI step."
+ ]
+}

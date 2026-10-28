@@ -1,0 +1,69 @@
+{
+ "_doc": "怪物蓝图配方（-run=WuwaMonsterSetup -Recipe=ArtSource/Boss/fuludelisi.monster.json）。数值来源：原作 BP_MB1FuludelisiMd00401（胶囊半高 110、网格 Z -110 / Yaw -90、Camp = ECamp 1 Monster）；胶囊半径原作没填（父类 TsBaseCharacter 也没填，原生 BaseCharacter 的默认值看不到），用 UE ACharacter 默认 34。没有 AI 和怪物动画蓝图前，网格单节点循环播待机。",
+ "blueprint": "/Game/Characters/Monster/Boss/Fuludelisi/BP_Monster_Fuludelisi",
+ "camp": "Monster",
+ "capsuleHalfHeight": 110,
+ "capsuleRadius": 34,
+ "mesh": "/Game/Characters/Monster/Boss/Fuludelisi/Mesh/MB1FuludelisiMd00401.MB1FuludelisiMd00401",
+ "meshOffset": [
+  0,
+  0,
+  -110
+ ],
+ "meshYaw": -90,
+ "idle": "/Game/Characters/Monster/Boss/Fuludelisi/CommonAnim/MB1FuludelisiMd00401_Stand2.MB1FuludelisiMd00401_Stand2",
+ "bulletTable": "/Game/Characters/Monster/Boss/Fuludelisi/Data/DT_BulletInfo_Fuludelisi.DT_BulletInfo_Fuludelisi",
+ "weapons": [
+  {
+   "name": "Weapon_Dajian",
+   "mesh": "/Game/Characters/Monster/Boss/Fuludelisi/Weapon/EFuludelisiDajianMd10011.EFuludelisiDajianMd10011",
+   "socket": "WeaponProp02"
+  }
+ ],
+ "attributes": {
+  "WuwaAttributeSet.Level": 90.0,
+  "WuwaAttributeSet.MaxHealth": 1298586.0,
+  "WuwaAttributeSet.Attack": 6700.0,
+  "WuwaAttributeSet.Defense": 1512.0,
+  "WuwaAttributeSet.CritRate": 0.0,
+  "WuwaAttributeSet.CritDamage": 1.5,
+  "WuwaAttributeSet.ElementType": 4.0,
+  "WuwaCombatAttributeSet.ElementResistance0": 0.1,
+  "WuwaCombatAttributeSet.ElementResistance1": 0.1,
+  "WuwaCombatAttributeSet.ElementResistance2": 0.1,
+  "WuwaCombatAttributeSet.ElementResistance3": 0.1,
+  "WuwaCombatAttributeSet.ElementResistance4": 0.4,
+  "WuwaCombatAttributeSet.ElementResistance5": 0.1,
+  "WuwaCombatAttributeSet.ElementResistance6": 0.1,
+  "WuwaCombatAttributeSet.ToughMax": 2000.0,
+  "WuwaCombatAttributeSet.Tough": 2000.0,
+  "WuwaCombatAttributeSet.ToughRecover": 0.0,
+  "WuwaCombatAttributeSet.ToughRecoverDelayTime": 0.0,
+  "WuwaCombatAttributeSet.WeakTime": 0.1,
+  "WuwaCombatAttributeSet.ToughChange": 1.0,
+  "WuwaCombatAttributeSet.ToughReduce": 1.0,
+  "WuwaCombatAttributeSet.SkillToughRatio": 1.0,
+  "WuwaCombatAttributeSet.Mass": 600.0
+ },
+ "attributesSource": "模板 665800000：BaseProperty 394080018 × MonsterPropertyGrowth 曲线 0 等级 90（模板等级 1 + 世界等级加成，这里直接给 90）",
+ "displayName": "芙露德莉斯",
+ "bossViewConfig": {
+  "BossStateViewType": 1,
+  "ShowDistance": 0.0,
+  "bOnlyShowInBattleState": false
+ },
+ "hitEffectTable": "/Game/Characters/Monster/Boss/Fuludelisi/Data/DT_HitEffect_Fuludelisi.DT_HitEffect_Fuludelisi",
+ "beHitMontages": {
+  "0": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_S_R.AM_Behit_S_R",
+  "1": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_S_R.AM_Behit_S_R",
+  "2": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_B_R.AM_Behit_B_R",
+  "3": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_B_R.AM_Behit_B_R",
+  "7": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_Block_R.AM_Behit_Block_R",
+  "8": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_S_R.AM_Behit_S_R",
+  "9": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_S_L.AM_Behit_S_L",
+  "10": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_B_R.AM_Behit_B_R",
+  "11": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_B_R.AM_Behit_B_R",
+  "12": "/Game/Characters/Monster/Boss/Fuludelisi/AnimMontage/AM_Behit_Block_L.AM_Behit_Block_L"
+ },
+ "beHitMontagesSource": "原作 AI 状态机 SM_MB1FuludelisiMd00401 的 TaskBeHitMontage.MontageMap（键 = EHitAnim 的值）"
+}

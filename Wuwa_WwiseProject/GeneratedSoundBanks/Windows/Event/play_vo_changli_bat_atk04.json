@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500499",
+    "Type": "Event",
+    "GUID": "{2907CB06-833C-41BA-AE24-11AB6CD7F4F4}",
+    "Language": "SFX",
+    "Hash": "{184E2E94-CED9-ED1B-B5AF-13464BF08FCA}",
+    "ObjectPath": "play_vo_changli_bat_atk04",
+    "ShortName": "play_vo_changli_bat_atk04",
+    "Path": "Event/play_vo_changli_bat_atk04.bnk",
+    "Media": [
+     {
+      "Id": "364852146",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk04_01.wav",
+      "Path": "Media/364852146.wem",
+      "CachePath": "AD/{AD0B0363-FEE6-CC8E-B652-D385A957EA0E}.wem"
+     },
+     {
+      "Id": "371041778",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk04_03.wav",
+      "Path": "Media/371041778.wem",
+      "CachePath": "B1/{B12ED341-AA47-AB1E-63BC-25F36FF203B8}.wem"
+     },
+     {
+      "Id": "898454452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk04_02.wav",
+      "Path": "Media/898454452.wem",
+      "CachePath": "97/{97FE2093-9AF9-1C8F-791F-71EA3B5C2F3E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1421500499",
+      "Name": "play_vo_changli_bat_atk04",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atk04",
+      "GUID": "{2907CB06-833C-41BA-AE24-11AB6CD7F4F4}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.7881042",
+      "MediaRefs": [
+       {
+        "Id": "364852146"
+       },
+       {
+        "Id": "371041778"
+       },
+       {
+        "Id": "898454452"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{565C3E5D-6DFA-748D-BD0E-24A62D35AE88}"
+ }
+}

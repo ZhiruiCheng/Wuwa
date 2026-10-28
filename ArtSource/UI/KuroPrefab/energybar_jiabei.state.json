@@ -1,0 +1,7 @@
+{
+  "_comment": "嘉贝莉娜能量条：BarPart 由运行时按能量设置；强化态的羽毛（BFeather?G）隐藏。",
+  "active": {
+    "/BFeather[LR]G$": false
+  },
+  "texts": {}
+}

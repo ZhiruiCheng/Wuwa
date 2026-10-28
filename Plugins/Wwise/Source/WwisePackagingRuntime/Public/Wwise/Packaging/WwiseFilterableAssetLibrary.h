@@ -1,0 +1,51 @@
+/*******************************************************************************
+The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
+Technology released in source code form as part of the game integration package.
+The content of this file may not be used without valid licenses to the
+AUDIOKINETIC Wwise Technology.
+Note that the use of the game engine is subject to the Unreal(R) Engine End User
+License Agreement at https://www.unrealengine.com/en-US/eula/unreal
+ 
+License Usage
+ 
+Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
+this file in accordance with the end user license agreement provided with the
+software or, alternatively, in accordance with the terms contained
+in a written agreement between you and Audiokinetic Inc.
+Copyright (c) 2026 Audiokinetic Inc.
+*******************************************************************************/
+
+#pragma once
+
+#include "Wwise/WwiseUnrealVersion.h"
+#if WITH_EDITORONLY_DATA
+#include "Wwise/Packaging/WwiseAssetLibraryInfo.h"
+#endif
+
+#include "WwiseFilterableAssetLibrary.generated.h"
+
+/**
+ * Abstract base UObject representing an object with an Editor-Only AssetLibraryInfo.
+ *
+ * This is typically for Shared AssetLibrary Filters and  AssetLibraries.
+ *
+ * This is used for WwiseAssetLibraryDetailsCustomization.
+ */
+UCLASS(Abstract)
+class WWISEPACKAGINGRUNTIME_API UWwiseFilterableAssetLibrary : public UObject
+{
+	GENERATED_BODY()
+
+public:
+	UWwiseFilterableAssetLibrary() {}
+
+	virtual bool IsPostLoadThreadSafe() const override { return true; }
+#if !UE_5_8_OR_LATER
+	virtual bool IsDestructionThreadSafe() const override { return true; }
+#endif
+
+#if WITH_EDITORONLY_DATA
+	UPROPERTY(Blueprintable, EditAnywhere, Category = "Default")
+	FWwiseAssetLibraryInfo Info;
+#endif
+};

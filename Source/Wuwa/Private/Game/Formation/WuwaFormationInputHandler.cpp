@@ -1,6 +1,6 @@
 #include "Game/Formation/WuwaFormationInputHandler.h"
 
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputTypes.h"
 

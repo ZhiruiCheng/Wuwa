@@ -1,0 +1,1302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A8AE2547-54B6-4211-B0A6-D9FA3949FFB1}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A8AE2547-54B6-4211-B0A6-D9FA3949FFB1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Test" ID="{10B3AF9A-96C6-4388-9A86-E74C7BF41C5F}">
+					<ChildrenList>
+						<Action Name="" ID="{FC2B8737-7E1F-4F44-A1C6-BC1A3DA13F5C}" ShortID="388486664">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wwise_Test" ID="{38245D23-2A49-4067-87B3-E2083E3FC32E}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Folder Name="Wuwa_Common" ID="{AD352AE0-690C-47EB-BF0A-DCC79F12E470}" ShortID="9458120">
+					<ChildrenList>
+						<Event Name="role_footstep_heels" ID="{A0264B7D-9B11-4D44-9318-A1CEF5EA8E43}">
+							<ChildrenList>
+								<Action Name="" ID="{72BC0D23-4BB3-4380-B72D-25A133E2406C}" ShortID="155105619">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="footstep_heels_921979372" ID="{B38A458E-2848-4365-967F-AB48BF9EF4E4}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wuwa_Jiabei" ID="{D6213E9B-B541-4B7C-9E55-36A35A10DF13}" ShortID="1666311">
+					<ChildrenList>
+						<Event Name="play_jiabeilina_am_airattack_end" ID="{5F1B8183-A96C-41AE-96E6-F5870AD6CF99}">
+							<ChildrenList>
+								<Action Name="" ID="{E84749C3-6969-45D4-BC04-72915DA80F39}" ShortID="635567470">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_AirAttack_End" ID="{F44B83C9-91CF-4D2E-8A3F-C82D8E35E1D2}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_airattack_start_01" ID="{2EDA01CF-904D-4003-80F1-1C8B9FA64540}">
+							<ChildrenList>
+								<Action Name="" ID="{E5791668-7AC1-44EF-914C-02FC189E54B4}" ShortID="407737622">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_AirAttack_Start_570436476" ID="{E6397AD7-7091-4E2F-80D2-08A5227AE53C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack01_ex" ID="{F6006D23-26C2-4A8E-BAC5-6335CCC24DEB}">
+							<ChildrenList>
+								<Action Name="" ID="{FD774E39-F177-4AE6-A142-6FC72D8A8433}" ShortID="6943770">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack01_EX" ID="{4E1AD2A5-5AB5-4487-95CE-F02AAB0B1721}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack01_n_s" ID="{819224A2-C3C2-455E-80BA-63E767AD5311}">
+							<ChildrenList>
+								<Action Name="" ID="{466D4CC8-658F-4431-9608-59C2BBB1D6EE}" ShortID="623438996">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack01_N_S_32037965" ID="{9ED3403B-B6A3-4645-A6A0-5056369D71C5}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack02_ex_01" ID="{480469DE-1821-4AF0-AFE8-844717687FBC}">
+							<ChildrenList>
+								<Action Name="" ID="{C89A0048-1D26-44BE-9E1C-14192D6C01C6}" ShortID="198225036">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack02_EX_01" ID="{CA7EAC67-65BD-4676-9866-777617567C47}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack02_ex_02" ID="{87D61EBC-4BFC-4146-9D81-6485927AC032}">
+							<ChildrenList>
+								<Action Name="" ID="{06E1A0FA-6227-4299-B02D-B4C8A1FB8BE4}" ShortID="652118727">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack02_EX_02" ID="{56B3745A-CBEC-4EAE-A627-E13751491DC9}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack02_n" ID="{2ECB5485-F38D-4B2A-A9F4-F23769D3EB7D}">
+							<ChildrenList>
+								<Action Name="" ID="{131A0709-42A0-481B-856A-2344F4F138A4}" ShortID="238440798">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack02_N_295365279" ID="{32169D5B-628B-4942-B54C-DD2969FFF056}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack03_ex_01" ID="{92AAFAB3-A352-4195-B989-D00877BAD0A7}">
+							<ChildrenList>
+								<Action Name="" ID="{8C451BF8-1915-4059-82EB-BB1C9523B6E1}" ShortID="476014517">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack03_EX_01" ID="{F5DC0C07-0445-4015-BEE7-6CBC82070472}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack03_ex_02" ID="{5B823E74-8AF1-4EE4-B7C1-9208DA9A7888}">
+							<ChildrenList>
+								<Action Name="" ID="{256B1041-9625-43CF-9823-167D9F94EFE6}" ShortID="799756834">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack03_EX_02" ID="{0011E6F5-E488-4B65-974F-A40AFF7E5F72}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack03_n" ID="{549A7F6C-9DBF-4507-8CDF-218753EF3DAA}">
+							<ChildrenList>
+								<Action Name="" ID="{3635CA76-1D2F-4726-89BE-66B3BDF1D4AE}" ShortID="298491531">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack03_N_949318797" ID="{A09EC55C-793C-402E-8A9B-853CC95004F3}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack04_ex_01" ID="{E8E06F7E-941B-4D67-8DFA-1F7BBA4D4A14}">
+							<ChildrenList>
+								<Action Name="" ID="{142BDCE0-C860-4C58-8CE6-CAA5F0DE810F}" ShortID="1002607763">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack04_EX_01" ID="{D4E9B82F-DC11-41A0-BAC9-9EF45CE657DB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack04_ex_02" ID="{A1F1F4A8-BEA2-4CC9-A42E-E26BD02DAA31}">
+							<ChildrenList>
+								<Action Name="" ID="{CF3B68E1-7804-4D49-BA6A-10BB08E368C5}" ShortID="580318032">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack04_EX_02" ID="{62F39270-ECCE-450F-B87A-4B28B84F016C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack04_n" ID="{E49E300E-FE12-4E17-9306-0FE4458676A9}">
+							<ChildrenList>
+								<Action Name="" ID="{2009A7A2-B2A3-4496-B879-8DF3BC546686}" ShortID="757551460">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack04_N" ID="{E3F7EF09-3E26-48B6-9F3C-D97DAEF8D757}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack05_1_n_01" ID="{B57730E6-EA2F-445C-9F2D-CCC722609E32}">
+							<ChildrenList>
+								<Action Name="" ID="{06B7A5B0-6518-4961-8273-A0598855F123}" ShortID="935816503">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack05_1_N_01" ID="{620B4242-AD2E-4EC1-ADD2-EED63AD141D2}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack05_1_n_02" ID="{EFC410E3-F543-4912-AAC7-26205470EBB6}">
+							<ChildrenList>
+								<Action Name="" ID="{627E5098-EF58-4152-91A7-2ABB33931070}" ShortID="613497378">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.49"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack05_1_N_02" ID="{E4AA215E-933F-4D84-AAD3-5DA7325A6D27}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_attack_jump_01" ID="{FABE8D05-9433-4574-8679-A12320D22277}">
+							<ChildrenList>
+								<Action Name="" ID="{A566B5DE-5110-49FD-B21D-3FE949C2796E}" ShortID="957886482">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Attack_Jump_01" ID="{1BF9C8D2-2417-4886-AEA6-C101F7481234}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_charge" ID="{50D365C9-6BE0-4B6A-A2DD-A4E770777F36}">
+							<ChildrenList>
+								<Action Name="" ID="{7D7F45FA-E3DD-464C-8CCD-CC3CD30481EF}" ShortID="702958223">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Charge_526744593" ID="{7CEA9FDC-83EB-46F0-B7F3-AEFB43F57B9F}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_heavyattack_human01" ID="{0D0EBF17-7600-48D8-B574-ECAF529C5EBE}">
+							<ChildrenList>
+								<Action Name="" ID="{6E5A538F-4ACB-4617-B3A2-1EB4ED014D0B}" ShortID="740995268">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_HeavyAttack_Human01" ID="{5E00785E-37AE-4A89-BFDB-D9DFE34BA56A}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_heavyattack_human02" ID="{4B573C47-4CFB-4C8C-87F5-C9354ADE5297}">
+							<ChildrenList>
+								<Action Name="" ID="{AA003049-F6D0-42C4-86BF-739C336A65D9}" ShortID="209861861">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_HeavyAttack_Human02" ID="{7A60E790-9E66-49CC-A29C-5985A399994C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_heavyattack_human03" ID="{EB8382B2-0CE1-4EEF-83F2-BC0F62516C23}">
+							<ChildrenList>
+								<Action Name="" ID="{04D2B61D-A445-4407-BE9F-FE06CFFF69A8}" ShortID="704700297">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_HeavyAttack_Human03" ID="{150AA650-3BA9-4EFB-81F2-5445CF452143}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_am_skill01" ID="{AB21A261-4F53-476E-BF55-7CBF2AEF472E}">
+							<ChildrenList>
+								<Action Name="" ID="{5FF96047-B55C-43C4-BEB2-5880462C26AE}" ShortID="21336000">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_AM_Skill01_Full_01" ID="{8FC7ED6C-EB8C-4F8A-A6A1-FA6DF7455A98}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_da_heavyattack_ex_hit_01" ID="{4A741123-2EB7-4C09-96DD-113CB928A9F8}">
+							<ChildrenList>
+								<Action Name="" ID="{AE18AEAC-85D1-4E4E-9DED-950D73F227DB}" ShortID="33509908">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Da_Heavyattack_Ex_Hit_01" ID="{DB4120CE-72F0-40B4-A1B7-691F62779734}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_da_heavyattack_hum_hit_01" ID="{C17026A5-2B5F-4367-8921-6728EFE06C54}">
+							<ChildrenList>
+								<Action Name="" ID="{E6471BFE-D7A4-41D8-81EF-A2BF401F9610}" ShortID="251648565">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Da_Heavyattack_Hum_Hit_01" ID="{8A3A9A0A-C639-41F7-8DAB-D3FF49633F5F}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_airattack_end" ID="{3C76B507-847B-4890-8599-FDAC403A11C2}">
+							<ChildrenList>
+								<Action Name="" ID="{C4718F16-F8E2-4F61-BCA8-3BDF2C00DB26}" ShortID="181590805">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_AirAttack_End" ID="{0144617C-6FB2-42B5-AC7D-45ADFA511F0C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack01_ex" ID="{ABC49107-E802-4001-A864-FE150DA55537}">
+							<ChildrenList>
+								<Action Name="" ID="{D672520E-15D6-4CF6-BFB9-EF97ABFF6140}" ShortID="805228884">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack01_EX" ID="{11D2E258-E75A-403B-8785-ED81D4420714}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack01_n_s" ID="{E2D64D7E-AA0D-4155-B174-A9E91BC4395F}">
+							<ChildrenList>
+								<Action Name="" ID="{984D8A94-A1FF-42F2-AF85-D9255AAE88C7}" ShortID="332318020">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack01_N_S" ID="{672572A5-F566-4702-82E2-DAF1125CE0CA}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack02_ex" ID="{972C57B6-A16C-494D-845B-C02BAD8BD5CA}">
+							<ChildrenList>
+								<Action Name="" ID="{74390D8D-38B1-41DD-8FAC-2AC2FBABEF13}" ShortID="960227620">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack02_EX" ID="{8685BF3B-2819-4203-8CB6-9B04886CA5E0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack02_n" ID="{23091B3A-53E4-4295-99A2-C4A4D393774D}">
+							<ChildrenList>
+								<Action Name="" ID="{6A224612-9A0C-4C77-A797-43FFB3E845C1}" ShortID="126717488">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack02_N" ID="{2CDC2E46-A0AF-48A5-B0B3-471F597F0991}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack03_ex" ID="{BA47E098-612A-4332-862F-16289046DC30}">
+							<ChildrenList>
+								<Action Name="" ID="{4AFA7528-C720-42C9-BEC3-29CB3CBDBDB4}" ShortID="341312711">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack03_EX" ID="{1D0E0968-6F9B-43AA-B69F-1A0346F30005}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack03_n" ID="{3E133ABC-86F1-43B4-A9A7-CEF4166E6346}">
+							<ChildrenList>
+								<Action Name="" ID="{DFABC498-C9DB-4474-AEC6-EE3A1727D186}" ShortID="252588889">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack03_N" ID="{90994EAC-695F-4342-8BB2-79FAF289A7E5}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack04_ex" ID="{5D1F0678-072B-45B2-B4AB-302324BDF3E1}">
+							<ChildrenList>
+								<Action Name="" ID="{7A967D75-AE7E-4996-BA9E-3B71D2AFC6E8}" ShortID="554175830">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack04_EX" ID="{65572D28-C1C1-4D3F-8DC2-2F1DA11FA68E}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack04_n" ID="{52EAA862-EB44-44F3-8F23-A415DC14586C}">
+							<ChildrenList>
+								<Action Name="" ID="{B5B0A403-9BFA-4F66-A2BA-12F96EC498B9}" ShortID="1024611052">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack04_N" ID="{D40F281A-520A-4A5B-9071-28E3BD42F313}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_attack05_1_n" ID="{2DFF7F9E-6AC3-4C83-B319-AD077EE0E2CF}">
+							<ChildrenList>
+								<Action Name="" ID="{85D2DF2A-C281-41E4-AA02-4006BA8A4BAD}" ShortID="252390862">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Attack05_1_N" ID="{CB52BF3B-BF79-458E-A767-E6E03FC41E1C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_heavyattack_human02" ID="{1BF08EBA-4054-4B6D-8C0C-5DBF30A6805C}">
+							<ChildrenList>
+								<Action Name="" ID="{7AB3BCD6-2695-4DA4-A4DD-486D4161035F}" ShortID="607544638">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_HeavyAttack_Human02" ID="{5D77AEDC-1A80-4BC2-947E-F63B60B1DF1B}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_heavyattack_human03" ID="{59B32C31-F96C-4EED-9D7A-42956BF866A6}">
+							<ChildrenList>
+								<Action Name="" ID="{6962A7D1-1F01-49C0-87A5-744E53CF5337}" ShortID="56648782">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_HeavyAttack_Human03" ID="{684F1921-8DA6-402D-B19D-5D670AFE413B}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_jiabeilina_foley_am_skill01" ID="{D64D95B2-2E1B-4077-8CE3-FFCA81477BA9}">
+							<ChildrenList>
+								<Action Name="" ID="{0EAEB32C-D674-48A6-8DDA-9DC177AC5CD8}" ShortID="133642015">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Jiabeilina_Foley_AM_Skill01" ID="{FCF64B50-C482-4EA3-8919-7DBF2073AFAE}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_jiabeilina_bat_burst01" ID="{0420841F-0006-415A-B446-72A471E9C59C}">
+							<ChildrenList>
+								<Action Name="" ID="{1D5BF25F-5C05-4060-871E-33BC172CBC78}" ShortID="978135764">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_common_brust_ex_343535298" ID="{A98872A8-B9D6-48ED-803C-AE503F665854}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk01" ID="{D73E8F13-67E0-46E7-8C69-B811EA8C4ECB}">
+							<ChildrenList>
+								<Action Name="" ID="{D6CE35CB-9949-45CE-ABEA-DC9285080771}" ShortID="130038562">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk_447979426" ID="{79E41C55-4468-45BD-AEE6-86D4EA6E5028}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk01_sp" ID="{6943BED6-5C85-4D13-9990-6961746F750C}">
+							<ChildrenList>
+								<Action Name="" ID="{7ED5D226-265E-4D17-B96A-98BF48682AC6}" ShortID="294243118">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk01_sp_987605220" ID="{BB1296A1-973C-410B-BDC8-295415751C21}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk02" ID="{09B0682C-EC55-48CB-A5BC-29716EB55320}">
+							<ChildrenList>
+								<Action Name="" ID="{1740A6FD-0233-461C-AA55-AC452E679DB9}" ShortID="88425359">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk_940641094" ID="{CCD8C6BE-7CA3-45C8-9D3F-CAF1EC0820B6}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk02_sp" ID="{8625E041-6EEC-433A-A6DA-E6160030C678}">
+							<ChildrenList>
+								<Action Name="" ID="{036F5D66-AA26-493E-8F63-B718E9A81CF5}" ShortID="251992697">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk02_sp_178617887" ID="{2A8E1769-A21E-463C-852E-65BE9B2016D5}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk03" ID="{26F6C345-A206-4804-AE4E-8CAC6F24D92A}">
+							<ChildrenList>
+								<Action Name="" ID="{6DF41469-2114-441F-BD8B-9323230B680A}" ShortID="81073999">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk_252434167" ID="{4871FF27-84DF-4200-9A4D-E70FD711DD23}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk03_sp" ID="{4D062F41-EA33-4079-817C-ACD065E1A46D}">
+							<ChildrenList>
+								<Action Name="" ID="{EF6BF5FB-DB39-411F-BFCB-C98835548655}" ShortID="347277302">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk03_sp_574172752" ID="{BBEBC825-8B04-43BB-B067-F5579D533C15}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk04" ID="{E862C77B-0DEF-4E4F-B9CA-C64136C7751F}">
+							<ChildrenList>
+								<Action Name="" ID="{13FB7BE0-4563-4041-9DCE-D6621DC6E703}" ShortID="314606107">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk_41687746" ID="{77F72AAE-1E32-49CD-AAB3-A398A8D1B473}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk04_sp" ID="{7C4F39E8-70B2-44B6-B081-26E9D71A6F04}">
+							<ChildrenList>
+								<Action Name="" ID="{E6D626B2-AE94-465E-879E-B9CA99B30348}" ShortID="684704505">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk04_sp_691845017" ID="{5FE06909-6B48-4E09-BB11-304A5DB8CCD9}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_atk05_sp" ID="{4DA2C2A6-DFCC-4BAD-A036-49E5AB27B91D}">
+							<ChildrenList>
+								<Action Name="" ID="{2F8E97A2-F1BD-4708-BDFA-BAEAD4CFB575}" ShortID="265057715">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_atk05_sp_934797669" ID="{F0C1CC40-55DE-484E-AA87-AC00F72B02FA}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_fallingatk_end" ID="{034B5F75-DD92-4D1B-8F42-208FA0C09B2E}">
+							<ChildrenList>
+								<Action Name="" ID="{E97709D6-D19D-4F83-B9AD-D2387C7B4EE7}" ShortID="102861590">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_fallingatk_end_456954088" ID="{82B30754-6E4B-4AD7-B214-AC6B4FDAFFAB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_fallingatk_start01" ID="{70C4C0DA-A364-470A-AB92-6C2491EF8E6A}">
+							<ChildrenList>
+								<Action Name="" ID="{406C9AE8-25BC-4991-B6AF-6C76A23F8194}" ShortID="193447740">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_fallingatk_start_801611681" ID="{6E2E870F-43D9-4BC2-8FAF-56A471BA4D38}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_heavyatk01" ID="{ED29493A-F04B-4EE4-BCAE-45863FBE9646}">
+							<ChildrenList>
+								<Action Name="" ID="{683D23DD-4E16-4574-8113-F22B260E2A6E}" ShortID="242341686">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_heavyatk_85298603" ID="{0F35394D-DBA6-48DE-8146-BE2C91B2244D}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_heavyatk02" ID="{98C6CD73-F131-483C-B58B-3D930D06DE4E}">
+							<ChildrenList>
+								<Action Name="" ID="{17FD2178-D316-4E69-B25D-3535B816624D}" ShortID="646638188">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_atk_heavyatk_1057531601" ID="{1389F653-730C-4042-B7CA-540EE7B2B21E}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_atk_heavyatk03" ID="{DF8C765E-E47A-4E27-9ED2-2ED3725405C6}">
+							<ChildrenList>
+								<Action Name="" ID="{182D7707-5E1A-487A-960D-AAA5F3C8F8FC}" ShortID="1002571334">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_240697847" ID="{4F1FD652-7B97-4709-A6F2-A2B657DB0FDF}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_burst_burst02" ID="{B58329C2-0F12-4A7B-8ADD-E1307AC2285C}">
+							<ChildrenList>
+								<Action Name="" ID="{70A4EC43-7556-4469-B4F3-ADA5A09A3D45}" ShortID="505230160">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_burst_burst_786182961" ID="{95DA0131-4CBE-458F-AF44-3B579A211BFA}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_com_dash" ID="{8D185957-50D1-4C94-B03A-2B08C3DB9A84}">
+							<ChildrenList>
+								<Action Name="" ID="{C038A28D-75C3-4980-90E3-78383254E337}" ShortID="113693541">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_com_dash_107394907" ID="{8482CE0C-3B39-4886-B5E3-7D29E4065B35}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_com_jump" ID="{6FF38C83-2475-4C9C-90E7-3D9C5E51FA06}">
+							<ChildrenList>
+								<Action Name="" ID="{8C41CB4E-8C3D-4B3F-9305-DE79381D3BAE}" ShortID="626958536">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_com_jump_523616456" ID="{B1A47868-4F93-4CF0-8218-A2CFEEA19AAC}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_skill_skill01" ID="{D5048455-01C6-4525-88D8-BB5C70199A4A}">
+							<ChildrenList>
+								<Action Name="" ID="{C05682C4-2DB7-4827-BACD-226DD6293EF0}" ShortID="966037459">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_skill_skill_854215310" ID="{2634F567-6EF0-4924-88E5-8752091C669D}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_skill_skill02" ID="{00E57DE1-2EF7-4811-9912-52AC84D9F646}">
+							<ChildrenList>
+								<Action Name="" ID="{4EBBAF30-E07E-4164-8C98-B971FDDCA73B}" ShortID="90729299">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_skill_skill_475916150" ID="{ED14DC5B-C615-42C9-82E0-D466933DC1CB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_jiabeilina_skill_skill03" ID="{BF9F97ED-FFC8-4BFF-B9B7-D15552159B7D}">
+							<ChildrenList>
+								<Action Name="" ID="{406BC141-F1A0-4908-97DC-5E55020804AC}" ShortID="1035659780">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_jiabeilina_skill_skill_220646812" ID="{5D3466A6-F09B-409A-9FEE-32264252DD8C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="role_foley_kelaita" ID="{E6D7B2A4-AFDE-4E96-BCA3-B199BB39E318}">
+							<ChildrenList>
+								<Action Name="" ID="{D622A3C1-ED0D-4A1C-8293-23A39E5B3733}" ShortID="668202551">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="foley_819635406" ID="{EE9FFE6A-A020-4D2D-8515-F323A91F3B85}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wuwa_Changli" ID="{18EB64C9-A21E-487C-89F3-A7DBD0CD615D}" ShortID="430090506">
+					<ChildrenList>
+						<Event Name="play_role_changli_bat__am_airattack01" ID="{94175400-5E6D-45D9-B76D-F80B3C8BEB4F}">
+							<ChildrenList>
+								<Action Name="" ID="{8CDF00B2-B3F7-4165-9B2C-AA9838AF7441}" ShortID="540186550">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack_298892384" ID="{A8F97A1F-6CF0-4E1A-9336-6D41F41AE8D3}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{86D25F1C-F4C8-443E-8430-0FB6DD1FE0B0}" ShortID="835995595">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack02" ID="{6E72468B-9419-46A9-8532-91FA9D3EBAD0}">
+							<ChildrenList>
+								<Action Name="" ID="{0B3DB6D3-09E0-4B7A-B77E-65EC134A4AA9}" ShortID="498443724">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack_531619776" ID="{58614C14-9C72-4D0A-A74B-59DE3AC173EB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{64B653A5-32B8-42FE-9908-65E6EFAB9788}" ShortID="829079389">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack03" ID="{A21457B2-F4F1-4133-8651-D91F96A775E3}">
+							<ChildrenList>
+								<Action Name="" ID="{19F48B9B-E9ED-49A7-9C0B-FED7E1C77640}" ShortID="349576850">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack03_v2" ID="{C84725D6-CF61-4192-BEF1-67BA83994D17}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C80ED9D1-7D38-4908-B27C-C160BAAB2F6E}" ShortID="595903170">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack04" ID="{F10D7AC6-1090-41F6-976B-644E98CD8527}">
+							<ChildrenList>
+								<Action Name="" ID="{6879B5F0-CA96-4D73-9731-EAB197179949}" ShortID="6773984">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack04_v2" ID="{7AAA14F9-3B13-41A3-8010-20F1D56C212C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack05" ID="{38687EFD-5594-4388-80A8-28419A9FC826}">
+							<ChildrenList>
+								<Action Name="" ID="{E67C4DAE-D8DD-49FE-A5D1-C9D230C7456E}" ShortID="215794072">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack05_v2" ID="{FD38063C-8CC7-402B-A21F-74981BF169A9}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack_end" ID="{089E44E7-ABC2-4ED1-A37C-C566E5B80C88}">
+							<ChildrenList>
+								<Action Name="" ID="{BAE7B57E-CB39-4049-A8C0-B3A52E74FADA}" ShortID="430201564">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack_end_v2" ID="{5BE1EC54-C2F1-45E5-911C-03C812CFFD2A}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_airattack_start" ID="{7447E68D-D131-4FB3-9048-A6F5542AAECB}">
+							<ChildrenList>
+								<Action Name="" ID="{525FB162-E7BE-4CA3-B86A-0C2303727B9B}" ShortID="988174379">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_airattack_start_v2" ID="{69EA95BA-3150-4523-9941-EEF57AB08CFF}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack01" ID="{7FB84F84-35A3-40DE-BB4D-6849852A668A}">
+							<ChildrenList>
+								<Action Name="" ID="{05304486-CA4E-4B1C-B737-B5C3F474D95B}" ShortID="458985313">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_688102687" ID="{673656F2-659B-4E43-A241-1E74D26979CD}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3292D965-D501-43F5-978B-A46AC9DCC6C0}" ShortID="863718080">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack02" ID="{C3149BBE-86F8-4685-8E34-FAFDF8F07268}">
+							<ChildrenList>
+								<Action Name="" ID="{92C0993C-A5D2-489E-A46F-7028944F9304}" ShortID="831212263">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_961125654" ID="{21038EDE-74AD-44DA-B5EA-774C8C2BF772}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F752C0E8-8874-4352-93C4-020784DD2684}" ShortID="486132017">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack03" ID="{3928B682-29B7-4E8E-A8F6-3C50E47CD26C}">
+							<ChildrenList>
+								<Action Name="" ID="{C80D70A5-2B03-448A-B9B2-75C4DD6BBBCC}" ShortID="279757331">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_961125654" ID="{21038EDE-74AD-44DA-B5EA-774C8C2BF772}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{29445C5B-66A5-461A-AF74-DFA56EE7315C}" ShortID="78579588">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack03_v2" ID="{12FBCE15-3CDA-430A-A40B-5EE28C5381FB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{A87C1900-6DA1-4DBA-8247-3D6ECA11AEBF}" ShortID="890001958">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack04" ID="{F16A155E-29B5-4F15-9142-EA0F1A7D5818}">
+							<ChildrenList>
+								<Action Name="" ID="{4AE74834-F60D-43EF-A451-C55BA8D0434B}" ShortID="1066133624">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack03_v2" ID="{12FBCE15-3CDA-430A-A40B-5EE28C5381FB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F58BDC88-0DFC-4F43-B1C7-5D38A4B09017}" ShortID="329851394">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_v2" ID="{EB51418D-E6E3-4047-B691-1AD5D61A955F}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{C11E17AE-DC14-4136-A0B6-32EBF5B24F2B}" ShortID="10026071">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.4"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack_firelayer_574808118" ID="{219C40B5-0351-43C9-AAB1-A4E27F98E5F0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{BAB295B8-C1BC-4B6F-A5C4-E64E1C4BC339}" ShortID="585850608">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_foley" ID="{787CB971-9463-4414-9296-E88EFA9C73FE}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack04__yumao" ID="{90B50531-73A3-4CD0-B30C-744FA855C697}">
+							<ChildrenList>
+								<Action Name="" ID="{FADEC26D-1743-43B1-86CF-95EB770D7D99}" ShortID="1011005095">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_a_71169364" ID="{D70A5838-7599-44DB-A3B6-068D4D3D3C3E}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack04_branch" ID="{E43A72AB-2641-4D33-B5A3-117DFBCFBD8A}">
+							<ChildrenList>
+								<Action Name="" ID="{220483FE-42E7-4B68-A61C-2E9BB9728E9C}" ShortID="979314154">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_v2" ID="{EB51418D-E6E3-4047-B691-1AD5D61A955F}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4AFA0489-5D19-4395-BF28-EC4048E0480E}" ShortID="446639689">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_branch_Start_v2" ID="{2B355083-98CD-4102-8C27-4F264161EEA0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{4F73B441-79E7-4F4D-8B13-7E5ECD309CF3}" ShortID="49919506">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_branch_v2" ID="{94504C09-EFA3-4B27-B57C-5C5064D65010}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attack04_branch_start" ID="{0FE6A451-71E0-4053-B1F3-660302A82C35}">
+							<ChildrenList>
+								<Action Name="" ID="{56D7B03C-211D-4D66-87C2-20B7A5D1BF1A}" ShortID="982134274">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attack04_branch_Start_v2" ID="{2B355083-98CD-4102-8C27-4F264161EEA0}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_attackl" ID="{8BD11F83-98E0-4D32-9845-CB0931205D79}">
+							<ChildrenList>
+								<Action Name="" ID="{972A7A3A-3336-4535-8926-DBA9C66E3022}" ShortID="1020798913">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_attackL_v2" ID="{FE8E4946-859D-473A-BAF6-CB6A7812D964}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_burst01" ID="{F7F0D306-6DE5-40EF-A2C7-0F215638EF65}">
+							<ChildrenList>
+								<Action Name="" ID="{B1E18A80-E08A-41F6-BAE2-741F466A634F}" ShortID="360428145">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_c_57754584" ID="{A4A8E71B-4EDE-4307-BC73-C8F1E78A9F31}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_burst02" ID="{6A9FD515-0A28-4865-ABB3-BF90C3376C7C}">
+							<ChildrenList>
+								<Action Name="" ID="{7EA3592A-E2BE-403B-9B2A-71BD87728697}" ShortID="513087252">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_burst02_v2" ID="{62B5DBBF-555B-45F4-B4B0-E360971C0A4C}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_damagehit_fire" ID="{F1CFCBAE-647E-4BA7-B72A-B3F071407F68}">
+							<ChildrenList>
+								<Action Name="" ID="{F5D9E248-5E3E-42EE-9F26-B97BCB580EE0}" ShortID="922151689">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="am_damagehit_fire_534525890" ID="{7DB8B5CE-3EBF-4632-B49E-930804D175B6}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_damagehit_stone" ID="{4A901F88-6A53-4E43-9E19-51426D94060D}">
+							<ChildrenList>
+								<Action Name="" ID="{3E166040-321A-4882-B96A-5EEFC0CD0F03}" ShortID="820206367">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="am_damagehit_stone_911470225" ID="{55704237-E784-4D7C-A1FD-7A8D3DD2EF58}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_skill01_end" ID="{8109FFB8-4509-409E-98A2-95C944201611}">
+							<ChildrenList>
+								<Action Name="" ID="{63CF888D-33F8-4DE7-8244-15C6E02EDE0B}" ShortID="213102710">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_skill01_end_v2" ID="{DBFD8E85-32D7-4EBA-B5AE-F60FA1C3E067}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_skill01_loop" ID="{3CCF4D25-6026-44B4-B512-22964DC9CE5F}">
+							<ChildrenList>
+								<Action Name="" ID="{BA1B77F3-4208-4F2B-A7E9-588345C622A4}" ShortID="548459288">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_skill01_Loop_v2" ID="{4ABDD918-7D8C-42AF-8F0B-B0B4A5148226}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_role_changli_bat__am_skill01_start" ID="{940A7B9B-FD54-4E98-ACB1-58B266708754}">
+							<ChildrenList>
+								<Action Name="" ID="{9D69685F-D687-4C55-B6EC-12E75FEAD876}" ShortID="973629690">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="role_changli_bat__am_skill01_start_v2" ID="{E21769EF-1E5E-4F6A-BAF5-12BF0C0E3BA1}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_airatk01" ID="{CF3832BD-8A60-45A6-AF86-EA139DFBFB52}">
+							<ChildrenList>
+								<Action Name="" ID="{A4A77F4C-2F0F-49E3-ABF0-1ADE1D286784}" ShortID="758022444">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_airatk_950028567" ID="{D56601D7-FCC3-48B4-88F7-52F1FA52D113}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_airatk02" ID="{2F650ED1-EF0D-46F6-9168-618D327C9914}">
+							<ChildrenList>
+								<Action Name="" ID="{E9758CF6-A70D-4CDD-905C-FF8F4158770F}" ShortID="487839878">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_airatk_994526041" ID="{4E7E96A6-D4EF-47C9-831D-E31C69EAD26B}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_airatk03" ID="{B36A270A-F922-47FD-AAB8-849C47872668}">
+							<ChildrenList>
+								<Action Name="" ID="{AE11952F-AD7E-42DB-AF6B-0462BC2E74F0}" ShortID="1025182545">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_airatk_448041423" ID="{445850D0-E2E7-458F-8ECA-00A573F22FCB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_airatk04" ID="{4B988F76-F100-467E-A1A3-7987EEB092A0}">
+							<ChildrenList>
+								<Action Name="" ID="{6D48E5C6-ECC2-44A6-A79C-206B6D359F9A}" ShortID="797719542">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_airatk_156033767" ID="{2AEB5F54-7250-4A4D-B931-4ABF855852AC}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_airatk05" ID="{5E8E4010-0790-4A7E-976E-2D2BDCF15D4A}">
+							<ChildrenList>
+								<Action Name="" ID="{0B8F4721-3AA7-4509-B8FF-0D5BA4F105CF}" ShortID="661061324">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_airatk_544379257" ID="{9AAECCCE-292C-4E8E-BB59-86722BC2F87D}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_atk01" ID="{95AB80E1-1F93-446B-AD70-9639C11D65BA}">
+							<ChildrenList>
+								<Action Name="" ID="{1CC0A8BC-E5FE-49AD-9395-4DD7137C1F3D}" ShortID="337178135">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_atk_243263696" ID="{DD897F31-1C09-4937-9622-1FC42EBD8854}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_atk02" ID="{B6F53884-D3DC-4AB2-B438-E0191A402EB8}">
+							<ChildrenList>
+								<Action Name="" ID="{3AC6A7FD-164A-404D-9EA9-A80B1926C60C}" ShortID="673190931">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="15"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_atk_703212568" ID="{F0D6CD8E-075C-4BBA-B34F-0E48CDCF0C66}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_atk03" ID="{8FB62211-095C-43E7-AAA9-620AD9EB1485}">
+							<ChildrenList>
+								<Action Name="" ID="{718D2454-4A22-42C7-AFAB-6F40BA911AA9}" ShortID="564877391">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_atk_885326278" ID="{DB41829C-31B9-4F1D-A7C9-E1EC7B698468}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_atk04" ID="{2907CB06-833C-41BA-AE24-11AB6CD7F4F4}">
+							<ChildrenList>
+								<Action Name="" ID="{76C5E71A-D616-4E3D-BFF7-25756D2D8C72}" ShortID="433138566">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_atk_126215757" ID="{07EF7D51-CEEC-4967-B4B7-C9DDF5B65786}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_atksp04" ID="{02212E50-74AC-438B-A8AC-35CA117E0FB1}">
+							<ChildrenList>
+								<Action Name="" ID="{577E8742-98BE-48D7-8051-A7FCD84E9A1D}" ShortID="526082291">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="50"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_atksp_646150833" ID="{CBF2F2F5-9F42-4E6A-A4D1-E47A6017D311}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_burst01" ID="{2663E658-7C03-42CA-8779-41A30EA6CE6B}">
+							<ChildrenList>
+								<Action Name="" ID="{7D4290A0-6F10-43DA-9F33-5521721AB935}" ShortID="932107232">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_burst_586089773" ID="{2D944B1B-A047-4074-8131-CA5A5721C44B}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_burst02" ID="{048522BC-9656-46D6-A628-1D50AE41C275}">
+							<ChildrenList>
+								<Action Name="" ID="{1CB082C5-E2A6-45F6-A2B7-32249E9F30C4}" ShortID="330346386">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_burst_436623286" ID="{0E21AB23-1227-43A4-933F-0A4202C72F39}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_fallingatk01" ID="{F27E4DDC-AD0E-42F1-807B-8C7FB035B395}">
+							<ChildrenList>
+								<Action Name="" ID="{5388346F-0338-47A2-A5B5-62EC8767E2C2}" ShortID="1042903917">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_fallingatk_293392640" ID="{68F8CC96-65FE-473C-A633-8E6C4EEDD452}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_hvatk" ID="{C92F7A58-7FE1-4E90-ABA4-89924D94FCE9}">
+							<ChildrenList>
+								<Action Name="" ID="{992376EE-A57A-431B-86F9-029B7836D391}" ShortID="22794955">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_hvatk_382198692" ID="{E397A338-EFA6-4DD0-8071-A9973C7BB637}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_bat_skill" ID="{A9A1AD33-842B-48CC-9C0B-C3139A4612F8}">
+							<ChildrenList>
+								<Action Name="" ID="{0F578754-130A-486D-8CC2-48908A8B70B7}" ShortID="406927337">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="35"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_bat_skill_807744917" ID="{EB4B0980-88CD-4CD9-AA49-84AD6F224DA7}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_com_dash" ID="{EECB1B2F-20CB-4B99-972C-B97AC9BAF2BE}">
+							<ChildrenList>
+								<Action Name="" ID="{01B76563-71C9-4A92-99BC-EF4828669D29}" ShortID="519181786">
+									<PropertyList>
+										<Property Name="Probability" Type="Real64" Value="30"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_com_dash_704584460" ID="{54C74883-D1F0-4438-8690-A8753FFB371B}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="play_vo_changli_com_jump" ID="{673D8085-0A2F-4524-B701-B7B9F52F0E03}">
+							<ChildrenList>
+								<Action Name="" ID="{BDFF3F2D-3E38-4420-B9AE-35308B458D79}" ShortID="672437856">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="zh_vo_changli_com_jump_7937648" ID="{86A30645-4237-4342-A951-F47F4A2378C8}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="role_foley_anke" ID="{33802505-9BA6-43AA-952B-48DC3DCC6973}">
+							<ChildrenList>
+								<Action Name="" ID="{0A6EA093-CE22-47FE-A32B-C9DD62BFFFBB}" ShortID="257722919">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="foley_anke_949114063" ID="{79C356CF-C387-4B30-B0B3-9DA08C27B110}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Wuwa_BGM" ID="{5A6E51A2-661D-4371-B04A-5DBA7F31812E}" ShortID="605867864">
+					<ChildrenList>
+						<Event Name="Play_BGM_Rinascita" ID="{656F1463-E337-4B46-9AF8-D2B1464F2D4B}">
+							<ChildrenList>
+								<Action Name="" ID="{C7036C6B-58B5-4DBC-A61B-80CE203308D1}" ShortID="1000185920">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BGM_Rinascita" ID="{4D859EC0-E749-4249-94F8-596E2F7D99AB}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BGM_Battle" ID="{6893B915-D33F-44DE-BAE0-D8847B5FA0AA}">
+							<ChildrenList>
+								<Action Name="" ID="{852A91E5-1CA0-4838-A14F-DE14C2375D8C}" ShortID="830963164">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BGM_Battle" ID="{6285DFF8-E158-4BF3-98B7-6ADAABF57F61}" WorkUnitID="{FD967B56-EAF1-405D-AF8E-AC75C3BB4B53}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

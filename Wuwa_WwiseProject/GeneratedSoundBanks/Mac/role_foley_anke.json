@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1293963997",
+    "Type": "User",
+    "GUID": "{0459CFFE-7C08-482C-B6DA-237ECE998070}",
+    "Language": "SFX",
+    "Hash": "{9F7C0243-FBE5-433F-D441-62F59C65C81A}",
+    "ObjectPath": "role_foley_anke",
+    "ShortName": "role_foley_anke",
+    "Path": "role_foley_anke.bnk"
+   }
+  ],
+  "FileHash": "{0B342A5E-40E2-17F8-C5F6-F96C94286F64}"
+ }
+}

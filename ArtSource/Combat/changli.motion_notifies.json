@@ -1,0 +1,402 @@
+{
+ "character": "changli",
+ "notifies": [
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack01",
+   "sourceLength": 3.033333,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+   "time": 0.0,
+   "duration": 0.12384905,
+   "properties": {
+    "Distance": 200.0,
+    "MaxSpeed": 800.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02",
+   "sourceLength": 4.1666665,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack02",
+   "time": 0.0,
+   "duration": 0.19865164,
+   "properties": {
+    "Distance": 150.0,
+    "MaxSpeed": 1400.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack03",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack03",
+   "time": 0.33946252,
+   "duration": 0.15656427,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 200.0,
+    "bLookAtTarget": false,
+    "bAllowReverse": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.121456,
+   "duration": 0.32603893,
+   "properties": {
+    "Distance": 0.0,
+    "MaxSpeed": 3000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.12384005,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.1,
+    "BlendInTime": 0.05,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=200.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=True,Fov=82.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AttackL",
+   "sourceLength": 2.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "time": 0.0,
+   "duration": 0.39411512,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 800.0
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_AirAttack01",
+   "sourceLength": 1.6,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack01",
+   "time": 0.0,
+   "duration": 0.13682577,
+   "properties": {
+    "RotateSpeed": 200.0,
+    "bAutoFaceTarget": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack01",
+   "sourceLength": 1.6,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack01",
+   "time": 0.0,
+   "duration": 0.15844308,
+   "properties": {
+    "Distance": 50.0,
+    "MaxSpeed": 500.0,
+    "bLookAtTarget": false,
+    "bIgnoreZ": false,
+    "bAlwaysMoveZ": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack02",
+   "sourceLength": 1.8333334,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "time": 0.023916615,
+   "duration": 0.25121188,
+   "properties": {
+    "Distance": 50.0,
+    "MaxSpeed": 500.0,
+    "bLookAtTarget": false,
+    "bIgnoreZ": false
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_AirAttack02",
+   "sourceLength": 1.8333334,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "time": 0.02609004,
+   "duration": 0.24087988,
+   "properties": {
+    "RotateSpeed": 600.0,
+    "bAutoFaceTarget": true
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.0,
+   "duration": 0.21125743,
+   "properties": {
+    "RotateSpeed": 200.0,
+    "bAutoFaceTarget": true,
+    "bSmooth": true
+   }
+  },
+  {
+   "type": "KeepAwayFromGround",
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.0,
+   "duration": 0.19387956,
+   "properties": {
+    "MinHeight": 80.0,
+    "MaxHeight": 240.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.0,
+   "duration": 0.1985185,
+   "properties": {
+    "Distance": 150.0,
+    "MaxSpeed": 400.0,
+    "bLookAtTarget": false,
+    "bIgnoreZ": false,
+    "bAlwaysMoveZ": true
+   }
+  },
+  {
+   "type": "KeepAwayFromGround",
+   "sourceAsset": "AM_AirAttack04",
+   "sourceLength": 2.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.0,
+   "duration": 0.24363597,
+   "properties": {
+    "MinHeight": 80.0,
+    "MaxHeight": 300.0,
+    "MaxSpeed": 5000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_AirAttack04",
+   "sourceLength": 2.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.024066294,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.7,
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.6,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=-35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_AirAttack04",
+   "sourceLength": 2.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.026472501,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.7,
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.6,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack04",
+   "sourceLength": 2.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.060548544,
+   "duration": 0.27707192,
+   "properties": {
+    "Distance": 600.0,
+    "MaxSpeed": 600.0,
+    "bAllowReverse": true,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack05",
+   "sourceLength": 1.6666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "time": 0.08983798,
+   "duration": 0.23777239,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 6000.0,
+    "bLookAtTarget": false,
+    "bIgnoreZ": false
+   }
+  },
+  {
+   "type": "KeepAwayFromGround",
+   "sourceAsset": "AM_AirAttack05",
+   "sourceLength": 1.6666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "time": 0.18666364,
+   "duration": 0.09598409,
+   "properties": {
+    "MinHeight": 80.0,
+    "MaxHeight": 240.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Skill01_Start",
+   "sourceLength": 1.1666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.0,
+   "duration": 0.14676514,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 6000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Skill01_Start",
+   "sourceLength": 1.1666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.026010629,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.0,
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=90,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=True,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Skill01_End",
+   "sourceLength": 4.766667,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_End",
+   "time": 0.0,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.6,
+    "BlendInTime": 0.4,
+    "BlendOutTime": 1.0,
+    "Modify": "(Priority=92,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=False)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 0.0,
+   "duration": 0.2500059,
+   "properties": {
+    "Distance": 200.0
+   }
+  },
+  {
+   "type": "AbsoluteTimeStop",
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 2.9802322e-08,
+   "duration": 2.62622,
+   "properties": {}
+  },
+  {
+   "type": "SequenceCamera",
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 0.0,
+   "duration": 0.0,
+   "properties": {
+    "Config": "(CameraSequence=\"/Game/Characters/SequenceCamera/Changli/SC_Changli_Burst01.SC_Changli_Burst01\",BlendInTime=0.0,BlendOutTime=0.5,bHideHud=True,HideHudTime=2.8,SpecificSequenceTime=0.0)",
+    "CameraAttachSocket": "Root"
+   }
+  },
+  {
+   "type": "BurstState",
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 0.0,
+   "duration": 3.1831715,
+   "properties": {}
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 3.01,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 2.0,
+    "BlendInTime": 0.05,
+    "BlendOutTime": 1.0,
+    "Modify": "(Priority=1,bModifyArmLength=True,ArmLength=750.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=20.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=False)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Burst02",
+   "sourceLength": 5.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "time": 0.044170663,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.7,
+    "BlendInTime": 0.3,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=2,bModifyArmLength=True,ArmLength=550.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-7.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=85.0,bLockInput=True,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Burst02",
+   "sourceLength": 5.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "time": 0.8998022,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.6,
+    "BlendInTime": 0.1,
+    "BlendOutTime": 0.8,
+    "Modify": "(Priority=3,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-10.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-50.0),bModifyFov=True,Fov=85.0,bLockInput=True,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Skill01_Start",
+   "sourceLength": 1.1666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.14676514,
+   "duration": 1.01990146,
+   "properties": {
+    "Distance": 100.0,
+    "bAllowForward": false,
+    "MaxDistance": 400.0
+   },
+   "note": "project: hold in front of the target after the original pull window"
+  }
+ ],
+ "notInstalled": [
+  "AM_AirAttack05_branch",
+  "AM_Attack03_LimitDodge",
+  "AM_Attack04_LimitDodge",
+  "AM_Burst01_Rogue",
+  "AM_Cableway",
+  "AM_Execute01",
+  "AM_Land_Roll_Attack01_2",
+  "AM_QTE"
+ ]
+}

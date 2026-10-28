@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6A345535-ABCC-4AF3-B95C-4EE28159F9E8}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{6A345535-ABCC-4AF3-B95C-4EE28159F9E8}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="footstep_variant" ID="{D629F776-C5C9-49E5-82D2-8DFDF66E588B}">
+					<ChildrenList>
+						<Switch Name="land" ID="{31DAA629-61CC-4B17-84B4-A51AB453B848}"/>
+						<Switch Name="run" ID="{C54F4511-B1B1-4814-ACBF-3DB5C19F6116}"/>
+						<Switch Name="runstop" ID="{671796F4-AA79-411E-8EB9-3CC69A139299}"/>
+						<Switch Name="sprint" ID="{9CB7ED33-0A21-4717-95A5-EA31D9CDE27F}"/>
+						<Switch Name="sprintstop" ID="{DCF88F1C-4D85-4055-BA3B-63769946DEF3}"/>
+						<Switch Name="turnback" ID="{4C6E7DF7-1465-4F9A-A498-C3EC13B1223E}"/>
+						<Switch Name="walk" ID="{1069944B-9812-40EA-879A-E39B2E9480A3}"/>
+						<Switch Name="walkstop" ID="{92F2281E-E425-4E62-B557-DBA32052CFEF}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="foley_variant" ID="{C98632CF-EC0B-43E1-B2A7-1D653EB47F2F}">
+					<ChildrenList>
+						<Switch Name="bodyfall" ID="{D409D60F-E885-432E-BD68-721EC5488C79}"/>
+						<Switch Name="fly" ID="{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"/>
+						<Switch Name="hard" ID="{79BEB496-1626-40FF-9510-595819538FAF}"/>
+						<Switch Name="hardfast" ID="{EDFA3906-C4B7-4728-9260-4C58289D24D8}"/>
+						<Switch Name="run" ID="{BA1430CF-5E6E-488E-949F-0923689F7DA9}"/>
+						<Switch Name="sprint" ID="{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"/>
+						<Switch Name="weak" ID="{EA1FF672-80B1-4D79-998D-8F71A04F87EE}"/>
+						<Switch Name="weakfast" ID="{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Switch_3592615741" ID="{A80D59D3-1D37-4637-9F9B-9F6D90516117}">
+					<ChildrenList>
+						<Switch Name="Value_1635194252" ID="{36B5172F-C886-4CFA-ABDE-DD6DE389EF81}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

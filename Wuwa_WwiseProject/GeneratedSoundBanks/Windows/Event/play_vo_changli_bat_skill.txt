@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3452675798	play_vo_changli_bat_skill			\Default Work Unit\Wuwa_Changli\play_vo_changli_bat_skill	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	358167022	zh_vo_changli_bat_skill_03	.cache\BC\{BCFA0A64-E1CB-0FFC-2F68-45047F43ECD9}.wem	358167022.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_skill_807744917\zh_vo_changli_bat_skill_03	
+	372361843	zh_vo_changli_bat_skill_01	.cache\B6\{B69F75BE-E5AF-44D8-019C-19E6936623D0}.wem	372361843.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_skill_807744917\zh_vo_changli_bat_skill_01	
+	609686113	zh_vo_changli_bat_skill_02	.cache\68\{6824B32B-2CB0-081A-B0E5-737BA51686F2}.wem	609686113.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_skill_807744917\zh_vo_changli_bat_skill_02	
+

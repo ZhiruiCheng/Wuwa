@@ -1,5 +1,5 @@
 #include "Game/Formation/WuwaFormationComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Formation/WuwaRoleSwitchSnapshot.h"
 
 #include "AbilitySystemComponent.h"

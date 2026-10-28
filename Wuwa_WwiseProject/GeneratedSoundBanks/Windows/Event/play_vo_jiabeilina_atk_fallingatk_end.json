@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2151202357",
+    "Type": "Event",
+    "GUID": "{034B5F75-DD92-4D1B-8F42-208FA0C09B2E}",
+    "Language": "SFX",
+    "Hash": "{A1644BFA-0902-D13E-501B-209B44B2A753}",
+    "ObjectPath": "play_vo_jiabeilina_atk_fallingatk_end",
+    "ShortName": "play_vo_jiabeilina_atk_fallingatk_end",
+    "Path": "Event/play_vo_jiabeilina_atk_fallingatk_end.bnk",
+    "Media": [
+     {
+      "Id": "302917163",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_end_03_tone.wav",
+      "Path": "Media/302917163.wem",
+      "CachePath": "89/{89EF12D3-ED9E-1D5E-F3A9-8BDF5B424437}.wem"
+     },
+     {
+      "Id": "632407745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_end_01_tone.wav",
+      "Path": "Media/632407745.wem",
+      "CachePath": "80/{8044A34E-792A-9037-1AFE-078C10678157}.wem"
+     },
+     {
+      "Id": "1062164862",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_end_02_tone.wav",
+      "Path": "Media/1062164862.wem",
+      "CachePath": "B5/{B58313FF-732A-A6BB-16B9-8B5E31EF156E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2151202357",
+      "Name": "play_vo_jiabeilina_atk_fallingatk_end",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_atk_fallingatk_end",
+      "GUID": "{034B5F75-DD92-4D1B-8F42-208FA0C09B2E}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.27647915",
+      "DurationMax": "0.30647916",
+      "MediaRefs": [
+       {
+        "Id": "302917163"
+       },
+       {
+        "Id": "632407745"
+       },
+       {
+        "Id": "1062164862"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7DB971E2-31C9-5C54-B269-2D6A2840D516}"
+ }
+}

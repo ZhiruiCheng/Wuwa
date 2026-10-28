@@ -1,0 +1,820 @@
+{
+ "character": "jiabei",
+ "notifies": [
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack01_N_S",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01",
+   "time": 0.0644632,
+   "duration": 0.13704553,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 1000.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack01_N_S",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01",
+   "time": 0.19749764,
+   "duration": 0.47049746,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_N",
+   "sourceLength": 10.266666,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02",
+   "time": 0.0,
+   "duration": 0.36408132,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 1000.0,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_N",
+   "sourceLength": 10.266666,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02",
+   "time": 0.36227465,
+   "duration": 0.77932835,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.15755776,
+   "duration": 0.19278505,
+   "properties": {
+    "Distance": 150.0,
+    "MaxSpeed": 2900.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.35034296,
+   "duration": 0.29885617,
+   "properties": {
+    "Distance": 70.0,
+    "MaxSpeed": 0.0,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.35202774,
+   "duration": 0.27584288,
+   "properties": {
+    "RotateSpeed": 600.0,
+    "bAutoFaceTarget": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack04_N",
+   "sourceLength": 10.433333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04",
+   "time": 0.25706357,
+   "duration": 0.2154417,
+   "properties": {
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "RoleRotate",
+   "sourceAsset": "AM_Charge",
+   "sourceLength": 1.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Charge",
+   "time": 0.033333,
+   "duration": 0.262869,
+   "properties": {
+    "RotateSpeed": 1800.0
+   }
+  },
+  {
+   "type": "CameraModifyWindow",
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.0,
+   "duration": 0.10620258,
+   "properties": {
+    "BlendInTime": 0.1,
+    "BlendOutTime": 0.033,
+    "Modify": "(Priority=5,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=-160.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.03463918,
+   "duration": 0.13594593,
+   "properties": {
+    "Distance": 50.0,
+    "MaxSpeed": 5000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.13711104,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.3,
+    "BlendInTime": 0.067,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=6,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=-200.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.16743387,
+   "duration": 0.5676953,
+   "properties": {
+    "Distance": 250.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.19157681,
+   "duration": 0.0,
+   "properties": {
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=6,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_Human02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human02",
+   "time": 0.0,
+   "duration": 0.28846058,
+   "properties": {
+    "Distance": 350.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_HeavyAttack_Human02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human02",
+   "time": 0.28160468,
+   "duration": 0.6824018,
+   "properties": {
+    "RotateSpeed": 1800.0,
+    "bAutoFaceTarget": true
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_HeavyAttack_Human03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human03",
+   "time": 0.0,
+   "duration": 0.46435556,
+   "properties": {
+    "RotateSpeed": 300.0,
+    "bSmooth": true
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_AirAttack_Start",
+   "sourceLength": 0.7,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_Start",
+   "time": 0.0,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.45,
+    "BlendInTime": 0.35,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=150.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-20.0),bModifyFov=True,Fov=85.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack_Start",
+   "sourceLength": 0.7,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_Start",
+   "time": 0.0,
+   "duration": 0.26679686,
+   "properties": {
+    "bIgnoreZ": false,
+    "TargetOffset": "(X=0.0,Y=0.0,Z=500.0)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack_Start",
+   "sourceLength": 0.7,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_Start",
+   "time": 0.26614678,
+   "duration": 0.4338532,
+   "properties": {
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 3.6333334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_End",
+   "time": 0.1,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.4,
+    "BlendInTime": 0.4,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 3.6333334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_End",
+   "time": 0.1,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.4,
+    "BlendInTime": 0.4,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 3.6333334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_End",
+   "time": 0.18007,
+   "duration": 0.44421,
+   "properties": {
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Skill01",
+   "sourceLength": 7.266667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Skill01",
+   "time": 0.131838,
+   "duration": 0.065676,
+   "properties": {
+    "Distance": 770.0,
+    "MaxSpeed": 6000.0,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "CameraModifyWindow",
+   "sourceAsset": "AM_Skill01",
+   "sourceLength": 7.266667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Skill01",
+   "time": 0.199706,
+   "duration": 0.169196,
+   "properties": {
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.15,
+    "Modify": "(Priority=5,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=-150.0,Y=-100.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Skill01",
+   "sourceLength": 7.266667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Skill01",
+   "time": 0.240093,
+   "duration": 0.09893301,
+   "properties": {
+    "Distance": 110.0,
+    "MaxSpeed": 7000.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack01_EX",
+   "sourceLength": 4.6666665,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01_EX",
+   "time": 0.12505874,
+   "duration": 0.09549281,
+   "properties": {
+    "Distance": 130.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack01_EX",
+   "sourceLength": 4.6666665,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01_EX",
+   "time": 0.23428449,
+   "duration": 0.43238226,
+   "properties": {
+    "Distance": 60.0,
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.1678212,
+   "duration": 0.095452726,
+   "properties": {}
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.26609245,
+   "duration": 0.13653004,
+   "properties": {
+    "Distance": 130.0,
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.4037698,
+   "duration": 0.18586445,
+   "properties": {
+    "Distance": 130.0,
+    "MaxSpeed": 1000.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.58733964,
+   "duration": 0.17932034,
+   "properties": {
+    "Distance": 130.0,
+    "MaxSpeed": 0.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack03_EX",
+   "sourceLength": 12.666667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 0.0,
+   "duration": 0.31571186,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 3000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack03_EX",
+   "sourceLength": 12.666667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 0.1742683,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 3.0,
+    "BlendInTime": 0.7,
+    "BlendOutTime": 1.0,
+    "Modify": "(Priority=8,bModifyArmLength=True,ArmLength=1000.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-20.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=True,bModifyOffsetY=True,bModifyOffsetZ=True,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=130.0),bModifyFov=True,Fov=85.0,bLockInput=True,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack03_EX",
+   "sourceLength": 12.666667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 2.5661633,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.0,
+    "BlendInTime": 0.3,
+    "BlendOutTime": 1.0,
+    "Modify": "(Priority=9,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=50.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModifyWindow",
+   "sourceAsset": "AM_Attack04_EX",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EX",
+   "time": 0.060006537,
+   "duration": 0.31279317,
+   "properties": {
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=5,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=-150.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack04_EX",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EX",
+   "time": 0.1623947,
+   "duration": 0.2875735,
+   "properties": {
+    "Distance": 140.0,
+    "MaxSpeed": 5000.0,
+    "MaxDistance": 2000.0
+   }
+  },
+  {
+   "type": "CameraModifyWindow",
+   "sourceAsset": "AM_Attack04_EXH",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EXH",
+   "time": 0.060007,
+   "duration": 0.312793,
+   "properties": {
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=5,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=-150.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack04_EXH",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EXH",
+   "time": 0.162395,
+   "duration": 0.287573,
+   "properties": {
+    "Distance": 140.0,
+    "MaxSpeed": 5000.0,
+    "MaxDistance": 2000.0
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 0.49102306,
+   "duration": 0.081468046,
+   "properties": {
+    "Distance": 230.0,
+    "MaxSpeed": 1000.0,
+    "bAllowReverse": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 0.5703202,
+   "duration": 0.51509094,
+   "properties": {
+    "Distance": 230.0,
+    "MaxSpeed": 0.0,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 0.59896857,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 2.0,
+    "BlendOutTime": 2.0,
+    "Modify": "(Priority=1,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=True,ArmRotation=(Pitch=0.0,Yaw=15.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-40.0),bModifyFov=True,Fov=65.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 0.59974027,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 2.0,
+    "BlendOutTime": 2.0,
+    "Modify": "(Priority=1,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=True,ArmRotation=(Pitch=0.0,Yaw=-15.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-40.0),bModifyFov=True,Fov=65.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 1.0831928,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.0,
+    "BlendOutTime": 2.0,
+    "Modify": "(Priority=1,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=85.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "CameraModifyWindow",
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.0,
+   "duration": 0.10620258,
+   "properties": {
+    "BlendInTime": 0.1,
+    "BlendOutTime": 0.033,
+    "Modify": "(Priority=5,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=100.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=-160.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.03463918,
+   "duration": 0.13594593,
+   "properties": {
+    "Distance": 50.0,
+    "MaxSpeed": 5000.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.13711104,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.3,
+    "BlendInTime": 0.067,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=6,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=-200.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.16743387,
+   "duration": 0.5676953,
+   "properties": {
+    "Distance": 250.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.23508325,
+   "duration": 0.0,
+   "properties": {
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=6,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "AM_HeavyAttack_evil02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil02",
+   "time": 0.0,
+   "duration": 0.28846058,
+   "properties": {
+    "Distance": 350.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false,
+    "MinDistance": 100.0,
+    "MaxDistance": 3500.0
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_HeavyAttack_evil02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil02",
+   "time": 0.281605,
+   "duration": 0.682401,
+   "properties": {
+    "RotateSpeed": 1800.0,
+    "bAutoFaceTarget": true
+   }
+  },
+  {
+   "type": "SkillRotate",
+   "sourceAsset": "AM_HeavyAttack_evil03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil03",
+   "time": 0.0,
+   "duration": 0.464356,
+   "properties": {
+    "RotateSpeed": 300.0,
+    "bSmooth": true
+   }
+  },
+  {
+   "type": "SequenceCamera",
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 0.0,
+   "duration": 0.0,
+   "properties": {
+    "Config": "(CameraSequence=\"/Game/Characters/SequenceCamera/2X/2_7/Jiabeilina/SC_Jiabeilina_Burst01.SC_Jiabeilina_Burst01\",BlendInTime=0.0,BlendOutTime=0.5,bHideHud=True,HideHudTime=3.35,SpecificSequenceTime=3.35)",
+    "CameraAttachSocket": "Root"
+   }
+  },
+  {
+   "type": "AbsoluteTimeStop",
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 0.0,
+   "duration": 3.5,
+   "properties": {}
+  },
+  {
+   "type": "BurstState",
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 0.0,
+   "duration": 3.44,
+   "properties": {}
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 2.5955937,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.2,
+    "BlendInTime": 0.3,
+    "BlendOutTime": 2.0,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=False,ArmRotation=(Pitch=-5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "BurstState",
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 3.333344,
+   "duration": 0.8731942,
+   "properties": {
+    "bForbidSwitch": false
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_start",
+   "sourceLength": 1.0333333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_start",
+   "time": 0.081188,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 0.5,
+    "BlendInTime": 0.3,
+    "BlendOutTime": 0.3,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=800.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_start",
+   "sourceLength": 1.0333333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_start",
+   "time": 0.21425033,
+   "duration": 0.3958655,
+   "properties": {
+    "Distance": 0.0,
+    "bIgnoreZ": false,
+    "bAlwaysMoveZ": true
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.003577,
+   "duration": 0.27238402,
+   "properties": {
+    "Distance": 100.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.004645,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.0,
+    "BlendInTime": 0.2,
+    "BlendOutTime": 1.0,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=50.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=17.5,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  },
+  {
+   "type": "MoveToTarget",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.099883,
+   "duration": 0.36450702,
+   "properties": {
+    "Distance": 1000.0,
+    "MaxSpeed": 0.0,
+    "bAllowReverse": true,
+    "bAllowForward": false
+   }
+  },
+  {
+   "type": "CameraModify",
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.22961,
+   "duration": 0.0,
+   "properties": {
+    "Duration": 1.0,
+    "BlendInTime": 0.2,
+    "BlendOutTime": 0.2,
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=250.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+   }
+  }
+ ],
+ "notInstalled": [
+  "AM_AirAttack_Start_Child",
+  "AM_Attack03_EX_Lim",
+  "AM_Attack03_N_Child",
+  "AM_Attack04_EXH_Child_photos",
+  "AM_Attack04_N_Child_photos",
+  "AM_Attack05_1_N_Child_photos",
+  "AM_Execute01",
+  "AM_HeavyAttack_Human03_Child_photos",
+  "AM_HeavyAttack_evil03_Child_photos",
+  "AM_QTE"
+ ]
+}

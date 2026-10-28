@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1449399015	play_role_changli_bat__am_skill01_loop			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_skill01_loop	
+

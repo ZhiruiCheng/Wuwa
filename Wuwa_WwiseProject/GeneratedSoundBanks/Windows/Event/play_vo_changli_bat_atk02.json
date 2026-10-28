@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500501",
+    "Type": "Event",
+    "GUID": "{B6F53884-D3DC-4AB2-B438-E0191A402EB8}",
+    "Language": "SFX",
+    "Hash": "{E366DEB5-7C05-C22F-B90F-C682D97B7301}",
+    "ObjectPath": "play_vo_changli_bat_atk02",
+    "ShortName": "play_vo_changli_bat_atk02",
+    "Path": "Event/play_vo_changli_bat_atk02.bnk",
+    "Media": [
+     {
+      "Id": "123779813",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk02_01.wav",
+      "Path": "Media/123779813.wem",
+      "CachePath": "13/{13EF63E2-0FDB-B868-407D-16E6B90999D5}.wem"
+     },
+     {
+      "Id": "404679034",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk02_02.wav",
+      "Path": "Media/404679034.wem",
+      "CachePath": "A3/{A3C5B009-1357-CA8C-67D1-69387AD22B75}.wem"
+     },
+     {
+      "Id": "1052283119",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk02_03.wav",
+      "Path": "Media/1052283119.wem",
+      "CachePath": "F8/{F83619DF-2EC2-4C96-2D35-E146196BED5F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1421500501",
+      "Name": "play_vo_changli_bat_atk02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atk02",
+      "GUID": "{B6F53884-D3DC-4AB2-B438-E0191A402EB8}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.46585417",
+      "MediaRefs": [
+       {
+        "Id": "123779813"
+       },
+       {
+        "Id": "404679034"
+       },
+       {
+        "Id": "1052283119"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1AEC4D5C-6BB2-8908-FC4E-56826756840F}"
+ }
+}

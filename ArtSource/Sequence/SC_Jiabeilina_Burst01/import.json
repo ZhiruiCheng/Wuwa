@@ -1,0 +1,25 @@
+{
+  "ImportGroups": [
+    {
+      "GroupName": "VortexCloudMesh",
+      "Filenames": ["C:/UEProjects/Wuwa/ArtSource/Sequence/SC_Jiabeilina_Burst01/SM_VortexCloud.fbx"],
+      "DestinationPath": "/Game/Characters/SequenceCamera/2X/2_7/Jiabeilina/VortexCloud",
+      "FactoryName": "FbxFactory",
+      "bReplaceExisting": 1,
+      "bSkipReadOnly": 0,
+      "ImportSettings": {
+        "bImportMesh": 1, "bImportAsSkeletal": 0, "bImportMaterials": 0, "bImportTextures": 0, "bImportAnimations": 0,
+        "StaticMeshImportData": {"bCombineMeshes": 1, "bAutoGenerateCollision": 0, "bGenerateLightmapUVs": 0}
+      }
+    },
+    {
+      "GroupName": "VortexCloudTextures",
+      "Filenames": ["C:/UEProjects/Wuwa/ArtSource/Sequence/SC_Jiabeilina_Burst01/T_VortexCloud_Color.png",
+                    "C:/UEProjects/Wuwa/ArtSource/Sequence/SC_Jiabeilina_Burst01/T_VortexCloud_Flow.png"],
+      "DestinationPath": "/Game/Characters/SequenceCamera/2X/2_7/Jiabeilina/VortexCloud",
+      "FactoryName": "TextureFactory",
+      "bReplaceExisting": 1,
+      "bSkipReadOnly": 0
+    }
+  ]
+}

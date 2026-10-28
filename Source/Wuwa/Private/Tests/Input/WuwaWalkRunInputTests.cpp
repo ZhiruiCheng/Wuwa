@@ -17,7 +17,7 @@
 #include "InputMappingContext.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "UObject/UnrealType.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Framework/WuwaGameMode.h"
 
 namespace

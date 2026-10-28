@@ -3,7 +3,9 @@
 #include "CoreMinimal.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Game/Input/IWuwaInputRouteHandler.h"
-#include "Game/Camera/WuwaCameraTypes.h"
+#include "Game/Camera/CameraData/WuwaCameraModify.h"
+#include "Game/Camera/CameraData/WuwaCameraSettings.h"
+#include "Game/Camera/CameraData/WuwaCameraFrame.h"
 #include "WuwaPlayerCameraManager.generated.h"
 
 class UWuwaCameraMode;
@@ -32,8 +34,12 @@ public:
 	/** Pawn 当前是不是这个相机在看的本地玩家角色（镜头修改只给它）。 */
 	static AWuwaPlayerCameraManager* GetForPawn(const APawn* Pawn);
 	UFUNCTION(BlueprintPure, Category="Wuwa|Camera") UWuwaCameraRuntimeBridge* GetCameraRuntime() const { return Runtime; }
+	
+	
+	//默认相机数据
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Wuwa|Camera") FWuwaCameraSettings DefaultSettings;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Wuwa|Camera") TObjectPtr<UWuwaCameraMode> DefaultMode;
+	
 	UPROPERTY(EditDefaultsOnly, Category="Wuwa|Camera") TSoftClassPtr<UWuwaCameraRuntimeBridge> RuntimeClass;
 
 	
@@ -51,5 +57,8 @@ private:
 	float PendingZoom = 0.f;
 	uint64 LastEvaluatedFrame = MAX_uint64;
 	FWuwaCameraView CachedView;
+	
+	
+	//debug
 	bool bReportedMissingRuntime = false;
 };

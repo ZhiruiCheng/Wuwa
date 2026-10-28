@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2846331115	role_foley_kelaita			\Default Work Unit\Wuwa_Jiabei\role_foley_kelaita	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1063605336	foley_variant			\Default Work Unit\foley_variant	
+
+Switch	ID	Name	Switch Group			Notes
+	712161704	run	foley_variant			
+	1133470540	fly	foley_variant			
+	1296465089	sprint	foley_variant			
+	1488596377	weak	foley_variant			
+	1724159175	weakfast	foley_variant			
+	2557423760	hardfast	foley_variant			
+	2587856914	bodyfall	foley_variant			
+	3599861390	hard	foley_variant			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	255068608	foley_kelaita_fly_01	.cache\BC\{BC8811B5-14D4-4941-F8EB-DD0172FD6A0F}.wem	255068608.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_537093753\foley_819635406\foley_kelaita_fly_813692972\foley_kelaita_fly_01	
+

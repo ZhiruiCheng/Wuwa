@@ -1,0 +1,22 @@
+{
+ "_doc": "输入动作的触发器（-run=WuwaBlueprintDefaultsSetup -Recipe=ArtSource/Combat/input_hold_triggers.json -Apply）。原作 BP_InputBase 长按配置：攻击（EInputAction 1）触发时间 0.3 秒、连续触发。项目 IA_Attack 加 Hold 触发器（不是一次性），AWuwaPlayerController 把到点后的 Triggered 转成每次按下一次的 Held 阶段，按下仍走 Started。",
+ "source": "原作 BP_InputBase 长按配置",
+ "blueprints": [
+  {
+   "asset": "/Game/CoreInput/Actions/IA_Attack",
+   "subobjects": [
+    {
+     "name": "HoldTrigger",
+     "class": "/Script/EnhancedInput.InputTriggerHold",
+     "properties": {
+      "HoldTimeThreshold": "0.3",
+      "bIsOneShot": "False"
+     }
+    }
+   ],
+   "properties": {
+    "Triggers": "(\"/Game/CoreInput/Actions/IA_Attack.IA_Attack:HoldTrigger\")"
+   }
+  }
+ ]
+}

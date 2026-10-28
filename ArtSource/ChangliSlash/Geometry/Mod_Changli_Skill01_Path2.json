@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "name": "Mod_Changli_Skill01_Path2",
+  "sourcePskx": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Effect/Mesh/Changli/Mod_Changli_Skill01_Path2.pskx",
+  "sourcePskxSha256": "c0d97785bf816d7bf0caa89c27fb17ff3dacfbd253785c4aaa382e57109847fc",
+  "sourceMetadataJson": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Effect/Mesh/Changli/Mod_Changli_Skill01_Path2.json",
+  "sourcePackagePath": "Client/Content/Aki/Effect/Mesh/Changli/Mod_Changli_Skill01_Path2",
+  "coordinateSystem": "UE local centimeters; PSK mirror Y and swapped indices already undone; do not flip again",
+  "attributeMapping": "positions indexed by point; UVs/normals/colors indexed by wedge; triangles index wedges",
+  "vertexColorEncoding": "RGBA unsigned bytes, linear UNORM shader values (divide each channel by 255; no sRGB transform)",
+  "hasVertexColors": false,
+  "positions": [
+    [
+      12.20977783203125,
+      -33.6785888671875,
+      2.0622202947032098e-15
+    ],
+    [
+      -17.27197265625,
+      -1261.54833984375,
+      7.724755486963539e-14
+    ],
+    [
+      -17.27197265625,
+      45.1407470703125,
+      -2.764071794798123e-15
+    ],
+    [
+      105.52120971679688,
+      -850.7996826171875,
+      5.209645648901473e-14
+    ],
+    [
+      -13.384437561035156,
+      34.971527099609375,
+      1.0356001439504325e-05
+    ],
+    [
+      9.991134643554688,
+      1008.5247802734375,
+      1.0356001439504325e-05
+    ],
+    [
+      9.991046905517578,
+      -27.52276611328125,
+      1.0356001439504325e-05
+    ],
+    [
+      -87.36915588378906,
+      682.8504638671875,
+      1.0356001439504325e-05
+    ]
+  ],
+  "wedgePointIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "uvChannels": [
+    [
+      [
+        0.998046875,
+        0.99951171875
+      ],
+      [
+        0.0003440380096435547,
+        5.960464477539063e-08
+      ],
+      [
+        0.998046875,
+        -3.5762786865234375e-07
+      ],
+      [
+        0.00034427642822265625,
+        1.0
+      ],
+      [
+        0.998046875,
+        0.99951171875
+      ],
+      [
+        0.0003440380096435547,
+        5.960464477539063e-08
+      ],
+      [
+        0.998046875,
+        -3.5762786865234375e-07
+      ],
+      [
+        0.00034427642822265625,
+        1.0
+      ]
+    ]
+  ],
+  "normals": [
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ],
+    [
+      0.003921567462384701,
+      0.003921567462384701,
+      0.999984622001648
+    ]
+  ],
+  "colorsRGBA8": [
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ],
+    [
+      255,
+      255,
+      255,
+      255
+    ]
+  ],
+  "triangles": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      5,
+      4,
+      7
+    ]
+  ],
+  "triangleMaterialIndices": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "triangleSmoothingGroups": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "materials": [
+    "WorldGridMaterial"
+  ],
+  "chunks": [
+    {
+      "name": "ACTRHEAD",
+      "typeFlags": 20220723,
+      "size": 0,
+      "count": 0,
+      "offset": 0
+    },
+    {
+      "name": "PNTS0000",
+      "typeFlags": 0,
+      "size": 12,
+      "count": 8,
+      "offset": 32
+    },
+    {
+      "name": "VTXW0000",
+      "typeFlags": 0,
+      "size": 16,
+      "count": 8,
+      "offset": 160
+    },
+    {
+      "name": "FACE0000",
+      "typeFlags": 0,
+      "size": 12,
+      "count": 4,
+      "offset": 320
+    },
+    {
+      "name": "MATT0000",
+      "typeFlags": 0,
+      "size": 88,
+      "count": 1,
+      "offset": 400
+    },
+    {
+      "name": "VTXNORMS",
+      "typeFlags": 0,
+      "size": 12,
+      "count": 8,
+      "offset": 520
+    },
+    {
+      "name": "RAWWEIGHTS",
+      "typeFlags": 0,
+      "size": 12,
+      "count": 0,
+      "offset": 648
+    },
+    {
+      "name": "REFSKELT",
+      "typeFlags": 0,
+      "size": 120,
+      "count": 0,
+      "offset": 680
+    }
+  ],
+  "validation": {
+    "pointCount": 8,
+    "wedgeCount": 8,
+    "triangleCount": 4,
+    "uvChannelCount": 1,
+    "normalCount": 8,
+    "sourceColorCount": 0,
+    "boundsMinCm": [
+      -87.36915588378906,
+      -1261.54833984375,
+      -2.764071794798123e-15
+    ],
+    "boundsMaxCm": [
+      105.52120971679688,
+      1008.5247802734375,
+      1.0356001439504325e-05
+    ]
+  }
+}

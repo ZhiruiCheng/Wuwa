@@ -1,0 +1,7 @@
+{
+  "_comment": "UiItem_BuffItem：默认状态（运行时 BuffItem.Activate 按配置切换），层数文字为空。",
+  "active": {},
+  "texts": {
+    "/BuffItemCtrl/TxtBuffNum$": ""
+  }
+}

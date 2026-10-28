@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2531084628",
+    "Type": "User",
+    "GUID": "{268BF424-ADEC-43DA-8FCF-703B9B25C72E}",
+    "Language": "SFX",
+    "Hash": "{74E34EE6-49B6-240F-547B-A9A3BCC2B32E}",
+    "ObjectPath": "play_jiabeilina_am_charge",
+    "ShortName": "play_jiabeilina_am_charge",
+    "Path": "play_jiabeilina_am_charge.bnk"
+   }
+  ],
+  "FileHash": "{B84190F2-51B7-D9DC-138C-A91322655454}"
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "textureDir": "/Game/LGUI/HUD/Kuro/RoleUI/Textures",
+ "elementTable": "/Game/LGUI/HUD/RoleUI/DT_ElementInfo",
+ "energyBarTable": "/Game/LGUI/HUD/RoleUI/DT_SpecialEnergyBarInfo",
+ "roles": [
+  {
+   "asset": "/Game/Characters/Role/Common/Data/DA_Role_Changli",
+   "headIcon": "ArtSource/UI/HUD/Kuro/Textures/T_IconRoleHead150_26_UI.png",
+   "elementTag": "Element.Fusion",
+   "specialEnergyBarId": 16,
+   "skillButtons": [
+    {
+     "type": "ResonanceSkill",
+     "skillId": 1205201,
+     "icon": "ArtSource/UI/HUD/Kuro/Textures/SP_IconChangliB1.png"
+    },
+    {
+     "type": "Liberation",
+     "skillId": 1205401,
+     "icon": "ArtSource/UI/HUD/Kuro/Textures/SP_IconChangliC1.png"
+    }
+   ]
+  },
+  {
+   "asset": "/Game/Characters/Role/Common/Data/DA_Role_Jiabeilina",
+   "headIcon": "ArtSource/UI/HUD/Kuro/Textures/T_IconRoleHead150_55_UI.png",
+   "elementTag": "Element.Fusion",
+   "specialEnergyBarId": 120800,
+   "skillButtons": [
+    {
+     "type": "ResonanceSkill",
+     "skillId": 1208007,
+     "icon": "ArtSource/UI/HUD/Kuro/Textures/SP_IconJiaBeiLiNaB1.png"
+    },
+    {
+     "type": "Liberation",
+     "skillId": 1208301,
+     "icon": "ArtSource/UI/HUD/Kuro/Textures/SP_IconJiaBeiLiNaC1.png"
+    }
+   ]
+  }
+ ],
+ "elements": [
+  {
+   "tag": "Element.Glacio",
+   "id": 1,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementIce1.png",
+   "color": "41AEFBFF"
+  },
+  {
+   "tag": "Element.Fusion",
+   "id": 2,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementFire1.png",
+   "color": "F0744EFF"
+  },
+  {
+   "tag": "Element.Electro",
+   "id": 3,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementThunder1.png",
+   "color": "B46BFFFF"
+  },
+  {
+   "tag": "Element.Aero",
+   "id": 4,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementWind1.png",
+   "color": "55FFB5FF"
+  },
+  {
+   "tag": "Element.Spectro",
+   "id": 5,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementLight1.png",
+   "color": "F8E56CFF"
+  },
+  {
+   "tag": "Element.Havoc",
+   "id": 6,
+   "icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconElementDark1.png",
+   "color": "E649A6FF"
+  }
+ ],
+ "energyBars": [
+  {
+   "id": 16,
+   "prefab": "/Game/LGUI/HUD/EnergyBar/EB_16",
+   "prefabType": "Morph",
+   "barClass": "/Script/Wuwa.WuwaSpecialEnergyBarMorph",
+   "specialEnergyIndex": 1,
+   "disableKeyOnPercent": 100,
+   "slotNum": 4,
+   "effectColor": "ff5f69",
+   "pointColor": "ff5f69",
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_EnergyBarMorpChangliB.png",
+   "enableTexture": "ArtSource/UI/HUD/Kuro/Textures/T_EnergyBarMorpChangli.png",
+   "extraFloatParams": []
+  },
+  {
+   "id": 120800,
+   "prefab": "/Game/LGUI/HUD/EnergyBar/EB_120800",
+   "prefabType": "Custom",
+   "barClass": "/Script/Wuwa.WuwaSpecialEnergyBarJiaBeiLiNa",
+   "specialEnergyIndex": 1,
+   "disableKeyOnPercent": 100,
+   "slotNum": 2,
+   "effectColor": "",
+   "pointColor": "",
+   "texture": null,
+   "enableTexture": null,
+   "extraFloatParams": [
+    60.0,
+    100.0
+   ]
+  }
+ ]
+}

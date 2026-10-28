@@ -1,7 +1,7 @@
 #include "Editor/Commandlets/WuwaMoveInputSetupCommandlet.h"
 
 #if WITH_EDITOR
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaMoveInputConfig.h"
 #include "Game/NewWorld/Character/Common/Component/Input/MoveActions/WuwaMoveInputAction_ToggleWalkPreference.h"
 #include "HAL/FileManager.h"

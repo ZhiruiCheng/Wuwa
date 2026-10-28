@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "426448355",
+    "Type": "User",
+    "GUID": "{BE87ECF5-519E-4C37-9726-0FB60C91C78F}",
+    "Language": "SFX",
+    "Hash": "{95D276B2-ABC6-9085-D2CD-D5A33203F0D5}",
+    "ObjectPath": "Play_BGM_Rinascita",
+    "ShortName": "Play_BGM_Rinascita",
+    "Path": "Play_BGM_Rinascita.bnk"
+   }
+  ],
+  "FileHash": "{DD915449-B15A-AAB0-0BE5-8AE4F4DE7203}"
+ }
+}

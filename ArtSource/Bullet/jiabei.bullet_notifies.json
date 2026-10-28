@@ -1,0 +1,429 @@
+{
+ "character": "jiabei",
+ "notifies": [
+  {
+   "sourceAsset": "AM_Attack01_N_S",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01",
+   "time": 0.19968896,
+   "bulletIds": [
+    "1208001001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_N",
+   "sourceLength": 10.266666,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02",
+   "time": 0.16510475,
+   "bulletIds": [
+    "1208002001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_N",
+   "sourceLength": 10.266666,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02",
+   "time": 0.2672531,
+   "bulletIds": [
+    "1208002002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_N",
+   "sourceLength": 10.266666,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02",
+   "time": 0.5276124,
+   "bulletIds": [
+    "1208002004"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.2709603,
+   "bulletIds": [
+    "1208003012",
+    "1208003002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.36430234,
+   "bulletIds": [
+    "1208003003",
+    "1208003013"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.4674358,
+   "bulletIds": [
+    "1208003001",
+    "1208003011"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_N",
+   "sourceLength": 11.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03",
+   "time": 0.6169408,
+   "bulletIds": [
+    "1208003004",
+    "1208003014"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_N",
+   "sourceLength": 10.433333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04",
+   "time": 0.49633336,
+   "bulletIds": [
+    "1208004005"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Charge",
+   "sourceLength": 1.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Charge",
+   "time": 0.06666666,
+   "bulletIds": [
+    "1208401002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.16913898,
+   "bulletIds": [
+    "1208016003"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human01",
+   "time": 0.23508325,
+   "bulletIds": [
+    "1208016001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human02",
+   "time": 0.037026584,
+   "bulletIds": [
+    "1208016002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human02",
+   "time": 0.16772321,
+   "bulletIds": [
+    "1208016022"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human03",
+   "time": 0.5037868,
+   "bulletIds": [
+    "1208016004"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_Human03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_Human03",
+   "time": 0.5042846,
+   "bulletIds": [
+    "1208016005"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack_Loop",
+   "sourceLength": 3.3333335,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_Loop",
+   "time": 0.06253658,
+   "bulletIds": [
+    "4000000006"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 3.6333334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_End",
+   "time": 0.06191346,
+   "bulletIds": [
+    "1208008013"
+   ],
+   "requiredTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 3.6333334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_End",
+   "time": 0.06191346,
+   "bulletIds": [
+    "1208008003"
+   ],
+   "requiredTags": [],
+   "blockedTags": [
+    "Role.Jiabei.State.Transformed"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Skill01",
+   "sourceLength": 7.266667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Skill01",
+   "time": 0.369067,
+   "bulletIds": [
+    "1208101002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack01_EX",
+   "sourceLength": 4.6666665,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack01_EX",
+   "time": 0.23146334,
+   "bulletIds": [
+    "1208011001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.3148779,
+   "bulletIds": [
+    "1208012001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.47291967,
+   "bulletIds": [
+    "1208012002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02_EX",
+   "sourceLength": 7.067333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack02_EX",
+   "time": 0.6377186,
+   "bulletIds": [
+    "1208012003"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_EX",
+   "sourceLength": 12.666667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 0.30126193,
+   "bulletIds": [
+    "1208013001",
+    "1208013011"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03_EX",
+   "sourceLength": 12.666667,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 0.87754446,
+   "bulletIds": [
+    "1208013004",
+    "1208013014"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_EX",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EX",
+   "time": 0.16027513,
+   "bulletIds": [
+    "1208014001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_EX",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EX",
+   "time": 0.7290092,
+   "bulletIds": [
+    "1208014002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_EXH",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EXH",
+   "time": 0.160275,
+   "bulletIds": [
+    "1208014001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_EXH",
+   "sourceLength": 10.2,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack04_EXH",
+   "time": 0.729009,
+   "bulletIds": [
+    "1208014002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack05_1_N",
+   "sourceLength": 8.623265,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack05_1_N",
+   "time": 0.6007553,
+   "bulletIds": [
+    "1208004998",
+    "1208004995",
+    "1208004007"
+   ],
+   "requiredTags": [],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.16913898,
+   "bulletIds": [
+    "1208016019"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil01",
+   "sourceLength": 2.93,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil01",
+   "time": 0.23508325,
+   "bulletIds": [
+    "1208016010"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil02",
+   "time": 0.037026584,
+   "bulletIds": [
+    "1208016011"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil02",
+   "sourceLength": 5.1,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil02",
+   "time": 0.16772321,
+   "bulletIds": [
+    "1208016021"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil03",
+   "time": 0.49417812,
+   "bulletIds": [
+    "1208016012"
+   ]
+  },
+  {
+   "sourceAsset": "AM_HeavyAttack_evil03",
+   "sourceLength": 5.23,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_HeavyAttack_evil03",
+   "time": 0.5042846,
+   "bulletIds": [
+    "1208016005"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Burst",
+   "sourceLength": 8.733334,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Burst",
+   "time": 2.6,
+   "bulletIds": [
+    "1208302002",
+    "1208302005"
+   ]
+  },
+  {
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_start",
+   "sourceLength": 1.0333333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_start",
+   "time": 0.20617124,
+   "bulletIds": [
+    "1208007011"
+   ],
+   "requiredTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_start",
+   "sourceLength": 1.0333333,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_start",
+   "time": 0.20617124,
+   "bulletIds": [
+    "1208007001"
+   ],
+   "requiredTags": [],
+   "blockedTags": [
+    "Role.Jiabei.State.Transformed"
+   ]
+  },
+  {
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.010648463,
+   "bulletIds": [
+    "1208007022"
+   ],
+   "requiredTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "Jump_Attack/AM_Attack_Jump_next",
+   "sourceLength": 0.9,
+   "asset": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack_Jump_next",
+   "time": 0.010648463,
+   "bulletIds": [
+    "1208007002"
+   ],
+   "requiredTags": [],
+   "blockedTags": [
+    "Role.Jiabei.State.Transformed"
+   ]
+  }
+ ],
+ "notInstalled": [
+  "AM_AirAttack_Loop1",
+  "AM_Attack03_EX_Lim",
+  "AM_Attack03_N_Child",
+  "AM_Attack04_EXH_Child_photos",
+  "AM_Attack04_N_Child_photos",
+  "AM_Execute01",
+  "AM_HeavyAttack_Human03_Child_photos",
+  "AM_HeavyAttack_evil03_Child_photos",
+  "AM_QTE"
+ ]
+}

@@ -1,5 +1,5 @@
 #include "Game/NewWorld/Combat/WuwaDamage.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 
 #include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystemComponent.h"

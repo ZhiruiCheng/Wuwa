@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3356566721",
+    "Type": "User",
+    "GUID": "{C3994B10-A8FF-4FFA-AD97-2C83E8B827C6}",
+    "Language": "SFX",
+    "Hash": "{DFBDE60E-C930-8456-6AB1-ADE4949C7F31}",
+    "ObjectPath": "Play_BGM_Battle",
+    "ShortName": "Play_BGM_Battle",
+    "Path": "Play_BGM_Battle.bnk"
+   }
+  ],
+  "FileHash": "{CA12A239-5FE8-5451-F3B5-7AEF267C18A5}"
+ }
+}

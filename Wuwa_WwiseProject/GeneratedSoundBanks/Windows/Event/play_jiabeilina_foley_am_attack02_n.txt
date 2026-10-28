@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	236572069	play_jiabeilina_foley_am_attack02_n			\Default Work Unit\Wuwa_Jiabei\play_jiabeilina_foley_am_attack02_n	
+

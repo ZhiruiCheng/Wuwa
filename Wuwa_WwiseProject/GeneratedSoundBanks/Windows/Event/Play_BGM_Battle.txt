@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3356566721	Play_BGM_Battle			\Default Work Unit\Wuwa_BGM\Play_BGM_Battle	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	559241868	BGM_Battle	.cache\66\{6607E2F5-1CD3-8EAB-6948-7A118A1426B1}.wem	559241868.wem	\Containers\Default Work Unit\Wuwa_BGM\BGM_Battle	
+

@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3467848469	play_role_changli_bat__am_damagehit_fire			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_damagehit_fire	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	21311969	am_damagehit_fire_01_v2	.cache\97\{9721746A-144B-F716-4A78-1A6C2859FFB0}.wem	21311969.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_01_v2	
+	347951352	am_damagehit_fire_03_v2	.cache\0F\{0F551B6F-A00D-73D2-A337-7402F70A972D}.wem	347951352.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_03_v2	
+	357558082	am_damagehit_fire_06_v2	.cache\B1\{B1B3DEB5-F5D5-8696-AAFA-3CBED3F67C33}.wem	357558082.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_06_v2	
+	384680201	am_damagehit_fire_04_v2	.cache\3D\{3D2EB227-E9CC-03E0-2409-70DDC567FFDC}.wem	384680201.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_04_v2	
+	848469098	am_damagehit_fire_02_v2	.cache\7C\{7C1BA484-AA66-2AB9-3EB2-E619BF81B39B}.wem	848469098.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_02_v2	
+	1045089789	am_damagehit_fire_05_v2	.cache\6D\{6D9A0CA3-AEF8-1E69-691F-EBB0EC87B7A2}.wem	1045089789.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\am_damagehit_fire_534525890\am_damagehit_fire_05_v2	
+

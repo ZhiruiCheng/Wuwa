@@ -1,0 +1,20 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1293963997	role_foley_anke			\Default Work Unit\Wuwa_Changli\role_foley_anke	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1063605336	foley_variant			\Default Work Unit\foley_variant	
+
+Switch	ID	Name	Switch Group			Notes
+	712161704	run	foley_variant			
+	1133470540	fly	foley_variant			
+	1296465089	sprint	foley_variant			
+	1488596377	weak	foley_variant			
+	1724159175	weakfast	foley_variant			
+	2557423760	hardfast	foley_variant			
+	2587856914	bodyfall	foley_variant			
+	3599861390	hard	foley_variant			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	69626705	foley_anke_weak_07	.cache\7B\{7BE9EE3D-F51F-A706-CA18-0171D58BFAB9}.wem	69626705.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_537093753\foley_anke_949114063\foley_anke_weak_197124786\foley_anke_weak_07	
+	658341084	foley_anke_fly_01	.cache\0B\{0B8C261F-5706-229B-F7E4-563B3F032B56}.wem	658341084.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_537093753\foley_anke_949114063\foley_anke_fly_952120985\foley_anke_fly_01	
+

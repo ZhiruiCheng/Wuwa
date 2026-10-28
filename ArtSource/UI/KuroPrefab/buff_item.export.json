@@ -1,0 +1,36 @@
+{
+  "_comment": "buff 限时图标（原作 UiItem_BuffItem，BattleUiPool buffItemConfig = UiItem_BuffItem_Prefab；RoleBuffView / RoleUniqueBuffView 的 BuffItemContainer 用）→ /Game/LGUI/HUD/Buff/UiItem_BuffItem。动画节点上的补间 → UWuwaUiTweenGroup。",
+  "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_BuffItem",
+  "state": "buff_item.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "include": [
+    "/BuffItemCtrl/[A-Za-z]+$",
+    "/UiItem_BuffItem/Animation$",
+    "/Animation/Anim[A-Za-z]+$"
+  ],
+  "motion": true,
+  "registries": [
+    {
+      "owner": "^/UiItem_BuffItem$",
+      "entries": [
+        "/UiItem_BuffItem/BuffItemCtrl$",
+        "/BuffItemCtrl/TexBuffIcon$",
+        "/BuffItemCtrl/BarBuff$",
+        "/BuffItemCtrl/TxtBuffNum$",
+        "/BuffItemCtrl/SprBuffStateDown$",
+        "/Animation/AnimStart$",
+        "/Animation/AnimClose$",
+        "/Animation/AnimFade$",
+        "/BuffItemCtrl/SprBuffStateUp$",
+        "/BuffItemCtrl/SprBuffBg$",
+        "/BuffItemCtrl/TexBuffAttribute$",
+        "/BuffItemCtrl/SprBuffBgRound$",
+        "/BuffItemCtrl/BarBuffRound$",
+        "/Animation/AnimCombine$",
+        "/BuffItemCtrl/PnlFrameColour$"
+      ]
+    }
+  ],
+  "_comment_registries": "UWuwaBuffItem：原作 BuffItem.ComponentRegisterInfos 的 0~14（LGUIComponentsRegistry.Components 顺序）：0 BuffItemCtrl、1 图标、2 倒计时填充、3 层数、4 减益角标、5 出现、6 关闭、7 闪烁、8 增益角标、9 背景、10 属性图、11 圆形背景、12 圆形填充、13 叠层动画、14 彩色边框"
+}

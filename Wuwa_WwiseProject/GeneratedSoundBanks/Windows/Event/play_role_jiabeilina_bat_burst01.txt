@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	933786457	play_role_jiabeilina_bat_burst01			\Default Work Unit\Wuwa_Jiabei\play_role_jiabeilina_bat_burst01	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2293673011	Switch_3592615741			\Default Work Unit\Switch_3592615741	
+
+Switch	ID	Name	Switch Group			Notes
+	1655615535	Value_1635194252	Switch_3592615741			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	310234146	role_common_brust_ex	.cache\E5\{E59FB2BE-DC1B-69F0-015F-AD6CDED972CB}.wem	310234146.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_7142416\role_common_brust_ex_343535298\role_common_brust_ex	
+	870792647	Jiabeilina_AM_Burst	.cache\DC\{DC0589E6-2B95-9179-2BC4-B84661BAD253}.wem	870792647.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_7142416\role_common_brust_ex_343535298\Jiabeilina_AM_Burst	
+

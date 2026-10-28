@@ -1,0 +1,559 @@
+{
+ "table": "/Game/Characters/Role/jiabei/Data/DT_HitEffect_Jiabei",
+ "struct": "/Script/Wuwa.WuwaHitEffectInfo",
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_HitEffect",
+ "rows": [
+  {
+   "Name": "普攻1-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻2-1",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻2-2",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "普攻2-3",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "普攻3-1",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "普攻3-2",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻3-3",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻3-4",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻3_2",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "普攻4-1",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重击-人-1-2",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.1,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "重击-人-2-1",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.1,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "重击-人-2-2",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.1,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "重击-人-3-1",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "重击-人-3-11",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "重击-人-3-12",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "重击-人-3-2",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 230.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普通E-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "普通E-2",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "空中旋转攻击1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": -180.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "空中旋转攻击2",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": -180.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "下落攻击",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "变身E",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "变身E-2",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.25
+  },
+  {
+   "Name": "强化普攻1-1",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.1,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -250.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "强化普攻2-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "强化普攻2-2",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "强化普攻2-3",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "强化普攻3-1-刀光",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.4,
+   "GroundSpeed": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "强化普攻3-2-刀光",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.4,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "强化普攻3-3-刀光",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.4,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "强化普攻3-4-刀光",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.4,
+   "GroundSpeed": {
+    "X": 200.0,
+    "Y": 0.0,
+    "Z": -1000.0
+   },
+   "GroundMoveTime": 0.3
+  },
+  {
+   "Name": "强化普攻4-1",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 1.5,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": 150.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "强化普攻4-2-刀光",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.8,
+   "GroundSpeed": {
+    "X": -700.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "强化普攻5-1",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.4,
+   "GroundSpeed": {
+    "X": -400.0,
+    "Y": 0.0,
+    "Z": 400.0
+   },
+   "GroundMoveTime": 0.4
+  },
+  {
+   "Name": "强化普攻5-2",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.15,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "喷子突进",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重击第三段-爆炸击飞",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "强化重击-3-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "强化重击-3-2",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "滑铲",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 400.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "大招引爆",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -700.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "大招连续受击",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "大招最后一下",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "手枪破弱子弹",
+   "BeHitAnim": "WeaknessBreak",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.2,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "手枪破弱子弹-普通受击",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.2,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  }
+ ]
+}

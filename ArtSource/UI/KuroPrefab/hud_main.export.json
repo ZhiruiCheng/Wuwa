@@ -1,0 +1,286 @@
+{
+  "_comment": "PC_UiView_Fight_Prefab（键鼠状态）→ /Game/LGUI/HUD/HUD_Main 的导出配置。坐标 2560×1440 → 项目画布 1080 高（×0.75）。",
+  "prefab": "UI/UIResources/UiFight/Prefabs/PC/PC_UiView_Fight_Prefab",
+  "state": "pc_fight_keyboard.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": [
+    "UINiagara",
+    "/FxLight$",
+    "/NiaEffect[^/]*$"
+  ],
+  "textures": {
+    "/PnlSkillFirst/PC_FightSkill#2/.*/SprSkillIcon$": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_00.png",
+    "/PnlSkillFirst/PC_FightSkill#3/.*/SprSkillIcon$": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_01.png",
+    "/PnlSkillFirst/PC_FightSkill#4/.*/SprSkillIcon$": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_02.png",
+    "/PnlSkillFirst/PC_FightSkill#5/.*/SprSkillIcon$": "ArtSource/UI/HUD/Textures/T_HUD_Skill_Changli_05.png",
+    "/PnlSkillFirst/PC_FightSkill#2/.*/UiItem_HotKey/PnlHotkey/Icon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_KeyT_UI",
+    "/PnlSkillFirst/PC_FightSkill#3/.*/UiItem_HotKey/PnlHotkey/Icon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_KeyE_UI",
+    "/PnlSkillFirst/PC_FightSkill#4/.*/UiItem_HotKey/PnlHotkey/Icon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_KeyQ_UI",
+    "/PnlSkillFirst/PC_FightSkill#5/.*/UiItem_HotKey/PnlHotkey/Icon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_KeyR_UI",
+    "/PC_BtnControl/.*/UiItem_HotKey/PnlHotkey/Icon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_MouseMiddle_UI",
+    "/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon$": "Client/Content/Aki/UI/UIResources/Common/Image/UiIconPcBtn/T_IconPcBtn_Empty"
+  },
+  "addTexts": [
+    {
+      "under": "/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon$",
+      "name": "Number",
+      "text": "1",
+      "size": 30,
+      "color": [
+        255,
+        255,
+        255,
+        255
+      ]
+    }
+  ],
+  "buttons": [
+    "/PnlTop/(PnlOnline/)?BtnFightEnter3[^/]*$",
+    "/PnlTop/ButtonL/[^/]+$",
+    "/PnlTopRight/ButtonR/[^/]+$",
+    "/PnlTopRight/BtnFightEnter3$",
+    "/PnlTop/UiItem_MiniMap$",
+    "/PnlSkillFirst/PnlControl/PC_BtnControl$",
+    "/PnlSkillFirst/PC_FightSkill#[2-5]$",
+    "/PnlRoleHead/PC_FightRoleHead(#[12])?$",
+    "/PnlChat/BtnFightChat$",
+    "/UiItem_Mission$"
+  ],
+  "extra": [
+    {
+      "name": "HUD_NetworkPing",
+      "parent": "/PC_UiView_Fight_Prefab",
+      "anchor": [
+        1,
+        1
+      ],
+      "pivot": [
+        1,
+        0.5
+      ],
+      "pos": [
+        -60,
+        -125
+      ],
+      "size": [
+        170,
+        40
+      ],
+      "children": [
+        {
+          "name": "Signal",
+          "type": "Texture",
+          "texture": "ArtSource/UI/HUD/Textures/T_HUD_Signal_2.png",
+          "anchor": [
+            0,
+            0.5
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "pos": [
+            0,
+            0
+          ],
+          "size": [
+            30,
+            30
+          ]
+        },
+        {
+          "name": "Ping",
+          "type": "Text",
+          "text": "152ms",
+          "size": 30,
+          "color": [
+            250,
+            205,
+            80,
+            255
+          ],
+          "align": "Left",
+          "anchor": [
+            0,
+            0.5
+          ],
+          "pivot": [
+            0,
+            0.5
+          ],
+          "pos": [
+            40,
+            0
+          ],
+          "size2": [
+            130,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ClickRing",
+      "parent": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#2/FightSkill/PnlAdapt/PnlEffect",
+      "type": "Niagara",
+      "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+      "niagaraScale": 2.0,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ClickRing",
+      "parent": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#3/FightSkill/PnlAdapt/PnlEffect",
+      "type": "Niagara",
+      "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+      "niagaraScale": 2.0,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ClickRing",
+      "parent": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#4/FightSkill/PnlAdapt/PnlEffect",
+      "type": "Niagara",
+      "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+      "niagaraScale": 2.0,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ClickRing",
+      "parent": "/PC_UiView_Fight_Prefab/PnlPivot/PnlSkill/PnlSkillFirst/PC_FightSkill#5/FightSkill/PnlAdapt/PnlEffect",
+      "type": "Niagara",
+      "system": "/Game/LGUI/HUD/Kuro/Effects/NS_UI_FightSkill.NS_UI_FightSkill",
+      "niagaraScale": 2.0,
+      "anchor": [
+        0.5,
+        0.5
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        0,
+        0
+      ]
+    }
+  ],
+  "registries": [
+    {
+      "owner": "^/PC_UiView_Fight_Prefab$",
+      "entries": [
+        "/PnlRoleHead/PC_FightRoleHead$",
+        "/PnlRoleHead/PC_FightRoleHead#1$",
+        "/PnlRoleHead/PC_FightRoleHead#2$",
+        "/PnlSkill/PnlSkillFirst$",
+        "/PnlPivot/FightRoleHp$"
+      ]
+    },
+    {
+      "owner": "/PnlRoleHead/PC_FightRoleHead$",
+      "entries": [
+        "/PnlRoleHead/PC_FightRoleHead$",
+        "/PnlRoleHead/PC_FightRoleHead/FightRoleHead/TexRoleHead$",
+        "/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlCanvas/PnlHp/BarHpNor$",
+        "/PnlRoleHead/PC_FightRoleHead/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number$",
+        "/PnlRoleHead/PC_FightRoleHead/FightRoleHead/PnlEffect/PnlChoose/SprCircle$"
+      ]
+    },
+    {
+      "owner": "/PnlRoleHead/PC_FightRoleHead#1$",
+      "entries": [
+        "/PnlRoleHead/PC_FightRoleHead#1$",
+        "/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/TexRoleHead$",
+        "/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlCanvas/PnlHp/BarHpNor$",
+        "/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number$",
+        "/PnlRoleHead/PC_FightRoleHead#1/FightRoleHead/PnlEffect/PnlChoose/SprCircle$"
+      ]
+    },
+    {
+      "owner": "/PnlRoleHead/PC_FightRoleHead#2$",
+      "entries": [
+        "/PnlRoleHead/PC_FightRoleHead#2$",
+        "/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/TexRoleHead$",
+        "/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlCanvas/PnlHp/BarHpNor$",
+        "/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/UiItem_KeyCombine/UiItem_KeyItem/TexKeyIcon/Number$",
+        "/PnlRoleHead/PC_FightRoleHead#2/FightRoleHead/PnlEffect/PnlChoose/SprCircle$"
+      ]
+    },
+    {
+      "owner": "/PnlSkill/PnlSkillFirst$",
+      "entries": [
+        "/PC_FightSkill#3/FightSkill/PnlAdapt/SprSkillIcon$",
+        "/PC_FightSkill#5/FightSkill/PnlAdapt/SprSkillIcon$",
+        "/PC_FightSkill#2/FightSkill/PnlAdapt/PnlEffect/ClickRing$",
+        "/PC_FightSkill#3/FightSkill/PnlAdapt/PnlEffect/ClickRing$",
+        "/PC_FightSkill#4/FightSkill/PnlAdapt/PnlEffect/ClickRing$",
+        "/PC_FightSkill#5/FightSkill/PnlAdapt/PnlEffect/ClickRing$"
+      ]
+    },
+    {
+      "owner": "/PnlPivot/FightRoleHp$",
+      "entries": [
+        "/FightConcertoState/TexStateIcon$",
+        "/FightRoleHp/PnlEnergyBar$",
+        "/FightRoleHp/PnlHp/TxtLv$",
+        "/PnlHpAdjust/PnlHp/BarHpNor$",
+        "/PnlHpAdjust/TxtHpNum$",
+        "/TxtHpNum/PnlMask/TxtNumMask$",
+        "/FightConcertoState/BarState$",
+        "/PnlLayout/PnlBuffTop$",
+        "/PnlBuffList/PnlBuff$"
+      ]
+    }
+  ],
+  "_registryNote": "注册表下标只能往后加。根：0~2 队伍槽、3 技能栏、4 角色状态；队伍槽：根、头像、血条、数字、选中圆环；技能栏：E 图标、R 图标；角色状态：元素图标、能量条容器、Lv、血条、血量数字、遮罩数字。",
+  "_comment_clickRing": "ClickRing：技能按钮按下时的点击圈 = 原作 FightSkill 注册表 10 号 UINiagara（NS_Fx_LGUI_FightSkill，NiagaraScale 2），由 UWuwaUINiagara 播放重建的 NS_UI_FightSkill。",
+  "_comment_buff": "FightRoleHp 注册表 7 = PnlBuffTop（原作 RoleUniqueBuffView 的根：CueType 24 专属 buff）、8 = PnlBuffList/PnlBuff（原作 RoleBuffView 的 buff 容器）。注意：2026-10-18 起的导出工具会把 BarHpNor 导成裁剪容器 + WuwaUiSlicedFill（Boss 血条那套），HUD 血条代码没跟着改之前不要整体重导；这次只在旧布局上补了注册表。"
+}

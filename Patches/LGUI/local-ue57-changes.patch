@@ -1,0 +1,150 @@
+diff --git a/Source/LGUI/LGUI.Build.cs b/Source/LGUI/LGUI.Build.cs
+index 9cfe61f..cec2e77 100644
+--- a/Source/LGUI/LGUI.Build.cs
++++ b/Source/LGUI/LGUI.Build.cs
+@@ -6,6 +6,10 @@ public class LGUI : ModuleRules
+ {
+ 	public LGUI(ReadOnlyTargetRules Target) : base(Target)
+ 	{
++		// Wuwa 本地改动：不让 UnrealSharp 给 LGUI 生成 C# 绑定（UIEventTriggerComponent 的委托属性和接口函数同名，生成的 C# 编译不过）。
++		// UnrealSharp 只读 UHT 清单里模块自己的 PublicDefines（不含依赖传递来的），所以必须用 PublicDefinitions；
++		// 依赖 LGUI 的模块（如 Wuwa）在清单里不会带上它，C# 绑定照常生成；C++ 里这个宏没人用。
++		PublicDefinitions.Add("SkipGlueGeneration=1");
+         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+         bEnableUndefinedIdentifierWarnings = false;
+         CppStandard = CppStandardVersion.Cpp20;
+diff --git a/Source/LGUI/Private/Core/LGUIFontData_BaseObject.cpp b/Source/LGUI/Private/Core/LGUIFontData_BaseObject.cpp
+index ee24bd0..d5b6c7d 100644
+--- a/Source/LGUI/Private/Core/LGUIFontData_BaseObject.cpp
++++ b/Source/LGUI/Private/Core/LGUIFontData_BaseObject.cpp
+@@ -1,4 +1,4 @@
+-﻿// Copyright 2019-Present LexLiu. All Rights Reserved.
++// Copyright 2019-Present LexLiu. All Rights Reserved.
+ 
+ #include "Core/LGUIFontData_BaseObject.h"
+ #include "LGUI.h"
+@@ -8,7 +8,17 @@
+ 
+ ULGUIFontData_BaseObject* ULGUIFontData_BaseObject::GetDefaultFont()
+ {
+-	static auto defaultFont = LoadObject<ULGUIFontData_BaseObject>(NULL, TEXT("/LGUI/DefaultSDFFont"));
++	// Wuwa local patch: the cached raw pointer must keep the font alive. Without AddToRoot the font is garbage-collected
++	// once no UIText references it (e.g. after a map change), the static pointer dangles, and the next UIText crashes in GetTextureToCreateGeometry.
++	static ULGUIFontData_BaseObject* defaultFont = []()
++	{
++		ULGUIFontData_BaseObject* Loaded = LoadObject<ULGUIFontData_BaseObject>(NULL, TEXT("/LGUI/DefaultSDFFont"));
++		if (Loaded)
++		{
++			Loaded->AddToRoot();
++		}
++		return Loaded;
++	}();
+ 	if (defaultFont == nullptr)
+ 	{
+ 		auto errMsg = FText::Format(LOCTEXT("MissingDefaultContent", "{0} Load default font error! Missing some content of LGUI plugin, reinstall this plugin may fix the issue.")
+diff --git a/Source/LGUI/Private/Core/LGUISpriteData.cpp b/Source/LGUI/Private/Core/LGUISpriteData.cpp
+index f41a3f7..354bcbf 100644
+--- a/Source/LGUI/Private/Core/LGUISpriteData.cpp
++++ b/Source/LGUI/Private/Core/LGUISpriteData.cpp
+@@ -1,4 +1,4 @@
+-﻿// Copyright 2019-Present LexLiu. All Rights Reserved.
++// Copyright 2019-Present LexLiu. All Rights Reserved.
+ 
+ #include "Core/LGUISpriteData.h"
+ #include "LGUI.h"
+@@ -586,7 +586,16 @@ bool ULGUISpriteData::SupportReadPixel()const
+ 
+ ULGUISpriteData* ULGUISpriteData::GetDefaultWhiteSolid()
+ {
+-	static auto defaultWhiteSolid = LoadObject<ULGUISpriteData>(NULL, TEXT("/LGUI/LGUIPreset_WhiteSolid"));
++	// Wuwa local patch: keep the cached default sprite alive (see ULGUIFontData_BaseObject::GetDefaultFont).
++	static ULGUISpriteData* defaultWhiteSolid = []()
++	{
++		ULGUISpriteData* Loaded = LoadObject<ULGUISpriteData>(NULL, TEXT("/LGUI/LGUIPreset_WhiteSolid"));
++		if (Loaded)
++		{
++			Loaded->AddToRoot();
++		}
++		return Loaded;
++	}();
+ 	if (defaultWhiteSolid == nullptr)
+ 	{
+ 		auto errMsg = FText::Format(LOCTEXT("MissingDefaultContent", "{0} Load default sprite error! Missing some content of LGUI plugin, reinstall this plugin may fix the issue.")
+diff --git a/Source/LGUIComponentVisualizer/LGUIComponentVisualizer.Build.cs b/Source/LGUIComponentVisualizer/LGUIComponentVisualizer.Build.cs
+index 442f01c..021ec75 100644
+--- a/Source/LGUIComponentVisualizer/LGUIComponentVisualizer.Build.cs
++++ b/Source/LGUIComponentVisualizer/LGUIComponentVisualizer.Build.cs
+@@ -1,4 +1,4 @@
+-﻿// Copyright 2019-Present LexLiu. All Rights Reserved.
++// Copyright 2019-Present LexLiu. All Rights Reserved.
+ 
+ using UnrealBuildTool;
+ 
+@@ -6,6 +6,10 @@ public class LGUIComponentVisualizer : ModuleRules
+ {
+ 	public LGUIComponentVisualizer(ReadOnlyTargetRules Target) : base(Target)
+     {
++		// Wuwa 本地改动：不让 UnrealSharp 给 LGUI 生成 C# 绑定（UIEventTriggerComponent 的委托属性和接口函数同名，生成的 C# 编译不过）。
++		// UnrealSharp 只读 UHT 清单里模块自己的 PublicDefines（不含依赖传递来的），所以必须用 PublicDefinitions；
++		// 依赖 LGUI 的模块（如 Wuwa）在清单里不会带上它，C# 绑定照常生成；C++ 里这个宏没人用。
++		PublicDefinitions.Add("SkipGlueGeneration=1");
+         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+         CppStandard = CppStandardVersion.Cpp20;
+ 
+diff --git a/Source/LGUIEditor/LGUIEditor.Build.cs b/Source/LGUIEditor/LGUIEditor.Build.cs
+index f313d28..4212c69 100644
+--- a/Source/LGUIEditor/LGUIEditor.Build.cs
++++ b/Source/LGUIEditor/LGUIEditor.Build.cs
+@@ -1,4 +1,4 @@
+-﻿// Copyright 2019-Present LexLiu. All Rights Reserved.
++// Copyright 2019-Present LexLiu. All Rights Reserved.
+ 
+ using UnrealBuildTool;
+ 
+@@ -6,6 +6,10 @@ public class LGUIEditor : ModuleRules
+ {
+ 	public LGUIEditor(ReadOnlyTargetRules Target) : base(Target)
+     {
++		// Wuwa 本地改动：不让 UnrealSharp 给 LGUI 生成 C# 绑定（UIEventTriggerComponent 的委托属性和接口函数同名，生成的 C# 编译不过）。
++		// UnrealSharp 只读 UHT 清单里模块自己的 PublicDefines（不含依赖传递来的），所以必须用 PublicDefinitions；
++		// 依赖 LGUI 的模块（如 Wuwa）在清单里不会带上它，C# 绑定照常生成；C++ 里这个宏没人用。
++		PublicDefinitions.Add("SkipGlueGeneration=1");
+         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+         CppStandard = CppStandardVersion.Cpp20;
+ 
+diff --git a/Source/LGUIK2Nodes/LGUIK2Nodes.Build.cs b/Source/LGUIK2Nodes/LGUIK2Nodes.Build.cs
+index bf86e0a..f1413b6 100644
+--- a/Source/LGUIK2Nodes/LGUIK2Nodes.Build.cs
++++ b/Source/LGUIK2Nodes/LGUIK2Nodes.Build.cs
+@@ -1,4 +1,4 @@
+-﻿// Copyright 2019-Present LexLiu. All Rights Reserved.
++// Copyright 2019-Present LexLiu. All Rights Reserved.
+ 
+ using UnrealBuildTool;
+ 
+@@ -6,6 +6,10 @@ public class LGUIK2Nodes : ModuleRules
+ {
+ 	public LGUIK2Nodes(ReadOnlyTargetRules Target) : base(Target)
+     {
++		// Wuwa 本地改动：不让 UnrealSharp 给 LGUI 生成 C# 绑定（UIEventTriggerComponent 的委托属性和接口函数同名，生成的 C# 编译不过）。
++		// UnrealSharp 只读 UHT 清单里模块自己的 PublicDefines（不含依赖传递来的），所以必须用 PublicDefinitions；
++		// 依赖 LGUI 的模块（如 Wuwa）在清单里不会带上它，C# 绑定照常生成；C++ 里这个宏没人用。
++		PublicDefinitions.Add("SkipGlueGeneration=1");
+         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+         CppStandard = CppStandardVersion.Cpp20;
+ 
+diff --git a/Source/LTween/LTween.Build.cs b/Source/LTween/LTween.Build.cs
+index 7b98921..1b56d1a 100644
+--- a/Source/LTween/LTween.Build.cs
++++ b/Source/LTween/LTween.Build.cs
+@@ -6,6 +6,10 @@ public class LTween : ModuleRules
+ {
+ 	public LTween(ReadOnlyTargetRules Target) : base(Target)
+     {
++		// Wuwa 本地改动：不让 UnrealSharp 给 LGUI 生成 C# 绑定（UIEventTriggerComponent 的委托属性和接口函数同名，生成的 C# 编译不过）。
++		// UnrealSharp 只读 UHT 清单里模块自己的 PublicDefines（不含依赖传递来的），所以必须用 PublicDefinitions；
++		// 依赖 LGUI 的模块（如 Wuwa）在清单里不会带上它，C# 绑定照常生成；C++ 里这个宏没人用。
++		PublicDefinitions.Add("SkipGlueGeneration=1");
+         PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+         CppStandard = CppStandardVersion.Cpp20;
+ 

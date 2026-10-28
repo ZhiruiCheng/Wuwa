@@ -206,13 +206,13 @@ int32 UWuwaCameraSetupCommandlet::Main(const FString& Params)
 	}
 	if (bCreatedSkillMode)
 	{
-		SkillMode->Settings.ArmLength = 250.f;
-		SkillMode->Settings.FieldOfView = 75.f;
-		SkillMode->Settings.PivotOffset.Z = 50.;
-		SkillMode->Settings.bAllowRotationInput = false;
-		SkillMode->Settings.bAllowZoomInput = false;
-		SkillMode->Settings.bUseUserZoom = false;
-		SkillMode->Settings.BlendTime = .25f;
+		SkillMode->Settings.Arm.ArmLength = 250.f;
+		SkillMode->Settings.Offset.FieldOfView = 75.f;
+		SkillMode->Settings.Offset.PivotOffset.Z = 50.;
+		SkillMode->Settings.Rotation.bAllowRotationInput = false;
+		SkillMode->Settings.Zoom.bAllowZoomInput = false;
+		SkillMode->Settings.Zoom.bUseUserZoom = false;
+		SkillMode->Settings.Blend.BlendTime = .25f;
 		SkillMode->Priority = 100;
 	}
 	if (!ManagerBlueprint)

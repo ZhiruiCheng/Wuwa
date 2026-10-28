@@ -2,7 +2,7 @@
 
 #if WITH_EDITOR
 #include "EnhancedActionKeyMapping.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "HAL/FileManager.h"
 #include "InputAction.h"

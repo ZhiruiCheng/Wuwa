@@ -1,0 +1,8 @@
+{
+  "_comment": "PC_UiView_PlotsD 的字幕块 → /Game/LGUI/HUD/Tips_Subtitle（DT_UiViews 的 SubtitleTips 行，Float 层）。",
+  "prefab": "UI/UIResources/UiPlot/Prefabs/PC/PC_UiView_PlotsD",
+  "state": "pc_plotsd_subtitle.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": ["UINiagara"]
+}

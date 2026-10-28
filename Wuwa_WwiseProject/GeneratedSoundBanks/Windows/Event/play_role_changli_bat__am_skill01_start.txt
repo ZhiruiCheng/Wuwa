@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	132097895	play_role_changli_bat__am_skill01_start			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_skill01_start	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	26054185	role_changli_bat__am_skill01_start_v2	.cache\89\{89E157CD-44D7-3662-2F7C-7F840E8E7B97}.wem	26054185.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\role_changli_bat__am_skill01_start_v2	
+

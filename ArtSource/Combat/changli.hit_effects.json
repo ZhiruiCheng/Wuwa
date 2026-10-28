@@ -1,0 +1,439 @@
+{
+ "table": "/Game/Characters/Role/changli/Data/DT_HitEffect_Changli",
+ "struct": "/Script/Wuwa.WuwaHitEffectInfo",
+ "source": "Character/Role/FemaleXL/ChangLi/Data/DT_HitEffect",
+ "rows": [
+  {
+   "Name": "普攻1-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻1-2",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻2-1",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻2-2",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻3-1",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 250.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "普攻3-2",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 250.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "普攻4-左",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "普攻4-右",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "普攻41-1",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 400.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "普攻41-引爆剑痕",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "空中普攻1-1",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "空中普攻2-1",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "空中普攻3-1",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "空中普攻4-1",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -250.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "空中普攻5-1",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 750.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "空中普攻5-1-地面派生",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 750.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "空中普攻5-2",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 750.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "空中普攻5-2-地面派生",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 650.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "空中普攻6-1",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.15
+  },
+  {
+   "Name": "空中普攻6-2（引爆剑痕）",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "轻右测试",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "轻左测试",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重右测试",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重左测试",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "往回",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": -180.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重击-突刺段",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "重击-上挑段",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 800.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "技能-上挑段",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 400.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "技能-下砸段",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "技能-羽毛砸地",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "技能-向下拖拽",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -3500.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "开花-连续段",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -50.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "开花-终结",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -200.0,
+    "Y": 0.0,
+    "Z": 900.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "迅刃破弱子弹1",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.2,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "迅刃破弱子弹-击破",
+   "BeHitAnim": "WeaknessBreak",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.2,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "迅刃破弱子弹-普通受击",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.2,
+   "GroundSpeed": {
+    "X": -150.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "GroundMoveTime": 0.2
+  }
+ ]
+}

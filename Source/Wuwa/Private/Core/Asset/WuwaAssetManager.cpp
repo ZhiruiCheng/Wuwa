@@ -3,7 +3,7 @@
 
 #include "Core/Asset/WuwaAssetManager.h"
 
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 
 UWuwaAssetManager& UWuwaAssetManager::Get()
 {

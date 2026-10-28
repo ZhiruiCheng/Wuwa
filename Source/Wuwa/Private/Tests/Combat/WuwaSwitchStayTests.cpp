@@ -10,7 +10,7 @@
 #include "Engine/World.h"
 #include "EngineUtils.h"
 #include "GameplayTagContainer.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputRouterComponent.h"

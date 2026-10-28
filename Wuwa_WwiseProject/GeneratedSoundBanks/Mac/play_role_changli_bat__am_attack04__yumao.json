@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "478445693",
+    "Type": "User",
+    "GUID": "{F516D6A5-3D80-4BC5-A8BC-58C8841664B6}",
+    "Language": "SFX",
+    "Hash": "{A7EE8B52-C674-1B23-AD1F-1D6DB2220055}",
+    "ObjectPath": "play_role_changli_bat__am_attack04__yumao",
+    "ShortName": "play_role_changli_bat__am_attack04__yumao",
+    "Path": "play_role_changli_bat__am_attack04__yumao.bnk"
+   }
+  ],
+  "FileHash": "{F179132F-62E7-3C75-A1B2-8D79AE51F8F0}"
+ }
+}

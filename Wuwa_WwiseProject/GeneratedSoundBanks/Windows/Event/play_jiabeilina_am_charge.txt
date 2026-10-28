@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2531084628	play_jiabeilina_am_charge			\Default Work Unit\Wuwa_Jiabei\play_jiabeilina_am_charge	
+

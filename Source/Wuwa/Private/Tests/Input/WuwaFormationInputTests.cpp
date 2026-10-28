@@ -10,7 +10,7 @@
 #include "InputCoreTypes.h"
 #include "InputMappingContext.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Formation/WuwaFormationInputHandler.h"

@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2791934394	play_vo_jiabeilina_atk_atk02			\Default Work Unit\Wuwa_Jiabei\play_vo_jiabeilina_atk_atk02	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	244245095	zh_vo_jiabeilina_atk_atk02_02_tone	.cache\67\{67E8C78F-CEF2-0A62-7BA6-51E42A41C313}.wem	244245095.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_atk_atk_940641094\zh_vo_jiabeilina_atk_atk02_02_tone	
+

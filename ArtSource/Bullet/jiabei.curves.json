@@ -1,0 +1,213 @@
+{
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_ReBulletDataMain 时间膨胀变化曲线",
+ "curves": [
+  {
+   "path": "/Game/Characters/Role/jiabei/Data/TimeScale/TimeStopCurve_Attack4",
+   "source": "Character/Role/FemaleXL/Jiabeilina/Data/TimeStopCurve_Attack4",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": -3.2474063e-08,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.3,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.010879355,
+     "leave": 0.010879355
+    },
+    {
+     "time": 0.6,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.003114385,
+     "leave": 0.003114385
+    },
+    {
+     "time": 1.0,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Role/jiabei/Data/TimeScale/GunShoot",
+   "source": "Character/Role/FemaleXL/Jiabeilina/Data/TimeScale/GunShoot",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 2.4269202e-08,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.1,
+     "value": 0.99999994,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.5,
+     "value": 0.7499998,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.6,
+     "value": 2.4269202e-08,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Role/jiabei/Data/TimeScale/TimeStopCurve_HAttack2-1",
+   "source": "Character/Role/FemaleXL/Jiabeilina/Data/TimeStopCurve_HAttack2-1",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Constant",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.05,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.3,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.8,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.003114385,
+     "leave": 0.003114385
+    },
+    {
+     "time": 1.0,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Role/jiabei/Data/TimeScale/SlashFinish",
+   "source": "Character/Role/FemaleXL/Jiabeilina/Data/TimeScale/SlashFinish",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.0667,
+     "value": 0.99999994,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.8,
+     "value": 0.99999994,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 1.0,
+     "value": 7.986272e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.024642613,
+     "leave": 0.024642613
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/Characters/Role/jiabei/Data/TimeScale/SlashFinish1",
+   "source": "Character/Role/FemaleXL/Jiabeilina/Data/TimeScale/SlashFinish1",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.2,
+     "value": 0.7000001,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.2,
+     "value": 0.29999998,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.5,
+     "value": -0.025000038,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -2.0108902,
+     "leave": -2.0108902
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

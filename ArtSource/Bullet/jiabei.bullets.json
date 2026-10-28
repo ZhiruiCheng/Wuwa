@@ -1,0 +1,5985 @@
+{
+ "table": "/Game/Characters/Role/jiabei/Data/DT_BulletInfo_Jiabei",
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_ReBulletDataMain",
+ "rows": [
+  {
+   "Name": "1208001001",
+   "BulletName": "普攻1-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 100.0,
+    "Y": 100.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 1400.0,
+    "Z": 500.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208001001,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻1-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.3,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208001002",
+   "BulletName": "普攻1-1-刀光",
+   "Shape": "Box",
+   "Size": {
+    "X": 160.0,
+    "Y": 205.0,
+    "Z": 80.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -30.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 160.0,
+    "Y": -20.0,
+    "Z": 110.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208001002,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻1-1-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003303
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208001003",
+   "BulletName": "开枪小型顿帧子弹-无结算",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 50.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 10.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 1,
+   "BeHitEffect": "",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208002001",
+   "BulletName": "普攻2-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 100.0,
+    "Y": 100.0,
+    "Z": 140.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 1400.0,
+    "Z": 500.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208002001,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻2-1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208002002",
+   "BulletName": "普攻2-2",
+   "Shape": "Box",
+   "Size": {
+    "X": 100.0,
+    "Y": 100.0,
+    "Z": 140.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 1400.0,
+    "Z": 500.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208002002,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻2-2",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208002004",
+   "BulletName": "普攻2-3",
+   "Shape": "Box",
+   "Size": {
+    "X": 130.0,
+    "Y": 175.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 1400.0,
+    "Z": 500.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208002004,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻2-3",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003304,
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003001",
+   "BulletName": "普攻3-1",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003001,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003002",
+   "BulletName": "普攻3-2",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003002,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-2",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003003",
+   "BulletName": "普攻3-3",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003003,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-3",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003004",
+   "BulletName": "普攻3-4",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003004,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-4",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003011",
+   "BulletName": "普攻3-1-闪反",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003011,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003302
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003012",
+   "BulletName": "普攻3-2-闪反",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003012,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-2",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003303
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003013",
+   "BulletName": "普攻3-3-闪反",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003013,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-3",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208003014",
+   "BulletName": "普攻3-4-闪反",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 450.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208003014,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3-4",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003303
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004005",
+   "BulletName": "普攻4-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 160.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 700.0,
+    "Y": -10.0,
+    "Z": 160.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208004005,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻4-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/TimeStopCurve_Attack4.TimeStopCurve_Attack4"
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003325
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004099",
+   "BulletName": "普攻4-环境交互子弹",
+   "Shape": "Box",
+   "Size": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 50.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208011001",
+   "BulletName": "强化普攻1-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 160.0,
+    "Y": 205.0,
+    "Z": 150.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -30.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 160.0,
+    "Y": -20.0,
+    "Z": 110.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208011001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻1-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003310
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208012001",
+   "BulletName": "强化普攻2-1",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 80.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208012001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻2-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208012002",
+   "BulletName": "强化普攻2-2",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 80.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208012002,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻2-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208012003",
+   "BulletName": "强化普攻2-3",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 80.0,
+    "Y": 0.0,
+    "Z": 130.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208012003,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻2-3",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003309
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208013001",
+   "BulletName": "强化普攻3-1(3hit数子弹)",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 530.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 20.0,
+    "Z": 200.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208013001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻3-1-刀光",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208013004",
+   "BulletName": "强化普攻3-2(单段大伤害)",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 1000.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 200.0,
+    "Y": -10.0,
+    "Z": 300.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208013004,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻3-4-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/GunShoot.GunShoot"
+   },
+   "VictimTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003330,
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208013011",
+   "BulletName": "强化普攻3-1-闪反(3hit数子弹)",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 530.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208013011,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻3-1-刀光",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208013014",
+   "BulletName": "强化普攻3-2-闪反(单段大伤害)",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 1000.0,
+    "Y": 0.0,
+    "Z": 300.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 200.0,
+    "Y": -10.0,
+    "Z": 300.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208013014,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻3-4-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.167,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/GunShoot.GunShoot"
+   },
+   "VictimTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003330,
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208014001",
+   "BulletName": "强化普攻4-1（3段hit）",
+   "Shape": "Box",
+   "Size": {
+    "X": 400.0,
+    "Y": 120.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 150.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "FollowBone",
+   "BoneName": "Root",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.4,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.4,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.12,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208014001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻4-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208014002",
+   "BulletName": "强化普攻4-2(单段大伤害)",
+   "Shape": "Box",
+   "Size": {
+    "X": 300.0,
+    "Y": 205.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -30.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 250.0,
+    "Y": -20.0,
+    "Z": 190.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208014002,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻4-2-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 1.0,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003327
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208004996",
+     "Delay": 0.0,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208004007",
+   "BulletName": "EX普攻5-第一段",
+   "Shape": "Box",
+   "Size": {
+    "X": 600.0,
+    "Y": 600.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 300.0,
+    "Y": -10.0,
+    "Z": 160.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.6,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208004007,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻4-2-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003327
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208004997",
+     "Delay": 0.5,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208004997",
+   "BulletName": "EX普攻5-第二段",
+   "Shape": "Box",
+   "Size": {
+    "X": 600.0,
+    "Y": 600.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208004997,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻5-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003330,
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004999",
+   "BulletName": "EX普攻5-判断用子弹-（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 230.0,
+    "Y": 60.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 230.0,
+    "Y": -10.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004001",
+   "BulletName": "EX普攻5-刀光停顿-仅时停（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 230.0,
+    "Y": 160.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 230.0,
+    "Y": -10.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻4-1-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.5,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004995",
+   "BulletName": "EX普攻5-刀光停顿裂缝版-仅时停（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 600.0,
+    "Y": 600.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 300.0,
+    "Y": -10.0,
+    "Z": 160.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.5,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004990",
+   "BulletName": "刀光停顿-共鸣技能（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 630.0,
+    "Y": 360.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 630.0,
+    "Y": -10.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻4-1-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.5,
+    "Value": 0.4,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.5,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004998",
+   "BulletName": "EX普攻5-裂缝效果（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 127.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 10.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208004996",
+   "BulletName": "判断是否处于裂缝范围内（无伤害）",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 200.0,
+    "Y": 30.0,
+    "Z": -70.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": true,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": true,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208007001",
+   "BulletName": "普通E-飞踢伤害",
+   "Shape": "Box",
+   "Size": {
+    "X": 80.0,
+    "Y": 120.0,
+    "Z": 100.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "FollowBone",
+   "BoneName": "Root",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.4,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208007001,
+   "HitCamp": 4,
+   "BeHitEffect": "普通E-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003310
+   ],
+   "HitEventToAttacker": "(TagName=\"Role.Jiabei.Event.SkillBranch\")",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208007002",
+   "BulletName": "普通E-踢人后延迟生效爆炸",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "Weapon07",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.25,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 3,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 1.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 1.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208007012",
+     "Delay": 9999.0,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208007012",
+   "BulletName": "普通E-踢人反弹伤害-1208007002",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "Weapon07",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 5.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208007002,
+   "HitCamp": 4,
+   "BeHitEffect": "普通E-2",
+   "HitDirection": 3,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 1.0,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003310
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208007011",
+   "BulletName": "普通E-飞踢伤害-变身后",
+   "Shape": "Box",
+   "Size": {
+    "X": 80.0,
+    "Y": 120.0,
+    "Z": 100.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "FollowBone",
+   "BoneName": "Root",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.4,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208007011,
+   "HitCamp": 4,
+   "BeHitEffect": "普通E-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003310
+   ],
+   "HitEventToAttacker": "(TagName=\"Role.Jiabei.Event.SkillBranch\")",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208007022",
+   "BulletName": "普通E-踢人后延迟生效爆炸-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "Weapon07",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.25,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 3,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 1.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 1.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208007032",
+     "Delay": 9999.0,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208007032",
+   "BulletName": "普通E-踢人反弹伤害-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 230.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "Weapon07",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 5.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208007032,
+   "HitCamp": 4,
+   "BeHitEffect": "普通E-2",
+   "HitDirection": 3,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 1.0,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003310
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208008001",
+   "BulletName": "空中持续旋转攻击-1（每0.15s一颗）",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -500.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208008001,
+   "HitCamp": 4,
+   "BeHitEffect": "空中旋转攻击1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003304,
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208008003",
+   "BulletName": "空中下落攻击",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 300.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 30.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.25,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208008003,
+   "HitCamp": 4,
+   "BeHitEffect": "下落攻击",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003320
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208008002",
+   "BulletName": "下落攻击子弹2-无结算",
+   "Shape": "Box",
+   "Size": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 3000.0,
+   "Duration": 1.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208008011",
+   "BulletName": "空中持续旋转攻击-1（每0.15s一颗）-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -500.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208008011,
+   "HitCamp": 4,
+   "BeHitEffect": "空中旋转攻击1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003304,
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208008013",
+   "BulletName": "空中下落攻击-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 300.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 30.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.25,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208008013,
+   "HitCamp": 4,
+   "BeHitEffect": "下落攻击",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003330,
+    1208003307
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208999003",
+   "BulletName": "空中连射弹地面子弹粒子效果（无伤害）",
+   "Shape": "Box",
+   "Size": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": -100.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "FollowBone",
+   "BoneName": "Root",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "通用冲击击退2",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016003",
+   "BulletName": "重击-人-1-1-突进",
+   "Shape": "Box",
+   "Size": {
+    "X": 190.0,
+    "Y": 105.0,
+    "Z": 60.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -30.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 190.0,
+    "Y": -20.0,
+    "Z": 90.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016003,
+   "HitCamp": 4,
+   "BeHitEffect": "喷子突进",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016001",
+   "BulletName": "重击-人-1-2",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 300.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 180.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016001,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-1-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003320
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016002",
+   "BulletName": "重击-人-2-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 170.0,
+    "Z": 140.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 140.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016002,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-2-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/TimeStopCurve_HAttack2-1.TimeStopCurve_HAttack2-1"
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003302
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016022",
+   "BulletName": "重击-人-2-2-1208016022",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 170.0,
+    "Z": 140.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 140.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016002,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-2-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305,
+    1208003302
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016007",
+   "BulletName": "重击-人-3-1（3hit）",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 400.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.5,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.15,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208016007,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-1",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003305
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016008",
+   "BulletName": "重击-人-3-2",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016008,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-2",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003304
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016004",
+   "BulletName": "重击-人-3-飞行子弹（无伤害）",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 130.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": -10.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016005",
+   "BulletName": "重击-第三枪开枪顿帧+震屏",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 170.0,
+    "Z": 140.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 140.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.08,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.08,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016006",
+   "BulletName": "重击-人-3-命中后父子弹-（无伤害）",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.65,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 0,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻3_3",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208016007",
+     "Delay": 0.0,
+     "Count": 1,
+     "Interval": 0.0
+    },
+    {
+     "BulletId": "1208016008",
+     "Delay": 0.45,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208016019",
+   "BulletName": "重击-魔-1-1-突进",
+   "Shape": "Box",
+   "Size": {
+    "X": 190.0,
+    "Y": 105.0,
+    "Z": 60.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -30.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 190.0,
+    "Y": -20.0,
+    "Z": 90.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016019,
+   "HitCamp": 4,
+   "BeHitEffect": "喷子突进",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003310
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016010",
+   "BulletName": "重击-魔-1-2",
+   "Shape": "Box",
+   "Size": {
+    "X": 380.0,
+    "Y": 300.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 320.0,
+    "Y": 0.0,
+    "Z": 170.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016010,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-1-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003310
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016011",
+   "BulletName": "重击-魔-2-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 170.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016011,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-2-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/TimeStopCurve_HAttack2-1.TimeStopCurve_HAttack2-1"
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003309
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016021",
+   "BulletName": "重击-魔-2-2-1208016021",
+   "Shape": "Box",
+   "Size": {
+    "X": 800.0,
+    "Y": 170.0,
+    "Z": 160.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 800.0,
+    "Y": 0.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016011,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-2-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003309
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208016012",
+   "BulletName": "重击-魔-3-羽毛攻击-总控（无伤害）",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 100.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 1200.0,
+    "Z": 500.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.33,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.1,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208016013",
+     "Delay": 0.0,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208016013",
+   "BulletName": "重击-魔-3-多段hit",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 500.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.0,
+   "CollisionDelay": 0.0,
+   "CollisionDuration": 0.6,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.15,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208016013,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003308
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208016009",
+     "Delay": 0.55,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208016009",
+   "BulletName": "重击-魔-3-单段爆炸",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 100.0,
+   "Duration": 1.65,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208016009,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003309
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208302002",
+   "BulletName": "大招起爆",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 700.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 3.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208302002,
+   "HitCamp": 4,
+   "BeHitEffect": "大招引爆",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.05,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "(GameplayTags=((TagName=\"Role.Jiabei.State.Transformed\")))",
+   "Children": [
+    {
+     "BulletId": "1208302003",
+     "Delay": 0.3,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_04.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_04",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_01.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_01",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Decal_Burst_01.DA_Fx_Jiabei_Burst_Bullet_Group_Decal_Burst_01",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Post_Burst_Ex01.DA_Fx_Jiabei_Burst_Bullet_Group_Post_Burst_Ex01",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Light_R1b_Boom_Ex01.DA_Fx_Jiabei_Burst_Bullet_Group_Light_R1b_Boom_Ex01",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_09.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_09",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_02.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.29997
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_H_01_03_1.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_H_01_03_1",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.29997
+    }
+   ]
+  },
+  {
+   "Name": "1208302003",
+   "BulletName": "大招-多段hit",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 2.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 10,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.14,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208302003,
+   "HitCamp": 4,
+   "BeHitEffect": "大招连续受击",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208302013",
+     "Delay": 1.4,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+     },
+     "Delay": 0.0
+    }
+   ]
+  },
+  {
+   "Name": "1208302013",
+   "BulletName": "大招-多段hit-最后一下",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208302003,
+   "HitCamp": 4,
+   "BeHitEffect": "大招最后一下",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+     },
+     "Delay": 0.0
+    }
+   ]
+  },
+  {
+   "Name": "1208302005",
+   "BulletName": "大招起爆-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 700.0,
+    "Y": 0.0,
+    "Z": 500.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 3.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208302002,
+   "HitCamp": 4,
+   "BeHitEffect": "大招引爆",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.05,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "(GameplayTags=((TagName=\"Role.Jiabei.State.Transformed\")))",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208302006",
+     "Delay": 0.3,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_08.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_08",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_01.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_01",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Decal_Burst_02.DA_Fx_Jiabei_Burst_Bullet_Group_Decal_Burst_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Post_Burst_Ex02.DA_Fx_Jiabei_Burst_Bullet_Group_Post_Burst_Ex02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Light_R1b_Boom_Ex02.DA_Fx_Jiabei_Burst_Bullet_Group_Light_R1b_Boom_Ex02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_09.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_09",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.0
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_02_1.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1b_Boom_02_1",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.29997
+    },
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_H_01_03_1.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_H_01_03_1",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "Delay": 0.29997
+    }
+   ]
+  },
+  {
+   "Name": "1208302006",
+   "BulletName": "大招-多段hit-变身后",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 2.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 10,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.14,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208302003,
+   "HitCamp": 4,
+   "BeHitEffect": "大招连续受击",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.01,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208302016",
+     "Delay": 1.4,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+     },
+     "Delay": 0.0
+    }
+   ]
+  },
+  {
+   "Name": "1208302016",
+   "BulletName": "大招-多段hit变身后-最后一下",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 740.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": true,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208302003,
+   "HitCamp": 4,
+   "BeHitEffect": "大招最后一下",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 1.0,
+    "Priority": 3,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": [
+    {
+     "Model": "/Game/Effects/Models/Jiabei/Burst_Bullet/DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02.DA_Fx_Jiabei_Burst_Bullet_Group_Jiabei_R1a_Shouji_02",
+     "Location": {
+      "X": 0,
+      "Y": 0,
+      "Z": 0
+     },
+     "Rotation": {
+      "Pitch": 0,
+      "Yaw": 0,
+      "Roll": 0
+     },
+     "Scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+     },
+     "Delay": 0.0
+    }
+   ]
+  },
+  {
+   "Name": "1208101001",
+   "BulletName": "退出变身",
+   "Shape": "Box",
+   "Size": {
+    "X": 380.0,
+    "Y": 300.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 320.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208101001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻1-1-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208101002",
+   "BulletName": "变身-1",
+   "Shape": "Box",
+   "Size": {
+    "X": 400.0,
+    "Y": 400.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 160.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208101002,
+   "HitCamp": 4,
+   "BeHitEffect": "变身E",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.2333,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/SlashFinish.SlashFinish"
+   },
+   "VictimTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": "/Game/Characters/Role/jiabei/Data/TimeScale/SlashFinish1.SlashFinish1"
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208101003",
+     "Delay": 0.8,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208101003",
+   "BulletName": "变身-2",
+   "Shape": "Box",
+   "Size": {
+    "X": 400.0,
+    "Y": 400.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 100.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.1,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208101003,
+   "HitCamp": 4,
+   "BeHitEffect": "变身E-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208401001",
+   "BulletName": "QTE-1开枪",
+   "Shape": "Box",
+   "Size": {
+    "X": 380.0,
+    "Y": 300.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 320.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.3,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208401001,
+   "HitCamp": 4,
+   "BeHitEffect": "强化普攻1-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.1,
+    "Value": 0.2,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 1.0,
+    "Priority": 2,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [
+    1208003320
+   ],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208401002",
+   "BulletName": "滑铲伤害子弹",
+   "Shape": "Box",
+   "Size": {
+    "X": 400.0,
+    "Y": 100.0,
+    "Z": 150.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 100.0,
+    "Y": 0.0,
+    "Z": 150.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "FollowBone",
+   "BoneName": "Root",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.15,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208066666,
+   "HitCamp": 4,
+   "BeHitEffect": "滑铲",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.06,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208998002",
+   "BulletName": "吸收能量子弹-种子-无结算",
+   "Shape": "Sphere",
+   "Size": {
+    "X": 50.0,
+    "Y": 5.0,
+    "Z": 5.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 10.0,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": 1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 11,
+   "BeHitEffect": "",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208017007",
+   "BulletName": "刀光停顿-共鸣技能-无结算",
+   "Shape": "Box",
+   "Size": {
+    "X": 630.0,
+    "Y": 360.0,
+    "Z": 120.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 630.0,
+    "Y": -10.0,
+    "Z": 120.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": true,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 0,
+   "HitCamp": 4,
+   "BeHitEffect": "普攻4-1-刀光",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.2,
+    "Value": 0.1,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.3,
+    "Value": 0.01,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208007003",
+   "BulletName": "退场技1-1（3hit）",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "SkillTarget",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.0,
+   "CollisionDelay": 0.0,
+   "CollisionDuration": 0.6,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 3,
+   "TotalHitLimit": -1,
+   "HitInterval": 0.15,
+   "bIntervalPerVictim": true,
+   "DamageId": 1208007003,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-1",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.067,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208007004",
+     "Delay": 0.55,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208007004",
+   "BulletName": "退场技1-2",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 1.65,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": 0.2,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1208007004,
+   "HitCamp": 4,
+   "BeHitEffect": "重击-人-3-2",
+   "HitDirection": 2,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.033,
+    "Value": 0.05,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  },
+  {
+   "Name": "1208901001",
+   "BulletName": "手枪破弱子弹",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 1500.0,
+    "Y": 0.0,
+    "Z": 1200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -150.0
+   },
+   "BornStandard": "Attacker",
+   "BornOffset": {
+    "X": 600.0,
+    "Y": 0.0,
+    "Z": 150.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1000009904,
+   "HitCamp": 4,
+   "BeHitEffect": "手枪破弱子弹",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [
+    {
+     "BulletId": "1208901002",
+     "Delay": 0.0,
+     "Count": 1,
+     "Interval": 0.0
+    }
+   ],
+   "Effects": []
+  },
+  {
+   "Name": "1208901002",
+   "BulletName": "手枪破弱子弹-普通受击",
+   "Shape": "Cylinder",
+   "Size": {
+    "X": 1500.0,
+    "Y": 0.0,
+    "Z": 1200.0
+   },
+   "CenterOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": -150.0
+   },
+   "BornStandard": "Parent",
+   "BornOffset": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "BornRotation": {
+    "Pitch": 0.0,
+    "Yaw": 0.0,
+    "Roll": 0.0
+   },
+   "BornDistLimit": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "FollowType": "Fixed",
+   "BoneName": "",
+   "bStickGround": false,
+   "StickGroundTraceLength": 1000.0,
+   "Duration": 0.2,
+   "CollisionDelay": -1.0,
+   "CollisionDuration": -1.0,
+   "bDestroyOnSkillEnd": false,
+   "VictimCount": -1,
+   "HitsPerVictim": 1,
+   "TotalHitLimit": -1,
+   "HitInterval": -1.0,
+   "bIntervalPerVictim": false,
+   "DamageId": 1000009904,
+   "HitCamp": 4,
+   "BeHitEffect": "手枪破弱子弹-普通受击",
+   "HitDirection": 0,
+   "bContinuousCollision": false,
+   "AttackerTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "VictimTimeScale": {
+    "Duration": 0.0,
+    "Value": 0.0,
+    "Priority": 1,
+    "Curve": ""
+   },
+   "bTimeScaleIgnoreAttacker": false,
+   "EnergyBuffIds": [],
+   "HitEventToAttacker": "()",
+   "SpawnRequiredTags": "()",
+   "SpawnBlockedTags": "()",
+   "Children": [],
+   "Effects": []
+  }
+ ],
+ "skipped": [
+  {
+   "id": "1208401003",
+   "name": "滑铲极限闪避判断",
+   "reason": "follow type 2"
+  },
+  {
+   "id": "1208998001",
+   "name": "声骸用特效残留-无结算",
+   "reason": "born standard 7"
+  }
+ ]
+}

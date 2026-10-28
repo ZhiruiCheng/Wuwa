@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3455987961",
+    "Type": "Event",
+    "GUID": "{2ECB5485-F38D-4B2A-A9F4-F23769D3EB7D}",
+    "Language": "SFX",
+    "Hash": "{285E9EAC-0208-EE38-7E9F-3D7BA127E9C7}",
+    "ObjectPath": "play_jiabeilina_am_attack02_n",
+    "ShortName": "play_jiabeilina_am_attack02_n",
+    "Path": "Event/play_jiabeilina_am_attack02_n.bnk",
+    "Media": [
+     {
+      "Id": "258557331",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack02_N_02.wav",
+      "Path": "Media/258557331.wem",
+      "CachePath": "A9/{A99B926B-FFC9-4679-0478-0D19F8900E48}.wem"
+     },
+     {
+      "Id": "287955960",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack02_N_03.wav",
+      "Path": "Media/287955960.wem",
+      "CachePath": "3E/{3EA3C6B6-1C81-795B-3A9A-C5D09BC5BCD6}.wem"
+     },
+     {
+      "Id": "866857513",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack02_N_01.wav",
+      "Path": "Media/866857513.wem",
+      "CachePath": "DD/{DD544228-6FCE-C9D4-1DFD-CC9190D480C7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3455987961",
+      "Name": "play_jiabeilina_am_attack02_n",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_attack02_n",
+      "GUID": "{2ECB5485-F38D-4B2A-A9F4-F23769D3EB7D}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.85",
+      "DurationMax": "2.042875",
+      "MediaRefs": [
+       {
+        "Id": "258557331"
+       },
+       {
+        "Id": "287955960"
+       },
+       {
+        "Id": "866857513"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{03F731BE-BA48-945F-E583-BBE5095ABA31}"
+ }
+}

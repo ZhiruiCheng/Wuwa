@@ -1,0 +1,329 @@
+{
+ "character": "changli",
+ "notifies": [
+  {
+   "sourceAsset": "AM_Attack01",
+   "sourceLength": 3.033333,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+   "time": 0.19999999,
+   "bulletIds": [
+    "1205001000"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack01",
+   "sourceLength": 3.033333,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+   "time": 0.29999998,
+   "bulletIds": [
+    "1205001001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack01",
+   "sourceLength": 3.033333,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+   "time": 0.3307706,
+   "bulletIds": [
+    "1205001002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02",
+   "sourceLength": 4.1666665,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack02",
+   "time": 0.22792743,
+   "bulletIds": [
+    "1205002001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack02",
+   "sourceLength": 4.1666665,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack02",
+   "time": 0.2963642,
+   "bulletIds": [
+    "1205002002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack03",
+   "time": 0.18047243,
+   "bulletIds": [
+    "1205003001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack03",
+   "time": 0.34395656,
+   "bulletIds": [
+    "1205003002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack03",
+   "sourceLength": 4.5,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack03",
+   "time": 0.48714232,
+   "bulletIds": [
+    "1205003003"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04",
+   "sourceLength": 6.033333,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack04",
+   "time": 0.23058493,
+   "bulletIds": [
+    "1205004001"
+   ],
+   "requiredTags": [],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.39680982,
+   "bulletIds": [
+    "1205005011"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.4333333,
+   "bulletIds": [
+    "1205005001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.59999996,
+   "bulletIds": [
+    "1205005002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.67038685,
+   "bulletIds": [
+    "1205005003"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Attack04_1",
+   "sourceLength": 5.5666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "time": 0.7387963,
+   "bulletIds": [
+    "1205005004"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AttackL",
+   "sourceLength": 2.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "time": 0.23620544,
+   "bulletIds": [
+    "1205006001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AttackL",
+   "sourceLength": 2.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "time": 0.58854264,
+   "bulletIds": [
+    "1205006002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack01",
+   "sourceLength": 1.6,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack01",
+   "time": 0.21868858,
+   "bulletIds": [
+    "1205001100"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack02",
+   "sourceLength": 1.8333334,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "time": 0.27813685,
+   "bulletIds": [
+    "1205002100"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack02",
+   "sourceLength": 1.8333334,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "time": 0.43312734,
+   "bulletIds": [
+    "1205002101"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.26666665,
+   "bulletIds": [
+    "1205003100"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.39999998,
+   "bulletIds": [
+    "1205003101"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack03",
+   "sourceLength": 1.8,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.5333333,
+   "bulletIds": [
+    "1205003102"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack04",
+   "sourceLength": 2.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.10616106,
+   "bulletIds": [
+    "1205004100"
+   ],
+   "requiredTags": [],
+   "blockedTags": [],
+   "skillTarget": "HasTarget"
+  },
+  {
+   "sourceAsset": "AM_AirAttack05",
+   "sourceLength": 1.6666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "time": 0.16666666,
+   "bulletIds": [
+    "1205005110"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack05",
+   "sourceLength": 1.6666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "time": 0.21373527,
+   "bulletIds": [
+    "1205005100"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack05",
+   "sourceLength": 1.6666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "time": 0.3503538,
+   "bulletIds": [
+    "1205005101"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack_Loop",
+   "sourceLength": 0.5555555,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_Loop",
+   "time": 0.0,
+   "bulletIds": [
+    "1205201009"
+   ]
+  },
+  {
+   "sourceAsset": "AM_AirAttack_End",
+   "sourceLength": 4.0,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_End",
+   "time": 0.072193995,
+   "bulletIds": [
+    "1205006100"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Skill01_Start",
+   "sourceLength": 1.1666666,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.16666666,
+   "bulletIds": [
+    "1205201001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Skill01_Loop",
+   "sourceLength": 0.6666667,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Loop",
+   "time": 0.004247436,
+   "bulletIds": [
+    "1205201010"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Skill01_End",
+   "sourceLength": 4.766667,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_End",
+   "time": 0.06666667,
+   "bulletIds": [
+    "1205201002"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Burst01",
+   "sourceLength": 7.23,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 2.7208748,
+   "bulletIds": [
+    "1205401001"
+   ]
+  },
+  {
+   "sourceAsset": "AM_Burst02",
+   "sourceLength": 5.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "time": 0.149054,
+   "bulletIds": [
+    "1205007001"
+   ],
+   "requiredTags": [],
+   "blockedTags": []
+  },
+  {
+   "sourceAsset": "AM_Burst02",
+   "sourceLength": 5.2,
+   "asset": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "time": 0.8666666,
+   "bulletIds": [
+    "1205007002"
+   ],
+   "requiredTags": [],
+   "blockedTags": []
+  }
+ ],
+ "notInstalled": [
+  "AM_AirAttack05_branch",
+  "AM_Attack03_LimitDodge",
+  "AM_Attack04_LimitDodge",
+  "AM_Burst01_Rogue",
+  "AM_Execute01",
+  "AM_Land_Roll_Attack01_2",
+  "AM_Summon"
+ ]
+}

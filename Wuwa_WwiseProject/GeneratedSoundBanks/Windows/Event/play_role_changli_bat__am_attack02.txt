@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2925620222	play_role_changli_bat__am_attack02			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_attack02	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	174046253	role_changli_bat__am_attack_firelayer_03	.cache\58\{583A0174-001B-23D8-74E7-83F1160CE8BC}.wem	174046253.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\role_changli_bat__am_attack_firelayer_574808118\role_changli_bat__am_attack_firelayer_03	
+	273445969	role_changli_bat__am_attack_firelayer_05	.cache\71\{71487888-9F5D-6025-D613-0602760F96D6}.wem	273445969.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\role_changli_bat__am_attack_firelayer_574808118\role_changli_bat__am_attack_firelayer_05	
+	431584537	role_changli_bat__am_attack_firelayer_06	.cache\6D\{6DC33E97-19FA-AB1B-63C0-7DA9CC9DF99E}.wem	431584537.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_62364225\role_changli_bat__am_attack_firelayer_574808118\role_changli_bat__am_attack_firelayer_06	
+

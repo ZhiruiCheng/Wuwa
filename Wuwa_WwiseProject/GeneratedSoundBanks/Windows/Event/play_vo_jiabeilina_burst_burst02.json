@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "177821566",
+    "Type": "Event",
+    "GUID": "{B58329C2-0F12-4A7B-8ADD-E1307AC2285C}",
+    "Language": "SFX",
+    "Hash": "{CCB91A3A-0801-0977-BB40-03A2F02A5B47}",
+    "ObjectPath": "play_vo_jiabeilina_burst_burst02",
+    "ShortName": "play_vo_jiabeilina_burst_burst02",
+    "Path": "Event/play_vo_jiabeilina_burst_burst02.bnk",
+    "Media": [
+     {
+      "Id": "187015198",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_burst_burst02_02_word.wav",
+      "Path": "Media/187015198.wem",
+      "CachePath": "9C/{9CBCFC6C-EACC-9CAA-52AD-D6FA3EC47730}.wem"
+     },
+     {
+      "Id": "590756460",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_burst_burst02_01_word.wav",
+      "Path": "Media/590756460.wem",
+      "CachePath": "4B/{4B0F086B-C858-EB78-1F61-FB85AEDEBF03}.wem"
+     },
+     {
+      "Id": "663857785",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_burst_burst02_04_word.wav",
+      "Path": "Media/663857785.wem",
+      "CachePath": "2A/{2AAEB7FB-BB8B-4B9A-F052-FCBBAD92D677}.wem"
+     },
+     {
+      "Id": "740873018",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_burst_burst02_03_word.wav",
+      "Path": "Media/740873018.wem",
+      "CachePath": "85/{85917FED-D290-4D68-49D6-F9E21B8BFFED}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "177821566",
+      "Name": "play_vo_jiabeilina_burst_burst02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_burst_burst02",
+      "GUID": "{B58329C2-0F12-4A7B-8ADD-E1307AC2285C}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "4.949521",
+      "DurationMax": "6.7113957",
+      "MediaRefs": [
+       {
+        "Id": "187015198"
+       },
+       {
+        "Id": "590756460"
+       },
+       {
+        "Id": "663857785"
+       },
+       {
+        "Id": "740873018"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9A1143D9-3F3F-841C-C97C-8D81F8C56798}"
+ }
+}

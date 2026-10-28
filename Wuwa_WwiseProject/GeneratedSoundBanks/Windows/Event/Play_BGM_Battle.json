@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3356566721",
+    "Type": "Event",
+    "GUID": "{6893B915-D33F-44DE-BAE0-D8847B5FA0AA}",
+    "Language": "SFX",
+    "Hash": "{D0E8380C-4C13-AD22-8CF3-89AEEBE6DB0D}",
+    "ObjectPath": "Play_BGM_Battle",
+    "ShortName": "Play_BGM_Battle",
+    "Path": "Event/Play_BGM_Battle.bnk",
+    "Media": [
+     {
+      "Id": "559241868",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_BGM\\battle_beauty_common_bpm125.wav",
+      "Path": "Media/559241868.wem",
+      "CachePath": "66/{6607E2F5-1CD3-8EAB-6948-7A118A1426B1}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3356566721",
+      "Name": "Play_BGM_Battle",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_BGM\\Play_BGM_Battle",
+      "GUID": "{6893B915-D33F-44DE-BAE0-D8847B5FA0AA}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "559241868"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3F1D2169-B1B6-D407-62B1-C5680A6E5B39}"
+ }
+}

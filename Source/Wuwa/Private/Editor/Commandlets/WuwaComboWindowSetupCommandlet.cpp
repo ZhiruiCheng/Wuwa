@@ -7,7 +7,7 @@
 #include "Engine/DataTable.h"
 #include "Game/Animation/Notifies/WuwaAnimNotifyState_AddLooseTag.h"
 #include "Game/Animation/Notifies/WuwaAnimNotify_SkillReadyEndBridge.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaInputCommandConfig.h"
 #include "Game/NewWorld/Character/Common/Component/Skill/WuwaSkillTypes.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"

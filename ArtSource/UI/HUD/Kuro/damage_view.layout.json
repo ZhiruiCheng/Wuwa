@@ -1,0 +1,3031 @@
+{
+ "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_DamageView_Prefab",
+ "nodes": [
+  {
+   "name": "UiItem_DamageView_Prefab",
+   "path": "/UiItem_DamageView_Prefab",
+   "hidden": false,
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     0.0,
+     0.0
+    ],
+    "pos": [
+     985.0887451171875,
+     432.0154724121094
+    ],
+    "size": [
+     228.59197998046875,
+     89.68342208862305
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    3,
+    1,
+    4,
+    2,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "DamageNum",
+   "path": "/UiItem_DamageView_Prefab/DamageNum",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     52.4999885559082
+    ],
+    "size": [
+     175.38269805908203,
+     48.0
+    ]
+   },
+   "scale": [
+    0.800000011920929,
+    0.800000011920929
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "CriticalItem",
+   "path": "/UiItem_DamageView_Prefab/DamageNum/CriticalItem",
+   "hidden": false,
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Num",
+   "path": "/UiItem_DamageView_Prefab/DamageNum/Num",
+   "hidden": false,
+   "parent": 1,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     64.81270408630371,
+     -37.5
+    ],
+    "size": [
+     143.25749588012695,
+     75.0
+    ]
+   },
+   "scale": [
+    1.399999976158142,
+    1.399999976158142
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "5070",
+    "size": 45.0,
+    "hAlign": "Left",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   },
+   "textAnimations": [
+    {
+     "name": "UIEffectTextAnimation_Pos1",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 1.5,
+      "offset": 0.0,
+      "flipDirection": false,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_PositionProperty",
+       "easeType": "CurveFloat",
+       "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_DamageView/Curve_UISpriteComponent_0",
+       "position": [
+        0.0,
+        22.5,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Pos2",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 100.0,
+      "offset": 0.0,
+      "flipDirection": false,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_PositionProperty",
+       "easeType": "InSine",
+       "position": [
+        0.0,
+        -75.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Alpha1",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 1.0,
+      "offset": 0.0,
+      "flipDirection": true,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_AlphaProperty",
+       "easeType": "InOutSine"
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Pos3",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 2.0,
+      "offset": 0.0,
+      "flipDirection": false,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_PositionProperty",
+       "easeType": "CurveFloat",
+       "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_DamageView/Curve_UISpriteComponent_1",
+       "position": [
+        0.0,
+        15.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Pos4",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 100.0,
+      "offset": 0.0,
+      "flipDirection": false,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_PositionProperty",
+       "easeType": "InOutQuart",
+       "position": [
+        0.0,
+        75.0,
+        0.0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Scale1",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 2.0,
+      "offset": 0.0,
+      "flipDirection": true,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_ScaleProperty",
+       "easeType": "InOutSine",
+       "scale": [
+        1.2999999523162842,
+        1.2999999523162842,
+        1.2999999523162842
+       ]
+      }
+     ]
+    },
+    {
+     "name": "UIEffectTextAnimation_Scale2",
+     "selector": {
+      "class": "UIEffectTextAnimation_RangeSelector",
+      "range": 2.0,
+      "offset": 0.0,
+      "flipDirection": true,
+      "start": 0.0,
+      "end": 1.0
+     },
+     "properties": [
+      {
+       "class": "UIEffectTextAnimation_ScaleProperty",
+       "easeType": "InOutSine",
+       "scale": [
+        3.0,
+        3.0,
+        3.0
+       ]
+      }
+     ]
+    }
+   ],
+   "outlineEffect": {
+    "color": [
+     177,
+     177,
+     177,
+     179
+    ],
+    "size": [
+     2.0,
+     2.0
+    ]
+   }
+  },
+  {
+   "name": "Text2",
+   "path": "/UiItem_DamageView_Prefab/DamageNum/Text2",
+   "hidden": true,
+   "parent": 1,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -12.274589538574219,
+     -8.553027391433716
+    ],
+    "size": [
+     89.25750160217285,
+     135.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "text": {
+    "text": "",
+    "size": 45.0,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   },
+   "outlineEffect": {
+    "color": [
+     0,
+     0,
+     0,
+     179
+    ],
+    "size": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "name": "AnimOwnDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimOwnDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.699999988079071,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_A"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutSine",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "None",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Scale1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.25,
+      1.25,
+      1.25,
+      0.0
+     ],
+     "to": [
+      1.25,
+      1.25,
+      1.25,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween1"
+    }
+   ]
+  },
+  {
+   "name": "AnimOwnCriticalDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimOwnCriticalDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "None",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_A"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      3.0,
+      3.0,
+      3.0,
+      0.0
+     ],
+     "to": [
+      1.100000023841858,
+      1.100000023841858,
+      1.100000023841858,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.05000000074505806,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.699999988079071,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos2",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.20000000298023224,
+     "startDelay": 0.05000000074505806,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.25,
+      1.25,
+      1.25,
+      0.0
+     ],
+     "to": [
+      1.25,
+      1.25,
+      1.25,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween1"
+    }
+   ]
+  },
+  {
+   "name": "AnimMonsterDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimMonsterDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.6000000238418579,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_A"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      0.800000011920929,
+      0.800000011920929,
+      0.800000011920929,
+      0.0
+     ],
+     "to": [
+      0.800000011920929,
+      0.800000011920929,
+      0.800000011920929,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Scale1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.25,
+      1.25,
+      1.25,
+      0.0
+     ],
+     "to": [
+      1.25,
+      1.25,
+      1.25,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween1"
+    }
+   ]
+  },
+  {
+   "name": "AnimMonsterCriticalDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimMonsterCriticalDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutSine",
+     "duration": 0.6000000238418579,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_MonsterCriticalDamageSequence/Curve_UIItemComponent_Color_A"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.100000023841858,
+      1.100000023841858,
+      1.100000023841858,
+      0.0
+     ],
+     "to": [
+      1.100000023841858,
+      1.100000023841858,
+      1.100000023841858,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.44999998807907104,
+     "startDelay": 0.699999988079071,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.699999988079071,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Scale2",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_6"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.25,
+      1.25,
+      1.25,
+      0.0
+     ],
+     "to": [
+      1.25,
+      1.25,
+      1.25,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween"
+    }
+   ]
+  },
+  {
+   "name": "AnimBuff",
+   "path": "/UiItem_DamageView_Prefab/AnimBuff",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 4,
+       "component": "UITextComponent",
+       "action": "AnchorOffsetY",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_DamageNum_Location_Y"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 4,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_UIItemComponent_Color_A"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 4,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_UIItemComponent_Scale"
+    }
+   ]
+  },
+  {
+   "name": "AnimSpecialDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimSpecialDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InExpo",
+     "duration": 0.6000000238418579,
+     "startDelay": 0.6000000238418579,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.149999976158142,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_ASP"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.699999988079071,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos3",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.399999976158142,
+      1.399999976158142,
+      1.399999976158142,
+      0.0
+     ],
+     "to": [
+      1.399999976158142,
+      1.399999976158142,
+      1.399999976158142,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.6000000238418579,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Scale2",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.25,
+      1.25,
+      1.25,
+      0.0
+     ],
+     "to": [
+      1.25,
+      1.25,
+      1.25,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween"
+    }
+   ]
+  },
+  {
+   "name": "AnimSpecialCriticalDamage",
+   "path": "/UiItem_DamageView_Prefab/AnimSpecialCriticalDamage",
+   "hidden": true,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.100000023841858,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_ASP"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      2.0,
+      2.0,
+      2.0,
+      0.0
+     ],
+     "to": [
+      2.0,
+      2.0,
+      2.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UITextComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.05000000074505806,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InQuart",
+     "duration": 0.550000011920929,
+     "startDelay": 0.6000000238418579,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      },
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos1",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Pos4",
+       "action": "SelectorOffset",
+       "useTweenValue": false,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Alpha1",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.699999988079071,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 3,
+       "component": "UIEffectTextAnimation_Scale2",
+       "action": "SelectorOffset",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_6"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      3.0,
+      3.0,
+      3.0,
+      0.0
+     ],
+     "to": [
+      3.0,
+      3.0,
+      3.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween"
+    }
+   ]
+  }
+ ],
+ "curves": [
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_DamageView/Curve_UISpriteComponent_0",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.11388779,
+     "value": 0.9964572,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.3152306,
+     "value": -0.058891136,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.40890914,
+     "value": 0.013816638,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.4854739,
+     "value": -0.004463196,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_DamageView/Curve_UISpriteComponent_1",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": -0.007974856,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.059761535,
+     "value": 0.19514999,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.14356318,
+     "value": -0.380672,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.27589864,
+     "value": 0.05254563,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.3436246,
+     "value": -0.030969795,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.3933116,
+     "value": 5.8852123e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_DamageNum_Location_Y",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.1920929e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.0016801798,
+     "leave": 0.0016801798
+    },
+    {
+     "time": 0.9,
+     "value": 100.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 420.4081,
+     "leave": 420.4081
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_A",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0030430667,
+     "leave": -0.0030430667
+    },
+    {
+     "time": 0.6190977,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.88261646,
+     "value": 4.140888e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Scale",
+   "keys": [
+    {
+     "time": 0.07667269,
+     "value": 1.5051693,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.16215289,
+     "value": 2.5692873,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.032817386,
+     "leave": -0.032817386
+    },
+    {
+     "time": 0.22786114,
+     "value": 1.5002077,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -7.1248264,
+     "leave": -7.1248264
+    },
+    {
+     "time": 0.49630803,
+     "value": 1.5034957,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": -0.36363637
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_MonsterCriticalDamageSequence/Curve_UIItemComponent_Color_A",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 1.5000002,
+     "leave": 0.0
+    },
+    {
+     "time": 0.7,
+     "value": 1.0000001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.8575428,
+     "value": 0.099999994,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.00044999988,
+     "leave": -5.0000002e-05
+    },
+    {
+     "time": 0.9408762,
+     "value": 3.7252903e-08,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -5.0000002e-05,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_MonsterCriticalDamageSequence/Curve_Num_Scale",
+   "keys": [
+    {
+     "time": 0.05918504,
+     "value": 1.3702533,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.07612651,
+     "value": 2.6296282,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 1934.3308,
+     "leave": 1934.3308
+    },
+    {
+     "time": 0.10956275,
+     "value": 1.867538,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.29343605,
+     "value": 1.6729202,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_DamageNum_Location_Y",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.75,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 17.5,
+     "leave": 17.5
+    },
+    {
+     "time": 1.0,
+     "value": 17.5,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_UIItemComponent_Color_A",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.2,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 1.6666667,
+     "leave": 1.6666667
+    },
+    {
+     "time": 0.6,
+     "value": 1.0000001,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": -0.00035714285
+    },
+    {
+     "time": 0.9166667,
+     "value": 0.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.00035714285,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_BuffSequence/Curve_UIItemComponent_Scale",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0000001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 7.7297773,
+     "leave": 7.7297773
+    },
+    {
+     "time": 0.3,
+     "value": 1.4999999,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.43749988,
+     "leave": 0.43749988
+    },
+    {
+     "time": 0.8,
+     "value": 1.35,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_OwnDamageSequence/Curve_UIItemComponent_Color_ASP",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0030430667,
+     "leave": -0.0030430667
+    },
+    {
+     "time": 0.8,
+     "value": 0.9999999,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 1.0,
+     "value": -1.0087028e-07,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

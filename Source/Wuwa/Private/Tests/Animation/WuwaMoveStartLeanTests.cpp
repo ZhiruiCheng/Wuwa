@@ -19,7 +19,7 @@
 #include "Engine/Engine.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "Game/Input/WuwaInputTypes.h"
 

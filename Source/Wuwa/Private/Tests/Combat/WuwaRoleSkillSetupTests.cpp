@@ -18,7 +18,7 @@
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputRouterComponent.h"
 #include "Game/Input/WuwaInputTypes.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaSkillMontageAbility.h"
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"

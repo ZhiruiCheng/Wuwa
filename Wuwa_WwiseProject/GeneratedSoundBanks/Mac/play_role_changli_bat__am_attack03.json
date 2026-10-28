@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2925620223",
+    "Type": "User",
+    "GUID": "{14543DF0-1B88-42A1-B6D9-47138B8CD902}",
+    "Language": "SFX",
+    "Hash": "{6BF3FFBF-36B7-B8E2-E427-6A5CF121E7F2}",
+    "ObjectPath": "play_role_changli_bat__am_attack03",
+    "ShortName": "play_role_changli_bat__am_attack03",
+    "Path": "play_role_changli_bat__am_attack03.bnk"
+   }
+  ],
+  "FileHash": "{7EF6454C-B4E9-C699-4EA8-48EAE2AE9E59}"
+ }
+}

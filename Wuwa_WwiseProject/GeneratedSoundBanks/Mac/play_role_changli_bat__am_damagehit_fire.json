@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3467848469",
+    "Type": "User",
+    "GUID": "{03D27420-F17B-4395-96E3-AD64D9562662}",
+    "Language": "SFX",
+    "Hash": "{94EBF065-3ABA-0796-93B5-7632C3AEA6D0}",
+    "ObjectPath": "play_role_changli_bat__am_damagehit_fire",
+    "ShortName": "play_role_changli_bat__am_damagehit_fire",
+    "Path": "play_role_changli_bat__am_damagehit_fire.bnk"
+   }
+  ],
+  "FileHash": "{2761AA7B-30A0-55BE-9F5C-51C641E17AFD}"
+ }
+}

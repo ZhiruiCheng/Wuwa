@@ -8,7 +8,7 @@
 #include "EnhancedActionKeyMapping.h"
 #include "InputAction.h"
 #include "InputMappingContext.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "Game/Input/WuwaInputTypes.h"

@@ -2,7 +2,8 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
-#include "Game/Camera/WuwaCameraTypes.h"
+#include "Game/Camera/CameraData/WuwaCameraSettings.h"
+#include "Game/Camera/CameraData/WuwaCameraFrame.h"
 #include "WuwaCameraRuntimeBridge.generated.h"
 
 /** Reflection boundary only. C# owns policy; the manager owns this UObject. */

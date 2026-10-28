@@ -1,0 +1,37 @@
+{
+ "source": "Character/Role/FemaleXL/ChangLi/Data/DT_ReBulletDataMain 时间膨胀变化曲线",
+ "curves": [
+  {
+   "path": "/Game/Characters/Role/changli/Data/TimeScale/Time",
+   "source": "Character/Role/FemaleM/Yangyang/Data/Curves/Time",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 1.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.12835217,
+     "leave": 0.0
+    },
+    {
+     "time": 0.8,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.99999994,
+     "leave": -0.99999994
+    },
+    {
+     "time": 1.0,
+     "value": 4.180602e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 5.999333
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

@@ -1,0 +1,3195 @@
+{
+ "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_BossState_Prefab",
+ "nodes": [
+  {
+   "name": "UiItem_BossState_Prefab",
+   "path": "/UiItem_BossState_Prefab",
+   "hidden": false,
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     1.0
+    ],
+    "max": [
+     0.5,
+     1.0
+    ],
+    "pos": [
+     3.75,
+     -81.0
+    ],
+    "size": [
+     675.0,
+     127.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    20,
+    21,
+    9,
+    6,
+    7,
+    10,
+    11,
+    14,
+    27,
+    28
+   ]
+  },
+  {
+   "name": "PnlOffset",
+   "path": "/UiItem_BossState_Prefab/PnlOffset",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     570.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBossBar",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar",
+   "hidden": false,
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     1.875,
+     19.687485694885254
+    ],
+    "size": [
+     0.0,
+     24.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    223,
+    218,
+    255
+   ]
+  },
+  {
+   "name": "SprHpBg",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/SprHpBg",
+   "hidden": false,
+   "parent": 2,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     -7.5,
+     0.0
+    ],
+    "size": [
+     585.0,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBg.png",
+   "slice": [
+    17,
+    17,
+    0,
+    0
+   ],
+   "fill": {
+    "method": "Horizontal",
+    "origin": 0,
+    "flip": false,
+    "amount": 1.0,
+    "sliced": true,
+    "width": 585.0
+   }
+  },
+  {
+   "name": "PnlHp",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp",
+   "hidden": false,
+   "parent": 2,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.375,
+     0.0
+    ],
+    "size": [
+     2.25,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlHpBar",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar",
+   "hidden": false,
+   "parent": 4,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "clip": true
+  },
+  {
+   "name": "PnlCanvs",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar/PnlCanvs",
+   "hidden": false,
+   "parent": 5,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "clip": true
+  },
+  {
+   "name": "BarReduceHp",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar/PnlCanvs/BarReduceHp",
+   "hidden": false,
+   "parent": 6,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.7179712560609914e-05
+    ],
+    "size": [
+     572.25,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    0.9000000357627869
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    217,
+    196,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBossBar.png",
+   "slice": [
+    8,
+    8,
+    0,
+    0
+   ],
+   "fill": {
+    "method": "Horizontal",
+    "origin": 0,
+    "flip": false,
+    "amount": 1.0,
+    "sliced": true,
+    "width": 572.25
+   }
+  },
+  {
+   "name": "SprHpLight",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar/PnlCanvs/SprHpLight",
+   "hidden": false,
+   "parent": 6,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.029999999329447746
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -1.5,
+     -5.25
+    ],
+    "size": [
+     3.0,
+     92.25
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    204
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_Fight_Hp_BarLight.png",
+   "slice": [
+    3,
+    3,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarHp",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar/BarHp",
+   "hidden": false,
+   "parent": 5,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     572.25,
+     12.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBossBar.png",
+   "slice": [
+    8,
+    8,
+    0,
+    0
+   ],
+   "fill": {
+    "method": "Horizontal",
+    "origin": 0,
+    "flip": false,
+    "amount": 0.6000000238418579,
+    "sliced": true,
+    "width": 572.25
+   }
+  },
+  {
+   "name": "BarShield",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBossBar/PnlHp/PnlHpBar/BarShield",
+   "hidden": false,
+   "parent": 5,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     -10.125,
+     -0.37499991059303284
+    ],
+    "size": [
+     592.5,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBossShield.png",
+   "slice": [
+    23,
+    23,
+    0,
+    0
+   ],
+   "fill": {
+    "method": "Horizontal",
+    "origin": 0,
+    "flip": false,
+    "amount": 0.5,
+    "sliced": true,
+    "width": 592.5
+   }
+  },
+  {
+   "name": "PnlTough",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough",
+   "hidden": false,
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -65.99990844726562
+    ],
+    "size": [
+     0.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    208
+   ]
+  },
+  {
+   "name": "SprRageBg",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough/SprRageBg",
+   "hidden": false,
+   "parent": 11,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     29.999985694885254
+    ],
+    "size": [
+     2.25,
+     9.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    0,
+    0,
+    0,
+    102
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBossRageBar.png",
+   "slice": [
+    7,
+    7,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlBossRage",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough/PnlBossRage",
+   "hidden": false,
+   "parent": 11,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -25.5000057220459
+    ],
+    "size": [
+     0.0,
+     60.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "clip": true
+  },
+  {
+   "name": "BarRage",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough/PnlBossRage/BarRage",
+   "hidden": false,
+   "parent": 13,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -12.000008583068848
+    ],
+    "size": [
+     570.0,
+     9.0
+    ]
+   },
+   "scale": [
+    0.9999966621398926,
+    0.9999966621398926
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_HpMstBossRageBar.png",
+   "slice": [
+    7,
+    7,
+    0,
+    0
+   ],
+   "fill": {
+    "method": "Horizontal",
+    "origin": 0,
+    "flip": false,
+    "amount": 1.0,
+    "sliced": true,
+    "width": 570.0
+   }
+  },
+  {
+   "name": "PnlGround",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough/PnlBossRage/PnlGround",
+   "hidden": false,
+   "parent": 13,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -12.000008583068848
+    ],
+    "size": [
+     0.0,
+     9.0
+    ]
+   },
+   "scale": [
+    0.9999769926071167,
+    0.9999769926071167
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UIContainerActor637",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlTough/UIContainerActor637",
+   "hidden": false,
+   "parent": 11,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlBuff",
+   "path": "/UiItem_BossState_Prefab/PnlOffset/PnlBuff",
+   "hidden": false,
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -30.0
+    ],
+    "size": [
+     0.0,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlName",
+   "path": "/UiItem_BossState_Prefab/PnlName",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     49.4999942779541
+    ],
+    "size": [
+     192.7649917602539,
+     45.0
+    ]
+   },
+   "scale": [
+    1.0000001192092896,
+    1.0000001192092896
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlNameOffset",
+   "path": "/UiItem_BossState_Prefab/PnlName/PnlNameOffset",
+   "hidden": false,
+   "parent": 18,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     558.0150089263916,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtLevel",
+   "path": "/UiItem_BossState_Prefab/PnlName/PnlNameOffset/TxtLevel",
+   "hidden": false,
+   "parent": 19,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     36.003750801086426,
+     -18.0
+    ],
+    "size": [
+     72.00750160217285,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    238,
+    238,
+    238,
+    255
+   ],
+   "text": {
+    "text": "Lv.90",
+    "size": 27.0,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   },
+   "outlineEffect": {
+    "color": [
+     0,
+     0,
+     0,
+     76
+    ],
+    "size": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "name": "TxtName",
+   "path": "/UiItem_BossState_Prefab/PnlName/PnlNameOffset/TxtName",
+   "hidden": false,
+   "parent": 19,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     322.5112552642822,
+     -18.0
+    ],
+    "size": [
+     471.00750732421875,
+     15.007500171661377
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    238,
+    238,
+    238,
+    255
+   ],
+   "text": {
+    "text": "芙露德莉斯",
+    "size": 27.0,
+    "hAlign": "Left",
+    "vAlign": "Bottom",
+    "outline": 0,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     128
+    ]
+   },
+   "outlineEffect": {
+    "color": [
+     0,
+     0,
+     0,
+     76
+    ],
+    "size": [
+     1.0,
+     1.0
+    ]
+   }
+  },
+  {
+   "name": "PnlHLayout",
+   "path": "/UiItem_BossState_Prefab/PnlHLayout",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     26.25,
+     18.75
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlMoraleNode",
+   "path": "/UiItem_BossState_Prefab/PnlHLayout/PnlMoraleNode",
+   "hidden": false,
+   "parent": 22,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -4.408103815583578e-39
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlConcerto",
+   "path": "/UiItem_BossState_Prefab/PnlHLayout/PnlConcerto",
+   "hidden": false,
+   "parent": 22,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     -4.408103815583578e-39
+    ],
+    "size": [
+     0.0,
+     8.816207631167156e-39
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlConcertoGuide",
+   "path": "/UiItem_BossState_Prefab/PnlHLayout/PnlConcerto/PnlConcertoGuide",
+   "hidden": false,
+   "parent": 24,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Ani",
+   "path": "/UiItem_BossState_Prefab/Ani",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "AnimSmallHit",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimSmallHit",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Scale",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        0.800000011920929,
+        1.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UISpriteComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.25,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetX",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UIItemComponent_1"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.25,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetY",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UIItemComponent_0"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      0.6000000238418579,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3"
+    },
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.20000000298023224,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Color",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.25,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.20000000298023224,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 7,
+       "component": "UISpriteComponent",
+       "action": "Color",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_6"
+    }
+   ]
+  },
+  {
+   "name": "AnimBigHit",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimBigHit",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0299999713897705,
+      1.0199999809265137,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutQuart",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      3.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.25,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetX",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_1"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.25,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetY",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 2.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Scale",
+       "useTweenValue": false,
+       "fixed": [
+        1.0,
+        1.2999999523162842,
+        1.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UISpriteComponent_0"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      0.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.2000000476837158,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutQuart",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.019999999552965164,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Color",
+     "from": [
+      0.9529411764705882,
+      0.0,
+      0.0,
+      0.807843137254902
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutSine",
+     "duration": 0.4000000059604645,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 8,
+       "component": "UISpriteComponent",
+       "action": "Color",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0099999904632568,
+      1.0199999809265137,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutSine",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [
+      {
+       "target": 18,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_6"
+    },
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InExpo",
+     "duration": 0.15000000596046448,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 7,
+       "component": "UISpriteComponent",
+       "action": "Color",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_7"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      3.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetX",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_8",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_1"
+    }
+   ]
+  },
+  {
+   "name": "AnimToughStart",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimToughStart",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.16699999570846558,
+     "startDelay": 0.029999999329447746,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1"
+    }
+   ]
+  },
+  {
+   "name": "AnimToughHit",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimToughHit",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "OutExpo",
+     "duration": 0.20000000298023224,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      0.20000000298023224,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.2000000476837158,
+      1.0,
+      1.0
+     ],
+     "easeType": "InSine",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1"
+    }
+   ]
+  },
+  {
+   "name": "AnimToughFlick",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimToughFlick",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      0.9098039215686274,
+      0.0,
+      1.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      0.6509803921568628,
+      1.0
+     ],
+     "easeType": "InOutSine",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Yoyo",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    }
+   ]
+  },
+  {
+   "name": "AnimToughClose",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimToughClose",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.16699999570846558,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "Alpha",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.16699999570846558,
+     "startDelay": 0.029999999329447746,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1"
+    }
+   ]
+  },
+  {
+   "name": "AnimBreak",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimBreak",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      0.8705882352941177,
+      0.615686274509804,
+      1.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "InQuart",
+     "duration": 0.20000000298023224,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_0"
+    },
+    {
+     "kind": "Vector3",
+     "from": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "to": [
+      1.0499999523162842,
+      1.0499999523162842,
+      1.0,
+      1.0
+     ],
+     "easeType": "InOutExpo",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Yoyo",
+     "loopCount": 2,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "Scale",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 1.0
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_1"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.6000000238418579,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_2"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.699999988079071,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 11,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetY",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_3",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/MonsterDamageCurve/Critical/YOffset_CurveFloat"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_4"
+    },
+    {
+     "kind": "Color",
+     "from": [
+      1.0,
+      0.8862745098039215,
+      0.5333333333333333,
+      1.0
+     ],
+     "to": [
+      1.0,
+      0.9921568627450981,
+      0.9333333333333333,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.5,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTweenComponent_5"
+    }
+   ]
+  },
+  {
+   "name": "AnimFull",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimFull",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      10.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 0.30000001192092896,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetX",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/ConcertoState/Curve_ConcertoState"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween2"
+    }
+   ]
+  },
+  {
+   "name": "AnimBurst",
+   "path": "/UiItem_BossState_Prefab/Ani/AnimBurst",
+   "hidden": true,
+   "parent": 26,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "tweens": [
+    {
+     "kind": "Float",
+     "from": [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      0.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "Linear",
+     "duration": 0.10000000149011612,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween"
+    },
+    {
+     "kind": "Float",
+     "from": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "to": [
+      3.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "easeType": "CurveFloat",
+     "duration": 1.0,
+     "startDelay": 0.0,
+     "loopType": "Once",
+     "loopCount": -1,
+     "onUpdate": [
+      {
+       "target": 2,
+       "component": "UIItemComponent",
+       "action": "AnchorOffsetX",
+       "useTweenValue": true,
+       "fixed": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+       ],
+       "valueScale": 0.75
+      }
+     ],
+     "onStart": [],
+     "onComplete": [],
+     "name": "LGUIPlayTween1",
+     "easeCurve": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_1"
+    }
+   ]
+  },
+  {
+   "name": "PnlGuide",
+   "path": "/UiItem_BossState_Prefab/PnlGuide",
+   "hidden": false,
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     -42.675453186035156,
+     22.84994888305664
+    ],
+    "size": [
+     -1.3509063720703125,
+     -45.69990348815918
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  }
+ ],
+ "curves": [
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UISpriteComponent_0",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.05,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.040336955,
+     "leave": 0.0
+    },
+    {
+     "time": 0.1,
+     "value": 0.99999994,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.1415813,
+     "leave": 0.1415813
+    },
+    {
+     "time": 0.3,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -1.4285713,
+     "leave": -1.4285713
+    },
+    {
+     "time": 0.8,
+     "value": -2.3362789e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UIItemComponent_1",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.015851479,
+     "value": 3.4849945e-06,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.00013579249,
+     "leave": 0.00013579249
+    },
+    {
+     "time": 0.045513496,
+     "value": -8.8475643e-10,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.07152371,
+     "value": -2.842527e-06,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 1.6241422e-08,
+     "leave": 1.6241422e-08
+    },
+    {
+     "time": 0.1,
+     "value": 3.300238e-13,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_Hit/Curve_UIItemComponent_0",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 26.249998,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.1,
+     "value": 26.25,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_1",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.05326041,
+     "value": 22.500002,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -154.71611,
+     "leave": -154.71611
+    },
+    {
+     "time": 0.13214463,
+     "value": -20.444902,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -49.661728,
+     "leave": -49.661728
+    },
+    {
+     "time": 0.20129594,
+     "value": 15.148302,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 28.173738,
+     "leave": 28.173738
+    },
+    {
+     "time": 0.29382327,
+     "value": -15.88981,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -33.59617,
+     "leave": -33.59617
+    },
+    {
+     "time": 0.35895094,
+     "value": 9.8517,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 34.045788,
+     "leave": 34.045788
+    },
+    {
+     "time": 0.44068444,
+     "value": -10.889806,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -69.845894,
+     "leave": -69.845894
+    },
+    {
+     "time": 0.5,
+     "value": 9.576843e-07,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UIItemComponent_0",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 26.249998,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.016666668,
+     "value": 29.29974,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -63.578075,
+     "leave": -63.578075
+    },
+    {
+     "time": 0.053220987,
+     "value": 22.86631,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -36.596878,
+     "leave": -36.596878
+    },
+    {
+     "time": 0.1,
+     "value": 26.25,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/Ani_UiItem_BossBar_BigHit/Curve_UISpriteComponent_0",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -1.5000001,
+     "leave": 0.0
+    },
+    {
+     "time": 0.1,
+     "value": 0.99999994,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": 0.14180207,
+     "leave": 0.14180207
+    },
+    {
+     "time": 0.2,
+     "value": 0.99999994,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.4,
+     "value": -2.1834301e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/MonsterDamageCurve/Critical/YOffset_CurveFloat",
+   "keys": [
+    {
+     "time": 0.09497359,
+     "value": -88.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.12203212,
+     "value": -69.93359,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -105.66975,
+     "leave": -105.66975
+    },
+    {
+     "time": 0.21055338,
+     "value": -100.21329,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.31085938,
+     "value": -76.44025,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.37625468,
+     "value": -90.81113,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.62271345,
+     "value": -88.0,
+     "interp": "RCIM_Linear",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  },
+  {
+   "path": "/Game/LGUI/HUD/Kuro/Curves/ConcertoState/Curve_ConcertoState",
+   "keys": [
+    {
+     "time": 0.0,
+     "value": 0.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    },
+    {
+     "time": 0.1,
+     "value": 1.0,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": -0.25,
+     "leave": -0.25
+    },
+    {
+     "time": 0.5,
+     "value": -0.12500001,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 0.8,
+     "value": 0.12499999,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_User",
+     "arrive": -0.0,
+     "leave": -0.0
+    },
+    {
+     "time": 1.0,
+     "value": 7.0137986e-08,
+     "interp": "RCIM_Cubic",
+     "tangentMode": "RCTM_Auto",
+     "arrive": 0.0,
+     "leave": 0.0
+    }
+   ],
+   "preInfinity": "RCCE_Constant",
+   "postInfinity": "RCCE_Constant"
+  }
+ ]
+}

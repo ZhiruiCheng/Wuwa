@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2144208026",
+    "Type": "Event",
+    "GUID": "{9829F88B-58EB-4F6A-BC78-6A825EAB068B}",
+    "Language": "SFX",
+    "Hash": "{67C2F72A-6774-2106-8B82-AB61121A7636}",
+    "ObjectPath": "play_role_changli_bat__am_attack04_branch_start",
+    "ShortName": "play_role_changli_bat__am_attack04_branch_start",
+    "Path": "Event/play_role_changli_bat__am_attack04_branch_start.bnk",
+    "Media": [
+     {
+      "Id": "194815821",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack04_branch_Start_v2.wav",
+      "Path": "Media/194815821.wem",
+      "CachePath": "04/{0454F581-FFD6-EE43-8EF4-402522B5D0F3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2144208026",
+      "Name": "play_role_changli_bat__am_attack04_branch_start",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_attack04_branch_start",
+      "GUID": "{9829F88B-58EB-4F6A-BC78-6A825EAB068B}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.81516665",
+      "DurationMax": "0.81516665",
+      "MediaRefs": [
+       {
+        "Id": "194815821"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{41FAC52F-F1E1-F7F2-2322-32404BE6BF79}"
+ }
+}

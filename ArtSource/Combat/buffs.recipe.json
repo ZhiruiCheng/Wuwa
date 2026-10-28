@@ -1,0 +1,1530 @@
+{
+ "source": "db_buff.db + db_buffeffect.db (ArtSource/Combat/prepare_buffs.py)",
+ "buffTable": "/Game/Game/Combat/DT_Buff",
+ "cueTable": "/Game/Game/Combat/DT_BuffCue",
+ "iconDir": "/Game/LGUI/HUD/Buff/Icons",
+ "buffs": [
+  {
+   "id": 1205000001,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205000001",
+   "durationPolicy": "HasDuration",
+   "duration": 12.0,
+   "grantedTags": [
+    "Role.Changli.Buff.TrueSight"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [
+    1205000001,
+    1205104051,
+    1205104052,
+    1205104053
+   ],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205000001: {\"id\": 1205000001.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [12.0], \"calculationpolicy\": [0], \"gameplaycueids\": [1205000001.0, 1205104051.0, 1205104052.0, 1205104053.0], \"grantedtags\": [\"角色.R2T1ChangLiMd10011.buff相关.心眼\"], \"extraeffectparametersgrow"
+  },
+  {
+   "id": 1205000002,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205000002",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [
+    1205000001
+   ],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205000002: {\"id\": 1205000002.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"calculationpolicy\": [0], \"extraeffectid\": 5, \"extraeffectparameters\": [\"2\", \"1205000001\", \"1\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"ext"
+  },
+  {
+   "id": 1205000003,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205000003",
+   "durationPolicy": "Infinite",
+   "duration": 0.0,
+   "grantedTags": [
+    "Role.Changli.Action.AirAttackCount"
+   ],
+   "removalIgnoreTags": [
+    "State.Position.Air",
+    "Role.Changli.Action.AirAttack1",
+    "Role.Changli.Action.AirAttack2",
+    "Role.Changli.Action.AirAttack3",
+    "Role.Changli.Action.AirAttack4",
+    "Role.Changli.Action.AirAttack5"
+   ],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 6,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205000003: {\"id\": 1205000003.0, \"gedesc\": \"~\", \"durationpolicy\": 1, \"durationcalculationpolicy\": [0], \"calculationpolicy\": [0], \"stacklimitcount\": 6, \"grantedtags\": [\"角色.R2T1ChangLiMd10011.动作标识.空中普攻次数\"], \"removaltagignores\": [\"行为状态.位置状态.空中\", \"角色.R2T1ChangLiMd10011.动作标识.空中普攻1\", \"角色.R2T1ChangLiMd10011.动作标识.空中普攻2"
+  },
+  {
+   "id": 1205601001,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205601001",
+   "durationPolicy": "HasDuration",
+   "duration": 0.20000000298023224,
+   "grantedTags": [
+    "Role.Changli.Action.JumpForbid"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205601001: {\"id\": 1205601001.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.20000000298023224], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.R2T1ChangLiMd10011.动作标识.前几帧禁止跳跃\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd"
+  },
+  {
+   "id": 1101004005,
+   "path": "/Game/Game/Combat/Buff/GE_Buff_1101004005",
+   "durationPolicy": "Infinite",
+   "duration": 0.0,
+   "grantedTags": [
+    "State.Combat.DodgeForbid"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [
+    "State.Position.Ground",
+    "State.Formation.OnField"
+   ],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1101004005: {\"id\": 1101004005.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [-1.0], \"formationpolicy\": 1, \"calculationpolicy\": [0], \"grantedtags\": [\"角色.Common.技能通用标识.闪避禁止\"], \"applicationsourcetagignores\": [\"怪物.AI角色\"], \"applicationtagignores\": [\"怪物.AI角色\"], \"removal"
+  },
+  {
+   "id": 1205200001,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205200001",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "ConcertoEnergy",
+     "magnitude": 1400.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205200001: {\"id\": 1205200001.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 77, \"calculationpolicy\": [0], \"modifiermagnitude\": [1400], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability"
+  },
+  {
+   "id": 1205300001,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205300001",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "Energy",
+     "magnitude": -10000.0,
+     "basedOn": "MaxEnergy",
+     "basedOnInstigator": false,
+     "basedOnBaseValue": true,
+     "coefficient": -1.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205300001: {\"id\": 1205300001.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 60, \"calculationpolicy\": [2, 59, 0, 0, 0], \"modifiermagnitude\": [-10000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraef"
+  },
+  {
+   "id": 1205200005,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205200005",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "ConcertoEnergy",
+     "magnitude": 1000.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205200005: {\"id\": 1205200005.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 77, \"calculationpolicy\": [0], \"modifiermagnitude\": [1000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability"
+  },
+  {
+   "id": 1205104005,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205104005",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 4.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205104005: {\"id\": 1205104005.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [4], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability\": "
+  },
+  {
+   "id": 1205104004,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205104004",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": -4.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205104004: {\"id\": 1205104004.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [-4], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability\":"
+  },
+  {
+   "id": 1205104003,
+   "path": "/Game/Characters/Role/changli/Buff/GE_Buff_1205104003",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 1.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1205104003: {\"id\": 1205104003.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [1], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability\": "
+  },
+  {
+   "id": 1208002001,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002001",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002011
+    ],
+    "premature": [
+     1208002011
+    ]
+   },
+   "source": "db_buff 1208002001: {\"id\": 1208002001.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002011.0], \"routineexpirationeffects\": [1208002011.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002002,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002002",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002012
+    ],
+    "premature": [
+     1208002012
+    ]
+   },
+   "source": "db_buff 1208002002: {\"id\": 1208002002.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002012.0], \"routineexpirationeffects\": [1208002012.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002003,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002003",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002013
+    ],
+    "premature": [
+     1208002013
+    ]
+   },
+   "source": "db_buff 1208002003: {\"id\": 1208002003.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002013.0], \"routineexpirationeffects\": [1208002013.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002004,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002004",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002014
+    ],
+    "premature": [
+     1208002014
+    ]
+   },
+   "source": "db_buff 1208002004: {\"id\": 1208002004.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002014.0], \"routineexpirationeffects\": [1208002014.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002005,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002005",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002015
+    ],
+    "premature": [
+     1208002015
+    ]
+   },
+   "source": "db_buff 1208002005: {\"id\": 1208002005.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002015.0], \"routineexpirationeffects\": [1208002015.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002006,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002006",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002016
+    ],
+    "premature": [
+     1208002016
+    ]
+   },
+   "source": "db_buff 1208002006: {\"id\": 1208002006.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002016.0], \"routineexpirationeffects\": [1208002016.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002007,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002007",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208002017
+    ],
+    "premature": [
+     1208002017
+    ]
+   },
+   "source": "db_buff 1208002007: {\"id\": 1208002007.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208002017.0], \"routineexpirationeffects\": [1208002017.0], \"extraeffectparametersgrow1\": [0], \"extraeffectpa"
+  },
+  {
+   "id": 1208002011,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002011",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Attack1"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002011: {\"id\": 1208002011.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.f30aed45\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002012,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002012",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Attack2"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002012: {\"id\": 1208002012.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.73fc0dd8\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002013,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002013",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Attack3"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002013: {\"id\": 1208002013.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.e59e5262\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002014,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002014",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Attack4"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002014: {\"id\": 1208002014.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.3c4f6496\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002015,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002015",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Heavy1"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002015: {\"id\": 1208002015.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.1af097d9\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002016,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002016",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Heavy2"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002016: {\"id\": 1208002016.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.42377ed0\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208002017,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208002017",
+   "durationPolicy": "HasDuration",
+   "duration": 0.6000000238418579,
+   "grantedTags": [
+    "Role.Jiabei.Combo.Heavy3"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208002017: {\"id\": 1208002017.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.6000000238418579], \"calculationpolicy\": [0], \"grantedtags\": [\"角色.2e985a12.76dc0cb2.aad5aa16\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1"
+  },
+  {
+   "id": 1208001005,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208001005",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -10000.0,
+     "basedOn": "MaxSpecialEnergy3",
+     "basedOnInstigator": false,
+     "basedOnBaseValue": false,
+     "coefficient": -1.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208001005: {\"id\": 1208001005.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [2, 65, 0, 1, 0], \"modifiermagnitude\": [-10000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraef"
+  },
+  {
+   "id": 1208003002,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003002",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "ConcertoEnergy",
+     "magnitude": 1000.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003002: {\"id\": 1208003002.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 77, \"calculationpolicy\": [0], \"modifiermagnitude\": [1000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobability"
+  },
+  {
+   "id": 1208003313,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003313",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": 10000.0,
+     "basedOn": "SpecialEnergy1",
+     "basedOnInstigator": true,
+     "basedOnBaseValue": true,
+     "coefficient": 1.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208003315
+    ],
+    "premature": [
+     1208003315
+    ]
+   },
+   "source": "db_buff 1208003313: {\"id\": 1208003313.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [2, 62, 1, 0, 1], \"modifiermagnitude\": [10000], \"prematureexpirationeffects\": [1208003315.0], \"routineexpirationeffects\": [1208003315.0], \"extraeffectparametersgrow1\": [0], \"extraeffectp"
+  },
+  {
+   "id": 1208003315,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003315",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": -1000.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003315: {\"id\": 1208003315.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [-1000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobabilit"
+  },
+  {
+   "id": 1208001001,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208001001",
+   "durationPolicy": "HasDuration",
+   "duration": 50.0,
+   "grantedTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [
+    1208001001,
+    1208001002,
+    1208001007,
+    1208001008,
+    1208001009,
+    1208001010,
+    1208001011
+   ],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": {
+    "attribute": "SpecialEnergy3",
+    "perTenThousand": false,
+    "maxAttribute": "",
+    "lower": -1.0,
+    "upper": 0.0,
+    "addBuffs": [
+     1208001002
+    ],
+    "removeOnLeave": false
+   },
+   "expireBuffs": {
+    "normal": [
+     1208001002
+    ],
+    "premature": [
+     1208001002
+    ]
+   },
+   "source": "db_buff 1208001001: {\"id\": 1208001001.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [50.0], \"calculationpolicy\": [0], \"gameplaycueids\": [1208001001.0, 1208001002.0, 1208001007.0, 1208001008.0, 1208001009.0, 1208001010.0, 1208001011.0], \"grantedtags\": [\"角色.2e985a12.ab2b6d0"
+  },
+  {
+   "id": 1208001002,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208001002",
+   "durationPolicy": "HasDuration",
+   "duration": 0.10000000149011612,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [
+     1208001032,
+     1208003316,
+     1208003317
+    ],
+    "premature": [
+     1208001032,
+     1208003316,
+     1208003317
+    ]
+   },
+   "source": "db_buff 1208001002: {\"id\": 1208001002.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.10000000149011612], \"calculationpolicy\": [0], \"prematureexpirationeffects\": [1208001032.0, 1208003316.0, 1208003317.0], \"routineexpirationeffects\": [1208001032.0, 1208003316.0, 12080033"
+  },
+  {
+   "id": 1208001032,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208001032",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208001032: {\"id\": 1208001032.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"calculationpolicy\": [0], \"applicationtagignores\": [\"功能.系统状态标识.出招教学\"], \"removebuffwithtags\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extrae"
+  },
+  {
+   "id": 1208003316,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003316",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy2",
+     "magnitude": -1000.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003316: {\"id\": 1208003316.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 64, \"calculationpolicy\": [0], \"modifiermagnitude\": [-1000], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdfortarget\": [-1.0], \"extraeffectprobabilit"
+  },
+  {
+   "id": 1208003317,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003317",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -1000.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003317: {\"id\": 1208003317.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-1000], \"applicationtagignores\": [\"功能.系统状态标识.出招教学\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffec"
+  },
+  {
+   "id": 1208003302,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003302",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 2.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003302: {\"id\": 1208003302.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [2], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], "
+  },
+  {
+   "id": 1208003303,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003303",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 3.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003303: {\"id\": 1208003303.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [3], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], "
+  },
+  {
+   "id": 1208003304,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003304",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 4.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003304: {\"id\": 1208003304.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [4], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], "
+  },
+  {
+   "id": 1208003305,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003305",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 5.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003305: {\"id\": 1208003305.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [5], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], "
+  },
+  {
+   "id": 1208003320,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003320",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 10.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003320: {\"id\": 1208003320.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [10], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0],"
+  },
+  {
+   "id": 1208003325,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003325",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy1",
+     "magnitude": 15.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003325: {\"id\": 1208003325.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 62, \"calculationpolicy\": [0], \"modifiermagnitude\": [15], \"applicationtagignores\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0],"
+  },
+  {
+   "id": 1208003307,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003307",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -2.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003307: {\"id\": 1208003307.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-2], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-"
+  },
+  {
+   "id": 1208003308,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003308",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -3.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003308: {\"id\": 1208003308.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-3], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-"
+  },
+  {
+   "id": 1208003309,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003309",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -4.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003309: {\"id\": 1208003309.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-4], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-"
+  },
+  {
+   "id": 1208003310,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003310",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -5.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003310: {\"id\": 1208003310.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-5], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-"
+  },
+  {
+   "id": 1208003327,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003327",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -7.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003327: {\"id\": 1208003327.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-7], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-"
+  },
+  {
+   "id": 1208003330,
+   "path": "/Game/Characters/Role/jiabei/Buff/GE_Buff_1208003330",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "SpecialEnergy3",
+     "magnitude": -10.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [
+    "Role.Jiabei.State.Transformed"
+   ],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1208003330: {\"id\": 1208003330.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 66, \"calculationpolicy\": [0], \"modifiermagnitude\": [-10], \"applicationtagrequirements\": [\"角色.2e985a12.ab2b6d02.0c77b016\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": ["
+  },
+  {
+   "id": 1101003007,
+   "path": "/Game/Game/Combat/Buff/GE_Buff_1101003007",
+   "durationPolicy": "Instant",
+   "duration": 0.0,
+   "grantedTags": [],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [
+    {
+     "attribute": "Energy",
+     "magnitude": -10000.0,
+     "basedOn": "MaxEnergy",
+     "basedOnInstigator": false,
+     "basedOnBaseValue": false,
+     "coefficient": -1.0
+    }
+   ],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1101003007: {\"id\": 1101003007.0, \"gedesc\": \"~\", \"durationcalculationpolicy\": [0], \"gameattributeid\": 60, \"calculationpolicy\": [2, 59, 0, 1, 0], \"modifiermagnitude\": [-10000], \"modifiermagnitude2\": [0], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extraeffectcdf"
+  },
+  {
+   "id": 1001001029,
+   "path": "/Game/Game/Combat/Buff/GE_Buff_1001001029",
+   "durationPolicy": "HasDuration",
+   "duration": 0.4000000059604645,
+   "grantedTags": [
+    "State.Combat.Invincible"
+   ],
+   "removalIgnoreTags": [],
+   "removalRequireTags": [],
+   "modifiers": [],
+   "stackLimit": 0,
+   "cueIds": [],
+   "removeBuffs": [],
+   "removeBuffsWithTags": [],
+   "addBuffs": [],
+   "applicationIgnoreTags": [],
+   "applicationRequireTags": [],
+   "attributeEvent": null,
+   "expireBuffs": {
+    "normal": [],
+    "premature": []
+   },
+   "source": "db_buff 1001001029: {\"id\": 1001001029.0, \"gedesc\": \"~\", \"durationpolicy\": 2, \"durationcalculationpolicy\": [0], \"durationmagnitude\": [0.4000000059604645], \"calculationpolicy\": [0], \"grantedtags\": [\"功能.逻辑状态标识.无敌.通用无敌\"], \"extraeffectparametersgrow1\": [0], \"extraeffectparametersgrow2\": [0], \"extraeffectcd\": [-1.0], \"extrae"
+  }
+ ],
+ "cues": [
+  {
+   "Name": "1205104053",
+   "CueType": 24,
+   "Icon": "ArtSource/UI/HUD/Kuro/Textures/T_IconChangliY.png",
+   "Priority": 0,
+   "Parameters": [
+    "1",
+    "F0744E7F"
+   ]
+  }
+ ],
+ "notifies": [
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack01",
+   "time": 0.21019591,
+   "buffId": 1205000003,
+   "sourceLength": 1.6,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack01.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "time": 0.25265905,
+   "buffId": 1205000003,
+   "sourceLength": 1.8333334,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack02.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "time": 0.23106231,
+   "buffId": 1205000003,
+   "sourceLength": 1.8,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack03.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.10467486,
+   "buffId": 1205000003,
+   "sourceLength": 2.0,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack04.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "time": 0.104809895,
+   "buffId": 1205000001,
+   "sourceLength": 2.0,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack04.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_Start",
+   "time": 0.01613707,
+   "buffId": 1205000003,
+   "sourceLength": 0.633333,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack_Start.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_Start",
+   "time": 0.0,
+   "duration": 0.633333,
+   "tag": "State.Formation.SwitchNoHide",
+   "sourceLength": 0.633333,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AirAttack_Start.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack04",
+   "time": 0.38430154,
+   "buffId": 1205000001,
+   "sourceLength": 6.033333,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Attack04.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "time": 0.6651184,
+   "buffId": 1205000003,
+   "sourceLength": 2.2,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AttackL.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "time": 0.6598811,
+   "buffId": 1205000003,
+   "sourceLength": 2.2,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_AttackL.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 2.6038446,
+   "buffId": 1205104005,
+   "sourceLength": 7.23,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Burst01.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "time": 3.1521158,
+   "duration": 1.3252373,
+   "tag": "State.Combat.Invincible",
+   "sourceLength": 7.23,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Burst01.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "time": 0.11041255,
+   "buffId": 1205104004,
+   "sourceLength": 5.2,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Burst02.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.7806547,
+   "buffId": 1205000001,
+   "sourceLength": 1.1666666,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Skill01_Start.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "time": 0.0,
+   "duration": 0.7713279,
+   "tag": "State.Formation.SwitchNoHide",
+   "sourceLength": 1.1666666,
+   "source": "Character/Role/FemaleXL/ChangLi/CommonAnim/AM_Skill01_Start.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_AirAttack_Start",
+   "time": 0.0,
+   "duration": 0.7,
+   "tag": "State.Formation.SwitchNoHide",
+   "sourceLength": 0.7,
+   "source": "Character/Role/FemaleXL/Jiabeilina/CommonAnim/AM_AirAttack_Start.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 0.0,
+   "duration": 2.5886776,
+   "tag": "Role.Jiabei.Action.ExAttack3",
+   "sourceLength": 12.666667,
+   "source": "Character/Role/FemaleXL/Jiabeilina/CommonAnim/AM_Attack03_EX.json"
+  },
+  {
+   "montage": "/Game/Characters/Role/jiabei/AnimMontage/AM_Jiabei_Attack03_EX",
+   "time": 2.5868602,
+   "duration": 2.5350914,
+   "tag": "Role.Jiabei.Combo.Attack3",
+   "sourceLength": 12.666667,
+   "source": "Character/Role/FemaleXL/Jiabeilina/CommonAnim/AM_Attack03_EX.json"
+  }
+ ]
+}

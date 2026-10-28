@@ -1,0 +1,8 @@
+{
+  "_comment": "UiItem_DamageView_Prefab（伤害数字）：数字默认显示（运行时改文字、颜色），文字型（免疫等）Text2 和暴击特效默认隐藏。",
+  "active": {},
+  "texts": {
+    "/DamageNum/Num$": "5070",
+    "/DamageNum/Text2$": ""
+  }
+}

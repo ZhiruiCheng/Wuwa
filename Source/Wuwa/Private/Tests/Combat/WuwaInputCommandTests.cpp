@@ -4,7 +4,7 @@
 #include "Engine/World.h"
 #include "UObject/Script.h"
 #include "UObject/UnrealType.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAttributeSet.h"

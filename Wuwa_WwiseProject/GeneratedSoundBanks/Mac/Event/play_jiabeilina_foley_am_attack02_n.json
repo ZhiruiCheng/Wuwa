@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "236572069",
+    "Type": "Event",
+    "GUID": "{3A5226FB-241F-4F28-97B9-9D3CB0137BCA}",
+    "Language": "SFX",
+    "Hash": "{C083EB9E-F119-E919-E5B8-21647B5BD844}",
+    "ObjectPath": "play_jiabeilina_foley_am_attack02_n",
+    "ShortName": "play_jiabeilina_foley_am_attack02_n",
+    "Path": "Event/play_jiabeilina_foley_am_attack02_n.bnk",
+    "Media": [
+     {
+      "Id": "164713007",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_Foley_AM_Attack02_N.wav",
+      "Path": "Media/164713007.wem",
+      "CachePath": "FD/{FD84C5D6-A4BA-BA78-E758-B69A95BB7E91}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "236572069",
+      "Name": "play_jiabeilina_foley_am_attack02_n",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_foley_am_attack02_n",
+      "GUID": "{3A5226FB-241F-4F28-97B9-9D3CB0137BCA}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.87475",
+      "DurationMax": "1.87475",
+      "MediaRefs": [
+       {
+        "Id": "164713007"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{38A9E15C-356F-F2C3-239D-D0FB52B1A8A9}"
+ }
+}

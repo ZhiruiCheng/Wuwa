@@ -1,0 +1,96 @@
+{
+ "_doc": "长离输入规则（-run=WuwaBlueprintDefaultsSetup -Recipe=ArtSource/Combat/changli_input_rules.json -Apply）。按原作 BP_Input_ChangLi 攻击按下（字节码见 PakExport json --script）：地面上有心眼（角色.R2T1ChangLiMd10011.buff相关.心眼）时出地面普攻5 心眼技 1205005，排在连段之前；当前在普攻4 / E / 变奏里时原作要求接受输入或可打断，项目由选招后的打断判定（InterruptLevel / AcceptsSkillInput / ReadyEnd）保证。普攻4 本身不再直接接 1205005（原作普攻4 在 0.38 秒加心眼，靠心眼接）。普攻1→2→3→4 的连段规则不变。 位置：原作攻击按下先按 IsMovingOnGround 分地面 / 空中两条链；这些都是地面链的行，标 Position=Ground（空中普攻 1205101~1205105、空中闪避另加 Position=Air 的行）。冲刺也先只在地面。 空中链（原作 攻击按下 空中分支）：当前技能在接招窗口且身上有 地面跳跃派生（1205106 / 1205116 期间）→ 1205105 下落攻击；有心眼 → 1205106 心眼·跃；否则 1205101 + 空中普攻次数层数（buff 1205000003），4 层及以上 = 1205105。原作\"接招窗口 / ReadyEnd 才出招\"由选招后的打断判定保证。条件对象写在 subobjects（WuwaBlueprintDefaultsSetup 建在 DA 下，规则按路径引用）。 跳跃（原作 跳跃按下，覆盖通用跳跃；WuwaMoveInputAction_Jump 先查这些行）：有 前几帧禁止跳跃（buff 1205601001，1205106 开始 0.2 秒）→ 什么都不做；有心眼且当前技能在接招窗口或已 ReadyEnd（没有技能也算）→ 1205106；有心眼但不能出招 → 什么都不做；都不是 → 通用跳跃。只在地面（原作 CanJumpPress 空中分支是滑翔，项目没有）。原作极限闪避中出 1205116，项目还没有极限闪避。 空中闪避（原作 BP_InputComponent 闪避按下 空中分支）：有 闪避禁止（buff 1101004005，空中闪避时加，落地且在前台移除）→ 什么都不做；有方向输入 → 100003 空中前闪，否则 100004 空中后闪。 共鸣技能（原作 技能1按下）：地面空中都直接出 1205201（GA_Common_AirAttack：起手 → 往下冲 → 落地段，所以在任何高度放都会回到地面）。共鸣解放（原作 大招按下）：共鸣能量满（原作 CanUseUltraSkill：Energy ≥ EnergyMax）才出 1205401；技能开始 buff 1205300001 把能量清空。原作的冷却（E 有、大招 20 秒）项目还没有冷却系统。 长按普攻（原作 攻击长按，长按配置 触发时间 0.3 秒，IA_Attack 的 Hold 触发器，Phase=Held）：地面上有 心火4层 → 1205402 心眼·极，否则 1205006 重击；空中 → 1205105 下落攻击。原作 心火4层 是被动 buff 1205104040 的属性阈值效果（心火 SpecialEnergy1 > 3 时挂 Tag），项目直接用 InputCondition_AttributeMinimum 判断 SpecialEnergy1 ≥ 4。原作还要求当前技能可打断或在接招窗口，项目由选招后的打断判定和预输入保证。 下落攻击接地面普攻3（原作 攻击按下 地面分支：当前技能在接招窗口时按 动作标识 列表找第一个身上有的 Tag，空中下落攻击 → 1205003）：PlungeTo03 = 地面 + 有 Role.Changli.Action.AirPlunge（1205105 期间）+ 接招窗口（不含 ReadyEnd 之后），排在心眼之后、连段之前。",
+ "source": "原作 BP_Input_ChangLi 攻击按下",
+ "blueprints": [
+  {
+   "asset": "/Game/Characters/Role/changli/Input/DA_Changli_InputCommands",
+   "properties": {
+    "Rules": "((RuleName=\"TrueSight\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205005,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Buff.TrueSight\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"PlungeTo03\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205003,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Action.AirPlunge\")),QueryTokenStream=(0,1,2,1,0)),Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirInputWindow\")),(RuleName=\"Attack01To02\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205002,RequiredCurrentSkillId=1205001,OwnerTagQuery=(TagDictionary=((TagName=\"State.Combat.ComboWindow\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"Attack02To03\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205003,RequiredCurrentSkillId=1205002,OwnerTagQuery=(TagDictionary=((TagName=\"State.Combat.ComboWindow\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"Attack03To04\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205004,RequiredCurrentSkillId=1205003,OwnerTagQuery=(TagDictionary=((TagName=\"State.Combat.ComboWindow\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"AttackDefault01\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Ground,TargetSkillId=1205001),(RuleName=\"HeavyXinHuo\",InputTag=(TagName=\"Input.Combat.Attack\"),Phase=Held,Position=Ground,TargetSkillId=1205402,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:XinHuoFull\")),(RuleName=\"HeavyDefault\",InputTag=(TagName=\"Input.Combat.Attack\"),Phase=Held,Position=Ground,TargetSkillId=1205006),(RuleName=\"DashDefault\",InputTag=(TagName=\"Input.Combat.Dash\"),Position=Ground,TargetSkillId=1205801),(RuleName=\"AirLeapToPlunge\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205105,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Action.GroundJumpDerive\")),QueryTokenStream=(0,1,2,1,0)),Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirInputWindow\")),(RuleName=\"AirTrueSight\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205106,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Buff.TrueSight\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"AirAttack01\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205101,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirCount0\")),(RuleName=\"AirAttack02\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205102,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirCount1\")),(RuleName=\"AirAttack03\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205103,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirCount2\")),(RuleName=\"AirAttack04\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205104,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirCount3\")),(RuleName=\"AirPlungeAfter04\",InputTag=(TagName=\"Input.Combat.Attack\"),Position=Air,TargetSkillId=1205105,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirCount4Plus\")),(RuleName=\"AirHoldPlunge\",InputTag=(TagName=\"Input.Combat.Attack\"),Phase=Held,Position=Air,TargetSkillId=1205105),(RuleName=\"JumpForbidAfterLeap\",InputTag=(TagName=\"Player.Common.Movement.Jump\"),Position=Ground,bBlockInput=True,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Action.JumpForbid\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"JumpTrueSight\",InputTag=(TagName=\"Player.Common.Movement.Jump\"),Position=Ground,TargetSkillId=1205106,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Buff.TrueSight\")),QueryTokenStream=(0,1,2,1,0)),Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:JumpInputWindow\")),(RuleName=\"JumpTrueSightNotReady\",InputTag=(TagName=\"Player.Common.Movement.Jump\"),Position=Ground,bBlockInput=True,OwnerTagQuery=(TagDictionary=((TagName=\"Role.Changli.Buff.TrueSight\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"AirDodgeForbid\",InputTag=(TagName=\"Input.Combat.Dash\"),Position=Air,bBlockInput=True,OwnerTagQuery=(TagDictionary=((TagName=\"State.Combat.DodgeForbid\")),QueryTokenStream=(0,1,2,1,0))),(RuleName=\"AirDodgeForward\",InputTag=(TagName=\"Input.Combat.Dash\"),Position=Air,TargetSkillId=100003,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:AirDodgeHasMove\")),(RuleName=\"AirDodgeBack\",InputTag=(TagName=\"Input.Combat.Dash\"),Position=Air,TargetSkillId=100004),(RuleName=\"Skill01\",InputTag=(TagName=\"Input.Combat.Skill\"),TargetSkillId=1205201),(RuleName=\"Burst01\",InputTag=(TagName=\"Input.Combat.Ultimate\"),TargetSkillId=1205401,Conditions=(\"/Game/Characters/Role/changli/Input/DA_Changli_InputCommands.DA_Changli_InputCommands:BurstEnergyFull\")))"
+   },
+   "subobjects": [
+    {
+     "name": "AirInputWindow",
+     "class": "/Script/ManagedWuwa.InputCondition_SkillInputWindow",
+     "properties": {
+      "AllowReadyEnd": "False"
+     }
+    },
+    {
+     "name": "AirCount0",
+     "class": "/Script/ManagedWuwa.InputCondition_OwnerTagCount",
+     "properties": {
+      "Tag": "(TagName=\"Role.Changli.Action.AirAttackCount\")",
+      "Minimum": "0",
+      "Maximum": "0"
+     }
+    },
+    {
+     "name": "AirCount1",
+     "class": "/Script/ManagedWuwa.InputCondition_OwnerTagCount",
+     "properties": {
+      "Tag": "(TagName=\"Role.Changli.Action.AirAttackCount\")",
+      "Minimum": "1",
+      "Maximum": "1"
+     }
+    },
+    {
+     "name": "AirCount2",
+     "class": "/Script/ManagedWuwa.InputCondition_OwnerTagCount",
+     "properties": {
+      "Tag": "(TagName=\"Role.Changli.Action.AirAttackCount\")",
+      "Minimum": "2",
+      "Maximum": "2"
+     }
+    },
+    {
+     "name": "AirCount3",
+     "class": "/Script/ManagedWuwa.InputCondition_OwnerTagCount",
+     "properties": {
+      "Tag": "(TagName=\"Role.Changli.Action.AirAttackCount\")",
+      "Minimum": "3",
+      "Maximum": "3"
+     }
+    },
+    {
+     "name": "AirCount4Plus",
+     "class": "/Script/ManagedWuwa.InputCondition_OwnerTagCount",
+     "properties": {
+      "Tag": "(TagName=\"Role.Changli.Action.AirAttackCount\")",
+      "Minimum": "4",
+      "Maximum": "-1"
+     }
+    },
+    {
+     "name": "JumpInputWindow",
+     "class": "/Script/ManagedWuwa.InputCondition_SkillInputWindow",
+     "properties": {
+      "AllowReadyEnd": "True"
+     }
+    },
+    {
+     "name": "AirDodgeHasMove",
+     "class": "/Script/ManagedWuwa.InputCondition_MoveInput",
+     "properties": {
+      "RequireInput": "True"
+     }
+    },
+    {
+     "name": "BurstEnergyFull",
+     "class": "/Script/ManagedWuwa.InputCondition_AttributeFull",
+     "properties": {
+      "Attribute": "(AttributeName=\"Energy\",Attribute=/Script/Wuwa.WuwaAttributeSet:Energy,AttributeOwner=/Script/CoreUObject.Class'\"/Script/Wuwa.WuwaAttributeSet\"')",
+      "MaxAttribute": "(AttributeName=\"MaxEnergy\",Attribute=/Script/Wuwa.WuwaAttributeSet:MaxEnergy,AttributeOwner=/Script/CoreUObject.Class'\"/Script/Wuwa.WuwaAttributeSet\"')"
+     }
+    },
+    {
+     "name": "XinHuoFull",
+     "class": "/Script/ManagedWuwa.InputCondition_AttributeMinimum",
+     "properties": {
+      "Attribute": "(AttributeName=\"SpecialEnergy1\",Attribute=/Script/Wuwa.WuwaAttributeSet:SpecialEnergy1,AttributeOwner=/Script/CoreUObject.Class'\"/Script/Wuwa.WuwaAttributeSet\"')",
+      "Minimum": "4"
+     }
+    }
+   ]
+  }
+ ]
+}

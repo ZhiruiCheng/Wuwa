@@ -1,0 +1,967 @@
+{
+ "schemaVersion": 1,
+ "character": "changli",
+ "stage": "Solo_Attack01",
+ "montage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+ "description": "长离 Attack01：网格 / 贴图为导出原件，材质与 Niagara 为重建（ChangliSlash 同一套重建）。由 ArtSource/JiabeiAttack/prepare_attack.py 生成。",
+ "notifyAuthoredSeconds": 0.19529274,
+ "textures": [
+  {
+   "name": "T_Changli_140004_wings",
+   "file": "Textures/T_Changli_140004_wings.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Changli_140004_wings.png",
+   "sha256": "23183b145ae3d06d982aab1f0c3935e87ea3f9518fac0e984cf727f0417e8ce4"
+  },
+  {
+   "name": "T_Changli_140006_wings_Trail",
+   "file": "Textures/T_Changli_140006_wings_Trail.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Changli_140006_wings_Trail.png",
+   "sha256": "1703ba3e5ca9c411ce146c987b757a383a5d250b128c3ac50b1010b2b8d25f47"
+  },
+  {
+   "name": "T_Color_009",
+   "file": "Textures/T_Color_009.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Color\\T_Color_009.png",
+   "sha256": "8a3b4a9688f44d77a6f5e5f8440e5c62658e26430c2f5fa61d5d6b60a2c5bde9"
+  },
+  {
+   "name": "T_Color_140009",
+   "file": "Textures/T_Color_140009.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Color\\T_Color_140009.png",
+   "sha256": "209573bf2c03ae0b027cd58e647eefc8171fe1ccf5e7c43803507351815811c4"
+  },
+  {
+   "name": "T_Color_40010",
+   "file": "Textures/T_Color_40010.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Color\\T_Color_40010.png",
+   "sha256": "ef4c4a47b382b4836c7b28176c76ca6dea6dfd457fa880ea7a8a7d9564e73148"
+  },
+  {
+   "name": "T_Color_80007",
+   "file": "Textures/T_Color_80007.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Color\\T_Color_80007.png",
+   "sha256": "4757658c7d89f4f58a4b450b211cf598ddfe988bb62014fc7c7a6645a5c3eb9e"
+  },
+  {
+   "name": "T_Daoguang_40001",
+   "file": "Textures/T_Daoguang_40001.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Daoguang\\T_Daoguang_40001.png",
+   "sha256": "e22e2178d1579e3aa13c8fa890222b5ecf83287885b90d63c137aee55120ef69"
+  },
+  {
+   "name": "T_DefaultColorWhite_D",
+   "file": "Textures/T_DefaultColorWhite_D.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Render\\Common\\T_DefaultColorWhite_D.png",
+   "sha256": "8d5e08e1bb949f59b208e0288e220ac0fc536ac0779852cb843c910ae03b5bc3"
+  },
+  {
+   "name": "T_Mask_30013",
+   "file": "Textures/T_Mask_30013.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Mask\\T_Mask_30013.png",
+   "sha256": "894ad679113fe94945a5539d457b39f7827f494ca2c1f7801597c74b9e953dfa"
+  },
+  {
+   "name": "T_Mask_30054_2",
+   "file": "Textures/T_Mask_30054_2.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Mask\\T_Mask_30054_2.png",
+   "sha256": "807d3040b2f3a9c3281a3ea197bb5b4fcec87d8f3244d9784956e8f268a02fa4"
+  },
+  {
+   "name": "T_Mask_30157",
+   "file": "Textures/T_Mask_30157.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Mask\\T_Mask_30157.png",
+   "sha256": "0be158a022f801b196c5716bd9367537f0de0e239263504137b46a5ca08d315d"
+  },
+  {
+   "name": "T_Normal_011",
+   "file": "Textures/T_Normal_011.png",
+   "srgb": false,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Normal\\T_Normal_011.png",
+   "sha256": "0b3d1cc98a317a46880298f74f1ec7bbb0e01e154a699e2eca1f6b2b28b409da"
+  },
+  {
+   "name": "T_Particle_002",
+   "file": "Textures/T_Particle_002.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Particle\\T_Particle_002.png",
+   "sha256": "8584ae2e43f1cb7e16b9ab54b7bfcfbfd91903e5d15597d06cecc5f482f2ec2d"
+  },
+  {
+   "name": "T_Tile_046",
+   "file": "Textures/T_Tile_046.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_046.png",
+   "sha256": "fa3ab0dcdabc3e4e01b4a468c6f053c20c5715d4d3420b3482a7c053cd42434c"
+  },
+  {
+   "name": "T_Tile_19_Vec",
+   "file": "Textures/T_Tile_19_Vec.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_19_Vec.png",
+   "sha256": "de38570a1be25ac9b46d0c8bb3a1e3b428215e04e572f97051955a2efb1050a4"
+  },
+  {
+   "name": "T_Tile_300186",
+   "file": "Textures/T_Tile_300186.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_300186.png",
+   "sha256": "13c663322b295c52916cd8407c8e37e5d0aae3a30af4335c5ab72ed2085e9a53"
+  },
+  {
+   "name": "T_Wenli_20002",
+   "file": "Textures/T_Wenli_20002.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Wenli_20002.png",
+   "sha256": "41727a13b3cdb58101ba7ac86091d123734278a31d94507628ad2cf14ae1bdec"
+  },
+  {
+   "name": "T_Wenli_Changli_140002_3",
+   "file": "Textures/T_Wenli_Changli_140002_3.png",
+   "srgb": true,
+   "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Wenli_Changli_140002_3.png",
+   "sha256": "83976a60b6a0006688c4b6468e8a14c491acdaae319b33387d320c110cc3f36e"
+  }
+ ],
+ "meshes": [
+  "Mod_Changli_Daoguang_140003_a3",
+  "Mod_Changli_Daoguang_140004",
+  "Mod_Changli_Daoguang_140005",
+  "Mod_Changli_Zhuan_140001"
+ ],
+ "systems": [
+  {
+   "name": "NS_Reference_Changli_R1a01_N_Dg1__yumao001",
+   "source": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1",
+   "generate": true,
+   "layers": [
+    {
+     "name": "yumao001",
+     "sprite": true,
+     "sortOrder": 5,
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "id": "Reference_Changli_R1a01_N_Dg1_yumao001__solo",
+     "sourceMaterial": "/Game/Aki/Effect/Materials/MI_Sprite/MI_Trans_Wenli_140031_S",
+     "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1",
+     "sourceEmitter": "yumao001_2",
+     "textures": {
+      "TexBase": "T_Changli_140006_wings_Trail",
+      "TexSecond": "T_Color_009",
+      "TexNoise": "T_Normal_011",
+      "TexMask": "T_Changli_140006_wings_Trail",
+      "TexDissolve": "T_Wenli_20002"
+     },
+     "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(0.015,0.00088379945,0.0009259361,1.0),float4(1.57038195,0.337830596,0.189959681,1.0),float4(1.21266494,0.273293655,0.452277857,1.0),float4(0.319721334,0.0725086809,0.170419762,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0)};\nfloat4 curveColor = float4(VertexColor.rgb, 1.0);  // per-particle colour (table)\nconst float curveAlphaLut[24] = {0.2,0.220082767,1.0,1.0,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06};\nfloat curveAlpha = 1.0;  // per-particle alpha is in VertexAlpha (table)\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nfloat dyn0p1=0.0;\nfloat dyn0p2=0.0;\nconst float dyn0p3Lut[24] = {0.0,0.0352419219,0.116731981,0.220930737,0.321769472,0.392397461,0.438300962,0.48350953,0.529421452,0.575569716,0.621548984,0.666851629,0.711093467,0.753878922,0.794587766,0.832909025,0.868476804,0.900666657,0.929053225,0.953389235,0.973125048,0.987563011,0.996653157,1.0};\nfloat dyn0p3 = lerp(dyn0p3Lut[ci], dyn0p3Lut[ci+1], cf);\nconst float dyn1p1Lut[24] = {0.8,0.797691096,0.79088693,0.779581377,0.763768226,0.743390206,0.7184154,0.688914078,0.654880041,0.616307127,0.572379935,0.509633916,0.428208205,0.336612533,0.243416523,0.15758813,0.0874976235,0.0278831677,-0.0300871106,-0.0837630691,-0.130306906,-0.167022833,-0.19116813,-0.2};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\n// M_SimpleEffect_MP: operation order from the compiled game shader; see simple_effect_body().\nfloat t=a*0.5;\nfloat4 dmp=float4(0.0,0.0,dyn0p3,1.0);\nfloat3 dmp1=float3(dyn1p1,1.0,0.0);\nfloat2 uvS=UV-0.5;\nuvS=float2(dot(uvS,float2(1.0,-0.0)),dot(uvS,float2(0.0,1.0)))+0.5;\nuvS=uvS*float2(1.0,1.0)+(lerp(t+dmp.w,dmp.w,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvS=lerp(uvS,saturate(uvS),0.0);\nfloat3 sec=Texture2DSample(TexSecond,TexSecondSampler,uvS).rgb;\nsec=lerp(sec,dot(sec,float3(0.3,0.59,0.11)).xxx,0.0)*1.0;\nfloat2 uvB=UV-0.5;\nuvB=float2(dot(uvB,float2(1.0,-0.0)),dot(uvB,float2(0.0,1.0)))+0.5;\nuvB=uvB*float2(1.0,-1.0)+(lerp(t+dmp.x,dmp.x,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvB=lerp(uvB,saturate(uvB),0.0);\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,uvB);\nfloat3 c=lerp(base.rgb,dot(base,float4(1.0,3.0,2.0,0.0)).xxx,1.0);\nfloat3 p=step(1e-6,c)*pow(max(c,1e-6),1.0)*3.0;\nfloat3 c3=lerp(p,c*1.0,0.0)+1.0;\nfloat3 mulC=c3*sec;\nfloat3 scrC=sec+c3-sec*c3;\nfloat3 col=lerp(mulC,scrC,0.0)*float3(1.0,1.0,1.0);\nfloat2 uvM=UV-0.5;\nuvM=float2(dot(uvM,float2(1.0,-0.0)),dot(uvM,float2(0.0,1.0)))+0.5;\nuvM=uvM*float2(1.0,-1.0)+(lerp(t+dmp.y,dmp.y,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvM=lerp(uvM,saturate(uvM),0.0);\nfloat m=dot(Texture2DSample(TexMask,TexMaskSampler,uvM),float4(0.0,0.0,1.0,0.0));\nm=lerp(m,1.0-m,0.0)*1.0;\nfloat2 uvD=UV-0.5;\nuvD=float2(dot(uvD,float2(1.0,-0.0)),dot(uvD,float2(0.0,1.0)))+0.5;\nuvD=uvD*float2(0.5,1.0)+(lerp(t+dmp1.z,dmp1.z+0.0,0.0))*float2(0.0,0.25)+float2(0.0,0.0);\nuvD=lerp(uvD,saturate(uvD),0.0);\nuvD+=float2(0.0,0.0);\nfloat d=dot(Texture2DSample(TexDissolve,TexDissolveSampler,uvD),float4(0.0,1.0,1.0,0.0));\nfloat field=lerp(d,m,0.5);\nfield=lerp(field,1.0-field,0.0);\nfloat S=1.0;\nfloat erosion=saturate(S*(field-1.0)+dmp1.x*1.0*(S+1.0));\nfloat shapeA=dot(base,float4(2.0,3.0,1.0,0.0))*1.0;\nfloat alpha=saturate(erosion*m*shapeA*max(curveColor.a,0.0)*max(curveAlpha,0.0)*saturate(VertexAlpha));\nfloat3 color=col*max(curveColor.rgb,0.0)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+     "intensity": 1.0,
+     "blend": "translucent",
+     "jiabeiAdjustments": [
+      "packed channel texture: colour from the Base_AlphaSwitch channel",
+      "M_SimpleEffect_S body rebuilt from the compiled game shader (operation order original)",
+      "per-particle table: 13 particles from the spawn-rate curve, colour/alpha from particle colour"
+     ],
+     "dynamicParameterCurves": [
+      "yumao001.Index 0 Param 3.FloatCurve",
+      "yumao001.Index 1 Param 1.FloatCurve"
+     ],
+     "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored (ChangliSlash reconstruction); colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+     "wpo": "// Sprite size over life from the original update script: SpriteSize = Initial x yumao001.Value.Scale Factor.FloatCurve\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float sizeScaleLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat sizeScale = lerp(sizeScaleLut[ci], sizeScaleLut[ci+1], cf);\nreturn (P-C)*(max(sizeScale,0.0)-1.0);\n",
+     "emission": {
+      "count": 13,
+      "lifetime": [
+       0.16001848654974568,
+       0.5627484863252
+      ],
+      "sizeMin": [
+       -2.4989509358646522,
+       4.5043286302935135
+      ],
+      "sizeMax": [
+       -1.5663703349992601,
+       10.99907859862296
+      ],
+      "radius": [
+       1.1102230246251565e-16,
+       1.1102230246251565e-16
+      ],
+      "height": 0.0,
+      "speed": [
+       2.002498439524476,
+       2.002498439524476
+      ],
+      "positionOffset": [
+       0.9999999999999846,
+       1.2363448114162648e-07,
+       -1.236344811416265e-07
+      ],
+      "sizeFollowsScale": true,
+      "drag": 99.0,
+      "source": "original bytecode: spawn-rate curve integrated, spawn script evaluated at each birth time with the real curve LUTs",
+      "velocityMode": 1,
+      "coneDirection": [
+       0.04993749420593744,
+       0.9987523450147349,
+       -6.174011452077971e-09
+      ],
+      "coneAngle": 0.0,
+      "sizeCurve": "yumao001.Value.Scale Factor.FloatCurve",
+      "faceCamera": false,
+      "velocityAligned": true,
+      "pivot": [
+       0.5,
+       1.0
+      ],
+      "table": [
+       {
+        "delay": 0.03333333333333333,
+        "lifetime": 0.16001848654974568,
+        "size": [
+         -1.5663703349992601,
+         4.5043286302935135
+        ],
+        "position": [
+         -12.863806530259314,
+         172.91148079925918,
+         -2.5936726096852945
+        ],
+        "velocity": [
+         32.6170755548778,
+         2.5268232080418596,
+         -0.001495699073940221
+        ],
+        "color": [
+         1.5016585435729533,
+         0.32071333700657434,
+         0.12898704629333432,
+         0.21539678072619334
+        ]
+       },
+       {
+        "delay": 0.05,
+        "lifetime": 0.1790243397559375,
+        "size": [
+         -1.7869005715665751,
+         6.160940481420321
+        ],
+        "position": [
+         -83.36529377481622,
+         156.15662306836572,
+         0.39039092133267583
+        ],
+        "velocity": [
+         29.13248920812399,
+         15.665938658615877,
+         0.00022053937765638437
+        ],
+        "color": [
+         1.5714187692971,
+         0.339910173524122,
+         0.23386625470715702,
+         0.22309516608929
+        ]
+       },
+       {
+        "delay": 0.05,
+        "lifetime": 0.1790243397559375,
+        "size": [
+         -1.7869005715665751,
+         6.160940481420321
+        ],
+        "position": [
+         -83.36529377481622,
+         156.15662306836572,
+         0.39039092133267583
+        ],
+        "velocity": [
+         29.13248920812399,
+         15.665938658615877,
+         0.00022053937765638437
+        ],
+        "color": [
+         1.5714187692971,
+         0.339910173524122,
+         0.23386625470715702,
+         0.22309516608929
+        ]
+       },
+       {
+        "delay": 0.06666666666666667,
+        "lifetime": 0.213087090624166,
+        "size": [
+         -2.0761866761391152,
+         8.27952931458587
+        ],
+        "position": [
+         -140.17838942277155,
+         84.94069169762355,
+         1.6988135196719112
+        ],
+        "velocity": [
+         17.241435781896797,
+         28.646650818346536,
+         0.0010364056196116647
+        ],
+        "color": [
+         1.4661599274789134,
+         0.3224836118906327,
+         0.3479561935926353,
+         0.23079355367458332
+        ]
+       },
+       {
+        "delay": 0.06666666666666667,
+        "lifetime": 0.213087090624166,
+        "size": [
+         -2.0761866761391152,
+         8.27952931458587
+        ],
+        "position": [
+         -140.17838942277155,
+         84.94069169762355,
+         1.6988135196719112
+        ],
+        "velocity": [
+         17.241435781896797,
+         28.646650818346536,
+         0.0010364056196116647
+        ],
+        "color": [
+         1.4661599274789134,
+         0.3224836118906327,
+         0.3479561935926353,
+         0.23079355367458332
+        ]
+       },
+       {
+        "delay": 0.08333333333333333,
+        "lifetime": 0.26949427498770334,
+        "size": [
+         -2.3439788290644823,
+         10.134576331953754
+        ],
+        "position": [
+         -143.7445610473975,
+         -12.553479983648911,
+         -0.47075545858802414
+        ],
+        "velocity": [
+         -2.9606549577696213,
+         32.75179125696684,
+         -0.00032625094032272516
+        ],
+        "color": [
+         1.2628245841964418,
+         0.2833309168139083,
+         0.43880837608206086,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.08333333333333333,
+        "lifetime": 0.26949427498770334,
+        "size": [
+         -2.3439788290644823,
+         10.134576331953754
+        ],
+        "position": [
+         -143.7445610473975,
+         -12.553479983648911,
+         -0.47075545858802414
+        ],
+        "velocity": [
+         -2.9606549577696213,
+         32.75179125696684,
+         -0.00032625094032272516
+        ],
+        "color": [
+         1.2628245841964418,
+         0.2833309168139083,
+         0.43880837608206086,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.09999999999999999,
+        "lifetime": 0.36464482050300995,
+        "size": [
+         -2.4989509358646522,
+         10.99907859862296
+        ],
+        "position": [
+         -85.62556889529868,
+         -86.94225157537389,
+         -4.781823280215153
+        ],
+        "velocity": [
+         -22.95100211864543,
+         22.463177489978502,
+         -0.0039156411173459854
+        ],
+        "color": [
+         1.0332502995947104,
+         0.23626422697818406,
+         0.473845910341267,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.09999999999999999,
+        "lifetime": 0.36464482050300995,
+        "size": [
+         -2.4989509358646522,
+         10.99907859862296
+        ],
+        "position": [
+         -85.62556889529868,
+         -86.94225157537389,
+         -4.781823280215153
+        ],
+        "velocity": [
+         -22.95100211864543,
+         22.463177489978502,
+         -0.0039156411173459854
+        ],
+        "color": [
+         1.0332502995947104,
+         0.23626422697818406,
+         0.473845910341267,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.11666666666666665,
+        "lifetime": 0.4734012981968748,
+        "size": [
+         -2.3703151930453905,
+         9.500770433159813
+        ],
+        "position": [
+         -1.7756339708540971,
+         -101.08820287636365,
+         -7.328894208149761
+        ],
+        "velocity": [
+         -31.30744739947387,
+         0.4501677245892523,
+         -0.007229911069771306
+        ],
+        "color": [
+         0.7025931239613689,
+         0.1617119606213463,
+         0.3647158217968931,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.11666666666666665,
+        "lifetime": 0.4734012981968748,
+        "size": [
+         -2.3703151930453905,
+         9.500770433159813
+        ],
+        "position": [
+         -1.7756339708540971,
+         -101.08820287636365,
+         -7.328894208149761
+        ],
+        "velocity": [
+         -31.30744739947387,
+         0.4501677245892523,
+         -0.007229911069771306
+        ],
+        "color": [
+         0.7025931239613689,
+         0.1617119606213463,
+         0.3647158217968931,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.13333333333333333,
+        "lifetime": 0.5627484863252,
+        "size": [
+         -2.1296702501802875,
+         6.584547271213687
+        ],
+        "position": [
+         60.018835245084084,
+         -61.35325662920039,
+         -5.521792973921522
+        ],
+        "velocity": [
+         -21.79218140658773,
+         -21.457808960009007,
+         -0.006420267348366697
+        ],
+        "color": [
+         0.24661236419783603,
+         0.055365846530807075,
+         0.13073333866714135,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.13333333333333333,
+        "lifetime": 0.5627484863252,
+        "size": [
+         -2.1296702501802875,
+         6.584547271213687
+        ],
+        "position": [
+         60.018835245084084,
+         -61.35325662920039,
+         -5.521792973921522
+        ],
+        "velocity": [
+         -21.79218140658773,
+         -21.457808960009007,
+         -0.006420267348366697
+        ],
+        "color": [
+         0.24661236419783603,
+         0.055365846530807075,
+         0.13073333866714135,
+         1.0
+        ]
+       }
+      ]
+     },
+     "tuning": {}
+    }
+   ]
+  },
+  {
+   "name": "NS_Reference_Changli_R1a01_N_Dg1__yumao002",
+   "source": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1",
+   "generate": true,
+   "layers": [
+    {
+     "name": "yumao002",
+     "sprite": true,
+     "sortOrder": 5,
+     "pivot": [
+      0,
+      0,
+      0
+     ],
+     "id": "Reference_Changli_R1a01_N_Dg1_yumao002__solo",
+     "sourceMaterial": "/Game/Aki/Effect/Materials/MI_Sprite/MI_Trans_Wenli_140031_S1",
+     "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1",
+     "sourceEmitter": "yumao002_4",
+     "textures": {
+      "TexBase": "T_Changli_140006_wings_Trail",
+      "TexSecond": "T_Color_40010",
+      "TexNoise": "T_Normal_011",
+      "TexMask": "T_Changli_140006_wings_Trail",
+      "TexDissolve": "T_Wenli_20002"
+     },
+     "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(0.015,0.00088379945,0.0009259361,1.0),float4(1.57038195,0.337830596,0.189959681,1.0),float4(1.21266494,0.273293655,0.452277857,1.0),float4(0.319721334,0.0725086809,0.170419762,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0),float4(0.014999986,0.0008838028,0.00092592835,1.0)};\nfloat4 curveColor = float4(VertexColor.rgb, 1.0);  // per-particle colour (table)\nconst float curveAlphaLut[24] = {0.2,0.220082767,1.0,1.0,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06,1.1324883e-06};\nfloat curveAlpha = 1.0;  // per-particle alpha is in VertexAlpha (table)\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nfloat dyn0p1=0.0;\nfloat dyn0p2=0.0;\nconst float dyn0p3Lut[24] = {0.0,0.0352419219,0.116731981,0.220930737,0.321769472,0.392397461,0.438300962,0.48350953,0.529421452,0.575569716,0.621548984,0.666851629,0.711093467,0.753878922,0.794587766,0.832909025,0.868476804,0.900666657,0.929053225,0.953389235,0.973125048,0.987563011,0.996653157,1.0};\nfloat dyn0p3 = lerp(dyn0p3Lut[ci], dyn0p3Lut[ci+1], cf);\nconst float dyn1p1Lut[24] = {0.8,0.797691096,0.79088693,0.779581377,0.763768226,0.743390206,0.7184154,0.688914078,0.654880041,0.616307127,0.572379935,0.509633916,0.428208205,0.336612533,0.243416523,0.15758813,0.0874976235,0.0278831677,-0.0300871106,-0.0837630691,-0.130306906,-0.167022833,-0.19116813,-0.2};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\n// M_SimpleEffect_MP: operation order from the compiled game shader; see simple_effect_body().\nfloat t=a*0.5;\nfloat4 dmp=float4(0.0,0.0,dyn0p3,1.0);\nfloat3 dmp1=float3(dyn1p1,1.0,0.0);\nfloat2 uvS=UV-0.5;\nuvS=float2(dot(uvS,float2(6.123234e-17,-1.0)),dot(uvS,float2(1.0,6.123234e-17)))+0.5;\nuvS=uvS*float2(1.0,1.0)+(lerp(t+dmp.w,dmp.w,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvS=lerp(uvS,saturate(uvS),0.0);\nfloat3 sec=Texture2DSample(TexSecond,TexSecondSampler,uvS).rgb;\nsec=lerp(sec,dot(sec,float3(0.3,0.59,0.11)).xxx,0.0)*1.0;\nfloat2 uvB=UV-0.5;\nuvB=float2(dot(uvB,float2(1.0,-0.0)),dot(uvB,float2(0.0,1.0)))+0.5;\nuvB=uvB*float2(1.0,-1.0)+(lerp(t+dmp.x,dmp.x,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvB=lerp(uvB,saturate(uvB),0.0);\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,uvB);\nfloat3 c=lerp(base.rgb,dot(base,float4(0.0,2.0,0.0,0.0)).xxx,1.0);\nfloat3 p=step(1e-6,c)*pow(max(c,1e-6),1.0)*1.0;\nfloat3 c3=lerp(p,c*1.0,0.0)+1.0;\nfloat3 mulC=c3*sec;\nfloat3 scrC=sec+c3-sec*c3;\nfloat3 col=lerp(mulC,scrC,0.0)*float3(1.0,1.0,1.0);\nfloat2 uvM=UV-0.5;\nuvM=float2(dot(uvM,float2(1.0,-0.0)),dot(uvM,float2(0.0,1.0)))+0.5;\nuvM=uvM*float2(1.0,-1.0)+(lerp(t+dmp.y,dmp.y,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvM=lerp(uvM,saturate(uvM),0.0);\nfloat m=dot(Texture2DSample(TexMask,TexMaskSampler,uvM),float4(0.0,0.0,1.0,0.0));\nm=lerp(m,1.0-m,0.0)*1.0;\nfloat2 uvD=UV-0.5;\nuvD=float2(dot(uvD,float2(1.0,-0.0)),dot(uvD,float2(0.0,1.0)))+0.5;\nuvD=uvD*float2(-1.0,1.0)+(lerp(t+dmp1.z,dmp1.z+0.0,0.0))*float2(0.0,0.0)+float2(0.0,0.0);\nuvD=lerp(uvD,saturate(uvD),0.0);\nuvD+=float2(0.0,0.0);\nfloat d=dot(Texture2DSample(TexDissolve,TexDissolveSampler,uvD),float4(0.0,1.0,1.0,0.0));\nfloat field=lerp(d,m,0.5);\nfield=lerp(field,1.0-field,0.0);\nfloat S=1.0;\nfloat erosion=saturate(S*(field-1.0)+dmp1.x*1.0*(S+1.0));\nfloat shapeA=dot(base,float4(0.0,3.0,0.0,0.0))*1.0;\nfloat alpha=saturate(erosion*m*shapeA*max(curveColor.a,0.0)*max(curveAlpha,0.0)*saturate(VertexAlpha));\nfloat3 color=col*max(curveColor.rgb,0.0)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+     "intensity": 1.0,
+     "blend": "translucent",
+     "jiabeiAdjustments": [
+      "packed channel texture: colour from the Base_AlphaSwitch channel",
+      "M_SimpleEffect_S body rebuilt from the compiled game shader (operation order original)",
+      "per-particle table: 13 particles from the spawn-rate curve, colour/alpha from particle colour"
+     ],
+     "dynamicParameterCurves": [
+      "yumao002.Index 0 Param 3.FloatCurve",
+      "yumao002.Index 1 Param 1.FloatCurve"
+     ],
+     "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored (ChangliSlash reconstruction); colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+     "wpo": "// Sprite size over life from the original update script: SpriteSize = Initial x yumao002.Value.Scale Factor.FloatCurve\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float sizeScaleLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat sizeScale = lerp(sizeScaleLut[ci], sizeScaleLut[ci+1], cf);\nreturn (P-C)*(max(sizeScale,0.0)-1.0);\n",
+     "emission": {
+      "count": 13,
+      "lifetime": [
+       0.16001848654974568,
+       0.5627484863252
+      ],
+      "sizeMin": [
+       -2.9987412421968487,
+       4.5043286302935135
+      ],
+      "sizeMax": [
+       -1.87964447668947,
+       10.99907859862296
+      ],
+      "radius": [
+       1.1102230246251565e-16,
+       1.1102230246251565e-16
+      ],
+      "height": 0.0,
+      "speed": [
+       2.002498439524476,
+       2.002498439524476
+      ],
+      "positionOffset": [
+       0.9999999999999846,
+       1.2363448114162648e-07,
+       -1.236344811416265e-07
+      ],
+      "sizeFollowsScale": true,
+      "drag": 99.0,
+      "source": "original bytecode: spawn-rate curve integrated, spawn script evaluated at each birth time with the real curve LUTs",
+      "velocityMode": 1,
+      "coneDirection": [
+       0.04993749420593744,
+       0.9987523450147349,
+       -6.174011452077971e-09
+      ],
+      "coneAngle": 0.0,
+      "sizeCurve": "yumao002.Value.Scale Factor.FloatCurve",
+      "faceCamera": false,
+      "velocityAligned": true,
+      "pivot": [
+       0.5,
+       1.0
+      ],
+      "table": [
+       {
+        "delay": 0.03333333333333333,
+        "lifetime": 0.16001848654974568,
+        "size": [
+         -1.87964447668947,
+         4.5043286302935135
+        ],
+        "position": [
+         -12.86376729621895,
+         172.91095342689852,
+         -2.5936646990986714
+        ],
+        "velocity": [
+         32.6170755548778,
+         2.5268232080418596,
+         -0.0014956990739402206
+        ],
+        "color": [
+         1.5016585435729533,
+         0.32071333700657434,
+         0.12898704629333432,
+         0.21539678072619334
+        ]
+       },
+       {
+        "delay": 0.05,
+        "lifetime": 0.1790243397559375,
+        "size": [
+         -2.144280771085949,
+         6.160940481420321
+        ],
+        "position": [
+         -83.36538482449727,
+         156.1567936190839,
+         0.3903913477087763
+        ],
+        "velocity": [
+         29.132489208123992,
+         15.665938658615877,
+         0.0002205393776563844
+        ],
+        "color": [
+         1.5714187692971,
+         0.339910173524122,
+         0.23386625470715702,
+         0.22309516608929
+        ]
+       },
+       {
+        "delay": 0.05,
+        "lifetime": 0.1790243397559375,
+        "size": [
+         -2.144280771085949,
+         6.160940481420321
+        ],
+        "position": [
+         -83.36538482449727,
+         156.1567936190839,
+         0.3903913477087763
+        ],
+        "velocity": [
+         29.132489208123992,
+         15.665938658615877,
+         0.0002205393776563844
+        ],
+        "color": [
+         1.5714187692971,
+         0.339910173524122,
+         0.23386625470715702,
+         0.22309516608929
+        ]
+       },
+       {
+        "delay": 0.06666666666666667,
+        "lifetime": 0.213087090624166,
+        "size": [
+         -2.491424110367234,
+         8.27952931458587
+        ],
+        "position": [
+         -140.178650732341,
+         84.94085003740523,
+         1.698816686466959
+        ],
+        "velocity": [
+         17.241435781896797,
+         28.646650818346536,
+         0.001036405619611665
+        ],
+        "color": [
+         1.4661599274789134,
+         0.3224836118906327,
+         0.3479561935926353,
+         0.23079355367458332
+        ]
+       },
+       {
+        "delay": 0.06666666666666667,
+        "lifetime": 0.213087090624166,
+        "size": [
+         -2.491424110367234,
+         8.27952931458587
+        ],
+        "position": [
+         -140.178650732341,
+         84.94085003740523,
+         1.698816686466959
+        ],
+        "velocity": [
+         17.241435781896797,
+         28.646650818346536,
+         0.001036405619611665
+        ],
+        "color": [
+         1.4661599274789134,
+         0.3224836118906327,
+         0.3479561935926353,
+         0.23079355367458332
+        ]
+       },
+       {
+        "delay": 0.08333333333333333,
+        "lifetime": 0.26949427498770334,
+        "size": [
+         -2.8127747066469992,
+         10.134576331953754
+        ],
+        "position": [
+         -143.74487429789724,
+         -12.553507340397921,
+         -0.4707564844660231
+        ],
+        "velocity": [
+         -2.960654957769621,
+         32.75179125696684,
+         -0.00032625094032272506
+        ],
+        "color": [
+         1.2628245841964418,
+         0.2833309168139083,
+         0.43880837608206086,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.08333333333333333,
+        "lifetime": 0.26949427498770334,
+        "size": [
+         -2.8127747066469992,
+         10.134576331953754
+        ],
+        "position": [
+         -143.74487429789724,
+         -12.553507340397921,
+         -0.4707564844660231
+        ],
+        "velocity": [
+         -2.960654957769621,
+         32.75179125696684,
+         -0.00032625094032272506
+        ],
+        "color": [
+         1.2628245841964418,
+         0.2833309168139083,
+         0.43880837608206086,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.09999999999999999,
+        "lifetime": 0.36464482050300995,
+        "size": [
+         -2.9987412421968487,
+         10.99907859862296
+        ],
+        "position": [
+         -85.62573717202842,
+         -86.94242243973088,
+         -4.781832677753695
+        ],
+        "velocity": [
+         -22.95100211864543,
+         22.463177489978502,
+         -0.003915641117345987
+        ],
+        "color": [
+         1.0332502995947104,
+         0.23626422697818406,
+         0.473845910341267,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.09999999999999999,
+        "lifetime": 0.36464482050300995,
+        "size": [
+         -2.9987412421968487,
+         10.99907859862296
+        ],
+        "position": [
+         -85.62573717202842,
+         -86.94242243973088,
+         -4.781832677753695
+        ],
+        "velocity": [
+         -22.95100211864543,
+         22.463177489978502,
+         -0.003915641117345987
+        ],
+        "color": [
+         1.0332502995947104,
+         0.23626422697818406,
+         0.473845910341267,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.11666666666666665,
+        "lifetime": 0.4734012981968748,
+        "size": [
+         -2.8443783446799045,
+         9.500770433159813
+        ],
+        "position": [
+         -1.7756364075978917,
+         -101.0883416020555,
+         -7.328904265761731
+        ],
+        "velocity": [
+         -31.307447399473872,
+         0.45016772458925225,
+         -0.007229911069771305
+        ],
+        "color": [
+         0.7025931239613689,
+         0.1617119606213463,
+         0.3647158217968931,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.11666666666666665,
+        "lifetime": 0.4734012981968748,
+        "size": [
+         -2.8443783446799045,
+         9.500770433159813
+        ],
+        "position": [
+         -1.7756364075978917,
+         -101.0883416020555,
+         -7.328904265761731
+        ],
+        "velocity": [
+         -31.307447399473872,
+         0.45016772458925225,
+         -0.007229911069771305
+        ],
+        "color": [
+         0.7025931239613689,
+         0.1617119606213463,
+         0.3647158217968931,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.13333333333333333,
+        "lifetime": 0.5627484863252,
+        "size": [
+         -2.555604401766936,
+         6.584547271213687
+        ],
+        "position": [
+         60.01886052269429,
+         -61.35328246881723,
+         -5.5217952994869846
+        ],
+        "velocity": [
+         -21.79218140658773,
+         -21.457808960009007,
+         -0.006420267348366695
+        ],
+        "color": [
+         0.24661236419783603,
+         0.055365846530807075,
+         0.13073333866714135,
+         1.0
+        ]
+       },
+       {
+        "delay": 0.13333333333333333,
+        "lifetime": 0.5627484863252,
+        "size": [
+         -2.555604401766936,
+         6.584547271213687
+        ],
+        "position": [
+         60.01886052269429,
+         -61.35328246881723,
+         -5.5217952994869846
+        ],
+        "velocity": [
+         -21.79218140658773,
+         -21.457808960009007,
+         -0.006420267348366695
+        ],
+        "color": [
+         0.24661236419783603,
+         0.055365846530807075,
+         0.13073333866714135,
+         1.0
+        ]
+       }
+      ]
+     },
+     "tuning": {}
+    }
+   ]
+  }
+ ],
+ "decals": [],
+ "postProcesses": [],
+ "lights": [],
+ "ghosts": [],
+ "ghostWindows": [],
+ "materialControllers": [],
+ "placements": [],
+ "skippedLayers": [],
+ "skippedChildren": [],
+ "unplacedEvents": [],
+ "reconstructionChoices": [
+  "Shader / mesh WPO / sprite emission reconstruction is ChangliSlash/prepare_attack.py, imported unchanged.",
+  "Lifetime / intensity per mesh layer by name analogy with Changli; not in the cooked export. Tune with <Stage>Tuning.json.",
+  "Render/Common default textures missing from the export use generated solid placeholders (substitute=true).",
+  "timelineScale = 1: the project montages play the original 30 fps sequences at their original length."
+ ],
+ "solo": true
+}

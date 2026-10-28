@@ -1,0 +1,79 @@
+{
+  "_comment": "PC_UiView_Fight_Prefab 在键鼠、单人、大世界探索时的显隐（预制体默认存的是手柄状态），按路径正则匹配，后面的覆盖前面的。依据：原作 SkillButtonPanel / BattleView 脚本的运行时切换 + 实机截图。",
+  "active": {
+    "/PnlSkillGp$": false,
+    "/PnlRoleHeadGp$": false,
+    "/PnlTopRightGp$": false,
+    "/PnlLevelSeqBtnRootGp$": false,
+    "/PnlBossHp$": false,
+    "/PnlCountDown$": false,
+    "/PnlScore$": false,
+    "/PnlCenter$": false,
+    "/PnlStarLv$": false,
+    "/PnlLeave$": false,
+    "/PnlLevel$": false,
+    "/PnlLapsPos$": false,
+    "/PnlNavigationEnter$": false,
+    "/PnlTipWarm$": false,
+    "/PnlMapBar$": false,
+    "/UIContainerActor268$": false,
+    "/UiItem_MiniMap/PnlMap/MapV2$": false,
+    "/PnlTop/BtnFightEnter3$": false,
+    "/PnlTop/BtnFightEnter3#3$": false,
+    "/PnlTop/ButtonL/BtnFightEnter3$": true,
+    "/PnlTop/ButtonL/BtnFightEnterPhone$": true,
+    "/PnlTop/.*PnlHotKeyLayout$": false,
+    "/PnlRoleHead$": true,
+    "/PnlRoleHead/PC_FightRoleHead#3$": false,
+    "/FightRoleHead/UiItem_KeyCombine/(PnlAdd|UiItem_KeyItem#1)$": false,
+    "/FightRoleHead/PnlCanvas/(PnlState|SprSkill)$": false,
+    "/PnlSkill$": true,
+    "/PnlSkill/PnlSkillFirst$": true,
+    "/PnlSkillFirst/PnlControl/PC_TogAim$": false,
+    "/PnlSkillFirst/PC_FightSkill(#1)?$": false,
+    "/FightSkill/PnlAdapt/(UISprQuan|SprState)$": false,
+    "/UiItem_HotKeyCombine/(TxtAdd|UiItem_HotKey#1)$": false,
+    "/PnlVLayout/TxtSkillName$": false,
+    "/UiItem_Mission/PnlActMission$": false,
+    "/PnlIcon/SprIcon/UISpriteActor(191|349)$": false,
+    "/PnlChildAdjust/PnlChildI[^/]*$": false,
+    "/PnlChildAdjust/AniLightC[^/]*$": false,
+    "/PnlSubTitle/UIContainerActor63$": false,
+    "/PnlParent/TxtParentDistance$": false,
+    "/PnlInfo/ShortcutNode$": false,
+    "/UiItem_MissionNormal/PnlComplete$": false,
+    "/UiItem_Mission/PnlOffset/PnlLayout/PnlGuide$": false,
+    "/PnlChat/LayoutContainer$": false,
+    "/BtnFightEnterPhone/PnlOffset/PnlHeadOffset$": false,
+    "/FightRoleHead/PnlEffect$": true,
+    "/FightRoleHead/UiItem_KeyCombine$": true
+  },
+  "texts": {
+    "/TxtLv$": "<size=16>Lv.</size>90",
+    "/PnlHpAdjust/TxtHpNum$": "16276/16276",
+    "/PnlTitle/TxtTitle$": "苦昼夜短（三）",
+    "/PnlSubTitle/TxtParent$": "和景燃聊聊",
+    "/PnlChildAdjust/PnlChild/[^/]+/[^/]*Txt[^/]*$": "请前往玄幽东岳",
+    "/TxtHpNum/PnlMask/TxtNumMask$": "16276/16276"
+  },
+  "_teamNote": "队伍槽三个结构相同：选中效果组 PnlChoose（圆环 SprCircle = Frame、光环、辉光）由 HUD 代码只在在场时显示；按键数字在场时隐藏（和原作一致）。",
+  "textColors": {
+    "/PnlChildAdjust/PnlChild/[^/]+/[^/]*Txt[^/]*$": [
+      240,
+      200,
+      90,
+      255
+    ]
+  },
+  "_textNote": "HP 数字是两层：底下白字 TxtHpNum，上面遮罩里的深灰字 TxtNumMask（只在白色血条范围内显示）。任务目标行的黄色原作是运行时富文本上的色。",
+  "colors": {
+    "/FightRoleHead/PnlEffect/PnlChoose$": [
+      255,
+      255,
+      255,
+      255
+    ]
+  },
+  "_colorNote": "PnlChoose 原作默认透明，选中时由动画显出；这里常显，在场 / 不在场的区别交给 HUD 代码给 Frame 着色。",
+  "_lvNote": "Lv 文字是原作本地化文本 LevelShowNew：<size=16>Lv.</size>{0}（基础字号 32）。"
+}

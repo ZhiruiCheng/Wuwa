@@ -6,7 +6,7 @@
 #include "Engine/World.h"
 #include "InputAction.h"
 #include "UObject/Script.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "Game/Input/WuwaInputRouterComponent.h"

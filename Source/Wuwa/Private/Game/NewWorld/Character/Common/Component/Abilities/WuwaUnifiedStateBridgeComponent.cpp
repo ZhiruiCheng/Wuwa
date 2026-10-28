@@ -1,5 +1,5 @@
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaUnifiedStateBridgeComponent.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "AbilitySystemGlobals.h"
 #include "AbilitySystemComponent.h"
 #include "GameFramework/Actor.h"

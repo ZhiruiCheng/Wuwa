@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2846331115",
+    "Type": "User",
+    "GUID": "{EDFA7331-6622-4E12-9CBF-6F97ED731435}",
+    "Language": "SFX",
+    "Hash": "{BF0A5F63-7DCB-F248-9438-1623CC0830E9}",
+    "ObjectPath": "role_foley_kelaita",
+    "ShortName": "role_foley_kelaita",
+    "Path": "role_foley_kelaita.bnk"
+   }
+  ],
+  "FileHash": "{5AC71541-5E72-8177-D211-E7C081D35235}"
+ }
+}

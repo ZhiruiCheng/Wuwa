@@ -1,5 +1,5 @@
 using System.Runtime.CompilerServices;
-using ManagedWuwa.Game.Common;
+using ManagedWuwa.Core.Tag;
 using UnrealSharp.Engine.Core.Modules;
 
 namespace ManagedWuwa;

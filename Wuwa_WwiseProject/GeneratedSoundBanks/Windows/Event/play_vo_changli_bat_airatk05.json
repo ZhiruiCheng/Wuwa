@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3538349584",
+    "Type": "Event",
+    "GUID": "{5E8E4010-0790-4A7E-976E-2D2BDCF15D4A}",
+    "Language": "SFX",
+    "Hash": "{CCF792B2-4E9A-FD49-0AB4-288EA3438638}",
+    "ObjectPath": "play_vo_changli_bat_airatk05",
+    "ShortName": "play_vo_changli_bat_airatk05",
+    "Path": "Event/play_vo_changli_bat_airatk05.bnk",
+    "Media": [
+     {
+      "Id": "112299850",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk05_02.wav",
+      "Path": "Media/112299850.wem",
+      "CachePath": "B0/{B076E634-F807-1444-8A4C-A7449EF3BB2D}.wem"
+     },
+     {
+      "Id": "576459609",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk05_01.wav",
+      "Path": "Media/576459609.wem",
+      "CachePath": "DC/{DCEB5BD4-25F3-FBD0-1308-492968239058}.wem"
+     },
+     {
+      "Id": "736768429",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk05_03.wav",
+      "Path": "Media/736768429.wem",
+      "CachePath": "46/{466FBFC6-0CA2-E14E-3BEA-31E7CBBC1AF0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3538349584",
+      "Name": "play_vo_changli_bat_airatk05",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_airatk05",
+      "GUID": "{5E8E4010-0790-4A7E-976E-2D2BDCF15D4A}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.5912708",
+      "MediaRefs": [
+       {
+        "Id": "112299850"
+       },
+       {
+        "Id": "576459609"
+       },
+       {
+        "Id": "736768429"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9C0FABA3-4DE1-2E87-E083-E438F8719DB5}"
+ }
+}

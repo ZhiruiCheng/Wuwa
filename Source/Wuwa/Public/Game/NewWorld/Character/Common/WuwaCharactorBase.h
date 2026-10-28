@@ -158,8 +158,6 @@ public:
 	
 	
 #pragma region Init
-	virtual  void InitHUD();
-	
 	virtual void InitInitialAbilities();
 #pragma endregion
 	

@@ -1,0 +1,15 @@
+{
+ "_doc": "技能 GA 的打断等级（-run=WuwaBlueprintDefaultsSetup -Recipe=ArtSource/Combat/skill_interrupt_levels.json -Apply）。数值取原作角色 Data/DT_SkillInfo 的 InterruptLevel：长离 1205001~1205004 = 2、1205005 = 3；嘉贝莉娜 1208001~1208004 = 2。冲刺 GA（1205801 / 1208801）和嘉贝莉娜前冲 1208601（原作 7）不在这里：闪避在原作角色技能表里没有行，等级未知，两者保持原来的 133，免得改变闪避与前冲之间的让位。跳跃按原作 CommonParam jump_priority = 8 打断技能。",
+ "source": "原作 DT_SkillInfo.InterruptLevel",
+ "blueprints": [
+  { "blueprint": "/Game/Characters/Role/changli/GA/GA_Attack1", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/changli/GA/GA_Attack2", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/changli/GA/GA_Attack3", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/changli/GA/GA_Attack4", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/changli/GA/GA_Attack5", "properties": { "InterruptLevel": "3" } },
+  { "blueprint": "/Game/Characters/Role/jiabei/GA/GA_Attack1", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/jiabei/GA/GA_Attack2", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/jiabei/GA/GA_Attack3", "properties": { "InterruptLevel": "2" } },
+  { "blueprint": "/Game/Characters/Role/jiabei/GA/GA_Attack4", "properties": { "InterruptLevel": "2" } }
+ ]
+}

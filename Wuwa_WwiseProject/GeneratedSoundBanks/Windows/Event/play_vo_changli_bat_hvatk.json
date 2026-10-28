@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "563736081",
+    "Type": "Event",
+    "GUID": "{C92F7A58-7FE1-4E90-ABA4-89924D94FCE9}",
+    "Language": "SFX",
+    "Hash": "{AA9237EE-0065-F794-1E9A-277F2D820D2F}",
+    "ObjectPath": "play_vo_changli_bat_hvatk",
+    "ShortName": "play_vo_changli_bat_hvatk",
+    "Path": "Event/play_vo_changli_bat_hvatk.bnk",
+    "Media": [
+     {
+      "Id": "283528164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_hvatk_01.wav",
+      "Path": "Media/283528164.wem",
+      "CachePath": "81/{817EB415-C977-F96C-5B56-5BD3CD9D4F15}.wem"
+     },
+     {
+      "Id": "499164815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_hvatk_03.wav",
+      "Path": "Media/499164815.wem",
+      "CachePath": "E8/{E80A8FF6-EBB3-3B64-65A1-A0B132A40A6D}.wem"
+     },
+     {
+      "Id": "903552531",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_hvatk_02.wav",
+      "Path": "Media/903552531.wem",
+      "CachePath": "37/{37FF38B0-4BF7-7559-3F66-C2722693E828}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "563736081",
+      "Name": "play_vo_changli_bat_hvatk",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_hvatk",
+      "GUID": "{C92F7A58-7FE1-4E90-ABA4-89924D94FCE9}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.64635414",
+      "MediaRefs": [
+       {
+        "Id": "283528164"
+       },
+       {
+        "Id": "499164815"
+       },
+       {
+        "Id": "903552531"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3551726F-93E0-B30D-CCB4-61A0D6C596E3}"
+ }
+}

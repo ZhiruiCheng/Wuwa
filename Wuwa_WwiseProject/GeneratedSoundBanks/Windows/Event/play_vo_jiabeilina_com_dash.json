@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2069422465",
+    "Type": "Event",
+    "GUID": "{8D185957-50D1-4C94-B03A-2B08C3DB9A84}",
+    "Language": "SFX",
+    "Hash": "{527D3B49-9652-9DE8-D554-E0B16285DCBE}",
+    "ObjectPath": "play_vo_jiabeilina_com_dash",
+    "ShortName": "play_vo_jiabeilina_com_dash",
+    "Path": "Event/play_vo_jiabeilina_com_dash.bnk",
+    "Media": [
+     {
+      "Id": "203995030",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_dash_01_tone.wav",
+      "Path": "Media/203995030.wem",
+      "CachePath": "24/{241C208F-31CA-E6C3-6B1A-935CD30CD4BA}.wem"
+     },
+     {
+      "Id": "244204481",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_dash_03_tone.wav",
+      "Path": "Media/244204481.wem",
+      "CachePath": "FE/{FE8FC8C2-F90A-2BF1-1A3B-0F3C3D550D47}.wem"
+     },
+     {
+      "Id": "769468269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_com_dash_02_tone.wav",
+      "Path": "Media/769468269.wem",
+      "CachePath": "18/{1876E010-A928-077C-D56F-02AD156873F2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2069422465",
+      "Name": "play_vo_jiabeilina_com_dash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_com_dash",
+      "GUID": "{8D185957-50D1-4C94-B03A-2B08C3DB9A84}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1734375",
+      "DurationMax": "0.435",
+      "MediaRefs": [
+       {
+        "Id": "203995030"
+       },
+       {
+        "Id": "244204481"
+       },
+       {
+        "Id": "769468269"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9A2F336C-D1D7-8BBB-EE51-DE6191FD1F33}"
+ }
+}

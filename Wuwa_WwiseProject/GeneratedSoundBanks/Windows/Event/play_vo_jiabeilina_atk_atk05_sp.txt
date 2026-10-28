@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2345791953	play_vo_jiabeilina_atk_atk05_sp			\Default Work Unit\Wuwa_Jiabei\play_vo_jiabeilina_atk_atk05_sp	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	193494372	zh_vo_jiabeilina_atk_atk05_sp_02_word	.cache\4D\{4D5B24AE-C193-3027-2FC0-841B0704679F}.wem	193494372.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_atk_atk05_sp_934797669\zh_vo_jiabeilina_atk_atk05_sp_02_word	
+	367975295	zh_vo_jiabeilina_atk_atk05_sp_01_word	.cache\DE\{DE69BE68-FE14-CACE-E87C-0398A5B65B93}.wem	367975295.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_atk_atk05_sp_934797669\zh_vo_jiabeilina_atk_atk05_sp_01_word	
+	758901268	zh_vo_jiabeilina_atk_atk05_sp_03_word	.cache\4E\{4E529981-52C2-D505-0EF4-3B8BA8595497}.wem	758901268.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_atk_atk05_sp_934797669\zh_vo_jiabeilina_atk_atk05_sp_03_word	
+

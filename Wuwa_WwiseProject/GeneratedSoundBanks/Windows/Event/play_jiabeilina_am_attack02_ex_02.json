@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "176562143",
+    "Type": "Event",
+    "GUID": "{87D61EBC-4BFC-4146-9D81-6485927AC032}",
+    "Language": "SFX",
+    "Hash": "{FCADC586-2330-1DE7-42C5-690026F98FBC}",
+    "ObjectPath": "play_jiabeilina_am_attack02_ex_02",
+    "ShortName": "play_jiabeilina_am_attack02_ex_02",
+    "Path": "Event/play_jiabeilina_am_attack02_ex_02.bnk",
+    "Media": [
+     {
+      "Id": "1013566318",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack02_EX_02.wav",
+      "Path": "Media/1013566318.wem",
+      "CachePath": "82/{821F9375-2CF7-4BFB-250C-F95528363582}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "176562143",
+      "Name": "play_jiabeilina_am_attack02_ex_02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_attack02_ex_02",
+      "GUID": "{87D61EBC-4BFC-4146-9D81-6485927AC032}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.408125",
+      "DurationMax": "2.408125",
+      "MediaRefs": [
+       {
+        "Id": "1013566318"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DEF3017B-B168-7FC0-BB01-AB6AFBD0176D}"
+ }
+}

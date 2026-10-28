@@ -1,6 +1,6 @@
 #include "Game/LGUI/Input/WuwaUIInputHandler.h"
 
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/WuwaInputTypes.h"
 #include "Game/LGUI/Core/WuwaUiManager.h"

@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2719218570",
+    "Type": "Event",
+    "GUID": "{E735E665-7486-4D3B-929E-CB462396C8B8}",
+    "Language": "SFX",
+    "Hash": "{00C8C366-336B-2FB1-6674-F7A418F6E57F}",
+    "ObjectPath": "play_jiabeilina_da_heavyattack_ex_hit_01",
+    "ShortName": "play_jiabeilina_da_heavyattack_ex_hit_01",
+    "Path": "Event/play_jiabeilina_da_heavyattack_ex_hit_01.bnk",
+    "Media": [
+     {
+      "Id": "436984397",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_Da_Heavyattack_Ex_Hit_01.wav",
+      "Path": "Media/436984397.wem",
+      "CachePath": "1C/{1CF9470F-A44B-CAD0-11B3-6ABB179239F0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2719218570",
+      "Name": "play_jiabeilina_da_heavyattack_ex_hit_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_da_heavyattack_ex_hit_01",
+      "GUID": "{E735E665-7486-4D3B-929E-CB462396C8B8}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9488125",
+      "DurationMax": "2.9488125",
+      "MediaRefs": [
+       {
+        "Id": "436984397"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{535D5024-BF4A-B6E3-8E39-D76A55098465}"
+ }
+}

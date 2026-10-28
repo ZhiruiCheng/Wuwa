@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	426448355	Play_BGM_Rinascita			\Default Work Unit\Wuwa_BGM\Play_BGM_Rinascita	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	877008488	BGM_Rinascita	.cache\E8\{E87375B2-98DC-9EC9-19A3-7F602A9BC925}.wem	877008488.wem	\Containers\Default Work Unit\Wuwa_BGM\BGM_Rinascita	
+

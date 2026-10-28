@@ -1,0 +1,29 @@
+{
+  "_comment": "伤害数字（原作 UiItem_DamageView_Prefab，DamageView 用）→ /Game/LGUI/HUD/Damage/UiItem_DamageView。动画节点上的补间 → UWuwaUiTweenGroup，数字上的逐字动画 → UIEffectTextAnimation。暴击 UINiagara 先不做。",
+  "prefab": "UI/UIResources/UiFight/Prefabs/UiItem_DamageView_Prefab",
+  "state": "damage_view.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": ["UINiagara"],
+  "include": ["/DamageNum/Text2$", "/UiItem_DamageView_Prefab/Anim[A-Za-z]+$"],
+  "motion": true,
+  "registries": [
+    {
+      "owner": "^/UiItem_DamageView_Prefab$",
+      "entries": [
+        "/DamageNum/Num$",
+        "/DamageNum$",
+        "/DamageNum/Text2$",
+        "/DamageNum/CriticalItem$",
+        "/AnimOwnDamage$",
+        "/AnimOwnCriticalDamage$",
+        "/AnimMonsterDamage$",
+        "/AnimMonsterCriticalDamage$",
+        "/AnimBuff$",
+        "/AnimSpecialDamage$",
+        "/AnimSpecialCriticalDamage$"
+      ]
+    }
+  ],
+  "_comment_registries": "UWuwaDamageNumber：0 数字 Num、1 DamageNum、2 文字 Text2、3 暴击节点、4~10 动画节点（原作 DamageView 注册表去掉 UINiagara 后的顺序）"
+}

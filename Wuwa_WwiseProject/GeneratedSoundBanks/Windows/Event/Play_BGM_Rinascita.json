@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "426448355",
+    "Type": "Event",
+    "GUID": "{656F1463-E337-4B46-9AF8-D2B1464F2D4B}",
+    "Language": "SFX",
+    "Hash": "{FAB200FC-5DA1-7594-52C1-ED897644F0F2}",
+    "ObjectPath": "Play_BGM_Rinascita",
+    "ShortName": "Play_BGM_Rinascita",
+    "Path": "Event/Play_BGM_Rinascita.bnk",
+    "Media": [
+     {
+      "Id": "877008488",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_BGM\\laguna_Carnival_FullMix.wav",
+      "Path": "Media/877008488.wem",
+      "CachePath": "E8/{E87375B2-98DC-9EC9-19A3-7F602A9BC925}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "426448355",
+      "Name": "Play_BGM_Rinascita",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_BGM\\Play_BGM_Rinascita",
+      "GUID": "{656F1463-E337-4B46-9AF8-D2B1464F2D4B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "877008488"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6440A64F-64AE-A03A-FBCA-67DDBAEBFE33}"
+ }
+}

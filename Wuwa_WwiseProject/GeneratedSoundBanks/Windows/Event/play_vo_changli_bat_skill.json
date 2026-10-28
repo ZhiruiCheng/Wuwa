@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3452675798",
+    "Type": "Event",
+    "GUID": "{A9A1AD33-842B-48CC-9C0B-C3139A4612F8}",
+    "Language": "SFX",
+    "Hash": "{701BACBC-1B2F-A221-709E-8FC491B8B0B6}",
+    "ObjectPath": "play_vo_changli_bat_skill",
+    "ShortName": "play_vo_changli_bat_skill",
+    "Path": "Event/play_vo_changli_bat_skill.bnk",
+    "Media": [
+     {
+      "Id": "358167022",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_skill_03.wav",
+      "Path": "Media/358167022.wem",
+      "CachePath": "BC/{BCFA0A64-E1CB-0FFC-2F68-45047F43ECD9}.wem"
+     },
+     {
+      "Id": "372361843",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_skill_01.wav",
+      "Path": "Media/372361843.wem",
+      "CachePath": "B6/{B69F75BE-E5AF-44D8-019C-19E6936623D0}.wem"
+     },
+     {
+      "Id": "609686113",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_skill_02.wav",
+      "Path": "Media/609686113.wem",
+      "CachePath": "68/{6824B32B-2CB0-081A-B0E5-737BA51686F2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3452675798",
+      "Name": "play_vo_changli_bat_skill",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_skill",
+      "GUID": "{A9A1AD33-842B-48CC-9C0B-C3139A4612F8}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "2.2746665",
+      "MediaRefs": [
+       {
+        "Id": "358167022"
+       },
+       {
+        "Id": "372361843"
+       },
+       {
+        "Id": "609686113"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2B2A6AA7-8C3D-AA75-69BA-6E5965AE522E}"
+ }
+}

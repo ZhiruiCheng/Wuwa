@@ -1,0 +1,86 @@
+{
+ "table": "/Game/Characters/Role/jiabei/Data/DT_SkillInfo_Jiabei",
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_SkillInfo SkillTag 动作标识（ACTION_TAG_MAP）",
+ "rows": [
+  {
+   "Name": "1208001",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack1\")))"
+  },
+  {
+   "Name": "1208002",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack2\")))"
+  },
+  {
+   "Name": "1208003",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack3\")))"
+  },
+  {
+   "Name": "1208004",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack4\")))"
+  },
+  {
+   "Name": "1208005",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack3\")))"
+  },
+  {
+   "Name": "1208008",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack2\"),(TagName=\"Role.Jiabei.Action.ExAttack2\")))"
+  },
+  {
+   "Name": "1208028",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Attack2\"),(TagName=\"Role.Jiabei.Action.ExAttack2\")))"
+  },
+  {
+   "Name": "1208011",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExAttack1\")))"
+  },
+  {
+   "Name": "1208012",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExAttack2\")))"
+  },
+  {
+   "Name": "1208014",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExAttack4\")))"
+  },
+  {
+   "Name": "1208009",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExAttack4\")))"
+  },
+  {
+   "Name": "1208006",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExFinisher\")))"
+  },
+  {
+   "Name": "1208016",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Heavy1\")))"
+  },
+  {
+   "Name": "1208017",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Heavy2\")))"
+  },
+  {
+   "Name": "1208018",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.Heavy3\")))"
+  },
+  {
+   "Name": "1208020",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExHeavy1\")))"
+  },
+  {
+   "Name": "1208021",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExHeavy2\")))"
+  },
+  {
+   "Name": "1208022",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExHeavy3\")))"
+  },
+  {
+   "Name": "1208401",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.ExHeavy1\"),(TagName=\"Role.Jiabei.Action.Heavy1\")))"
+  },
+  {
+   "Name": "1208101",
+   "ActionTags": "(GameplayTags=((TagName=\"Role.Jiabei.Action.EnhancedSkill\")))"
+  }
+ ]
+}

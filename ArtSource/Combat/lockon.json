@@ -1,0 +1,718 @@
+{
+ "table": "/Game/Game/Combat/DT_LockOnConfig",
+ "struct": "/Script/Wuwa.WuwaLockOnConfig",
+ "source": "db_lockon.db LockOnConfig",
+ "rows": [
+  {
+   "Name": "1",
+   "Distance": 800.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "2",
+   "Distance": 2500.0,
+   "UpDistance": 2500.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3",
+   "Distance": 1800.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "4",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "5",
+   "Distance": 1200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "6",
+   "Distance": 2500.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "7",
+   "Distance": 3000.0,
+   "UpDistance": 2500.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "105",
+   "Distance": 500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "106",
+   "Distance": 600.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "107",
+   "Distance": 700.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "108",
+   "Distance": 800.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "109",
+   "Distance": 900.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "110",
+   "Distance": 1000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "111",
+   "Distance": 1100.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "112",
+   "Distance": 1200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "113",
+   "Distance": 1300.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "114",
+   "Distance": 1400.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "115",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "116",
+   "Distance": 1600.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "117",
+   "Distance": 1700.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "118",
+   "Distance": 1800.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "119",
+   "Distance": 1900.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "120",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "121",
+   "Distance": 2100.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "122",
+   "Distance": 2200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "123",
+   "Distance": 2300.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "124",
+   "Distance": 2400.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "125",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "126",
+   "Distance": 2600.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "127",
+   "Distance": 2700.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "128",
+   "Distance": 2800.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "129",
+   "Distance": 2900.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "130",
+   "Distance": 3000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1103",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "2001",
+   "Distance": 30000.0,
+   "UpDistance": 5000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "110401",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "200002",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "280001",
+   "Distance": 3000.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1108001",
+   "Distance": 1200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1108002",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1108003",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1108004",
+   "Distance": 2000.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1202021",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1202022",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1209100",
+   "Distance": 3000.0,
+   "UpDistance": 1200.0,
+   "DownDistance": 2000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1210100",
+   "Distance": 3000.0,
+   "UpDistance": 3000.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1211001",
+   "Distance": 100.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 10.0
+  },
+  {
+   "Name": "1211002",
+   "Distance": 1000.0,
+   "UpDistance": 1200.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 150.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1212001",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1212002",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1305001",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 10.0
+  },
+  {
+   "Name": "1306300",
+   "Distance": 2500.0,
+   "UpDistance": 3000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "1309004",
+   "Distance": 2500.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1405001",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1409001",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1409002",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 180.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1409003",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1410200",
+   "Distance": 1800.0,
+   "UpDistance": 1200.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "1410204",
+   "Distance": 2500.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "1411100",
+   "Distance": 2500.0,
+   "UpDistance": 3000.0,
+   "DownDistance": 2000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "1413001",
+   "Distance": 2000.0,
+   "UpDistance": 2500.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1413010",
+   "Distance": 1600.0,
+   "UpDistance": 2500.0,
+   "DownDistance": 1500.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1504001",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 270.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1504040",
+   "Distance": 2200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2500.0,
+   "SectorAngle": 180.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1504044",
+   "Distance": 1300.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 120.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1505001",
+   "Distance": 1000.0,
+   "UpDistance": 1200.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 150.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1505002",
+   "Distance": 1000.0,
+   "UpDistance": 1500.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 2000.0,
+   "SectorAngle": 150.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1507001",
+   "Distance": 2000.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1510001",
+   "Distance": 1200.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1510002",
+   "Distance": 1800.0,
+   "UpDistance": 2000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "1510003",
+   "Distance": 3000.0,
+   "UpDistance": 2500.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 35.0
+  },
+  {
+   "Name": "1608001",
+   "Distance": 2500.0,
+   "UpDistance": 1200.0,
+   "DownDistance": 1200.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 10.0
+  },
+  {
+   "Name": "1610001",
+   "Distance": 1500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3000101",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3000201",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3000301",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3000401",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "3000501",
+   "Distance": 2500.0,
+   "UpDistance": 1000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  },
+  {
+   "Name": "9000001",
+   "Distance": 10000.0,
+   "UpDistance": 5000.0,
+   "DownDistance": 1000.0,
+   "SectorRadius": 0.0,
+   "SectorAngle": 0.0,
+   "ToleranceAngle": 22.5
+  }
+ ]
+}

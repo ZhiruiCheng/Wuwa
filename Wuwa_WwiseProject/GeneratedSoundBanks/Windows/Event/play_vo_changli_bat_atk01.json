@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500502",
+    "Type": "Event",
+    "GUID": "{95AB80E1-1F93-446B-AD70-9639C11D65BA}",
+    "Language": "SFX",
+    "Hash": "{4CE7DB17-200C-0AE6-4B63-887779C5C442}",
+    "ObjectPath": "play_vo_changli_bat_atk01",
+    "ShortName": "play_vo_changli_bat_atk01",
+    "Path": "Event/play_vo_changli_bat_atk01.bnk",
+    "Media": [
+     {
+      "Id": "323524357",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_01.wav",
+      "Path": "Media/323524357.wem",
+      "CachePath": "7E/{7E81C694-77CE-7F49-9CA8-7A6EC1CF4501}.wem"
+     },
+     {
+      "Id": "754527237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_02.wav",
+      "Path": "Media/754527237.wem",
+      "CachePath": "BE/{BE9F16C5-1675-09C1-E9F2-99DF31486B11}.wem"
+     },
+     {
+      "Id": "793492234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk01_03.wav",
+      "Path": "Media/793492234.wem",
+      "CachePath": "5E/{5EFE61DB-B8F5-3F0B-7388-8015487A1452}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1421500502",
+      "Name": "play_vo_changli_bat_atk01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atk01",
+      "GUID": "{95AB80E1-1F93-446B-AD70-9639C11D65BA}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.3865",
+      "MediaRefs": [
+       {
+        "Id": "323524357"
+       },
+       {
+        "Id": "754527237"
+       },
+       {
+        "Id": "793492234"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B19B9CF2-724E-725E-8C46-49A112520105}"
+ }
+}

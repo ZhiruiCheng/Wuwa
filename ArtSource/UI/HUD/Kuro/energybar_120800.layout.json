@@ -1,0 +1,1285 @@
+{
+ "prefab": "UI/UIResources/UiFight/Prefabs/EnergyBar/UiItem_BarJiabeilina",
+ "nodes": [
+  {
+   "name": "UiItem_BarJiabeilina",
+   "path": "/UiItem_BarJiabeilina",
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -1.7916318029165268e-07
+    ],
+    "size": [
+     307.5,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    13
+   ]
+  },
+  {
+   "name": "PnlBase",
+   "path": "/UiItem_BarJiabeilina/PnlBase",
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     1.125
+    ],
+    "size": [
+     307.5,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlProgress",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlProgress",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.75,
+     -15.75
+    ],
+    "size": [
+     271.5,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexBarBg",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlProgress/TexBarBg",
+   "parent": 2,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     18.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaHeadBg4.png",
+   "slice": null
+  },
+  {
+   "name": "SprBar",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlProgress/SprBar",
+   "parent": 2,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -0.375,
+     0.0
+    ],
+    "size": [
+     -23.25,
+     15.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_JiabeilinaHeadBar3.png",
+   "slice": null
+  },
+  {
+   "name": "PnlPos",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlProgress/PnlPos",
+   "parent": 2,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     1.5,
+     0.15000000223517418
+    ],
+    "size": [
+     240.0,
+     22.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TexLight",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlProgress/PnlPos/TexLight",
+   "parent": 5,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     42.0,
+     6.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaHeadLight1.png",
+   "slice": null
+  },
+  {
+   "name": "PnlBFrameR",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameR",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -53.25,
+     -5.25
+    ],
+    "size": [
+     221.25,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BFrameR",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameR/BFrameR",
+   "parent": 7,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -0.7499999552965164
+    ],
+    "size": [
+     0.0,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaEnergyBg3.png",
+   "slice": null
+  },
+  {
+   "name": "BFeatherR",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameR/BFeatherR",
+   "parent": 7,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     1.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     9.75,
+     -8.526512829121202e-14
+    ],
+    "size": [
+     30.0,
+     30.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaEffBlue4.png",
+   "slice": null
+  },
+  {
+   "name": "PnlBFrameL",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameL",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -53.25,
+     -5.25
+    ],
+    "size": [
+     114.75,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "BFrameL",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameL/BFrameL",
+   "parent": 10,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -2.682209014892578e-07
+    ],
+    "size": [
+     0.0,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaEnergyBg1.png",
+   "slice": null
+  },
+  {
+   "name": "BFeatherL",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlBFrameL/BFeatherL",
+   "parent": 10,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     -9.75,
+     -8.940705242821423e-08
+    ],
+    "size": [
+     30.0,
+     30.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaEffRed4.png",
+   "slice": null
+  },
+  {
+   "name": "UiItem_BarSlot2",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     -3.75
+    ],
+    "size": [
+     307.5,
+     37.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    15,
+    21
+   ]
+  },
+  {
+   "name": "PnlSlot",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot",
+   "parent": 13,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     276.75,
+     15.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlSlot",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot",
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     74.25,
+     8.526512829121202e-14
+    ],
+    "size": [
+     74.25,
+     15.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 180,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    16,
+    18,
+    17,
+    20
+   ]
+  },
+  {
+   "name": "SprBg",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprBg",
+   "parent": 15,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -0.0003662109375,
+     0.375
+    ],
+    "size": [
+     13.5,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    89
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarBg.png",
+   "slice": [
+    14,
+    14,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SprGraduate",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprGraduate",
+   "parent": 15,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -0.0003662109375,
+     0.0
+    ],
+    "size": [
+     0.0,
+     12.256575107574463
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    217
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarGraduate_x1100.png",
+   "slice": null
+  },
+  {
+   "name": "BarPart",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/BarPart",
+   "parent": 15,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.7062034606933594,
+     1.747276782989502
+    ],
+    "size": [
+     -2.3457870483398438,
+     36.852450370788574
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBar.png",
+   "slice": [
+    5,
+    5,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlClip",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/PnlClip",
+   "parent": 15,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     -0.0003662109375,
+     0.75
+    ],
+    "size": [
+     0.0,
+     -1.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprGraduateFront",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprGraduateFront",
+   "parent": 15,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     -0.0003662109375,
+     0.0
+    ],
+    "size": [
+     0.0,
+     12.256575107574463
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    217
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarGraduateA_x1100.png",
+   "slice": null
+  },
+  {
+   "name": "PnlSlot_1",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1",
+   "parent": 14,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     1.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     182.25,
+     15.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "registry": [
+    22,
+    24,
+    23,
+    26
+   ]
+  },
+  {
+   "name": "SprBg",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprBg",
+   "parent": 21,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.375
+    ],
+    "size": [
+     13.5,
+     21.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    89
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarBg.png",
+   "slice": [
+    14,
+    14,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SprGraduate",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprGraduate",
+   "parent": 21,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     12.256575107574463
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    217
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarGraduate_x2700.png",
+   "slice": null
+  },
+  {
+   "name": "BarPart",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/BarPart",
+   "parent": 21,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.7065696716308594,
+     1.747276782989502
+    ],
+    "size": [
+     -2.3457870483398438,
+     36.852450370788574
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    127
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBar.png",
+   "slice": [
+    5,
+    5,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PnlClip",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/PnlClip",
+   "parent": 21,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.75
+    ],
+    "size": [
+     0.0,
+     -1.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprGraduateFront",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprGraduateFront",
+   "parent": 21,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     1.0,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     12.256575107574463
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    217
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_EnergyBarGraduateA_x2700.png",
+   "slice": null
+  },
+  {
+   "name": "PnlHotKey",
+   "path": "/UiItem_BarJiabeilina/PnlBase/UiItem_BarSlot2/PnlHotKey",
+   "parent": 13,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.5
+    ],
+    "max": [
+     0.0,
+     0.5
+    ],
+    "pos": [
+     326.25,
+     -4.649161610359442e-06
+    ],
+    "size": [
+     0.0,
+     19.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlChimera",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlChimera",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -52.5,
+     9.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Chimera",
+   "path": "/UiItem_BarJiabeilina/PnlBase/PnlChimera/Chimera",
+   "parent": 28,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     60.0,
+     60.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/T_JiabeilinaIcon.png",
+   "slice": null
+  },
+  {
+   "name": "PnlNia",
+   "path": "/UiItem_BarJiabeilina/PnlNia",
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     75.0,
+     75.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  }
+ ]
+}

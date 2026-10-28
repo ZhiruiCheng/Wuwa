@@ -1,3 +1,6 @@
 [submodule "Plugins/UnrealSharp"]
 	path = Plugins/UnrealSharp
 	url = https://github.com/UnrealSharp/UnrealSharp.git
+[submodule "Plugins/LGUI"]
+	path = Plugins/LGUI
+	url = https://github.com/liufei2008/LGUI.git

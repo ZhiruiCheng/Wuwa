@@ -1,0 +1,800 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2846331115",
+    "Type": "Event",
+    "GUID": "{E6D7B2A4-AFDE-4E96-BCA3-B199BB39E318}",
+    "Language": "SFX",
+    "Hash": "{CC7DEA27-8344-AB7D-DADF-D39D898A9639}",
+    "ObjectPath": "role_foley_kelaita",
+    "ShortName": "role_foley_kelaita",
+    "Path": "Event/role_foley_kelaita.bnk",
+    "Media": [
+     {
+      "Id": "12162321",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_06.wav",
+      "Path": "Media/12162321.wem",
+      "CachePath": "5E/{5EA8A5F6-5448-BF9C-F5D7-1358BA9D441A}.wem"
+     },
+     {
+      "Id": "30386301",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_06.wav",
+      "Path": "Media/30386301.wem",
+      "CachePath": "D8/{D826DEA3-54FE-996C-7DC4-C2247E29C5FB}.wem"
+     },
+     {
+      "Id": "98502028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_02.wav",
+      "Path": "Media/98502028.wem",
+      "CachePath": "93/{93F3CB44-6FDA-F94E-E28F-1BA27825A4CF}.wem"
+     },
+     {
+      "Id": "101565252",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_07.wav",
+      "Path": "Media/101565252.wem",
+      "CachePath": "50/{50AEF926-9767-522B-6B0D-C352E2FC0C7A}.wem"
+     },
+     {
+      "Id": "105431879",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_07.wav",
+      "Path": "Media/105431879.wem",
+      "CachePath": "D1/{D1990CFB-BB7B-A215-6DA7-85E50B4E02C4}.wem"
+     },
+     {
+      "Id": "116948353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_05.wav",
+      "Path": "Media/116948353.wem",
+      "CachePath": "DE/{DE671C32-7DEB-A004-C6D1-297F7858DA97}.wem"
+     },
+     {
+      "Id": "133424985",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_01.wav",
+      "Path": "Media/133424985.wem",
+      "CachePath": "68/{68F680F7-02BB-F4B8-1E43-4DF6D26360C3}.wem"
+     },
+     {
+      "Id": "203867751",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_02.wav",
+      "Path": "Media/203867751.wem",
+      "CachePath": "99/{99EDCF61-73AD-F2C2-051A-962E3A8F39BB}.wem"
+     },
+     {
+      "Id": "251583606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_02.wav",
+      "Path": "Media/251583606.wem",
+      "CachePath": "CE/{CE5F557C-BE44-0546-86F8-95857C077606}.wem"
+     },
+     {
+      "Id": "255068608",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_fly_01.wav",
+      "Path": "Media/255068608.wem",
+      "CachePath": "BC/{BC8811B5-14D4-4941-F8EB-DD0172FD6A0F}.wem"
+     },
+     {
+      "Id": "255098539",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_06.wav",
+      "Path": "Media/255098539.wem",
+      "CachePath": "7F/{7FBD1629-76A8-0647-CB14-EE153F26E39F}.wem"
+     },
+     {
+      "Id": "276512498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_01.wav",
+      "Path": "Media/276512498.wem",
+      "CachePath": "26/{26296D9C-8C69-01B7-3F80-8231DC3C42C8}.wem"
+     },
+     {
+      "Id": "276798500",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_04.wav",
+      "Path": "Media/276798500.wem",
+      "CachePath": "52/{52957802-3916-F920-FD3B-505F8567A99E}.wem"
+     },
+     {
+      "Id": "284120057",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_05.wav",
+      "Path": "Media/284120057.wem",
+      "CachePath": "94/{94ABF0FE-AF08-B172-BA34-1673A6DC9239}.wem"
+     },
+     {
+      "Id": "288669533",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_04.wav",
+      "Path": "Media/288669533.wem",
+      "CachePath": "9C/{9CA1B45E-B7EB-2E59-B704-B740B4628928}.wem"
+     },
+     {
+      "Id": "289341900",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_09.wav",
+      "Path": "Media/289341900.wem",
+      "CachePath": "9F/{9F32624B-84DC-A64C-8E2A-C0642F0E536A}.wem"
+     },
+     {
+      "Id": "293292622",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_01.wav",
+      "Path": "Media/293292622.wem",
+      "CachePath": "60/{60C7296A-C7DC-D83F-D3CD-9F5A24C86FB2}.wem"
+     },
+     {
+      "Id": "300108031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_03.wav",
+      "Path": "Media/300108031.wem",
+      "CachePath": "FD/{FD3B7AA5-C3D4-593C-10B0-C6391D1565FA}.wem"
+     },
+     {
+      "Id": "309738300",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_01.wav",
+      "Path": "Media/309738300.wem",
+      "CachePath": "DB/{DB4CCCC1-8B4E-019C-5929-455D5F1C16CD}.wem"
+     },
+     {
+      "Id": "334548238",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_05.wav",
+      "Path": "Media/334548238.wem",
+      "CachePath": "60/{6007B986-98F0-A88F-C950-88A27B2D1E17}.wem"
+     },
+     {
+      "Id": "349561338",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_04.wav",
+      "Path": "Media/349561338.wem",
+      "CachePath": "B3/{B31825A6-8226-3813-6BF7-72EEC503B5DC}.wem"
+     },
+     {
+      "Id": "357531597",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_04.wav",
+      "Path": "Media/357531597.wem",
+      "CachePath": "A2/{A2A0328E-31CD-F488-CE1E-83C72A3034DF}.wem"
+     },
+     {
+      "Id": "374680029",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_04.wav",
+      "Path": "Media/374680029.wem",
+      "CachePath": "B3/{B37FDE65-05E9-E171-F301-91E346039679}.wem"
+     },
+     {
+      "Id": "444402931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_06.wav",
+      "Path": "Media/444402931.wem",
+      "CachePath": "CA/{CA3EA863-F989-54A0-9C5B-7ECD07DC58F5}.wem"
+     },
+     {
+      "Id": "457709268",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_03.wav",
+      "Path": "Media/457709268.wem",
+      "CachePath": "19/{191FBE04-2E8A-B79A-955A-3A08886F79A6}.wem"
+     },
+     {
+      "Id": "511445357",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_06.wav",
+      "Path": "Media/511445357.wem",
+      "CachePath": "E6/{E6B711EE-A5FF-E9A2-E2EF-E2ACD0B7C8DD}.wem"
+     },
+     {
+      "Id": "569570427",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_01.wav",
+      "Path": "Media/569570427.wem",
+      "CachePath": "BB/{BB9A4787-A9BB-BF9F-F9D9-16F942038F09}.wem"
+     },
+     {
+      "Id": "602902588",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_02.wav",
+      "Path": "Media/602902588.wem",
+      "CachePath": "CD/{CD68EEDC-6DB4-F7F9-6CB6-77CBDC7C9355}.wem"
+     },
+     {
+      "Id": "613315521",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_03.wav",
+      "Path": "Media/613315521.wem",
+      "CachePath": "BF/{BF9051B5-7317-17E1-D0F8-CD256D9651F6}.wem"
+     },
+     {
+      "Id": "627178156",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_08.wav",
+      "Path": "Media/627178156.wem",
+      "CachePath": "8A/{8A6A7C38-31F7-FD99-3FAE-EB66363ACF4D}.wem"
+     },
+     {
+      "Id": "636705807",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_05.wav",
+      "Path": "Media/636705807.wem",
+      "CachePath": "5F/{5F8AB2D9-5B1E-37C2-6C3B-2F4F69EB60A2}.wem"
+     },
+     {
+      "Id": "667713347",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_06.wav",
+      "Path": "Media/667713347.wem",
+      "CachePath": "1D/{1D899737-C05E-06E1-7DAE-88DCE1992359}.wem"
+     },
+     {
+      "Id": "673388152",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_05.wav",
+      "Path": "Media/673388152.wem",
+      "CachePath": "78/{78D4F850-4F57-FB78-FA0B-D819CFCF2F2B}.wem"
+     },
+     {
+      "Id": "681563880",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_06.wav",
+      "Path": "Media/681563880.wem",
+      "CachePath": "7E/{7E3C5E42-8483-B18E-C6AC-20150DF9AB3F}.wem"
+     },
+     {
+      "Id": "692265961",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_04.wav",
+      "Path": "Media/692265961.wem",
+      "CachePath": "24/{24AA6FF4-4279-29E7-00A5-EAC30D6291C2}.wem"
+     },
+     {
+      "Id": "707616278",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_03.wav",
+      "Path": "Media/707616278.wem",
+      "CachePath": "5C/{5C6E0A71-D7FD-C5DE-FE9A-5C57612C1B3C}.wem"
+     },
+     {
+      "Id": "729788356",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weakfast_03.wav",
+      "Path": "Media/729788356.wem",
+      "CachePath": "4F/{4F4AA065-3494-527E-A5B7-27667EEC1745}.wem"
+     },
+     {
+      "Id": "756247232",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_02.wav",
+      "Path": "Media/756247232.wem",
+      "CachePath": "16/{161AD0D7-4D6C-0CE7-B002-C98DB2D43E85}.wem"
+     },
+     {
+      "Id": "765119495",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_05.wav",
+      "Path": "Media/765119495.wem",
+      "CachePath": "2D/{2D908189-42C8-D931-01BD-08BA82788D2E}.wem"
+     },
+     {
+      "Id": "769135071",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_01.wav",
+      "Path": "Media/769135071.wem",
+      "CachePath": "11/{1151D9AF-D756-38BD-3B00-61D06CAFAAD0}.wem"
+     },
+     {
+      "Id": "774991434",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_04.wav",
+      "Path": "Media/774991434.wem",
+      "CachePath": "91/{91E2A8AB-65CB-A3BB-5F05-8E0A17B6FD7A}.wem"
+     },
+     {
+      "Id": "779861549",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hardfast_03.wav",
+      "Path": "Media/779861549.wem",
+      "CachePath": "5E/{5ED1945E-2AC4-89DD-6B14-E5F126F717EE}.wem"
+     },
+     {
+      "Id": "814981655",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_01.wav",
+      "Path": "Media/814981655.wem",
+      "CachePath": "59/{59DEF4D8-65D2-5002-F677-22285B08BD99}.wem"
+     },
+     {
+      "Id": "834285373",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_hard_02.wav",
+      "Path": "Media/834285373.wem",
+      "CachePath": "EE/{EE801535-BC6F-D6B2-FD15-A2FE49EEBE99}.wem"
+     },
+     {
+      "Id": "838952993",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_jianxin_bodyfall_02.wav",
+      "Path": "Media/838952993.wem",
+      "CachePath": "93/{938717EB-91C2-5C20-2888-784C35FEB645}.wem"
+     },
+     {
+      "Id": "932037262",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_08.wav",
+      "Path": "Media/932037262.wem",
+      "CachePath": "BE/{BE48356C-8387-E4E5-5D06-7A800F1E5CD6}.wem"
+     },
+     {
+      "Id": "938106372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_sprint_07.wav",
+      "Path": "Media/938106372.wem",
+      "CachePath": "93/{93A9C901-A979-3FD8-3CFA-469A58D69BAD}.wem"
+     },
+     {
+      "Id": "958167550",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_weak_05.wav",
+      "Path": "Media/958167550.wem",
+      "CachePath": "98/{983B069B-3124-44B6-BDA4-CF361C70EDE1}.wem"
+     },
+     {
+      "Id": "985162605",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_03.wav",
+      "Path": "Media/985162605.wem",
+      "CachePath": "D7/{D73FCC90-1B58-ECA5-821C-D06594F68007}.wem"
+     },
+     {
+      "Id": "992090850",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_09.wav",
+      "Path": "Media/992090850.wem",
+      "CachePath": "AA/{AA2B4224-4510-EF02-E7E3-57D29EBB2E8F}.wem"
+     },
+     {
+      "Id": "1019371955",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_07.wav",
+      "Path": "Media/1019371955.wem",
+      "CachePath": "F9/{F9EF5C1C-1B97-7207-0790-5D4903184343}.wem"
+     },
+     {
+      "Id": "1067881508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\foley_kelaita_run_08.wav",
+      "Path": "Media/1067881508.wem",
+      "CachePath": "11/{11CC76F1-AEE5-60DC-0C53-CFB498B948B4}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2846331115",
+      "Name": "role_foley_kelaita",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\role_foley_kelaita",
+      "GUID": "{E6D7B2A4-AFDE-4E96-BCA3-B199BB39E318}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.51004165",
+      "DurationMax": "12.625292",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "2557423760",
+         "GUID": "{EDFA3906-C4B7-4728-9260-4C58289D24D8}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "444402931"
+         },
+         {
+          "Id": "569570427"
+         },
+         {
+          "Id": "692265961"
+         },
+         {
+          "Id": "756247232"
+         },
+         {
+          "Id": "765119495"
+         },
+         {
+          "Id": "779861549"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "2587856914",
+         "GUID": "{D409D60F-E885-432E-BD68-721EC5488C79}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "255098539"
+         },
+         {
+          "Id": "276798500"
+         },
+         {
+          "Id": "284120057"
+         },
+         {
+          "Id": "293292622"
+         },
+         {
+          "Id": "707616278"
+         },
+         {
+          "Id": "838952993"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1488596377",
+         "GUID": "{EA1FF672-80B1-4D79-998D-8F71A04F87EE}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "30386301"
+         },
+         {
+          "Id": "98502028"
+         },
+         {
+          "Id": "105431879"
+         },
+         {
+          "Id": "613315521"
+         },
+         {
+          "Id": "627178156"
+         },
+         {
+          "Id": "769135071"
+         },
+         {
+          "Id": "774991434"
+         },
+         {
+          "Id": "958167550"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "3599861390",
+         "GUID": "{79BEB496-1626-40FF-9510-595819538FAF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "288669533"
+         },
+         {
+          "Id": "334548238"
+         },
+         {
+          "Id": "457709268"
+         },
+         {
+          "Id": "667713347"
+         },
+         {
+          "Id": "814981655"
+         },
+         {
+          "Id": "834285373"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1133470540",
+         "GUID": "{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "255068608"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1296465089",
+         "GUID": "{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "116948353"
+         },
+         {
+          "Id": "203867751"
+         },
+         {
+          "Id": "276512498"
+         },
+         {
+          "Id": "289341900"
+         },
+         {
+          "Id": "300108031"
+         },
+         {
+          "Id": "374680029"
+         },
+         {
+          "Id": "681563880"
+         },
+         {
+          "Id": "932037262"
+         },
+         {
+          "Id": "938106372"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1724159175",
+         "GUID": "{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "101565252"
+         },
+         {
+          "Id": "133424985"
+         },
+         {
+          "Id": "357531597"
+         },
+         {
+          "Id": "511445357"
+         },
+         {
+          "Id": "602902588"
+         },
+         {
+          "Id": "636705807"
+         },
+         {
+          "Id": "729788356"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "712161704",
+         "GUID": "{BA1430CF-5E6E-488E-949F-0923689F7DA9}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "12162321"
+         },
+         {
+          "Id": "251583606"
+         },
+         {
+          "Id": "309738300"
+         },
+         {
+          "Id": "349561338"
+         },
+         {
+          "Id": "673388152"
+         },
+         {
+          "Id": "985162605"
+         },
+         {
+          "Id": "992090850"
+         },
+         {
+          "Id": "1019371955"
+         },
+         {
+          "Id": "1067881508"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1063605336",
+      "Name": "foley_variant",
+      "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant",
+      "GUID": "{C98632CF-EC0B-43E1-B2A7-1D653EB47F2F}",
+      "Switches": [
+       {
+        "Id": "712161704",
+        "Name": "run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\run",
+        "GUID": "{BA1430CF-5E6E-488E-949F-0923689F7DA9}"
+       },
+       {
+        "Id": "1133470540",
+        "Name": "fly",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\fly",
+        "GUID": "{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"
+       },
+       {
+        "Id": "1296465089",
+        "Name": "sprint",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\sprint",
+        "GUID": "{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"
+       },
+       {
+        "Id": "1488596377",
+        "Name": "weak",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weak",
+        "GUID": "{EA1FF672-80B1-4D79-998D-8F71A04F87EE}"
+       },
+       {
+        "Id": "1724159175",
+        "Name": "weakfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weakfast",
+        "GUID": "{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"
+       },
+       {
+        "Id": "2557423760",
+        "Name": "hardfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hardfast",
+        "GUID": "{EDFA3906-C4B7-4728-9260-4C58289D24D8}"
+       },
+       {
+        "Id": "2587856914",
+        "Name": "bodyfall",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\bodyfall",
+        "GUID": "{D409D60F-E885-432E-BD68-721EC5488C79}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hard",
+        "GUID": "{79BEB496-1626-40FF-9510-595819538FAF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{78E7FBEC-10A3-6548-2750-7E63AC11D147}"
+ }
+}

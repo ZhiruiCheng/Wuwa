@@ -1,0 +1,654 @@
+{
+ "master": "/Game/Environment/Common/Landscape/M_WuwaLandscape",
+ "textureFolder": "/Game/Environment/Common/Landscape/Textures",
+ "instanceFolder": "/Game/Environment/HuangLong_Crownless/Landscape/Materials",
+ "layerInfoFolder": "/Game/Environment/HuangLong_Crownless/Landscape/LayerInfos",
+ "layers": 10,
+ "colorMap": "T_LandscapeBaseColor_D",
+ "colorMapUVScaleBias": [
+  819200.0,
+  819200.0,
+  409600.0,
+  409600.0
+ ],
+ "colorMapIntensity": 1.0,
+ "textures": {
+  "T_Landscape_00_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER0.png",
+   "normal": false
+  },
+  "T_Landscape_00_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER0.png",
+   "normal": true
+  },
+  "T_Landscape_01_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER1.png",
+   "normal": false
+  },
+  "T_Landscape_01_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER1.png",
+   "normal": true
+  },
+  "T_Landscape_03_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER3.png",
+   "normal": false
+  },
+  "T_Landscape_03_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER3.png",
+   "normal": true
+  },
+  "T_Landscape_04_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER4.png",
+   "normal": false
+  },
+  "T_Landscape_04_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER4.png",
+   "normal": true
+  },
+  "T_Landscape_05_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER5.png",
+   "normal": false
+  },
+  "T_Landscape_05_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER5.png",
+   "normal": true
+  },
+  "T_Landscape_06_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER6.png",
+   "normal": false
+  },
+  "T_Landscape_06_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER6.png",
+   "normal": true
+  },
+  "T_Landscape_07_D": {
+   "file": "C:/GamePakExtractor/Output/Terrain/T_Landscape_Grass_D.png",
+   "normal": false
+  },
+  "T_Landscape_07_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER7.png",
+   "normal": true
+  },
+  "T_Landscape_08_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER8.png",
+   "normal": false
+  },
+  "T_Landscape_08_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER8.png",
+   "normal": true
+  },
+  "T_Landscape_13_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER13.png",
+   "normal": false
+  },
+  "T_Landscape_13_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER13.png",
+   "normal": true
+  },
+  "T_Landscape_14_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER14.png",
+   "normal": false
+  },
+  "T_Landscape_14_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER14.png",
+   "normal": true
+  },
+  "T_Landscape_17_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER17.png",
+   "normal": false
+  },
+  "T_Landscape_17_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER17.png",
+   "normal": true
+  },
+  "T_Landscape_19_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_C_LAYER19.png",
+   "normal": false
+  },
+  "T_Landscape_19_N": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/Tex/T4_Array_01_N_LAYER19.png",
+   "normal": true
+  },
+  "T_LandscapeBaseColor_D": {
+   "file": "C:/GamePakExtractor/Output/Exports/Client/Content/Aki/Scene/Landscape/ColorMap/T_LandscapeBaseColor_D.png",
+   "normal": false,
+   "clamp": true
+  }
+ },
+ "instances": {
+  "MI_Landscape_world_T345": {
+   "layers": {
+    "1": {
+     "slice": 7,
+     "scale": 350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    },
+    "2": {
+     "slice": 0,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.743
+    },
+    "3": {
+     "slice": 4,
+     "scale": 500.0,
+     "tint": [
+      0.7708,
+      0.6344,
+      0.4677
+     ],
+     "roughness": 0.88
+    },
+    "4": {
+     "slice": 5,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.955
+    },
+    "5": {
+     "slice": 8,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.907
+    },
+    "6": {
+     "slice": 0,
+     "scale": 600.0,
+     "tint": [
+      0.875,
+      0.7834,
+      0.6827
+     ],
+     "roughness": 0.851
+    },
+    "7": {
+     "slice": 14,
+     "scale": 500.0,
+     "tint": [
+      0.5573,
+      0.5573,
+      0.5573
+     ],
+     "roughness": 0.894
+    },
+    "8": {
+     "slice": 13,
+     "scale": 600.0,
+     "tint": [
+      0.698,
+      0.698,
+      0.698
+     ],
+     "roughness": 0.94
+    },
+    "9": {
+     "slice": 6,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.547
+    },
+    "10": {
+     "slice": 17,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    }
+   }
+  },
+  "MI_Landscape_world": {
+   "layers": {
+    "1": {
+     "slice": 7,
+     "scale": 350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.966
+    },
+    "2": {
+     "slice": 5,
+     "scale": 600.0,
+     "tint": [
+      0.8854,
+      0.8854,
+      0.8854
+     ],
+     "roughness": 0.8
+    },
+    "3": {
+     "slice": 19,
+     "scale": 500.0,
+     "tint": [
+      0.146,
+      0.146,
+      0.146
+     ],
+     "roughness": 0.8
+    },
+    "4": {
+     "slice": 3,
+     "scale": 1000.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.955
+    },
+    "5": {
+     "slice": 8,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.74
+    },
+    "6": {
+     "slice": 0,
+     "scale": 500.0,
+     "tint": [
+      0.0391,
+      0.0391,
+      0.0391
+     ],
+     "roughness": 0.8
+    },
+    "7": {
+     "slice": 0,
+     "scale": 450.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.739
+    },
+    "8": {
+     "slice": 14,
+     "scale": 500.0,
+     "tint": [
+      0.5677,
+      0.5677,
+      0.5677
+     ],
+     "roughness": 0.94
+    },
+    "9": {
+     "slice": 6,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.547
+    },
+    "10": {
+     "slice": 17,
+     "scale": 600.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    }
+   }
+  },
+  "MI_Landscape_world_YLYX": {
+   "layers": {
+    "1": {
+     "slice": 7,
+     "scale": 350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.966
+    },
+    "2": {
+     "slice": 0,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.743
+    },
+    "3": {
+     "slice": 14,
+     "scale": 500.0,
+     "tint": [
+      0.7645,
+      0.7656,
+      0.7157
+     ],
+     "roughness": 0.946
+    },
+    "4": {
+     "slice": 4,
+     "scale": 1350.0,
+     "tint": [
+      0.1815,
+      0.1821,
+      0.1962
+     ],
+     "roughness": 0.955
+    },
+    "5": {
+     "slice": 8,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.74
+    },
+    "6": {
+     "slice": 5,
+     "scale": 600.0,
+     "tint": [
+      0.6337,
+      0.6337,
+      0.6337
+     ],
+     "roughness": 0.8
+    },
+    "7": {
+     "slice": 3,
+     "scale": 800.0,
+     "tint": [
+      0.5573,
+      0.5573,
+      0.5573
+     ],
+     "roughness": 0.872
+    },
+    "8": {
+     "slice": 5,
+     "scale": 600.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.94
+    },
+    "9": {
+     "slice": 3,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.547
+    },
+    "10": {
+     "slice": 17,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    }
+   }
+  },
+  "MI_Landscape_world_island": {
+   "layers": {
+    "1": {
+     "slice": 7,
+     "scale": 350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.966
+    },
+    "2": {
+     "slice": 8,
+     "scale": 600.0,
+     "tint": [
+      0.6,
+      0.6,
+      0.6
+     ],
+     "roughness": 0.743
+    },
+    "3": {
+     "slice": 4,
+     "scale": 350.0,
+     "tint": [
+      0.7708,
+      0.6344,
+      0.4677
+     ],
+     "roughness": 0.776
+    },
+    "4": {
+     "slice": 5,
+     "scale": 1350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.955
+    },
+    "5": {
+     "slice": 8,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.74
+    },
+    "6": {
+     "slice": 1,
+     "scale": 613.5433,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    },
+    "7": {
+     "slice": 13,
+     "scale": 400.0,
+     "tint": [
+      0.698,
+      0.698,
+      0.698
+     ],
+     "roughness": 0.72
+    },
+    "8": {
+     "slice": 14,
+     "scale": 600.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.94
+    },
+    "9": {
+     "slice": 3,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.547
+    },
+    "10": {
+     "slice": 17,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    }
+   }
+  },
+  "MI_Landscape_world_JCYZ": {
+   "layers": {
+    "1": {
+     "slice": 7,
+     "scale": 350.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.966
+    },
+    "2": {
+     "slice": 0,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.913
+    },
+    "3": {
+     "slice": 17,
+     "scale": 600.0,
+     "tint": [
+      0.717,
+      0.7009,
+      0.666
+     ],
+     "roughness": 1.0
+    },
+    "4": {
+     "slice": 13,
+     "scale": 1000.0,
+     "tint": [
+      0.6211,
+      0.626,
+      0.7
+     ],
+     "roughness": 0.97
+    },
+    "5": {
+     "slice": 8,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.91
+    },
+    "6": {
+     "slice": 5,
+     "scale": 600.0,
+     "tint": [
+      0.526,
+      0.5191,
+      0.5105
+     ],
+     "roughness": 0.917
+    },
+    "7": {
+     "slice": 14,
+     "scale": 600.0,
+     "tint": [
+      0.8,
+      0.8,
+      0.8
+     ],
+     "roughness": 0.902
+    },
+    "8": {
+     "slice": 6,
+     "scale": 600.0,
+     "tint": [
+      0.6,
+      0.3,
+      0.3
+     ],
+     "roughness": 0.94
+    },
+    "9": {
+     "slice": 3,
+     "scale": 400.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.547
+    },
+    "10": {
+     "slice": 0,
+     "scale": 500.0,
+     "tint": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "roughness": 0.8
+    }
+   }
+  }
+ },
+ "aliases": {
+  "MI_Landscape_world_T345": "MI_Landscape_world_T345",
+  "MI_Landscape_world": "MI_Landscape_world",
+  "MI_Landscape_world_YLYX": "MI_Landscape_world_YLYX",
+  "MI_Landscape_world_island": "MI_Landscape_world_island",
+  "MI_LandscapeHole_world": "MI_Landscape_world",
+  "MI_LandscapeHole_world_T345": "MI_Landscape_world_T345",
+  "MI_LandscapeHole_world_JCYZ": "MI_Landscape_world_JCYZ",
+  "MI_LandscapeHole_world_YLYX": "MI_Landscape_world_YLYX"
+ },
+ "notes": [
+  "WorldLandscapeColorMap: layer color x color map x 2 (blend formula assumed; UV mapping verified)",
+  "slice 7 replaced by its G channel as grey"
+ ]
+}

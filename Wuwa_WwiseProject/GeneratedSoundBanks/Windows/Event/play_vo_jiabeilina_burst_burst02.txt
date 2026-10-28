@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	177821566	play_vo_jiabeilina_burst_burst02			\Default Work Unit\Wuwa_Jiabei\play_vo_jiabeilina_burst_burst02	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	187015198	zh_vo_jiabeilina_burst_burst02_02_word	.cache\9C\{9CBCFC6C-EACC-9CAA-52AD-D6FA3EC47730}.wem	187015198.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_burst_burst_786182961\zh_vo_jiabeilina_burst_burst02_02_word	
+	590756460	zh_vo_jiabeilina_burst_burst02_01_word	.cache\4B\{4B0F086B-C858-EB78-1F61-FB85AEDEBF03}.wem	590756460.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_burst_burst_786182961\zh_vo_jiabeilina_burst_burst02_01_word	
+	663857785	zh_vo_jiabeilina_burst_burst02_04_word	.cache\2A\{2AAEB7FB-BB8B-4B9A-F052-FCBBAD92D677}.wem	663857785.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_burst_burst_786182961\zh_vo_jiabeilina_burst_burst02_04_word	
+	740873018	zh_vo_jiabeilina_burst_burst02_03_word	.cache\85\{85917FED-D290-4D68-49D6-F9E21B8BFFED}.wem	740873018.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_1039061512\zh_vo_jiabeilina_burst_burst_786182961\zh_vo_jiabeilina_burst_burst02_03_word	
+

@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500501",
+    "Type": "User",
+    "GUID": "{CDFC2E5C-F49C-40AD-988D-15C74C63EE3F}",
+    "Language": "SFX",
+    "Hash": "{EE3FBE88-2B53-D21F-B3E1-30B9ECCB60AA}",
+    "ObjectPath": "play_vo_changli_bat_atk02",
+    "ShortName": "play_vo_changli_bat_atk02",
+    "Path": "play_vo_changli_bat_atk02.bnk"
+   }
+  ],
+  "FileHash": "{96B0DBC0-0D84-1ABB-90A0-C5A9285BE0D0}"
+ }
+}

@@ -1,0 +1,61 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "544079521",
+    "Type": "Event",
+    "GUID": "{EECB1B2F-20CB-4B99-972C-B97AC9BAF2BE}",
+    "Language": "SFX",
+    "Hash": "{1AF9C253-5369-0BE1-9CC4-5C81486FBD69}",
+    "ObjectPath": "play_vo_changli_com_dash",
+    "ShortName": "play_vo_changli_com_dash",
+    "Path": "Event/play_vo_changli_com_dash.bnk",
+    "Media": [
+     {
+      "Id": "3687526",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_com_dash_03.wav",
+      "Path": "Media/3687526.wem",
+      "CachePath": "43/{43D35A45-4A24-00B9-66E6-4DEA5C455037}.wem"
+     },
+     {
+      "Id": "702748928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_com_dash_02.wav",
+      "Path": "Media/702748928.wem",
+      "CachePath": "1B/{1B725988-72D6-4097-A26E-D4772B98DF9C}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "544079521",
+      "Name": "play_vo_changli_com_dash",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_com_dash",
+      "GUID": "{EECB1B2F-20CB-4B99-972C-B97AC9BAF2BE}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.41822916",
+      "MediaRefs": [
+       {
+        "Id": "3687526"
+       },
+       {
+        "Id": "702748928"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{47727B42-DA4F-707F-38B5-3EE012D00050}"
+ }
+}

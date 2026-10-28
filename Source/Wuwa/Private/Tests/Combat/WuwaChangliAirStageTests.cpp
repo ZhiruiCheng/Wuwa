@@ -19,7 +19,7 @@
 #include "Game/Animation/Notifies/WuwaAnimNotifyState_KeepAwayFromGround.h"
 #include "Game/Animation/Notifies/WuwaAnimNotify_AddBuff.h"
 #include "Game/Animation/Notifies/WuwaAnimNotify_SpawnBullet.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAttributeSet.h"
 #include "Game/NewWorld/Combat/WuwaTimeStopSubsystem.h"
 #include "Game/Camera/WuwaSequenceCameraSubsystem.h"

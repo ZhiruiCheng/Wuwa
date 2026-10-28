@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "unreal": {
+      "type": "stdio",
+      "command": "C:/UEProjects/Wuwa/Saved/Tools/UnrealMCP/.venv/Scripts/python.exe",
+      "args": ["-m", "unreal_mcp"],
+      "env": {
+        "UNREAL_PROJECT_DIR": "C:/UEProjects/Wuwa",
+        "UNREAL_UPROJECT": "C:/UEProjects/Wuwa/Wuwa.uproject",
+        "UNREAL_EDITOR_EXE": "C:/Program Files/Epic Games/UE_5.7/Engine/Binaries/Win64/UnrealEditor.exe",
+        "UNREAL_MCP_MULTICAST_BIND": "127.0.0.1"
+      }
+    }
+  }
+}

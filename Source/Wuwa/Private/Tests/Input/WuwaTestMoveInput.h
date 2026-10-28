@@ -7,7 +7,7 @@
 #include "Game/NewWorld/Character/Common/Component/Input/WuwaMoveInputHandler.h"
 #include "Game/NewWorld/Character/Common/Component/Input/MoveActions/WuwaMoveInputAction_ToggleWalkPreference.h"
 #include "Game/Controller/WuwaPlayerController.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 
 namespace WuwaTestInput
 {

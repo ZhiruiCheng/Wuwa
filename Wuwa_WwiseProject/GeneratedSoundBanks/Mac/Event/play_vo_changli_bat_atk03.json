@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1421500500",
+    "Type": "Event",
+    "GUID": "{3ED5A8C3-9AB5-4FD4-9453-3F2CF4725513}",
+    "Language": "SFX",
+    "Hash": "{14827177-04E9-055C-387D-039FCD39F2CE}",
+    "ObjectPath": "play_vo_changli_bat_atk03",
+    "ShortName": "play_vo_changli_bat_atk03",
+    "Path": "Event/play_vo_changli_bat_atk03.bnk",
+    "Media": [
+     {
+      "Id": "105354000",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk03_02.wav",
+      "Path": "Media/105354000.wem",
+      "CachePath": "1B/{1B4A04D5-117E-BF0D-76AF-7CA3CB67CF32}.wem"
+     },
+     {
+      "Id": "768991876",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk03_01.wav",
+      "Path": "Media/768991876.wem",
+      "CachePath": "6F/{6FFE9E59-2C06-2717-9C94-FF6A23B20C3C}.wem"
+     },
+     {
+      "Id": "1045207176",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_atk03_03.wav",
+      "Path": "Media/1045207176.wem",
+      "CachePath": "25/{25961CE8-58E3-268A-D8CF-84B6181590D7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1421500500",
+      "Name": "play_vo_changli_bat_atk03",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_atk03",
+      "GUID": "{3ED5A8C3-9AB5-4FD4-9453-3F2CF4725513}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.3316875",
+      "MediaRefs": [
+       {
+        "Id": "105354000"
+       },
+       {
+        "Id": "768991876"
+       },
+       {
+        "Id": "1045207176"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{51983064-8785-348B-3F38-6570BF0699DA}"
+ }
+}

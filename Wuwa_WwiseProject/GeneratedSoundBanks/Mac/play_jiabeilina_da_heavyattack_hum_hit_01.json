@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2484760463",
+    "Type": "User",
+    "GUID": "{4CEA0397-5594-4242-9D1D-7C79F56BB9D2}",
+    "Language": "SFX",
+    "Hash": "{3AA9C3FE-3DE9-DC4C-DCCF-799EA86B98EA}",
+    "ObjectPath": "play_jiabeilina_da_heavyattack_hum_hit_01",
+    "ShortName": "play_jiabeilina_da_heavyattack_hum_hit_01",
+    "Path": "play_jiabeilina_da_heavyattack_hum_hit_01.bnk"
+   }
+  ],
+  "FileHash": "{E728737D-3570-EE5C-0B6F-C0639E29F1AB}"
+ }
+}

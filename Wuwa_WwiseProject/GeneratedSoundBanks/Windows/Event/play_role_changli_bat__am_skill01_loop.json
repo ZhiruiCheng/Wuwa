@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1449399015",
+    "Type": "Event",
+    "GUID": "{3CCF4D25-6026-44B4-B512-22964DC9CE5F}",
+    "Language": "SFX",
+    "Hash": "{41A2B9D7-49CA-D30D-EC11-0F76D5D37367}",
+    "ObjectPath": "play_role_changli_bat__am_skill01_loop",
+    "ShortName": "play_role_changli_bat__am_skill01_loop",
+    "Path": "Event/play_role_changli_bat__am_skill01_loop.bnk",
+    "Media": [
+     {
+      "Id": "864305833",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_skill01_Loop_v2.wav",
+      "Path": "Media/864305833.wem",
+      "CachePath": "C2/{C275DF0D-5EC9-D524-6557-9A9EF8DC2CEA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1449399015",
+      "Name": "play_role_changli_bat__am_skill01_loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_skill01_loop",
+      "GUID": "{3CCF4D25-6026-44B4-B512-22964DC9CE5F}",
+      "MaxAttenuation": "5000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "864305833"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{92A97618-F8F2-368E-01C4-54D8B95F6A51}"
+ }
+}

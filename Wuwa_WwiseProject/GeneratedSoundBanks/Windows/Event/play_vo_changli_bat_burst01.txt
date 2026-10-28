@@ -1,0 +1,8 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2300062502	play_vo_changli_bat_burst01			\Default Work Unit\Wuwa_Changli\play_vo_changli_bat_burst01	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	525448381	zh_vo_changli_bat_burst01_01	.cache\2B\{2BE6F061-8A6F-D29C-E97D-40380CC98382}.wem	525448381.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_burst_586089773\zh_vo_changli_bat_burst01_01	
+	730577377	zh_vo_changli_bat_burst01_03	.cache\18\{18FD9A4F-E60B-2D22-F18C-8F74A8605A90}.wem	730577377.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_burst_586089773\zh_vo_changli_bat_burst01_03	
+	983241700	zh_vo_changli_bat_burst01_02	.cache\9A\{9AB0785B-D29D-42A8-DE55-9DA5839B2FCF}.wem	983241700.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_1039061512\AM_941647283\zh_vo_changli_bat_burst_586089773\zh_vo_changli_bat_burst01_02	
+

@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2791934396",
+    "Type": "User",
+    "GUID": "{98AC485E-5835-4178-A096-688B8B251DA2}",
+    "Language": "SFX",
+    "Hash": "{71C9F744-BF0E-E78A-FC6E-723BD035E067}",
+    "ObjectPath": "play_vo_jiabeilina_atk_atk04",
+    "ShortName": "play_vo_jiabeilina_atk_atk04",
+    "Path": "play_vo_jiabeilina_atk_atk04.bnk"
+   }
+  ],
+  "FileHash": "{925AD303-D0B6-02ED-D148-D9AFF8E511C1}"
+ }
+}

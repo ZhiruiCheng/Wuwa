@@ -1,0 +1,44 @@
+{
+  "_comment": "嘉贝莉娜特殊能量条（DT_SpecialEnergyBarInfo 120800：专属预制体 UiItem_BarJiabeilina）→ /Game/LGUI/HUD/EnergyBar/EB_120800",
+  "prefab": "UI/UIResources/UiFight/Prefabs/EnergyBar/UiItem_BarJiabeilina",
+  "state": "energybar_jiabei.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": [
+    "UINiagara"
+  ],
+  "registries": [
+    {
+      "owner": "^/UiItem_BarJiabeilina$",
+      "entries": [
+        "/PnlBase/UiItem_BarSlot2$"
+      ]
+    },
+    {
+      "owner": "/PnlBase/UiItem_BarSlot2$",
+      "entries": [
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1$"
+      ]
+    },
+    {
+      "owner": "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot$",
+      "entries": [
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprBg$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/BarPart$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprGraduate$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot/SprGraduateFront$"
+      ]
+    },
+    {
+      "owner": "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1$",
+      "entries": [
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprBg$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/BarPart$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprGraduate$",
+        "/PnlBase/UiItem_BarSlot2/PnlSlot/PnlSlot#1/SprGraduateFront$"
+      ]
+    }
+  ],
+  "_comment_registries": "注册表 = UWuwaSpecialEnergyBarJiaBeiLiNa [两格的条]；条（嘉贝莉娜格子条，不要底线）[格子 0 红 / 格子 1 主]；格子同 UWuwaSpecialEnergyBarSlotItem"
+}

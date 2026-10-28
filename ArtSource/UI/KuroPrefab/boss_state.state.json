@@ -1,0 +1,8 @@
+{
+  "_comment": "UiItem_BossState_Prefab（Boss 血条，CommonBossStateView）：血条、等级、名字常显；受击残影（PnlCanvs）、护盾、动画节点运行时控制。韧性条 PnlTough 先常显满格（韧性 / 狂暴属性在受击那一步做）。",
+  "active": {},
+  "texts": {
+    "/TxtLevel$": "Lv.90",
+    "/TxtName$": "芙露德莉斯"
+  }
+}

@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "description": "第四段攻击（AM_Attack04）：原作 4 个 AnimNotifyEffect + 2 个 AnimNotifyStateEffect（收伞）。刀光复用第一段 R1a01；网格 / 贴图为导出原件，材质与 Niagara 为重建。由 prepare_attack.py 生成。",
+  "notifyAuthoredSeconds": 0.2962371226232946,
+  "textures": [
+    {
+      "name": "T_Aura_30037_2",
+      "file": "Textures/T_Aura_30037_2.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Aura\\T_Aura_30037_2.png",
+      "sha256": "34bb7033af0ef65e81384779a24843e5ad12a49c82edfd86be6ccd5e30d98618"
+    },
+    {
+      "name": "T_Changli_140004_wings",
+      "file": "Textures/T_Changli_140004_wings.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Changli_140004_wings.png",
+      "sha256": "23183b145ae3d06d982aab1f0c3935e87ea3f9518fac0e984cf727f0417e8ce4"
+    },
+    {
+      "name": "T_Changli_140006_wings_Trail1",
+      "file": "Textures/T_Changli_140006_wings_Trail1.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Changli_140006_wings_Trail1.png",
+      "sha256": "348ba02fee37a412c540cbf6b08242fd9dbc7aee1c1e75674797d238c8d73dac"
+    },
+    {
+      "name": "T_Color_30015",
+      "file": "Textures/T_Color_30015.png",
+      "srgb": true,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Color\\T_Color_30015.png",
+      "sha256": "83e1396791b2f3b75cb7c73553b17ccd4e1405d3a80d7142cbc13e6df1d0f9e1"
+    },
+    {
+      "name": "T_DefaultColorWhite_D",
+      "file": "Textures/T_DefaultColorWhite_D.png",
+      "srgb": true,
+      "substitute": true
+    },
+    {
+      "name": "T_Flare_10001",
+      "file": "Textures/T_Flare_10001.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Flare\\T_Flare_10001.png",
+      "sha256": "f1b85394fb8c8762af265d92939a387e55af3b3f4fbbdfe24304c9c74b5ea3f5"
+    },
+    {
+      "name": "T_Mask_002",
+      "file": "Textures/T_Mask_002.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Mask\\T_Mask_002.png",
+      "sha256": "67750cebc3ac9e1971096b657aa33d35387e6399f7005be499638666822351af"
+    },
+    {
+      "name": "T_Mask_10014",
+      "file": "Textures/T_Mask_10014.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Mask\\T_Mask_10014.png",
+      "sha256": "69a21fd3376ceaafb0046c1c9b91d00c7f1ca9c05d3701c0040941e3dac6da14"
+    },
+    {
+      "name": "T_Normal_30002",
+      "file": "Textures/T_Normal_30002.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Normal\\T_Normal_30002.png",
+      "sha256": "30ab3aa9203b747496e7a923144b30d78172825dc646fd32badd2062bf3969b0"
+    },
+    {
+      "name": "T_Smoke_001",
+      "file": "Textures/T_Smoke_001.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Smoke_001.png",
+      "sha256": "072022e1cf058b5bcd01bb19d9ff52b1fe77236c8eb19403d598b4c9c21c04f6"
+    },
+    {
+      "name": "T_Smoke_30003_c",
+      "file": "Textures/T_Smoke_30003_c.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Wenli\\T_Smoke_30003_c.png",
+      "sha256": "b4e8544e24a770d2b369519702e878af6ff5e6dc069befc7d272b1d1b06b68f9"
+    },
+    {
+      "name": "T_Tile_006",
+      "file": "Textures/T_Tile_006.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_006.png",
+      "sha256": "9377b8dfc72f780f9915edea21810cacbe1a3251f73c0cae73444b747a5be91b"
+    },
+    {
+      "name": "T_Tile_016",
+      "file": "Textures/T_Tile_016.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_016.png",
+      "sha256": "536a44e27d94cfe80f21bc73aee1e1fe71886389982b0852d00d19eeea21fd35"
+    },
+    {
+      "name": "T_Tile_021",
+      "file": "Textures/T_Tile_021.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_021.png",
+      "sha256": "6b5c9f0b3f1c0b7560365a10ef9d646881e22fa26d3af76185a09069e79344f1"
+    },
+    {
+      "name": "T_Tile_053",
+      "file": "Textures/T_Tile_053.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_053.png",
+      "sha256": "6c99c13ed7dc60f44848b9730d4193b07dc37932cb93d5424348b037374f2df9"
+    },
+    {
+      "name": "T_Tile_30017",
+      "file": "Textures/T_Tile_30017.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_30017.png",
+      "sha256": "fcb5ae8415cf3247d9118c0a42878acd89b084987a8a2ca4133c137ff89010fe"
+    },
+    {
+      "name": "T_Tile_300185",
+      "file": "Textures/T_Tile_300185.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Tile\\T_Tile_300185.png",
+      "sha256": "a23e01f85b2d4d21d02202a302b3aafefe4185fb0b7fc9c3fbc14c28c0979744"
+    },
+    {
+      "name": "T_Trail_30064",
+      "file": "Textures/T_Trail_30064.png",
+      "srgb": false,
+      "source": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Effect\\Texture\\Trail\\T_Trail_30064.png",
+      "sha256": "47c386252ae39c3f4b7657584715278d132687f3303a5db71ce508561c2f23f3"
+    }
+  ],
+  "meshes": [
+    "Mod_Changli_Umbrella_140001",
+    "Mod_Circle_12005",
+    "Mod_DaoguangPiaodai_002",
+    "Mod_Maxiaofang_Luoxuan001",
+    "Mod_Yuanwu_Skill03_Spine_140002"
+  ],
+  "systems": [
+    {
+      "name": "NS_Reference_Attack04_Flying",
+      "source": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local",
+      "generate": true,
+      "layers": [
+        {
+          "name": "Wings_Mesh",
+          "sprite": true,
+          "sortOrder": 5,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_Sprite/MI_Trans_Wenli_140006_S",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local",
+          "sourceEmitter": "NiagaraEmitter_3",
+          "id": "Reference_Attack04_Flying_Wings_Mesh",
+          "textures": {
+            "TexBase": "T_Changli_140006_wings_Trail1",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nfloat dyn0p1=0.0;\nfloat dyn0p2=0.0;\nfloat dyn0p3=0.0;\nconst float dyn1p1Lut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nbaseUv += float2(dyn0p2, dyn0p3);\nmaskUv.y += dyn0p1;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.5);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.85,1.0,a);\nfloat dissolveCut=saturate(1.0-dyn1p1);\nfloat breakup=1.0-smoothstep(dissolveValue-0.1,dissolveValue+0.1,dissolveCut*1.2);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "dynamicParameterCurves": [
+            "Wings_Mesh.Index 1 Param 1.FloatCurve"
+          ],
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "intensity": 0.8,
+          "wpo": "",
+          "emission": {
+            "count": 12,
+            "lifetime": [
+              0.3,
+              0.8
+            ],
+            "sizeMin": [
+              20,
+              20
+            ],
+            "sizeMax": [
+              45,
+              45
+            ],
+            "radius": [
+              0,
+              15
+            ],
+            "speed": [
+              20,
+              60
+            ],
+            "drag": 0,
+            "sizeFollowsScale": true,
+            "radialVelocity": true,
+            "arc": [
+              0,
+              360
+            ],
+            "height": 8,
+            "source": "curve ranges for nothing; everything else generic burst defaults"
+          }
+        },
+        {
+          "name": "Circle001",
+          "sprite": false,
+          "sortOrder": 10,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_MeshParticle/MI_Trans_140050_MP",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local",
+          "sourceEmitter": "Circle001_1",
+          "id": "Reference_Attack04_Flying_Circle001",
+          "textures": {
+            "TexBase": "T_Mask_10014",
+            "TexSecond": "T_Tile_006",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_Trail_30064",
+            "TexDissolve": "T_Tile_300185"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nconst float dyn0p1Lut[24] = {0.0,0.0434782635,0.0869565272,0.130434785,0.173913048,0.21739132,0.260869576,0.304347829,0.347826101,0.391304366,0.434782639,0.478260883,0.521739178,0.565217421,0.608695664,0.652173948,0.695652203,0.739130466,0.782608717,0.826086982,0.869565272,0.913043495,0.95652176,1.0};\nfloat dyn0p1 = lerp(dyn0p1Lut[ci], dyn0p1Lut[ci+1], cf);\nconst float dyn0p2Lut[24] = {-0.2,-0.11274417,-0.0254883278,0.0617674957,0.149023349,0.23627917,0.323534991,0.410790837,0.493028123,0.540159609,0.587291052,0.634422522,0.681553978,0.728685435,0.775816861,0.822948348,0.870079804,0.917211261,0.964342729,1.01147418,1.05860563,1.10573709,1.1528686,1.2};\nfloat dyn0p2 = lerp(dyn0p2Lut[ci], dyn0p2Lut[ci+1], cf);\nfloat dyn0p3=0.0;\nconst float dyn1p1Lut[24] = {0.847956936,0.829793926,0.811630903,0.793467863,0.775304825,0.757141814,0.738307222,0.696721352,0.653176247,0.609631107,0.56608608,0.522541006,0.478995876,0.435450794,0.391905751,0.348360637,0.304815508,0.261270497,0.217725388,0.174180319,0.130635215,0.0870901303,0.0435450737,7.02203357e-08};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,-0.32381)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(2.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.1)*a*0.15;\nbaseUv += float2(dyn0p2, dyn0p3);\nmaskUv.y += dyn0p1;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.85,1.0,a);\nfloat dissolveCut=saturate(1.0-dyn1p1);\nfloat breakup=1.0-smoothstep(dissolveValue-0.1,dissolveValue+0.1,dissolveCut*1.2);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "dynamicParameterCurves": [
+            "Circle001.Index 0 Param 1.FloatCurve",
+            "Circle001.Index 0 Param 2.FloatCurve",
+            "Circle001.Index 1 Param 1.FloatCurve"
+          ],
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "mesh": "Mod_Circle_12005",
+          "lifetime": 0.5,
+          "intensity": 1.2,
+          "wpo": ""
+        },
+        {
+          "name": "FlowingParticles",
+          "sprite": true,
+          "sortOrder": 10,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_Sprite/MI_Trans_Flare_001_S",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local",
+          "sourceEmitter": "NiagaraEmitter_0",
+          "id": "Reference_Attack04_Flying_FlowingParticles",
+          "textures": {
+            "TexBase": "T_Flare_10001",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,0.956521734,0.913043461,0.869565221,0.826086937,0.78260868,0.7391304,0.695652143,0.652173899,0.6086956,0.565217361,0.521739117,0.478260815,0.434782579,0.391304336,0.347826037,0.304347797,0.260869534,0.217391258,0.173913018,0.130434719,0.0869564791,0.0434782409,0.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "intensity": 0.8,
+          "wpo": "",
+          "emission": {
+            "count": 12,
+            "lifetime": [
+              0.3,
+              0.8
+            ],
+            "sizeMin": [
+              20,
+              20
+            ],
+            "sizeMax": [
+              45,
+              45
+            ],
+            "radius": [
+              0,
+              15
+            ],
+            "speed": [
+              20,
+              60
+            ],
+            "drag": 0,
+            "sizeFollowsScale": true,
+            "radialVelocity": true,
+            "arc": [
+              0,
+              360
+            ],
+            "height": 8,
+            "source": "curve ranges for nothing; everything else generic burst defaults"
+          }
+        }
+      ]
+    },
+    {
+      "name": "NS_Reference_Attack04_Xuli",
+      "source": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli",
+      "generate": true,
+      "layers": [
+        {
+          "name": "Luoxuan003",
+          "sprite": false,
+          "sortOrder": 20,
+          "pivot": [
+            0.0,
+            -10.0,
+            0.0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_MeshParticle/MI_Trans_Liudong_140179_MP",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli",
+          "sourceEmitter": "Luoxuan003_1",
+          "id": "Reference_Attack04_Xuli_Luoxuan003",
+          "textures": {
+            "TexBase": "T_Changli_140004_wings",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_Tile_053"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {0.0176431161,0.247694881,0.575580718,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.7347704,0.70975969,0.658341423,0.598340241,0.52871882,0.44843982,0.356465759,0.251759391,0.133283172,1.19122469e-07};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nconst float dyn0p1Lut[24] = {-0.74032503,-0.767235339,-0.806623619,-0.846011906,-0.885400236,-0.924788509,-0.961845265,-0.992948976,-1.00197629,-1.0110036,-1.02003091,-1.02905822,-1.03808553,-1.04711284,-1.05614011,-1.06516736,-1.07419467,-1.08322198,-1.09224934,-1.10127668,-1.11030391,-1.11933122,-1.12835853,-1.1342545};\nfloat dyn0p1 = lerp(dyn0p1Lut[ci], dyn0p1Lut[ci+1], cf);\nconst float dyn0p2Lut[24] = {-0.0804832119,-0.0690795485,-0.0576758851,-0.0462722217,-0.0348685583,-0.0234648949,-0.0120612315,-0.000657568146,0.00585237309,0.00626652815,0.0066806832,0.00709483826,0.00750899332,0.00792314837,0.00833730343,0.00875145849,0.00916561336,0.00957976819,0.00999392303,0.0104080779,0.0108222327,0.0112363875,0.0116505424,0.011986226};\nfloat dyn0p2 = lerp(dyn0p2Lut[ci], dyn0p2Lut[ci+1], cf);\nconst float dyn0p3Lut[24] = {0.324112646,0.550543815,0.776975042,0.957484071,0.944122808,0.930761622,0.917400441,0.904039216,0.890677992,0.877316764,0.863955567,0.850594348,0.83723313,0.823871917,0.810510693,0.797149492,0.741272197,0.636077392,0.530882458,0.425687625,0.320492674,0.215297856,0.110102976,0.032395244};\nfloat dyn0p3 = lerp(dyn0p3Lut[ci], dyn0p3Lut[ci+1], cf);\nconst float dyn1p1Lut[24] = {1.0,0.997560487,0.990504006,0.979046757,0.963392948,0.943691628,0.92024837,0.893279278,0.862981731,0.829540481,0.793232183,0.754273109,0.712858991,0.668322833,0.617619638,0.560989624,0.499073038,0.432590123,0.362300361,0.288899754,0.213057764,0.135506969,0.0569651526,-0.0218714607};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nconst float dyn1p2Lut[24] = {0.01123333,0.024890049,0.0412581567,0.0576262627,0.0739943744,0.0903624795,0.106730586,0.123098692,0.139466809,0.155834902,0.172203023,0.198628841,0.230815873,0.263002895,0.295189956,0.327377006,0.359564046,0.391751082,0.423938064,0.456125162,0.488312212,0.520499202,0.552686301,0.5843134};\nfloat dyn1p2 = lerp(dyn1p2Lut[ci], dyn1p2Lut[ci+1], cf);\nfloat dyn1p3=0.0;\nfloat2 baseUv = (UV-0.5)*float2(2.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(1.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(10.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.2,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.5,0.5)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(1.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,0.5);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nbaseUv += float2(dyn0p2, dyn0p3);\nmaskUv.y += dyn0p1;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.2*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(0.0,1.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.85,1.0,a);\nfloat dissolveCut=saturate(1.0-dyn1p1);\nfloat breakup=1.0-smoothstep(dissolveValue-0.1,dissolveValue+0.1,dissolveCut*1.2);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(1.0,0.0,0.0,0.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "dynamicParameterCurves": [
+            "Luoxuan003.Index 0 Param 1.FloatCurve",
+            "Luoxuan003.Index 0 Param 2.FloatCurve",
+            "Luoxuan003.Index 0 Param 3.FloatCurve",
+            "Luoxuan003.Index 1 Param 1.FloatCurve",
+            "Luoxuan003.Index 1 Param 2.FloatCurve"
+          ],
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "mesh": "Mod_Yuanwu_Skill03_Spine_140002",
+          "lifetime": 0.5,
+          "intensity": 1.2,
+          "wpo": ""
+        },
+        {
+          "name": "1",
+          "sprite": true,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_Sprite/MI_Chunse_Opaque_001_S",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli",
+          "sourceEmitter": "1_5",
+          "id": "Reference_Attack04_Xuli_1",
+          "textures": {
+            "TexBase": "T_DefaultColorWhite_D",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "intensity": 0.8,
+          "wpo": "",
+          "emission": {
+            "count": 12,
+            "lifetime": [
+              0.3,
+              0.8
+            ],
+            "sizeMin": [
+              20,
+              20
+            ],
+            "sizeMax": [
+              45,
+              45
+            ],
+            "radius": [
+              0,
+              15
+            ],
+            "speed": [
+              20,
+              60
+            ],
+            "drag": 0,
+            "sizeFollowsScale": true,
+            "radialVelocity": true,
+            "arc": [
+              0,
+              360
+            ],
+            "height": 8,
+            "source": "curve ranges for nothing; everything else generic burst defaults"
+          }
+        },
+        {
+          "name": "Empty002",
+          "sprite": false,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/Inst/MI_Trans_Liudong_80096",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli",
+          "sourceEmitter": "Empty002_3",
+          "id": "Reference_Attack04_Xuli_Empty002",
+          "textures": {
+            "TexBase": "T_Smoke_001",
+            "TexSecond": "T_Tile_016",
+            "TexNoise": "T_Normal_30002",
+            "TexMask": "T_Smoke_30003_c",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {0.0,0.118917442,0.20330651,0.244818961,0.246383564,0.223032848,0.18611376,0.146096807,0.113452377,0.0942560674,0.0817907074,0.0704572561,0.0598508471,0.050002373,0.0409427293,0.0327028047,0.0253134789,0.0188056516,0.0132102147,0.00855805278,0.0048800688,0.00220713218,0.000570145639,0.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nconst float dyn0p1Lut[24] = {0.474560526,0.378476986,0.28239346,0.186309903,0.0902263862,-0.00585714512,-0.101940722,-0.19544076,-0.232075271,-0.243319425,-0.254563582,-0.265807737,-0.277051873,-0.288296041,-0.299540164,-0.310784297,-0.32202847,-0.333272613,-0.344516757,-0.355760882,-0.367005061,-0.37824921,-0.389493329,-0.400737504};\nfloat dyn0p1 = lerp(dyn0p1Lut[ci], dyn0p1Lut[ci+1], cf);\nfloat dyn0p2=0.0;\nfloat dyn0p3=0.0;\nconst float dyn1p1Lut[24] = {1.0,0.997312832,0.994625694,0.991938555,0.989251389,0.986564266,0.98387711,0.98118996,0.978502777,0.975815656,0.9731285,0.970441355,0.967754228,0.965067053,0.96237993,0.959692747,0.957005614,0.932381328,0.902671078,0.872960883,0.84325067,0.812601382,0.653591189,0.49816656};\nfloat dyn1p1 = lerp(dyn1p1Lut[ci], dyn1p1Lut[ci+1], cf);\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nbaseUv += float2(dyn0p2, dyn0p3);\nmaskUv.y += dyn0p1;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.85,1.0,a);\nfloat dissolveCut=saturate(1.0-dyn1p1);\nfloat breakup=1.0-smoothstep(dissolveValue-0.1,dissolveValue+0.1,dissolveCut*1.2);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "dynamicParameterCurves": [
+            "Empty002.Index 0 Param 1.FloatCurve",
+            "Empty002.Index 1 Param 1.FloatCurve"
+          ],
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "mesh": "Mod_DaoguangPiaodai_002",
+          "lifetime": 0.5,
+          "intensity": 1.2,
+          "wpo": "// Reconstructed mesh motion from original curves (domain-resampled over normalizedAge).\n// Assumptions: rate units=turns/second about local +Z; Rotation Vector Z in degrees; Scale Factor scales local XY; pivot=mesh origin.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float integratedRateLut[24] = {0.0,0.0354226059,0.0552434516,0.0669429453,0.0777890858,0.0880790139,0.0978127296,0.106990233,0.115611524,0.123676602,0.131185469,0.138138123,0.144534565,0.150374794,0.155658811,0.160386615,0.164558208,0.168173588,0.171232756,0.173735711,0.175682454,0.177072985,0.177907304,0.17818541};\nfloat integratedRate = lerp(integratedRateLut[ci], integratedRateLut[ci+1], cf);\nfloat theta=integratedRate*3.14159265;\nconst float3 scaleFactorLut[24] = {float3(1.382081,1.3661091,1.749437),float3(1.35717629,1.35291928,1.70518383),float3(1.31275683,1.30925385,1.64104665),float3(1.26833736,1.26558835,1.57690948),float3(1.22391788,1.22192294,1.51277222),float3(1.1794985,1.17825753,1.44863506),float3(1.13507902,1.134592,1.38449788),float3(1.09907337,1.09918949,1.32522115),float3(1.078414,1.07885811,1.29332009),float3(1.05775468,1.05852668,1.26757704),float3(1.03709534,1.03819525,1.24183402),float3(1.01643605,1.01786386,1.21609099),float3(0.995776651,0.997532429,1.19034799),float3(0.975117306,0.977200992,1.16460486),float3(0.954457962,0.956869574,1.13886187),float3(0.933798617,0.936538155,1.11311876),float3(0.913139272,0.916206767,1.08737582),float3(0.892479928,0.895875318,1.06163285),float3(0.871820583,0.875543893,1.03588978),float3(0.851161249,0.855212495,1.01014678),float3(0.830501897,0.834881043,0.984403697),float3(0.809842549,0.814549712,0.958660689),float3(0.789183229,0.794218246,0.932917643),float3(0.7751453,0.7751453,0.9154253)};\nfloat3 scaleFactor = lerp(scaleFactorLut[ci], scaleFactorLut[ci+1], cf);\nfloat3 scaled=float3(P.x*scaleFactor.x,P.y*scaleFactor.y,P.z*scaleFactor.z);\nfloat sn=sin(theta);\nfloat cs=cos(theta);\nfloat3 turned=float3(scaled.x*cs-scaled.y*sn,scaled.x*sn+scaled.y*cs,scaled.z);\nreturn turned-P;\n",
+          "motionReconstruction": {
+            "rotationRate": {
+              "binding": "Empty002.Rotation Rate.FloatCurve",
+              "reconstructedEndDegrees": 32.07337379353497
+            },
+            "scaleFactor": {
+              "binding": "Empty002.Scale Factor.VectorCurve"
+            }
+          }
+        },
+        {
+          "name": "NE_Fx_BaseMesh",
+          "sprite": false,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_MeshParticle/MI_Trans_Liudong_140191_MP",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli",
+          "sourceEmitter": "NE_Fx_BaseMesh_1",
+          "id": "Reference_Attack04_Xuli_NE_Fx_BaseMesh",
+          "textures": {
+            "TexBase": "T_Aura_30037_2",
+            "TexSecond": "T_Color_30015",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_Mask_002",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(3.8549805,1.5374517,1.3643913,1.0),float4(3.8549805,1.5374517,1.3643913,1.0),float4(3.61949802,1.29835718,1.13334184,1.0),float4(2.60883115,0.611679963,0.550826062,1.0),float4(1.85125041,0.290278146,0.280714751,1.0),float4(1.60701736,0.204815465,0.205299732,1.0),float4(1.3767415,0.137262571,0.145110799,1.0),float4(1.16141516,0.0856439536,0.0985108388,1.0),float4(0.962342421,0.0480378295,0.0639088931,1.0),float4(0.780649238,0.0223911712,0.0396013365,1.0),float4(0.617759149,0.00683576002,0.0240439656,1.0),float4(0.474676309,-0.000707186323,0.0155095951,1.0),float4(0.352935475,-0.00211163674,0.0124509745,1.0),float4(0.253488444,0.000577592356,0.0131685991,1.0),float4(0.177815044,0.00542753296,0.0160648368,1.0),float4(0.126983124,0.0104529646,0.0194919568,1.0),float4(0.102341492,0.0136852493,0.0218204661,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0),float4(0.1,0.014048219,0.022088408,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {0.0,0.83252306,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\n// Original Dynamic Material Parameter curves (mapping is reconstruction, see prepare_attack.py).\nconst float dyn0p1Lut[24] = {-0.35,-0.22101336,-0.0920267201,0.036959924,0.162718592,0.21783937,0.244626063,0.271412758,0.298199463,0.324986164,0.351772864,0.378559587,0.405346285,0.432132987,0.458919696,0.485706382,0.512493117,0.539279831,0.566066515,0.592853196,0.619639922,0.646426565,0.673213365,0.70000005};\nfloat dyn0p1 = lerp(dyn0p1Lut[ci], dyn0p1Lut[ci+1], cf);\nfloat dyn0p2=0.0;\nfloat dyn0p3=0.0;\nfloat dyn1p1=0.0;\nfloat dyn1p2=0.0;\nfloat dyn1p3=0.0;\nfloat2 baseUv = (UV-0.5)*float2(1.0,0.8);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,1.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*-1.0-secondUv.y*1.2246468e-16, secondUv.x*1.2246468e-16+secondUv.y*-1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nbaseUv += float2(dyn0p2, dyn0p3);\nmaskUv.y += dyn0p1;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.15*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(1.0,0.0,0.0,0.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(1.0,0.0,0.0,0.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "dynamicParameterCurves": [
+            "NE_Fx_BaseMesh.Minimum.Index 0 Param 1.FloatCurve"
+          ],
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "mesh": "Mod_Maxiaofang_Luoxuan001",
+          "lifetime": 0.5,
+          "intensity": 1.2,
+          "wpo": ""
+        }
+      ]
+    },
+    {
+      "name": "NS_Reference_Attack04_SanEnd",
+      "source": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_San_End",
+      "generate": true,
+      "layers": [
+        {
+          "name": "Lizi",
+          "sprite": true,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/Inst/MI_Trans_Chunse_001",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_San_End",
+          "sourceEmitter": "Lizi_2",
+          "id": "Reference_Attack04_SanEnd_Lizi",
+          "textures": {
+            "TexBase": "T_DefaultColorWhite_D",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "intensity": 0.8,
+          "wpo": "",
+          "emission": {
+            "count": 12,
+            "lifetime": [
+              0.3,
+              0.8
+            ],
+            "sizeMin": [
+              20,
+              20
+            ],
+            "sizeMax": [
+              45,
+              45
+            ],
+            "radius": [
+              0,
+              15
+            ],
+            "speed": [
+              20,
+              60
+            ],
+            "drag": 0,
+            "sizeFollowsScale": true,
+            "radialVelocity": true,
+            "arc": [
+              0,
+              360
+            ],
+            "height": 8,
+            "source": "curve ranges for nothing; everything else generic burst defaults"
+          }
+        },
+        {
+          "name": "NE_Fx_Base001",
+          "sprite": false,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/MI_MeshParticle/MI_Add_Liudong_140027_MP2",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_San_End",
+          "sourceEmitter": "NE_Fx_Base001_1",
+          "id": "Reference_Attack04_SanEnd_NE_Fx_Base001",
+          "textures": {
+            "TexBase": "T_Tile_30017",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_Tile_021",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {0.0685835434,0.347395731,0.626207899,0.905020062,0.967753027,0.916818644,0.865884296,0.814949903,0.76401558,0.713081177,0.662146763,0.611212421,0.560278088,0.509343723,0.458409339,0.407474999,0.356540598,0.305606257,0.254671892,0.203737506,0.152803105,0.101868781,0.0509343963,7.34278544e-08};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\nfloat2 baseUv = (UV-0.5)*float2(0.1,0.1);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.1,0.1)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*-1.0-secondUv.y*1.2246468e-16, secondUv.x*1.2246468e-16+secondUv.y*-1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,1.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(-0.1,0.1)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*-1.0-maskUv.y*1.2246468e-16, maskUv.x*1.2246468e-16+maskUv.y*-1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,1.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*1.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(1.0,0.0,0.0,0.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "mesh": "Mod_Changli_Umbrella_140001",
+          "lifetime": 0.5,
+          "intensity": 1.2,
+          "wpo": ""
+        },
+        {
+          "name": "Lizi001",
+          "sprite": true,
+          "sortOrder": 0,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceMaterial": "/Game/Aki/Effect/Materials/Inst/MI_Trans_Chunse_001",
+          "sourceSystem": "/Game/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_San_End",
+          "sourceEmitter": "Lizi001_1",
+          "id": "Reference_Attack04_SanEnd_Lizi001",
+          "textures": {
+            "TexBase": "T_DefaultColorWhite_D",
+            "TexSecond": "T_DefaultColorWhite_D",
+            "TexNoise": "T_DefaultColorWhite_D",
+            "TexMask": "T_DefaultColorWhite_D",
+            "TexDissolve": "T_DefaultColorWhite_D"
+          },
+          "shader": "// Reconstructed shader; original texture bytes and curve values, authored wiring.\nfloat a=saturate(Age);\nfloat cp=a*23.0;\nint ci=min((int)floor(cp),22);\nfloat cf=cp-(float)ci;\nconst float4 curveColorLut[24] = {float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0),float4(1.0,1.0,1.0,1.0)};\nfloat4 curveColor = lerp(curveColorLut[ci], curveColorLut[ci+1], cf);\nconst float curveAlphaLut[24] = {1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0};\nfloat curveAlpha = lerp(curveAlphaLut[ci], curveAlphaLut[ci+1], cf);\nfloat2 baseUv = (UV-0.5)*float2(1.0,1.0);\nbaseUv = float2(baseUv.x*1.0-baseUv.y*0.0, baseUv.x*0.0+baseUv.y*1.0)+0.5;\nbaseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 secondUv = (UV-0.5)*float2(1.0,1.0);\nsecondUv = float2(secondUv.x*1.0-secondUv.y*0.0, secondUv.x*0.0+secondUv.y*1.0)+0.5;\nsecondUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noiseUv = (UV-0.5)*float2(1.0,1.0);\nnoiseUv = float2(noiseUv.x*1.0-noiseUv.y*0.0, noiseUv.x*0.0+noiseUv.y*1.0)+0.5;\nnoiseUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 maskUv = (UV-0.5)*float2(1.0,1.0);\nmaskUv = float2(maskUv.x*1.0-maskUv.y*0.0, maskUv.x*0.0+maskUv.y*1.0)+0.5;\nmaskUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 dissolveUv = (UV-0.5)*float2(1.0,1.0);\ndissolveUv = float2(dissolveUv.x*1.0-dissolveUv.y*0.0, dissolveUv.x*0.0+dissolveUv.y*1.0)+0.5;\ndissolveUv += float2(0.0,0.0) + float2(0.0,0.0)*a*0.15;\nfloat2 noise=(Texture2DSample(TexNoise,TexNoiseSampler,noiseUv).rg-0.5);\nbaseUv += noise*0.0*0.12;\nfloat4 base=Texture2DSample(TexBase,TexBaseSampler,baseUv);\nfloat4 second=Texture2DSample(TexSecond,TexSecondSampler,secondUv);\nfloat4 mask=Texture2DSample(TexMask,TexMaskSampler,maskUv);\nfloat4 dissolve=Texture2DSample(TexDissolve,TexDissolveSampler,dissolveUv+noise*0.04);\nfloat silhouette=saturate(dot(base,float4(0.0,0.0,0.0,1.0))*1.0);\nfloat maskValue=saturate(dot(mask,float4(1.0,0.0,0.0,0.0)));\nfloat dissolveValue=saturate(dot(dissolve,float4(1.0,0.0,0.0,0.0)));\nfloat fadeIn=smoothstep(0.0,0.04,a);\nfloat fadeOut=1.0-smoothstep(0.55,1.0,a);\nfloat dissolveCut=smoothstep(0.60,1.0,a);\nfloat breakup=1.0-smoothstep(dissolveValue+0.08,dissolveValue+0.33,dissolveCut);\nfloat alpha=saturate(silhouette*maskValue*saturate(VertexAlpha)*max(curveColor.a,0.0)*max(curveAlpha,0.0)*fadeIn*fadeOut*breakup);\nfloat emissiveChannel=max(dot(base,float4(0.0,0.0,0.0,1.0)),0.0);\nfloat3 sourceColor=lerp(max(base.rgb,0.0),float3(emissiveChannel,emissiveChannel,emissiveChannel),saturate(0.0));\n// Base_Emissive_Add=0.0 retained as evidence; not applied because original master composition is unavailable.\nfloat3 color=sourceColor*max(curveColor.rgb,0.0)*lerp(float3(1.0,1.0,1.0),max(second.rgb,0.0),0.28)*max(Intensity,0.0);\nreturn float4(color,alpha);\n",
+          "reconstruction": "Shader wiring, lifetime, intensity, fade/dissolve are authored; colour/alpha LUTs resampled over their exported domain on normalizedAge.",
+          "intensity": 0.8,
+          "wpo": "",
+          "emission": {
+            "count": 12,
+            "lifetime": [
+              0.3,
+              0.8
+            ],
+            "sizeMin": [
+              20,
+              20
+            ],
+            "sizeMax": [
+              45,
+              45
+            ],
+            "radius": [
+              0,
+              15
+            ],
+            "speed": [
+              20,
+              60
+            ],
+            "drag": 0,
+            "sizeFollowsScale": true,
+            "radialVelocity": true,
+            "arc": [
+              0,
+              360
+            ],
+            "height": 8,
+            "source": "curve ranges for nothing; everything else generic burst defaults"
+          }
+        }
+      ]
+    }
+  ],
+  "placements": [
+    {
+      "system": "NS_Reference_Attack01_N_Dg",
+      "location": [
+        0.0,
+        0.0,
+        130.0
+      ],
+      "rotation": [
+        155.0,
+        160.0,
+        0.0
+      ],
+      "scale": [
+        1.4,
+        1.4,
+        -1.4
+      ],
+      "delay": 0.0,
+      "attached": false,
+      "socket": "Root",
+      "sourceNotify": "AnimNotifyEffect_C_5",
+      "sourceSeconds": 0.23698969,
+      "sourceEffect": "DA_Fx_Group_R1a01_01_N_Dg"
+    },
+    {
+      "system": "NS_Reference_Attack01_N_Dg1",
+      "location": [
+        0.0,
+        0.0,
+        130.0
+      ],
+      "rotation": [
+        155.0,
+        160.0,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "delay": 0.003025975103406457,
+      "attached": false,
+      "socket": "Root",
+      "sourceNotify": "AnimNotifyEffect_C_4",
+      "sourceSeconds": 0.23941047,
+      "sourceEffect": "DA_Fx_Group_R1a01_01_N_Dg1",
+      "localYawKeys": [
+        {
+          "time": -0.003447235076070649,
+          "value": 16.835491,
+          "arriveTangent": 252.66271093908443,
+          "leaveTangent": 140.81230957470936
+        },
+        {
+          "time": 0.23175635532531502,
+          "value": 39.27856,
+          "arriveTangent": 27.143838048228808,
+          "leaveTangent": 27.143804448233205
+        },
+        {
+          "time": 1.2465529131114266,
+          "value": 46.85684,
+          "arriveTangent": 0.0,
+          "leaveTangent": 0.0
+        }
+      ],
+      "localYawSource": "Original DA Rotation.Curve[2] with timeline-scaled seconds and reciprocal-scaled slopes; mapping axis to local yaw is authored reconstruction."
+    },
+    {
+      "system": "NS_Reference_Attack04_Xuli",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "delay": 0.35034714947239354,
+      "attached": true,
+      "socket": "Root",
+      "sourceNotify": "AnimNotifyEffect_C_0",
+      "sourceSeconds": 0.5172674,
+      "sourceEffect": "DA_Fx_Group_R1a04_Xuli"
+    },
+    {
+      "system": "NS_Reference_Attack04_Flying",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "delay": 0.357096274703031,
+      "attached": true,
+      "socket": "WeaponProp03",
+      "sourceNotify": "AnimNotifyEffect_C_1",
+      "sourceSeconds": 0.5226667,
+      "sourceEffect": "DA_Fx_Group_R1a04_Flying_Local"
+    },
+    {
+      "system": "NS_Reference_Attack04_SanEnd",
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -90.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "delay": 1.4113766857308965,
+      "attached": false,
+      "socket": "WeaponProp02",
+      "sourceNotify": "AnimNotifyStateEffect_C_3",
+      "sourceSeconds": 1.366091,
+      "sourceEffect": "DA_Fx_Group_San_end",
+      "sourceStateDurationSeconds": 1.9007871
+    }
+  ],
+  "skippedLayers": [
+    {
+      "system": "NS_Reference_Attack04_Flying",
+      "layer": "Ribbon",
+      "reason": "NiagaraRibbonRendererProperties not supported by the builder"
+    }
+  ],
+  "unplacedEvents": [
+    {
+      "sourceNotify": "AnimNotifyStateEffect_C_0",
+      "sourceEffect": "DA_Fx_Group_R1a04_San",
+      "reason": "no buildable child effect"
+    }
+  ],
+  "reconstructionChoices": [
+    "Colour / alpha / motion LUTs resampled over their exported LUT domain on normalizedAge (first attack ignored domains).",
+    "Mesh WPO: Rotation Rate integrated as turns/second about local +Z, Z Rotation Vector in degrees, Scale Factor on local axes; all reconstruction.",
+    "Scale RGBA colour curve is used as the colour curve when a layer has no Color curve.",
+    "Lifetime / intensity per layer by analogy with the first attack; not in the cooked export.",
+    "Sprite emission: exported Lifetime / Sprite Size / Large Radius curve ranges where present, otherwise generic burst defaults; AttackNNTuning.json overrides.",
+    "Original groups with several children become one placement per supported child; state effects (AnimNotifyStateEffect) are placed at their begin time.",
+    "Dynamic Material Parameter curves are baked into the shader: Index 1 Param 1 = remaining amount (dissolve = 1 - value), Index 0 Param 2/3 = base UV U/V offset, Index 0 Param 1 = mask UV V offset; offsets scroll without clipping. Mapping chosen from curve shapes and MI switches, not recovered from the master material."
+  ]
+}

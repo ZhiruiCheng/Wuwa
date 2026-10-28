@@ -5,7 +5,7 @@
 #include "Abilities/Tasks/AbilityTask_WaitGameplayTag.h"
 #include "Animation/AnimInstance.h"
 #include "Animation/AnimMontage.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Buff/WuwaBuffLibrary.h"
 #include "Game/NewWorld/Character/Role/Component/WuwaRoleGaitBridgeComponent.h"
 #include "Game/NewWorld/Character/Role/WuwaCharacter.h"

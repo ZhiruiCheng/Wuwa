@@ -1,0 +1,593 @@
+{
+ "prefab": "UI/UIResources/UiPlot/Prefabs/PC/PC_UiView_PlotsD",
+ "nodes": [
+  {
+   "name": "PC_UiView_PlotsD",
+   "path": "/PC_UiView_PlotsD",
+   "parent": -1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "UiView_PlotsD",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD",
+   "parent": 0,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlFull",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull",
+   "parent": 1,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlPlotText",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText",
+   "parent": 2,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.5,
+     0.0
+    ],
+    "max": [
+     0.5,
+     0.0
+    ],
+    "pos": [
+     0.0,
+     5.25714111328125
+    ],
+    "size": [
+     790.5,
+     190.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "PnlNpc",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlNpc",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     395.25,
+     -33.0
+    ],
+    "size": [
+     501.0,
+     33.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtNpcName",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlNpc/TxtNpcName",
+   "parent": 4,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     250.5,
+     6.0
+    ],
+    "size": [
+     71.25750160217285,
+     39.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    247,
+    235,
+    166,
+    255
+   ],
+   "text": {
+    "text": "NPC",
+    "size": 36.0,
+    "hAlign": "Center",
+    "vAlign": "Middle",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     76
+    ]
+   }
+  },
+  {
+   "name": "PnlLine",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlLine",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     395.25,
+     -55.5
+    ],
+    "size": [
+     600.0,
+     22.5
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "SprLineLeft",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlLine/SprLineLeft",
+   "parent": 6,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     1.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     -376.19995880126953,
+     -2.999882698059082
+    ],
+    "size": [
+     375.0,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 180,
+   "color": [
+    255,
+    255,
+    255,
+    153
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ComLineA.png",
+   "slice": [
+    27,
+    414,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SprLineRight",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlLine/SprLineRight",
+   "parent": 6,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.0,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     2.025000035762787,
+     0.75
+    ],
+    "size": [
+     375.0,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    153
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ComLineA.png",
+   "slice": [
+    27,
+    414,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SprLineIcon",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/PnlLine/SprLineIcon",
+   "parent": 6,
+   "type": "Texture",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.5,
+     0.5
+    ],
+    "max": [
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     81.0,
+     36.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    153
+   ],
+   "texture": "ArtSource/UI/HUD/Kuro/Textures/SP_ComLineAIcon.png",
+   "slice": null
+  },
+  {
+   "name": "SvTxt",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/SvTxt",
+   "parent": 3,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     395.25,
+     -55.5
+    ],
+    "size": [
+     790.5,
+     135.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Viewport",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/SvTxt/Viewport",
+   "parent": 10,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     0.5
+    ],
+    "min": [
+     0.0,
+     0.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.0,
+     0.0
+    ],
+    "size": [
+     0.0,
+     0.0
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "Content",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/SvTxt/Viewport/Content",
+   "parent": 11,
+   "type": "Item",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     1.0,
+     1.0
+    ],
+    "pos": [
+     0.375,
+     0.0
+    ],
+    "size": [
+     -2.25,
+     77.40750503540039
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    255,
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "name": "TxtList",
+   "path": "/PC_UiView_PlotsD/UiView_PlotsD/PnlFull/PnlPlotText/SvTxt/Viewport/Content/TxtList",
+   "parent": 12,
+   "type": "Text",
+   "anchor": {
+    "pivot": [
+     0.5,
+     1.0
+    ],
+    "min": [
+     0.0,
+     1.0
+    ],
+    "max": [
+     0.0,
+     1.0
+    ],
+    "pos": [
+     395.25,
+     -7.5
+    ],
+    "size": [
+     790.5,
+     68.40750503540039
+    ]
+   },
+   "scale": [
+    1.0,
+    1.0
+   ],
+   "rotation": 0,
+   "color": [
+    236,
+    229,
+    216,
+    255
+   ],
+   "text": {
+    "text": "Subtitle text",
+    "size": 28.5,
+    "hAlign": "Center",
+    "vAlign": "Top",
+    "outline": 1,
+    "outlineColor": [
+     0,
+     0,
+     0,
+     127
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1843835247",
+    "Type": "Event",
+    "GUID": "{70C4C0DA-A364-470A-AB92-6C2491EF8E6A}",
+    "Language": "SFX",
+    "Hash": "{EED2BFE2-46CB-9862-E108-2E61B21BF18C}",
+    "ObjectPath": "play_vo_jiabeilina_atk_fallingatk_start01",
+    "ShortName": "play_vo_jiabeilina_atk_fallingatk_start01",
+    "Path": "Event/play_vo_jiabeilina_atk_fallingatk_start01.bnk",
+    "Media": [
+     {
+      "Id": "48301380",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_start01_03_tone.wav",
+      "Path": "Media/48301380.wem",
+      "CachePath": "0B/{0B47F718-2DEB-96A0-0375-67F575AAFCBE}.wem"
+     },
+     {
+      "Id": "209561130",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_start01_02_tone.wav",
+      "Path": "Media/209561130.wem",
+      "CachePath": "0B/{0B3D66A6-DD80-A6E1-F7B8-D97A431E2F5E}.wem"
+     },
+     {
+      "Id": "1063204464",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\zh_vo_jiabeilina_atk_fallingatk_start01_01_tone.wav",
+      "Path": "Media/1063204464.wem",
+      "CachePath": "F1/{F1509557-79FB-0F74-4D2D-A470B772DAC7}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1843835247",
+      "Name": "play_vo_jiabeilina_atk_fallingatk_start01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_vo_jiabeilina_atk_fallingatk_start01",
+      "GUID": "{70C4C0DA-A364-470A-AB92-6C2491EF8E6A}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.22170833",
+      "DurationMax": "0.41241667",
+      "MediaRefs": [
+       {
+        "Id": "48301380"
+       },
+       {
+        "Id": "209561130"
+       },
+       {
+        "Id": "1063204464"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4553B7F1-9F30-62D8-AEFB-636C7E86D699}"
+ }
+}

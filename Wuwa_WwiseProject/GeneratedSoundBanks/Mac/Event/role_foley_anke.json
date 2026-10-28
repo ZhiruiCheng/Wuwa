@@ -1,0 +1,980 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1293963997",
+    "Type": "Event",
+    "GUID": "{7FB42E84-759A-447B-97BF-6F9B3B21F635}",
+    "Language": "SFX",
+    "Hash": "{415DA28C-8343-8B95-03CC-16EB19745E99}",
+    "ObjectPath": "role_foley_anke",
+    "ShortName": "role_foley_anke",
+    "Path": "Event/role_foley_anke.bnk",
+    "Media": [
+     {
+      "Id": "1595629",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_03.wav",
+      "Path": "Media/1595629.wem",
+      "CachePath": "4C/{4CD558F4-E565-A6C9-A05B-28C34AF62361}.wem"
+     },
+     {
+      "Id": "23245949",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_01.wav",
+      "Path": "Media/23245949.wem",
+      "CachePath": "DF/{DF5DA7EB-AAA8-FBC0-15E5-031BA3B2089D}.wem"
+     },
+     {
+      "Id": "44948206",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_08.wav",
+      "Path": "Media/44948206.wem",
+      "CachePath": "E5/{E52F41D6-4265-5768-CA04-6E13EFDEB055}.wem"
+     },
+     {
+      "Id": "65537806",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_05.wav",
+      "Path": "Media/65537806.wem",
+      "CachePath": "4D/{4D62D7A8-25A1-8723-29AD-5F2217C737FB}.wem"
+     },
+     {
+      "Id": "69626705",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_07.wav",
+      "Path": "Media/69626705.wem",
+      "CachePath": "7B/{7BE9EE3D-F51F-A706-CA18-0171D58BFAB9}.wem"
+     },
+     {
+      "Id": "91168053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_04.wav",
+      "Path": "Media/91168053.wem",
+      "CachePath": "96/{9629C957-4F06-0A25-CC48-45B9880F7F48}.wem"
+     },
+     {
+      "Id": "98632033",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_06.wav",
+      "Path": "Media/98632033.wem",
+      "CachePath": "47/{4760E9D7-CBAA-3450-4CC0-B2995246F959}.wem"
+     },
+     {
+      "Id": "103465093",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_02.wav",
+      "Path": "Media/103465093.wem",
+      "CachePath": "6C/{6C245F82-9557-3153-739D-6739446162A5}.wem"
+     },
+     {
+      "Id": "123756583",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_06.wav",
+      "Path": "Media/123756583.wem",
+      "CachePath": "CB/{CB355906-183D-955C-0675-898210364497}.wem"
+     },
+     {
+      "Id": "124565874",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_07.wav",
+      "Path": "Media/124565874.wem",
+      "CachePath": "BF/{BF1FF393-2DA3-D004-51AD-AA33A6961E6C}.wem"
+     },
+     {
+      "Id": "196579306",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_07.wav",
+      "Path": "Media/196579306.wem",
+      "CachePath": "14/{1482F944-B58F-463B-AFB6-DC0A2B4BCDB0}.wem"
+     },
+     {
+      "Id": "219036372",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_08.wav",
+      "Path": "Media/219036372.wem",
+      "CachePath": "11/{11278CE9-759E-FDB1-21DA-CAD6C5BFD552}.wem"
+     },
+     {
+      "Id": "246751144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_01.wav",
+      "Path": "Media/246751144.wem",
+      "CachePath": "A7/{A746CAFB-12B0-D02D-059B-2E1D85414E48}.wem"
+     },
+     {
+      "Id": "251051192",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_03.wav",
+      "Path": "Media/251051192.wem",
+      "CachePath": "E8/{E8F2AFCD-269E-5961-3D3B-29F5D432F6D3}.wem"
+     },
+     {
+      "Id": "266993126",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_03.wav",
+      "Path": "Media/266993126.wem",
+      "CachePath": "3E/{3EFAEB6D-2E2B-1A89-482D-44A8D12C3D5C}.wem"
+     },
+     {
+      "Id": "292734393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_01.wav",
+      "Path": "Media/292734393.wem",
+      "CachePath": "F4/{F4948C6E-1CC4-2708-4A88-9455A659378B}.wem"
+     },
+     {
+      "Id": "302044840",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_06.wav",
+      "Path": "Media/302044840.wem",
+      "CachePath": "CA/{CAC29C81-079E-9AE8-A0FD-BBA3E0C5D840}.wem"
+     },
+     {
+      "Id": "315867941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_08.wav",
+      "Path": "Media/315867941.wem",
+      "CachePath": "D8/{D8065083-801C-5AE5-0F03-DD09C2D21F64}.wem"
+     },
+     {
+      "Id": "323522963",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_03.wav",
+      "Path": "Media/323522963.wem",
+      "CachePath": "9E/{9EB382BF-A660-4813-1610-CF47021A97D7}.wem"
+     },
+     {
+      "Id": "339214195",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_12.wav",
+      "Path": "Media/339214195.wem",
+      "CachePath": "86/{868C5538-FB44-3E8D-1511-45BD69134814}.wem"
+     },
+     {
+      "Id": "339932386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_08.wav",
+      "Path": "Media/339932386.wem",
+      "CachePath": "16/{16550ACE-5F19-1D50-26D0-91D49598520F}.wem"
+     },
+     {
+      "Id": "356856292",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_05.wav",
+      "Path": "Media/356856292.wem",
+      "CachePath": "D4/{D4181565-4107-5068-C3DB-C49B9AD0201C}.wem"
+     },
+     {
+      "Id": "368731034",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_01.wav",
+      "Path": "Media/368731034.wem",
+      "CachePath": "50/{50DFF037-1AF5-F393-09F6-3F90786C3983}.wem"
+     },
+     {
+      "Id": "374416981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_05.wav",
+      "Path": "Media/374416981.wem",
+      "CachePath": "49/{49062B97-9586-53D8-B3B9-895E68791019}.wem"
+     },
+     {
+      "Id": "380136893",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_06.wav",
+      "Path": "Media/380136893.wem",
+      "CachePath": "BD/{BD757883-C9D4-434E-530C-8926E3A7B974}.wem"
+     },
+     {
+      "Id": "401939631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_02.wav",
+      "Path": "Media/401939631.wem",
+      "CachePath": "9A/{9AC6AC1A-7FBA-A0F8-B085-EC7B29A9EFD6}.wem"
+     },
+     {
+      "Id": "411839297",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_05.wav",
+      "Path": "Media/411839297.wem",
+      "CachePath": "D9/{D925D256-DBC4-C98D-7554-EE8246333DBD}.wem"
+     },
+     {
+      "Id": "451533323",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_05.wav",
+      "Path": "Media/451533323.wem",
+      "CachePath": "0C/{0CBA523A-5532-D60C-65AE-0B70458D3AEA}.wem"
+     },
+     {
+      "Id": "467492924",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_02.wav",
+      "Path": "Media/467492924.wem",
+      "CachePath": "65/{658EEF89-C0EE-4BD9-9949-D8A1DFDB908D}.wem"
+     },
+     {
+      "Id": "470542560",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_11.wav",
+      "Path": "Media/470542560.wem",
+      "CachePath": "47/{47588602-CD10-E033-9BE9-5EC49ABB6477}.wem"
+     },
+     {
+      "Id": "481408982",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_06.wav",
+      "Path": "Media/481408982.wem",
+      "CachePath": "B5/{B5B9FD83-75DF-A8A9-9884-8E1D02B741FE}.wem"
+     },
+     {
+      "Id": "483475577",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_04.wav",
+      "Path": "Media/483475577.wem",
+      "CachePath": "CF/{CFD219E8-43F7-7CA4-AB1F-DB44440BEEE6}.wem"
+     },
+     {
+      "Id": "484953503",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_02.wav",
+      "Path": "Media/484953503.wem",
+      "CachePath": "E9/{E9894904-9559-8F2C-4AD4-2C7061C564A5}.wem"
+     },
+     {
+      "Id": "498371325",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_07.wav",
+      "Path": "Media/498371325.wem",
+      "CachePath": "E9/{E9E4586B-3066-7C1B-C88F-120CF01261C3}.wem"
+     },
+     {
+      "Id": "501709243",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_08.wav",
+      "Path": "Media/501709243.wem",
+      "CachePath": "06/{06BE284B-1CDF-6503-5B34-6C91C8CFD642}.wem"
+     },
+     {
+      "Id": "520445064",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_02.wav",
+      "Path": "Media/520445064.wem",
+      "CachePath": "4E/{4EFCBF57-1A4F-EE56-5F37-6D89A67B4EEC}.wem"
+     },
+     {
+      "Id": "546883205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_04.wav",
+      "Path": "Media/546883205.wem",
+      "CachePath": "97/{978D8A17-91FA-2023-BC4C-33DBC078B200}.wem"
+     },
+     {
+      "Id": "584773569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_12.wav",
+      "Path": "Media/584773569.wem",
+      "CachePath": "9C/{9C49F72F-3E2E-BFB4-C834-A5B1F936529E}.wem"
+     },
+     {
+      "Id": "586010135",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_01.wav",
+      "Path": "Media/586010135.wem",
+      "CachePath": "A7/{A76D2694-B742-99A8-7070-AFBB1E459775}.wem"
+     },
+     {
+      "Id": "609756207",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_03.wav",
+      "Path": "Media/609756207.wem",
+      "CachePath": "15/{159C09F1-50BF-284B-0601-E09B0ECDFC27}.wem"
+     },
+     {
+      "Id": "635098056",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_07.wav",
+      "Path": "Media/635098056.wem",
+      "CachePath": "11/{11E21F01-A17D-D68B-8BEF-9771370BC371}.wem"
+     },
+     {
+      "Id": "650565054",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_08.wav",
+      "Path": "Media/650565054.wem",
+      "CachePath": "62/{62007ABE-FB20-A738-E9E9-BB7F76658DDE}.wem"
+     },
+     {
+      "Id": "658341084",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_fly_01.wav",
+      "Path": "Media/658341084.wem",
+      "CachePath": "0B/{0B8C261F-5706-229B-F7E4-563B3F032B56}.wem"
+     },
+     {
+      "Id": "680748864",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_04.wav",
+      "Path": "Media/680748864.wem",
+      "CachePath": "1A/{1A2B2EE4-ACEC-6887-B162-CBFCF13D36FE}.wem"
+     },
+     {
+      "Id": "684711445",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_09.wav",
+      "Path": "Media/684711445.wem",
+      "CachePath": "FA/{FACC996D-E64B-0B4F-C029-0E9B3F53B262}.wem"
+     },
+     {
+      "Id": "710691132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_09.wav",
+      "Path": "Media/710691132.wem",
+      "CachePath": "40/{402FEE9F-C2E4-1009-84F9-80855D5F0F5E}.wem"
+     },
+     {
+      "Id": "751405887",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_09.wav",
+      "Path": "Media/751405887.wem",
+      "CachePath": "6B/{6B534773-C043-DADD-61BE-B1CD3171BBE3}.wem"
+     },
+     {
+      "Id": "761447804",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_03.wav",
+      "Path": "Media/761447804.wem",
+      "CachePath": "32/{32828295-3F92-E638-98B6-EA793781782A}.wem"
+     },
+     {
+      "Id": "767963295",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_04.wav",
+      "Path": "Media/767963295.wem",
+      "CachePath": "A7/{A72ACA6F-FAB8-4CC3-C1D1-FFB3DA56B2BD}.wem"
+     },
+     {
+      "Id": "780979327",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_10.wav",
+      "Path": "Media/780979327.wem",
+      "CachePath": "A3/{A36D5BEB-EEF8-8470-7D43-868C0A203DAA}.wem"
+     },
+     {
+      "Id": "794832295",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_10.wav",
+      "Path": "Media/794832295.wem",
+      "CachePath": "E8/{E836323C-BE94-0F6F-1563-8231B1086E94}.wem"
+     },
+     {
+      "Id": "832479157",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_03.wav",
+      "Path": "Media/832479157.wem",
+      "CachePath": "82/{824AAD85-8245-0D6A-14E0-3F0479ACE845}.wem"
+     },
+     {
+      "Id": "840350205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_bodyfall_04.wav",
+      "Path": "Media/840350205.wem",
+      "CachePath": "92/{92737EAF-1BEF-CFCB-3FD4-4CFC3F54BBE7}.wem"
+     },
+     {
+      "Id": "854717592",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_07.wav",
+      "Path": "Media/854717592.wem",
+      "CachePath": "50/{5096FFB0-BF78-5999-4E23-D1316B48DA68}.wem"
+     },
+     {
+      "Id": "855732881",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hardfast_05.wav",
+      "Path": "Media/855732881.wem",
+      "CachePath": "2D/{2D595489-2C61-A8A0-2490-E7B50FCA8E5B}.wem"
+     },
+     {
+      "Id": "860884846",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_10.wav",
+      "Path": "Media/860884846.wem",
+      "CachePath": "D9/{D970B93E-919D-8420-0440-DB6556216847}.wem"
+     },
+     {
+      "Id": "878421661",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_01.wav",
+      "Path": "Media/878421661.wem",
+      "CachePath": "67/{6776FCB6-D475-82DD-2914-3E9A7DE679E7}.wem"
+     },
+     {
+      "Id": "900891970",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_06.wav",
+      "Path": "Media/900891970.wem",
+      "CachePath": "23/{23A4725B-F206-DBD3-888E-787A9FBF2945}.wem"
+     },
+     {
+      "Id": "902141033",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_hard_11.wav",
+      "Path": "Media/902141033.wem",
+      "CachePath": "E7/{E7D51011-F552-E2BF-623F-F7A7386F8FD2}.wem"
+     },
+     {
+      "Id": "913927634",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_02.wav",
+      "Path": "Media/913927634.wem",
+      "CachePath": "59/{5949AFAA-9467-AF07-65DC-4F13A33C82CD}.wem"
+     },
+     {
+      "Id": "936979056",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weak_04.wav",
+      "Path": "Media/936979056.wem",
+      "CachePath": "B8/{B819BAE6-9EED-1192-C928-D37764A47C07}.wem"
+     },
+     {
+      "Id": "947553817",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_05.wav",
+      "Path": "Media/947553817.wem",
+      "CachePath": "7B/{7BD40EF7-1AFD-462C-A915-CDF1AD12AA24}.wem"
+     },
+     {
+      "Id": "963394488",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_09.wav",
+      "Path": "Media/963394488.wem",
+      "CachePath": "A4/{A431A3C5-23AA-6223-889A-EC362EEDE98A}.wem"
+     },
+     {
+      "Id": "970994571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_sprint_11.wav",
+      "Path": "Media/970994571.wem",
+      "CachePath": "5B/{5B149FBF-3102-B819-F4A6-A9AEBD7E5F06}.wem"
+     },
+     {
+      "Id": "998517920",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_weakfast_06.wav",
+      "Path": "Media/998517920.wem",
+      "CachePath": "89/{895E8916-2C6C-7344-568C-515BCDEDF920}.wem"
+     },
+     {
+      "Id": "1046858521",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_01.wav",
+      "Path": "Media/1046858521.wem",
+      "CachePath": "36/{36687F58-8B3F-9E73-6F5E-C6EDD1469CF5}.wem"
+     },
+     {
+      "Id": "1048901491",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\foley_anke_run_02.wav",
+      "Path": "Media/1048901491.wem",
+      "CachePath": "6B/{6B136042-399A-549D-99E2-EBF625601B99}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1293963997",
+      "Name": "role_foley_anke",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\role_foley_anke",
+      "GUID": "{7FB42E84-759A-447B-97BF-6F9B3B21F635}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.28035417",
+      "DurationMax": "14.265542",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "2557423760",
+         "GUID": "{EDFA3906-C4B7-4728-9260-4C58289D24D8}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1595629"
+         },
+         {
+          "Id": "124565874"
+         },
+         {
+          "Id": "219036372"
+         },
+         {
+          "Id": "292734393"
+         },
+         {
+          "Id": "380136893"
+         },
+         {
+          "Id": "520445064"
+         },
+         {
+          "Id": "680748864"
+         },
+         {
+          "Id": "855732881"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "2587856914",
+         "GUID": "{D409D60F-E885-432E-BD68-721EC5488C79}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "123756583"
+         },
+         {
+          "Id": "356856292"
+         },
+         {
+          "Id": "368731034"
+         },
+         {
+          "Id": "401939631"
+         },
+         {
+          "Id": "609756207"
+         },
+         {
+          "Id": "840350205"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1488596377",
+         "GUID": "{EA1FF672-80B1-4D79-998D-8F71A04F87EE}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "69626705"
+         },
+         {
+          "Id": "98632033"
+         },
+         {
+          "Id": "103465093"
+         },
+         {
+          "Id": "246751144"
+         },
+         {
+          "Id": "251051192"
+         },
+         {
+          "Id": "411839297"
+         },
+         {
+          "Id": "501709243"
+         },
+         {
+          "Id": "936979056"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "3599861390",
+         "GUID": "{79BEB496-1626-40FF-9510-595819538FAF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "65537806"
+         },
+         {
+          "Id": "196579306"
+         },
+         {
+          "Id": "481408982"
+         },
+         {
+          "Id": "483475577"
+         },
+         {
+          "Id": "484953503"
+         },
+         {
+          "Id": "586010135"
+         },
+         {
+          "Id": "650565054"
+         },
+         {
+          "Id": "684711445"
+         },
+         {
+          "Id": "761447804"
+         },
+         {
+          "Id": "860884846"
+         },
+         {
+          "Id": "902141033"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1133470540",
+         "GUID": "{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "658341084"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1296465089",
+         "GUID": "{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "23245949"
+         },
+         {
+          "Id": "339932386"
+         },
+         {
+          "Id": "584773569"
+         },
+         {
+          "Id": "635098056"
+         },
+         {
+          "Id": "767963295"
+         },
+         {
+          "Id": "780979327"
+         },
+         {
+          "Id": "832479157"
+         },
+         {
+          "Id": "900891970"
+         },
+         {
+          "Id": "913927634"
+         },
+         {
+          "Id": "947553817"
+         },
+         {
+          "Id": "963394488"
+         },
+         {
+          "Id": "970994571"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "1724159175",
+         "GUID": "{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "91168053"
+         },
+         {
+          "Id": "266993126"
+         },
+         {
+          "Id": "315867941"
+         },
+         {
+          "Id": "374416981"
+         },
+         {
+          "Id": "467492924"
+         },
+         {
+          "Id": "710691132"
+         },
+         {
+          "Id": "854717592"
+         },
+         {
+          "Id": "878421661"
+         },
+         {
+          "Id": "998517920"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "1063605336",
+         "Id": "712161704",
+         "GUID": "{BA1430CF-5E6E-488E-949F-0923689F7DA9}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "44948206"
+         },
+         {
+          "Id": "302044840"
+         },
+         {
+          "Id": "323522963"
+         },
+         {
+          "Id": "339214195"
+         },
+         {
+          "Id": "451533323"
+         },
+         {
+          "Id": "470542560"
+         },
+         {
+          "Id": "498371325"
+         },
+         {
+          "Id": "546883205"
+         },
+         {
+          "Id": "751405887"
+         },
+         {
+          "Id": "794832295"
+         },
+         {
+          "Id": "1046858521"
+         },
+         {
+          "Id": "1048901491"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1063605336",
+      "Name": "foley_variant",
+      "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant",
+      "GUID": "{C98632CF-EC0B-43E1-B2A7-1D653EB47F2F}",
+      "Switches": [
+       {
+        "Id": "712161704",
+        "Name": "run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\run",
+        "GUID": "{BA1430CF-5E6E-488E-949F-0923689F7DA9}"
+       },
+       {
+        "Id": "1133470540",
+        "Name": "fly",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\fly",
+        "GUID": "{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"
+       },
+       {
+        "Id": "1296465089",
+        "Name": "sprint",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\sprint",
+        "GUID": "{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"
+       },
+       {
+        "Id": "1488596377",
+        "Name": "weak",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weak",
+        "GUID": "{EA1FF672-80B1-4D79-998D-8F71A04F87EE}"
+       },
+       {
+        "Id": "1724159175",
+        "Name": "weakfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weakfast",
+        "GUID": "{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"
+       },
+       {
+        "Id": "2557423760",
+        "Name": "hardfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hardfast",
+        "GUID": "{EDFA3906-C4B7-4728-9260-4C58289D24D8}"
+       },
+       {
+        "Id": "2587856914",
+        "Name": "bodyfall",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\bodyfall",
+        "GUID": "{D409D60F-E885-432E-BD68-721EC5488C79}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hard",
+        "GUID": "{79BEB496-1626-40FF-9510-595819538FAF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{943B0BD4-0E26-6451-2BC8-9D55456C2003}"
+ }
+}

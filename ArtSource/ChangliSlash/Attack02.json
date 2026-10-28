@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "description": "第二段攻击（AM_Attack02）。placements 取自原作 AM_Attack02 的 4 个 AnimNotifyEffect（另有 1 个 triggerChance=0 的 Trail 不放）；时间按 timelineScale 1.25 换算到项目蒙太奇。刀光 DA_Fx_R1a02_02_N_Dg → NS_Fx_Changli_R1a02_N_Dg，与第一段 NS_Fx_Changli_R1a01_N_Dg 的全部曲线、网格、材质相同，所以复用 NS_Reference_Attack01_N_Dg；Sprite DA_Fx_R1a02_01_N_Dg1 → NS_Fx_Changli_R1a02_N_Dg1，两层 yumao001 / yumao006 的材质（MI_Trans_Wenli_140031_S / _S1）与第一段 yumao001 / yumao002 相同，复用重建材质；发射参数见 Attack02Tuning.json。两个 Sprite 子 DA 没有 Rotation 曲线。",
+  "notifyAuthoredSeconds": 0.220606,
+  "placements": [
+    {
+      "system": "NS_Reference_Attack01_N_Dg",
+      "location": [
+        -8.638936,
+        -38.569996,
+        131.37186
+      ],
+      "rotation": [
+        28.764023,
+        -155.0,
+        9.614567
+      ],
+      "scale": [
+        1.1,
+        1.5,
+        1.1
+      ],
+      "delay": 0.0,
+      "sourceNotify": "AnimNotifyEffect_C_2",
+      "sourceSeconds": 0.176485,
+      "sourceEffect": "DA_Fx_Group_R1a02_02_N_Dg"
+    },
+    {
+      "system": "NS_Reference_Attack02_N_Dg1",
+      "location": [
+        -8.638936,
+        -38.569996,
+        131.37186
+      ],
+      "rotation": [
+        28.764023,
+        -155.0,
+        9.614567
+      ],
+      "scale": [
+        0.66,
+        0.9,
+        0.66
+      ],
+      "delay": 0.0,
+      "sourceNotify": "AnimNotifyEffect_C_3",
+      "sourceSeconds": 0.176485,
+      "sourceEffect": "DA_Fx_Group_R1a02_01_N_Dg1"
+    },
+    {
+      "system": "NS_Reference_Attack02_N_Dg1",
+      "location": [
+        -30.0,
+        -38.569996,
+        85.0
+      ],
+      "rotation": [
+        28.764023,
+        60.0,
+        9.614567
+      ],
+      "scale": [
+        0.484,
+        0.66,
+        0.484
+      ],
+      "delay": 0.001425,
+      "sourceNotify": "AnimNotifyEffect_C_7",
+      "sourceSeconds": 0.17762507,
+      "sourceEffect": "DA_Fx_Group_R1a02_01_N_Dg1"
+    },
+    {
+      "system": "NS_Reference_Attack01_N_Dg",
+      "location": [
+        -8.638936,
+        -38.569996,
+        100.0
+      ],
+      "rotation": [
+        28.764023,
+        60.0,
+        9.614567
+      ],
+      "scale": [
+        0.77,
+        1.05,
+        0.77
+      ],
+      "delay": 0.00215,
+      "sourceNotify": "AnimNotifyEffect_C_8",
+      "sourceSeconds": 0.17820472,
+      "sourceEffect": "DA_Fx_Group_R1a02_02_N_Dg"
+    }
+  ],
+  "systems": [
+    {
+      "name": "NS_Reference_Attack02_N_Dg1",
+      "layers": [
+        {
+          "name": "yumao001",
+          "sprite": true,
+          "id": "Reference_Attack01_N_Dg1_yumao001",
+          "sortOrder": 5,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceEmitter": "yumao001_2",
+          "sourceMaterial": "MI_Trans_Wenli_140031_S"
+        },
+        {
+          "name": "yumao006",
+          "sprite": true,
+          "id": "Reference_Attack01_N_Dg1_yumao002",
+          "sortOrder": 5,
+          "pivot": [
+            0,
+            0,
+            0
+          ],
+          "sourceEmitter": "yumao006_1",
+          "sourceMaterial": "MI_Trans_Wenli_140031_S1"
+        }
+      ]
+    }
+  ]
+}

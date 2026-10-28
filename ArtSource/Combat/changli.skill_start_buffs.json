@@ -1,0 +1,137 @@
+{
+ "table": "/Game/Characters/Role/changli/Data/DT_SkillInfo_Changli",
+ "source": "Character/Role/FemaleXL/ChangLi/Data/DT_SkillInfo SkillStartBuff / SkillEndBuff",
+ "rows": [
+  {
+   "Name": "1205001",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205002",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205003",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205004",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205005",
+   "SkillStartBuffs": [
+    1205000002
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205015",
+   "SkillStartBuffs": [
+    1205000002
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205006",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205101",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205102",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205103",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205104",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205105",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205106",
+   "SkillStartBuffs": [
+    1205000002,
+    1205601001
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205116",
+   "SkillStartBuffs": [
+    1205000002,
+    1205601001
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205201",
+   "SkillStartBuffs": [
+    1205200001
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205402",
+   "SkillStartBuffs": [
+    1205200005
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205301",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205502",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205401",
+   "SkillStartBuffs": [
+    1205300001
+   ],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205013",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205701",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205702",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1205991",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  }
+ ]
+}

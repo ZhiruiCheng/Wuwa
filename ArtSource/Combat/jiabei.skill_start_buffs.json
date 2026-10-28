@@ -1,0 +1,206 @@
+{
+ "table": "/Game/Characters/Role/jiabei/Data/DT_SkillInfo_Jiabei",
+ "source": "Character/Role/FemaleXL/Jiabeilina/Data/DT_SkillInfo SkillStartBuff / SkillEndBuff",
+ "rows": [
+  {
+   "Name": "1208001",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002001
+   ]
+  },
+  {
+   "Name": "1208002",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002002
+   ]
+  },
+  {
+   "Name": "1208003",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002003
+   ]
+  },
+  {
+   "Name": "1208004",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002004
+   ]
+  },
+  {
+   "Name": "1208005",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002003
+   ]
+  },
+  {
+   "Name": "1208008",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002002
+   ]
+  },
+  {
+   "Name": "1208028",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002002
+   ]
+  },
+  {
+   "Name": "1208011",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002001
+   ]
+  },
+  {
+   "Name": "1208012",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002002
+   ]
+  },
+  {
+   "Name": "1208013",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002003
+   ]
+  },
+  {
+   "Name": "1208014",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002004
+   ]
+  },
+  {
+   "Name": "1208009",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002004
+   ]
+  },
+  {
+   "Name": "1208006",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002002
+   ]
+  },
+  {
+   "Name": "1208019",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002003
+   ]
+  },
+  {
+   "Name": "1208016",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002005
+   ]
+  },
+  {
+   "Name": "1208017",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002006
+   ]
+  },
+  {
+   "Name": "1208018",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002007
+   ]
+  },
+  {
+   "Name": "1208020",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002005
+   ]
+  },
+  {
+   "Name": "1208021",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002006
+   ]
+  },
+  {
+   "Name": "1208022",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002007
+   ]
+  },
+  {
+   "Name": "1208301",
+   "SkillStartBuffs": [
+    1101003007,
+    1001001029
+   ],
+   "SkillEndBuffs": [
+    1208002001
+   ]
+  },
+  {
+   "Name": "1208401",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": [
+    1208002005
+   ]
+  },
+  {
+   "Name": "1208501",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1208999",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1208601",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1208101",
+   "SkillStartBuffs": [
+    1208001005,
+    1208003002,
+    1208003313,
+    1208001001,
+    1208003315
+   ],
+   "SkillEndBuffs": [
+    1208002001
+   ]
+  },
+  {
+   "Name": "1208007",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1208027",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  },
+  {
+   "Name": "1208901",
+   "SkillStartBuffs": [],
+   "SkillEndBuffs": []
+  }
+ ]
+}

@@ -1,0 +1,1818 @@
+{
+ "schemaVersion": 1,
+ "character": "common",
+ "language": "zh",
+ "nodes": {
+  "73455833": {
+   "id": "73455833",
+   "kind": "Attenuation",
+   "curveToUse": [
+    0,
+    0,
+    0,
+    1,
+    -1,
+    -1,
+    2,
+    3,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2
+   ],
+   "curves": [
+    {
+     "scaling": "dB",
+     "points": [
+      [
+       0.0,
+       0.0,
+       "Constant"
+      ],
+      [
+       500.0,
+       0.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       -1.0,
+       "Linear"
+      ]
+     ]
+    },
+    {
+     "scaling": "None",
+     "points": [
+      [
+       0.0,
+       0.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       40.0,
+       "Linear"
+      ]
+     ]
+    },
+    {
+     "scaling": "None",
+     "points": [
+      [
+       0.0,
+       20.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       0.0,
+       "Linear"
+      ]
+     ]
+    },
+    {
+     "scaling": "None",
+     "points": [
+      [
+       0.0,
+       50.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       0.0,
+       "Linear"
+      ]
+     ]
+    }
+   ]
+  },
+  "902716573": {
+   "id": "902716573",
+   "kind": "Attenuation",
+   "curveToUse": [
+    0,
+    0,
+    0,
+    1,
+    -1,
+    -1,
+    2,
+    -1,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2,
+    -2
+   ],
+   "curves": [
+    {
+     "scaling": "dB",
+     "points": [
+      [
+       0.0,
+       0.0,
+       "Constant"
+      ],
+      [
+       500.0,
+       0.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       -1.0,
+       "Linear"
+      ]
+     ]
+    },
+    {
+     "scaling": "None",
+     "points": [
+      [
+       0.0,
+       0.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       40.0,
+       "Linear"
+      ]
+     ]
+    },
+    {
+     "scaling": "None",
+     "points": [
+      [
+       0.0,
+       80.0,
+       "Linear"
+      ],
+      [
+       5000.0,
+       20.0,
+       "Linear"
+      ]
+     ]
+    }
+   ]
+  },
+  "295132630": {
+   "id": "295132630",
+   "kind": "Sound",
+   "parent": "628633193",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "144313086",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_sprintstop_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_sprintstop_dirt_03.wav"
+  },
+  "533474323": {
+   "id": "533474323",
+   "kind": "Sound",
+   "parent": "628633193",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "957713480",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_sprintstop_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_sprintstop_dirt_01.wav"
+  },
+  "538166893": {
+   "id": "538166893",
+   "kind": "Sound",
+   "parent": "628633193",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "857922185",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_sprintstop_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_sprintstop_dirt_02.wav"
+  },
+  "628633193": {
+   "id": "628633193",
+   "kind": "RandomSequenceContainer",
+   "parent": "238913668",
+   "props": {
+    "Volume": -21.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "295132630",
+    "533474323",
+    "538166893"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "533474323": 50000,
+     "538166893": 50000,
+     "295132630": 50000
+    }
+   }
+  },
+  "238913668": {
+   "id": "238913668",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "628633193"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "867642"
+     ],
+     "1157071095": [
+      "300344298"
+     ],
+     "1393157138": [
+      "994842507"
+     ],
+     "1507563641": [
+      "316505875"
+     ],
+     "1868393119": [
+      "628633193"
+     ],
+     "1882779037": [
+      "410368148"
+     ],
+     "1951225610": [
+      "20381773"
+     ],
+     "2162207717": [
+      "763321082"
+     ],
+     "2898770164": [
+      "661456515"
+     ],
+     "3334137775": [
+      "295506812"
+     ],
+     "3353720555": [
+      "778740554"
+     ],
+     "4066310012": [
+      "649424916"
+     ],
+     "4221142436": [
+      "322320835"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "70952440": {
+   "id": "70952440",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "778617050",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-001",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-001.wav"
+  },
+  "300523296": {
+   "id": "300523296",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "59209014",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-005",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-005.wav"
+  },
+  "306544398": {
+   "id": "306544398",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {
+    "Volume": -2.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "685174903",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-006",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-006.wav"
+  },
+  "481790032": {
+   "id": "481790032",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "1008660150",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-002",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-002.wav"
+  },
+  "545659971": {
+   "id": "545659971",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {
+    "Volume": -2.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "448968278",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-004",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-004.wav"
+  },
+  "591669180": {
+   "id": "591669180",
+   "kind": "Sound",
+   "parent": "513517540",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "295765565",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-003",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-003.wav"
+  },
+  "513517540": {
+   "id": "513517540",
+   "kind": "RandomSequenceContainer",
+   "parent": "262096074",
+   "props": {
+    "Volume": -3.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "70952440",
+    "300523296",
+    "306544398",
+    "481790032",
+    "545659971",
+    "591669180"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "70952440": 50000,
+     "481790032": 50000,
+     "591669180": 50000,
+     "545659971": 50000,
+     "300523296": 50000,
+     "306544398": 50000
+    }
+   }
+  },
+  "262096074": {
+   "id": "262096074",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "513517540"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "447489724"
+     ],
+     "1157071095": [
+      "105133542"
+     ],
+     "1393157138": [
+      "280123849"
+     ],
+     "1507563641": [
+      "281051199"
+     ],
+     "1868393119": [
+      "513517540"
+     ],
+     "1882779037": [
+      "499295853"
+     ],
+     "1951225610": [
+      "34248291"
+     ],
+     "2162207717": [
+      "105933992"
+     ],
+     "2898770164": [
+      "323250275"
+     ],
+     "3334137775": [
+      "43527324"
+     ],
+     "3353720555": [
+      "182409856"
+     ],
+     "4066310012": [
+      "1012005247"
+     ],
+     "4221142436": [
+      "536330597"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "634964496": {
+   "id": "634964496",
+   "kind": "Sound",
+   "parent": "305909217",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "613926233",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_runstop_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_runstop_dirt_02.wav"
+  },
+  "692810906": {
+   "id": "692810906",
+   "kind": "Sound",
+   "parent": "305909217",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "376243397",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_runstop_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_runstop_dirt_01.wav"
+  },
+  "1055959754": {
+   "id": "1055959754",
+   "kind": "Sound",
+   "parent": "305909217",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "565510541",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_runstop_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_runstop_dirt_03.wav"
+  },
+  "305909217": {
+   "id": "305909217",
+   "kind": "RandomSequenceContainer",
+   "parent": "351346616",
+   "props": {
+    "Volume": -24.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "634964496",
+    "692810906",
+    "1055959754"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "692810906": 50000,
+     "634964496": 50000,
+     "1055959754": 50000
+    }
+   }
+  },
+  "351346616": {
+   "id": "351346616",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "305909217"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "848186645"
+     ],
+     "1157071095": [
+      "246689786"
+     ],
+     "1393157138": [
+      "620283495"
+     ],
+     "1507563641": [
+      "91948712"
+     ],
+     "1868393119": [
+      "305909217"
+     ],
+     "1882779037": [
+      "318333180"
+     ],
+     "1951225610": [
+      "116102029"
+     ],
+     "2162207717": [
+      "545262171"
+     ],
+     "2898770164": [
+      "782026972"
+     ],
+     "3334137775": [
+      "381667534"
+     ],
+     "3353720555": [
+      "247181805"
+     ],
+     "4066310012": [
+      "646456340"
+     ],
+     "4221142436": [
+      "1009666144"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "635997113": {
+   "id": "635997113",
+   "kind": "Sound",
+   "parent": "568046483",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "513355412",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walkstop_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walkstop_dirt_02.wav"
+  },
+  "885489971": {
+   "id": "885489971",
+   "kind": "Sound",
+   "parent": "568046483",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "282904089",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walkstop_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walkstop_dirt_03.wav"
+  },
+  "924395135": {
+   "id": "924395135",
+   "kind": "Sound",
+   "parent": "568046483",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "102664083",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walkstop_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walkstop_dirt_01.wav"
+  },
+  "568046483": {
+   "id": "568046483",
+   "kind": "RandomSequenceContainer",
+   "parent": "532255573",
+   "props": {
+    "Volume": -23.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "635997113",
+    "885489971",
+    "924395135"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "924395135": 50000,
+     "635997113": 50000,
+     "885489971": 50000
+    }
+   }
+  },
+  "532255573": {
+   "id": "532255573",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "568046483"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "163558981"
+     ],
+     "1157071095": [
+      "226678415"
+     ],
+     "1393157138": [
+      "96826231"
+     ],
+     "1507563641": [
+      "523657605"
+     ],
+     "1868393119": [
+      "568046483"
+     ],
+     "1882779037": [
+      "894092518"
+     ],
+     "1951225610": [
+      "782588593"
+     ],
+     "2162207717": [
+      "501983708"
+     ],
+     "2898770164": [
+      "645588780"
+     ],
+     "3334137775": [
+      "707800071"
+     ],
+     "3353720555": [
+      "107061090"
+     ],
+     "4066310012": [
+      "985276880"
+     ],
+     "4221142436": [
+      "711837392"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "337216886": {
+   "id": "337216886",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "448968278",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-004",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-004.wav"
+  },
+  "434531268": {
+   "id": "434531268",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "59209014",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-005",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-005.wav"
+  },
+  "592868644": {
+   "id": "592868644",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "685174903",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-006",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-006.wav"
+  },
+  "604055951": {
+   "id": "604055951",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "778617050",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-001",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-001.wav"
+  },
+  "682519195": {
+   "id": "682519195",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "1008660150",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-002",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-002.wav"
+  },
+  "1066097854": {
+   "id": "1066097854",
+   "kind": "Sound",
+   "parent": "147831068",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "295765565",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_run_dirt-003",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_run_dirt-003.wav"
+  },
+  "147831068": {
+   "id": "147831068",
+   "kind": "RandomSequenceContainer",
+   "parent": "606772642",
+   "props": {
+    "Volume": -2.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "337216886",
+    "434531268",
+    "592868644",
+    "604055951",
+    "682519195",
+    "1066097854"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "604055951": 50000,
+     "682519195": 50000,
+     "1066097854": 50000,
+     "337216886": 50000,
+     "434531268": 50000,
+     "592868644": 50000
+    }
+   }
+  },
+  "606772642": {
+   "id": "606772642",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "147831068"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "543726704"
+     ],
+     "1157071095": [
+      "308551276"
+     ],
+     "1393157138": [
+      "927701899"
+     ],
+     "1507563641": [
+      "1024791694"
+     ],
+     "1868393119": [
+      "147831068"
+     ],
+     "1882779037": [
+      "300766887"
+     ],
+     "1951225610": [
+      "662262865"
+     ],
+     "2162207717": [
+      "958411917"
+     ],
+     "2898770164": [
+      "473655851"
+     ],
+     "3334137775": [
+      "334832415"
+     ],
+     "3353720555": [
+      "176371499"
+     ],
+     "4066310012": [
+      "104504757"
+     ],
+     "4221142436": [
+      "943824776"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "56748560": {
+   "id": "56748560",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "692899703",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_06",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_06.wav"
+  },
+  "297523185": {
+   "id": "297523185",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "320790729",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_04",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_04.wav"
+  },
+  "298837201": {
+   "id": "298837201",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "496573283",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_03.wav"
+  },
+  "299254396": {
+   "id": "299254396",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "834665754",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_05",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_05.wav"
+  },
+  "354478699": {
+   "id": "354478699",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "85829711",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_01.wav"
+  },
+  "863388705": {
+   "id": "863388705",
+   "kind": "Sound",
+   "parent": "823042380",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "144807203",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_land_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_land_dirt_02.wav"
+  },
+  "823042380": {
+   "id": "823042380",
+   "kind": "RandomSequenceContainer",
+   "parent": "620035421",
+   "props": {
+    "Volume": -20.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "56748560",
+    "297523185",
+    "298837201",
+    "299254396",
+    "354478699",
+    "863388705"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "354478699": 50000,
+     "863388705": 50000,
+     "298837201": 50000,
+     "297523185": 50000,
+     "299254396": 50000,
+     "56748560": 50000
+    }
+   }
+  },
+  "620035421": {
+   "id": "620035421",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "823042380"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "732228132"
+     ],
+     "1157071095": [
+      "132411526"
+     ],
+     "1393157138": [
+      "171969277"
+     ],
+     "1507563641": [
+      "823906921"
+     ],
+     "1868393119": [
+      "823042380"
+     ],
+     "1882779037": [
+      "1008871520"
+     ],
+     "1951225610": [
+      "466934875"
+     ],
+     "2162207717": [
+      "1032219791"
+     ],
+     "2898770164": [
+      "1026273561"
+     ],
+     "3334137775": [
+      "439423134"
+     ],
+     "3353720555": [
+      "546223474"
+     ],
+     "4066310012": [
+      "381664476"
+     ],
+     "4221142436": [
+      "37883949"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "194650573": {
+   "id": "194650573",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "748411217",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_02.wav"
+  },
+  "533589618": {
+   "id": "533589618",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "576963186",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_03.wav"
+  },
+  "753765859": {
+   "id": "753765859",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "697143288",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_01.wav"
+  },
+  "760157664": {
+   "id": "760157664",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "404006872",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_04",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_04.wav"
+  },
+  "915005569": {
+   "id": "915005569",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "494885474",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_05",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_05.wav"
+  },
+  "1009736154": {
+   "id": "1009736154",
+   "kind": "Sound",
+   "parent": "504579851",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "263052861",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_walk_dirt_06",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_walk_dirt_06.wav"
+  },
+  "504579851": {
+   "id": "504579851",
+   "kind": "RandomSequenceContainer",
+   "parent": "691741869",
+   "props": {
+    "Volume": -23.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "194650573",
+    "533589618",
+    "753765859",
+    "760157664",
+    "915005569",
+    "1009736154"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "753765859": 50000,
+     "194650573": 50000,
+     "533589618": 50000,
+     "760157664": 50000,
+     "915005569": 50000,
+     "1009736154": 50000
+    }
+   }
+  },
+  "691741869": {
+   "id": "691741869",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "504579851"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "753662599"
+     ],
+     "1157071095": [
+      "336107855"
+     ],
+     "1393157138": [
+      "789955245"
+     ],
+     "1507563641": [
+      "42077591"
+     ],
+     "1868393119": [
+      "504579851"
+     ],
+     "1882779037": [
+      "150552326"
+     ],
+     "1951225610": [
+      "829047715"
+     ],
+     "2162207717": [
+      "41632569"
+     ],
+     "2898770164": [
+      "382812614"
+     ],
+     "3334137775": [
+      "110479178"
+     ],
+     "3353720555": [
+      "279648436"
+     ],
+     "4066310012": [
+      "951448734"
+     ],
+     "4221142436": [
+      "3110086"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "102541444": {
+   "id": "102541444",
+   "kind": "Sound",
+   "parent": "723555802",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "988098960",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_turnback_dirt_02",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_turnback_dirt_02.wav"
+  },
+  "147642289": {
+   "id": "147642289",
+   "kind": "Sound",
+   "parent": "723555802",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "222913177",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_turnback_dirt_01",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_turnback_dirt_01.wav"
+  },
+  "777539491": {
+   "id": "777539491",
+   "kind": "Sound",
+   "parent": "723555802",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [],
+   "media": "190490629",
+   "streaming": false,
+   "loop": null,
+   "name": "footstep_heels_turnback_dirt_03",
+   "wav": "C:\\GamePakExtractor\\Output\\Decoded\\WwiseMedia\\footstep_heels_turnback_dirt_03.wav"
+  },
+  "723555802": {
+   "id": "723555802",
+   "kind": "RandomSequenceContainer",
+   "parent": "997428324",
+   "props": {
+    "Volume": -15.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "102541444",
+    "147642289",
+    "777539491"
+   ],
+   "container": {
+    "mode": "Random",
+    "randomMode": "Normal",
+    "avoidRepeatCount": 1,
+    "loopCount": 1,
+    "continuous": false,
+    "resetPlaylistEachPlay": true,
+    "weights": {
+     "147642289": 50000,
+     "102541444": 50000,
+     "777539491": 50000
+    }
+   }
+  },
+  "997428324": {
+   "id": "997428324",
+   "kind": "Collapsed",
+   "parent": "921979372",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "723555802"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3639831067",
+    "default": "1868393119",
+    "packages": {
+     "461460247": [
+      "986974712"
+     ],
+     "1157071095": [
+      "524000075"
+     ],
+     "1393157138": [
+      "544236248"
+     ],
+     "1507563641": [
+      "290265618"
+     ],
+     "1868393119": [
+      "723555802"
+     ],
+     "1882779037": [
+      "120934711"
+     ],
+     "1951225610": [
+      "603291089"
+     ],
+     "2162207717": [
+      "494544730"
+     ],
+     "2898770164": [
+      "300573146"
+     ],
+     "3334137775": [
+      "238276841"
+     ],
+     "3353720555": [
+      "945717117"
+     ],
+     "4066310012": [
+      "1038908291"
+     ],
+     "4221142436": [
+      "137216188"
+     ]
+    }
+   },
+   "collapsedFrom": "Switch group 3639831067: kept default value 1868393119"
+  },
+  "921979372": {
+   "id": "921979372",
+   "kind": "SwitchContainer",
+   "parent": "775027388",
+   "props": {},
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "0",
+    "bHasListenerRelativeRouting": "0",
+    "e3DPositionType": "0"
+   },
+   "overrideBus": "0",
+   "children": [
+    "238913668",
+    "262096074",
+    "351346616",
+    "532255573",
+    "606772642",
+    "620035421",
+    "691741869",
+    "997428324"
+   ],
+   "switch": {
+    "groupType": "Switch",
+    "group": "3333434565",
+    "default": "2108779966",
+    "packages": {
+     "31134489": [
+      "238913668"
+     ],
+     "571076813": [
+      "997428324"
+     ],
+     "674522502": [
+      "620035421"
+     ],
+     "712161704": [
+      "262096074"
+     ],
+     "914843008": [
+      "351346616"
+     ],
+     "1296465089": [
+      "606772642"
+     ],
+     "2108779966": [
+      "691741869"
+     ],
+     "4119184278": [
+      "532255573"
+     ]
+    },
+    "groupName": "footstep_variant",
+    "defaultName": "walk",
+    "assignments": {
+     "sprintstop": [
+      "238913668"
+     ],
+     "turnback": [
+      "997428324"
+     ],
+     "land": [
+      "620035421"
+     ],
+     "run": [
+      "262096074"
+     ],
+     "runstop": [
+      "351346616"
+     ],
+     "sprint": [
+      "606772642"
+     ],
+     "walk": [
+      "691741869"
+     ],
+     "walkstop": [
+      "532255573"
+     ]
+    }
+   }
+  },
+  "775027388": {
+   "id": "775027388",
+   "kind": "ActorMixer",
+   "parent": "929704714",
+   "props": {
+    "Positioning_CenterPercent": 100.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "1",
+    "bHasListenerRelativeRouting": "1",
+    "e3DPositionType": "0",
+    "eSpatializationMode": "1",
+    "bEnableAttenuation": "1"
+   },
+   "overrideBus": "0",
+   "children": [
+    "921979372"
+   ],
+   "attenuation": "902716573"
+  },
+  "929704714": {
+   "id": "929704714",
+   "kind": "ActorMixer",
+   "parent": null,
+   "props": {
+    "HDRActiveRange": 24.0,
+    "Positioning_CenterPercent": 100.0
+   },
+   "ranged": {},
+   "positioning": {
+    "bPositioningInfoOverrideParent": "1",
+    "bHasListenerRelativeRouting": "1",
+    "e3DPositionType": "0",
+    "eSpatializationMode": "1",
+    "bEnableAttenuation": "1"
+   },
+   "overrideBus": "1888367913",
+   "children": [
+    "775027388"
+   ],
+   "attenuation": "902716573",
+   "parentOutsideBanks": "0"
+  }
+ },
+ "events": {
+  "role_footstep_heels": {
+   "id": "1560095794",
+   "actions": [
+    {
+     "id": "742267881",
+     "type": "Play",
+     "target": "921979372",
+     "props": {},
+     "ranged": {},
+     "fadeCurve": "4"
+    }
+   ],
+   "maxDuration": 3.2865534,
+   "minDuration": 0.0577551,
+   "infinite": false,
+   "maxAttenuationRadius": 5000.0
+  }
+ },
+ "notifies": [],
+ "effectAudio": [],
+ "notes": [
+  "Node 929704714: output bus override 1888367913 (bus hierarchy is in Init.bnk) routed to the project Master Audio Bus.",
+  "Not rebuilt: effects (Fx share sets), RTPC curves, State props, HDR settings of the original Actor-Mixers.",
+  "Switch group footstep_texture collapsed to its default value DirtSurface as stored in the bank."
+ ]
+}

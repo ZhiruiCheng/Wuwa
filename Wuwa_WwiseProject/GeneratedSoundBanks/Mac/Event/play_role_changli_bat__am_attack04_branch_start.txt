@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2144208026	play_role_changli_bat__am_attack04_branch_start			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_attack04_branch_start	
+

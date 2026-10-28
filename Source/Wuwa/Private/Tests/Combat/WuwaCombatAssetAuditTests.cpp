@@ -22,7 +22,7 @@
 #include "UObject/UnrealType.h"
 #include "Game/Animation/Notifies/WuwaAnimNotify_SkillReadyEndBridge.h"
 #include "Game/Animation/Notifies/WuwaAnimNotifyState_SkillAcceptInputBridge.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAbilitySystemComponent.h"

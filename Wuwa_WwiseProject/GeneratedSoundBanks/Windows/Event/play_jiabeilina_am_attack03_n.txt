@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2382367232	play_jiabeilina_am_attack03_n			\Default Work Unit\Wuwa_Jiabei\play_jiabeilina_am_attack03_n	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	5240402	Jiabeilina_AM_Attack03_N_05	.cache\91\{91BD59C7-7119-40D3-FA46-27576708F462}.wem	5240402.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_118200432\Jiabeilina_AM_Attack03_N_949318797\Jiabeilina_AM_Attack03_N_05	
+	166347430	Jiabeilina_AM_Attack03_N_02	.cache\9E\{9EFEAA77-E586-18AA-E070-4F4999CAF47A}.wem	166347430.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_118200432\Jiabeilina_AM_Attack03_N_949318797\Jiabeilina_AM_Attack03_N_02	
+	939978695	Jiabeilina_AM_Attack03_N_01	.cache\47\{47CACFF6-B0CF-2782-5F54-28B7FAEEC280}.wem	939978695.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_118200432\Jiabeilina_AM_Attack03_N_949318797\Jiabeilina_AM_Attack03_N_01	
+	1053421117	Jiabeilina_AM_Attack03_N_03	.cache\B7\{B784C331-5288-9EA7-7952-6DAD54C7DD5F}.wem	1053421117.wem	\Containers\Default Work Unit\Wuwa_Jiabei\AM_929704714\AM_118200432\Jiabeilina_AM_Attack03_N_949318797\Jiabeilina_AM_Attack03_N_03	
+

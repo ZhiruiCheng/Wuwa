@@ -1,0 +1,76 @@
+{
+  "_comment": "长离特殊能量条（DT_SpecialEnergyBarInfo 16：Morph 型 = UiItem_BarPointMorp 外框 + BarSlot 下的 UiItem_BarSlot4，外框贴图 T_EnergyBarMorpChangliB）→ /Game/LGUI/HUD/EnergyBar/EB_16",
+  "prefab": "UI/UIResources/UiFight/Prefabs/EnergyBar/UiItem_BarPointMorp",
+  "state": "energybar_morph.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": [
+    "UINiagara"
+  ],
+  "textures": {
+    "/TexMorp$": "Client/Content/Aki/UI/UIResources/UiFight/Image/Energy/T_EnergyBarMorpChangliB"
+  },
+  "nest": [
+    {
+      "under": "/BarSlot$",
+      "prefab": "UI/UIResources/UiFight/Prefabs/EnergyBar/UiItem_BarSlot4",
+      "state": "energybar_slot.state.json"
+    }
+  ],
+  "registries": [
+    {
+      "owner": "^/UiItem_BarPointMorp$",
+      "entries": [
+        "/TexMorp$",
+        "/BarSlot/UiItem_BarSlot4$"
+      ]
+    },
+    {
+      "owner": "/BarSlot/UiItem_BarSlot4$",
+      "entries": [
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3$",
+        "/BarSlot/UiItem_BarSlot4/SprDesc$"
+      ]
+    },
+    {
+      "owner": "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot$",
+      "entries": [
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot/SprBg$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot/BarPart$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot/SprGraduate$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot/SprGraduateFront$"
+      ]
+    },
+    {
+      "owner": "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1$",
+      "entries": [
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1/SprBg$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1/BarPart$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1/SprGraduate$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#1/SprGraduateFront$"
+      ]
+    },
+    {
+      "owner": "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2$",
+      "entries": [
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2/SprBg$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2/BarPart$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2/SprGraduate$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#2/SprGraduateFront$"
+      ]
+    },
+    {
+      "owner": "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3$",
+      "entries": [
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3/SprBg$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3/BarPart$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3/SprGraduate$",
+        "/BarSlot/UiItem_BarSlot4/PnlSlot/PnlSlot#3/SprGraduateFront$"
+      ]
+    }
+  ],
+  "_comment_registries": "注册表 = UWuwaSpecialEnergyBarMorph [外框, 格子条]；UWuwaSpecialEnergyBarSlot [格子×SlotNum, 底线]；UWuwaSpecialEnergyBarSlotItem [SprBg, BarPart, SprGraduate, SprGraduateFront]"
+}

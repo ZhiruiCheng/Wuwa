@@ -2,7 +2,6 @@
 
 #include "Game/NewWorld/Character/Common/Component/Move/WuwaMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
-#include "Core/Utilities/DebugHelper.h"
 #include "Game/Common/Debug/WuwaDebug.h"
 #include "Engine/World.h"
 #include "Components/CapsuleComponent.h"
@@ -188,7 +187,7 @@ void UWuwaMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType,
     }
     if (CanEnterClimbState())
     {
-        if (UWuwaDebugLibrary::IsDebugChannelEnabled(EWuwaDebugChannel::Climb)) Debug::Print(FString("Player Enter Climbing State"));
+        UWuwaDebugLibrary::DebugPrint(this, EWuwaDebugChannel::Climb, TEXT("Player Enter Climbing State"));
         SetMovementMode(MOVE_Custom, (uint8)ECustomMoveMode::MOVE_Climb);
     }
 }

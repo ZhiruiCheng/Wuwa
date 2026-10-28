@@ -1,0 +1,51 @@
+{
+	"FileVersion": 3,
+	"Version": 202514458,
+	"VersionName": "2025.1.10.9233.4458",
+	"CreatedBy": "Audiokinetic, Inc.",
+	"CreatedByURL": "http://audiokinetic.com",
+	"FriendlyName": "Wwise Motion OpenXR Integration",
+	"Description": "Wwise Motion OpenXR Integration",
+	"Category": "Audio",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"EnabledByDefault": false,
+	"Installed": false,
+	"SupportedTargetPlatforms": [
+		"Win64",
+		"Android"
+	],
+	"Modules": [
+		{
+			"Name": "WwiseMotionOpenXRHelpers",
+			"Type": "Runtime",
+			"LoadingPhase": "PostConfigInit",
+			"TargetDenyList": [
+				"Server"
+			],
+			"PlatformAllowList": [
+				"Win64",
+				"Android"
+			]
+
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Wwise",
+			"Enabled": true
+		},
+		{
+			"Name": "WwiseSoundEngine",
+			"Enabled": true
+		},
+		{
+			"Name": "OpenXR",
+			"Enabled": true
+		}
+	]
+}

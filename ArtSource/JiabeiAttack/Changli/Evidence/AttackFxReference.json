@@ -1,0 +1,4454 @@
+{
+ "scope": "Changli attack effects (AnimNotifyEffect / AnimNotifyStateEffect) from cooked sequence and montage JSON.",
+ "generator": "prepare_evidence.py",
+ "attacks": [
+  {
+   "projectAttack": "Attack01",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack01",
+   "sources": [
+    {
+     "source": "Attack01",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack01.json",
+     "lengthSeconds": 3.0333333
+    },
+    {
+     "source": "AM_Attack01",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Attack01.json",
+     "lengthSeconds": 3.033333
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack01",
+     "state": false,
+     "authoredSeconds": 0.19529274,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -25.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.4,
+      "Y": 1.4,
+      "Z": 1.4
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack01",
+     "state": false,
+     "authoredSeconds": 0.19557874,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Trail_ZL01.DA_Fx_Group_Trail_ZL01",
+     "socketName": "WeaponProp05",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 180.0,
+      "Roll": 90.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack01",
+     "state": false,
+     "authoredSeconds": 0.19643244,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -21.469173,
+      "Yaw": 30.0,
+      "Roll": -13.124235
+     },
+     "scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack01",
+     "state": false,
+     "authoredSeconds": 0.19643244,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N1_Dg.DA_Fx_Group_R1a01_01_N1_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -25.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack01",
+     "state": false,
+     "authoredSeconds": 0.197886,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -21.469173,
+      "Yaw": -147.50072,
+      "Roll": -13.124235
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a01_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N1_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N1_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N1_Dg"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Attack02",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack02",
+   "sources": [
+    {
+     "source": "Attack02",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack02.json",
+     "lengthSeconds": 4.1666665
+    },
+    {
+     "source": "AM_Attack02",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Attack02.json",
+     "lengthSeconds": 4.1666665
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack02",
+     "state": false,
+     "authoredSeconds": 0.176485,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a02_02_N_Dg.DA_Fx_Group_R1a02_02_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": -8.638936,
+      "Y": -38.569996,
+      "Z": 131.37186
+     },
+     "rotation": {
+      "Pitch": 28.764023,
+      "Yaw": -155.0,
+      "Roll": 9.614567
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 1.5,
+      "Z": 1.1
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_3",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack02",
+     "state": false,
+     "authoredSeconds": 0.176485,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a02_01_N_Dg1.DA_Fx_Group_R1a02_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": -8.638936,
+      "Y": -38.569996,
+      "Z": 131.37186
+     },
+     "rotation": {
+      "Pitch": 28.764023,
+      "Yaw": -155.0,
+      "Roll": 9.614567
+     },
+     "scale": {
+      "X": 0.66,
+      "Y": 0.9,
+      "Z": 0.66
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack02",
+     "state": false,
+     "authoredSeconds": 0.17762507,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a02_01_N_Dg1.DA_Fx_Group_R1a02_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": -30.0,
+      "Y": -38.569996,
+      "Z": 85.0
+     },
+     "rotation": {
+      "Pitch": 28.764023,
+      "Yaw": 60.0,
+      "Roll": 9.614567
+     },
+     "scale": {
+      "X": 0.484,
+      "Y": 0.66,
+      "Z": 0.484
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_8",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack02",
+     "state": false,
+     "authoredSeconds": 0.17820472,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a02_02_N_Dg.DA_Fx_Group_R1a02_02_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": -8.638936,
+      "Y": -38.569996,
+      "Z": 100.0
+     },
+     "rotation": {
+      "Pitch": 28.764023,
+      "Yaw": 60.0,
+      "Roll": 9.614567
+     },
+     "scale": {
+      "X": 0.77,
+      "Y": 1.05,
+      "Z": 0.77
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack02",
+     "state": false,
+     "authoredSeconds": 0.22201179,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Trail_ZL01.DA_Fx_Group_Trail_ZL01",
+     "socketName": "WeaponProp05",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 180.0,
+      "Roll": 90.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a02_02_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a02_02_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a02_N_Dg"
+     }
+    ],
+    "DA_Fx_Group_R1a02_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a02_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a02_N_Dg1"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Attack03",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack03",
+   "sources": [
+    {
+     "source": "Attack03",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack03.json",
+     "lengthSeconds": 4.5
+    },
+    {
+     "source": "AM_Attack03",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Attack03.json",
+     "lengthSeconds": 4.5
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_19",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.162427,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01.DA_Fx_Group_R1a03_01",
+     "socketName": "Root",
+     "location": {
+      "X": -36.595848,
+      "Y": -1.1956997,
+      "Z": 61.456505
+     },
+     "rotation": {
+      "Pitch": -15.5477705,
+      "Yaw": -1.1616964,
+      "Roll": -170.34575
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 1.0,
+      "Z": -1.1
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_21",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.162427,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01_N_Dg1.DA_Fx_Group_R1a03_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": -36.595848,
+      "Y": -1.1957,
+      "Z": 61.456505
+     },
+     "rotation": {
+      "Pitch": 5.450395,
+      "Yaw": -75.58973,
+      "Roll": -162.56732
+     },
+     "scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_22",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.279337,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01.DA_Fx_Group_R1a03_01",
+     "socketName": "Root",
+     "location": {
+      "X": -27.602205,
+      "Y": -15.8955145,
+      "Z": 73.59782
+     },
+     "rotation": {
+      "Pitch": 10.868026,
+      "Yaw": -35.45274,
+      "Roll": 170.90659
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 0.9,
+      "Z": -1.1
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_18",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.372482,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01_N_Dg1.DA_Fx_Group_R1a03_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 80.0
+     },
+     "rotation": {
+      "Pitch": -11.609039,
+      "Yaw": 1.5039754,
+      "Roll": -170.4095
+     },
+     "scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_20",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.372482,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01.DA_Fx_Group_R1a03_01",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 80.0
+     },
+     "rotation": {
+      "Pitch": -3.6920722,
+      "Yaw": 2.839752,
+      "Roll": -170.5883
+     },
+     "scale": {
+      "X": 1.3,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_23",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.403334,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_02.DA_Fx_Group_R1a03_02",
+     "socketName": "Root",
+     "location": {
+      "X": 3.7692413,
+      "Y": 0.0,
+      "Z": 80.0
+     },
+     "rotation": {
+      "Pitch": 9.987915,
+      "Yaw": 0.49476185,
+      "Roll": 167.85004
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 0.9,
+      "Z": 1.1
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_26",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.42994684,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a02_01_N_Dg.DA_Fx_Group_R1a02_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 100.0
+     },
+     "rotation": {
+      "Pitch": 360.0,
+      "Yaw": 108.24512,
+      "Roll": 178.99998
+     },
+     "scale": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": -0.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_27",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack03",
+     "state": false,
+     "authoredSeconds": 0.5063804,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_01_N_Dg1.DA_Fx_Group_R1a03_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 100.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -152.07887,
+      "Roll": 178.99998
+     },
+     "scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a03_01": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a03_01",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a03_01_Daoguang"
+     }
+    ],
+    "DA_Fx_Group_R1a03_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a03_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a03_N_Dg1"
+     }
+    ],
+    "DA_Fx_Group_R1a03_02": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a03_02",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a03_02_Daoguang"
+     }
+    ],
+    "DA_Fx_Group_R1a02_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a02_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a02_01_N_Dg"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Attack04",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack04",
+   "sources": [
+    {
+     "source": "Attack04",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack04.json",
+     "lengthSeconds": 6.0333333
+    },
+    {
+     "source": "AM_Attack04",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Attack04.json",
+     "lengthSeconds": 6.033333
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04",
+     "state": false,
+     "authoredSeconds": 0.23698969,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": 155.0,
+      "Yaw": 160.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.4,
+      "Y": 1.4,
+      "Z": -1.4
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04",
+     "state": false,
+     "authoredSeconds": 0.23941047,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": 155.0,
+      "Yaw": 160.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04",
+     "state": false,
+     "authoredSeconds": 0.5172674,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Xuli.DA_Fx_Group_R1a04_Xuli",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": 1.5
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04",
+     "state": false,
+     "authoredSeconds": 0.5226667,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Flying_Local.DA_Fx_Group_R1a04_Flying_Local",
+     "socketName": "WeaponProp03",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_3",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Attack04",
+     "state": true,
+     "authoredSeconds": 1.366091,
+     "durationSeconds": 1.9007871,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_San_end.DA_Fx_Group_San_end",
+     "socketName": "WeaponProp02",
+     "location": null,
+     "rotation": {
+      "Pitch": -90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true,
+     "authoredBeginSeconds": 1.366091
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Attack04",
+     "state": true,
+     "authoredSeconds": 1.3674467,
+     "durationSeconds": 1.8978014,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_San.DA_Fx_Group_R1a04_San",
+     "socketName": "WeaponProp02",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 1.3674467
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_San_end": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_San_End",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_San_End"
+     }
+    ],
+    "DA_Fx_Group_R1a04_San": [
+     {
+      "modelClass": "EffectModelSkeletalMesh_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/SkeletalMesh/R2T1ChangliMd10011/DA_Fx_Mesh_San",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Xuli": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Xuli",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Xuli"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Flying_Local": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Flying_Local",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Attack05",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Attack05",
+   "sources": [
+    {
+     "source": "Attack04_1",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack04_1.json",
+     "lengthSeconds": 5.5666666
+    },
+    {
+     "source": "AM_Attack04_1",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Attack04_1.json",
+     "lengthSeconds": 5.5666666
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.13486533,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Blink.DA_Fx_Group_R1a04_Blink",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.3836447,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Blink2.DA_Fx_Group_R1a04_Blink2",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_10",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.39084205,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -147.50072,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_12",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.39084205,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.7,
+      "Y": 0.7,
+      "Z": 0.7
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.39999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_01.DA_Fx_Group_R1a04_01",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 70.0
+     },
+     "rotation": {
+      "Pitch": -5.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 2.0,
+      "Y": 2.0,
+      "Z": 2.0
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_11",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.39999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.4,
+      "Y": 1.4,
+      "Z": 1.4
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_13",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.39999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N1_Dg.DA_Fx_Group_R1a01_01_N1_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_9",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.4,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Flare.DA_Fx_Group_Flare",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 90.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.59999996,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_01_Dgw.DA_Fx_Group_R1a04_01_DgW",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_8",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.6666666,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_01_Dgw.DA_Fx_Group_R1a04_01_DgW",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Attack04_1",
+     "state": false,
+     "authoredSeconds": 0.7333333,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_01_Dgw.DA_Fx_Group_R1a04_01_DgW",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 35.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Attack04_1",
+     "state": true,
+     "authoredSeconds": 0.14207241,
+     "durationSeconds": 0.44162098,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_1_Trail.DA_Fx_Group_R1a04_1_Trail",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 80.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true,
+     "authoredBeginSeconds": 0.14207241
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1a04_1_Trail": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_1_Trail",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_1_Trail"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Blink": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Blink",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a4_Blink"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_2",
+      "delay": 0.0
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1ChangLiMd10011/DA_Fx_Post_R1a04_1",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1a04_Blink2": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Blink2",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a4_Blink2"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_1",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N1_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N1_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N1_Dg"
+     }
+    ],
+    "DA_Fx_Group_Flare": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_Flare",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_Flare"
+     }
+    ],
+    "DA_Fx_Group_R1a04_01_Dgw": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_01_Dgw",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_01_DgW"
+     },
+     {
+      "modelClass": "EffectModelDecal_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Decal/R2T1ChangliMd10011/DA_Fx_Decal_R2a04_1_DgW",
+      "delay": 0.02
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_01_DgW_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_01_DgW_Dilie"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_01_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_01_Dilie"
+     },
+     {
+      "modelClass": "EffectModelAudio_C",
+      "dataAsset": "Client/Content/Aki/Effect/EffectAudio/Role/Changli/DA_Au_Role_Changli_atk04_hit",
+      "delay": 0.0
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AttackL",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AttackL",
+   "sources": [
+    {
+     "source": "Attack10",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Attack10.json",
+     "lengthSeconds": 2.2
+    },
+    {
+     "source": "AM_AttackL",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AttackL.json",
+     "lengthSeconds": 2.2
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.1843855,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a10_1.DA_Fx_Group_R1a10_1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 70.0
+     },
+     "rotation": {
+      "Pitch": 179.0,
+      "Yaw": 170.0,
+      "Roll": 5.0
+     },
+     "scale": {
+      "X": 1.35,
+      "Y": 1.35,
+      "Z": -1.35
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.18627205,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 70.0
+     },
+     "rotation": {
+      "Pitch": 180.0,
+      "Yaw": 140.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.5708219,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a_Dilie.DA_Fx_Group_R1a_Dilie",
+     "socketName": "Root",
+     "location": {
+      "X": 60.0,
+      "Y": 180.0226,
+      "Z": 0.0
+     },
+     "rotation": {
+      "Pitch": 65.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.8,
+      "Y": 1.0,
+      "Z": 0.8
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.57316667,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Press_Smoke.DA_Fx_Group_Press_Smoke",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 20.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.58020115,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/DataAsset/Decal/R2T1ChangliMd10011/DA_Fx_Decal_Atk_Dilie.DA_Fx_Decal_Atk_Dilie",
+     "socketName": "Root",
+     "location": {
+      "X": 50.0,
+      "Y": 200.0,
+      "Z": 0.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 20.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": 1.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AttackL",
+     "state": false,
+     "authoredSeconds": 0.58020115,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a10_2.DA_Fx_Group_R1a10_2",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": -40.0,
+      "Z": 140.0
+     },
+     "rotation": {
+      "Pitch": 45.0,
+      "Yaw": 104.6068,
+      "Roll": 110.0
+     },
+     "scale": {
+      "X": 2.0,
+      "Y": 1.8,
+      "Z": 1.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a10_1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a10_1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a10_1"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1"
+     }
+    ],
+    "DA_Fx_Group_R1a_Dilie": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a_Dilie"
+     }
+    ],
+    "DA_Fx_Group_Press_Smoke": [
+     {
+      "missing": "Client/Content/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Press_Smoke"
+     }
+    ],
+    "DA_Fx_Decal_Atk_Dilie": [],
+    "DA_Fx_Group_R1a10_2": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a10_2",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a10_2"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack01",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack01",
+   "sources": [
+    {
+     "source": "AirAttack01",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack01.json",
+     "lengthSeconds": 1.6
+    },
+    {
+     "source": "AM_AirAttack01",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack01.json",
+     "lengthSeconds": 1.6
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack01",
+     "state": false,
+     "authoredSeconds": 0.17622545,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": -30.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": -15.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack01",
+     "state": false,
+     "authoredSeconds": 0.1804717,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": -30.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a01_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack02",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack02",
+   "sources": [
+    {
+     "source": "AirAttack02",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack02.json",
+     "lengthSeconds": 1.8333334
+    },
+    {
+     "source": "AM_AirAttack02",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack02.json",
+     "lengthSeconds": 1.8333334
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack02",
+     "state": false,
+     "authoredSeconds": 0.3603981,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": 5.0,
+      "Yaw": 0.0,
+      "Roll": 180.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.9,
+      "Z": 0.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack02",
+     "state": false,
+     "authoredSeconds": 0.36468875,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 130.0
+     },
+     "rotation": {
+      "Pitch": 5.0,
+      "Yaw": 0.0,
+      "Roll": 180.0
+     },
+     "scale": {
+      "X": 1.3,
+      "Y": 1.3,
+      "Z": -1.3
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack02",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.59908473,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a03_Trail.DA_Fx_Group_R1air_a03_Trail",
+     "socketName": "Bone_Weapon006",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true,
+     "authoredBeginSeconds": 0.0
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack02",
+     "state": true,
+     "authoredSeconds": 0.18758523,
+     "durationSeconds": 0.41511053,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a02_Zhuan.DA_Fx_Group_R1air_a02_Zhuan",
+     "socketName": "Bone_Weapon006",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.8,
+      "Y": 0.8,
+      "Z": 0.8
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.18758523
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1air_a03_Trail": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a03_Trail",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a03_Trail"
+     }
+    ],
+    "DA_Fx_Group_R1air_a02_Zhuan": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a02_Zhuan",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a02_Zhuan"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack03",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack03",
+   "sources": [
+    {
+     "source": "AirAttack03",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack03.json",
+     "lengthSeconds": 1.8
+    },
+    {
+     "source": "AM_AirAttack03",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack03.json",
+     "lengthSeconds": 1.8
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack03",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.723923,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a03_Trail.DA_Fx_Group_R1air_a03_Trail",
+     "socketName": "Bone_Weapon006",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true,
+     "authoredBeginSeconds": 0.0
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack03",
+     "state": true,
+     "authoredSeconds": 0.27326894,
+     "durationSeconds": 0.7597203,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a03_Zhuan.DA_Fx_Group_R1air_a03_Zhuan",
+     "socketName": "Bone_Weapon006",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.75,
+      "Y": -1.0,
+      "Z": 1.0
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.27326894
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1air_a03_Trail": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a03_Trail",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a03_Trail"
+     }
+    ],
+    "DA_Fx_Group_R1air_a03_Zhuan": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a03_Zhuan",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a03_Zhuan"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack04",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack04",
+   "sources": [
+    {
+     "source": "AirAttack04",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack04.json",
+     "lengthSeconds": 2.0
+    },
+    {
+     "source": "AM_AirAttack04",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack04.json",
+     "lengthSeconds": 2.0
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.018050684,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -25.0,
+      "Yaw": -180.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.4,
+      "Y": 1.4,
+      "Z": 1.4
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.019988319,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -21.469173,
+      "Yaw": -147.50072,
+      "Roll": -13.124235
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.0890348,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg1.DA_Fx_Group_R1a01_01_N_Dg1",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -21.469173,
+      "Yaw": 30.0,
+      "Roll": -13.124235
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_8",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.0890348,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a01_01_N_Dg.DA_Fx_Group_R1a01_01_N_Dg",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 90.0
+     },
+     "rotation": {
+      "Pitch": -25.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.4,
+      "Y": 1.4,
+      "Z": 1.4
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.20694079,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a04_Xuli.DA_Fx_Group_R1air_a04_Xuli",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 100.0
+     },
+     "rotation": null,
+     "scale": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": 1.5
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack04",
+     "state": false,
+     "authoredSeconds": 0.20971006,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Flying_Local.DA_Fx_Group_R1a04_Flying_Local",
+     "socketName": "WeaponProp01",
+     "location": null,
+     "rotation": null,
+     "scale": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": 1.5
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1a01_01_N_Dg": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg"
+     }
+    ],
+    "DA_Fx_Group_R1a01_01_N_Dg1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a01_01_N_Dg1",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a01_N_Dg1"
+     }
+    ],
+    "DA_Fx_Group_R1air_a04_Xuli": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a04_Xuli",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a04_Xuli"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Flying_Local": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Flying_Local",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a04_Flying_Local"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack05",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack05",
+   "sources": [
+    {
+     "source": "AirAttack05",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack05.json",
+     "lengthSeconds": 1.6666666
+    },
+    {
+     "source": "AM_AirAttack05",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack05.json",
+     "lengthSeconds": 1.6666666
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack05",
+     "state": false,
+     "authoredSeconds": 0.051066466,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a05_WingS.DA_Fx_Group_R1air_a05_WingS",
+     "socketName": "Bone_Weapon005",
+     "location": null,
+     "rotation": {
+      "Pitch": -90.0,
+      "Yaw": 0.0,
+      "Roll": 90.0
+     },
+     "scale": {
+      "X": 0.6,
+      "Y": 0.6,
+      "Z": 0.6
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack05",
+     "state": false,
+     "authoredSeconds": 0.05363771,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a05_Wing.DA_Fx_Group_R1air_a05_Wing",
+     "socketName": "Bone_Weapon005",
+     "location": null,
+     "rotation": {
+      "Pitch": -90.0,
+      "Yaw": 55.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.85,
+      "Y": 0.85,
+      "Z": 0.85
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack05",
+     "state": false,
+     "authoredSeconds": 0.079377264,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a05_Blink.DA_Fx_Group_R1air_a05_Blink",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack05",
+     "state": false,
+     "authoredSeconds": 0.35298944,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a05_Blink2.DA_Fx_Group_R1air_a05_Blink2",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1air_a05_WingS": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a05_WingS",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a05_WingS"
+     }
+    ],
+    "DA_Fx_Group_R1air_a05_Wing": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a05_Wing",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a05_Wing"
+     }
+    ],
+    "DA_Fx_Group_R1air_a05_Blink": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a05_Blink",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a05_Blink"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_2",
+      "delay": 0.0
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1ChangLiMd10011/DA_Fx_Post_R1air_a05",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1air_a05_Blink2": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a05_Blink2",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a05_Blink2"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_2",
+      "delay": 0.0
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack_Start",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_Start",
+   "sources": [
+    {
+     "source": "AirAttack_Start",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack_Start.json",
+     "lengthSeconds": 0.6333333
+    },
+    {
+     "source": "AM_AirAttack_Start",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack_Start.json",
+     "lengthSeconds": 0.633333
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [],
+   "sourceSequenceEffects": [],
+   "groups": {},
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack_Loop",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_Loop",
+   "sources": [
+    {
+     "source": "AirAttack_Loop",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack_Loop.json",
+     "lengthSeconds": 0.6666667
+    },
+    {
+     "source": "AM_AirAttack_Loop",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack_Loop.json",
+     "lengthSeconds": 0.5555555
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack_Loop",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.6666667,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Chongci.DA_Fx_Group_R1s01_Chongci",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 150.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 0.0,
+      "Roll": 90.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.75,
+      "Z": 0.9
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.0
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack_Loop",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.6666667,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Air_Loop.DA_Fx_Group_R1s01_Air_Loop",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.0
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1s01_Chongci": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Chongci",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Chongci"
+     }
+    ],
+    "DA_Fx_Group_R1s01_Air_Loop": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Air_Loop",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Air_Loop"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "AirAttack_End",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_AirAttack_End",
+   "sources": [
+    {
+     "source": "AirAttack_End",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AirAttack_End.json",
+     "lengthSeconds": 4.0
+    },
+    {
+     "source": "AM_AirAttack_End",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_AirAttack_End.json",
+     "lengthSeconds": 4.0
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack_End",
+     "state": false,
+     "authoredSeconds": 0.066960014,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a_Fall.DA_Fx_Group_R1air_a_Fall",
+     "socketName": "Root",
+     "location": {
+      "X": -70.0,
+      "Y": 50.0,
+      "Z": 0.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -20.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 0.8
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack_End",
+     "state": false,
+     "authoredSeconds": 0.066960014,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a_Dilie.DA_Fx_Group_R1air_a_Dilie",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 75.0,
+      "Z": 0.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack_End",
+     "state": false,
+     "authoredSeconds": 0.07008843,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/DataAsset/Decal/R2T1ChangliMd10011/DA_Fx_Decal_Atk_Dilie.DA_Fx_Decal_Atk_Dilie",
+     "socketName": "Root",
+     "location": {
+      "X": -40.0,
+      "Y": 100.0,
+      "Z": 0.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -15.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.5,
+      "Y": 1.0,
+      "Z": 1.0
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_AirAttack_End",
+     "state": false,
+     "authoredSeconds": 0.08383505,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a_Dilie.DA_Fx_Group_R1a_Dilie",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 200.0,
+      "Z": 0.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 60.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "AM_AirAttack_End",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.269574,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/Common/DA_Fx_Group_Move.DA_Fx_Group_Move",
+     "socketName": "Bip001Spine1",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.0
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_Move": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/Common/DA_Fx_Move",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_Common/NS_Fx_Move"
+     }
+    ],
+    "DA_Fx_Group_R1air_a_Fall": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_A_Fall",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a_Fall"
+     }
+    ],
+    "DA_Fx_Group_R1air_a_Dilie": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a_Dilie"
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1YangyangMd10011/DA_Fx_Post_AirAttack_End_Dilie",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Decal_Atk_Dilie": [],
+    "DA_Fx_Group_R1a_Dilie": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a_Dilie"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Skill01_Start",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Start",
+   "sources": [
+    {
+     "source": "Skill01_Start",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Skill01_Start.json",
+     "lengthSeconds": 1.2333333
+    },
+    {
+     "source": "AM_Skill01_Start",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Skill01_Start.json",
+     "lengthSeconds": 1.1666666
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Skill01_Start",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1air_a05_Blink.DA_Fx_Group_R1air_a05_Blink",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_9",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Skill01_Start",
+     "state": false,
+     "authoredSeconds": 0.73450804,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Blink3.DA_Fx_Group_R1a04_Blink3",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 100.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Skill01_Start",
+     "state": false,
+     "authoredSeconds": 1.1731286,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 0.0,
+     "included": false,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Burst.DA_Fx_Group_R1s01_Burst",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 150.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 90.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Skill01_Start",
+     "state": true,
+     "authoredSeconds": 0.14517538,
+     "durationSeconds": 0.9887909,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Slash2.DA_Fx_Group_R1s01_Slash2",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 100.0,
+      "Z": -50.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.14517538
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_2",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Skill01_Start",
+     "state": true,
+     "authoredSeconds": 0.14551239,
+     "durationSeconds": 0.9887716,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Slash3.DA_Fx_Group_R1s01_Slash3",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 100.0,
+      "Z": -50.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.14551239
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Skill01_Start",
+     "state": true,
+     "authoredSeconds": 0.14687127,
+     "durationSeconds": 0.9887909,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Slash.DA_Fx_Group_R1s01_Slash",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 100.0,
+      "Z": -50.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.14687127
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1air_a05_Blink": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1air_a05_Blink",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1air_a05_Blink"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_2",
+      "delay": 0.0
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1ChangLiMd10011/DA_Fx_Post_R1air_a05",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1s01_Slash2": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash5",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash2"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash6",
+      "delay": 0.2,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash7",
+      "delay": 0.4,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash8",
+      "delay": 0.6,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     }
+    ],
+    "DA_Fx_Group_R1s01_Slash3": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash9",
+      "delay": 0.12,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash10",
+      "delay": 0.24,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash11",
+      "delay": 0.36,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash12",
+      "delay": 0.48,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     }
+    ],
+    "DA_Fx_Group_R1s01_Slash": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash",
+      "delay": 0.1,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash2",
+      "delay": 0.2,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash3",
+      "delay": 0.3,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     },
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Slash4",
+      "delay": 0.4,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Slash"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Blink3": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Blink3",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a4_Blink3"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_1",
+      "delay": 0.0
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Skill01_Loop",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_Loop",
+   "sources": [
+    {
+     "source": "Skill01_Loop",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Skill01_Loop.json",
+     "lengthSeconds": 0.6666667
+    },
+    {
+     "source": "AM_Skill01_Loop",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Skill01_Loop.json",
+     "lengthSeconds": 0.6666667
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Skill01_Loop",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.6666667,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Chongci.DA_Fx_Group_R1s01_Chongci",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 150.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 0.0,
+      "Roll": 90.0
+     },
+     "scale": {
+      "X": 0.9,
+      "Y": 0.75,
+      "Z": 0.9
+     },
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.0
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_0",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Skill01_Loop",
+     "state": true,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.6666667,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Air_Loop.DA_Fx_Group_R1s01_Air_Loop",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.0
+    }
+   ],
+   "groups": {
+    "DA_Fx_Group_R1s01_Chongci": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Chongci",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Chongci"
+     }
+    ],
+    "DA_Fx_Group_R1s01_Air_Loop": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Air_Loop",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Air_Loop"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Skill01_End",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Skill01_End",
+   "sources": [
+    {
+     "source": "Skill01_End",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Skill01_End.json",
+     "lengthSeconds": 4.766667
+    },
+    {
+     "source": "AM_Skill01_End",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Skill01_End.json",
+     "lengthSeconds": 4.766667
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Skill01_End",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Dilie.DA_Fx_Group_R1s01_Dilie",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Skill01_End",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1s01_Fall.DA_Fx_Group_R1s01_Fall",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -10.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Skill01_End",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/DataAsset/Decal/R2T1ChangliMd10011/DA_Fx_Decal_R2s01_Dilie.DA_Fx_Decal_R2s01_Dilie",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": {
+      "X": 2.0,
+      "Y": 2.0,
+      "Z": 1.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_R1s01_Dilie": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Dilie",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Dilie"
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1BaerMd10011/DA_Fx_Post_Skill01",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1s01_Fall": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1s01_Fall",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1s01_Fall"
+     }
+    ],
+    "DA_Fx_Decal_R2s01_Dilie": []
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Burst01",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "sources": [
+    {
+     "source": "Burst01",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Burst01.json",
+     "lengthSeconds": 7.233333
+    },
+    {
+     "source": "AM_Burst01",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Burst01.json",
+     "lengthSeconds": 7.23
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon001",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon002",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon003",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_3",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon004",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon005",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_5",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon006",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_6",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst_Eye02.DA_Fx_Group_Changli_Burst_Eye02",
+     "socketName": "Bone_Weapon007",
+     "location": null,
+     "rotation": {
+      "Pitch": 90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_7",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.6999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_Changli_Burst02.DA_Fx_Group_Changli_Burst02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_13",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.6999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_05_1.DA_Fx_Group_R1b02_05_1",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 150.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 1.2,
+      "Z": 0.7
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_14",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.6999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_03_1.DA_Fx_Group_R1b02_03_1",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 120.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.85,
+      "Y": 1.2,
+      "Z": 0.55
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_15",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.6999998,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_03_1.DA_Fx_Group_R1b02_03_1",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 90.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.1
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_16",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.704478,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 60.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_17",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.707892,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": -15.0,
+      "Yaw": 30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": -1.4,
+      "Y": 1.2,
+      "Z": 1.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_18",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.7147195,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": -10.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": -1.7,
+      "Y": 1.2,
+      "Z": 1.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_23",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.7147195,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_05_1.DA_Fx_Group_R1b02_05_1",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 20.0,
+      "Yaw": -150.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.8,
+      "Y": 1.2,
+      "Z": 0.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_22",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.7215471,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_03_1.DA_Fx_Group_R1b02_03_1",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -120.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.2,
+      "Z": 0.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_19",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.724961,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.5,
+      "Y": 1.2,
+      "Z": 1.0
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_21",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.7317886,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -90.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": -1.1,
+      "Y": 1.2,
+      "Z": 1.15
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_20",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst01",
+     "state": false,
+     "authoredSeconds": 2.7352026,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b02_01.DA_Fx_Group_R1b02_01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -60.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    }
+   ],
+   "sourceSequenceEffects": [],
+   "groups": {
+    "DA_Fx_Group_Changli_Burst_Eye02": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_Changli_Burst_Eye02",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_Burst_Eye01"
+     }
+    ],
+    "DA_Fx_Group_Changli_Burst02": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_Changli_Burst02",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_Burst02"
+     },
+     {
+      "modelClass": "EffectModelPostProcess_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/PostProcess/R2T1ChangLiMd10011/DA_Fx_Post_Burst_02",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1b02_05_1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b02_08_F",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b02_02_1"
+     }
+    ],
+    "DA_Fx_Group_R1b02_03_1": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b02_04_F",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b02_03_1"
+     }
+    ],
+    "DA_Fx_Group_R1b02_01": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b02_01",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b02_04"
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Burst02",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst02",
+   "sources": [
+    {
+     "source": "Burst02",
+     "type": "AnimSequence",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\Burst02.json",
+     "lengthSeconds": 5.5
+    },
+    {
+     "source": "AM_Burst02",
+     "type": "AnimMontage",
+     "file": "C:\\GamePakExtractor\\Output\\Exports\\Client\\Content\\Aki\\Character\\Role\\FemaleXL\\ChangLi\\CommonAnim\\AM_Burst02.json",
+     "lengthSeconds": 5.2
+    }
+   ],
+   "timelineScale": 1.0,
+   "sourceEvents": [
+    {
+     "notifyObject": "AnimNotifyEffect_C_3",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/DataAsset/PostProcess/R2T1ChangLiMd10011/DA_Fx_Post_S_Burst02.DA_Fx_Post_S_Burst02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_4",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_Burst02.DA_Fx_Light_Burst02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.1823116,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Daoguang.DA_Fx_Group_R1b01_Daoguang",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 120.0
+     },
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 0.0,
+      "Roll": 10.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_0",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Fire.DA_Fx_Group_R1b01_Fire",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_13",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_03.DA_Fx_Group_R1b01_03",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 150.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 1.2,
+      "Z": 0.7
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_14",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_05.DA_Fx_Group_R1b01_05",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 120.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.85,
+      "Y": 1.2,
+      "Z": 0.55
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_15",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_05.DA_Fx_Group_R1b01_05",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 90.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.1
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_16",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_02.DA_Fx_Group_R1b01_02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 60.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.2,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_17",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_02.DA_Fx_Group_R1b01_02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.2,
+      "Z": 1.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_18",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_02.DA_Fx_Group_R1b01_02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": {
+      "X": 1.7,
+      "Y": 1.2,
+      "Z": 1.9
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_19",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_02.DA_Fx_Group_R1b01_02",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -30.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.5,
+      "Y": 1.2,
+      "Z": 1.0
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_20",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_04.DA_Fx_Group_R1b01_04",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -60.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.2,
+      "Z": 1.2
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_21",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_03.DA_Fx_Group_R1b01_03",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -90.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.1,
+      "Y": 1.2,
+      "Z": 1.15
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_22",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_05.DA_Fx_Group_R1b01_05",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -120.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 1.2,
+      "Z": 0.6
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_23",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_03.DA_Fx_Group_R1b01_03",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -150.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 0.8,
+      "Y": 1.2,
+      "Z": 0.5
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_2",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "Burst02",
+     "state": false,
+     "authoredSeconds": 0.88,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a03_03.DA_Fx_Group_R1a03_03",
+     "socketName": "Root",
+     "location": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 80.0
+     },
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null
+    },
+    {
+     "notifyObject": "AnimNotifyEffect_C_1",
+     "notifyClass": "AnimNotifyEffect_C",
+     "owner": "AM_Burst02",
+     "state": false,
+     "authoredSeconds": 0.0,
+     "durationSeconds": 0.0,
+     "triggerOffsetSeconds": 0.0001,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1a04_Blink2.DA_Fx_Group_R1a04_Blink2",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": null,
+     "detachWhenSkillEndExplicit": true
+    }
+   ],
+   "sourceSequenceEffects": [
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_1",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.031636596,
+     "durationSeconds": 0.85815704,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 150.0,
+      "Roll": 0.0
+     },
+     "scale": {
+      "X": 1.0,
+      "Y": 0.9,
+      "Z": 1.0
+     },
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.031636596
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_2",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.061501026,
+     "durationSeconds": 0.82834864,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 120.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.061501026
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_13",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.099411,
+     "durationSeconds": 0.7903826,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 90.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.099411
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_14",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.127807,
+     "durationSeconds": 0.7619866,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 60.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.127807
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_15",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.159356,
+     "durationSeconds": 0.73043764,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": 28.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.159356
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_16",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.200371,
+     "durationSeconds": 0.6894226,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": null,
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.200371
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_17",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.224198,
+     "durationSeconds": 0.66559565,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -28.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.224198
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_18",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.265213,
+     "durationSeconds": 0.6245686,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -60.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.265213
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_19",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.310601,
+     "durationSeconds": 0.57919264,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -90.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.310601
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_20",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.37163183,
+     "durationSeconds": 0.51818156,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -120.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.37163183
+    },
+    {
+     "notifyObject": "AnimNotifyStateEffect_C_21",
+     "notifyClass": "AnimNotifyStateEffect_C",
+     "owner": "Burst02",
+     "state": true,
+     "authoredSeconds": 0.413978,
+     "durationSeconds": 0.4758354,
+     "triggerOffsetSeconds": 0.0,
+     "enabled": true,
+     "triggerChance": 1.0,
+     "included": true,
+     "effectAsset": "/Game/Aki/Effect/EffectGroup/R2T1ChangliMd10011/DA_Fx_Group_R1b01_Dilie01.DA_Fx_Group_R1b01_Dilie01",
+     "socketName": "Root",
+     "location": null,
+     "rotation": {
+      "Pitch": 0.0,
+      "Yaw": -150.0,
+      "Roll": 0.0
+     },
+     "scale": null,
+     "attachedExplicit": false,
+     "detachWhenSkillEndExplicit": null,
+     "authoredBeginSeconds": 0.413978
+    }
+   ],
+   "groups": {
+    "DA_Fx_Post_S_Burst02": [],
+    "DA_Fx_Light_Burst02": [],
+    "DA_Fx_Group_R1b01_Dilie01": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_01",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_01"
+     },
+     {
+      "modelClass": "EffectModelDecal_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Decal/R2T1ChangliMd10011/DA_Fx_Decal_R2b01_dilie",
+      "delay": 0.0
+     }
+    ],
+    "DA_Fx_Group_R1b01_Daoguang": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_Daoguang",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_01_Daoguang"
+     }
+    ],
+    "DA_Fx_Group_R1b01_Fire": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_Fire",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_Dilie"
+     }
+    ],
+    "DA_Fx_Group_R1b01_03": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_03",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_03"
+     }
+    ],
+    "DA_Fx_Group_R1b01_05": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_05",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_05"
+     }
+    ],
+    "DA_Fx_Group_R1b01_02": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_02",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_02"
+     }
+    ],
+    "DA_Fx_Group_R1b01_04": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1b01_04",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1b01_04"
+     }
+    ],
+    "DA_Fx_Group_R1a03_03": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a03_03",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a03_03_Daoguang"
+     }
+    ],
+    "DA_Fx_Group_R1a04_Blink2": [
+     {
+      "modelClass": "EffectModelNiagara_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Niagara/R2T1ChangliMd10011/DA_Fx_R1a04_Blink2",
+      "delay": 0.0,
+      "niagara": "Client/Content/Aki/Effect/Niagara/NI_R2T1ChangliMd10011/NS_Fx_Changli_R1a4_Blink2"
+     },
+     {
+      "modelClass": "EffectModelLight_C",
+      "dataAsset": "Client/Content/Aki/Effect/DataAsset/Light/R2T1ChangLiMd10011/DA_Fx_Light_R1a04_1",
+      "delay": 0.0
+     }
+    ]
+   },
+   "sequenceSystems": []
+  },
+  {
+   "projectAttack": "Burst01_Sequence",
+   "projectMontage": "/Game/Characters/Role/changli/AnimMontage/AM_Burst01",
+   "sources": [],
+   "timelineScale": 1.0,
+   "sourceEvents": [],
+   "sourceSequenceEffects": [],
+   "groups": {},
+   "sequenceSystems": [
+    "NS_Fx_Changli_Burst03",
+    "NS_Fx_Changli_Burst04",
+    "NS_Fx_Changli_Burst05",
+    "NS_Fx_Changli_Burst06",
+    "NS_Fx_Changli_BurstBw01",
+    "NS_Fx_Changli_BurstBw03"
+   ]
+  }
+ ]
+}

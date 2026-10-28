@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2300062501",
+    "Type": "Event",
+    "GUID": "{048522BC-9656-46D6-A628-1D50AE41C275}",
+    "Language": "SFX",
+    "Hash": "{A9875995-F785-9CD1-9A8A-814F66C0C5A5}",
+    "ObjectPath": "play_vo_changli_bat_burst02",
+    "ShortName": "play_vo_changli_bat_burst02",
+    "Path": "Event/play_vo_changli_bat_burst02.bnk",
+    "Media": [
+     {
+      "Id": "30329632",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst02_03.wav",
+      "Path": "Media/30329632.wem",
+      "CachePath": "DC/{DCBA677F-FA60-529E-DBC7-5BF71CE57515}.wem"
+     },
+     {
+      "Id": "286011466",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst02_02.wav",
+      "Path": "Media/286011466.wem",
+      "CachePath": "B1/{B1D86069-2A02-957D-25F6-1C54E004DDF7}.wem"
+     },
+     {
+      "Id": "420640019",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst02_01.wav",
+      "Path": "Media/420640019.wem",
+      "CachePath": "62/{624DA044-02CC-30C5-34DD-4CF825589716}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2300062501",
+      "Name": "play_vo_changli_bat_burst02",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_burst02",
+      "GUID": "{048522BC-9656-46D6-A628-1D50AE41C275}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.28429165",
+      "DurationMax": "0.72522914",
+      "MediaRefs": [
+       {
+        "Id": "30329632"
+       },
+       {
+        "Id": "286011466"
+       },
+       {
+        "Id": "420640019"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{21213B72-437E-4C3C-20DD-048DD3BBA4DD}"
+ }
+}

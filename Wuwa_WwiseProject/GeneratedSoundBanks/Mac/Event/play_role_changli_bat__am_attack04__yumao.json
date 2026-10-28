@@ -1,0 +1,61 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "478445693",
+    "Type": "Event",
+    "GUID": "{715E1879-8687-4ACC-9EBE-AAE12B2B40BA}",
+    "Language": "SFX",
+    "Hash": "{F5FEF439-AB82-B957-B982-678B8554A195}",
+    "ObjectPath": "play_role_changli_bat__am_attack04__yumao",
+    "ShortName": "play_role_changli_bat__am_attack04__yumao",
+    "Path": "Event/play_role_changli_bat__am_attack04__yumao.bnk",
+    "Media": [
+     {
+      "Id": "55691973",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_attack04__yumao.wav",
+      "Path": "Media/55691973.wem",
+      "CachePath": "B7/{B7E41D15-203E-5A6B-75F8-D3BE73B82C8C}.wem"
+     },
+     {
+      "Id": "993961631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\role_changli_bat__am_airattack04_yumao.wav",
+      "Path": "Media/993961631.wem",
+      "CachePath": "99/{99F82106-4A4F-DDC7-B270-ECEE40C85A98}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "478445693",
+      "Name": "play_role_changli_bat__am_attack04__yumao",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_role_changli_bat__am_attack04__yumao",
+      "GUID": "{715E1879-8687-4ACC-9EBE-AAE12B2B40BA}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2424583",
+      "DurationMax": "1.814",
+      "MediaRefs": [
+       {
+        "Id": "55691973"
+       },
+       {
+        "Id": "993961631"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{91E41E87-C707-0B92-9A46-68AC6F77BBFB}"
+ }
+}

@@ -14,7 +14,7 @@
 #include "InputAction.h"
 #include "InputMappingContext.h"
 #include "Game/Controller/WuwaPlayerController.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 
 namespace
 {

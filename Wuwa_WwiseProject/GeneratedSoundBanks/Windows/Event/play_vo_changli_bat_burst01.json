@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2300062502",
+    "Type": "Event",
+    "GUID": "{2663E658-7C03-42CA-8779-41A30EA6CE6B}",
+    "Language": "SFX",
+    "Hash": "{78811FB6-1144-79B4-5A76-1312CB03C80A}",
+    "ObjectPath": "play_vo_changli_bat_burst01",
+    "ShortName": "play_vo_changli_bat_burst01",
+    "Path": "Event/play_vo_changli_bat_burst01.bnk",
+    "Media": [
+     {
+      "Id": "525448381",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst01_01.wav",
+      "Path": "Media/525448381.wem",
+      "CachePath": "2B/{2BE6F061-8A6F-D29C-E97D-40380CC98382}.wem"
+     },
+     {
+      "Id": "730577377",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst01_03.wav",
+      "Path": "Media/730577377.wem",
+      "CachePath": "18/{18FD9A4F-E60B-2D22-F18C-8F74A8605A90}.wem"
+     },
+     {
+      "Id": "983241700",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_burst01_02.wav",
+      "Path": "Media/983241700.wem",
+      "CachePath": "9A/{9AB0785B-D29D-42A8-DE55-9DA5839B2FCF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2300062502",
+      "Name": "play_vo_changli_bat_burst01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_burst01",
+      "GUID": "{2663E658-7C03-42CA-8779-41A30EA6CE6B}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "2.6177084",
+      "DurationMax": "3.0919166",
+      "MediaRefs": [
+       {
+        "Id": "525448381"
+       },
+       {
+        "Id": "730577377"
+       },
+       {
+        "Id": "983241700"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{70486611-7C49-6269-6EE9-1271A401D664}"
+ }
+}

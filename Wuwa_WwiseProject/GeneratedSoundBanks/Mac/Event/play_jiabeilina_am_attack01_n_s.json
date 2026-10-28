@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3603988508",
+    "Type": "Event",
+    "GUID": "{137193A6-4661-49CA-8ACF-54EC0C8708C4}",
+    "Language": "SFX",
+    "Hash": "{AC0FE847-7E1E-2193-76C4-4D97203902A1}",
+    "ObjectPath": "play_jiabeilina_am_attack01_n_s",
+    "ShortName": "play_jiabeilina_am_attack01_n_s",
+    "Path": "Event/play_jiabeilina_am_attack01_n_s.bnk",
+    "Media": [
+     {
+      "Id": "729346921",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack01_N_S_02.wav",
+      "Path": "Media/729346921.wem",
+      "CachePath": "DD/{DD4DAC6D-8085-E2A4-E450-29097340334A}.wem"
+     },
+     {
+      "Id": "756130438",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack01_N_S_01.wav",
+      "Path": "Media/756130438.wem",
+      "CachePath": "4C/{4C65B13F-4CC6-58A1-A343-8433A3102561}.wem"
+     },
+     {
+      "Id": "933228953",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_AM_Attack01_N_S_03.wav",
+      "Path": "Media/933228953.wem",
+      "CachePath": "18/{186A0A8B-0B5A-A56D-40ED-27CD73DD1765}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3603988508",
+      "Name": "play_jiabeilina_am_attack01_n_s",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_am_attack01_n_s",
+      "GUID": "{137193A6-4661-49CA-8ACF-54EC0C8708C4}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8371875",
+      "DurationMax": "1.8371875",
+      "MediaRefs": [
+       {
+        "Id": "729346921"
+       },
+       {
+        "Id": "756130438"
+       },
+       {
+        "Id": "933228953"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F4E1753B-4BF1-AFCC-64D0-DFC597072324}"
+ }
+}

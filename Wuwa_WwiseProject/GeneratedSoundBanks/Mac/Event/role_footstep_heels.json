@@ -1,0 +1,554 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1560095794",
+    "Type": "Event",
+    "GUID": "{A0264B7D-9B11-4D44-9318-A1CEF5EA8E43}",
+    "Language": "SFX",
+    "Hash": "{802B5794-D18A-EAB0-4A80-6B5D668929F1}",
+    "ObjectPath": "role_footstep_heels",
+    "ShortName": "role_footstep_heels",
+    "Path": "Event/role_footstep_heels.bnk",
+    "Media": [
+     {
+      "Id": "159568569",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_runstop_dirt_03.wav",
+      "Path": "Media/159568569.wem",
+      "CachePath": "47/{4736B49D-D213-0B9A-780A-B72AA710994D}.wem"
+     },
+     {
+      "Id": "179179654",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_sprintstop_dirt_03.wav",
+      "Path": "Media/179179654.wem",
+      "CachePath": "F5/{F55F14E8-F31E-83E6-5828-F862CCACF79B}.wem"
+     },
+     {
+      "Id": "189615600",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_02.wav",
+      "Path": "Media/189615600.wem",
+      "CachePath": "84/{841AA772-4D05-175A-7016-9CC67D860976}.wem"
+     },
+     {
+      "Id": "199256232",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_03.wav",
+      "Path": "Media/199256232.wem",
+      "CachePath": "7F/{7F880F2B-E8AA-6351-FA59-54712304526A}.wem"
+     },
+     {
+      "Id": "209779620",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-006.wav",
+      "Path": "Media/209779620.wem",
+      "CachePath": "EB/{EB47E1A2-420D-9ABC-3CA3-3867C9C6461E}.wem"
+     },
+     {
+      "Id": "278394091",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_runstop_dirt_01.wav",
+      "Path": "Media/278394091.wem",
+      "CachePath": "13/{13E7102D-D10F-D627-5A5D-1343E6A3E8F6}.wem"
+     },
+     {
+      "Id": "279158473",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_01.wav",
+      "Path": "Media/279158473.wem",
+      "CachePath": "4F/{4F336E8E-BB94-77F0-14EB-0F6E17688220}.wem"
+     },
+     {
+      "Id": "288551298",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_02.wav",
+      "Path": "Media/288551298.wem",
+      "CachePath": "C2/{C2132A53-F2DC-227F-CD29-E3303FBB0416}.wem"
+     },
+     {
+      "Id": "302699497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_04.wav",
+      "Path": "Media/302699497.wem",
+      "CachePath": "80/{8044281C-D28C-55EA-83DF-3C9BBD733900}.wem"
+     },
+     {
+      "Id": "306083100",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-005.wav",
+      "Path": "Media/306083100.wem",
+      "CachePath": "F0/{F0EF9983-E221-3050-EB22-2C7AC79A0488}.wem"
+     },
+     {
+      "Id": "356886435",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walkstop_dirt_03.wav",
+      "Path": "Media/356886435.wem",
+      "CachePath": "45/{45D79DB7-9397-A6D6-8307-8D1BD8F67C28}.wem"
+     },
+     {
+      "Id": "362198133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_sprintstop_dirt_01.wav",
+      "Path": "Media/362198133.wem",
+      "CachePath": "1F/{1FC454B7-9372-E1F5-2497-0BA940E5E921}.wem"
+     },
+     {
+      "Id": "365640940",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-003.wav",
+      "Path": "Media/365640940.wem",
+      "CachePath": "83/{83FC05D9-3682-C5AF-2EC1-0E965A7170CF}.wem"
+     },
+     {
+      "Id": "402713374",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_05.wav",
+      "Path": "Media/402713374.wem",
+      "CachePath": "C7/{C73BF46A-930A-3B17-AE61-E59216AEBDD8}.wem"
+     },
+     {
+      "Id": "413663265",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walkstop_dirt_02.wav",
+      "Path": "Media/413663265.wem",
+      "CachePath": "C0/{C0D2278A-17DB-57C4-C843-8B85D1814DC5}.wem"
+     },
+     {
+      "Id": "496748063",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-004.wav",
+      "Path": "Media/496748063.wem",
+      "CachePath": "9F/{9F598E5D-3059-818D-D0AB-66A869ABFDA4}.wem"
+     },
+     {
+      "Id": "501288338",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_runstop_dirt_02.wav",
+      "Path": "Media/501288338.wem",
+      "CachePath": "AB/{AB89875C-CE22-D430-DD44-A99637721FAE}.wem"
+     },
+     {
+      "Id": "526484106",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_sprintstop_dirt_02.wav",
+      "Path": "Media/526484106.wem",
+      "CachePath": "89/{8909F774-DCAD-8D2C-1489-E8CD5B3858BB}.wem"
+     },
+     {
+      "Id": "539625393",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_04.wav",
+      "Path": "Media/539625393.wem",
+      "CachePath": "E1/{E1CF1B1C-52BE-1998-DF83-32B742BAB235}.wem"
+     },
+     {
+      "Id": "613681255",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walkstop_dirt_01.wav",
+      "Path": "Media/613681255.wem",
+      "CachePath": "63/{63DF1B20-3CA7-3834-D0A7-94814750F36C}.wem"
+     },
+     {
+      "Id": "639189592",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_03.wav",
+      "Path": "Media/639189592.wem",
+      "CachePath": "84/{840FF584-2CC0-1D9A-AD27-CF6149C419AA}.wem"
+     },
+     {
+      "Id": "658859469",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_turnback_dirt_03.wav",
+      "Path": "Media/658859469.wem",
+      "CachePath": "A7/{A7829A76-38A4-450F-2CC6-4CF124E9E04A}.wem"
+     },
+     {
+      "Id": "708418601",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-001.wav",
+      "Path": "Media/708418601.wem",
+      "CachePath": "E4/{E4F0F2BF-6111-B978-C666-C0FD000108DB}.wem"
+     },
+     {
+      "Id": "773310597",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_01.wav",
+      "Path": "Media/773310597.wem",
+      "CachePath": "77/{7758BA3D-0252-ED19-8531-1E784496DA68}.wem"
+     },
+     {
+      "Id": "824671310",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_turnback_dirt_01.wav",
+      "Path": "Media/824671310.wem",
+      "CachePath": "D3/{D38EB408-D77E-EB3D-778D-3903B1F3B8AF}.wem"
+     },
+     {
+      "Id": "839122727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_06.wav",
+      "Path": "Media/839122727.wem",
+      "CachePath": "7C/{7CE4F0AC-CAA3-007E-26BD-882866298AE7}.wem"
+     },
+     {
+      "Id": "850979144",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_land_dirt_05.wav",
+      "Path": "Media/850979144.wem",
+      "CachePath": "79/{791C77B1-AB5B-A6F7-CFB8-D016F8F481D3}.wem"
+     },
+     {
+      "Id": "860176901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_run_dirt-002.wav",
+      "Path": "Media/860176901.wem",
+      "CachePath": "B7/{B7145346-0048-575F-EE64-E6E44B05AA3C}.wem"
+     },
+     {
+      "Id": "922695164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_turnback_dirt_02.wav",
+      "Path": "Media/922695164.wem",
+      "CachePath": "50/{508947D2-EBF4-869D-2F88-A3B04BFEF931}.wem"
+     },
+     {
+      "Id": "1057455635",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Common\\footstep_heels_walk_dirt_06.wav",
+      "Path": "Media/1057455635.wem",
+      "CachePath": "C4/{C4AEDE57-3BC4-BD9C-2350-21916F538893}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1560095794",
+      "Name": "role_footstep_heels",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Common\\role_footstep_heels",
+      "GUID": "{A0264B7D-9B11-4D44-9318-A1CEF5EA8E43}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0.24560417",
+      "DurationMax": "1.4148959",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "712161704",
+         "GUID": "{C54F4511-B1B1-4814-ACBF-3DB5C19F6116}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "209779620"
+         },
+         {
+          "Id": "306083100"
+         },
+         {
+          "Id": "365640940"
+         },
+         {
+          "Id": "496748063"
+         },
+         {
+          "Id": "708418601"
+         },
+         {
+          "Id": "860176901"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "31134489",
+         "GUID": "{DCF88F1C-4D85-4055-BA3B-63769946DEF3}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "179179654"
+         },
+         {
+          "Id": "362198133"
+         },
+         {
+          "Id": "526484106"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "4119184278",
+         "GUID": "{92F2281E-E425-4E62-B557-DBA32052CFEF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "356886435"
+         },
+         {
+          "Id": "413663265"
+         },
+         {
+          "Id": "613681255"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "674522502",
+         "GUID": "{31DAA629-61CC-4B17-84B4-A51AB453B848}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "279158473"
+         },
+         {
+          "Id": "288551298"
+         },
+         {
+          "Id": "539625393"
+         },
+         {
+          "Id": "639189592"
+         },
+         {
+          "Id": "839122727"
+         },
+         {
+          "Id": "850979144"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "1296465089",
+         "GUID": "{9CB7ED33-0A21-4717-95A5-EA31D9CDE27F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "209779620"
+         },
+         {
+          "Id": "306083100"
+         },
+         {
+          "Id": "365640940"
+         },
+         {
+          "Id": "496748063"
+         },
+         {
+          "Id": "708418601"
+         },
+         {
+          "Id": "860176901"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "2108779966",
+         "GUID": "{1069944B-9812-40EA-879A-E39B2E9480A3}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "189615600"
+         },
+         {
+          "Id": "199256232"
+         },
+         {
+          "Id": "302699497"
+         },
+         {
+          "Id": "402713374"
+         },
+         {
+          "Id": "773310597"
+         },
+         {
+          "Id": "1057455635"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "914843008",
+         "GUID": "{671796F4-AA79-411E-8EB9-3CC69A139299}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "159568569"
+         },
+         {
+          "Id": "278394091"
+         },
+         {
+          "Id": "501288338"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3333434565",
+         "Id": "571076813",
+         "GUID": "{4C6E7DF7-1465-4F9A-A498-C3EC13B1223E}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "658859469"
+         },
+         {
+          "Id": "824671310"
+         },
+         {
+          "Id": "922695164"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3333434565",
+      "Name": "footstep_variant",
+      "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant",
+      "GUID": "{D629F776-C5C9-49E5-82D2-8DFDF66E588B}",
+      "Switches": [
+       {
+        "Id": "31134489",
+        "Name": "sprintstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\sprintstop",
+        "GUID": "{DCF88F1C-4D85-4055-BA3B-63769946DEF3}"
+       },
+       {
+        "Id": "571076813",
+        "Name": "turnback",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\turnback",
+        "GUID": "{4C6E7DF7-1465-4F9A-A498-C3EC13B1223E}"
+       },
+       {
+        "Id": "674522502",
+        "Name": "land",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\land",
+        "GUID": "{31DAA629-61CC-4B17-84B4-A51AB453B848}"
+       },
+       {
+        "Id": "712161704",
+        "Name": "run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\run",
+        "GUID": "{C54F4511-B1B1-4814-ACBF-3DB5C19F6116}"
+       },
+       {
+        "Id": "914843008",
+        "Name": "runstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\runstop",
+        "GUID": "{671796F4-AA79-411E-8EB9-3CC69A139299}"
+       },
+       {
+        "Id": "1296465089",
+        "Name": "sprint",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\sprint",
+        "GUID": "{9CB7ED33-0A21-4717-95A5-EA31D9CDE27F}"
+       },
+       {
+        "Id": "2108779966",
+        "Name": "walk",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\walk",
+        "GUID": "{1069944B-9812-40EA-879A-E39B2E9480A3}"
+       },
+       {
+        "Id": "4119184278",
+        "Name": "walkstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\walkstop",
+        "GUID": "{92F2281E-E425-4E62-B557-DBA32052CFEF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1E75A1DE-FEE9-A1C9-3A0D-143726F82BF7}"
+ }
+}

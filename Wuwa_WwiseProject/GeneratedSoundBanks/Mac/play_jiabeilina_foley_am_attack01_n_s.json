@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3215923472",
+    "Type": "User",
+    "GUID": "{E9EB7705-F7AF-4AEC-87F8-10545F2D767C}",
+    "Language": "SFX",
+    "Hash": "{A6E932EA-6B4B-880F-E6BF-F4B86FE7AC5C}",
+    "ObjectPath": "play_jiabeilina_foley_am_attack01_n_s",
+    "ShortName": "play_jiabeilina_foley_am_attack01_n_s",
+    "Path": "play_jiabeilina_foley_am_attack01_n_s.bnk"
+   }
+  ],
+  "FileHash": "{CD90CDC0-25EC-1BF3-CAC5-DBD25FBB6C37}"
+ }
+}

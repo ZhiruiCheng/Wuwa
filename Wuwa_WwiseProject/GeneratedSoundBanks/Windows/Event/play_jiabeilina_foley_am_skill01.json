@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3270151050",
+    "Type": "Event",
+    "GUID": "{D64D95B2-2E1B-4077-8CE3-FFCA81477BA9}",
+    "Language": "SFX",
+    "Hash": "{6E29B0C5-B03F-8A2F-B597-E028103896AB}",
+    "ObjectPath": "play_jiabeilina_foley_am_skill01",
+    "ShortName": "play_jiabeilina_foley_am_skill01",
+    "Path": "Event/play_jiabeilina_foley_am_skill01.bnk",
+    "Media": [
+     {
+      "Id": "184005192",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_Foley_AM_Skill01.wav",
+      "Path": "Media/184005192.wem",
+      "CachePath": "B6/{B660EFF8-33BA-36B2-6B18-FEA8D095DFE6}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3270151050",
+      "Name": "play_jiabeilina_foley_am_skill01",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_foley_am_skill01",
+      "GUID": "{D64D95B2-2E1B-4077-8CE3-FFCA81477BA9}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "3.5600417",
+      "DurationMax": "3.5600417",
+      "MediaRefs": [
+       {
+        "Id": "184005192"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{00C07637-1171-0026-05E7-7BCC4792655F}"
+ }
+}

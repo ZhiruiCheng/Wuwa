@@ -1,0 +1,139 @@
+{
+ "table": "/Game/Characters/Monster/Boss/Fuludelisi/Data/DT_HitEffect_Fuludelisi",
+ "struct": "/Script/Wuwa.WuwaHitEffectInfo",
+ "source": "Character/Monster/Boss/MB1FuludelisiMd00401/Data/DT_HitEffect",
+ "rows": [
+  {
+   "Name": "轻左",
+   "BeHitAnim": "LightLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -400.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "轻右",
+   "BeHitAnim": "LightRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.1,
+   "GroundSpeed": {
+    "X": -400.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.1
+  },
+  {
+   "Name": "重左",
+   "BeHitAnim": "HeavyLeft",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": -600.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "重右",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": -600.0
+   },
+   "GroundMoveTime": 0.2
+  },
+  {
+   "Name": "击飞",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": 600.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "大击飞",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -300.0,
+    "Y": 0.0,
+    "Z": 900.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "击落",
+   "BeHitAnim": "KnockDown",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.3,
+   "GroundSpeed": {
+    "X": -1500.0,
+    "Y": 0.0,
+    "Z": -3000.0
+   },
+   "GroundMoveTime": 0.0
+  },
+  {
+   "Name": "击退",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -600.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.5
+  },
+  {
+   "Name": "击倒",
+   "BeHitAnim": "KnockDown",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -1500.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 0.3
+  },
+  {
+   "Name": "裁决终",
+   "BeHitAnim": "HeavyRight",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 10.0,
+   "GroundSpeed": {
+    "X": 0.0,
+    "Y": 0.0,
+    "Z": 0.0
+   },
+   "GroundMoveTime": 2.0
+  },
+  {
+   "Name": "处决击飞",
+   "BeHitAnim": "KnockUp",
+   "RotationOffsetZ": 0.0,
+   "StiffTime": 0.5,
+   "GroundSpeed": {
+    "X": -500.0,
+    "Y": 0.0,
+    "Z": 1200.0
+   },
+   "GroundMoveTime": 0.0
+  }
+ ]
+}

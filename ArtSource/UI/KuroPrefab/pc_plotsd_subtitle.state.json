@@ -1,0 +1,14 @@
+{
+  "_comment": "PC_UiView_PlotsD（边走边播的 D 级剧情字幕）只留底部的字幕块：NPC 名字、装饰线、字幕文字。",
+  "active": {
+    "/PnlFull/PnlInfo$": false,
+    "/PnlFull/PnlPlotL$": false,
+    "/PnlFull/PnlPlotR$": false,
+    "/PnlFull/PnlPlotM$": false,
+    "/PnlPlotText/PnlNpc/TxtNpcRole$": false
+  },
+  "texts": {
+    "/TxtNpcName$": "NPC",
+    "/TxtList$": "Subtitle text"
+  }
+}

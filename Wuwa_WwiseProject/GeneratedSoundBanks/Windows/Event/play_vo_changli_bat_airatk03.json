@@ -1,0 +1,73 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3538349590",
+    "Type": "Event",
+    "GUID": "{B36A270A-F922-47FD-AAB8-849C47872668}",
+    "Language": "SFX",
+    "Hash": "{2A88D26D-B649-66F3-BC04-E1758C967C62}",
+    "ObjectPath": "play_vo_changli_bat_airatk03",
+    "ShortName": "play_vo_changli_bat_airatk03",
+    "Path": "Event/play_vo_changli_bat_airatk03.bnk",
+    "Media": [
+     {
+      "Id": "320810186",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk03_01.wav",
+      "Path": "Media/320810186.wem",
+      "CachePath": "88/{88329BCF-E72E-011F-AB0E-0DFFF201D6F1}.wem"
+     },
+     {
+      "Id": "508377507",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk03_02.wav",
+      "Path": "Media/508377507.wem",
+      "CachePath": "51/{51DA05C8-FA0E-18CF-D45B-C953FF19D3D9}.wem"
+     },
+     {
+      "Id": "605388062",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Changli\\zh_vo_changli_bat_airatk03_03.wav",
+      "Path": "Media/605388062.wem",
+      "CachePath": "37/{376E2C38-2A85-A3F9-8FDB-B554D4B60BF2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3538349590",
+      "Name": "play_vo_changli_bat_airatk03",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Changli\\play_vo_changli_bat_airatk03",
+      "GUID": "{B36A270A-F922-47FD-AAB8-849C47872668}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0.7125",
+      "MediaRefs": [
+       {
+        "Id": "320810186"
+       },
+       {
+        "Id": "508377507"
+       },
+       {
+        "Id": "605388062"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{31590159-6F84-4D69-7CE7-22CF35648A5C}"
+ }
+}

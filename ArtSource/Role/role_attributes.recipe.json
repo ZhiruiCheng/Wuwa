@@ -1,0 +1,724 @@
+{
+ "baseTable": "/Game/Characters/Role/Common/Data/DT_RoleBaseProperty",
+ "growthTable": "/Game/Characters/Role/Common/Data/DT_RolePropertyGrowth",
+ "roles": [
+  {
+   "asset": "/Game/Characters/Role/Common/Data/DA_Role_Changli",
+   "basePropertyId": 1205
+  },
+  {
+   "asset": "/Game/Characters/Role/Common/Data/DA_Role_Jiabeilina",
+   "basePropertyId": 1208
+  }
+ ],
+ "baseProperties": [
+  {
+   "id": 1205,
+   "element": "Fusion",
+   "maxHealth": 831,
+   "attack": 37,
+   "defense": 90,
+   "critRate": 0.05,
+   "critDamage": 1.5,
+   "energyEfficiency": 1.0,
+   "maxEnergy": 12500,
+   "maxConcertoEnergy": 10000.0,
+   "maxSpecialEnergy1": 4,
+   "maxSpecialEnergy2": 0,
+   "maxSpecialEnergy3": 0,
+   "maxSpecialEnergy4": 6000,
+   "maxSpecialEnergy5": 0
+  },
+  {
+   "id": 1208,
+   "element": "Fusion",
+   "maxHealth": 824,
+   "attack": 37,
+   "defense": 91,
+   "critRate": 0.05,
+   "critDamage": 1.5,
+   "energyEfficiency": 1.0,
+   "maxEnergy": 12500,
+   "maxConcertoEnergy": 10000.0,
+   "maxSpecialEnergy1": 100,
+   "maxSpecialEnergy2": 40,
+   "maxSpecialEnergy3": 100,
+   "maxSpecialEnergy4": 6000,
+   "maxSpecialEnergy5": 0
+  }
+ ],
+ "growth": [
+  {
+   "level": 1,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.0,
+   "attackRatio": 1.0,
+   "defenseRatio": 1.0
+  },
+  {
+   "level": 2,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.0842,
+   "attackRatio": 1.0842,
+   "defenseRatio": 1.0823
+  },
+  {
+   "level": 3,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.1685,
+   "attackRatio": 1.1685,
+   "defenseRatio": 1.1647
+  },
+  {
+   "level": 4,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.2528,
+   "attackRatio": 1.2528,
+   "defenseRatio": 1.2471
+  },
+  {
+   "level": 5,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.337,
+   "attackRatio": 1.337,
+   "defenseRatio": 1.3295
+  },
+  {
+   "level": 6,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.4213,
+   "attackRatio": 1.4213,
+   "defenseRatio": 1.4119
+  },
+  {
+   "level": 7,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.5056,
+   "attackRatio": 1.5056,
+   "defenseRatio": 1.4943
+  },
+  {
+   "level": 8,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.5898,
+   "attackRatio": 1.5898,
+   "defenseRatio": 1.5767
+  },
+  {
+   "level": 9,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.6741,
+   "attackRatio": 1.6741,
+   "defenseRatio": 1.6591
+  },
+  {
+   "level": 10,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.7584,
+   "attackRatio": 1.7584,
+   "defenseRatio": 1.7415
+  },
+  {
+   "level": 11,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.8426,
+   "attackRatio": 1.8426,
+   "defenseRatio": 1.8239
+  },
+  {
+   "level": 12,
+   "breachLevel": 0,
+   "maxHealthRatio": 1.9269,
+   "attackRatio": 1.9269,
+   "defenseRatio": 1.9063
+  },
+  {
+   "level": 13,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.0112,
+   "attackRatio": 2.0112,
+   "defenseRatio": 1.9887
+  },
+  {
+   "level": 14,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.0955,
+   "attackRatio": 2.0955,
+   "defenseRatio": 2.0711
+  },
+  {
+   "level": 15,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.1797,
+   "attackRatio": 2.1797,
+   "defenseRatio": 2.1535
+  },
+  {
+   "level": 16,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.264,
+   "attackRatio": 2.264,
+   "defenseRatio": 2.2359
+  },
+  {
+   "level": 17,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.3483,
+   "attackRatio": 2.3483,
+   "defenseRatio": 2.3183
+  },
+  {
+   "level": 18,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.4325,
+   "attackRatio": 2.4325,
+   "defenseRatio": 2.4007
+  },
+  {
+   "level": 19,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.5168,
+   "attackRatio": 2.5168,
+   "defenseRatio": 2.4831
+  },
+  {
+   "level": 20,
+   "breachLevel": 0,
+   "maxHealthRatio": 2.6011,
+   "attackRatio": 2.6011,
+   "defenseRatio": 2.5655
+  },
+  {
+   "level": 20,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.2677,
+   "attackRatio": 3.3511,
+   "defenseRatio": 3.2136
+  },
+  {
+   "level": 21,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.352,
+   "attackRatio": 3.4353,
+   "defenseRatio": 3.296
+  },
+  {
+   "level": 22,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.4363,
+   "attackRatio": 3.5196,
+   "defenseRatio": 3.3784
+  },
+  {
+   "level": 23,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.5205,
+   "attackRatio": 3.6039,
+   "defenseRatio": 3.4608
+  },
+  {
+   "level": 24,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.6048,
+   "attackRatio": 3.6882,
+   "defenseRatio": 3.5432
+  },
+  {
+   "level": 25,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.6891,
+   "attackRatio": 3.7724,
+   "defenseRatio": 3.6256
+  },
+  {
+   "level": 26,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.7734,
+   "attackRatio": 3.8567,
+   "defenseRatio": 3.708
+  },
+  {
+   "level": 27,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.8576,
+   "attackRatio": 3.941,
+   "defenseRatio": 3.7904
+  },
+  {
+   "level": 28,
+   "breachLevel": 1,
+   "maxHealthRatio": 3.9419,
+   "attackRatio": 4.0252,
+   "defenseRatio": 3.8728
+  },
+  {
+   "level": 29,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.0262,
+   "attackRatio": 4.1095,
+   "defenseRatio": 3.9552
+  },
+  {
+   "level": 30,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.1104,
+   "attackRatio": 4.1938,
+   "defenseRatio": 4.0376
+  },
+  {
+   "level": 31,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.1947,
+   "attackRatio": 4.278,
+   "defenseRatio": 4.12
+  },
+  {
+   "level": 32,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.279,
+   "attackRatio": 4.3623,
+   "defenseRatio": 4.2024
+  },
+  {
+   "level": 33,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.3632,
+   "attackRatio": 4.4466,
+   "defenseRatio": 4.2848
+  },
+  {
+   "level": 34,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.4475,
+   "attackRatio": 4.5308,
+   "defenseRatio": 4.3672
+  },
+  {
+   "level": 35,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.5318,
+   "attackRatio": 4.6151,
+   "defenseRatio": 4.4496
+  },
+  {
+   "level": 36,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.6161,
+   "attackRatio": 4.6994,
+   "defenseRatio": 4.532
+  },
+  {
+   "level": 37,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.7003,
+   "attackRatio": 4.7837,
+   "defenseRatio": 4.6144
+  },
+  {
+   "level": 38,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.7846,
+   "attackRatio": 4.8679,
+   "defenseRatio": 4.6968
+  },
+  {
+   "level": 39,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.8689,
+   "attackRatio": 4.9522,
+   "defenseRatio": 4.7792
+  },
+  {
+   "level": 40,
+   "breachLevel": 1,
+   "maxHealthRatio": 4.9531,
+   "attackRatio": 5.0365,
+   "defenseRatio": 4.8616
+  },
+  {
+   "level": 40,
+   "breachLevel": 2,
+   "maxHealthRatio": 5.6198,
+   "attackRatio": 5.7865,
+   "defenseRatio": 5.5097
+  },
+  {
+   "level": 41,
+   "breachLevel": 2,
+   "maxHealthRatio": 5.7041,
+   "attackRatio": 5.8707,
+   "defenseRatio": 5.5921
+  },
+  {
+   "level": 42,
+   "breachLevel": 2,
+   "maxHealthRatio": 5.7883,
+   "attackRatio": 5.955,
+   "defenseRatio": 5.6745
+  },
+  {
+   "level": 43,
+   "breachLevel": 2,
+   "maxHealthRatio": 5.8726,
+   "attackRatio": 6.0393,
+   "defenseRatio": 5.7569
+  },
+  {
+   "level": 44,
+   "breachLevel": 2,
+   "maxHealthRatio": 5.9569,
+   "attackRatio": 6.1235,
+   "defenseRatio": 5.8393
+  },
+  {
+   "level": 45,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.0411,
+   "attackRatio": 6.2078,
+   "defenseRatio": 5.9217
+  },
+  {
+   "level": 46,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.1254,
+   "attackRatio": 6.2921,
+   "defenseRatio": 6.0041
+  },
+  {
+   "level": 47,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.2097,
+   "attackRatio": 6.3764,
+   "defenseRatio": 6.0865
+  },
+  {
+   "level": 48,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.294,
+   "attackRatio": 6.4606,
+   "defenseRatio": 6.1689
+  },
+  {
+   "level": 49,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.3782,
+   "attackRatio": 6.5449,
+   "defenseRatio": 6.2513
+  },
+  {
+   "level": 50,
+   "breachLevel": 2,
+   "maxHealthRatio": 6.4625,
+   "attackRatio": 6.6292,
+   "defenseRatio": 6.3337
+  },
+  {
+   "level": 50,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.1292,
+   "attackRatio": 7.3792,
+   "defenseRatio": 6.9818
+  },
+  {
+   "level": 51,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.2134,
+   "attackRatio": 7.4634,
+   "defenseRatio": 7.0642
+  },
+  {
+   "level": 52,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.2977,
+   "attackRatio": 7.5477,
+   "defenseRatio": 7.1466
+  },
+  {
+   "level": 53,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.382,
+   "attackRatio": 7.632,
+   "defenseRatio": 7.229
+  },
+  {
+   "level": 54,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.4662,
+   "attackRatio": 7.7162,
+   "defenseRatio": 7.3114
+  },
+  {
+   "level": 55,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.5505,
+   "attackRatio": 7.8005,
+   "defenseRatio": 7.3938
+  },
+  {
+   "level": 56,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.6348,
+   "attackRatio": 7.8848,
+   "defenseRatio": 7.4762
+  },
+  {
+   "level": 57,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.7191,
+   "attackRatio": 7.9691,
+   "defenseRatio": 7.5586
+  },
+  {
+   "level": 58,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.8033,
+   "attackRatio": 8.0533,
+   "defenseRatio": 7.641
+  },
+  {
+   "level": 59,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.8876,
+   "attackRatio": 8.1376,
+   "defenseRatio": 7.7234
+  },
+  {
+   "level": 60,
+   "breachLevel": 3,
+   "maxHealthRatio": 7.9719,
+   "attackRatio": 8.2219,
+   "defenseRatio": 7.8058
+  },
+  {
+   "level": 60,
+   "breachLevel": 4,
+   "maxHealthRatio": 8.6385,
+   "attackRatio": 8.9719,
+   "defenseRatio": 8.454
+  },
+  {
+   "level": 61,
+   "breachLevel": 4,
+   "maxHealthRatio": 8.7228,
+   "attackRatio": 9.0561,
+   "defenseRatio": 8.5364
+  },
+  {
+   "level": 62,
+   "breachLevel": 4,
+   "maxHealthRatio": 8.8071,
+   "attackRatio": 9.1404,
+   "defenseRatio": 8.6188
+  },
+  {
+   "level": 63,
+   "breachLevel": 4,
+   "maxHealthRatio": 8.8913,
+   "attackRatio": 9.2247,
+   "defenseRatio": 8.7012
+  },
+  {
+   "level": 64,
+   "breachLevel": 4,
+   "maxHealthRatio": 8.9756,
+   "attackRatio": 9.3089,
+   "defenseRatio": 8.7836
+  },
+  {
+   "level": 65,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.0599,
+   "attackRatio": 9.3932,
+   "defenseRatio": 8.866
+  },
+  {
+   "level": 66,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.1441,
+   "attackRatio": 9.4775,
+   "defenseRatio": 8.9483
+  },
+  {
+   "level": 67,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.2284,
+   "attackRatio": 9.5617,
+   "defenseRatio": 9.0307
+  },
+  {
+   "level": 68,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.3127,
+   "attackRatio": 9.646,
+   "defenseRatio": 9.1131
+  },
+  {
+   "level": 69,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.397,
+   "attackRatio": 9.7303,
+   "defenseRatio": 9.1955
+  },
+  {
+   "level": 70,
+   "breachLevel": 4,
+   "maxHealthRatio": 9.4812,
+   "attackRatio": 9.8146,
+   "defenseRatio": 9.2779
+  },
+  {
+   "level": 70,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.1479,
+   "attackRatio": 10.3146,
+   "defenseRatio": 9.9261
+  },
+  {
+   "level": 71,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.2322,
+   "attackRatio": 10.3988,
+   "defenseRatio": 10.0085
+  },
+  {
+   "level": 72,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.3164,
+   "attackRatio": 10.4831,
+   "defenseRatio": 10.0909
+  },
+  {
+   "level": 73,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.4007,
+   "attackRatio": 10.5674,
+   "defenseRatio": 10.1733
+  },
+  {
+   "level": 74,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.485,
+   "attackRatio": 10.6516,
+   "defenseRatio": 10.2557
+  },
+  {
+   "level": 75,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.5692,
+   "attackRatio": 10.7359,
+   "defenseRatio": 10.3381
+  },
+  {
+   "level": 76,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.6535,
+   "attackRatio": 10.8202,
+   "defenseRatio": 10.4205
+  },
+  {
+   "level": 77,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.7378,
+   "attackRatio": 10.9044,
+   "defenseRatio": 10.5029
+  },
+  {
+   "level": 78,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.822,
+   "attackRatio": 10.9887,
+   "defenseRatio": 10.5853
+  },
+  {
+   "level": 79,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.9063,
+   "attackRatio": 11.073,
+   "defenseRatio": 10.6677
+  },
+  {
+   "level": 80,
+   "breachLevel": 5,
+   "maxHealthRatio": 10.9906,
+   "attackRatio": 11.1573,
+   "defenseRatio": 10.7501
+  },
+  {
+   "level": 80,
+   "breachLevel": 6,
+   "maxHealthRatio": 11.6573,
+   "attackRatio": 11.6573,
+   "defenseRatio": 11.3982
+  },
+  {
+   "level": 81,
+   "breachLevel": 6,
+   "maxHealthRatio": 11.7415,
+   "attackRatio": 11.7415,
+   "defenseRatio": 11.4806
+  },
+  {
+   "level": 82,
+   "breachLevel": 6,
+   "maxHealthRatio": 11.8258,
+   "attackRatio": 11.8258,
+   "defenseRatio": 11.563
+  },
+  {
+   "level": 83,
+   "breachLevel": 6,
+   "maxHealthRatio": 11.9101,
+   "attackRatio": 11.9101,
+   "defenseRatio": 11.6454
+  },
+  {
+   "level": 84,
+   "breachLevel": 6,
+   "maxHealthRatio": 11.9943,
+   "attackRatio": 11.9943,
+   "defenseRatio": 11.7278
+  },
+  {
+   "level": 85,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.0786,
+   "attackRatio": 12.0786,
+   "defenseRatio": 11.8102
+  },
+  {
+   "level": 86,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.1629,
+   "attackRatio": 12.1629,
+   "defenseRatio": 11.8926
+  },
+  {
+   "level": 87,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.2471,
+   "attackRatio": 12.2471,
+   "defenseRatio": 11.975
+  },
+  {
+   "level": 88,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.3314,
+   "attackRatio": 12.3314,
+   "defenseRatio": 12.0574
+  },
+  {
+   "level": 89,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.4157,
+   "attackRatio": 12.4157,
+   "defenseRatio": 12.1398
+  },
+  {
+   "level": 90,
+   "breachLevel": 6,
+   "maxHealthRatio": 12.5,
+   "attackRatio": 12.5,
+   "defenseRatio": 12.2222
+  }
+ ]
+}

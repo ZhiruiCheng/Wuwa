@@ -1,0 +1,16 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1560095794	role_footstep_heels			\Default Work Unit\Wuwa_Common\role_footstep_heels	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3333434565	footstep_variant			\Default Work Unit\footstep_variant	
+
+Switch	ID	Name	Switch Group			Notes
+	31134489	sprintstop	footstep_variant			
+	571076813	turnback	footstep_variant			
+	674522502	land	footstep_variant			
+	712161704	run	footstep_variant			
+	914843008	runstop	footstep_variant			
+	1296465089	sprint	footstep_variant			
+	2108779966	walk	footstep_variant			
+	4119184278	walkstop	footstep_variant			
+

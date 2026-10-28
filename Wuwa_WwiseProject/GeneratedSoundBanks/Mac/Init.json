@@ -1,0 +1,163 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1355168291",
+    "Type": "User",
+    "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
+    "Language": "SFX",
+    "Hash": "{A2A625F4-4594-5BBB-48A0-B3D8DB818A9E}",
+    "ObjectPath": "Init",
+    "ShortName": "Init",
+    "Path": "Init.bnk",
+    "Plugins": {
+     "AudioDevices": [
+      {
+       "Id": "2317455096",
+       "Name": "No_Output",
+       "ObjectPath": "\\Devices\\Default Work Unit\\No_Output",
+       "GUID": "{1A11C027-ACBB-4897-A3C8-F697153EB57F}",
+       "LibName": "No Output",
+       "LibId": "11862023"
+      },
+      {
+       "Id": "3859886410",
+       "Name": "System",
+       "ObjectPath": "\\Devices\\Default Work Unit\\System",
+       "GUID": "{11142FA9-B6DE-4D46-83CE-662125EAA102}",
+       "LibName": "System",
+       "LibId": "11403271"
+      }
+     ]
+    },
+    "Busses": [
+     {
+      "Id": "2246998526",
+      "Name": "Main Audio Bus",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1063605336",
+      "Name": "foley_variant",
+      "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant",
+      "GUID": "{C98632CF-EC0B-43E1-B2A7-1D653EB47F2F}",
+      "Switches": [
+       {
+        "Id": "712161704",
+        "Name": "run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\run",
+        "GUID": "{BA1430CF-5E6E-488E-949F-0923689F7DA9}"
+       },
+       {
+        "Id": "1133470540",
+        "Name": "fly",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\fly",
+        "GUID": "{EB10B2B0-8C7C-45D8-AC76-D78EE2C47AE0}"
+       },
+       {
+        "Id": "1296465089",
+        "Name": "sprint",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\sprint",
+        "GUID": "{1FF041B1-F8AD-44FB-9BB6-977EBCD2DB82}"
+       },
+       {
+        "Id": "1488596377",
+        "Name": "weak",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weak",
+        "GUID": "{EA1FF672-80B1-4D79-998D-8F71A04F87EE}"
+       },
+       {
+        "Id": "1724159175",
+        "Name": "weakfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\weakfast",
+        "GUID": "{EE7AC0CA-9061-4F7A-B391-81DCC6265294}"
+       },
+       {
+        "Id": "2557423760",
+        "Name": "hardfast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hardfast",
+        "GUID": "{EDFA3906-C4B7-4728-9260-4C58289D24D8}"
+       },
+       {
+        "Id": "2587856914",
+        "Name": "bodyfall",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\bodyfall",
+        "GUID": "{D409D60F-E885-432E-BD68-721EC5488C79}"
+       },
+       {
+        "Id": "3599861390",
+        "Name": "hard",
+        "ObjectPath": "\\Switches\\Default Work Unit\\foley_variant\\hard",
+        "GUID": "{79BEB496-1626-40FF-9510-595819538FAF}"
+       }
+      ]
+     },
+     {
+      "Id": "3333434565",
+      "Name": "footstep_variant",
+      "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant",
+      "GUID": "{D629F776-C5C9-49E5-82D2-8DFDF66E588B}",
+      "Switches": [
+       {
+        "Id": "31134489",
+        "Name": "sprintstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\sprintstop",
+        "GUID": "{DCF88F1C-4D85-4055-BA3B-63769946DEF3}"
+       },
+       {
+        "Id": "571076813",
+        "Name": "turnback",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\turnback",
+        "GUID": "{4C6E7DF7-1465-4F9A-A498-C3EC13B1223E}"
+       },
+       {
+        "Id": "674522502",
+        "Name": "land",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\land",
+        "GUID": "{31DAA629-61CC-4B17-84B4-A51AB453B848}"
+       },
+       {
+        "Id": "712161704",
+        "Name": "run",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\run",
+        "GUID": "{C54F4511-B1B1-4814-ACBF-3DB5C19F6116}"
+       },
+       {
+        "Id": "914843008",
+        "Name": "runstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\runstop",
+        "GUID": "{671796F4-AA79-411E-8EB9-3CC69A139299}"
+       },
+       {
+        "Id": "1296465089",
+        "Name": "sprint",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\sprint",
+        "GUID": "{9CB7ED33-0A21-4717-95A5-EA31D9CDE27F}"
+       },
+       {
+        "Id": "2108779966",
+        "Name": "walk",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\walk",
+        "GUID": "{1069944B-9812-40EA-879A-E39B2E9480A3}"
+       },
+       {
+        "Id": "4119184278",
+        "Name": "walkstop",
+        "ObjectPath": "\\Switches\\Default Work Unit\\footstep_variant\\walkstop",
+        "GUID": "{92F2281E-E425-4E62-B557-DBA32052CFEF}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4ECABD53-FDB6-FB6E-ACAE-5CF96669B22B}"
+ }
+}

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Game/Common/WuwaGameTags.h"
+#include "Core/Tag/WuwaGameTags.h"
 #include "Game/Input/WuwaInputTypes.h"
 #include "GameFramework/PlayerController.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"

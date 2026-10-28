@@ -2,10 +2,11 @@
 
 
 #include "Game/Effect/WuwaEffectActor.h"
-#include "Core/Utilities/DebugHelper.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemInterface.h"
 #include "GameplayEffect.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogWuwaEffectActor, Log, All);
 
 
 
@@ -16,7 +17,7 @@ void AWuwaEffectActor::ApplyEffect(AActor* Target, TSubclassOf<UGameplayEffect> 
 
 	if (!IsValid(Target))
 	{
-		Debug::Print("Target AActor is invalid when granting Effect");
+		UE_LOG(LogWuwaEffectActor, Warning, TEXT("%s: target actor is invalid when granting effect."), *GetName());
 		return;
 	}
 
@@ -28,7 +29,7 @@ void AWuwaEffectActor::ApplyEffect(AActor* Target, TSubclassOf<UGameplayEffect> 
 
 	if (TargetASC == nullptr)
 	{
-		Debug::Print("There is no ASC in Target AActor when granting Effect");
+		UE_LOG(LogWuwaEffectActor, Warning, TEXT("%s: %s has no ASC when granting effect."), *GetName(), *Target->GetName());
 		return;
 	}
 
@@ -43,7 +44,7 @@ void AWuwaEffectActor::ApplyEffect(AActor* Target, TSubclassOf<UGameplayEffect> 
 
 	if (!EffectSpecHandle.IsValid())
 	{
-		Debug::Print("Failed to create GameplayEffect spec");
+		UE_LOG(LogWuwaEffectActor, Warning, TEXT("%s: failed to create the GameplayEffect spec."), *GetName());
 		return;
 	}
 	//用target将效果赋给自己

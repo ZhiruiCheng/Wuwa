@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2148965627",
+    "Type": "Event",
+    "GUID": "{ABC49107-E802-4001-A864-FE150DA55537}",
+    "Language": "SFX",
+    "Hash": "{C2E14D08-BB82-22E4-3516-4F7EE19D8ED7}",
+    "ObjectPath": "play_jiabeilina_foley_am_attack01_ex",
+    "ShortName": "play_jiabeilina_foley_am_attack01_ex",
+    "Path": "Event/play_jiabeilina_foley_am_attack01_ex.bnk",
+    "Media": [
+     {
+      "Id": "108983844",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Wuwa_Jiabei\\Jiabeilina_Foley_AM_Attack01_EX.wav",
+      "Path": "Media/108983844.wem",
+      "CachePath": "E1/{E1EE28A0-3376-8C8F-EFD2-F71C9E2CE013}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2148965627",
+      "Name": "play_jiabeilina_foley_am_attack01_ex",
+      "ObjectPath": "\\Events\\Default Work Unit\\Wuwa_Jiabei\\play_jiabeilina_foley_am_attack01_ex",
+      "GUID": "{ABC49107-E802-4001-A864-FE150DA55537}",
+      "MaxAttenuation": "5000",
+      "DurationType": "OneShot",
+      "DurationMin": "1.7499375",
+      "DurationMax": "1.7499375",
+      "MediaRefs": [
+       {
+        "Id": "108983844"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DF20163D-E0FE-AC8F-7398-FB6B06D9FFDD}"
+ }
+}

@@ -1,0 +1,20 @@
+{
+  "_comment": "R 键（大招）按钮外圈的共鸣能量环（原作 BattleSkillItem.GetUltraComponent → BattleSkillUltraItem，资源 UiItem_BattleSkillUltraItem = FightSkillUlt，挂在技能按钮注册表 8 号 PnlContent 下）→ /Game/LGUI/HUD/Skill/FightSkillUlt。运行时由 UWuwaHudSkillBarPanel 加载挂到 R 按钮下，按 能量/最大能量 设 BarUlt 的填充量（原作 SetBarPercent）。",
+  "prefab": "UI/UIResources/UiFight/Prefabs/FightSkillUlt",
+  "state": "skill_ult.state.json",
+  "designHeight": 1440,
+  "targetHeight": 1080,
+  "skip": [
+    "UINiagara"
+  ],
+  "rootAnchor": {"pivot": [0.5, 0.5], "min": [0.5, 0.5], "max": [0.5, 0.5], "pos": [0.0, 0.0], "size": [90.0, 90.0]},
+  "registries": [
+    {
+      "owner": "^/FightSkillUlt$",
+      "entries": [
+        "/FightSkillUlt/BarUlt$"
+      ]
+    }
+  ],
+  "_comment_registries": "0 = BarUlt（原作注册表 0 号；1~4 是 UINiagara 特效，没导出）"
+}

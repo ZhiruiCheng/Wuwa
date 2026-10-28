@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4040635771	play_role_changli_bat__am_burst01			\Default Work Unit\Wuwa_Changli\play_role_changli_bat__am_burst01	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2293673011	Switch_3592615741			\Default Work Unit\Switch_3592615741	
+
+Switch	ID	Name	Switch Group			Notes
+	1655615535	Value_1635194252	Switch_3592615741			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	293021104	role_common_brust_ex	.cache\E5\{E59FB2BE-DC1B-69F0-015F-AD6CDED972CB}.wem	293021104.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_959661111\role_c_57754584\role_common_brust_ex	
+	638387958	role_changli_bat__am_burst01_v2	.cache\67\{677DD9F3-5E33-1392-051F-5CC4D1194C0C}.wem	638387958.wem	\Containers\Default Work Unit\Wuwa_Changli\AM_929704714\AM_959661111\role_c_57754584\role_changli_bat__am_burst01_v2	
+
