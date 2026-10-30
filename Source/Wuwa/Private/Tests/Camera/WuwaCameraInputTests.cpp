@@ -6,7 +6,6 @@
 #include "Engine/Engine.h"
 #include "Engine/LocalPlayer.h"
 #include "Engine/World.h"
-#include "Game/Camera/WuwaCameraMode.h"
 #include "Game/Camera/WuwaCameraRuntimeBridge.h"
 #include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "Core/Tag/WuwaGameTags.h"
@@ -17,8 +16,14 @@
 #include "InputAction.h"
 #include "UObject/Script.h"
 
+/*
+ * 镜头输入的路径：PCM 只把这一帧的转镜头 / 滚轮量攒起来交给 C#，
+ * C# 的输入控制器改战斗镜头的目标角度 / 缩放倍率，ControlRotation 再每帧从镜头角度抄过来。
+ */
 namespace WuwaCameraInputTests
 {
+	constexpr float FrameTime = 1.f / 60.f;
+
 	struct FFixture
 	{
 		UWorld* World = UWorld::CreateWorld(EWorldType::Game, false);
@@ -57,18 +62,16 @@ namespace WuwaCameraInputTests
 			}
 			Camera = Cast<AWuwaPlayerCameraManager>(Controller->PlayerCameraManager);
 			if (!Camera) return;
-			Camera->DefaultSettings.Arm.bCollisionTest = false;
-			Camera->DefaultSettings.Zoom.ZoomInterpSpeed = 0.f;
-			Camera->DefaultSettings.Blend.BlendTime = 0.f;
 			Controller->SetPawn(Pawn);
 			Pawn->SetController(Controller);
 			Controller->SetControlRotation(FRotator::ZeroRotator);
-			Controller->SetViewTarget(Pawn);
 			Controller->RegisterInputRouteHandlers();
 			LookAction = NewObject<UInputAction>(Controller);
 			LookAction->ValueType = EInputActionValueType::Axis2D;
 			ZoomAction = NewObject<UInputAction>(Controller);
 			ZoomAction->ValueType = EInputActionValueType::Axis1D;
+			// 第一次更新时建好 C# 相机系统、套上配置、让屏幕看战斗镜头
+			Update();
 		}
 
 		~FFixture()
@@ -85,7 +88,8 @@ namespace WuwaCameraInputTests
 				&& Test.TestNotNull(TEXT("Camera manager is initialized for the controller"), Camera)
 				&& Test.TestNotNull(TEXT("Follow target is available"), Pawn)
 				&& Test.TestTrue(TEXT("Fixture uses local player input"), Controller->IsLocalController())
-				&& Test.TestNotNull(TEXT("Managed camera runtime class is available"), Camera->RuntimeClass.LoadSynchronous());
+				&& Test.TestNotNull(TEXT("Managed camera runtime class is available"), Camera->RuntimeClass.LoadSynchronous())
+				&& Test.TestTrue(TEXT("Screen views the fight camera"), Camera->IsViewingFightCamera());
 		}
 
 		bool Dispatch(bool bLook, EWuwaInputPhase Phase, const FInputActionValue& Value) const
@@ -99,6 +103,11 @@ namespace WuwaCameraInputTests
 			Event.Value = Value;
 			Event.Timestamp = 1.0;
 			return Controller->GetInputRouter()->DispatchInput(Event);
+		}
+
+		void Update(int32 Frames = 1) const
+		{
+			for (int32 Index = 0; Index < Frames; ++Index) Camera->UpdateCamera(FrameTime);
 		}
 
 		double DistanceToTarget() const
@@ -115,26 +124,29 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaCameraRoutedZoomTest,
 bool FWuwaCameraRoutedZoomTest::RunTest(const FString& Parameters)
 {
 	FEditorScriptExecutionGuard ScriptExecutionGuard;
-	// Each case owns a fresh manager and performs its first gameplay update once. This also
-	// exercises the real frame cache without changing the engine's global frame counter.
-	struct FCase { float Delta; float Expected; bool bFlush; };
-	const FCase Cases[] = {{1.f, 350.f, false}, {100.f, 150.f, false}, {-100.f, 800.f, false}, {1.f, 400.f, true}};
+	// 滚轮往前 = 拉近（ZoomModifier 减小），往后 = 拉远；按键被清空（FlushPressedKeys）时这一帧攒的量作废。
+	// 每帧先按上一帧的 Current 算这一帧的距离，再让 Current 跟上 Desired，所以距离下一帧才变：更新两帧再比
+	struct FCase { float Delta; int32 ExpectedSign; bool bFlush; };
+	const FCase Cases[] = {{1.f, -1, false}, {-1.f, 1, false}, {1.f, 0, true}};
 	for (const FCase& Case : Cases)
 	{
 		WuwaCameraInputTests::FFixture F;
 		if (!F.IsReady(*this)) return false;
+		const double Before = F.DistanceToTarget();
 		TestTrue(TEXT("Started reaches camera route"), F.Dispatch(false, EWuwaInputPhase::Pressed, FInputActionValue(Case.Delta)));
 		TestTrue(TEXT("Triggered reaches camera route"), F.Dispatch(false, EWuwaInputPhase::Triggered, FInputActionValue(Case.Delta)));
 		if (Case.bFlush) F.Controller->FlushPressedKeys();
-		F.Camera->UpdateCamera(1.f / 60.f);
-		TestTrue(FString::Printf(TEXT("Wheel %.0f with flush %d produces arm length %.0f"), Case.Delta, Case.bFlush, Case.Expected),
-			FMath::IsNearlyEqual(F.DistanceToTarget(), static_cast<double>(Case.Expected), 0.001));
+		F.Update(2);
+		const double Change = F.DistanceToTarget() - Before;
+		const FString What = FString::Printf(TEXT("Wheel %.0f with flush %d changes the distance by %.2f"), Case.Delta, Case.bFlush, Change);
+		if (Case.ExpectedSign == 0) TestTrue(What, FMath::IsNearlyZero(Change, 0.01));
+		else TestTrue(What, Change * Case.ExpectedSign > 1.0);
 	}
 	return true;
 }
 
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FWuwaCameraRoutedLookTest,
-	"Wuwa.Camera.Input.LookSensitivityAndPitchLimits",
+	"Wuwa.Camera.Input.LookRotatesCameraAndControl",
 	EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter)
 
 bool FWuwaCameraRoutedLookTest::RunTest(const FString& Parameters)
@@ -142,31 +154,27 @@ bool FWuwaCameraRoutedLookTest::RunTest(const FString& Parameters)
 	FEditorScriptExecutionGuard ScriptExecutionGuard;
 	WuwaCameraInputTests::FFixture F;
 	if (!F.IsReady(*this)) return false;
-	const FVector2D Axis(3.f, -2.f);
-	F.Controller->RotationInput = FRotator::ZeroRotator;
-	F.Controller->AddYawInput(Axis.X);
-	F.Controller->AddPitchInput(Axis.Y);
-	const FRotator Expected = F.Controller->RotationInput;
-	TestFalse(TEXT("UE accepts local look input"), Expected.IsNearlyZero());
-	F.Controller->RotationInput = FRotator::ZeroRotator;
-	TestTrue(TEXT("Started is acknowledged"), F.Dispatch(true, EWuwaInputPhase::Pressed, FInputActionValue(Axis)));
-	TestTrue(TEXT("Started does not rotate the view a second time"), F.Controller->RotationInput.IsNearlyZero());
-	TestTrue(TEXT("Triggered is routed"), F.Dispatch(true, EWuwaInputPhase::Triggered, FInputActionValue(Axis)));
-	TestTrue(TEXT("Look preserves the controller's existing sensitivity and inversion"), F.Controller->RotationInput.Equals(Expected, 0.001));
-	F.Dispatch(true, EWuwaInputPhase::Released, FInputActionValue(FVector2D::ZeroVector));
-	TestTrue(TEXT("Release does not add another rotation"), F.Controller->RotationInput.Equals(Expected, 0.001));
+	const FRotator Start = F.Camera->GetCameraRotation();
 
-	F.Camera->DefaultSettings.Rotation.PitchMin = -40.f;
-	F.Camera->DefaultSettings.Rotation.PitchMax = 30.f;
-	FRotator View(25.f, 10.f, 0.f);
-	FRotator Delta(20.f, 5.f, 0.f);
-	F.Camera->ProcessViewRotation(1.f / 60.f, View, Delta);
-	TestTrue(TEXT("Pitch is clamped to camera profile maximum"), FMath::IsNearlyEqual(View.Pitch, 30.0, 0.001));
-	TestTrue(TEXT("Yaw remains responsive at the pitch limit"), FMath::IsNearlyEqual(View.Yaw, 15.0, 0.001));
-	View = FRotator(-35.f, 0.f, 0.f);
-	Delta = FRotator(-20.f, 0.f, 0.f);
-	F.Camera->ProcessViewRotation(1.f / 60.f, View, Delta);
-	TestTrue(TEXT("Pitch is clamped to camera profile minimum"), FMath::IsNearlyEqual(FRotator::NormalizeAxis(View.Pitch), -40.0, 0.001));
+	TestTrue(TEXT("Started is acknowledged"), F.Dispatch(true, EWuwaInputPhase::Pressed, FInputActionValue(FVector2D(3.f, 0.f))));
+	F.Update();
+	TestTrue(TEXT("Started does not rotate the camera"), F.Camera->GetCameraRotation().Equals(Start, 0.001));
+
+	TestTrue(TEXT("Triggered is routed"), F.Dispatch(true, EWuwaInputPhase::Triggered, FInputActionValue(FVector2D(3.f, 0.f))));
+	F.Update();
+	const FRotator AfterLook = F.Camera->GetCameraRotation();
+	TestTrue(TEXT("Look right turns the camera to the right"), FRotator::NormalizeAxis(AfterLook.Yaw - Start.Yaw) > 0.1);
+	TestFalse(TEXT("PCM no longer adds look input to the controller"), F.Controller->RotationInput.Yaw > 0.f);
+	TestTrue(TEXT("Control rotation is copied from the camera"), F.Controller->GetControlRotation().Equals(AfterLook, 0.01));
+
+	// 俯仰最大 ±89.9
+	for (int32 Index = 0; Index < 60; ++Index)
+	{
+		F.Dispatch(true, EWuwaInputPhase::Triggered, FInputActionValue(FVector2D(0.f, 50.f)));
+		F.Update();
+	}
+	const double Pitch = FRotator::NormalizeAxis(F.Camera->GetCameraRotation().Pitch);
+	TestTrue(FString::Printf(TEXT("Pitch stays inside the limit (%.2f)"), Pitch), FMath::Abs(Pitch) <= 89.9 + 0.01);
 	return true;
 }
 
@@ -180,26 +188,22 @@ bool FWuwaCameraLifecycleInputTest::RunTest(const FString& Parameters)
 	{
 		WuwaCameraInputTests::FFixture F;
 		if (!F.IsReady(*this)) return false;
-		UWuwaCameraMode* Skill = NewObject<UWuwaCameraMode>(F.Camera);
-		Skill->Settings = F.Camera->DefaultSettings;
-		Skill->Settings.Arm.ArmLength = 200.f;
-		Skill->Priority = 100;
-		const int32 OldHandle = F.Camera->PushCameraMode(F.Pawn, Skill);
-		TestTrue(TEXT("Skill mode is accepted"), OldHandle > 0);
+		const double BaseDistance = F.DistanceToTarget();
 		F.Dispatch(false, EWuwaInputPhase::Triggered, FInputActionValue(1.f));
-		APawn* NewPawn = F.World->SpawnActor<APawn>();
+		APawn* NewPawn = F.World->SpawnActor<APawn>(FVector(500.f, 0.f, 0.f), FRotator::ZeroRotator);
 		if (!TestNotNull(TEXT("Replacement target spawns"), NewPawn)) return false;
 		F.Controller->SetPawn(NewPawn);
 		NewPawn->SetController(F.Controller);
 		F.Pawn = NewPawn;
-		F.Controller->SetViewTarget(NewPawn);
-		TestFalse(TEXT("Pawn change invalidates the previous skill handle"), F.Camera->PopCameraMode(OldHandle));
-		F.Camera->UpdateCamera(1.f / 60.f);
-		TestTrue(TEXT("New pawn starts with base distance and no pending old wheel input"), FMath::IsNearlyEqual(F.DistanceToTarget(), 400.0, 0.001));
+		F.Update();
+		TestTrue(TEXT("Camera follows the new pawn"), F.Camera->IsViewingFightCamera());
+		TestTrue(TEXT("New pawn starts with the base distance and no pending old wheel input"),
+			FMath::IsNearlyEqual(F.DistanceToTarget(), BaseDistance, 0.01));
 	}
 	{
 		WuwaCameraInputTests::FFixture F;
 		if (!F.IsReady(*this)) return false;
+		const double BaseDistance = F.DistanceToTarget();
 		ACameraActor* External = F.World->SpawnActor<ACameraActor>();
 		if (!TestNotNull(TEXT("External camera spawns"), External)) return false;
 		const FVector ExternalLocation(1200.f, -600.f, 300.f);
@@ -207,17 +211,16 @@ bool FWuwaCameraLifecycleInputTest::RunTest(const FString& Parameters)
 		External->SetActorLocationAndRotation(ExternalLocation, ExternalRotation);
 		External->GetCameraComponent()->SetFieldOfView(55.f);
 		F.Controller->SetViewTarget(External);
-		F.Controller->RotationInput = FRotator::ZeroRotator;
-		F.Dispatch(true, EWuwaInputPhase::Triggered, FInputActionValue(FVector2D(10.f, 10.f)));
-		F.Dispatch(false, EWuwaInputPhase::Triggered, FInputActionValue(100.f));
-		F.Camera->UpdateCamera(1.f / 60.f);
-		TestTrue(TEXT("Gameplay look does not alter external camera input"), F.Controller->RotationInput.IsNearlyZero());
+		TestTrue(TEXT("External camera input is consumed"), F.Dispatch(true, EWuwaInputPhase::Triggered, FInputActionValue(FVector2D(10.f, 10.f))));
+		F.Dispatch(false, EWuwaInputPhase::Triggered, FInputActionValue(1.f));
+		F.Update();
 		TestTrue(TEXT("External camera supplies its own location"), F.Camera->GetCameraLocation().Equals(ExternalLocation, 0.001));
 		TestTrue(TEXT("External camera supplies its own rotation"), F.Camera->GetCameraRotation().Equals(ExternalRotation, 0.001));
 		TestTrue(TEXT("External camera supplies its own FOV"), FMath::IsNearlyEqual(F.Camera->GetFOVAngle(), 55.f, 0.001f));
-		F.Controller->SetViewTarget(F.Pawn);
-		F.Camera->UpdateCamera(1.f / 60.f);
-		TestTrue(TEXT("Returning to gameplay does not replay external-view wheel input"), FMath::IsNearlyEqual(F.DistanceToTarget(), 400.0, 0.001));
+		F.Controller->SetViewTarget(F.Camera->GetCameraRuntime()->GetFightCameraActor());
+		F.Update();
+		TestTrue(TEXT("Returning to the fight camera does not replay external-view wheel input"),
+			FMath::IsNearlyEqual(F.DistanceToTarget(), BaseDistance, 0.01));
 	}
 	return true;
 }

@@ -1,9 +1,8 @@
 #include "Game/Camera/WuwaPlayerCameraManager.h"
 
-#include "Engine/World.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/Pawn.h"
 #include "GameFramework/PlayerController.h"
-#include "Game/Camera/WuwaCameraMode.h"
 #include "Game/Camera/WuwaCameraRuntimeBridge.h"
 #include "Core/Tag/WuwaGameTags.h"
 #include "Game/Input/WuwaInputTypes.h"
@@ -12,12 +11,7 @@ DEFINE_LOG_CATEGORY_STATIC(LogWuwaCamera, Log, All);
 
 AWuwaPlayerCameraManager::AWuwaPlayerCameraManager()
 {
-	RuntimeClass = TSoftClassPtr<UWuwaCameraRuntimeBridge>(FSoftObjectPath(TEXT("/Script/UnrealSharp.WuwaCameraRuntime_C")));
-}
-
-FWuwaCameraSettings AWuwaPlayerCameraManager::GetBaseSettings() const
-{
-	return IsValid(DefaultMode) ? DefaultMode->Settings : DefaultSettings;
+	RuntimeClass = TSoftClassPtr<UWuwaCameraRuntimeBridge>(FSoftObjectPath(TEXT("/Script/UnrealSharp.ZrCameraRuntime_C")));
 }
 
 bool AWuwaPlayerCameraManager::EnsureRuntime()
@@ -34,7 +28,12 @@ bool AWuwaPlayerCameraManager::EnsureRuntime()
 		return false;
 	}
 	Runtime = NewObject<UWuwaCameraRuntimeBridge>(this, Class);
-	return IsValid(Runtime);
+	if (!IsValid(Runtime)) return false;
+	// 创建 C# 相机系统：主屏数据 → 序列镜头 + 战斗镜头 → 战斗镜头从对象池取出相机，屏幕改看它
+	Runtime->InitCamera(this);
+	// 刚建好的相机系统还不知道要跟哪个角色：清掉记录，TryGetGameplayContext 接着会发现"角色变了"，补发一次 OnPossess
+	RuntimePawn = nullptr;
+	return true;
 }
 
 bool AWuwaPlayerCameraManager::TryGetGameplayContext(APlayerController*& OutPlayer, APawn*& OutPawn)
@@ -54,22 +53,25 @@ bool AWuwaPlayerCameraManager::TryGetGameplayContext(APlayerController*& OutPlay
 void AWuwaPlayerCameraManager::NotifyPawnChanged()
 {
 	ResetCameraInput();
-	// 记住新 Pawn，避免下次取上下文时再次重置，并误用已回退的默认模式配置。
+	// 记住新 Pawn，避免下次取上下文时又通知一遍
 	const APlayerController* Player = GetOwningPlayerController();
 	RuntimePawn = IsValid(Player) ? Player->GetPawn() : nullptr;
-	LastEvaluatedFrame = MAX_uint64;
-	CachedView = {};
-	if (IsValid(Runtime))
-	{
-		// 在清除临时模式前读取当前配置；缩放偏好默认随玩家保留。
-		const bool bResetUserZoom = Runtime->ResolveSettings(GetBaseSettings()).Zoom.bResetZoomOnPawnChange;
-		Runtime->ResetCamera(bResetUserZoom);
-	}
+	// 告诉战斗镜头和序列镜头新的角色
+	if (IsValid(Runtime)) Runtime->OnPossess(RuntimePawn.Get());
 }
 
 void AWuwaPlayerCameraManager::ResetCameraInput()
 {
+	PendingLook = FVector2D::ZeroVector;
 	PendingZoom = 0.f;
+}
+
+bool AWuwaPlayerCameraManager::IsViewingFightCamera() const
+{
+	if (!IsValid(Runtime)) return false;
+	const AActor* FightCameraActor = Runtime->GetFightCameraActor();
+	// GetViewTarget = 屏幕在看的 Actor；正在混合时返回的是要混过去的那个
+	return IsValid(FightCameraActor) && GetViewTarget() == FightCameraActor;
 }
 
 bool AWuwaPlayerCameraManager::HandleWuwaInput_Implementation(const FWuwaInputEvent& InputEvent)
@@ -83,17 +85,13 @@ bool AWuwaPlayerCameraManager::HandleWuwaInput_Implementation(const FWuwaInputEv
 	APlayerController* Player;
 	APawn* Pawn;
 	if (!TryGetGameplayContext(Player, Pawn)) return false;
-	// External CameraActor/Sequencer view targets own their input policy.
-	if (Player->GetViewTarget() != Pawn || Player->IsLookInputIgnored()) return true;
+	// 屏幕没在看战斗镜头（特写镜头等）时，转镜头和滚轮输入都不归战斗镜头，直接吃掉
+	if (!IsViewingFightCamera() || Player->IsLookInputIgnored()) return true;
 	if (bLook && InputEvent.Value.GetValueType() == EInputActionValueType::Axis2D)
 	{
+		// 只攒起来，不再 AddYawInput：镜头角度由 C# 输入控制器改，ControlRotation 再从镜头抄过去
 		const FVector2D Axis = InputEvent.Value.Get<FVector2D>();
-		if (!Axis.ContainsNaN())
-		{
-			// Preserve the project's existing sensitivity/inversion through UE's input path.
-			Player->AddYawInput(Axis.X);
-			Player->AddPitchInput(Axis.Y);
-		}
+		if (!Axis.ContainsNaN()) PendingLook += Axis;
 	}
 	else if (bZoom && InputEvent.Value.GetValueType() == EInputActionValueType::Axis1D)
 	{
@@ -103,136 +101,64 @@ bool AWuwaPlayerCameraManager::HandleWuwaInput_Implementation(const FWuwaInputEv
 	return true;
 }
 
-void AWuwaPlayerCameraManager::ProcessViewRotation(float DeltaTime, FRotator& OutViewRotation, FRotator& OutDeltaRot)
-{
-	APlayerController* Player;
-	APawn* Pawn;
-	if (TryGetGameplayContext(Player, Pawn))
-	{
-		const auto Settings = Runtime->ResolveSettings(GetBaseSettings());
-		ViewPitchMin = Settings.Rotation.PitchMin;
-		ViewPitchMax = Settings.Rotation.PitchMax;
-		if (!Settings.Rotation.bAllowRotationInput || Player->GetViewTarget() != Pawn) OutDeltaRot = FRotator::ZeroRotator;
-	}
-	Super::ProcessViewRotation(DeltaTime, OutViewRotation, OutDeltaRot);
-}
-
 void AWuwaPlayerCameraManager::UpdateCamera(float DeltaTime)
 {
+	APlayerController* Player;
+	APawn* Pawn;
+	// 先让 C# 把镜头算好、摆好，引擎接着在 Super 里去"看"它，同一帧就用上新位置
+	if (TryGetGameplayContext(Player, Pawn)) Runtime->TickCamera(DeltaTime, PendingLook, PendingZoom);
 	Super::UpdateCamera(DeltaTime);
-	// An external view must never accumulate wheel events to replay on returning to gameplay.
-	//UpdateViewTargetInternal
-	PendingZoom = 0.f;
+	// 这一帧的输入已经交出去了；没交出去的（比如没有角色时）也丢掉，免得以后一次性补上，镜头猛地一跳
+	ResetCameraInput();
 }
 
-void AWuwaPlayerCameraManager::UpdateViewTargetInternal(FTViewTarget& OutVT, float DeltaTime)
+int32 AWuwaPlayerCameraManager::ApplyCameraModify(const FWuwaCameraModify& Modify, float Duration, float BlendInTime, float BlendOutTime,
+	float BreakBlendOutTime, UAnimSequenceBase* Animation, AActor* ModifyOwner)
 {
 	APlayerController* Player;
 	APawn* Pawn;
-	if (!TryGetGameplayContext(Player, Pawn) || OutVT.Target != Pawn)
-	{
-		Super::UpdateViewTargetInternal(OutVT, DeltaTime);
-		return;
-	}
-	if (LastEvaluatedFrame != GFrameCounter)
-	{
-		FWuwaCameraFrame Frame;
-		Frame.TargetLocation = Pawn->GetActorLocation();
-		Frame.ControlRotation = Player->GetControlRotation();
-		Frame.DeltaSeconds = DeltaTime;
-		Frame.ZoomDelta = PendingZoom;
-		PendingZoom = 0.f;
-		CachedView = Runtime->EvaluateCamera(Frame, GetBaseSettings());
-		LastEvaluatedFrame = GFrameCounter;
-	}
-	if (!CachedView.bValid || CachedView.Location.ContainsNaN() || CachedView.Rotation.ContainsNaN())
-	{
-		Super::UpdateViewTargetInternal(OutVT, DeltaTime);
-		return;
-	}
-	OutVT.POV.Location = ResolveCollision(CachedView, Pawn);
-	OutVT.POV.Rotation = CachedView.Rotation;
-	OutVT.POV.FOV = CachedView.FieldOfView;
+	if (!TryGetGameplayContext(Player, Pawn)) return -1;
+	return Runtime->ApplyCameraModify(Modify, Duration, BlendInTime, BlendOutTime, BreakBlendOutTime, Animation, ModifyOwner);
 }
 
-//用小球推过去,有遮挡就将其放在遮挡物的前面
-FVector AWuwaPlayerCameraManager::ResolveCollision(const FWuwaCameraView& View, const APawn* Pawn) const
+void AWuwaPlayerCameraManager::StopCameraModify(UAnimSequenceBase* Animation, int32 ModifyInstance)
 {
-	if (!View.bCollisionTest || !GetWorld()) return View.Location;
-	FCollisionQueryParams Query(SCENE_QUERY_STAT(WuwaCamera), false, Pawn);
-	Query.AddIgnoredActor(this);
-	FHitResult Hit;
-	const bool bHit = GetWorld()->SweepSingleByChannel(Hit, View.Pivot, View.Location, FQuat::Identity,
-		ECC_Camera, FCollisionShape::MakeSphere(FMath::Max(1.f, View.ProbeRadius)), Query);
-	return bHit ? (Hit.bStartPenetrating ? View.Pivot : Hit.Location) : View.Location;
+	if (IsValid(Runtime)) Runtime->StopCameraModify(Animation, ModifyInstance);
 }
 
-int32 AWuwaPlayerCameraManager::PushCameraMode(UObject* Source, UWuwaCameraMode* Mode)
+bool AWuwaPlayerCameraManager::PlayCameraSequence(const FWuwaSequenceCameraConfig& Config, ACharacter* Character, FName AttachSocket)
 {
 	APlayerController* Player;
 	APawn* Pawn;
-	if (!IsValid(Source) || !IsValid(Mode) || !TryGetGameplayContext(Player, Pawn)) return 0;
-	return Runtime->PushCameraMode(Source, Mode->Settings, Mode->Priority);
+	if (!TryGetGameplayContext(Player, Pawn)) return false;
+	return Runtime->PlayCameraSequence(Config, Character, AttachSocket);
 }
 
-int32 AWuwaPlayerCameraManager::PushCameraModify(UObject* Source, const FWuwaCameraModify& Modify, float BlendInTime, float BlendOutTime)
+bool AWuwaPlayerCameraManager::IsPlayingCameraSequence() const
 {
-	APlayerController* Player;
-	APawn* Pawn;
-	if (!IsValid(Source) || !TryGetGameplayContext(Player, Pawn)) return 0;
-	// 没勾的项沿用当前生效的镜头（原作 Additional 也是叠在当前镜头上）
-	FWuwaCameraSettings Settings = Runtime->ResolveSettings(GetBaseSettings());
-	if (Modify.bModifyArmLength)
-	{
-		Settings.Arm.ArmLength = Modify.ArmLength;
-		Settings.Zoom.bUseUserZoom = false;
-	}
-	Settings.Arm.ArmLength = FMath::Max(0.f, Settings.Arm.ArmLength + Modify.ArmLengthAdditional);
-	Settings.Arm.MinArmLength = FMath::Min(Settings.Arm.MinArmLength, Settings.Arm.ArmLength);
-	Settings.Arm.MaxArmLength = FMath::Max(Settings.Arm.MaxArmLength, Settings.Arm.ArmLength);
-	// 角度：原作目标 = 角色旋转 + ArmRotation（只改勾选的轴），再叠 Additional；项目镜头 = 控制旋转 + RotationOffset，换算成偏移
-	const FRotator Control = Player->GetControlRotation();
-	FRotator Target = (Control + Settings.Offset.RotationOffset).GetNormalized();
-	const FRotator Facing = Pawn->GetActorRotation();
-	if (Modify.bModifyPitch) Target.Pitch = Facing.Pitch + Modify.ArmRotation.Pitch;
-	if (Modify.bModifyYaw) Target.Yaw = Facing.Yaw + Modify.ArmRotation.Yaw;
-	Target.Pitch += Modify.ArmRotationAdditional.Pitch;
-	Target.Yaw += Modify.ArmRotationAdditional.Yaw;
-	const FRotator Delta = (Target - Control).GetNormalized();
-	Settings.Offset.RotationOffset = FRotator(Delta.Pitch, Delta.Yaw, Settings.Offset.RotationOffset.Roll);
-	const bool bRotated = Modify.bModifyPitch || Modify.bModifyYaw || !Modify.ArmRotationAdditional.IsNearlyZero();
-	// 原作改了角度就锁住对应轴的玩家输入；IsLockInput 全锁
-	if (bRotated || Modify.bLockInput) Settings.Rotation.bAllowRotationInput = false;
-	if (Modify.bLockInput || Modify.bModifyArmLength) Settings.Zoom.bAllowZoomInput = false;
-	// 镜头中心偏移按镜头水平朝向的局部空间（X 前 Y 右 Z 上）
-	const FRotator Heading(0.f, Target.Yaw, 0.f);
-	FVector Local = Heading.UnrotateVector(Settings.Offset.PivotOffset);
-	if (Modify.bModifyOffsetX) Local.X = Modify.CameraOffset.X;
-	if (Modify.bModifyOffsetY) Local.Y = Modify.CameraOffset.Y;
-	if (Modify.bModifyOffsetZ) Local.Z = Modify.CameraOffset.Z;
-	Settings.Offset.PivotOffset = Heading.RotateVector(Local + Modify.CameraOffsetAdditional);
-	if (Modify.bModifyFov) Settings.Offset.FieldOfView = Modify.Fov;
-	Settings.Blend.BlendTime = FMath::Max(0.f, BlendInTime);
-	Settings.Blend.BlendOutTime = BlendOutTime;
-	return Runtime->PushCameraMode(Source, Settings, 100 + Modify.Priority);
+	return IsValid(Runtime) && Runtime->IsPlayingCameraSequence();
+}
+
+AActor* AWuwaPlayerCameraManager::GetSequenceCameraActor() const
+{
+	return IsValid(Runtime) ? Runtime->GetSequenceCameraActor() : nullptr;
 }
 
 AWuwaPlayerCameraManager* AWuwaPlayerCameraManager::GetForPawn(const APawn* Pawn)
 {
 	const APlayerController* Player = Pawn ? Cast<APlayerController>(Pawn->GetController()) : nullptr;
 	if (!Player || !Player->IsLocalController()) return nullptr;
-	AWuwaPlayerCameraManager* Camera = Cast<AWuwaPlayerCameraManager>(Player->PlayerCameraManager);
-	return Camera && Player->GetViewTarget() == Pawn ? Camera : nullptr;
-}
-
-bool AWuwaPlayerCameraManager::PopCameraMode(int32 Handle)
-{
-	return IsValid(Runtime) && Handle > 0 && Runtime->PopCameraMode(Handle);
+	// 正在放特写镜头时也给：镜头修改 / 新的特写镜头要不要生效，由 C# 相机系统自己按镜头模式决定
+	return Cast<AWuwaPlayerCameraManager>(Player->PlayerCameraManager);
 }
 
 void AWuwaPlayerCameraManager::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	NotifyPawnChanged();
+	// 清理 C# 相机系统：相机还回对象池、静态数据清空。
+	// C# 的静态数据在两次 PIE 之间不会自己消失，这里不清，下一局会拿到上一局的旧相机
+	if (IsValid(Runtime)) Runtime->ClearCamera();
 	Runtime = nullptr;
+	RuntimePawn = nullptr;
+	ResetCameraInput();
 	Super::EndPlay(EndPlayReason);
 }

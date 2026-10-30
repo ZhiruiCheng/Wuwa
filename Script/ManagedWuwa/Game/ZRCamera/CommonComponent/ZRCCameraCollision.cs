@@ -19,10 +19,10 @@ internal sealed class ZRCCameraCollision
         //射线检测结果
         bool hit = SystemLibrary.SphereTraceByChannel(
             pivot, desired, Math.Max(1,radius), 
-            ETraceTypeQuery.TraceTypeQuery2,     // ETraceTypeQuery：用哪个检测通道，见第 2 点
+            ETraceTypeQuery.TraceTypeQuery2,     // ETraceTypeQuery：用哪个检测通道
             false,     // bool：false = 用简单碰撞体检测（快），true = 用模型网格（慢）
             _ignoredActors,   // IList<AActor>：要忽略的 Actor 列表，这里放角色
-            EDrawDebugTrace.None,    // EDrawDebugTrace：要不要把检测画出来，见第 3 点
+            EDrawDebugTrace.None,    // EDrawDebugTrace：要不要把检测画出来
             out outHit,  // 撞到的结果
             true
             );  

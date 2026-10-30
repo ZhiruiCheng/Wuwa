@@ -32,7 +32,7 @@ public class Wuwa : ModuleRules
         PrivateDependencyModuleNames.AddRange(new string[] { "LGUI", "LTween" });
         // Wwise：音频通知与特效音频播放原作同名事件（Game/Audio/WuwaWwiseAudio）。WwiseSoundEngine 提供 AkAudioDevice.h 用到的 SDK 头。
         PrivateDependencyModuleNames.AddRange(new string[] { "AkAudio", "WwiseSoundEngine" });
-        // 技能特写镜头（大招）：运行时用 LevelSequenceActor 播原作重建的镜头序列（Game/Camera/WuwaSequenceCameraSubsystem）
+        // 技能特写镜头（大招）：C# 序列镜头（ZRCamera/SequenceCamera）用 LevelSequenceActor 播原作重建的镜头序列；C++ 这边只剩配置结构体
         PrivateDependencyModuleNames.AddRange(new string[] { "LevelSequence", "MovieScene", "CinematicCamera" });
         if (Target.bBuildEditor)
         {

@@ -11,7 +11,7 @@
 #include "Engine/Engine.h"
 #include "Engine/World.h"
 #include "EngineUtils.h"
-#include "Game/Camera/WuwaSequenceCameraSubsystem.h"
+#include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "Core/Tag/WuwaGameTags.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
@@ -393,8 +393,9 @@ namespace WuwaJiabeiTransformTest
 			{
 				if (GameNow - StepAt < 0.2) return false;
 				Test->TestEqual(TEXT("burst spends the resonance energy"), Get(UWuwaAttributeSet::GetEnergyAttribute()), 0.f);
-				const UWuwaSequenceCameraSubsystem* Camera = World->GetSubsystem<UWuwaSequenceCameraSubsystem>();
-				Test->TestTrue(TEXT("burst close-up sequence playing"), Camera && Camera->IsPlaying());
+				// 特写镜头在 C# 相机系统里（序列镜头），经玩家的 PCM 查
+				const AWuwaPlayerCameraManager* Camera = PC ? Cast<AWuwaPlayerCameraManager>(PC->PlayerCameraManager) : nullptr;
+				Test->TestTrue(TEXT("burst close-up sequence playing"), Camera && Camera->IsPlayingCameraSequence());
 				return true;
 			}
 			default:

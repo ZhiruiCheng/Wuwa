@@ -1,4 +1,3 @@
-using System.Security.Cryptography.X509Certificates;
 using UnrealSharp;
 using UnrealSharp.CoreUObject;
 using UnrealSharp.Engine;
@@ -7,7 +6,8 @@ using UnrealSharp.Wuwa;
 
 namespace ManagedWuwa.Game.ZRCamera;
 
-public sealed class ZRCFightCameraDisplayComponent(ZRCameraModelInstance cameraModel)
+/// <summary>战斗镜头的显示组件：从对象池取一个相机给战斗镜头用，清理时还回去。</summary>
+internal sealed class ZRCFightCameraDisplayComponent(ZRCameraModelInstance cameraModel)
 {
     public ACameraActor? CameraActor { get; private set; }
 
@@ -26,7 +26,7 @@ public sealed class ZRCFightCameraDisplayComponent(ZRCameraModelInstance cameraM
         if (CameraActor is null)
             return;
 
-        //关闭画面比例锁定,鸣潮应该也是关闭的
+        // 关闭画面比例锁定（不然屏幕和相机比例不同时有黑边）
         CameraActor.CameraComponent.ConstrainAspectRatio = false;
         if (cameraModel.CameraMode == EZrCameraMode.Fight)
         {
@@ -45,7 +45,7 @@ public sealed class ZRCFightCameraDisplayComponent(ZRCameraModelInstance cameraM
         {
             var pool = cameraModel.PlayerCameraManager.GetWorldSubsystem<UWuwaActorPoolSubsystem>();
             if (pool is not null && pool.IsValid())
-                pool.PutActor(CameraActor, "ZRCFightCameraDisplayComponent.Clear");   // 原作：ActorSystem.Put
+                pool.PutActor(CameraActor, "ZRCFightCameraDisplayComponent.Clear");
             else
                 CameraActor.DestroyActor();   // 池已经不在了（世界正在拆除），直接销毁
         }

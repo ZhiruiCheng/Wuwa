@@ -7,7 +7,7 @@
 #include "Engine/World.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Game/Camera/WuwaCameraMode.h"
+#include "Game/Camera/CameraData/WuwaFightCameraConfig.h"
 #include "Game/Camera/WuwaCameraRuntimeBridge.h"
 #include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "Game/Controller/WuwaPlayerController.h"
@@ -53,21 +53,23 @@ namespace WuwaCameraPlayTests
 			Test->TestTrue(TEXT("PIE player controller is local"), Player->IsLocalController());
 			Test->TestTrue(TEXT("Real map creates the Wuwa character"), Pawn->IsA<AWuwaCharacter>());
 
-			Test->TestTrue(TEXT("Gameplay view target remains the possessed pawn"), Player->GetViewTarget() == Pawn);
+			Test->TestTrue(TEXT("Gameplay view target is the fight camera actor"), Camera->IsViewingFightCamera());
 			Test->TestNull(TEXT("Character no longer owns the old rendering camera"), Pawn->FindComponentByClass<UCameraComponent>());
 			Test->TestNull(TEXT("Character no longer owns the old spring arm"), Pawn->FindComponentByClass<USpringArmComponent>());
 
-			const FWuwaCameraSettings Base = IsValid(Camera->DefaultMode)
-				? Camera->DefaultMode->Settings : Camera->DefaultSettings;
-			const FWuwaCameraSettings Settings = Runtime->ResolveSettings(Base);
+			const UWuwaFightCameraConfig* Config = LoadObject<UWuwaFightCameraConfig>(nullptr,
+				TEXT("/Game/Game/Camera/DA_FightCameraConfig.DA_FightCameraConfig"));
+			const float* MaxArmLength = Config ? Config->Base.Find(EWuwaFightCameraDefault::MaxArmLength) : nullptr;
 			const FVector CameraLocation = Camera->GetCameraLocation();
 			const double Distance = FVector::Distance(CameraLocation, Pawn->GetActorLocation());
 			Test->TestTrue(TEXT("Actual gameplay camera location and rotation remain finite"),
 				!CameraLocation.ContainsNaN() && !Camera->GetCameraRotation().ContainsNaN());
-			// Collision may shorten the arm below the input minimum; it must never exceed the requested maximum.
+			// 镜头绕着角色身上的 CameraPosition 插槽转（比角色中心高），所以给最大臂长再留 2 米余量；碰撞只会让距离变短
 			Test->TestTrue(TEXT("Gameplay camera is behind the pawn at a nonzero bounded distance"),
-				FMath::IsFinite(Distance) && Distance > 1.0
-				&& Distance <= Settings.Arm.MaxArmLength + Settings.Offset.PivotOffset.Size() + 1.0);
+				MaxArmLength && FMath::IsFinite(Distance) && Distance > 1.0 && Distance <= *MaxArmLength + 200.0);
+			// 新结构里 ControlRotation 每帧从镜头角度抄过来
+			Test->TestTrue(TEXT("Control rotation follows the fight camera rotation"),
+				Player->GetControlRotation().Equals(Camera->GetCameraRotation(), 1.0));
 			Test->AddInfo(FString::Printf(TEXT("PIE camera=%s pawn=%s distance=%.2f location=%s"),
 				*Camera->GetClass()->GetName(), *Pawn->GetClass()->GetName(), Distance, *CameraLocation.ToString()));
 			return true;

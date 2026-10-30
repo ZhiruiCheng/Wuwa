@@ -23,6 +23,7 @@ class UEnhancedInputLocalPlayerSubsystem;
 
 AWuwaPlayerController::AWuwaPlayerController()
 {
+	bAutoManageActiveCameraTarget = false;
 	PlayerCameraManagerClass = AWuwaPlayerCameraManager::StaticClass();
 	InputRouter = CreateDefaultSubobject<UWuwaInputRouterComponent>(TEXT("InputRouter"));
 	//ASC_Input_Handler

@@ -703,7 +703,7 @@ int32 UWuwaSequenceCameraSetupCommandlet::Main(const FString& Params)
 	const TSharedPtr<FJsonObject>* ToonDef = nullptr;
 	if (Recipe->TryGetObjectField(TEXT("toonLight"), ToonDef) && !AddToonLight(*MovieScene, **ToonDef)) return 1;
 
-	// 镜头切换轨道：只为编辑器里预览（运行时 bDisableCameraCuts，视角由 UWuwaSequenceCameraSubsystem 切）
+	// 镜头切换轨道：只为编辑器里预览（运行时 bDisableCameraCuts，视角由 C# 序列镜头的播放组件切）
 	if (UMovieSceneCameraCutTrack* Cuts = Cast<UMovieSceneCameraCutTrack>(MovieScene->AddCameraCutTrack(UMovieSceneCameraCutTrack::StaticClass())))
 	{
 		Cuts->AddNewCameraCut(UE::MovieScene::FRelativeObjectBindingID(CameraGuid), FFrameNumber(Start));

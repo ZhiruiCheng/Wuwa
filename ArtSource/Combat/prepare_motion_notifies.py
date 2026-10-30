@@ -54,10 +54,13 @@ TYPES = {
     'TsAnimNotifySwitchSequenceCamera_C': ('SequenceCamera', {'特写镜头配置': 'Config', 'CameraAttachSocket': 'CameraAttachSocket'},
                                            ['AdditiveRotation', 'ExtraSphereLocation',
                                             '启用特定功能下的镜头配置', '特定功能下的镜头配置', 'ShotBeforePlaying']),
-    # 技能镜头修改：配置折算到 FWuwaCameraModify 文本（camera_modify_config）；持续时间 0 = 蒙太奇结束时退回
-    'TsAnimNotifyCameraModify_C': ('CameraModify', {'相机修改配置': 'Modify', '持续时间': 'Duration', '淡入时间': 'BlendInTime', '淡出时间': 'BlendOutTime'},
+    # 技能镜头修改：配置折算到 FWuwaCameraModify 文本（camera_modify_config）；持续时间 0 = 蒙太奇结束时退回。
+    # 打断淡出时间：蒙太奇被顶掉 / 换人 / 窗口结束时退回去用的时间（原作蓝图默认 0.2，项目通知默认值相同）
+    'TsAnimNotifyCameraModify_C': ('CameraModify', {'相机修改配置': 'Modify', '持续时间': 'Duration', '淡入时间': 'BlendInTime', '淡出时间': 'BlendOutTime',
+                                                    '打断淡出时间': 'BreakBlendOutTime'},
                                    ['淡入曲线', '淡出曲线']),
-    'TsAnimNotifyStateCameraModify_C': ('CameraModifyWindow', {'相机修改配置': 'Modify', '淡入时间': 'BlendInTime', '淡出时间': 'BlendOutTime'},
+    'TsAnimNotifyStateCameraModify_C': ('CameraModifyWindow', {'相机修改配置': 'Modify', '淡入时间': 'BlendInTime', '淡出时间': 'BlendOutTime',
+                                                               '打断淡出时间': 'BreakBlendOutTime'},
                                         ['淡入曲线', '淡出曲线', '打断后继续']),
 }
 # 原作有、项目暂不关心的字段（不影响行为：角色 / 怪物战斗机制停止是联机副本里的开关；HitPriority 推人优先级）
@@ -67,19 +70,20 @@ IGNORED_FIELDS = {'角色战斗机制停止', '怪物战斗机制停止', 'HitPr
                   'DisableMovementInput', 'DisableLookAtInput', 'DisableMotionBlur', '生效客户端',
                   # 特写镜头播放前的镜头碰撞检测（被挡住就不播）：项目不做检测、总是播 = 原作 强制播放Sequence 为真；额外检测球只给这个检测用
                   '强制播放Sequence', 'ExtraDetectSphereRadius',
-                  # 镜头修改：打断后的淡出时间（项目被打断也按 淡出时间 退回）、生效客户端类型（项目只有本地玩家，镜头修改只给本地玩家看的角色）、
-                  # 条件（按镜头距离 / 锁定目标高差等决定改不改；项目一律生效）、NeedSimulate、Tag（同名修改互相顶替，项目按句柄管理）
-                  '打断淡出时间', '生效客户端类型', '条件', 'NeedSimulate', 'Tag'}
+                  # 镜头修改：生效客户端类型（项目只有本地玩家，镜头修改只给本地玩家看的角色）、
+                  # 条件（按镜头距离 / 锁定目标高差等决定改不改；项目一律生效）、NeedSimulate、Tag（同名修改互相顶替，项目按优先级和编号管理）
+                  '生效客户端类型', '条件', 'NeedSimulate', 'Tag'}
 
 # 原作 SCameraModifySettings → FWuwaCameraModify（只取项目支持的项；其余非默认值打印出来）
 CAMERA_MODIFY_SUPPORTED = {'Priority', 'IsModifiedArmLength', 'ArmLength', 'ArmLengthAdditional', 'IsModifiedArmRotation',
                            'IsModifiedArmRotationPitch', 'IsModifiedArmRotationYaw', 'IsModifiedArmRotationRoll', 'ArmRotation',
                            'ArmRotationAdditional', 'IsModifiedCameraOffset', 'IsModifiedCameraOffsetX', 'IsModifiedCameraOffsetY',
                            'IsModifiedCameraOffsetZ', 'CameraOffset', 'CameraOffsetAdditional', 'IsModifiedCameraFov', 'CameraFov', 'IsLockInput',
-                           # 覆盖玩家输入 / 强制播放 / 插值臂位置：项目锁输入时本来就不吃玩家输入、总是播、镜头位置总是插值
-                           'OverrideCameraInput', 'IsForcePlayModify', 'IsLerpArmLocation', 'StopModifyOnMontageEnd',
-                           # 原作结束时把臂长 / 角度"定格"在修改后的值（ResetFinalArm*）：项目一律混回修改前的镜头
-                           'ResetFinalArmRotation'}
+                           'OverrideCameraInput', 'IsForcePlayModify', 'IsSwitchModifier', 'StopModifyOnMontageEnd',
+                           # 结束后角度留在修改后的样子（可指定俯仰 / 相对角色的偏航）还是转回去；距离留下（可指定值）还是回去
+                           'ResetFinalArmRotation', 'IsResetFinalArmRotationToSpecificPitch', 'ResetFinalArmRotationToSpecificPitch',
+                           'IsResetFinalArmRotationToSpecificYaw', 'ResetFinalArmRotationToSpecificYaw',
+                           'ResetFinalArmLength', 'IsResetFinalArmLengthToSpecificValue', 'ResetFinalArmLengthToSpecificValue'}
 CAMERA_MODIFY_NOTES: list[str] = []
 
 
@@ -91,7 +95,8 @@ def camera_modify_config(value: dict, where: str) -> str:
     rot = lambda r: f"(Pitch={float((r or {}).get('Pitch', 0.0))},Yaw={float((r or {}).get('Yaw', 0.0))},Roll={float((r or {}).get('Roll', 0.0))})"
     vec = lambda r: f"(X={float((r or {}).get('X', 0.0))},Y={float((r or {}).get('Y', 0.0))},Z={float((r or {}).get('Z', 0.0))})"
     b = lambda k: 'True' if v.get(k) else 'False'
-    # 原作结构体默认值（导出只写和默认不同的字段；按全部角色出现过的值反推）：IsModifiedArmRotation、StopModifyOnMontageEnd 默认开，其余开关默认关
+    # 原作结构体默认值（导出只写和默认不同的字段）：IsModifiedArmRotation、StopModifyOnMontageEnd、ResetFinalArmRotation 默认开，
+    # ResetFinalArmRotationToSpecificPitch 默认 -7，其余开关默认关、数值默认 0
     rotation = bool(v.get('IsModifiedArmRotation', True))
     offset = bool(v.get('IsModifiedCameraOffset'))
     fields = [f"Priority={int(v.get('Priority', 0))}",
@@ -105,7 +110,17 @@ def camera_modify_config(value: dict, where: str) -> str:
               f"bModifyOffsetZ={'True' if offset and v.get('IsModifiedCameraOffsetZ') else 'False'}",
               f"CameraOffset={vec(v.get('CameraOffset'))}", f"CameraOffsetAdditional={vec(v.get('CameraOffsetAdditional'))}",
               f"bModifyFov={b('IsModifiedCameraFov')}", f"Fov={float(v.get('CameraFov', 90.0))}", f"bLockInput={b('IsLockInput')}",
-              f"bStopOnMontageEnd={'True' if v.get('StopModifyOnMontageEnd', True) else 'False'}"]
+              f"bOverrideCameraInput={b('OverrideCameraInput')}",
+              f"bStopOnMontageEnd={'True' if v.get('StopModifyOnMontageEnd', True) else 'False'}",
+              f"bSwitchModifier={b('IsSwitchModifier')}", f"bForcePlayModify={b('IsForcePlayModify')}",
+              f"bResetFinalArmRotation={'True' if v.get('ResetFinalArmRotation', True) else 'False'}",
+              f"bResetFinalArmRotationToSpecificPitch={b('IsResetFinalArmRotationToSpecificPitch')}",
+              f"ResetFinalSpecificPitch={float(v.get('ResetFinalArmRotationToSpecificPitch', -7.0))}",
+              f"bResetFinalArmRotationToSpecificYaw={b('IsResetFinalArmRotationToSpecificYaw')}",
+              f"ResetFinalSpecificYaw={float(v.get('ResetFinalArmRotationToSpecificYaw', 0.0))}",
+              f"bResetFinalArmLength={b('ResetFinalArmLength')}",
+              f"bResetFinalArmLengthToSpecificValue={b('IsResetFinalArmLengthToSpecificValue')}",
+              f"ResetFinalSpecificArmLength={float(v.get('ResetFinalArmLengthToSpecificValue', 0.0))}"]
     return '(' + ','.join(fields) + ')'
 
 

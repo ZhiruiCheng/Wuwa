@@ -1,15 +1,17 @@
 #include "Game/Animation/Notifies/WuwaAnimNotify_SequenceCamera.h"
 
 #include "Components/SkeletalMeshComponent.h"
+#include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "GameFramework/Character.h"
 
 void UWuwaAnimNotify_SequenceCamera::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
 	Super::Notify(MeshComp, Animation, EventReference);
 	ACharacter* Character = MeshComp ? Cast<ACharacter>(MeshComp->GetOwner()) : nullptr;
-	if (UWuwaSequenceCameraSubsystem* Cameras = Character ? UWuwaSequenceCameraSubsystem::Get(Character) : nullptr)
+	// 只有本地玩家控制的角色切镜头
+	if (AWuwaPlayerCameraManager* Camera = AWuwaPlayerCameraManager::GetForPawn(Character))
 	{
-		Cameras->PlayCameraSequence(Config, Character, CameraAttachSocket);
+		Camera->PlayCameraSequence(Config, Character, CameraAttachSocket);
 	}
 }
 

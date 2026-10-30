@@ -28,4 +28,11 @@ public:
 
 	/** 这个 PC 所在的地图要不要主 HUD：有队伍组件 = 玩家控制着队伍角色的游戏地图（≈ 鸣潮按世界类型选主界面）。 */
 	static bool ShouldShowMainHud(const APlayerController* PlayerController);
+
+	/**
+	 * 隐藏 / 恢复主 HUD（播技能特写镜头时用）。
+	 * 给 C# 序列镜头用：LGUI 的类型 C# 拿不到，所以在这里替它做。主 HUD 没打开时什么都不做。
+	 */
+	UFUNCTION(BlueprintCallable, Category = "Wuwa|Hud")
+	static void SetMainHudHidden(APlayerController* PlayerController, bool bHidden);
 };

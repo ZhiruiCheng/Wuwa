@@ -1,7 +1,9 @@
 #if WITH_DEV_AUTOMATION_TESTS && WITH_EDITOR
 
 #include "Misc/AutomationTest.h"
-#include "Game/Camera/WuwaCameraMode.h"
+#include "Engine/DataTable.h"
+#include "Game/Camera/CameraData/WuwaFightCameraConfig.h"
+#include "Game/Camera/WuwaCameraRuntimeBridge.h"
 #include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Input/DataAsset/WuwaInputDataAsset.h"
@@ -87,9 +89,19 @@ bool FWuwaCameraOwnershipAssetTest::RunTest(const FString& Parameters)
 		return false;
 	}
 	const AWuwaPlayerCameraManager* Manager = ManagerClass->GetDefaultObject<AWuwaPlayerCameraManager>();
-	TestNotNull(TEXT("Manager has an editable gameplay mode asset"), Manager->DefaultMode.Get());
-	TestNotNull(TEXT("A skill mode example is available without changing any abilities"),
-		LoadObject<UWuwaCameraMode>(nullptr, TEXT("/Game/Game/Camera/DA_Camera_SkillExample.DA_Camera_SkillExample")));
+	TestNotNull(TEXT("Manager points at the managed camera runtime"), Manager->RuntimeClass.LoadSynchronous());
+	// C# 战斗镜头按固定路径加载配置，配置列表里要有 基础镜头 行
+	const UWuwaFightCameraConfig* FightConfig = LoadObject<UWuwaFightCameraConfig>(nullptr,
+		TEXT("/Game/Game/Camera/DA_FightCameraConfig.DA_FightCameraConfig"));
+	if (TestNotNull(TEXT("Fight camera config exists"), FightConfig)
+		&& TestNotNull(TEXT("Fight camera config has a config list"), FightConfig->ConfigList.Get()))
+	{
+		int32 BaseRows = 0;
+		FightConfig->ConfigList->ForeachRow<FWuwaFightCameraConfigRow>(TEXT("WuwaCameraAssetTests"),
+			[&BaseRows](const FName&, const FWuwaFightCameraConfigRow& Row) { BaseRows += Row.Type == EWuwaFightCameraConfigType::Base; });
+		TestEqual(TEXT("Config list has exactly one base camera row"), BaseRows, 1);
+		TestTrue(TEXT("Base config has an arm length"), FightConfig->Base.Contains(EWuwaFightCameraDefault::ArmLength));
+	}
 	TestTrue(TEXT("Existing game mode still selects the project player controller"),
 		GameModeClass->GetDefaultObject<AGameModeBase>()->PlayerControllerClass == ControllerClass);
 	for (const TCHAR* BlueprintPath : {

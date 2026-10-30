@@ -1,9 +1,11 @@
 #include "Game/Module/Hud/WuwaMainHudController.h"
 
 #include "GameFramework/PlayerController.h"
+#include "Core/ActorComponent/UIItem.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/LGUI/Core/WuwaUiLog.h"
 #include "Game/LGUI/Core/WuwaUiManager.h"
+#include "Game/LGUI/View/WuwaUiView.h"
 
 const FName UWuwaMainHudController::MainHudViewName(TEXT("MainHUD"));
 
@@ -26,4 +28,11 @@ bool UWuwaMainHudController::ShouldShowMainHud(const APlayerController* PlayerCo
 {
 	return PlayerController && PlayerController->IsLocalController()
 		&& PlayerController->FindComponentByClass<UWuwaFormationComponent>() != nullptr;
+}
+
+void UWuwaMainHudController::SetMainHudHidden(APlayerController* PlayerController, bool bHidden)
+{
+	UWuwaUiManager* Ui = PlayerController ? UWuwaUiManager::Get(PlayerController) : nullptr;
+	UWuwaUiView* Hud = Ui ? Ui->GetView(MainHudViewName) : nullptr;
+	if (UUIItem* Root = Hud ? Hud->GetRootItem() : nullptr) Root->SetIsUIActive(!bHidden);
 }

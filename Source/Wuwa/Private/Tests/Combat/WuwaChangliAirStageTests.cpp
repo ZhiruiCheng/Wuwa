@@ -22,7 +22,7 @@
 #include "Core/Tag/WuwaGameTags.h"
 #include "Game/NewWorld/Character/Common/Component/Abilities/WuwaAttributeSet.h"
 #include "Game/NewWorld/Combat/WuwaTimeStopSubsystem.h"
-#include "Game/Camera/WuwaSequenceCameraSubsystem.h"
+#include "Game/Camera/WuwaPlayerCameraManager.h"
 #include "Game/Controller/WuwaPlayerController.h"
 #include "Game/Formation/WuwaFormationComponent.h"
 #include "Game/Input/WuwaInputRouterComponent.h"
@@ -481,11 +481,12 @@ namespace WuwaChangliAirStageTest
 
 		/**
 		 * 大招（1205401，GA_ChangLi_Burst）：能量不满按 R 不出；能量满后在空中按 R → 先落到地面再播，能量清空；
-		 * 时停冻住 Boss、无敌、不能切人、切到特写镜头（结束后视角回到角色）。
+		 * 时停冻住 Boss、无敌、不能切人、切到特写镜头（结束后视角回到战斗镜头）。
 		 */
 		bool UpdateBurst(double GameNow)
 		{
-			UWuwaSequenceCameraSubsystem* Cameras = UWuwaSequenceCameraSubsystem::Get(World);
+			// 特写镜头在 C# 相机系统里（序列镜头），经玩家的 PCM 查
+			const AWuwaPlayerCameraManager* Cameras = PC ? Cast<AWuwaPlayerCameraManager>(PC->PlayerCameraManager) : nullptr;
 			UWuwaTimeStopSubsystem* TimeStop = UWuwaTimeStopSubsystem::Get(World);
 			switch (Step)
 			{
@@ -530,15 +531,15 @@ namespace WuwaChangliAirStageTest
 				Test->TestFalse(TEXT("caster not frozen"), TimeStop && TimeStop->IsFrozen(Changli));
 				Test->TestTrue(TEXT("invincible during the burst"), Count(TEXT("State.Combat.Invincible")) > 0);
 				Test->TestTrue(TEXT("cannot switch during the burst"), Count(TEXT("State.Formation.SwitchForbid")) > 0);
-				Test->TestTrue(TEXT("sequence camera playing"), Cameras && Cameras->IsPlaying());
-				Test->TestTrue(TEXT("view on the sequence camera"), Cameras && Cameras->GetCameraActor() && PC->GetViewTarget() == Cameras->GetCameraActor());
+				Test->TestTrue(TEXT("sequence camera playing"), Cameras && Cameras->IsPlayingCameraSequence());
+				Test->TestTrue(TEXT("view on the sequence camera"), Cameras && Cameras->GetSequenceCameraActor() && PC->GetViewTarget() == Cameras->GetSequenceCameraActor());
 				Next(GameNow);
 				return false;
 			}
 			case 7:
 				if (GameNow - StepAt < 4.0) return false;   // 镜头 3.17 秒 + 混回 0.5 秒
-				Test->TestFalse(TEXT("sequence camera finished"), Cameras && Cameras->IsPlaying());
-				Test->TestTrue(TEXT("view back on Changli"), PC->GetViewTarget() == Changli);
+				Test->TestFalse(TEXT("sequence camera finished"), Cameras && Cameras->IsPlayingCameraSequence());
+				Test->TestTrue(TEXT("view back on the fight camera"), Cameras && Cameras->IsViewingFightCamera());
 				Test->TestFalse(TEXT("time stop over"), TimeStop && TimeStop->IsTimeStopActive());
 				Test->TestTrue(TEXT("heart fire +4 at 2.6 s (1205104005)"), Attribute(UWuwaAttributeSet::GetSpecialEnergy1Attribute()) >= FMath::Min(HeartFire + 4.f, Attribute(UWuwaAttributeSet::GetMaxSpecialEnergy1Attribute())) - 0.01f);
 				return true;

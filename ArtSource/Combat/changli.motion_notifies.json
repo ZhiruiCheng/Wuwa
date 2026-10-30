@@ -62,7 +62,7 @@
     "Duration": 0.1,
     "BlendInTime": 0.05,
     "BlendOutTime": 0.2,
-    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=200.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=True,Fov=82.0,bLockInput=False,bStopOnMontageEnd=True)"
+    "Modify": "(Priority=0,bModifyArmLength=False,ArmLength=0.0,ArmLengthAdditional=200.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=True,Fov=82.0,bLockInput=False,bOverrideCameraInput=True,bStopOnMontageEnd=True,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=False,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -194,7 +194,8 @@
     "Duration": 0.7,
     "BlendInTime": 0.2,
     "BlendOutTime": 0.6,
-    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=-35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+    "BreakBlendOutTime": 0.6,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=-35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bOverrideCameraInput=False,bStopOnMontageEnd=True,bSwitchModifier=True,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=False,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -208,7 +209,8 @@
     "Duration": 0.7,
     "BlendInTime": 0.2,
     "BlendOutTime": 0.6,
-    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=True)"
+    "BreakBlendOutTime": 0.6,
+    "Modify": "(Priority=0,bModifyArmLength=True,ArmLength=650.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=35.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bOverrideCameraInput=False,bStopOnMontageEnd=True,bSwitchModifier=True,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=False,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -274,7 +276,8 @@
     "Duration": 1.0,
     "BlendInTime": 0.2,
     "BlendOutTime": 0.3,
-    "Modify": "(Priority=90,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=True,bStopOnMontageEnd=True)"
+    "BreakBlendOutTime": 0.3,
+    "Modify": "(Priority=90,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=True,bOverrideCameraInput=True,bStopOnMontageEnd=True,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=False,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=False,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -288,7 +291,8 @@
     "Duration": 0.6,
     "BlendInTime": 0.4,
     "BlendOutTime": 1.0,
-    "Modify": "(Priority=92,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=False)"
+    "BreakBlendOutTime": 1.0,
+    "Modify": "(Priority=92,bModifyArmLength=True,ArmLength=600.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=0.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bOverrideCameraInput=False,bStopOnMontageEnd=False,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=False,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=True,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -343,7 +347,8 @@
     "Duration": 2.0,
     "BlendInTime": 0.05,
     "BlendOutTime": 1.0,
-    "Modify": "(Priority=1,bModifyArmLength=True,ArmLength=750.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=20.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bStopOnMontageEnd=False)"
+    "BreakBlendOutTime": 1.0,
+    "Modify": "(Priority=1,bModifyArmLength=True,ArmLength=750.0,ArmLengthAdditional=0.0,bModifyPitch=False,bModifyYaw=False,ArmRotation=(Pitch=5.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=20.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=90.0,bLockInput=False,bOverrideCameraInput=False,bStopOnMontageEnd=False,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=True,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -357,7 +362,7 @@
     "Duration": 0.7,
     "BlendInTime": 0.3,
     "BlendOutTime": 0.2,
-    "Modify": "(Priority=2,bModifyArmLength=True,ArmLength=550.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-7.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=85.0,bLockInput=True,bStopOnMontageEnd=True)"
+    "Modify": "(Priority=2,bModifyArmLength=True,ArmLength=550.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-7.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=0.0),bModifyFov=False,Fov=85.0,bLockInput=True,bOverrideCameraInput=True,bStopOnMontageEnd=True,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=False,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {
@@ -371,7 +376,8 @@
     "Duration": 0.6,
     "BlendInTime": 0.1,
     "BlendOutTime": 0.8,
-    "Modify": "(Priority=3,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-10.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-50.0),bModifyFov=True,Fov=85.0,bLockInput=True,bStopOnMontageEnd=True)"
+    "BreakBlendOutTime": 0.4,
+    "Modify": "(Priority=3,bModifyArmLength=True,ArmLength=700.0,ArmLengthAdditional=0.0,bModifyPitch=True,bModifyYaw=True,ArmRotation=(Pitch=-10.0,Yaw=0.0,Roll=0.0),ArmRotationAdditional=(Pitch=0.0,Yaw=0.0,Roll=0.0),bModifyOffsetX=False,bModifyOffsetY=False,bModifyOffsetZ=False,CameraOffset=(X=0.0,Y=0.0,Z=0.0),CameraOffsetAdditional=(X=0.0,Y=0.0,Z=-50.0),bModifyFov=True,Fov=85.0,bLockInput=True,bOverrideCameraInput=True,bStopOnMontageEnd=True,bSwitchModifier=False,bForcePlayModify=False,bResetFinalArmRotation=True,bResetFinalArmRotationToSpecificPitch=False,ResetFinalSpecificPitch=-7.0,bResetFinalArmRotationToSpecificYaw=False,ResetFinalSpecificYaw=0.0,bResetFinalArmLength=True,bResetFinalArmLengthToSpecificValue=False,ResetFinalSpecificArmLength=0.0)"
    }
   },
   {

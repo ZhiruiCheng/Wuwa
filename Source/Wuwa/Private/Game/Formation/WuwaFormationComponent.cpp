@@ -19,6 +19,7 @@ UWuwaFormationComponent::UWuwaFormationComponent()
 {
 	//确保网络同步
 	PrimaryComponentTick.bCanEverTick = false;
+	
 	SetIsReplicatedByDefault(true);
 }
 

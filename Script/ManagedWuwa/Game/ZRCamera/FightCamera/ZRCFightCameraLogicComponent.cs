@@ -1,108 +1,333 @@
-using ManagedWuwa.Game.Camera;
-using ManagedWuwa.Game.Camera.FightCameraController;
 using ManagedWuwa.Game.ZRCamera.FightCamera;
-using UnrealSharp;
 using UnrealSharp.CoreUObject;
 using UnrealSharp.Engine;
+using UnrealSharp.GameplayTags;
 using UnrealSharp.Wuwa;
 
 namespace ManagedWuwa.Game.ZRCamera;
 
-public class ZRCFightCameraLogicComponent(ZRCameraModelInstance cameraModel, ZRCFightCameraDisplayComponent display)
+/// <summary>
+/// 战斗镜头的逻辑：每帧算出战斗相机该摆在哪、朝哪看、视野多大。
+/// - 三份镜头参数：Desired（这一帧想要的）、Current（实际用来摆相机的）、Last（切换配置那一刻的快照）。
+/// - 三个子控制器只改 Desired：配置控制器（按角色身上的标签切换配置）、镜头修改（技能动画里的镜头动作）、输入控制器（玩家转镜头和滚轮）。
+/// - Current 每帧跟上 Desired（切换配置时慢慢追），再按 Current 摆相机，最后把镜头朝向写进控制旋转。
+/// 每帧具体做什么、按什么顺序，看 Tick。
+/// </summary>
+internal sealed class ZRCFightCameraLogicComponent
 {
-    // 相机模式栈：谁压入的（来源对象）→ 一整套设置；来源对象失效后自动作废
-    private readonly ZrOwnedRequests<TWeakObjectPtr<UObject>, FWuwaCameraSettings> _modes = new(static owner => owner.IsValid);
-    // 玩家滚轮缩放（记住玩家的缩放偏好）
-    private readonly ZrCameraInputController _input = new();
-    // 模式切换时的平滑过渡 + 由参数算出镜头位置和朝向
-    private readonly ZrCameraPoseSolver _poseSolver = new();
+    // 玩家设置里的"镜头距离"：0 = 用基础距离，1 = 用最远距离。项目还没有这个设置，固定为 0
+    private const double ArmLengthSettingPercentage = 0.0;
+
+    //同级组件
+    private readonly ZRCFightCameraDisplayComponent _display;
+    
+    //工具组件
     private readonly ZRCCameraCollision _collision = new();
-    // 正在生效的模式被移除时，混回下一个模式用它自己的 BlendOutTime；< 0 = 用下一个模式的 BlendTime
-    private float _pendingBlendOut = -1f;
-    // 镜头跟随的角色
-    private APawn? _pawn;
     
-    /// <summary>换了跟随的角色（≈ 原作 SetPawn）。</summary>
-    public void SetPawn(APawn? pawn)
+    private readonly ZrCameraConfigMap _configMap = new(nameof(ZRCFightCameraLogicComponent));
+    private readonly ZrFightCameraSettings _settings = new();
+    //过渡专用
+    private readonly ZrCameraFade _fade = new();
+    //玩家复制体里面包含了镜头关键信息
+    private readonly ZrCameraFollowTarget _target = new();
+    
+    // 每帧先更新配置控制器，再按这个顺序更新其余控制器：镜头修改在输入前面
+    private readonly ZrCameraControllerBase[] _configControllers;
+    private readonly ZrCameraControllerBase[] _controllers;
+    // 第一次有角色时，镜头朝向要从出生朝向开始
+    private bool _rotationInitialized;
+    // 这一帧实际用的镜头距离
+    private double _armLengthThisFrame;
+
+    public ZRCFightCameraLogicComponent(ZRCameraModelInstance cameraModel, ZRCFightCameraDisplayComponent display)
     {
-        // 清掉模式前，按当前生效的设置决定要不要重置玩家缩放（原 C++ NotifyPawnChanged 的逻辑）
-        bool resetUserZoom = ResolveSettings().Zoom.ResetZoomOnPawnChange;
-        _modes.Clear();
-        if (resetUserZoom)
-            _input.Reset();
-        _poseSolver.Reset();
-        _pawn = pawn;
+        CameraModel = cameraModel;
+        _display = display;
+        _settings.Register(_configMap);
+        ConfigController = new ZrCameraConfigController(this);
+        ModifyController = new ZrCameraModifyController(this);
+        InputController = new ZrCameraInputController(this);
+        _configControllers = [ConfigController];
+        _controllers = [ModifyController, InputController];
     }
+
+    public ZRCameraModelInstance CameraModel { get; }
+
+    // ===== 镜头参数 =====
+
+    public ZrVirtualCamera DesiredCamera { get; } = new();
+
+    public ZrVirtualCamera CurrentCamera { get; } = new();
+
+    public ZrVirtualCamera LastCamera { get; } = new();
+
+    /// <summary>这一帧哪些项已经被控制器改过。</summary>
+    public ZrCameraModifiedFlags Modified { get; } = new();
+
+    // ===== 子控制器 =====
+
+    public ZrCameraConfigController ConfigController { get; }
+
+    public ZrCameraModifyController ModifyController { get; }
+
+    public ZrCameraInputController InputController { get; }
+
+    // ===== 配置对外接口 =====
+    public ZrFightCameraSettings  Settings => _settings;
     
+    /// <summary>正在做切换配置的过渡。</summary>
+    ///
+    public ZrCameraFade Fade => _fade;
+    
+    /// <summary>已经套过一次配置。第一次套配置时 Current 直接等于 Desired，不过渡。</summary>
+    public bool Initialized { get; private set; }
+
+    // ===== 跟随的角色 =====
+
+    /// <summary>跟随的角色，没有时为空。</summary>
+    public APawn? Character => _target.Pawn;
+
+    /// <summary>这一帧角色的朝向。</summary>
+    public FRotator PlayerRotator { get; private set; }
+
+    /// <summary>这一帧镜头跟随的点。</summary>
+    public FVector PlayerLocation { get; private set; }
+
+    // ===== 这一帧的输入和结果 =====
+
+    /// <summary>这一帧的转镜头输入（相机管理器攒好交过来的鼠标量）。</summary>
+    public FVector2D LookInput { get; private set; }
+
+    /// <summary>这一帧的滚轮输入（格数）。</summary>
+    public double ZoomInput { get; private set; }
+
+    /// <summary>最后摆出来的相机位置。</summary>
+    public FVector CameraLocation { get; private set; }
+
+    /// <summary>最后摆出来的相机朝向。</summary>
+    public FRotator CameraRotation { get; private set; }
+
+    // ===== 开始、结束、换角色 =====
+
+    /// <summary>读配置资产，把默认配置交给自己和各子控制器，然后让各子控制器开始工作。</summary>
+    public void Init()
+    {
+        var config = ZrCameraConfigData.Load();
+        _configMap.SetDefaultConfigs(ZrCameraConfigData.ToMap(config.Base), new Dictionary<int, ZrCameraCurve>());
+        InputController.SetDefaultConfigs(ZrCameraConfigData.ToMap(config.Input), ZrCameraConfigData.ToCurveMap(config.InputCurves));
+        ModifyController.SetDefaultConfigs(ZrCameraConfigData.ToMap(config.ModifyCamera), new Dictionary<int, ZrCameraCurve>());
+        
+        ConfigController.LoadConfig(config);
+        foreach (var controller in _configControllers) controller.OnStart();
+        foreach (var controller in _controllers) controller.OnStart();
+    }
+
+    /// <summary>让各子控制器结束工作，并忘掉跟随的角色。</summary>
     public void Clear()
     {
-        _modes.Clear();
-        _pawn = null;
+        foreach (var controller in _configControllers) controller.OnEnd();
+        foreach (var controller in _controllers) controller.OnEnd();
+        _target.Set(null, null);
     }
-    
-    /// <summary>每帧计算并摆放相机（≈ 原作 OnAfterTick）。zoomDelta = 本帧滚轮量（由 C++ 累积后传入）。</summary>
-    public void Tick(float deltaSeconds, float zoomDelta)
+
+    /// <summary>
+    /// 换跟随的角色。第一次有角色时，镜头朝向从控制旋转（出生朝向）开始。
+    /// 从一个角色换到另一个角色时，通知各子控制器（正在进行的镜头修改会在这时结束）；镜头角度和缩放保持不变。
+    /// </summary>
+    public void SetPawn(APawn? pawn)
     {
-        //如果当前的相机管理实例的模式是这个Fight模式就执行这个的Tick
-        if (cameraModel.CameraMode != EZrCameraMode.Fight)
+        if (pawn is not null && !pawn.IsValid())
+            pawn = null;
+        var oldPawn = _target.Pawn;
+        _target.Set(pawn, CameraModel.PlayerCameraManager.OwningPlayerController);
+        if (pawn is null)
             return;
-
-        //获取当前的相机Actor和对应的PlayerController
-        ACameraActor? cameraActor = display.CameraActor;
-        APlayerController? PC = cameraModel.PlayerCameraManager.OwningPlayerController;
-        if (_pawn is null || !_pawn.IsValid() || cameraActor is null || PC is null) return;
-
-        // 1. 组装本帧输入：角色位置、玩家视角、帧间隔、滚轮量
-        var frame = new FWuwaCameraFrame
+        if (!_rotationInitialized)
         {
-            TargetLocation = _pawn.ActorLocation,
-            ControlRotation = PC.ControlRotation,
-            DeltaSeconds = deltaSeconds,
-            ZoomDelta = zoomDelta,
-        };
+            SetRotation(_target.Controller?.ControlRotation ?? pawn.ActorRotation);
+            _rotationInitialized = true;
+        }
+        if (oldPawn is not null && oldPawn != pawn)
+        {
+            foreach (var controller in _configControllers) controller.OnChangeRole(pawn, oldPawn);
+            foreach (var controller in _controllers) controller.OnChangeRole(pawn, oldPawn);
+        }
+    }
 
-        // 2. 选出当前生效的设置 → 算出臂长（含玩家缩放） → 过渡与计算
-        var settings = SelectSettings(out int modeHandle);
-        float desiredArmLength = _input.ResolveArmLength(settings, frame.ZoomDelta);
-        FWuwaCameraView view = _poseSolver.Evaluate(frame, settings, desiredArmLength, modeHandle, _pendingBlendOut);
-        _pendingBlendOut = -1f;
-        if (!view.Valid)
+    /// <summary>跟随的角色身上有没有这个标签。</summary>
+    public bool ContainsTag(FGameplayTag tag) => _target.ContainsTag(tag);
+
+    // ===== 每帧 =====
+
+    /// <summary>每帧由相机系统调用，算出这一帧的战斗镜头。当前不是战斗镜头模式时（比如在放特写），只做第一步。</summary>
+    public void Tick(float deltaSeconds, FVector2D lookInput, float zoomInput)
+    {
+        LookInput = lookInput;
+        ZoomInput = zoomInput;
+        // 触发镜头修改的动画被顶掉了，要马上结束那段修改。这一步不管当前是什么镜头模式都要做
+        ModifyController.CheckMontageEnd();
+        var cameraActor = _display.CameraActor;
+        if (!_target.IsValid || cameraActor is null || !cameraActor.IsValid())
+            return;
+        if (CameraModel.CameraMode != EZrCameraMode.Fight)
             return;
 
-        // 3. 碰撞修正：从焦点推球到镜头位置
-        FVector location = _collision.CheckCollision(_pawn, view.Pivot, view.Location, view.ProbeRadius, view.CollisionTest);
+        Modified.Clear();
+        UpdateControllers(_configControllers, deltaSeconds);
+        _fade.UpdateArmLength(deltaSeconds, CurrentCamera, LastCamera, DesiredCamera, Modified.ArmLength);
+        PlayerRotator = _target.Pawn!.ActorRotation;
+        PlayerLocation = _target.GetFollowLocation();
+        UpdateControllers(_controllers, deltaSeconds);
+        ClampArmLength();
+        FollowCharacter();
+        _armLengthThisFrame = GetArmLengthThisFrame();
+        ClampPitch();
+        ClearRoll();
+        _fade.UpdateCurrent(CurrentCamera, LastCamera, DesiredCamera, Modified.Fov);
+        PlaceCamera(cameraActor);
+        ApplyFov(cameraActor);
+        _target.SetControlRotation(CurrentCamera.ArmRotation);
+    }
 
-        // 4. 摆相机（原作：CameraActor.SetActorLocationAndRotation）
-        cameraActor.SetActorLocationAndRotation(location, view.Rotation, false, out _, false);
-        cameraActor.CameraComponent.FieldOfView = view.FieldOfView;
-    }
-    
-    public int PushCameraMode(UObject source, FWuwaCameraSettings settings, int priority)
+    /// <summary>马上完整算一次（时间按 0 算）。特写结束时调用，让混回战斗镜头的终点是按新朝向摆好的位置。</summary>
+    public void ForceTickOutSide() => Tick(0, new FVector2D(0, 0), 0);
+
+    private static void UpdateControllers(ZrCameraControllerBase[] controllers, float deltaSeconds)
     {
-        if (source is null || !source.IsValid())
-            return 0;
-        return _modes.Add(new TWeakObjectPtr<UObject>(source), ZrCameraSettingsUtility.Normalize(settings), priority);
+        foreach (var controller in controllers)
+            controller.Update(deltaSeconds);
     }
 
-    public bool PopCameraMode(int handle)
+    // 距离夹在上下限内。镜头修改控制着距离时不夹，它可以暂时超出范围
+    private void ClampArmLength()
     {
-        // 弹出的正是当前生效的模式，就记下它的淡出时间，下一帧过渡时用
-        if (_modes.TryGetHighest(out int active, out var activeSettings) && active == handle)
-            _pendingBlendOut = activeSettings.Blend.BlendOutTime;
-        return _modes.Remove(handle);
+        if (!ModifyController.IsControllingArmLength)
+            DesiredCamera.ArmLength = ZrCameraMath.Clamp(DesiredCamera.ArmLength, DesiredCamera.MinArmLength, DesiredCamera.MaxArmLength);
     }
-    
-    public FWuwaCameraSettings ResolveSettings() => SelectSettings(out _);
-    
-    // 模式栈里有就取优先级最高的，没有就用基础设置；最后统一清洗非法数值
-    private FWuwaCameraSettings SelectSettings(out int modeHandle) =>
-        ZrCameraSettingsUtility.Normalize(_modes.TryGetHighest(out modeHandle, out var settings) ? settings : GetBaseSettings());
-    
-    // 基础设置：PCM 上配置的默认相机模式资产，没有就用它的默认设置（原 C++ GetBaseSettings）
-    private FWuwaCameraSettings GetBaseSettings()
+
+    // 跟随点等于角色这一帧的跟随点（这一帧没被别的控制器改过时）
+    private void FollowCharacter()
     {
-        if (cameraModel.PlayerCameraManager is not AWuwaPlayerCameraManager pcm)
-            return default;
-        return pcm.DefaultMode is { } mode && mode.IsValid() ? mode.Settings : pcm.DefaultSettings;
+        if (!Modified.ArmLocation)
+            DesiredCamera.ArmLocation = PlayerLocation;
     }
+
+    // 这一帧实际用的距离：用的是上一帧的 Current。镜头修改进行中或正在回去时，不夹上下限
+    private double GetArmLengthThisFrame()
+    {
+        bool modifying = ModifyController.IsModified || ModifyController.IsModifyFadeOut;
+        return GetArmLengthWithSettingAndZoom(CurrentCamera, clamp: !modifying) + CurrentCamera.CharAddArmLength;
+    }
+
+    // 俯仰夹在 Current 的俯仰范围内
+    private void ClampPitch()
+    {
+        double pitch = ZrCameraMath.WrapAngle(DesiredCamera.ArmRotation.Pitch);
+        DesiredCamera.ArmRotation.Pitch = ZrCameraMath.Clamp(pitch, CurrentCamera.PitchLimitMin, CurrentCamera.PitchLimitMax);
+    }
+
+    // 横滚清零，战斗镜头不歪（比如特写结束时接过来的朝向可能是歪的）
+    private void ClearRoll() => DesiredCamera.ArmRotation.Roll = 0;
+
+    // 摆相机：跟随点 + 跟随点偏移（随角色朝向转）→ 沿镜头朝向往后退这一帧的距离 → 加镜头偏移（随镜头朝向转）→ 防穿墙检测
+    private void PlaceCamera(ACameraActor cameraActor)
+    {
+        var current = CurrentCamera;
+        var rotation = current.ArmRotation;
+        var pawn = _target.Pawn!;
+        var pivot = ZrCameraMath.Add(current.ArmLocation, ZrCameraMath.RotateVector(pawn.ActorRotation, current.ArmOffset));
+        pivot = ZrCameraMath.Add(pivot, new FVector(0, 0, current.CharAddZ));
+        var forward = ZrCameraMath.RotateVector(rotation, new FVector(1, 0, 0));
+        var location = ZrCameraMath.Subtract(pivot, ZrCameraMath.Scale(forward, _armLengthThisFrame));
+        location = ZrCameraMath.Add(location, ZrCameraMath.RotateVector(rotation, current.CameraOffset));
+        location = _collision.CheckCollision(pawn, PlayerLocation, location, (float)_settings.CollisionProbeSize, true);
+        ApplyRotation(rotation);
+        if (!ZrCameraMath.IsFinite(location))
+        {
+            LogZrCamera.LogError($"CameraLocation Contains NaN: {location}");
+            return;
+        }
+        CameraLocation = location;
+        cameraActor.SetActorLocationAndRotation(location, rotation, false, out _, false);
+    }
+
+    // 视野有变化才写给相机组件
+    private void ApplyFov(ACameraActor cameraActor)
+    {
+        var component = cameraActor.CameraComponent;
+        if (Math.Abs(component.FieldOfView - CurrentCamera.Fov) > ZrCameraMath.KindaSmallNumber)
+            component.FieldOfView = (float)CurrentCamera.Fov;
+    }
+
+    // ===== 镜头朝向 =====
+
+    /// <summary>直接把镜头转到这个朝向：Desired 和 Current 一起改，不经过插值。特写结束时用它接过特写最后的朝向。</summary>
+    public void SetRotation(FRotator rotation)
+    {
+        if (!ZrCameraMath.IsFinite(rotation))
+        {
+            LogZrCamera.LogError($"rotation is invalid: {rotation}");
+            return;
+        }
+        DesiredCamera.ArmRotation = rotation;
+        CurrentCamera.ArmRotation = rotation;
+        ApplyRotation(rotation);
+    }
+
+    // 记下镜头朝向，并写进控制旋转
+    private void ApplyRotation(FRotator rotation)
+    {
+        CameraRotation = rotation;
+        _target.SetControlRotation(rotation);
+    }
+
+    // ===== 配置 =====
+
+    /// <summary>把一行配置里写了的编号叠上来。</summary>
+    public void SetConfigs(IReadOnlyDictionary<int, double>? values) => _configMap.SetConfigs(values, null);
+
+    /// <summary>所有编号恢复成默认配置。</summary>
+    public void ResetDefaultConfig() => _configMap.ResetDefaultConfig();
+
+    /// <summary>把当前配置的数值写进 Desired（不含角度）。第一次写时 Current 直接等于 Desired。</summary>
+    public void ApplyConfig()
+    {
+        _settings.WriteTo(DesiredCamera);
+        if (Initialized)
+            return;
+        CurrentCamera.CopyFrom(DesiredCamera);
+        Initialized = true;
+    }
+
+    /// <summary>开始一次切换配置的过渡：先把 Current 拍成快照放进 Last，之后 duration 秒内 Current 从快照追到 Desired。</summary>
+    public void StartFade(double duration, ZrCameraCurve curve, bool fadeArmLength, bool fadeArmOffset, bool fadeCameraOffset, bool fadeFov, bool uniqueFade)
+    {
+        CurrentCamera.ArmRotation.Pitch = ZrCameraMath.WrapAngle(CurrentCamera.ArmRotation.Pitch);
+        LastCamera.CopyFrom(CurrentCamera);
+        _fade.Start(duration, curve, fadeArmLength, fadeArmOffset, fadeCameraOffset, fadeFov, uniqueFade);
+    }
+
+    // ===== 镜头距离 =====
+
+    /// <summary>按玩家设置的"镜头距离"，在基础距离和最远距离之间取一个距离。</summary>
+    public double GetArmLengthWithSetting(ZrVirtualCamera camera) =>
+        ZrCameraMath.Lerp(camera.ArmLength, camera.MaxArmLength, ArmLengthSettingPercentage);
+
+    /// <summary>再乘上缩放倍率，就是实际距离；默认夹在上下限内。</summary>
+    public double GetArmLengthWithSettingAndZoom(ZrVirtualCamera camera, bool clamp = true)
+    {
+        double length = GetArmLengthWithSetting(camera) * camera.ZoomModifier;
+        return clamp ? ZrCameraMath.Clamp(length, camera.MinArmLength, camera.MaxArmLength) : length;
+    }
+
+    // ===== 镜头修改 =====
+
+    /// <summary>开始一段镜头修改（技能动画通知调用）。返回这段修改的编号，没生效返回 -1。</summary>
+    public int ApplyCameraModify(FWuwaCameraModify settings, float duration, float blendInTime, float blendOutTime,
+        float breakBlendOutTime, UAnimSequenceBase? animation, AActor? owner) =>
+        ModifyController.ApplyCameraModify(settings, duration, blendInTime, blendOutTime, breakBlendOutTime, animation, owner);
+
+    /// <summary>提前结束一段镜头修改：动画和编号都对得上才结束。</summary>
+    public void StopCameraModify(UAnimSequenceBase? animation, int modifyInstance) =>
+        ModifyController.StopCameraModify(animation, modifyInstance);
 }
